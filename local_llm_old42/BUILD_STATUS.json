@@ -1,0 +1,23 @@
+{
+  "version": "0.4.2",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "offline_unit_tests_passed": 172,
+  "new_unit_tests": 33,
+  "selfcheck_passed": 21,
+  "observed_v041_responses_replayed": 12,
+  "old_v04_pilot_replayed": 39,
+  "targeted_core_synthetic_cases": 1088,
+  "targeted_core_agreements": 1088,
+  "synthetic_response_interventions": 20,
+  "actual_new_llm_inference": false,
+  "model_weights_downloaded": false,
+  "windows_tested": false,
+  "gpu_tested": false,
+  "source_delivery_status": "OFFLINE_TESTED_LLM_NOT_RUN",
+  "core_replacement_included": false,
+  "notes": [
+    "172개에는 모의 API 실행/실패 주입 시험이 포함된다. 실패 stdout은 기대 동작 시험이다.",
+    "합성 대조·유한 전수 검사를 실제 모델 표본으로 합산하지 않는다.",
+    "새 진단의 성공률이나 모델 성능 개선은 아직 측정하지 않았다."
+  ]
+}

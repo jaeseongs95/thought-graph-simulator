@@ -155,7 +155,9 @@ def reanalyze(core: Any, source: Path, out: Path) -> dict:
             v2=isinstance(request["body"].get("format"), dict)
                and "selected_final_node_id" in request["body"]["format"].get("properties", {}))
         if case.get("task"):
-            if case.get("probe_contract") == "micro-v042":
+            if case.get("probe_contract") == "decision-v043":
+                from .decision_probe import output_schema
+            elif case.get("probe_contract") == "micro-v042":
                 from .micro_probe import output_schema
             else:
                 from .calibration import output_schema
@@ -175,6 +177,7 @@ def reanalyze(core: Any, source: Path, out: Path) -> dict:
                "replayed_status": outcome["status"], "replayed_error": outcome.get("error"),
                "original_decision_reproduced": matches,
                "original_error_text_reproduced": outcome.get("error") == record.get("error"),
+               "full_audit_object_reproduced": outcome.get("audit") == record.get("audit"),
                "diagnostics": diagnostic, "task_diagnostics": outcome.get("task_diagnostics"),
                "diagnostic_scope": ("proof_generation" if case.get("task") == "proof" else "non_proof_task" if case.get("task") else "integrated_trace"),
                "audit": outcome.get("audit"), "usage": outcome.get("usage"),
@@ -195,7 +198,9 @@ def reanalyze(core: Any, source: Path, out: Path) -> dict:
             counts["integrated_proof_cases_assessed"] += 1
             counts["selected_final_node_atom_matches_goal"] += int(diagnostic.get("goal_match") is True)
         counts["valid_completion"] += int(bool((outcome.get("audit") or {}).get("valid_completion")))
-    result = {"analysis_version": "0.4.2", "source_run_sha256": manifest["run_sha256"],
+    from .decision_evidence import aggregate_witnesses
+    witness_summary = aggregate_witnesses(rows)
+    result = {"analysis_version": "0.4.3", "criterion_witness_stages": witness_summary, "source_run_sha256": manifest["run_sha256"],
               "source_manifest_sha256": bytes_hash((source / "manifest.json").read_bytes()),
               "source_snapshot_hash_checks": source_checks,
               "source_modified": False, "model_called": False,
@@ -224,5 +229,18 @@ def reanalyze(core: Any, source: Path, out: Path) -> dict:
               "오류 범주는 서로 겹친다. 빈 바인딩을 제거하거나 최종 참조를 수정하지 않았다.",
               "개별 단계가 맞아도 최종 노드 지정·전체 지지 연결성이 틀리면 전체 증명은 실패다.",
               "원본 파일을 변경하지 않았고 LLM을 호출하지 않았다."]
+    if witness_summary["assessable_cases"]:
+        lines += ["", "## 입력·기본 비교·최종 판정 분리", "",
+                  "아래 순서는 논리적 검사 구분이지 내부 생성 순서를 관측한 것이 아니다.", "",
+                  "| 관측 | 건수 |", "| --- | ---: |"]
+        for key, label in (("assessable_cases", "진단 가능한 기준 과제"),
+                           ("observed_correct_cases", "입력 사본 전체 정확"),
+                           ("primitives_correct_cases", "동일성·소속 판정 전체 정확"),
+                           ("finding_correct_cases", "최종 판정 전체 정확"),
+                           ("own_primitive_inconsistency_cases", "자기 중간값과 최종값 모순"),
+                           ("finding_first_cases", "원문 JSON에서 finding이 primitives보다 앞")):
+            lines.append(f"| {label} | {witness_summary[key]} |")
+        lines += ["", "최종 응답 패턴: " + str(witness_summary["actual_patterns"]),
+                  "상수 응답의 존재는 관측이다. 정렬/캐시/모델 내부 원인을 뜻하지 않는다."]
     write_text(out / "reanalysis.md", "\n".join(lines) + "\n")
     return result

@@ -213,7 +213,15 @@ def summarize_probe(plan: dict, records: list[dict]) -> dict:
         decision = "control_passed_literal_decision_unreliable_in_this_condition"
     else:
         decision = "controls_and_criterion_passed_inspect_graph_and_schema_separately"
-    return {"contract": CONTRACT, "groups": groups, "cases": rows, "next_evidence_action": decision,
+    from .decision_evidence import aggregate_witnesses
+    stages = aggregate_witnesses(records)
+    criterion_count = groups.get("criterion", {}).get("assigned", 0)
+    if (decision == "control_passed_literal_decision_unreliable_in_this_condition"
+            and stages["assessable_cases"] == criterion_count
+            and stages["observed_correct_cases"] == criterion_count
+            and stages["primitives_correct_cases"] == criterion_count):
+        decision = "input_and_primitives_correct_final_finding_inconsistent"
+    return {"stage_evidence": stages, "contract": CONTRACT, "groups": groups, "cases": rows, "next_evidence_action": decision,
             "decision_is_diagnostic_not_cause_proof": True, "not_an_ADM_success_rate": True,
             "interpretation": "다수결/통합 평균을 사용하지 않는다. 반증된 조건을 별도로 기록한다. "
                               "단일 시드에서의 대응 비교는 해당 입력의 관측이며 모델 일반 성능 추정이 아니다."}

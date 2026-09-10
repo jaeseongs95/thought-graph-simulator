@@ -21,7 +21,7 @@ def component_summary(plan: dict, records: list[dict]) -> dict:
         group["assigned"] += 1
         group["recorded"] += int(record is not None)
         group["accepted"] += int(record is not None and record["status"] == "accepted")
-        if task == "criterion":
+        if task in {"criterion", "criterion_witness", "decision_stage"}:
             p = problems[case["problem_id"]]
             answer = case["probe_atom"] == p["goal"]
             valid = answer and case["probe_atom"] in p["facts"]
@@ -30,7 +30,9 @@ def component_summary(plan: dict, records: list[dict]) -> dict:
             entry = patterns.setdefault(key, {"assigned": 0, "accepted": 0, "parsed_responses": 0})
             entry["assigned"] += 1
             entry["accepted"] += int(record is not None and record["status"] == "accepted")
-            actual = ((record or {}).get("audit") or {}).get("details", {}).get("actual", {})
+            details = ((record or {}).get("audit") or {}).get("details", {})
+            actual = (details.get("criterion", {}).get("actual", {}) if task == "criterion_witness"
+                      else details.get("actual", {}))
             if all(type(actual.get(k)) is bool for k in fields):
                 entry["parsed_responses"] += 1
                 actual_patterns[",".join(str(actual[k]).lower() for k in fields)] += 1
@@ -51,7 +53,8 @@ def component_summary(plan: dict, records: list[dict]) -> dict:
                           {"ambiguous": True, "conditions": observations,
                            "note": "같은 범위에 여러 조건이 있어 한 건을 대표로 선택하지 않음"})
         pairs.append(row)
-    return {"groups": groups, "criterion_expected_patterns": patterns,
+    from .decision_evidence import aggregate_witnesses
+    return {"criterion_witness_stages": aggregate_witnesses(records), "groups": groups, "criterion_expected_patterns": patterns,
             "criterion_actual_patterns": dict(actual_patterns),
             "criterion_constant_output_observed": (len(actual_patterns) == 1 and sum(actual_patterns.values()) > 1),
             "criterion_pattern_field_order": list(fields),

@@ -1,3 +1,60 @@
+# local_llm v0.4.3
+
+
+## 설치
+
+기존 `local_llm` 폴더를 다른 이름으로 보관하고 이 ZIP의 `local_llm` 폴더로 교체한다.
+`adm_minimal.py`, `examples/`, 기존 `results_llm/`은 그대로 둔다. 모델 재다운로드나 패키지 추가 설치는 없다. Python 3.10 이상, 기존 Ollama가 필요하다. 이번 대응 실험이 끝나기 전에 모델/서버/샘플링 설정을 바꾸지 않는다.
+
+## 실행
+
+저장소 루트의 PowerShell에서 실행한다. 아래 두 명령의 `_` 앞에 역슬래시를 붙이지 않는다.
+
+```powershell
+# 원본 8건·소스 지문·대응 계획 확인. 네트워크/LLM 호출 없음.
+py -3 -m local_llm.decision_probe --input results_llm/v042_micro_01 --plan-only
+
+# 실제 LLM 8회: format만 변경 4회 + 저장된 모델 중간값을 쓰는 후속 판정 4회
+py -3 -m local_llm.decision_probe --input results_llm/v042_micro_01 --out results_llm/v043_decision_01
+```
+
+출력 폴더는 원본과 다른 새 폴더다. 원본 이름은 변경하지 않는다. 이미 같은 출력 폴더가 있다면 동일 조건 재개는 `--resume`, 별도 반복은 새 `_02` 이름을 사용한다. 실패 조건을 통과할 때까지 자동 재추론하지 않는다.
+
+모델 digest, 템플릿 메타데이터, 서버 버전, core, 생성 설정이 원본과 다르면 새 추론 전에 중단한다. 이는 기존 실패를 차단하는 성능 게이트가 아니라 비교 조건 검사다.
+
+## 결과를 보는 순서
+
+`results_llm/v043_decision_01/summary.md` → `decision_probe.json` → `task_evidence.json` / `task_comparisons.json` → `cases/*/request.wire.json`, `response.raw.json`.
+
+format_json과 staged를 각각 보고 원본 조건별 변화로 판단한다. 두 군의 합계는 본 A/D/M 성능이 아니다. staged 성공은 원래 원샷 실패를 성공으로 바꾸지 않는다. 프로그램은 모델 중간값·최종값을 정답으로 보충하지 않는다.
+
+원본 8건을 새 상세 표로 재검사만 하려면:
+
+```powershell
+py -3 -m local_llm inspect-results --input results_llm/v042_micro_01 --out results_llm/v043_micro_audit_01
+```
+
+이 명령은 추론하지 않는다. 기존 calibration/smoke/pilot 전체를 다시 실행할 필요가 없다.
+
+## 단독 군과 오프라인 시험
+
+```powershell
+# 한 군만 필요할 때: 4회 (두 군을 이미 실행했다면 다시 실행하지 않는다)
+py -3 -m local_llm.decision_probe --input results_llm/v042_micro_01 --arm staged --out results_llm/v043_staged_01
+
+# 배포 코드 자체 시험. 기존 저장소의 core/examples가 있어야 한다.
+py -3 -m unittest discover -s local_llm/tests -v
+```
+
+204개 단위·회귀·모의 API 시험과 selfcheck 21개는 오프라인 검사다. 제공자가 새 LLM 추론, 모델 다운로드, Windows/GPU 실험을 실행한 것은 아니다. 기존 자료에서는 입력/기본 비교는 맞고 finding만 상수화됐으며, 이 수정의 실제 효과는 사용자의 새 응답으로 판단한다.
+
+
+---
+
+## 기존 명령 참고 (v0.4.2 이하)
+
+아래는 하위 호환 명령 설명이다. 이번 결과에서는 위 decision_probe 절차를 먼저 사용한다.
+
 # local_llm v0.4.2 — 관측된 실패의 구성요소 진단
 
 기존 `adm_minimal.py`와 동일 저장소의 Python 3.10 이상을 사용한다. Python 런타임은 표준 라이브러리만 사용한다. Ollama 서버와 모델은 사용자의 PC에서만 호출된다. 모델 가중치는 포함하지 않는다.

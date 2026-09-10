@@ -420,4 +420,18 @@ def write_report(out: Path) -> dict:
     if summary["plan_warnings"]:
         lines += ["", "## 문제 구성 경고", ""] + summary["plan_warnings"]
     (out / "summary.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    if manifest["frozen"]["plan"].get("probe_contract") == "decision-v043":
+        from .decision_probe import summarize
+        d = summarize(manifest["frozen"]["plan"], records)
+        write_json(out / "decision_probe.json", d)
+        extra = ["", "## 단계형 판정과 format 대조", "", "원본 실패는 보존한다. 두 군의 성공률을 하나의 ADM 성능으로 합산하지 않는다.", "",
+                 "| 군 | 기록 | 성공 | 배정 |", "| --- | ---: | ---: | ---: |"]
+        for name, g in d["arms"].items():
+            extra.append(f"| {name} | {g['recorded']} | {g['accepted']} | {g['assigned']} |")
+        extra += ["", "| 원본 조건 | 변경 군 | 원본 판정 | 새 판정 |", "| --- | --- | --- | --- |"]
+        for row in d["cases"]:
+            extra.append(f"| {row['condition']} | {row['arm']} | {row['source_status']} | {row['new_status']} |")
+        extra += ["", d["interpretation"]]
+        with (out / "summary.md").open("a", encoding="utf-8", newline="\n") as handle:
+            handle.write("\n".join(extra) + "\n")
     return summary

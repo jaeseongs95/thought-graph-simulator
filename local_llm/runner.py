@@ -44,6 +44,9 @@ def usage(response: dict) -> dict:
 
 
 def request_body(config: dict, case: dict, problem: dict) -> dict:
+    if case.get("probe_contract") == "decision-v043":
+        from .decision_probe import make_request
+        return make_request(config, case, problem)
     if case.get("probe_contract") == "micro-v042":
         from .micro_probe import make_request
         return make_request(config, case, problem)
@@ -96,7 +99,9 @@ def assess_response(core: Any, problem: dict, case: dict, reference: dict,
         outcome["raw_diagnostics"] = raw_diagnostics(problem, raw_content, v2=is_v2)
     if case.get("task"):
         from .task_evidence import task_diagnostics
-        if case.get("probe_contract") == "micro-v042":
+        if case.get("probe_contract") == "decision-v043":
+            from .decision_probe import output_schema as task_schema
+        elif case.get("probe_contract") == "micro-v042":
             from .micro_probe import output_schema as task_schema
         else:
             task_schema = calibration.output_schema
@@ -117,7 +122,9 @@ def assess_response(core: Any, problem: dict, case: dict, reference: dict,
         require(body.get("think") is not False or not message.get("thinking"), "thinking=false 요청과 다른 응답")
         if case.get("task"):
             payload = strict_json(message.get("content"))
-            if case.get("probe_contract") == "micro-v042":
+            if case.get("probe_contract") == "decision-v043":
+                from . import decision_probe as evaluator
+            elif case.get("probe_contract") == "micro-v042":
                 from . import micro_probe as evaluator
             else:
                 evaluator = calibration_v4 if case.get("calibration_version") == 4 else calibration
@@ -319,6 +326,9 @@ def run(core: Any, core_info: dict, plan: dict, config: dict, out: Path,
               f"context={config['options']['num_ctx']}, output={config['options']['num_predict']}", flush=True)
     elif config.get("config_stage") == "resolved":
         require(config == resolve_config(config, metadata), "설정 확정 후 모델 메타데이터가 바뀌었습니다.")
+    if plan.get("probe_contract") == "decision-v043":
+        from .decision_probe import validate_runtime
+        validate_runtime(plan, core_info, config, metadata)
     gate_result = validate_gate(core, gate, config, plan, gate_mode) if gate is not None else None
     if gate_result is not None:
         print(f"게이트 통과 ({gate_mode}): {gate_result['replayed_cases']}건 재검사 / "
