@@ -1,0 +1,3725 @@
+{
+  "analysis_version": "0.4.2",
+  "source_run_sha256": "f3257a487f5ebf4d80bc89adc805240d2110f3aea1685a6244c8170194ecda65",
+  "source_manifest_sha256": "cb8fc189380b4ac4aad650b3b0c301b1c74ad1d39a0674d9d9eac39281799a75",
+  "source_snapshot_hash_checks": {
+    "__init__.py": true,
+    "__main__.py": true,
+    "audit.py": true,
+    "calibration.py": true,
+    "calibration_v4.py": true,
+    "causal_probe.py": true,
+    "client.py": true,
+    "common.py": true,
+    "component_report.py": true,
+    "datasets_v4.py": true,
+    "design.py": true,
+    "diagnostics.py": true,
+    "evidence.py": true,
+    "gate.py": true,
+    "model_policy.py": true,
+    "prompts.py": true,
+    "prompts_v2.py": true,
+    "prompts_v3.py": true,
+    "prompts_v4.py": true,
+    "protocol.py": true,
+    "protocol_v2.py": true,
+    "report.py": true,
+    "runner.py": true,
+    "selfcheck.py": true
+  },
+  "source_modified": false,
+  "model_called": false,
+  "metric_glossary": {
+    "final_is_goal_atom": "최종 포인터에 노드 ID 대신 목표 원자 문자열을 넣은 건수. 목표 도달 성공 수가 아님.",
+    "selected_final_node_atom_matches_goal": "통합 증명에서 최종 노드가 담은 명제와 실제 목표가 같은 건수.",
+    "all_local_steps_valid": "통합 증명 또는 proof 생성 과제 대상 지표. 분모는 proof_structure_applicable_cases. 다른 분리 과제에는 해당 없음."
+  },
+  "assigned_cases": 12,
+  "counts": {
+    "proof_structure_applicable_cases": 6,
+    "saved_responses": 12,
+    "original_decision_reproduced": 12,
+    "status_accepted": 5,
+    "normal_stop": 12,
+    "json_valid": 12,
+    "schema_valid": 11,
+    "all_local_steps_valid": 4,
+    "all_problem_rules_emitted": 0,
+    "missing_final_reference": 0,
+    "missing_parent_reference": 0,
+    "empty_binding": 0,
+    "final_is_goal_atom": 0,
+    "valid_completion": 5,
+    "status_invalid_task": 6,
+    "status_protocol_error": 1
+  },
+  "cases": [
+    {
+      "case": {
+        "problem_id": "K01",
+        "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "proof_K01_compact",
+        "task": "proof",
+        "repeat": 0,
+        "seed": 1729,
+        "calibration_version": 4,
+        "probe_contract": "causal-v041",
+        "probe_variant": "compact",
+        "depth_policy": "deep",
+        "case_id": "4c497931e014e5dbd5597bc1"
+      },
+      "original_status": "accepted",
+      "replayed_status": "accepted",
+      "replayed_error": null,
+      "original_decision_reproduced": true,
+      "original_error_text_reproduced": true,
+      "diagnostics": {
+        "json_valid": true,
+        "schema_valid": true,
+        "schema_error": null,
+        "node_shape_assessable": true,
+        "final_reference_exists": true,
+        "all_local_steps_valid": true,
+        "goal_match": true,
+        "missing_parent_node_ids": [],
+        "invalid_step_node_ids": [],
+        "unrelated_node_ids": [],
+        "empty_binding_node_ids": [],
+        "view_kind_counts": {},
+        "node_ids": [
+          "0",
+          "1",
+          "2"
+        ],
+        "selected_final_reference": "2",
+        "all_problem_rules_emitted": false,
+        "selected_component_depth": 2,
+        "all_nodes_in_selected_component": true,
+        "note": "원문 무수정 진단. 국소 규칙 일치는 전체 증명 성공이 아님.",
+        "output_key_order": [
+          "nodes",
+          "selected_final_node_id"
+        ],
+        "support_evidence": {
+          "shape_valid": true,
+          "node_count": 3,
+          "locally_valid_nodes": 3,
+          "all_local_steps_valid": true,
+          "final_reference_exists": true,
+          "goal_match": true,
+          "selected_support_valid": true,
+          "full_support_valid": true,
+          "selected_depth_when_valid": 2,
+          "structural_depth_not_semantic_D": 2,
+          "unrelated_node_ids": [],
+          "first_failure": null,
+          "nodes": [
+            {
+              "position": 0,
+              "node_id": "0",
+              "atom": "Ca",
+              "rule_id": null,
+              "parent_node_ids": [],
+              "actual_parent_atoms": [],
+              "expected_parent_atoms": [],
+              "expected_conclusion": null,
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 1,
+              "node_id": "1",
+              "atom": "Cb",
+              "rule_id": "k10",
+              "parent_node_ids": [
+                "0"
+              ],
+              "actual_parent_atoms": [
+                "Ca"
+              ],
+              "expected_parent_atoms": [
+                "Ca"
+              ],
+              "expected_conclusion": "Cb",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 2,
+              "node_id": "2",
+              "atom": "Cc",
+              "rule_id": "k17",
+              "parent_node_ids": [
+                "1"
+              ],
+              "actual_parent_atoms": [
+                "Cb"
+              ],
+              "expected_parent_atoms": [
+                "Cb"
+              ],
+              "expected_conclusion": "Cc",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            }
+          ]
+        },
+        "selected_component_support_valid": true,
+        "selected_component_depth_if_grounded": 2,
+        "first_invalid_step": null,
+        "unrelated_node_ids_independent": [],
+        "selected_component_note": "원문 노드를 삭제/수정하지 않은 선택 연결부의 관측. 전체 증명의 유효성 판정을 대체하지 않음",
+        "schema_scope": "task_specific_calibration_schema"
+      },
+      "task_diagnostics": {
+        "task": "proof",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "support": {
+          "shape_valid": true,
+          "node_count": 3,
+          "locally_valid_nodes": 3,
+          "all_local_steps_valid": true,
+          "final_reference_exists": true,
+          "goal_match": true,
+          "selected_support_valid": true,
+          "full_support_valid": true,
+          "selected_depth_when_valid": 2,
+          "structural_depth_not_semantic_D": 2,
+          "unrelated_node_ids": [],
+          "first_failure": null,
+          "nodes": [
+            {
+              "position": 0,
+              "node_id": "0",
+              "atom": "Ca",
+              "rule_id": null,
+              "parent_node_ids": [],
+              "actual_parent_atoms": [],
+              "expected_parent_atoms": [],
+              "expected_conclusion": null,
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 1,
+              "node_id": "1",
+              "atom": "Cb",
+              "rule_id": "k10",
+              "parent_node_ids": [
+                "0"
+              ],
+              "actual_parent_atoms": [
+                "Ca"
+              ],
+              "expected_parent_atoms": [
+                "Ca"
+              ],
+              "expected_conclusion": "Cb",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 2,
+              "node_id": "2",
+              "atom": "Cc",
+              "rule_id": "k17",
+              "parent_node_ids": [
+                "1"
+              ],
+              "actual_parent_atoms": [
+                "Cb"
+              ],
+              "expected_parent_atoms": [
+                "Cb"
+              ],
+              "expected_conclusion": "Cc",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            }
+          ]
+        }
+      },
+      "diagnostic_scope": "proof_generation",
+      "audit": {
+        "valid_completion": true,
+        "role_adherent": null,
+        "calibration_task": "proof",
+        "task_checks": {
+          "valid_proof": true,
+          "requested_depth": true,
+          "simple_paths": true
+        },
+        "details": {
+          "core_audit": {
+            "valid": true,
+            "metrics": {
+              "A": "instance",
+              "D": 2,
+              "M": 0
+            },
+            "states": [
+              {
+                "event": "0",
+                "A": "instance",
+                "D": 0,
+                "M": 0
+              },
+              {
+                "event": "1",
+                "A": "instance",
+                "D": 1,
+                "M": 0
+              },
+              {
+                "event": "2",
+                "A": "instance",
+                "D": 2,
+                "M": 0
+              }
+            ],
+            "node_count": 3,
+            "error": null
+          },
+          "D_target": 2,
+          "selection_diagnostic": {
+            "all_local_steps_valid": true,
+            "selected_component_depth": 2,
+            "all_nodes_in_selected_component": true,
+            "unrelated_node_ids": [],
+            "final_reference_exists": true,
+            "selected_component_support_valid": true,
+            "selected_component_depth_if_grounded": 2,
+            "first_invalid_step": null,
+            "unrelated_node_ids_independent": [],
+            "selected_component_depth_matches_target": true,
+            "note": "선택 연결부의 깊이만 관측. 무관한 노드를 제거하거나 전체 증명을 성공으로 바꾸지 않음"
+          },
+          "host_supplied": "진단용 instance view와 빈 reviews만 부착. A/M은 측정하지 않음"
+        },
+        "task_comparisons": [
+          {
+            "field": "valid_proof",
+            "actual": true,
+            "expected": true,
+            "matches": true
+          },
+          {
+            "field": "D_on_valid_full_proof",
+            "actual": 2,
+            "expected": 2,
+            "matches": true
+          },
+          {
+            "field": "simple_paths_on_valid_full_proof",
+            "actual": true,
+            "expected": true,
+            "matches": true
+          }
+        ],
+        "task_checks_note": "task_checks의 true/false는 정답과 일치 여부다. 모델이 출력한 판정값이 아님.",
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단독 교정 과제의 성공 여부. 통합 ADM 성공·축 독립성 결과가 아님."
+      },
+      "usage": {
+        "prompt_eval_count": 382,
+        "prompt_eval_cached_count": 0,
+        "eval_count": 137,
+        "total_duration": 5152480800,
+        "load_duration": 3174005800,
+        "prompt_eval_duration": 133713000,
+        "eval_duration": 1772792000,
+        "total_seconds": 5.1524808,
+        "load_seconds": 3.1740058,
+        "prompt_eval_seconds": 0.133713,
+        "generation_seconds": 1.772792,
+        "tokens_per_second": 77.27922959941155
+      },
+      "wall_seconds": 5.1670848000001115
+    },
+    {
+      "case": {
+        "problem_id": "K01",
+        "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "criterion_01_compact",
+        "task": "criterion",
+        "repeat": 0,
+        "seed": 1729,
+        "calibration_version": 4,
+        "probe_contract": "causal-v041",
+        "probe_variant": "compact",
+        "probe_atom": "Cc",
+        "case_id": "2bfc018132605f8be9e74a40"
+      },
+      "original_status": "invalid_task",
+      "replayed_status": "invalid_task",
+      "replayed_error": "진단 검사 불일치 항목: proof_and_goal_accepts, gap_detected (각 판정의 실제값/기대값은 task_comparisons에 저장)",
+      "original_decision_reproduced": true,
+      "original_error_text_reproduced": true,
+      "diagnostics": {
+        "json_valid": true,
+        "schema_valid": true,
+        "schema_error": null,
+        "node_shape_assessable": false,
+        "final_reference_exists": null,
+        "all_local_steps_valid": null,
+        "goal_match": null,
+        "missing_parent_node_ids": [],
+        "invalid_step_node_ids": [],
+        "unrelated_node_ids": null,
+        "empty_binding_node_ids": [],
+        "view_kind_counts": {},
+        "node_ids": [],
+        "selected_final_reference": null,
+        "all_problem_rules_emitted": null,
+        "selected_component_depth": null,
+        "all_nodes_in_selected_component": null,
+        "note": "원문 무수정 진단. 국소 규칙 일치는 전체 증명 성공이 아님.",
+        "output_key_order": [
+          "answer_only_accepts",
+          "gap_detected",
+          "proof_and_goal_accepts"
+        ],
+        "schema_scope": "task_specific_calibration_schema"
+      },
+      "task_diagnostics": {
+        "task": "criterion",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "criterion": {
+          "input": {
+            "probe_atom": "Cc",
+            "goal": "Cc",
+            "facts": [
+              "Ca"
+            ]
+          },
+          "expected_primitives": {
+            "same_as_goal": true,
+            "in_facts": false
+          },
+          "expected": {
+            "answer_only_accepts": true,
+            "proof_and_goal_accepts": false,
+            "gap_detected": true
+          },
+          "actual": {
+            "answer_only_accepts": true,
+            "proof_and_goal_accepts": true,
+            "gap_detected": false
+          },
+          "matches": {
+            "answer_only_accepts": true,
+            "proof_and_goal_accepts": false,
+            "gap_detected": false
+          },
+          "actual_internal_consistency": true,
+          "primitive_failure_localized": false,
+          "note": "원래 과제는 primitive 출력을 받지 않는다. 내부 어느 연산이 틀렸는지 이 결과로 단정하지 않는다."
+        }
+      },
+      "diagnostic_scope": "non_proof_task",
+      "audit": {
+        "valid_completion": false,
+        "role_adherent": null,
+        "calibration_task": "criterion",
+        "task_checks": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": false,
+          "gap_detected": false
+        },
+        "details": {
+          "actual": {
+            "answer_only_accepts": true,
+            "gap_detected": false,
+            "proof_and_goal_accepts": true
+          },
+          "expected": {
+            "answer_only_accepts": true,
+            "proof_and_goal_accepts": false,
+            "gap_detected": true
+          },
+          "host_supplied": "시험 probe. 모델에 판정 정답은 미제공"
+        },
+        "task_comparisons": [
+          {
+            "field": "answer_only_accepts",
+            "actual": true,
+            "expected": true,
+            "matches": true
+          },
+          {
+            "field": "proof_and_goal_accepts",
+            "actual": true,
+            "expected": false,
+            "matches": false
+          },
+          {
+            "field": "gap_detected",
+            "actual": false,
+            "expected": true,
+            "matches": false
+          }
+        ],
+        "task_checks_note": "task_checks의 true/false는 정답과 일치 여부다. 모델이 출력한 판정값이 아님.",
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단독 교정 과제의 성공 여부. 통합 ADM 성공·축 독립성 결과가 아님."
+      },
+      "usage": {
+        "prompt_eval_count": 214,
+        "prompt_eval_cached_count": 6,
+        "eval_count": 24,
+        "total_duration": 458115400,
+        "load_duration": 12208400,
+        "prompt_eval_duration": 55392000,
+        "eval_duration": 291040000,
+        "total_seconds": 0.4581154,
+        "load_seconds": 0.0122084,
+        "prompt_eval_seconds": 0.055392,
+        "generation_seconds": 0.29104,
+        "tokens_per_second": 82.46289169873556
+      },
+      "wall_seconds": 0.4727484000000004
+    },
+    {
+      "case": {
+        "problem_id": "K03",
+        "problem_sha256": "da4e6f453a328261b9c3800b8190a2c513b0d1ce27b09052f0f92b722cafff04",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "schema_K03_json",
+        "task": "schema",
+        "repeat": 0,
+        "seed": 1729,
+        "calibration_version": 4,
+        "probe_contract": "causal-v041",
+        "probe_variant": "json",
+        "view_scope": "final_node_only",
+        "provided_proof": {
+          "nodes": [
+            {
+              "node_id": "n0",
+              "atom": "Ea",
+              "rule_id": null,
+              "parent_node_ids": []
+            },
+            {
+              "node_id": "n1",
+              "atom": "Eb",
+              "rule_id": "k10",
+              "parent_node_ids": [
+                "n0"
+              ]
+            },
+            {
+              "node_id": "n2",
+              "atom": "Ec",
+              "rule_id": "k17",
+              "parent_node_ids": [
+                "n1"
+              ]
+            },
+            {
+              "node_id": "n3",
+              "atom": "Ed",
+              "rule_id": "k24",
+              "parent_node_ids": [
+                "n1"
+              ]
+            },
+            {
+              "node_id": "n4",
+              "atom": "Ee",
+              "rule_id": "k00",
+              "parent_node_ids": [
+                "n2",
+                "n3"
+              ]
+            }
+          ],
+          "selected_final_node_id": "n4"
+        },
+        "case_id": "81f33b1f70f9cf932f25cf9b"
+      },
+      "original_status": "protocol_error",
+      "replayed_status": "protocol_error",
+      "replayed_error": "SCHEMA $.node_views[0].view: 허용된 형식 중 어느 것과도 맞지 않습니다.",
+      "original_decision_reproduced": true,
+      "original_error_text_reproduced": true,
+      "diagnostics": {
+        "json_valid": true,
+        "schema_valid": false,
+        "schema_error": "SCHEMA $.node_views[0].view: 허용된 형식 중 어느 것과도 맞지 않습니다.",
+        "node_shape_assessable": false,
+        "final_reference_exists": null,
+        "all_local_steps_valid": null,
+        "goal_match": null,
+        "missing_parent_node_ids": [],
+        "invalid_step_node_ids": [],
+        "unrelated_node_ids": null,
+        "empty_binding_node_ids": [],
+        "view_kind_counts": {},
+        "node_ids": [],
+        "selected_final_reference": null,
+        "all_problem_rules_emitted": null,
+        "selected_component_depth": null,
+        "all_nodes_in_selected_component": null,
+        "note": "원문 무수정 진단. 국소 규칙 일치는 전체 증명 성공이 아님.",
+        "output_key_order": [
+          "node_views"
+        ],
+        "schema_scope": "task_specific_calibration_schema"
+      },
+      "task_diagnostics": {
+        "task": "schema",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [
+          {
+            "path": "$.node_views[0].view.bindings",
+            "error": "type_mismatch",
+            "expected": "array",
+            "actual": "dict"
+          }
+        ],
+        "schema": {
+          "provided_proof_valid": true,
+          "views": [
+            {
+              "node_id": "n4",
+              "kind": "universal_schema",
+              "expected_atoms": [
+                "Ea",
+                "Eb",
+                "Ec",
+                "Ed",
+                "Ee"
+              ],
+              "expected_clauses": [
+                {
+                  "if": [],
+                  "then": "Ea"
+                },
+                {
+                  "if": [
+                    "Ea"
+                  ],
+                  "then": "Eb"
+                },
+                {
+                  "if": [
+                    "Eb"
+                  ],
+                  "then": "Ec"
+                },
+                {
+                  "if": [
+                    "Eb"
+                  ],
+                  "then": "Ed"
+                },
+                {
+                  "if": [
+                    "Ec",
+                    "Ed"
+                  ],
+                  "then": "Ee"
+                }
+              ],
+              "binding_container": "dict",
+              "issues": [
+                "bindings_object_not_required_array"
+              ],
+              "noncanonical_mapping_observation_only": true,
+              "returned_clauses": [
+                {
+                  "if": [
+                    "Ea"
+                  ],
+                  "then": "Eb"
+                },
+                {
+                  "if": [
+                    "Eb"
+                  ],
+                  "then": "Ec"
+                },
+                {
+                  "if": [
+                    "Eb"
+                  ],
+                  "then": "Ed"
+                },
+                {
+                  "if": [
+                    "Ec",
+                    "Ed"
+                  ],
+                  "then": "Ee"
+                }
+              ],
+              "missing_clauses": [
+                {
+                  "if": [],
+                  "then": "Ea"
+                }
+              ],
+              "missing_fact_atoms": [
+                "Ea"
+              ],
+              "extra_clauses": [],
+              "duplicate_clauses": [],
+              "grounded_clauses_exact": false,
+              "conclusion_grounding_valid": true,
+              "counterexample_valuation": {
+                "a": false,
+                "b": false,
+                "c": false,
+                "d": false,
+                "e": false
+              },
+              "supplied_clauses_entail_conclusion": false
+            }
+          ],
+          "score_effect": "none",
+          "output_modified": false
+        }
+      },
+      "diagnostic_scope": "non_proof_task",
+      "audit": null,
+      "usage": {
+        "prompt_eval_count": 505,
+        "prompt_eval_cached_count": 3,
+        "eval_count": 186,
+        "total_duration": 2521192200,
+        "load_duration": 11643500,
+        "prompt_eval_duration": 124090000,
+        "eval_duration": 2307242000,
+        "total_seconds": 2.5211922,
+        "load_seconds": 0.0116435,
+        "prompt_eval_seconds": 0.12409,
+        "generation_seconds": 2.307242,
+        "tokens_per_second": 80.61573081627328
+      },
+      "wall_seconds": 2.5354009000000133
+    },
+    {
+      "case": {
+        "problem_id": "K03",
+        "problem_sha256": "da4e6f453a328261b9c3800b8190a2c513b0d1ce27b09052f0f92b722cafff04",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "proof_K03_compact",
+        "task": "proof",
+        "repeat": 0,
+        "seed": 1729,
+        "calibration_version": 4,
+        "probe_contract": "causal-v041",
+        "probe_variant": "compact",
+        "depth_policy": "deep",
+        "case_id": "40e41ac9f560060e3b3c1cfc"
+      },
+      "original_status": "invalid_task",
+      "replayed_status": "invalid_task",
+      "replayed_error": "진단 검사 불일치 항목: valid_proof, requested_depth, simple_paths (각 판정의 실제값/기대값은 task_comparisons에 저장)",
+      "original_decision_reproduced": true,
+      "original_error_text_reproduced": true,
+      "diagnostics": {
+        "json_valid": true,
+        "schema_valid": true,
+        "schema_error": null,
+        "node_shape_assessable": true,
+        "final_reference_exists": true,
+        "all_local_steps_valid": false,
+        "goal_match": true,
+        "missing_parent_node_ids": [],
+        "invalid_step_node_ids": [
+          "3",
+          "4"
+        ],
+        "unrelated_node_ids": null,
+        "empty_binding_node_ids": [],
+        "view_kind_counts": {},
+        "node_ids": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "selected_final_reference": "4",
+        "all_problem_rules_emitted": false,
+        "selected_component_depth": null,
+        "all_nodes_in_selected_component": null,
+        "note": "원문 무수정 진단. 국소 규칙 일치는 전체 증명 성공이 아님.",
+        "output_key_order": [
+          "nodes",
+          "selected_final_node_id"
+        ],
+        "support_evidence": {
+          "shape_valid": true,
+          "node_count": 5,
+          "locally_valid_nodes": 3,
+          "all_local_steps_valid": false,
+          "final_reference_exists": true,
+          "goal_match": true,
+          "selected_support_valid": false,
+          "full_support_valid": false,
+          "selected_depth_when_valid": null,
+          "structural_depth_not_semantic_D": 4,
+          "unrelated_node_ids": [],
+          "first_failure": {
+            "position": 3,
+            "node_id": "3",
+            "atom": "Ed",
+            "rule_id": "k24",
+            "parent_node_ids": [
+              "2"
+            ],
+            "actual_parent_atoms": [
+              "Ec"
+            ],
+            "expected_parent_atoms": [
+              "Eb"
+            ],
+            "expected_conclusion": "Ed",
+            "missing_premises": [
+              "Eb"
+            ],
+            "extra_premises": [
+              "Ec"
+            ],
+            "faults": [
+              "wrong_premises"
+            ],
+            "locally_valid": false,
+            "grounded": false
+          },
+          "nodes": [
+            {
+              "position": 0,
+              "node_id": "0",
+              "atom": "Ea",
+              "rule_id": null,
+              "parent_node_ids": [],
+              "actual_parent_atoms": [],
+              "expected_parent_atoms": [],
+              "expected_conclusion": null,
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 1,
+              "node_id": "1",
+              "atom": "Eb",
+              "rule_id": "k10",
+              "parent_node_ids": [
+                "0"
+              ],
+              "actual_parent_atoms": [
+                "Ea"
+              ],
+              "expected_parent_atoms": [
+                "Ea"
+              ],
+              "expected_conclusion": "Eb",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 2,
+              "node_id": "2",
+              "atom": "Ec",
+              "rule_id": "k17",
+              "parent_node_ids": [
+                "1"
+              ],
+              "actual_parent_atoms": [
+                "Eb"
+              ],
+              "expected_parent_atoms": [
+                "Eb"
+              ],
+              "expected_conclusion": "Ec",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 3,
+              "node_id": "3",
+              "atom": "Ed",
+              "rule_id": "k24",
+              "parent_node_ids": [
+                "2"
+              ],
+              "actual_parent_atoms": [
+                "Ec"
+              ],
+              "expected_parent_atoms": [
+                "Eb"
+              ],
+              "expected_conclusion": "Ed",
+              "missing_premises": [
+                "Eb"
+              ],
+              "extra_premises": [
+                "Ec"
+              ],
+              "faults": [
+                "wrong_premises"
+              ],
+              "locally_valid": false,
+              "grounded": false
+            },
+            {
+              "position": 4,
+              "node_id": "4",
+              "atom": "Ee",
+              "rule_id": "k00",
+              "parent_node_ids": [
+                "3"
+              ],
+              "actual_parent_atoms": [
+                "Ed"
+              ],
+              "expected_parent_atoms": [
+                "Ec",
+                "Ed"
+              ],
+              "expected_conclusion": "Ee",
+              "missing_premises": [
+                "Ec"
+              ],
+              "extra_premises": [],
+              "faults": [
+                "wrong_premises"
+              ],
+              "locally_valid": false,
+              "grounded": false
+            }
+          ]
+        },
+        "selected_component_support_valid": false,
+        "selected_component_depth_if_grounded": null,
+        "first_invalid_step": {
+          "position": 3,
+          "node_id": "3",
+          "atom": "Ed",
+          "rule_id": "k24",
+          "parent_node_ids": [
+            "2"
+          ],
+          "actual_parent_atoms": [
+            "Ec"
+          ],
+          "expected_parent_atoms": [
+            "Eb"
+          ],
+          "expected_conclusion": "Ed",
+          "missing_premises": [
+            "Eb"
+          ],
+          "extra_premises": [
+            "Ec"
+          ],
+          "faults": [
+            "wrong_premises"
+          ],
+          "locally_valid": false,
+          "grounded": false
+        },
+        "unrelated_node_ids_independent": [],
+        "schema_scope": "task_specific_calibration_schema"
+      },
+      "task_diagnostics": {
+        "task": "proof",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "support": {
+          "shape_valid": true,
+          "node_count": 5,
+          "locally_valid_nodes": 3,
+          "all_local_steps_valid": false,
+          "final_reference_exists": true,
+          "goal_match": true,
+          "selected_support_valid": false,
+          "full_support_valid": false,
+          "selected_depth_when_valid": null,
+          "structural_depth_not_semantic_D": 4,
+          "unrelated_node_ids": [],
+          "first_failure": {
+            "position": 3,
+            "node_id": "3",
+            "atom": "Ed",
+            "rule_id": "k24",
+            "parent_node_ids": [
+              "2"
+            ],
+            "actual_parent_atoms": [
+              "Ec"
+            ],
+            "expected_parent_atoms": [
+              "Eb"
+            ],
+            "expected_conclusion": "Ed",
+            "missing_premises": [
+              "Eb"
+            ],
+            "extra_premises": [
+              "Ec"
+            ],
+            "faults": [
+              "wrong_premises"
+            ],
+            "locally_valid": false,
+            "grounded": false
+          },
+          "nodes": [
+            {
+              "position": 0,
+              "node_id": "0",
+              "atom": "Ea",
+              "rule_id": null,
+              "parent_node_ids": [],
+              "actual_parent_atoms": [],
+              "expected_parent_atoms": [],
+              "expected_conclusion": null,
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 1,
+              "node_id": "1",
+              "atom": "Eb",
+              "rule_id": "k10",
+              "parent_node_ids": [
+                "0"
+              ],
+              "actual_parent_atoms": [
+                "Ea"
+              ],
+              "expected_parent_atoms": [
+                "Ea"
+              ],
+              "expected_conclusion": "Eb",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 2,
+              "node_id": "2",
+              "atom": "Ec",
+              "rule_id": "k17",
+              "parent_node_ids": [
+                "1"
+              ],
+              "actual_parent_atoms": [
+                "Eb"
+              ],
+              "expected_parent_atoms": [
+                "Eb"
+              ],
+              "expected_conclusion": "Ec",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 3,
+              "node_id": "3",
+              "atom": "Ed",
+              "rule_id": "k24",
+              "parent_node_ids": [
+                "2"
+              ],
+              "actual_parent_atoms": [
+                "Ec"
+              ],
+              "expected_parent_atoms": [
+                "Eb"
+              ],
+              "expected_conclusion": "Ed",
+              "missing_premises": [
+                "Eb"
+              ],
+              "extra_premises": [
+                "Ec"
+              ],
+              "faults": [
+                "wrong_premises"
+              ],
+              "locally_valid": false,
+              "grounded": false
+            },
+            {
+              "position": 4,
+              "node_id": "4",
+              "atom": "Ee",
+              "rule_id": "k00",
+              "parent_node_ids": [
+                "3"
+              ],
+              "actual_parent_atoms": [
+                "Ed"
+              ],
+              "expected_parent_atoms": [
+                "Ec",
+                "Ed"
+              ],
+              "expected_conclusion": "Ee",
+              "missing_premises": [
+                "Ec"
+              ],
+              "extra_premises": [],
+              "faults": [
+                "wrong_premises"
+              ],
+              "locally_valid": false,
+              "grounded": false
+            }
+          ]
+        }
+      },
+      "diagnostic_scope": "proof_generation",
+      "audit": {
+        "valid_completion": false,
+        "role_adherent": null,
+        "calibration_task": "proof",
+        "task_checks": {
+          "valid_proof": false,
+          "requested_depth": false,
+          "simple_paths": false
+        },
+        "details": {
+          "core_audit": {
+            "valid": false,
+            "metrics": {
+              "A": null,
+              "D": null,
+              "M": null
+            },
+            "states": [],
+            "error": "PROOF: 전제 불일치/생략/중복"
+          },
+          "D_target": 3,
+          "selection_diagnostic": {
+            "all_local_steps_valid": false,
+            "selected_component_depth": null,
+            "all_nodes_in_selected_component": null,
+            "unrelated_node_ids": null,
+            "final_reference_exists": true,
+            "selected_component_support_valid": false,
+            "selected_component_depth_if_grounded": null,
+            "first_invalid_step": {
+              "position": 3,
+              "node_id": "3",
+              "atom": "Ed",
+              "rule_id": "k24",
+              "parent_node_ids": [
+                "2"
+              ],
+              "actual_parent_atoms": [
+                "Ec"
+              ],
+              "expected_parent_atoms": [
+                "Eb"
+              ],
+              "expected_conclusion": "Ed",
+              "missing_premises": [
+                "Eb"
+              ],
+              "extra_premises": [
+                "Ec"
+              ],
+              "faults": [
+                "wrong_premises"
+              ],
+              "locally_valid": false,
+              "grounded": false
+            },
+            "unrelated_node_ids_independent": [],
+            "selected_component_depth_matches_target": false,
+            "note": "선택 연결부의 깊이만 관측. 무관한 노드를 제거하거나 전체 증명을 성공으로 바꾸지 않음"
+          },
+          "host_supplied": "진단용 instance view와 빈 reviews만 부착. A/M은 측정하지 않음"
+        },
+        "task_comparisons": [
+          {
+            "field": "valid_proof",
+            "actual": false,
+            "expected": true,
+            "matches": false
+          },
+          {
+            "field": "D_on_valid_full_proof",
+            "actual": null,
+            "expected": 3,
+            "matches": false
+          },
+          {
+            "field": "simple_paths_on_valid_full_proof",
+            "actual": null,
+            "expected": true,
+            "matches": false
+          }
+        ],
+        "task_checks_note": "task_checks의 true/false는 정답과 일치 여부다. 모델이 출력한 판정값이 아님.",
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단독 교정 과제의 성공 여부. 통합 ADM 성공·축 독립성 결과가 아님."
+      },
+      "usage": {
+        "prompt_eval_count": 424,
+        "prompt_eval_cached_count": 313,
+        "eval_count": 207,
+        "total_duration": 2731396000,
+        "load_duration": 11387000,
+        "prompt_eval_duration": 33128000,
+        "eval_duration": 2565914000,
+        "total_seconds": 2.731396,
+        "load_seconds": 0.011387,
+        "prompt_eval_seconds": 0.033128,
+        "generation_seconds": 2.565914,
+        "tokens_per_second": 80.67300774694709
+      },
+      "wall_seconds": 2.7448951999999736
+    },
+    {
+      "case": {
+        "problem_id": "K03",
+        "problem_sha256": "da4e6f453a328261b9c3800b8190a2c513b0d1ce27b09052f0f92b722cafff04",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "schema_K03_schema_only",
+        "task": "schema",
+        "repeat": 0,
+        "seed": 1729,
+        "calibration_version": 4,
+        "probe_contract": "causal-v041",
+        "probe_variant": "schema_only",
+        "view_scope": "final_node_only",
+        "provided_proof": {
+          "nodes": [
+            {
+              "node_id": "n0",
+              "atom": "Ea",
+              "rule_id": null,
+              "parent_node_ids": []
+            },
+            {
+              "node_id": "n1",
+              "atom": "Eb",
+              "rule_id": "k10",
+              "parent_node_ids": [
+                "n0"
+              ]
+            },
+            {
+              "node_id": "n2",
+              "atom": "Ec",
+              "rule_id": "k17",
+              "parent_node_ids": [
+                "n1"
+              ]
+            },
+            {
+              "node_id": "n3",
+              "atom": "Ed",
+              "rule_id": "k24",
+              "parent_node_ids": [
+                "n1"
+              ]
+            },
+            {
+              "node_id": "n4",
+              "atom": "Ee",
+              "rule_id": "k00",
+              "parent_node_ids": [
+                "n2",
+                "n3"
+              ]
+            }
+          ],
+          "selected_final_node_id": "n4"
+        },
+        "case_id": "4a704cacd9dbf22fb2845ff6"
+      },
+      "original_status": "invalid_task",
+      "replayed_status": "invalid_task",
+      "replayed_error": "진단 검사 불일치 항목: valid_final_schema (각 판정의 실제값/기대값은 task_comparisons에 저장)",
+      "original_decision_reproduced": true,
+      "original_error_text_reproduced": true,
+      "diagnostics": {
+        "json_valid": true,
+        "schema_valid": true,
+        "schema_error": null,
+        "node_shape_assessable": false,
+        "final_reference_exists": null,
+        "all_local_steps_valid": null,
+        "goal_match": null,
+        "missing_parent_node_ids": [],
+        "invalid_step_node_ids": [],
+        "unrelated_node_ids": null,
+        "empty_binding_node_ids": [],
+        "view_kind_counts": {},
+        "node_ids": [],
+        "selected_final_reference": null,
+        "all_problem_rules_emitted": null,
+        "selected_component_depth": null,
+        "all_nodes_in_selected_component": null,
+        "note": "원문 무수정 진단. 국소 규칙 일치는 전체 증명 성공이 아님.",
+        "output_key_order": [
+          "node_views"
+        ],
+        "schema_scope": "task_specific_calibration_schema"
+      },
+      "task_diagnostics": {
+        "task": "schema",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "schema": {
+          "provided_proof_valid": true,
+          "views": [
+            {
+              "node_id": "n4",
+              "kind": "universal_schema",
+              "expected_atoms": [
+                "Ea",
+                "Eb",
+                "Ec",
+                "Ed",
+                "Ee"
+              ],
+              "expected_clauses": [
+                {
+                  "if": [],
+                  "then": "Ea"
+                },
+                {
+                  "if": [
+                    "Ea"
+                  ],
+                  "then": "Eb"
+                },
+                {
+                  "if": [
+                    "Eb"
+                  ],
+                  "then": "Ec"
+                },
+                {
+                  "if": [
+                    "Eb"
+                  ],
+                  "then": "Ed"
+                },
+                {
+                  "if": [
+                    "Ec",
+                    "Ed"
+                  ],
+                  "then": "Ee"
+                }
+              ],
+              "binding_container": "list",
+              "issues": [],
+              "returned_clauses": [
+                {
+                  "if": [
+                    "Ea"
+                  ],
+                  "then": "Eb"
+                },
+                {
+                  "if": [
+                    "Eb"
+                  ],
+                  "then": "Ec"
+                },
+                {
+                  "if": [
+                    "Eb"
+                  ],
+                  "then": "Ed"
+                },
+                {
+                  "if": [
+                    "Ec",
+                    "Ed"
+                  ],
+                  "then": "Ee"
+                }
+              ],
+              "missing_clauses": [
+                {
+                  "if": [],
+                  "then": "Ea"
+                }
+              ],
+              "missing_fact_atoms": [
+                "Ea"
+              ],
+              "extra_clauses": [],
+              "duplicate_clauses": [],
+              "grounded_clauses_exact": false,
+              "conclusion_grounding_valid": true,
+              "counterexample_valuation": {
+                "v": false,
+                "w": false,
+                "x": false,
+                "y": false,
+                "z": false
+              },
+              "supplied_clauses_entail_conclusion": false
+            }
+          ],
+          "score_effect": "none",
+          "output_modified": false
+        }
+      },
+      "diagnostic_scope": "non_proof_task",
+      "audit": {
+        "valid_completion": false,
+        "role_adherent": null,
+        "calibration_task": "schema",
+        "task_checks": {
+          "requested_view_scope": true,
+          "schema_kind": true,
+          "valid_final_schema": false
+        },
+        "task_comparisons": [
+          {
+            "field": "requested_view_scope",
+            "actual": true,
+            "expected": true,
+            "matches": true
+          },
+          {
+            "field": "schema_kind",
+            "actual": true,
+            "expected": true,
+            "matches": true
+          },
+          {
+            "field": "valid_final_schema",
+            "actual": false,
+            "expected": true,
+            "matches": false
+          }
+        ],
+        "details": {
+          "core_audit": {
+            "valid": false,
+            "metrics": {
+              "A": null,
+              "D": 3,
+              "M": null
+            },
+            "states": [],
+            "error": "VIEW: 가정 추가/삭제/중복으로 도식의 의미가 바뀜"
+          },
+          "view_scope": "final_node_only",
+          "returned_node_ids": [
+            "n4"
+          ],
+          "expected_node_ids": [
+            "n4"
+          ],
+          "returned_view_kinds": [
+            "universal_schema"
+          ],
+          "host_supplied": "증명 전체와 중간 노드 instance view는 고정 입력/진단용. 최종 도식만 모델 산출물.",
+          "scope_note": "A 전체 성공이 아니다. 같은 고정 증명의 all_nodes 과제와 작성 부담을 비교한다."
+        },
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "구성요소 진단이며 전체 ADM 성공으로 집계하지 않음"
+      },
+      "usage": {
+        "prompt_eval_count": 505,
+        "prompt_eval_cached_count": 504,
+        "eval_count": 261,
+        "total_duration": 3450566100,
+        "load_duration": 11985200,
+        "prompt_eval_duration": 15042000,
+        "eval_duration": 3304165000,
+        "total_seconds": 3.4505661,
+        "load_seconds": 0.0119852,
+        "prompt_eval_seconds": 0.015042,
+        "generation_seconds": 3.304165,
+        "tokens_per_second": 78.991212605908
+      },
+      "wall_seconds": 3.46435039999983
+    },
+    {
+      "case": {
+        "problem_id": "K01",
+        "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "proof_K01_baseline",
+        "task": "proof",
+        "repeat": 0,
+        "seed": 1729,
+        "calibration_version": 4,
+        "probe_contract": "causal-v041",
+        "probe_variant": "baseline",
+        "depth_policy": "deep",
+        "case_id": "889c7087116427a2a8c65f06"
+      },
+      "original_status": "accepted",
+      "replayed_status": "accepted",
+      "replayed_error": null,
+      "original_decision_reproduced": true,
+      "original_error_text_reproduced": true,
+      "diagnostics": {
+        "json_valid": true,
+        "schema_valid": true,
+        "schema_error": null,
+        "node_shape_assessable": true,
+        "final_reference_exists": true,
+        "all_local_steps_valid": true,
+        "goal_match": true,
+        "missing_parent_node_ids": [],
+        "invalid_step_node_ids": [],
+        "unrelated_node_ids": [],
+        "empty_binding_node_ids": [],
+        "view_kind_counts": {},
+        "node_ids": [
+          "n0",
+          "n1",
+          "n2"
+        ],
+        "selected_final_reference": "n2",
+        "all_problem_rules_emitted": false,
+        "selected_component_depth": 2,
+        "all_nodes_in_selected_component": true,
+        "note": "원문 무수정 진단. 국소 규칙 일치는 전체 증명 성공이 아님.",
+        "output_key_order": [
+          "nodes",
+          "selected_final_node_id"
+        ],
+        "support_evidence": {
+          "shape_valid": true,
+          "node_count": 3,
+          "locally_valid_nodes": 3,
+          "all_local_steps_valid": true,
+          "final_reference_exists": true,
+          "goal_match": true,
+          "selected_support_valid": true,
+          "full_support_valid": true,
+          "selected_depth_when_valid": 2,
+          "structural_depth_not_semantic_D": 2,
+          "unrelated_node_ids": [],
+          "first_failure": null,
+          "nodes": [
+            {
+              "position": 0,
+              "node_id": "n0",
+              "atom": "Ca",
+              "rule_id": null,
+              "parent_node_ids": [],
+              "actual_parent_atoms": [],
+              "expected_parent_atoms": [],
+              "expected_conclusion": null,
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 1,
+              "node_id": "n1",
+              "atom": "Cb",
+              "rule_id": "k10",
+              "parent_node_ids": [
+                "n0"
+              ],
+              "actual_parent_atoms": [
+                "Ca"
+              ],
+              "expected_parent_atoms": [
+                "Ca"
+              ],
+              "expected_conclusion": "Cb",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 2,
+              "node_id": "n2",
+              "atom": "Cc",
+              "rule_id": "k17",
+              "parent_node_ids": [
+                "n1"
+              ],
+              "actual_parent_atoms": [
+                "Cb"
+              ],
+              "expected_parent_atoms": [
+                "Cb"
+              ],
+              "expected_conclusion": "Cc",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            }
+          ]
+        },
+        "selected_component_support_valid": true,
+        "selected_component_depth_if_grounded": 2,
+        "first_invalid_step": null,
+        "unrelated_node_ids_independent": [],
+        "selected_component_note": "원문 노드를 삭제/수정하지 않은 선택 연결부의 관측. 전체 증명의 유효성 판정을 대체하지 않음",
+        "schema_scope": "task_specific_calibration_schema"
+      },
+      "task_diagnostics": {
+        "task": "proof",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "support": {
+          "shape_valid": true,
+          "node_count": 3,
+          "locally_valid_nodes": 3,
+          "all_local_steps_valid": true,
+          "final_reference_exists": true,
+          "goal_match": true,
+          "selected_support_valid": true,
+          "full_support_valid": true,
+          "selected_depth_when_valid": 2,
+          "structural_depth_not_semantic_D": 2,
+          "unrelated_node_ids": [],
+          "first_failure": null,
+          "nodes": [
+            {
+              "position": 0,
+              "node_id": "n0",
+              "atom": "Ca",
+              "rule_id": null,
+              "parent_node_ids": [],
+              "actual_parent_atoms": [],
+              "expected_parent_atoms": [],
+              "expected_conclusion": null,
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 1,
+              "node_id": "n1",
+              "atom": "Cb",
+              "rule_id": "k10",
+              "parent_node_ids": [
+                "n0"
+              ],
+              "actual_parent_atoms": [
+                "Ca"
+              ],
+              "expected_parent_atoms": [
+                "Ca"
+              ],
+              "expected_conclusion": "Cb",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 2,
+              "node_id": "n2",
+              "atom": "Cc",
+              "rule_id": "k17",
+              "parent_node_ids": [
+                "n1"
+              ],
+              "actual_parent_atoms": [
+                "Cb"
+              ],
+              "expected_parent_atoms": [
+                "Cb"
+              ],
+              "expected_conclusion": "Cc",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            }
+          ]
+        }
+      },
+      "diagnostic_scope": "proof_generation",
+      "audit": {
+        "valid_completion": true,
+        "role_adherent": null,
+        "calibration_task": "proof",
+        "task_checks": {
+          "valid_proof": true,
+          "requested_depth": true,
+          "simple_paths": true
+        },
+        "details": {
+          "core_audit": {
+            "valid": true,
+            "metrics": {
+              "A": "instance",
+              "D": 2,
+              "M": 0
+            },
+            "states": [
+              {
+                "event": "n0",
+                "A": "instance",
+                "D": 0,
+                "M": 0
+              },
+              {
+                "event": "n1",
+                "A": "instance",
+                "D": 1,
+                "M": 0
+              },
+              {
+                "event": "n2",
+                "A": "instance",
+                "D": 2,
+                "M": 0
+              }
+            ],
+            "node_count": 3,
+            "error": null
+          },
+          "D_target": 2,
+          "selection_diagnostic": {
+            "all_local_steps_valid": true,
+            "selected_component_depth": 2,
+            "all_nodes_in_selected_component": true,
+            "unrelated_node_ids": [],
+            "final_reference_exists": true,
+            "selected_component_support_valid": true,
+            "selected_component_depth_if_grounded": 2,
+            "first_invalid_step": null,
+            "unrelated_node_ids_independent": [],
+            "selected_component_depth_matches_target": true,
+            "note": "선택 연결부의 깊이만 관측. 무관한 노드를 제거하거나 전체 증명을 성공으로 바꾸지 않음"
+          },
+          "host_supplied": "진단용 instance view와 빈 reviews만 부착. A/M은 측정하지 않음"
+        },
+        "task_comparisons": [
+          {
+            "field": "valid_proof",
+            "actual": true,
+            "expected": true,
+            "matches": true
+          },
+          {
+            "field": "D_on_valid_full_proof",
+            "actual": 2,
+            "expected": 2,
+            "matches": true
+          },
+          {
+            "field": "simple_paths_on_valid_full_proof",
+            "actual": true,
+            "expected": true,
+            "matches": true
+          }
+        ],
+        "task_checks_note": "task_checks의 true/false는 정답과 일치 여부다. 모델이 출력한 판정값이 아님.",
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단독 교정 과제의 성공 여부. 통합 ADM 성공·축 독립성 결과가 아님."
+      },
+      "usage": {
+        "prompt_eval_count": 856,
+        "prompt_eval_cached_count": 3,
+        "eval_count": 81,
+        "total_duration": 1410852600,
+        "load_duration": 11317300,
+        "prompt_eval_duration": 219984000,
+        "eval_duration": 1052771000,
+        "total_seconds": 1.4108526,
+        "load_seconds": 0.0113173,
+        "prompt_eval_seconds": 0.219984,
+        "generation_seconds": 1.052771,
+        "tokens_per_second": 76.93980932225527
+      },
+      "wall_seconds": 1.4241377999999258
+    },
+    {
+      "case": {
+        "problem_id": "K02",
+        "problem_sha256": "c365b846f96faf4146b5bf938172c97cdaac2f07a7333c6db28aadbeef64beb4",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "proof_K02_compact",
+        "task": "proof",
+        "repeat": 0,
+        "seed": 1729,
+        "calibration_version": 4,
+        "probe_contract": "causal-v041",
+        "probe_variant": "compact",
+        "depth_policy": "deep",
+        "case_id": "0c2c23949b8388bf71c4d616"
+      },
+      "original_status": "accepted",
+      "replayed_status": "accepted",
+      "replayed_error": null,
+      "original_decision_reproduced": true,
+      "original_error_text_reproduced": true,
+      "diagnostics": {
+        "json_valid": true,
+        "schema_valid": true,
+        "schema_error": null,
+        "node_shape_assessable": true,
+        "final_reference_exists": true,
+        "all_local_steps_valid": true,
+        "goal_match": true,
+        "missing_parent_node_ids": [],
+        "invalid_step_node_ids": [],
+        "unrelated_node_ids": [],
+        "empty_binding_node_ids": [],
+        "view_kind_counts": {},
+        "node_ids": [
+          "n0",
+          "n1",
+          "n2",
+          "n3",
+          "n4"
+        ],
+        "selected_final_reference": "n4",
+        "all_problem_rules_emitted": false,
+        "selected_component_depth": 3,
+        "all_nodes_in_selected_component": true,
+        "note": "원문 무수정 진단. 국소 규칙 일치는 전체 증명 성공이 아님.",
+        "output_key_order": [
+          "nodes",
+          "selected_final_node_id"
+        ],
+        "support_evidence": {
+          "shape_valid": true,
+          "node_count": 5,
+          "locally_valid_nodes": 5,
+          "all_local_steps_valid": true,
+          "final_reference_exists": true,
+          "goal_match": true,
+          "selected_support_valid": true,
+          "full_support_valid": true,
+          "selected_depth_when_valid": 3,
+          "structural_depth_not_semantic_D": 3,
+          "unrelated_node_ids": [],
+          "first_failure": null,
+          "nodes": [
+            {
+              "position": 0,
+              "node_id": "n0",
+              "atom": "Da",
+              "rule_id": null,
+              "parent_node_ids": [],
+              "actual_parent_atoms": [],
+              "expected_parent_atoms": [],
+              "expected_conclusion": null,
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 1,
+              "node_id": "n1",
+              "atom": "Db",
+              "rule_id": null,
+              "parent_node_ids": [],
+              "actual_parent_atoms": [],
+              "expected_parent_atoms": [],
+              "expected_conclusion": null,
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 2,
+              "node_id": "n2",
+              "atom": "Dc",
+              "rule_id": "k10",
+              "parent_node_ids": [
+                "n0"
+              ],
+              "actual_parent_atoms": [
+                "Da"
+              ],
+              "expected_parent_atoms": [
+                "Da"
+              ],
+              "expected_conclusion": "Dc",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 3,
+              "node_id": "n3",
+              "atom": "Dd",
+              "rule_id": "k17",
+              "parent_node_ids": [
+                "n2",
+                "n1"
+              ],
+              "actual_parent_atoms": [
+                "Dc",
+                "Db"
+              ],
+              "expected_parent_atoms": [
+                "Dc",
+                "Db"
+              ],
+              "expected_conclusion": "Dd",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 4,
+              "node_id": "n4",
+              "atom": "De",
+              "rule_id": "k24",
+              "parent_node_ids": [
+                "n3"
+              ],
+              "actual_parent_atoms": [
+                "Dd"
+              ],
+              "expected_parent_atoms": [
+                "Dd"
+              ],
+              "expected_conclusion": "De",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            }
+          ]
+        },
+        "selected_component_support_valid": true,
+        "selected_component_depth_if_grounded": 3,
+        "first_invalid_step": null,
+        "unrelated_node_ids_independent": [],
+        "selected_component_note": "원문 노드를 삭제/수정하지 않은 선택 연결부의 관측. 전체 증명의 유효성 판정을 대체하지 않음",
+        "schema_scope": "task_specific_calibration_schema"
+      },
+      "task_diagnostics": {
+        "task": "proof",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "support": {
+          "shape_valid": true,
+          "node_count": 5,
+          "locally_valid_nodes": 5,
+          "all_local_steps_valid": true,
+          "final_reference_exists": true,
+          "goal_match": true,
+          "selected_support_valid": true,
+          "full_support_valid": true,
+          "selected_depth_when_valid": 3,
+          "structural_depth_not_semantic_D": 3,
+          "unrelated_node_ids": [],
+          "first_failure": null,
+          "nodes": [
+            {
+              "position": 0,
+              "node_id": "n0",
+              "atom": "Da",
+              "rule_id": null,
+              "parent_node_ids": [],
+              "actual_parent_atoms": [],
+              "expected_parent_atoms": [],
+              "expected_conclusion": null,
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 1,
+              "node_id": "n1",
+              "atom": "Db",
+              "rule_id": null,
+              "parent_node_ids": [],
+              "actual_parent_atoms": [],
+              "expected_parent_atoms": [],
+              "expected_conclusion": null,
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 2,
+              "node_id": "n2",
+              "atom": "Dc",
+              "rule_id": "k10",
+              "parent_node_ids": [
+                "n0"
+              ],
+              "actual_parent_atoms": [
+                "Da"
+              ],
+              "expected_parent_atoms": [
+                "Da"
+              ],
+              "expected_conclusion": "Dc",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 3,
+              "node_id": "n3",
+              "atom": "Dd",
+              "rule_id": "k17",
+              "parent_node_ids": [
+                "n2",
+                "n1"
+              ],
+              "actual_parent_atoms": [
+                "Dc",
+                "Db"
+              ],
+              "expected_parent_atoms": [
+                "Dc",
+                "Db"
+              ],
+              "expected_conclusion": "Dd",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 4,
+              "node_id": "n4",
+              "atom": "De",
+              "rule_id": "k24",
+              "parent_node_ids": [
+                "n3"
+              ],
+              "actual_parent_atoms": [
+                "Dd"
+              ],
+              "expected_parent_atoms": [
+                "Dd"
+              ],
+              "expected_conclusion": "De",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            }
+          ]
+        }
+      },
+      "diagnostic_scope": "proof_generation",
+      "audit": {
+        "valid_completion": true,
+        "role_adherent": null,
+        "calibration_task": "proof",
+        "task_checks": {
+          "valid_proof": true,
+          "requested_depth": true,
+          "simple_paths": true
+        },
+        "details": {
+          "core_audit": {
+            "valid": true,
+            "metrics": {
+              "A": "instance",
+              "D": 3,
+              "M": 0
+            },
+            "states": [
+              {
+                "event": "n0",
+                "A": "instance",
+                "D": 0,
+                "M": 0
+              },
+              {
+                "event": "n1",
+                "A": "instance",
+                "D": 0,
+                "M": 0
+              },
+              {
+                "event": "n2",
+                "A": "instance",
+                "D": 1,
+                "M": 0
+              },
+              {
+                "event": "n3",
+                "A": "instance",
+                "D": 2,
+                "M": 0
+              },
+              {
+                "event": "n4",
+                "A": "instance",
+                "D": 3,
+                "M": 0
+              }
+            ],
+            "node_count": 5,
+            "error": null
+          },
+          "D_target": 3,
+          "selection_diagnostic": {
+            "all_local_steps_valid": true,
+            "selected_component_depth": 3,
+            "all_nodes_in_selected_component": true,
+            "unrelated_node_ids": [],
+            "final_reference_exists": true,
+            "selected_component_support_valid": true,
+            "selected_component_depth_if_grounded": 3,
+            "first_invalid_step": null,
+            "unrelated_node_ids_independent": [],
+            "selected_component_depth_matches_target": true,
+            "note": "선택 연결부의 깊이만 관측. 무관한 노드를 제거하거나 전체 증명을 성공으로 바꾸지 않음"
+          },
+          "host_supplied": "진단용 instance view와 빈 reviews만 부착. A/M은 측정하지 않음"
+        },
+        "task_comparisons": [
+          {
+            "field": "valid_proof",
+            "actual": true,
+            "expected": true,
+            "matches": true
+          },
+          {
+            "field": "D_on_valid_full_proof",
+            "actual": 3,
+            "expected": 3,
+            "matches": true
+          },
+          {
+            "field": "simple_paths_on_valid_full_proof",
+            "actual": true,
+            "expected": true,
+            "matches": true
+          }
+        ],
+        "task_checks_note": "task_checks의 true/false는 정답과 일치 여부다. 모델이 출력한 판정값이 아님.",
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단독 교정 과제의 성공 여부. 통합 ADM 성공·축 독립성 결과가 아님."
+      },
+      "usage": {
+        "prompt_eval_count": 409,
+        "prompt_eval_cached_count": 313,
+        "eval_count": 228,
+        "total_duration": 3105049600,
+        "load_duration": 12463900,
+        "prompt_eval_duration": 30049000,
+        "eval_duration": 2928580000,
+        "total_seconds": 3.1050496,
+        "load_seconds": 0.0124639,
+        "prompt_eval_seconds": 0.030049,
+        "generation_seconds": 2.92858,
+        "tokens_per_second": 77.85343067288584
+      },
+      "wall_seconds": 3.1234915
+    },
+    {
+      "case": {
+        "problem_id": "K02",
+        "problem_sha256": "c365b846f96faf4146b5bf938172c97cdaac2f07a7333c6db28aadbeef64beb4",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "proof_K02_baseline",
+        "task": "proof",
+        "repeat": 0,
+        "seed": 1729,
+        "calibration_version": 4,
+        "probe_contract": "causal-v041",
+        "probe_variant": "baseline",
+        "depth_policy": "deep",
+        "case_id": "a7aa1a66f52d07bec1e92b7a"
+      },
+      "original_status": "accepted",
+      "replayed_status": "accepted",
+      "replayed_error": null,
+      "original_decision_reproduced": true,
+      "original_error_text_reproduced": true,
+      "diagnostics": {
+        "json_valid": true,
+        "schema_valid": true,
+        "schema_error": null,
+        "node_shape_assessable": true,
+        "final_reference_exists": true,
+        "all_local_steps_valid": true,
+        "goal_match": true,
+        "missing_parent_node_ids": [],
+        "invalid_step_node_ids": [],
+        "unrelated_node_ids": [],
+        "empty_binding_node_ids": [],
+        "view_kind_counts": {},
+        "node_ids": [
+          "n0",
+          "n1",
+          "n2",
+          "n3",
+          "n4"
+        ],
+        "selected_final_reference": "n4",
+        "all_problem_rules_emitted": false,
+        "selected_component_depth": 3,
+        "all_nodes_in_selected_component": true,
+        "note": "원문 무수정 진단. 국소 규칙 일치는 전체 증명 성공이 아님.",
+        "output_key_order": [
+          "nodes",
+          "selected_final_node_id"
+        ],
+        "support_evidence": {
+          "shape_valid": true,
+          "node_count": 5,
+          "locally_valid_nodes": 5,
+          "all_local_steps_valid": true,
+          "final_reference_exists": true,
+          "goal_match": true,
+          "selected_support_valid": true,
+          "full_support_valid": true,
+          "selected_depth_when_valid": 3,
+          "structural_depth_not_semantic_D": 3,
+          "unrelated_node_ids": [],
+          "first_failure": null,
+          "nodes": [
+            {
+              "position": 0,
+              "node_id": "n0",
+              "atom": "Da",
+              "rule_id": null,
+              "parent_node_ids": [],
+              "actual_parent_atoms": [],
+              "expected_parent_atoms": [],
+              "expected_conclusion": null,
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 1,
+              "node_id": "n1",
+              "atom": "Db",
+              "rule_id": null,
+              "parent_node_ids": [],
+              "actual_parent_atoms": [],
+              "expected_parent_atoms": [],
+              "expected_conclusion": null,
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 2,
+              "node_id": "n2",
+              "atom": "Dc",
+              "rule_id": "k10",
+              "parent_node_ids": [
+                "n0"
+              ],
+              "actual_parent_atoms": [
+                "Da"
+              ],
+              "expected_parent_atoms": [
+                "Da"
+              ],
+              "expected_conclusion": "Dc",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 3,
+              "node_id": "n3",
+              "atom": "Dd",
+              "rule_id": "k17",
+              "parent_node_ids": [
+                "n2",
+                "n1"
+              ],
+              "actual_parent_atoms": [
+                "Dc",
+                "Db"
+              ],
+              "expected_parent_atoms": [
+                "Dc",
+                "Db"
+              ],
+              "expected_conclusion": "Dd",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 4,
+              "node_id": "n4",
+              "atom": "De",
+              "rule_id": "k24",
+              "parent_node_ids": [
+                "n3"
+              ],
+              "actual_parent_atoms": [
+                "Dd"
+              ],
+              "expected_parent_atoms": [
+                "Dd"
+              ],
+              "expected_conclusion": "De",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            }
+          ]
+        },
+        "selected_component_support_valid": true,
+        "selected_component_depth_if_grounded": 3,
+        "first_invalid_step": null,
+        "unrelated_node_ids_independent": [],
+        "selected_component_note": "원문 노드를 삭제/수정하지 않은 선택 연결부의 관측. 전체 증명의 유효성 판정을 대체하지 않음",
+        "schema_scope": "task_specific_calibration_schema"
+      },
+      "task_diagnostics": {
+        "task": "proof",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "support": {
+          "shape_valid": true,
+          "node_count": 5,
+          "locally_valid_nodes": 5,
+          "all_local_steps_valid": true,
+          "final_reference_exists": true,
+          "goal_match": true,
+          "selected_support_valid": true,
+          "full_support_valid": true,
+          "selected_depth_when_valid": 3,
+          "structural_depth_not_semantic_D": 3,
+          "unrelated_node_ids": [],
+          "first_failure": null,
+          "nodes": [
+            {
+              "position": 0,
+              "node_id": "n0",
+              "atom": "Da",
+              "rule_id": null,
+              "parent_node_ids": [],
+              "actual_parent_atoms": [],
+              "expected_parent_atoms": [],
+              "expected_conclusion": null,
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 1,
+              "node_id": "n1",
+              "atom": "Db",
+              "rule_id": null,
+              "parent_node_ids": [],
+              "actual_parent_atoms": [],
+              "expected_parent_atoms": [],
+              "expected_conclusion": null,
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 2,
+              "node_id": "n2",
+              "atom": "Dc",
+              "rule_id": "k10",
+              "parent_node_ids": [
+                "n0"
+              ],
+              "actual_parent_atoms": [
+                "Da"
+              ],
+              "expected_parent_atoms": [
+                "Da"
+              ],
+              "expected_conclusion": "Dc",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 3,
+              "node_id": "n3",
+              "atom": "Dd",
+              "rule_id": "k17",
+              "parent_node_ids": [
+                "n2",
+                "n1"
+              ],
+              "actual_parent_atoms": [
+                "Dc",
+                "Db"
+              ],
+              "expected_parent_atoms": [
+                "Dc",
+                "Db"
+              ],
+              "expected_conclusion": "Dd",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 4,
+              "node_id": "n4",
+              "atom": "De",
+              "rule_id": "k24",
+              "parent_node_ids": [
+                "n3"
+              ],
+              "actual_parent_atoms": [
+                "Dd"
+              ],
+              "expected_parent_atoms": [
+                "Dd"
+              ],
+              "expected_conclusion": "De",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            }
+          ]
+        }
+      },
+      "diagnostic_scope": "proof_generation",
+      "audit": {
+        "valid_completion": true,
+        "role_adherent": null,
+        "calibration_task": "proof",
+        "task_checks": {
+          "valid_proof": true,
+          "requested_depth": true,
+          "simple_paths": true
+        },
+        "details": {
+          "core_audit": {
+            "valid": true,
+            "metrics": {
+              "A": "instance",
+              "D": 3,
+              "M": 0
+            },
+            "states": [
+              {
+                "event": "n0",
+                "A": "instance",
+                "D": 0,
+                "M": 0
+              },
+              {
+                "event": "n1",
+                "A": "instance",
+                "D": 0,
+                "M": 0
+              },
+              {
+                "event": "n2",
+                "A": "instance",
+                "D": 1,
+                "M": 0
+              },
+              {
+                "event": "n3",
+                "A": "instance",
+                "D": 2,
+                "M": 0
+              },
+              {
+                "event": "n4",
+                "A": "instance",
+                "D": 3,
+                "M": 0
+              }
+            ],
+            "node_count": 5,
+            "error": null
+          },
+          "D_target": 3,
+          "selection_diagnostic": {
+            "all_local_steps_valid": true,
+            "selected_component_depth": 3,
+            "all_nodes_in_selected_component": true,
+            "unrelated_node_ids": [],
+            "final_reference_exists": true,
+            "selected_component_support_valid": true,
+            "selected_component_depth_if_grounded": 3,
+            "first_invalid_step": null,
+            "unrelated_node_ids_independent": [],
+            "selected_component_depth_matches_target": true,
+            "note": "선택 연결부의 깊이만 관측. 무관한 노드를 제거하거나 전체 증명을 성공으로 바꾸지 않음"
+          },
+          "host_supplied": "진단용 instance view와 빈 reviews만 부착. A/M은 측정하지 않음"
+        },
+        "task_comparisons": [
+          {
+            "field": "valid_proof",
+            "actual": true,
+            "expected": true,
+            "matches": true
+          },
+          {
+            "field": "D_on_valid_full_proof",
+            "actual": 3,
+            "expected": 3,
+            "matches": true
+          },
+          {
+            "field": "simple_paths_on_valid_full_proof",
+            "actual": true,
+            "expected": true,
+            "matches": true
+          }
+        ],
+        "task_checks_note": "task_checks의 true/false는 정답과 일치 여부다. 모델이 출력한 판정값이 아님.",
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단독 교정 과제의 성공 여부. 통합 ADM 성공·축 독립성 결과가 아님."
+      },
+      "usage": {
+        "prompt_eval_count": 883,
+        "prompt_eval_cached_count": 569,
+        "eval_count": 130,
+        "total_duration": 1876142700,
+        "load_duration": 12039800,
+        "prompt_eval_duration": 89074000,
+        "eval_duration": 1638706000,
+        "total_seconds": 1.8761427,
+        "load_seconds": 0.0120398,
+        "prompt_eval_seconds": 0.089074,
+        "generation_seconds": 1.638706,
+        "tokens_per_second": 79.33088668742288
+      },
+      "wall_seconds": 1.890757399999984
+    },
+    {
+      "case": {
+        "problem_id": "K01",
+        "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "criterion_02_compact",
+        "task": "criterion",
+        "repeat": 0,
+        "seed": 1729,
+        "calibration_version": 4,
+        "probe_contract": "causal-v041",
+        "probe_variant": "compact",
+        "probe_atom": "Ca",
+        "case_id": "83a24f76670bb887f695c039"
+      },
+      "original_status": "invalid_task",
+      "replayed_status": "invalid_task",
+      "replayed_error": "진단 검사 불일치 항목: answer_only_accepts, proof_and_goal_accepts (각 판정의 실제값/기대값은 task_comparisons에 저장)",
+      "original_decision_reproduced": true,
+      "original_error_text_reproduced": true,
+      "diagnostics": {
+        "json_valid": true,
+        "schema_valid": true,
+        "schema_error": null,
+        "node_shape_assessable": false,
+        "final_reference_exists": null,
+        "all_local_steps_valid": null,
+        "goal_match": null,
+        "missing_parent_node_ids": [],
+        "invalid_step_node_ids": [],
+        "unrelated_node_ids": null,
+        "empty_binding_node_ids": [],
+        "view_kind_counts": {},
+        "node_ids": [],
+        "selected_final_reference": null,
+        "all_problem_rules_emitted": null,
+        "selected_component_depth": null,
+        "all_nodes_in_selected_component": null,
+        "note": "원문 무수정 진단. 국소 규칙 일치는 전체 증명 성공이 아님.",
+        "output_key_order": [
+          "answer_only_accepts",
+          "gap_detected",
+          "proof_and_goal_accepts"
+        ],
+        "schema_scope": "task_specific_calibration_schema"
+      },
+      "task_diagnostics": {
+        "task": "criterion",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "criterion": {
+          "input": {
+            "probe_atom": "Ca",
+            "goal": "Cc",
+            "facts": [
+              "Ca"
+            ]
+          },
+          "expected_primitives": {
+            "same_as_goal": false,
+            "in_facts": true
+          },
+          "expected": {
+            "answer_only_accepts": false,
+            "proof_and_goal_accepts": false,
+            "gap_detected": false
+          },
+          "actual": {
+            "answer_only_accepts": true,
+            "proof_and_goal_accepts": true,
+            "gap_detected": false
+          },
+          "matches": {
+            "answer_only_accepts": false,
+            "proof_and_goal_accepts": false,
+            "gap_detected": true
+          },
+          "actual_internal_consistency": true,
+          "primitive_failure_localized": false,
+          "note": "원래 과제는 primitive 출력을 받지 않는다. 내부 어느 연산이 틀렸는지 이 결과로 단정하지 않는다."
+        }
+      },
+      "diagnostic_scope": "non_proof_task",
+      "audit": {
+        "valid_completion": false,
+        "role_adherent": null,
+        "calibration_task": "criterion",
+        "task_checks": {
+          "answer_only_accepts": false,
+          "proof_and_goal_accepts": false,
+          "gap_detected": true
+        },
+        "details": {
+          "actual": {
+            "answer_only_accepts": true,
+            "gap_detected": false,
+            "proof_and_goal_accepts": true
+          },
+          "expected": {
+            "answer_only_accepts": false,
+            "proof_and_goal_accepts": false,
+            "gap_detected": false
+          },
+          "host_supplied": "시험 probe. 모델에 판정 정답은 미제공"
+        },
+        "task_comparisons": [
+          {
+            "field": "answer_only_accepts",
+            "actual": true,
+            "expected": false,
+            "matches": false
+          },
+          {
+            "field": "proof_and_goal_accepts",
+            "actual": true,
+            "expected": false,
+            "matches": false
+          },
+          {
+            "field": "gap_detected",
+            "actual": false,
+            "expected": false,
+            "matches": true
+          }
+        ],
+        "task_checks_note": "task_checks의 true/false는 정답과 일치 여부다. 모델이 출력한 판정값이 아님.",
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단독 교정 과제의 성공 여부. 통합 ADM 성공·축 독립성 결과가 아님."
+      },
+      "usage": {
+        "prompt_eval_count": 214,
+        "prompt_eval_cached_count": 200,
+        "eval_count": 22,
+        "total_duration": 414388900,
+        "load_duration": 10825500,
+        "prompt_eval_duration": 19988000,
+        "eval_duration": 265938000,
+        "total_seconds": 0.4143889,
+        "load_seconds": 0.0108255,
+        "prompt_eval_seconds": 0.019988,
+        "generation_seconds": 0.265938,
+        "tokens_per_second": 82.72604892869767
+      },
+      "wall_seconds": 0.42797399999994923
+    },
+    {
+      "case": {
+        "problem_id": "K03",
+        "problem_sha256": "da4e6f453a328261b9c3800b8190a2c513b0d1ce27b09052f0f92b722cafff04",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "proof_K03_baseline",
+        "task": "proof",
+        "repeat": 0,
+        "seed": 1729,
+        "calibration_version": 4,
+        "probe_contract": "causal-v041",
+        "probe_variant": "baseline",
+        "depth_policy": "deep",
+        "case_id": "5661058f6e0dbc2eb757b7de"
+      },
+      "original_status": "invalid_task",
+      "replayed_status": "invalid_task",
+      "replayed_error": "진단 검사 불일치 항목: valid_proof, requested_depth, simple_paths (각 판정의 실제값/기대값은 task_comparisons에 저장)",
+      "original_decision_reproduced": true,
+      "original_error_text_reproduced": true,
+      "diagnostics": {
+        "json_valid": true,
+        "schema_valid": true,
+        "schema_error": null,
+        "node_shape_assessable": true,
+        "final_reference_exists": true,
+        "all_local_steps_valid": false,
+        "goal_match": true,
+        "missing_parent_node_ids": [],
+        "invalid_step_node_ids": [
+          "n3",
+          "n4"
+        ],
+        "unrelated_node_ids": null,
+        "empty_binding_node_ids": [],
+        "view_kind_counts": {},
+        "node_ids": [
+          "n0",
+          "n1",
+          "n2",
+          "n3",
+          "n4"
+        ],
+        "selected_final_reference": "n4",
+        "all_problem_rules_emitted": false,
+        "selected_component_depth": null,
+        "all_nodes_in_selected_component": null,
+        "note": "원문 무수정 진단. 국소 규칙 일치는 전체 증명 성공이 아님.",
+        "output_key_order": [
+          "nodes",
+          "selected_final_node_id"
+        ],
+        "support_evidence": {
+          "shape_valid": true,
+          "node_count": 5,
+          "locally_valid_nodes": 3,
+          "all_local_steps_valid": false,
+          "final_reference_exists": true,
+          "goal_match": true,
+          "selected_support_valid": false,
+          "full_support_valid": false,
+          "selected_depth_when_valid": null,
+          "structural_depth_not_semantic_D": 4,
+          "unrelated_node_ids": [],
+          "first_failure": {
+            "position": 3,
+            "node_id": "n3",
+            "atom": "Ed",
+            "rule_id": "k24",
+            "parent_node_ids": [
+              "n2"
+            ],
+            "actual_parent_atoms": [
+              "Ec"
+            ],
+            "expected_parent_atoms": [
+              "Eb"
+            ],
+            "expected_conclusion": "Ed",
+            "missing_premises": [
+              "Eb"
+            ],
+            "extra_premises": [
+              "Ec"
+            ],
+            "faults": [
+              "wrong_premises"
+            ],
+            "locally_valid": false,
+            "grounded": false
+          },
+          "nodes": [
+            {
+              "position": 0,
+              "node_id": "n0",
+              "atom": "Ea",
+              "rule_id": null,
+              "parent_node_ids": [],
+              "actual_parent_atoms": [],
+              "expected_parent_atoms": [],
+              "expected_conclusion": null,
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 1,
+              "node_id": "n1",
+              "atom": "Eb",
+              "rule_id": "k10",
+              "parent_node_ids": [
+                "n0"
+              ],
+              "actual_parent_atoms": [
+                "Ea"
+              ],
+              "expected_parent_atoms": [
+                "Ea"
+              ],
+              "expected_conclusion": "Eb",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 2,
+              "node_id": "n2",
+              "atom": "Ec",
+              "rule_id": "k17",
+              "parent_node_ids": [
+                "n1"
+              ],
+              "actual_parent_atoms": [
+                "Eb"
+              ],
+              "expected_parent_atoms": [
+                "Eb"
+              ],
+              "expected_conclusion": "Ec",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 3,
+              "node_id": "n3",
+              "atom": "Ed",
+              "rule_id": "k24",
+              "parent_node_ids": [
+                "n2"
+              ],
+              "actual_parent_atoms": [
+                "Ec"
+              ],
+              "expected_parent_atoms": [
+                "Eb"
+              ],
+              "expected_conclusion": "Ed",
+              "missing_premises": [
+                "Eb"
+              ],
+              "extra_premises": [
+                "Ec"
+              ],
+              "faults": [
+                "wrong_premises"
+              ],
+              "locally_valid": false,
+              "grounded": false
+            },
+            {
+              "position": 4,
+              "node_id": "n4",
+              "atom": "Ee",
+              "rule_id": "k00",
+              "parent_node_ids": [
+                "n3"
+              ],
+              "actual_parent_atoms": [
+                "Ed"
+              ],
+              "expected_parent_atoms": [
+                "Ec",
+                "Ed"
+              ],
+              "expected_conclusion": "Ee",
+              "missing_premises": [
+                "Ec"
+              ],
+              "extra_premises": [],
+              "faults": [
+                "wrong_premises"
+              ],
+              "locally_valid": false,
+              "grounded": false
+            }
+          ]
+        },
+        "selected_component_support_valid": false,
+        "selected_component_depth_if_grounded": null,
+        "first_invalid_step": {
+          "position": 3,
+          "node_id": "n3",
+          "atom": "Ed",
+          "rule_id": "k24",
+          "parent_node_ids": [
+            "n2"
+          ],
+          "actual_parent_atoms": [
+            "Ec"
+          ],
+          "expected_parent_atoms": [
+            "Eb"
+          ],
+          "expected_conclusion": "Ed",
+          "missing_premises": [
+            "Eb"
+          ],
+          "extra_premises": [
+            "Ec"
+          ],
+          "faults": [
+            "wrong_premises"
+          ],
+          "locally_valid": false,
+          "grounded": false
+        },
+        "unrelated_node_ids_independent": [],
+        "schema_scope": "task_specific_calibration_schema"
+      },
+      "task_diagnostics": {
+        "task": "proof",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "support": {
+          "shape_valid": true,
+          "node_count": 5,
+          "locally_valid_nodes": 3,
+          "all_local_steps_valid": false,
+          "final_reference_exists": true,
+          "goal_match": true,
+          "selected_support_valid": false,
+          "full_support_valid": false,
+          "selected_depth_when_valid": null,
+          "structural_depth_not_semantic_D": 4,
+          "unrelated_node_ids": [],
+          "first_failure": {
+            "position": 3,
+            "node_id": "n3",
+            "atom": "Ed",
+            "rule_id": "k24",
+            "parent_node_ids": [
+              "n2"
+            ],
+            "actual_parent_atoms": [
+              "Ec"
+            ],
+            "expected_parent_atoms": [
+              "Eb"
+            ],
+            "expected_conclusion": "Ed",
+            "missing_premises": [
+              "Eb"
+            ],
+            "extra_premises": [
+              "Ec"
+            ],
+            "faults": [
+              "wrong_premises"
+            ],
+            "locally_valid": false,
+            "grounded": false
+          },
+          "nodes": [
+            {
+              "position": 0,
+              "node_id": "n0",
+              "atom": "Ea",
+              "rule_id": null,
+              "parent_node_ids": [],
+              "actual_parent_atoms": [],
+              "expected_parent_atoms": [],
+              "expected_conclusion": null,
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 1,
+              "node_id": "n1",
+              "atom": "Eb",
+              "rule_id": "k10",
+              "parent_node_ids": [
+                "n0"
+              ],
+              "actual_parent_atoms": [
+                "Ea"
+              ],
+              "expected_parent_atoms": [
+                "Ea"
+              ],
+              "expected_conclusion": "Eb",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 2,
+              "node_id": "n2",
+              "atom": "Ec",
+              "rule_id": "k17",
+              "parent_node_ids": [
+                "n1"
+              ],
+              "actual_parent_atoms": [
+                "Eb"
+              ],
+              "expected_parent_atoms": [
+                "Eb"
+              ],
+              "expected_conclusion": "Ec",
+              "missing_premises": [],
+              "extra_premises": [],
+              "faults": [],
+              "locally_valid": true,
+              "grounded": true
+            },
+            {
+              "position": 3,
+              "node_id": "n3",
+              "atom": "Ed",
+              "rule_id": "k24",
+              "parent_node_ids": [
+                "n2"
+              ],
+              "actual_parent_atoms": [
+                "Ec"
+              ],
+              "expected_parent_atoms": [
+                "Eb"
+              ],
+              "expected_conclusion": "Ed",
+              "missing_premises": [
+                "Eb"
+              ],
+              "extra_premises": [
+                "Ec"
+              ],
+              "faults": [
+                "wrong_premises"
+              ],
+              "locally_valid": false,
+              "grounded": false
+            },
+            {
+              "position": 4,
+              "node_id": "n4",
+              "atom": "Ee",
+              "rule_id": "k00",
+              "parent_node_ids": [
+                "n3"
+              ],
+              "actual_parent_atoms": [
+                "Ed"
+              ],
+              "expected_parent_atoms": [
+                "Ec",
+                "Ed"
+              ],
+              "expected_conclusion": "Ee",
+              "missing_premises": [
+                "Ec"
+              ],
+              "extra_premises": [],
+              "faults": [
+                "wrong_premises"
+              ],
+              "locally_valid": false,
+              "grounded": false
+            }
+          ]
+        }
+      },
+      "diagnostic_scope": "proof_generation",
+      "audit": {
+        "valid_completion": false,
+        "role_adherent": null,
+        "calibration_task": "proof",
+        "task_checks": {
+          "valid_proof": false,
+          "requested_depth": false,
+          "simple_paths": false
+        },
+        "details": {
+          "core_audit": {
+            "valid": false,
+            "metrics": {
+              "A": null,
+              "D": null,
+              "M": null
+            },
+            "states": [],
+            "error": "PROOF: 전제 불일치/생략/중복"
+          },
+          "D_target": 3,
+          "selection_diagnostic": {
+            "all_local_steps_valid": false,
+            "selected_component_depth": null,
+            "all_nodes_in_selected_component": null,
+            "unrelated_node_ids": null,
+            "final_reference_exists": true,
+            "selected_component_support_valid": false,
+            "selected_component_depth_if_grounded": null,
+            "first_invalid_step": {
+              "position": 3,
+              "node_id": "n3",
+              "atom": "Ed",
+              "rule_id": "k24",
+              "parent_node_ids": [
+                "n2"
+              ],
+              "actual_parent_atoms": [
+                "Ec"
+              ],
+              "expected_parent_atoms": [
+                "Eb"
+              ],
+              "expected_conclusion": "Ed",
+              "missing_premises": [
+                "Eb"
+              ],
+              "extra_premises": [
+                "Ec"
+              ],
+              "faults": [
+                "wrong_premises"
+              ],
+              "locally_valid": false,
+              "grounded": false
+            },
+            "unrelated_node_ids_independent": [],
+            "selected_component_depth_matches_target": false,
+            "note": "선택 연결부의 깊이만 관측. 무관한 노드를 제거하거나 전체 증명을 성공으로 바꾸지 않음"
+          },
+          "host_supplied": "진단용 instance view와 빈 reviews만 부착. A/M은 측정하지 않음"
+        },
+        "task_comparisons": [
+          {
+            "field": "valid_proof",
+            "actual": false,
+            "expected": true,
+            "matches": false
+          },
+          {
+            "field": "D_on_valid_full_proof",
+            "actual": null,
+            "expected": 3,
+            "matches": false
+          },
+          {
+            "field": "simple_paths_on_valid_full_proof",
+            "actual": null,
+            "expected": true,
+            "matches": false
+          }
+        ],
+        "task_checks_note": "task_checks의 true/false는 정답과 일치 여부다. 모델이 출력한 판정값이 아님.",
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단독 교정 과제의 성공 여부. 통합 ADM 성공·축 독립성 결과가 아님."
+      },
+      "usage": {
+        "prompt_eval_count": 898,
+        "prompt_eval_cached_count": 569,
+        "eval_count": 131,
+        "total_duration": 1870259700,
+        "load_duration": 11365900,
+        "prompt_eval_duration": 92028000,
+        "eval_duration": 1656659000,
+        "total_seconds": 1.8702597,
+        "load_seconds": 0.0113659,
+        "prompt_eval_seconds": 0.092028,
+        "generation_seconds": 1.656659,
+        "tokens_per_second": 79.07481261985718
+      },
+      "wall_seconds": 1.884403900000052
+    },
+    {
+      "case": {
+        "problem_id": "K03",
+        "problem_sha256": "da4e6f453a328261b9c3800b8190a2c513b0d1ce27b09052f0f92b722cafff04",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "schema_K03_union",
+        "task": "schema",
+        "repeat": 0,
+        "seed": 1729,
+        "calibration_version": 4,
+        "probe_contract": "causal-v041",
+        "probe_variant": "union",
+        "view_scope": "final_node_only",
+        "provided_proof": {
+          "nodes": [
+            {
+              "node_id": "n0",
+              "atom": "Ea",
+              "rule_id": null,
+              "parent_node_ids": []
+            },
+            {
+              "node_id": "n1",
+              "atom": "Eb",
+              "rule_id": "k10",
+              "parent_node_ids": [
+                "n0"
+              ]
+            },
+            {
+              "node_id": "n2",
+              "atom": "Ec",
+              "rule_id": "k17",
+              "parent_node_ids": [
+                "n1"
+              ]
+            },
+            {
+              "node_id": "n3",
+              "atom": "Ed",
+              "rule_id": "k24",
+              "parent_node_ids": [
+                "n1"
+              ]
+            },
+            {
+              "node_id": "n4",
+              "atom": "Ee",
+              "rule_id": "k00",
+              "parent_node_ids": [
+                "n2",
+                "n3"
+              ]
+            }
+          ],
+          "selected_final_node_id": "n4"
+        },
+        "case_id": "3a0cd898cd74dad27f41b09b"
+      },
+      "original_status": "invalid_task",
+      "replayed_status": "invalid_task",
+      "replayed_error": "진단 검사 불일치 항목: valid_final_schema (각 판정의 실제값/기대값은 task_comparisons에 저장)",
+      "original_decision_reproduced": true,
+      "original_error_text_reproduced": true,
+      "diagnostics": {
+        "json_valid": true,
+        "schema_valid": true,
+        "schema_error": null,
+        "node_shape_assessable": false,
+        "final_reference_exists": null,
+        "all_local_steps_valid": null,
+        "goal_match": null,
+        "missing_parent_node_ids": [],
+        "invalid_step_node_ids": [],
+        "unrelated_node_ids": null,
+        "empty_binding_node_ids": [],
+        "view_kind_counts": {},
+        "node_ids": [],
+        "selected_final_reference": null,
+        "all_problem_rules_emitted": null,
+        "selected_component_depth": null,
+        "all_nodes_in_selected_component": null,
+        "note": "원문 무수정 진단. 국소 규칙 일치는 전체 증명 성공이 아님.",
+        "output_key_order": [
+          "node_views"
+        ],
+        "schema_scope": "task_specific_calibration_schema"
+      },
+      "task_diagnostics": {
+        "task": "schema",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "schema": {
+          "provided_proof_valid": true,
+          "views": [
+            {
+              "node_id": "n4",
+              "kind": "universal_schema",
+              "expected_atoms": [
+                "Ea",
+                "Eb",
+                "Ec",
+                "Ed",
+                "Ee"
+              ],
+              "expected_clauses": [
+                {
+                  "if": [],
+                  "then": "Ea"
+                },
+                {
+                  "if": [
+                    "Ea"
+                  ],
+                  "then": "Eb"
+                },
+                {
+                  "if": [
+                    "Eb"
+                  ],
+                  "then": "Ec"
+                },
+                {
+                  "if": [
+                    "Eb"
+                  ],
+                  "then": "Ed"
+                },
+                {
+                  "if": [
+                    "Ec",
+                    "Ed"
+                  ],
+                  "then": "Ee"
+                }
+              ],
+              "binding_container": "list",
+              "issues": [],
+              "returned_clauses": [
+                {
+                  "if": [
+                    "Ea"
+                  ],
+                  "then": "Eb"
+                },
+                {
+                  "if": [
+                    "Eb"
+                  ],
+                  "then": "Ec"
+                },
+                {
+                  "if": [
+                    "Eb"
+                  ],
+                  "then": "Ed"
+                },
+                {
+                  "if": [
+                    "Ec",
+                    "Ed"
+                  ],
+                  "then": "Ee"
+                }
+              ],
+              "missing_clauses": [
+                {
+                  "if": [],
+                  "then": "Ea"
+                }
+              ],
+              "missing_fact_atoms": [
+                "Ea"
+              ],
+              "extra_clauses": [],
+              "duplicate_clauses": [],
+              "grounded_clauses_exact": false,
+              "conclusion_grounding_valid": true,
+              "counterexample_valuation": {
+                "v": false,
+                "w": false,
+                "x": false,
+                "y": false,
+                "z": false
+              },
+              "supplied_clauses_entail_conclusion": false
+            }
+          ],
+          "score_effect": "none",
+          "output_modified": false
+        }
+      },
+      "diagnostic_scope": "non_proof_task",
+      "audit": {
+        "valid_completion": false,
+        "role_adherent": null,
+        "calibration_task": "schema",
+        "task_checks": {
+          "requested_view_scope": true,
+          "schema_kind": true,
+          "valid_final_schema": false
+        },
+        "task_comparisons": [
+          {
+            "field": "requested_view_scope",
+            "actual": true,
+            "expected": true,
+            "matches": true
+          },
+          {
+            "field": "schema_kind",
+            "actual": true,
+            "expected": true,
+            "matches": true
+          },
+          {
+            "field": "valid_final_schema",
+            "actual": false,
+            "expected": true,
+            "matches": false
+          }
+        ],
+        "details": {
+          "core_audit": {
+            "valid": false,
+            "metrics": {
+              "A": null,
+              "D": 3,
+              "M": null
+            },
+            "states": [],
+            "error": "VIEW: 가정 추가/삭제/중복으로 도식의 의미가 바뀜"
+          },
+          "view_scope": "final_node_only",
+          "returned_node_ids": [
+            "n4"
+          ],
+          "expected_node_ids": [
+            "n4"
+          ],
+          "returned_view_kinds": [
+            "universal_schema"
+          ],
+          "host_supplied": "증명 전체와 중간 노드 instance view는 고정 입력/진단용. 최종 도식만 모델 산출물.",
+          "scope_note": "A 전체 성공이 아니다. 같은 고정 증명의 all_nodes 과제와 작성 부담을 비교한다."
+        },
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "구성요소 진단이며 전체 ADM 성공으로 집계하지 않음"
+      },
+      "usage": {
+        "prompt_eval_count": 505,
+        "prompt_eval_cached_count": 504,
+        "eval_count": 261,
+        "total_duration": 3485877000,
+        "load_duration": 10967900,
+        "prompt_eval_duration": 15190000,
+        "eval_duration": 3321849000,
+        "total_seconds": 3.485877,
+        "load_seconds": 0.0109679,
+        "prompt_eval_seconds": 0.01519,
+        "generation_seconds": 3.321849,
+        "tokens_per_second": 78.5706996314402
+      },
+      "wall_seconds": 3.4999665999998797
+    },
+    {
+      "case": {
+        "problem_id": "K11",
+        "problem_sha256": "9b5261a692096b5f81a3b85883bdf42362cb2879a0f0303b6b9e1fc20eca32f3",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "criterion_03_compact",
+        "task": "criterion",
+        "repeat": 0,
+        "seed": 1729,
+        "calibration_version": 4,
+        "probe_contract": "causal-v041",
+        "probe_variant": "compact",
+        "probe_atom": "Cc",
+        "case_id": "983de2e30805b31d713439b8"
+      },
+      "original_status": "accepted",
+      "replayed_status": "accepted",
+      "replayed_error": null,
+      "original_decision_reproduced": true,
+      "original_error_text_reproduced": true,
+      "diagnostics": {
+        "json_valid": true,
+        "schema_valid": true,
+        "schema_error": null,
+        "node_shape_assessable": false,
+        "final_reference_exists": null,
+        "all_local_steps_valid": null,
+        "goal_match": null,
+        "missing_parent_node_ids": [],
+        "invalid_step_node_ids": [],
+        "unrelated_node_ids": null,
+        "empty_binding_node_ids": [],
+        "view_kind_counts": {},
+        "node_ids": [],
+        "selected_final_reference": null,
+        "all_problem_rules_emitted": null,
+        "selected_component_depth": null,
+        "all_nodes_in_selected_component": null,
+        "note": "원문 무수정 진단. 국소 규칙 일치는 전체 증명 성공이 아님.",
+        "output_key_order": [
+          "answer_only_accepts",
+          "gap_detected",
+          "proof_and_goal_accepts"
+        ],
+        "schema_scope": "task_specific_calibration_schema"
+      },
+      "task_diagnostics": {
+        "task": "criterion",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "criterion": {
+          "input": {
+            "probe_atom": "Cc",
+            "goal": "Cc",
+            "facts": [
+              "Ca",
+              "Cc"
+            ]
+          },
+          "expected_primitives": {
+            "same_as_goal": true,
+            "in_facts": true
+          },
+          "expected": {
+            "answer_only_accepts": true,
+            "proof_and_goal_accepts": true,
+            "gap_detected": false
+          },
+          "actual": {
+            "answer_only_accepts": true,
+            "proof_and_goal_accepts": true,
+            "gap_detected": false
+          },
+          "matches": {
+            "answer_only_accepts": true,
+            "proof_and_goal_accepts": true,
+            "gap_detected": true
+          },
+          "actual_internal_consistency": true,
+          "primitive_failure_localized": false,
+          "note": "원래 과제는 primitive 출력을 받지 않는다. 내부 어느 연산이 틀렸는지 이 결과로 단정하지 않는다."
+        }
+      },
+      "diagnostic_scope": "non_proof_task",
+      "audit": {
+        "valid_completion": true,
+        "role_adherent": null,
+        "calibration_task": "criterion",
+        "task_checks": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": true,
+          "gap_detected": true
+        },
+        "details": {
+          "actual": {
+            "answer_only_accepts": true,
+            "gap_detected": false,
+            "proof_and_goal_accepts": true
+          },
+          "expected": {
+            "answer_only_accepts": true,
+            "proof_and_goal_accepts": true,
+            "gap_detected": false
+          },
+          "host_supplied": "시험 probe. 모델에 판정 정답은 미제공"
+        },
+        "task_comparisons": [
+          {
+            "field": "answer_only_accepts",
+            "actual": true,
+            "expected": true,
+            "matches": true
+          },
+          {
+            "field": "proof_and_goal_accepts",
+            "actual": true,
+            "expected": true,
+            "matches": true
+          },
+          {
+            "field": "gap_detected",
+            "actual": false,
+            "expected": false,
+            "matches": true
+          }
+        ],
+        "task_checks_note": "task_checks의 true/false는 정답과 일치 여부다. 모델이 출력한 판정값이 아님.",
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단독 교정 과제의 성공 여부. 통합 ADM 성공·축 독립성 결과가 아님."
+      },
+      "usage": {
+        "prompt_eval_count": 216,
+        "prompt_eval_cached_count": 130,
+        "eval_count": 24,
+        "total_duration": 448950500,
+        "load_duration": 12113400,
+        "prompt_eval_duration": 28338000,
+        "eval_duration": 294144000,
+        "total_seconds": 0.4489505,
+        "load_seconds": 0.0121134,
+        "prompt_eval_seconds": 0.028338,
+        "generation_seconds": 0.294144,
+        "tokens_per_second": 81.59268929503916
+      },
+      "wall_seconds": 0.46463870000002316
+    }
+  ],
+  "interpretation": "원본 전체 증명 판정은 유지한다. 참조/국소 규칙/표현 형식 오류를 별도 관측한다."
+}

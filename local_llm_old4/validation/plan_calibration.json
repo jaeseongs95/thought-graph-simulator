@@ -1,0 +1,1039 @@
+{
+  "plan_only": true,
+  "model_called": false,
+  "profile": "calibrate",
+  "experiment_kind": "calibration",
+  "repeats": 1,
+  "seed": 1729,
+  "problems": [
+    {
+      "id": "K01",
+      "facts": [
+        "Ca"
+      ],
+      "rules": [
+        {
+          "id": "k10",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cb"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Cb"
+          ],
+          "conclusion": "Cc"
+        },
+        {
+          "id": "k03",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cc"
+        }
+      ],
+      "goal": "Cc"
+    },
+    {
+      "id": "K02",
+      "facts": [
+        "Da",
+        "Db"
+      ],
+      "rules": [
+        {
+          "id": "k03",
+          "premises": [
+            "Da",
+            "Db"
+          ],
+          "conclusion": "De"
+        },
+        {
+          "id": "k10",
+          "premises": [
+            "Da"
+          ],
+          "conclusion": "Dc"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Dc",
+            "Db"
+          ],
+          "conclusion": "Dd"
+        },
+        {
+          "id": "k24",
+          "premises": [
+            "Dd"
+          ],
+          "conclusion": "De"
+        }
+      ],
+      "goal": "De"
+    },
+    {
+      "id": "K03",
+      "facts": [
+        "Ea"
+      ],
+      "rules": [
+        {
+          "id": "k03",
+          "premises": [
+            "Ea"
+          ],
+          "conclusion": "Ee"
+        },
+        {
+          "id": "k24",
+          "premises": [
+            "Eb"
+          ],
+          "conclusion": "Ed"
+        },
+        {
+          "id": "k00",
+          "premises": [
+            "Ec",
+            "Ed"
+          ],
+          "conclusion": "Ee"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Eb"
+          ],
+          "conclusion": "Ec"
+        },
+        {
+          "id": "k10",
+          "premises": [
+            "Ea"
+          ],
+          "conclusion": "Eb"
+        }
+      ],
+      "goal": "Ee"
+    },
+    {
+      "id": "K11",
+      "facts": [
+        "Ca",
+        "Cc"
+      ],
+      "rules": [
+        {
+          "id": "k10",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cb"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Cb"
+          ],
+          "conclusion": "Cc"
+        },
+        {
+          "id": "k03",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cc"
+        }
+      ],
+      "goal": "Cc"
+    },
+    {
+      "id": "K12",
+      "facts": [
+        "Da",
+        "Db",
+        "De"
+      ],
+      "rules": [
+        {
+          "id": "k03",
+          "premises": [
+            "Da",
+            "Db"
+          ],
+          "conclusion": "De"
+        },
+        {
+          "id": "k10",
+          "premises": [
+            "Da"
+          ],
+          "conclusion": "Dc"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Dc",
+            "Db"
+          ],
+          "conclusion": "Dd"
+        },
+        {
+          "id": "k24",
+          "premises": [
+            "Dd"
+          ],
+          "conclusion": "De"
+        }
+      ],
+      "goal": "De"
+    }
+  ],
+  "roles": [],
+  "cases": [
+    {
+      "problem_id": "K03",
+      "problem_sha256": "da4e6f453a328261b9c3800b8190a2c513b0d1ce27b09052f0f92b722cafff04",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "schema_3_final_node_only",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "schema",
+      "calibration_version": 4,
+      "provided_proof": {
+        "nodes": [
+          {
+            "node_id": "n0",
+            "atom": "Ea",
+            "rule_id": null,
+            "parent_node_ids": []
+          },
+          {
+            "node_id": "n1",
+            "atom": "Eb",
+            "rule_id": "k10",
+            "parent_node_ids": [
+              "n0"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "atom": "Ec",
+            "rule_id": "k17",
+            "parent_node_ids": [
+              "n1"
+            ]
+          },
+          {
+            "node_id": "n3",
+            "atom": "Ed",
+            "rule_id": "k24",
+            "parent_node_ids": [
+              "n1"
+            ]
+          },
+          {
+            "node_id": "n4",
+            "atom": "Ee",
+            "rule_id": "k00",
+            "parent_node_ids": [
+              "n2",
+              "n3"
+            ]
+          }
+        ],
+        "selected_final_node_id": "n4"
+      },
+      "view_scope": "final_node_only",
+      "case_id": "1b72d5cdbe848596dd318c50"
+    },
+    {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "proof_1_shallow",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "proof",
+      "calibration_version": 4,
+      "depth_policy": "shallow",
+      "case_id": "7e386ae5a61fcd3892ebe2c4"
+    },
+    {
+      "problem_id": "K02",
+      "problem_sha256": "c365b846f96faf4146b5bf938172c97cdaac2f07a7333c6db28aadbeef64beb4",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "proof_2_deep",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "proof",
+      "calibration_version": 4,
+      "depth_policy": "deep",
+      "case_id": "bd16efc50a4b224593083105"
+    },
+    {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_01",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "criterion",
+      "calibration_version": 4,
+      "probe_atom": "Cc",
+      "case_id": "c62d29e3c960379635782552"
+    },
+    {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "review_04",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "review",
+      "calibration_version": 4,
+      "provided_proof": {
+        "nodes": [
+          {
+            "node_id": "n0",
+            "atom": "Orphan",
+            "rule_id": null,
+            "parent_node_ids": []
+          }
+        ],
+        "selected_final_node_id": "n0"
+      },
+      "case_id": "053a79e814f36c206324bbe5"
+    },
+    {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "review_01",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "review",
+      "calibration_version": 4,
+      "provided_proof": {
+        "nodes": [
+          {
+            "node_id": "n0",
+            "atom": "Ca",
+            "rule_id": null,
+            "parent_node_ids": []
+          },
+          {
+            "node_id": "n1",
+            "atom": "Cb",
+            "rule_id": "k10",
+            "parent_node_ids": [
+              "n0"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parent_node_ids": [
+              "n1"
+            ]
+          }
+        ],
+        "selected_final_node_id": "n2"
+      },
+      "case_id": "10da5eae79cf5ba50eb67fda"
+    },
+    {
+      "problem_id": "K03",
+      "problem_sha256": "da4e6f453a328261b9c3800b8190a2c513b0d1ce27b09052f0f92b722cafff04",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "schema_3_all_nodes",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "schema",
+      "calibration_version": 4,
+      "provided_proof": {
+        "nodes": [
+          {
+            "node_id": "n0",
+            "atom": "Ea",
+            "rule_id": null,
+            "parent_node_ids": []
+          },
+          {
+            "node_id": "n1",
+            "atom": "Eb",
+            "rule_id": "k10",
+            "parent_node_ids": [
+              "n0"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "atom": "Ec",
+            "rule_id": "k17",
+            "parent_node_ids": [
+              "n1"
+            ]
+          },
+          {
+            "node_id": "n3",
+            "atom": "Ed",
+            "rule_id": "k24",
+            "parent_node_ids": [
+              "n1"
+            ]
+          },
+          {
+            "node_id": "n4",
+            "atom": "Ee",
+            "rule_id": "k00",
+            "parent_node_ids": [
+              "n2",
+              "n3"
+            ]
+          }
+        ],
+        "selected_final_node_id": "n4"
+      },
+      "view_scope": "all_nodes",
+      "case_id": "836f69953d21b1f841027990"
+    },
+    {
+      "problem_id": "K03",
+      "problem_sha256": "da4e6f453a328261b9c3800b8190a2c513b0d1ce27b09052f0f92b722cafff04",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "review_05",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "review",
+      "calibration_version": 4,
+      "provided_proof": {
+        "nodes": [
+          {
+            "node_id": "n0",
+            "atom": "Ea",
+            "rule_id": null,
+            "parent_node_ids": []
+          },
+          {
+            "node_id": "n1",
+            "atom": "Eb",
+            "rule_id": "k10",
+            "parent_node_ids": [
+              "n0"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "atom": "Ec",
+            "rule_id": "k17",
+            "parent_node_ids": [
+              "n1"
+            ]
+          },
+          {
+            "node_id": "n3",
+            "atom": "Ed",
+            "rule_id": "k24",
+            "parent_node_ids": [
+              "n1"
+            ]
+          },
+          {
+            "node_id": "n4",
+            "atom": "Ee",
+            "rule_id": "k00",
+            "parent_node_ids": [
+              "n2",
+              "n3"
+            ]
+          }
+        ],
+        "selected_final_node_id": "n4"
+      },
+      "case_id": "3044af4b4b79ee2e1e239f5d"
+    },
+    {
+      "problem_id": "K02",
+      "problem_sha256": "c365b846f96faf4146b5bf938172c97cdaac2f07a7333c6db28aadbeef64beb4",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "schema_2_all_nodes",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "schema",
+      "calibration_version": 4,
+      "provided_proof": {
+        "nodes": [
+          {
+            "node_id": "n0",
+            "atom": "Da",
+            "rule_id": null,
+            "parent_node_ids": []
+          },
+          {
+            "node_id": "n1",
+            "atom": "Db",
+            "rule_id": null,
+            "parent_node_ids": []
+          },
+          {
+            "node_id": "n2",
+            "atom": "Dc",
+            "rule_id": "k10",
+            "parent_node_ids": [
+              "n0"
+            ]
+          },
+          {
+            "node_id": "n3",
+            "atom": "Dd",
+            "rule_id": "k17",
+            "parent_node_ids": [
+              "n2",
+              "n1"
+            ]
+          },
+          {
+            "node_id": "n4",
+            "atom": "De",
+            "rule_id": "k24",
+            "parent_node_ids": [
+              "n3"
+            ]
+          }
+        ],
+        "selected_final_node_id": "n4"
+      },
+      "view_scope": "all_nodes",
+      "case_id": "26586ac44db3437924300c87"
+    },
+    {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "review_03",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "review",
+      "calibration_version": 4,
+      "provided_proof": {
+        "nodes": [
+          {
+            "node_id": "n0",
+            "atom": "Ca",
+            "rule_id": null,
+            "parent_node_ids": []
+          }
+        ],
+        "selected_final_node_id": "n0"
+      },
+      "case_id": "5943e131727dd816b37cf8e5"
+    },
+    {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_02",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "criterion",
+      "calibration_version": 4,
+      "probe_atom": "Ca",
+      "case_id": "88dc13815197d7ab36006120"
+    },
+    {
+      "problem_id": "K03",
+      "problem_sha256": "da4e6f453a328261b9c3800b8190a2c513b0d1ce27b09052f0f92b722cafff04",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "proof_3_shallow",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "proof",
+      "calibration_version": 4,
+      "depth_policy": "shallow",
+      "case_id": "1ccb7df0c1444a504af78792"
+    },
+    {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "review_02",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "review",
+      "calibration_version": 4,
+      "provided_proof": {
+        "nodes": [
+          {
+            "node_id": "n0",
+            "atom": "Ca",
+            "rule_id": null,
+            "parent_node_ids": []
+          },
+          {
+            "node_id": "n1",
+            "atom": "Cb",
+            "rule_id": "k10",
+            "parent_node_ids": []
+          },
+          {
+            "node_id": "n2",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parent_node_ids": [
+              "n1"
+            ]
+          }
+        ],
+        "selected_final_node_id": "n2"
+      },
+      "case_id": "2786b4290a7b6bb3b826c71c"
+    },
+    {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "review_06",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "review",
+      "calibration_version": 4,
+      "provided_proof": {
+        "nodes": [
+          {
+            "node_id": "n0",
+            "atom": "Ca",
+            "rule_id": null,
+            "parent_node_ids": []
+          },
+          {
+            "node_id": "n1",
+            "atom": "Cb",
+            "rule_id": "k10",
+            "parent_node_ids": [
+              "n0"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parent_node_ids": [
+              "n1"
+            ]
+          },
+          {
+            "node_id": "extra",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parent_node_ids": [
+              "n0"
+            ]
+          }
+        ],
+        "selected_final_node_id": "n2"
+      },
+      "case_id": "181c88b23c3608f0fe66d5e7"
+    },
+    {
+      "problem_id": "K12",
+      "problem_sha256": "a8e02ffc803012aadf5fdd476a183d1279aa8d962d74b2a0ecbbe4eb26ba22bd",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_06",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "criterion",
+      "calibration_version": 4,
+      "probe_atom": "De",
+      "case_id": "02c6bbdd4688e979237c6292"
+    },
+    {
+      "problem_id": "K03",
+      "problem_sha256": "da4e6f453a328261b9c3800b8190a2c513b0d1ce27b09052f0f92b722cafff04",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "proof_3_deep",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "proof",
+      "calibration_version": 4,
+      "depth_policy": "deep",
+      "case_id": "8c009f8d193aa93439e1e177"
+    },
+    {
+      "problem_id": "K11",
+      "problem_sha256": "9b5261a692096b5f81a3b85883bdf42362cb2879a0f0303b6b9e1fc20eca32f3",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_03",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "criterion",
+      "calibration_version": 4,
+      "probe_atom": "Cc",
+      "case_id": "dd9252f71df7c0ab17bdac4a"
+    },
+    {
+      "problem_id": "K02",
+      "problem_sha256": "c365b846f96faf4146b5bf938172c97cdaac2f07a7333c6db28aadbeef64beb4",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "proof_2_shallow",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "proof",
+      "calibration_version": 4,
+      "depth_policy": "shallow",
+      "case_id": "23bd0e6f19daefe3e25e57da"
+    },
+    {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "proof_1_deep",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "proof",
+      "calibration_version": 4,
+      "depth_policy": "deep",
+      "case_id": "c1db62b65ab1d8f9611564a3"
+    },
+    {
+      "problem_id": "K02",
+      "problem_sha256": "c365b846f96faf4146b5bf938172c97cdaac2f07a7333c6db28aadbeef64beb4",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_05",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "criterion",
+      "calibration_version": 4,
+      "probe_atom": "Da",
+      "case_id": "d49b2b559e0f2113cfb116c7"
+    },
+    {
+      "problem_id": "K02",
+      "problem_sha256": "c365b846f96faf4146b5bf938172c97cdaac2f07a7333c6db28aadbeef64beb4",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_04",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "criterion",
+      "calibration_version": 4,
+      "probe_atom": "De",
+      "case_id": "7410e6dd938f96996781b827"
+    },
+    {
+      "problem_id": "K02",
+      "problem_sha256": "c365b846f96faf4146b5bf938172c97cdaac2f07a7333c6db28aadbeef64beb4",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "schema_2_final_node_only",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "schema",
+      "calibration_version": 4,
+      "provided_proof": {
+        "nodes": [
+          {
+            "node_id": "n0",
+            "atom": "Da",
+            "rule_id": null,
+            "parent_node_ids": []
+          },
+          {
+            "node_id": "n1",
+            "atom": "Db",
+            "rule_id": null,
+            "parent_node_ids": []
+          },
+          {
+            "node_id": "n2",
+            "atom": "Dc",
+            "rule_id": "k10",
+            "parent_node_ids": [
+              "n0"
+            ]
+          },
+          {
+            "node_id": "n3",
+            "atom": "Dd",
+            "rule_id": "k17",
+            "parent_node_ids": [
+              "n2",
+              "n1"
+            ]
+          },
+          {
+            "node_id": "n4",
+            "atom": "De",
+            "rule_id": "k24",
+            "parent_node_ids": [
+              "n3"
+            ]
+          }
+        ],
+        "selected_final_node_id": "n4"
+      },
+      "view_scope": "final_node_only",
+      "case_id": "2de77dd6387655a077e23d89"
+    },
+    {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "schema_1_final_node_only",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "schema",
+      "calibration_version": 4,
+      "provided_proof": {
+        "nodes": [
+          {
+            "node_id": "n0",
+            "atom": "Ca",
+            "rule_id": null,
+            "parent_node_ids": []
+          },
+          {
+            "node_id": "n1",
+            "atom": "Cb",
+            "rule_id": "k10",
+            "parent_node_ids": [
+              "n0"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parent_node_ids": [
+              "n1"
+            ]
+          }
+        ],
+        "selected_final_node_id": "n2"
+      },
+      "view_scope": "final_node_only",
+      "case_id": "5d2609ef834ac51a59ff8c59"
+    },
+    {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "schema_1_all_nodes",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "schema",
+      "calibration_version": 4,
+      "provided_proof": {
+        "nodes": [
+          {
+            "node_id": "n0",
+            "atom": "Ca",
+            "rule_id": null,
+            "parent_node_ids": []
+          },
+          {
+            "node_id": "n1",
+            "atom": "Cb",
+            "rule_id": "k10",
+            "parent_node_ids": [
+              "n0"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parent_node_ids": [
+              "n1"
+            ]
+          }
+        ],
+        "selected_final_node_id": "n2"
+      },
+      "view_scope": "all_nodes",
+      "case_id": "45963e705c20b3c966960b4b"
+    }
+  ],
+  "assigned_calls": 24,
+  "reference_depths": {
+    "K01": {
+      "reachable": true,
+      "depths": [
+        1,
+        2
+      ],
+      "minimum": 1,
+      "maximum": 2,
+      "has_depth_contrast": true,
+      "definition": "simple_branch_paths_facts_are_terminal"
+    },
+    "K02": {
+      "reachable": true,
+      "depths": [
+        1,
+        3
+      ],
+      "minimum": 1,
+      "maximum": 3,
+      "has_depth_contrast": true,
+      "definition": "simple_branch_paths_facts_are_terminal"
+    },
+    "K03": {
+      "reachable": true,
+      "depths": [
+        1,
+        3
+      ],
+      "minimum": 1,
+      "maximum": 3,
+      "has_depth_contrast": true,
+      "definition": "simple_branch_paths_facts_are_terminal"
+    },
+    "K11": {
+      "reachable": true,
+      "depths": [
+        0
+      ],
+      "minimum": 0,
+      "maximum": 0,
+      "has_depth_contrast": false,
+      "definition": "simple_branch_paths_facts_are_terminal"
+    },
+    "K12": {
+      "reachable": true,
+      "depths": [
+        0
+      ],
+      "minimum": 0,
+      "maximum": 0,
+      "has_depth_contrast": false,
+      "definition": "simple_branch_paths_facts_are_terminal"
+    }
+  },
+  "warnings": [],
+  "scope": "v4_component_diagnostics_not_joint_ADM_measurement"
+}

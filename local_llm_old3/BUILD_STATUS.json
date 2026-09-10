@@ -1,0 +1,32 @@
+{
+  "extension_version": "0.3.0",
+  "delivery_status": "OFFLINE_TESTED_NEW_LLM_INFERENCE_NOT_RUN",
+  "python_minimum": "3.10",
+  "python_used_for_offline_tests": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "python_source_files_checked": 21,
+  "python310_syntax_passed": true,
+  "offline_unittest_methods": 86,
+  "offline_unittest_passed": true,
+  "selfcheck_items": 21,
+  "selfcheck_passed": true,
+  "uploaded_original_responses_replayed": 14,
+  "original_semantic_verdicts_reproduced": 14,
+  "legacy_request_bytes_compared": 14,
+  "legacy_request_bytes_identical": 14,
+  "legacy_runtime_files_pinned": 15,
+  "actual_uploaded_smoke_readiness_passed": true,
+  "actual_uploaded_smoke_model_failures_retained": 5,
+  "new_model_download_performed": false,
+  "new_llm_inference_performed": false,
+  "new_39_case_pilot_run": false,
+  "explicit_v3_inference_run": false,
+  "windows_execution_performed": false,
+  "remote_repository_modified": false,
+  "original_uploaded_results_modified": false,
+  "core_and_problems_replaced_in_delivery": false,
+  "notes": [
+    "오프라인 시험에는 원문 응답 재판정과 mock API가 포함된다. 실제 모델 생성 성과가 아니다.",
+    "기본 legacy-v2는 기존 요청을 유지한다. explicit-v3의 정확도 개선은 미측정이다.",
+    "ZIP에는 local_llm과 분석/안내만 있다. 저장소 루트의 기존 core와 문제 파일을 유지해야 한다."
+  ]
+}

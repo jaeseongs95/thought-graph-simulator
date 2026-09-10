@@ -1,0 +1,54 @@
+{
+  "source_version": "0.2.0",
+  "date": "2026-09-10",
+  "delivery_status": "OFFLINE_TESTED_LLM_NOT_RUN",
+  "baseline_repository": "jaeseongs95/thought-graph-simulator",
+  "baseline_commit": "254757486a987475d16541cf84b905d684c1c13d",
+  "baseline_core_git_blob": "b7aa0b58b9257fdb80882b48e4ecf1006ac4ff45",
+  "baseline_core_sha256": "24542551351225d4a2ed0e65c95cfca3d850e7bbd102439f1f3662d2eefcfad8",
+  "core_modified": false,
+  "problem_file_modified": false,
+  "offline_execution_environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41"
+  },
+  "source_created": true,
+  "static_ast_syntax_check_performed": true,
+  "static_ast_python_files": 18,
+  "authored_test_methods": 63,
+  "offline_tests": {
+    "command": "python -m unittest discover -s local_llm/tests -v",
+    "ran": 63,
+    "passed": 63,
+    "failed": 0,
+    "uses_mock_llm_api": true,
+    "actual_model_or_network_in_tests": false,
+    "log": "validation/offline_tests.txt"
+  },
+  "selfcheck": {
+    "checks": 21,
+    "passed": 21,
+    "log": "validation/selfcheck.json"
+  },
+  "saved_v01_responses_replayed": {
+    "smoke_01": 6,
+    "pilot_01": 39,
+    "status_and_first_error_reproduced": 45,
+    "original_results_modified": false
+  },
+  "original_v01_runtime_files_match_uploaded_snapshot": {
+    "checked": 10,
+    "matched": 10
+  },
+  "project_imported_by_assistant": true,
+  "offline_project_code_executed_by_assistant": true,
+  "unit_tests_executed_by_assistant": true,
+  "model_downloaded_by_assistant": false,
+  "llm_inference_executed_by_assistant": false,
+  "gpu_execution_by_assistant": false,
+  "real_ollama_requests_by_assistant": 0,
+  "windows_execution_by_assistant": false,
+  "repository_written_or_committed_by_assistant": false,
+  "revised_measured_llm_results": null,
+  "note_ko": "실제 사용자 응답 재검사와 오프라인 코드 검사는 수행했다. 모의 API 시험을 새 모델 성과로 표시하지 않는다. 새 정확도·속도·토큰 소비는 미측정이다."
+}

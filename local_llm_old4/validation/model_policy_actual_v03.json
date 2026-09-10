@@ -1,0 +1,101 @@
+{
+  "passed": true,
+  "source": "tests/fixtures/v03_model_metadata.json",
+  "source_sha256": "2aa9f01cfb818741375517e6fe3b968bf1119a36c327697ba371114701857f1c",
+  "observed_original_tag": {
+    "name": "qwen3:4b",
+    "model": "qwen3:4b",
+    "modified_at": "2026-09-10T20:48:49.6962129+09:00",
+    "size": 2497293931,
+    "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "4.0B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 262144,
+      "embedding_length": 2560
+    },
+    "capabilities": [
+      "completion",
+      "tools",
+      "thinking"
+    ]
+  },
+  "identity": {
+    "policy_version": "qwen3-mode-v4",
+    "checkpoint_kind": "thinking",
+    "checkpoint_version": "2507",
+    "evidence": [
+      {
+        "source": "GGUF finetune + version",
+        "kind": "thinking"
+      },
+      {
+        "source": "GGUF official model repository URI",
+        "kind": "thinking"
+      }
+    ],
+    "identity_fields": {
+      "general.architecture": "qwen3",
+      "general.basename": "Qwen3",
+      "general.name": null,
+      "general.version": "2507",
+      "general.finetune": "Thinking",
+      "general.license.link": "https://huggingface.co/Qwen/Qwen3-4B-Thinking-2507/blob/main/LICENSE",
+      "general.size_label": "4B"
+    },
+    "capabilities": [
+      "completion",
+      "tools",
+      "thinking"
+    ],
+    "metadata_sha256": "76908b9460e3de019f92f5a9a93d6e57819c06be3f389c004ebe24a68e0870fc",
+    "source": "https://huggingface.co/Qwen/Qwen3-4B-Thinking-2507",
+    "note": "태그 이름은 분류 근거가 아님. 별도 체크포인트 사이의 비교이며 동일 가중치의 on/off 비교가 아님."
+  },
+  "explicit_non_thinking_blocked": true,
+  "rejection": "모델/모드 불일치: thinking-2507은 thinking 전용인데 non-thinking를 요청했습니다. 실행 모드를 맞추거나 다른 체크포인트를 별도 결과 폴더에서 사용하세요.",
+  "resolved_thinking_policy": {
+    "policy_version": "qwen3-mode-v4",
+    "checkpoint_kind": "thinking",
+    "checkpoint_version": "2507",
+    "evidence": [
+      {
+        "source": "GGUF finetune + version",
+        "kind": "thinking"
+      },
+      {
+        "source": "GGUF official model repository URI",
+        "kind": "thinking"
+      }
+    ],
+    "identity_fields": {
+      "general.architecture": "qwen3",
+      "general.basename": "Qwen3",
+      "general.name": null,
+      "general.version": "2507",
+      "general.finetune": "Thinking",
+      "general.license.link": "https://huggingface.co/Qwen/Qwen3-4B-Thinking-2507/blob/main/LICENSE",
+      "general.size_label": "4B"
+    },
+    "capabilities": [
+      "completion",
+      "tools",
+      "thinking"
+    ],
+    "metadata_sha256": "76908b9460e3de019f92f5a9a93d6e57819c06be3f389c004ebe24a68e0870fc",
+    "source": "https://huggingface.co/Qwen/Qwen3-4B-Thinking-2507",
+    "note": "태그 이름은 분류 근거가 아님. 별도 체크포인트 사이의 비교이며 동일 가중치의 on/off 비교가 아님.",
+    "resolved_mode": "thinking",
+    "request_think_field": "true",
+    "require_separate_thinking": true,
+    "resource_budget": "local_bounded_not_vendor_benchmark_budget"
+  },
+  "inference_performed": false,
+  "note": "메타데이터 호환성만 검사. 기존 실패 전부의 원인을 입증하는 결과가 아님."
+}

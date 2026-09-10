@@ -1,0 +1,201 @@
+{
+  "profile": "smoke",
+  "repeats": 1,
+  "seed": 1729,
+  "problems": [
+    {
+      "id": "transfer_01",
+      "facts": [
+        "Atom02",
+        "Atom03"
+      ],
+      "rules": [
+        {
+          "id": "rule05",
+          "premises": [
+            "Atom01"
+          ],
+          "conclusion": "Atom06"
+        },
+        {
+          "id": "rule01",
+          "premises": [
+            "Atom03"
+          ],
+          "conclusion": "Atom05"
+        },
+        {
+          "id": "rule04",
+          "premises": [
+            "Atom04"
+          ],
+          "conclusion": "Atom01"
+        },
+        {
+          "id": "rule02",
+          "premises": [
+            "Atom02",
+            "Atom05"
+          ],
+          "conclusion": "Atom04"
+        },
+        {
+          "id": "rule03",
+          "premises": [
+            "Atom02"
+          ],
+          "conclusion": "Atom07"
+        },
+        {
+          "id": "rule06",
+          "premises": [
+            "Atom07",
+            "Atom05"
+          ],
+          "conclusion": "Atom06"
+        }
+      ],
+      "goal": "Atom06"
+    }
+  ],
+  "roles": [
+    {
+      "kind": "neutral",
+      "A": null,
+      "D_policy": null,
+      "M": null
+    },
+    {
+      "kind": "directed",
+      "A": "instance",
+      "D_policy": "shallow",
+      "M": 0
+    },
+    {
+      "kind": "directed",
+      "A": "instance",
+      "D_policy": "shallow",
+      "M": 1
+    },
+    {
+      "kind": "directed",
+      "A": "instance",
+      "D_policy": "shallow",
+      "M": 2
+    },
+    {
+      "kind": "directed",
+      "A": "instance",
+      "D_policy": "deep",
+      "M": 0
+    },
+    {
+      "kind": "directed",
+      "A": "schema",
+      "D_policy": "shallow",
+      "M": 0
+    }
+  ],
+  "cases": [
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 0
+      },
+      "role_id": "schema_shallow_M0",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "71a4676480210224920f5da2"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 0
+      },
+      "role_id": "instance_deep_M0",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "909b23f6ceb722d93ccb96e2"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 0
+      },
+      "role_id": "instance_shallow_M0",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "ad1c867268665825f6512e61"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 2
+      },
+      "role_id": "instance_shallow_M2",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "68eb1cc4df744bf1c03a05ab"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 1
+      },
+      "role_id": "instance_shallow_M1",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "2dfe7b9013a0ed92fa426c54"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "neutral",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "fef0f771345fae325c13e79c"
+    }
+  ],
+  "assigned_calls": 6,
+  "reference_depths": {
+    "transfer_01": {
+      "reachable": true,
+      "depths": [
+        2,
+        4
+      ],
+      "minimum": 2,
+      "maximum": 4,
+      "has_depth_contrast": true,
+      "definition": "simple_branch_paths_facts_are_terminal"
+    }
+  },
+  "warnings": [],
+  "scope": "fixed_goal_formal_trace_role_following_not_latent_cognition"
+}

@@ -1,0 +1,44 @@
+test_cloud_model_name_is_rejected_before_network (test_local_llm.NetworkBoundaryTests.test_cloud_model_name_is_rejected_before_network) ... ok
+test_external_url_proxy_paths_and_credentials_are_rejected (test_local_llm.NetworkBoundaryTests.test_external_url_proxy_paths_and_credentials_are_rejected) ... ok
+test_localhost_is_normalized_without_dns (test_local_llm.NetworkBoundaryTests.test_localhost_is_normalized_without_dns) ... ok
+test_missing_model_does_not_trigger_download (test_local_llm.NetworkBoundaryTests.test_missing_model_does_not_trigger_download) ... ok
+test_redirect_is_rejected (test_local_llm.NetworkBoundaryTests.test_redirect_is_rejected) ... ok
+test_remote_metadata_is_rejected (test_local_llm.NetworkBoundaryTests.test_remote_metadata_is_rejected) ... ok
+test_all_role_fixtures_are_accepted (test_local_llm.OfflineContractTests.test_all_role_fixtures_are_accepted) ... ok
+test_artifact_change_is_detected (test_local_llm.OfflineContractTests.test_artifact_change_is_detected) ... ok
+test_coordinate_injection_is_rejected (test_local_llm.OfflineContractTests.test_coordinate_injection_is_rejected) ... ok
+test_cycle_unrolling_is_not_a_deep_policy_success (test_local_llm.OfflineContractTests.test_cycle_unrolling_is_not_a_deep_policy_success) ... ok
+test_depth_is_not_number_of_nodes (test_local_llm.OfflineContractTests.test_depth_is_not_number_of_nodes) ... ok
+test_duplicate_json_key_is_rejected (test_local_llm.OfflineContractTests.test_duplicate_json_key_is_rejected) ... ok
+test_duplicate_node_does_not_overwrite_view (test_local_llm.OfflineContractTests.test_duplicate_node_does_not_overwrite_view) ... ok
+test_empty_results_keep_all_assigned_denominators (test_local_llm.OfflineContractTests.test_empty_results_keep_all_assigned_denominators) ... ok
+test_false_meta_finding_preserves_target_level_but_fails (test_local_llm.OfflineContractTests.test_false_meta_finding_preserves_target_level_but_fails) ... ok
+test_findings_require_boolean_not_integer (test_local_llm.OfflineContractTests.test_findings_require_boolean_not_integer) ... ok
+test_fixed_goal_without_support_is_rejected (test_local_llm.OfflineContractTests.test_fixed_goal_without_support_is_rejected) ... ok
+test_markdown_is_not_silently_repaired (test_local_llm.OfflineContractTests.test_markdown_is_not_silently_repaired) ... ok
+test_missing_view_is_not_synthesized (test_local_llm.OfflineContractTests.test_missing_view_is_not_synthesized) ... ok
+test_nonfinite_json_is_rejected (test_local_llm.OfflineContractTests.test_nonfinite_json_is_rejected) ... ok
+test_output_schema_identical_across_roles (test_local_llm.OfflineContractTests.test_output_schema_identical_across_roles) ... ok
+test_profile_call_counts (test_local_llm.OfflineContractTests.test_profile_call_counts) ... ok
+test_reference_extrema_match_baseline (test_local_llm.OfflineContractTests.test_reference_extrema_match_baseline) ... ok
+test_report_files_are_written_without_model (test_local_llm.OfflineContractTests.test_report_files_are_written_without_model) ... ok
+test_response_assessment_accepts_valid_payload (test_local_llm.OfflineContractTests.test_response_assessment_accepts_valid_payload) ... ok
+test_resume_does_not_recall_request_with_missing_response (test_local_llm.OfflineContractTests.test_resume_does_not_recall_request_with_missing_response) ... ok
+test_round_trip_all_roles_preserves_trace (test_local_llm.OfflineContractTests.test_round_trip_all_roles_preserves_trace) ... ok
+test_runtime_never_calls_simulate_or_download_endpoint (test_local_llm.OfflineContractTests.test_runtime_never_calls_simulate_or_download_endpoint) ... ok
+test_seeded_design_is_reproducible (test_local_llm.OfflineContractTests.test_seeded_design_is_reproducible) ... ok
+test_stale_lock_requires_explicit_operator_action (test_local_llm.OfflineContractTests.test_stale_lock_requires_explicit_operator_action) ... ok
+test_synthetic_complete_design_has_sixty_contrasts (test_local_llm.OfflineContractTests.test_synthetic_complete_design_has_sixty_contrasts) ... ok
+test_tool_calls_are_never_executed (test_local_llm.OfflineContractTests.test_tool_calls_are_never_executed) ... ok
+test_transport_failure_with_retained_audit_is_not_success (test_local_llm.OfflineContractTests.test_transport_failure_with_retained_audit_is_not_success) ... ok
+test_truncated_response_is_not_accepted_even_when_json_is_complete (test_local_llm.OfflineContractTests.test_truncated_response_is_not_accepted_even_when_json_is_complete) ... ok
+test_unexpected_thinking_is_rejected (test_local_llm.OfflineContractTests.test_unexpected_thinking_is_rejected) ... ok
+test_unknown_tokens_are_not_recorded_as_known_zero (test_local_llm.OfflineContractTests.test_unknown_tokens_are_not_recorded_as_known_zero) ... ok
+test_unreachable_problem_is_not_excluded (test_local_llm.OfflineContractTests.test_unreachable_problem_is_not_excluded) ... ok
+test_wrong_A_is_role_mismatch_not_a_valid_A_change (test_local_llm.OfflineContractTests.test_wrong_A_is_role_mismatch_not_a_valid_A_change) ... ok
+test_wrong_model_is_rejected (test_local_llm.OfflineContractTests.test_wrong_model_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 39 tests in 0.172s
+
+OK

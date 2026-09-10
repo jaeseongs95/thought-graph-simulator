@@ -1,0 +1,294 @@
+{
+  "source": "user_upload_results_llm.zip/pilot_01",
+  "run_sha256": "efab3dcf69f70367b86bad9af5a1c916f2d11512466af8a9591d22973e35e22e",
+  "examples": [
+    {
+      "problem": {
+        "id": "chain_2",
+        "facts": [
+          "p"
+        ],
+        "rules": [
+          {
+            "id": "direct",
+            "premises": [
+              "p"
+            ],
+            "conclusion": "g"
+          },
+          {
+            "id": "step1",
+            "premises": [
+              "p"
+            ],
+            "conclusion": "q"
+          },
+          {
+            "id": "step2",
+            "premises": [
+              "q"
+            ],
+            "conclusion": "g"
+          }
+        ],
+        "goal": "g"
+      },
+      "case": {
+        "problem_id": "chain_2",
+        "problem_sha256": "7207b0510e0ab0e2565ba640e1de9c33abd4f460aaff3201704daed15842fc19",
+        "role": {
+          "kind": "directed",
+          "A": "instance",
+          "D_policy": "shallow",
+          "M": 0
+        },
+        "role_id": "instance_shallow_M0",
+        "repeat": 0,
+        "seed": 1729,
+        "case_id": "43f59d2ad42181d41ef9373d"
+      },
+      "response": {
+        "model": "qwen3:4b",
+        "created_at": "2026-09-10T11:55:22.0796961Z",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"final\": \"g\",\n  \"nodes\": [\n    {\n      \"atom\": \"p\",\n      \"id\": \"fact_p\",\n      \"parents\": [],\n      \"rule\": null,\n      \"view\": {\n        \"atom\": \"p\",\n        \"kind\": \"instance\"\n      }\n    },\n    {\n      \"atom\": \"g\",\n      \"id\": \"direct\",\n      \"parents\": [\n        \"fact_p\"\n      ],\n      \"rule\": \"direct\",\n      \"view\": {\n        \"atom\": \"g\",\n        \"kind\": \"instance\"\n      }\n    },\n    {\n      \"atom\": \"q\",\n      \"id\": \"step1\",\n      \"parents\": [\n        \"fact_p\"\n      ],\n      \"rule\": \"step1\",\n      \"view\": {\n        \"atom\": \"q\",\n        \"kind\": \"instance\"\n      }\n    },\n    {\n      \"atom\": \"g\",\n      \"id\": \"step2\",\n      \"parents\": [\n        \"step1\"\n      ],\n      \"rule\": \"step2\",\n      \"view\": {\n        \"atom\": \"g\",\n        \"kind\": \"instance\"\n      }\n    }\n  ],\n  \"reviews\": []\n}"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 3878891700,
+        "load_duration": 11473700,
+        "prompt_eval_count": 1800,
+        "prompt_eval_cached_count": 911,
+        "prompt_eval_duration": 254099000,
+        "eval_count": 251,
+        "eval_duration": 3422727000
+      },
+      "response_sha256": "9a9351a4f46e94a0828b342fda8bce78330d8cc192b3e2da0f07e7411d41d83d",
+      "expected_status": "invalid_trace",
+      "expected_error": "GOAL: 최종 노드 없음"
+    },
+    {
+      "problem": {
+        "id": "chain_2",
+        "facts": [
+          "p"
+        ],
+        "rules": [
+          {
+            "id": "direct",
+            "premises": [
+              "p"
+            ],
+            "conclusion": "g"
+          },
+          {
+            "id": "step1",
+            "premises": [
+              "p"
+            ],
+            "conclusion": "q"
+          },
+          {
+            "id": "step2",
+            "premises": [
+              "q"
+            ],
+            "conclusion": "g"
+          }
+        ],
+        "goal": "g"
+      },
+      "case": {
+        "problem_id": "chain_2",
+        "problem_sha256": "7207b0510e0ab0e2565ba640e1de9c33abd4f460aaff3201704daed15842fc19",
+        "role": {
+          "kind": "directed",
+          "A": "instance",
+          "D_policy": "shallow",
+          "M": 1
+        },
+        "role_id": "instance_shallow_M1",
+        "repeat": 0,
+        "seed": 1729,
+        "case_id": "4f3de12209ddc1b54635c73e"
+      },
+      "response": {
+        "model": "qwen3:4b",
+        "created_at": "2026-09-10T11:57:36.5717119Z",
+        "message": {
+          "role": "assistant",
+          "content": "{\"final\": \"g\", \"nodes\": [{\"atom\": \"p\", \"id\": \"p\", \"parents\": [], \"rule\": null, \"view\": {\"atom\": \"p\", \"kind\": \"instance\"}}, {\"atom\": \"g\", \"id\": \"direct\", \"parents\": [\"p\"], \"rule\": \"direct\", \"view\": {\"atom\": \"g\", \"kind\": \"instance\"}}, {\"atom\": \"q\", \"id\": \"step1\", \"parents\": [\"p\"], \"rule\": \"step1\", \"view\": {\"atom\": \"q\", \"kind\": \"instance\"}}, {\"atom\": \"g\", \"id\": \"step2\", \"parents\": [\"q\"], \"rule\": \"step2\", \"view\": {\"atom\": \"g\", \"kind\": \"instance\"}}], \"reviews\": [{\"check\": \"support_replay\", \"evidence\": [\"p\", \"step1\", \"step2\"], \"finding\": {\"conclusion\": \"g\", \"grounded\": true, \"used_rules\": [\"direct\", \"step1\", \"step2\"]}, \"id\": \"review1\", \"target\": \"step2\", \"target_kind\": \"argument\"}] }"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 3938843800,
+        "load_duration": 11478800,
+        "prompt_eval_count": 1794,
+        "prompt_eval_cached_count": 921,
+        "prompt_eval_duration": 249518000,
+        "eval_count": 252,
+        "eval_duration": 3471542000
+      },
+      "response_sha256": "1580ff796c222b6828990c8a5ae5ab3386595b6b3268485fde9b4cabd829fb6d",
+      "expected_status": "invalid_trace",
+      "expected_error": "GRAPH: 순환/전방/누락 참조"
+    },
+    {
+      "problem": {
+        "id": "chain_3",
+        "facts": [
+          "p"
+        ],
+        "rules": [
+          {
+            "id": "direct",
+            "premises": [
+              "p"
+            ],
+            "conclusion": "g"
+          },
+          {
+            "id": "step1",
+            "premises": [
+              "p"
+            ],
+            "conclusion": "q"
+          },
+          {
+            "id": "step2",
+            "premises": [
+              "q"
+            ],
+            "conclusion": "r"
+          },
+          {
+            "id": "step3",
+            "premises": [
+              "r"
+            ],
+            "conclusion": "g"
+          }
+        ],
+        "goal": "g"
+      },
+      "case": {
+        "problem_id": "chain_3",
+        "problem_sha256": "bd228182b4898e9644637d0f0906069422d965a67ad46e04882937e10cfbcad5",
+        "role": {
+          "kind": "directed",
+          "A": "schema",
+          "D_policy": "shallow",
+          "M": 1
+        },
+        "role_id": "schema_shallow_M1",
+        "repeat": 0,
+        "seed": 1729,
+        "case_id": "0111e4bee255e8b091b712c7"
+      },
+      "response": {
+        "model": "qwen3:4b",
+        "created_at": "2026-09-10T11:54:27.9177902Z",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"final\": \"g\",\n  \"nodes\": [\n    {\n      \"atom\": \"p\",\n      \"id\": \"p\",\n      \"parents\": [],\n      \"rule\": null,\n      \"view\": {\n        \"atom\": \"p\",\n        \"kind\": \"instance\"\n      }\n    },\n    {\n      \"atom\": \"q\",\n      \"id\": \"step1\",\n      \"parents\": [\n        \"p\"\n      ],\n      \"rule\": \"step1\",\n      \"view\": {\n        \"assumptions\": [\n          {\n            \"if\": [],\n            \"then\": \"q\"\n          }\n        ],\n        \"binding\": {},\n        \"conclusion\": \"q\",\n        \"kind\": \"universal_schema\",\n        \"quantifier\": \"forall_boolean_valuations\"\n      }\n    },\n    {\n      \"atom\": \"r\",\n      \"id\": \"step2\",\n      \"parents\": [\n        \"step1\"\n      ],\n      \"rule\": \"step2\",\n      \"view\": {\n        \"assumptions\": [\n          {\n            \"if\": [\n              \"q\"\n            ],\n            \"then\": \"r\"\n          }\n        ],\n        \"binding\": {},\n        \"conclusion\": \"r\",\n        \"kind\": \"universal_schema\",\n        \"quantifier\": \"forall_boolean_valuations\"\n      }\n    },\n    {\n      \"atom\": \"g\",\n      \"id\": \"step3\",\n      \"parents\": [\n        \"step2\"\n      ],\n      \"rule\": \"step3\",\n      \"view\": {\n        \"assumptions\": [\n          {\n            \"if\": [\n              \"r\"\n            ],\n            \"then\": \"g\"\n          }\n        ],\n        \"binding\": {},\n        \"conclusion\": \"g\",\n        \"kind\": \"universal_schema\",\n        \"quantifier\": \"forall_boolean_valuations\"\n      }\n    },\n    {\n      \"atom\": \"g\",\n      \"id\": \"direct\",\n      \"parents\": [\n        \"p\"\n      ],\n      \"rule\": \"direct\",\n      \"view\": {\n        \"atom\": \"g\",\n        \"kind\": \"instance\"\n      }\n    }\n  ],\n  \"reviews\": [\n    {\n      \"check\": \"support_replay\",\n      \"evidence\": [\n        \"p\",\n        \"step1\",\n        \"step2\",\n        \"step3\"\n      ],\n      \"finding\": {\n        \"conclusion\": \"g\",\n        \"grounded\": true,\n        \"used_rules\": [\n          \"step1\",\n          \"step2\",\n          \"step3\"\n        ]\n      },\n      \"id\": \"review_1\",\n      \"target\": \"step3\",\n      \"target_kind\": \"argument\"\n    }\n  ]\n}"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 7934279400,
+        "load_duration": 16214900,
+        "prompt_eval_count": 1812,
+        "prompt_eval_cached_count": 939,
+        "prompt_eval_duration": 253424000,
+        "eval_count": 561,
+        "eval_duration": 7518186000
+      },
+      "response_sha256": "3f2297a0ef873d2b9829efce193493612685b7060b31ecf6a44b4cd5ddd98675",
+      "expected_status": "protocol_error",
+      "expected_error": "SCHEMA $.nodes[1].view: 허용된 형식 중 어느 것과도 맞지 않습니다."
+    },
+    {
+      "problem": {
+        "id": "conjunction_4",
+        "facts": [
+          "p",
+          "s"
+        ],
+        "rules": [
+          {
+            "id": "direct",
+            "premises": [
+              "p",
+              "s"
+            ],
+            "conclusion": "g"
+          },
+          {
+            "id": "step1",
+            "premises": [
+              "p"
+            ],
+            "conclusion": "q"
+          },
+          {
+            "id": "step2",
+            "premises": [
+              "q",
+              "s"
+            ],
+            "conclusion": "r"
+          },
+          {
+            "id": "step3",
+            "premises": [
+              "r"
+            ],
+            "conclusion": "t"
+          },
+          {
+            "id": "step4",
+            "premises": [
+              "t"
+            ],
+            "conclusion": "g"
+          }
+        ],
+        "goal": "g"
+      },
+      "case": {
+        "problem_id": "conjunction_4",
+        "problem_sha256": "91c771a054de45397de0d50a3600aeb7024866f2007f258c5a8bec46b4f00f37",
+        "role": {
+          "kind": "directed",
+          "A": "schema",
+          "D_policy": "deep",
+          "M": 2
+        },
+        "role_id": "schema_deep_M2",
+        "repeat": 0,
+        "seed": 1729,
+        "case_id": "bd0813c70122f31c07c6ac7f"
+      },
+      "response": {
+        "model": "qwen3:4b",
+        "created_at": "2026-09-10T11:54:59.875355Z",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"final\": \"g\",\n  \"nodes\": [\n    {\n      \"atom\": \"p\",\n      \"id\": \"fact_p\",\n      \"parents\": [],\n      \"rule\": null,\n      \"view\": {\n        \"atom\": \"p\",\n        \"kind\": \"instance\"\n      }\n    },\n    {\n      \"atom\": \"s\",\n      \"id\": \"fact_s\",\n      \"parents\": [],\n      \"rule\": null,\n      \"view\": {\n        \"atom\": \"s\",\n        \"kind\": \"instance\"\n      }\n    },\n    {\n      \"atom\": \"q\",\n      \"id\": \"step1\",\n      \"parents\": [\n        \"fact_p\"\n      ],\n      \"rule\": \"step1\",\n      \"view\": {\n        \"assumptions\": [\n          {\n            \"if\": [\n              \"p\"\n            ],\n            \"then\": \"q\"\n          }\n        ],\n        \"binding\": {\n          \"p\": \"p\"\n        },\n        \"conclusion\": \"q\",\n        \"kind\": \"universal_schema\",\n        \"quantifier\": \"forall_boolean_valuations\"\n      }\n    },\n    {\n      \"atom\": \"r\",\n      \"id\": \"step2\",\n      \"parents\": [\n        \"step1\",\n        \"fact_s\"\n      ],\n      \"rule\": \"step2\",\n      \"view\": {\n        \"assumptions\": [\n          {\n            \"if\": [\n              \"q\",\n              \"s\"\n            ],\n            \"then\": \"r\"\n          }\n        ],\n        \"binding\": {\n          \"q\": \"q\",\n          \"s\": \"s\"\n        },\n        \"conclusion\": \"r\",\n        \"kind\": \"universal_schema\",\n        \"quantifier\": \"forall_boolean_valuations\"\n      }\n    },\n    {\n      \"atom\": \"t\",\n      \"id\": \"step3\",\n      \"parents\": [\n        \"step2\"\n      ],\n      \"rule\": \"step3\",\n      \"view\": {\n        \"assumptions\": [\n          {\n            \"if\": [\n              \"r\"\n            ],\n            \"then\": \"t\"\n          }\n        ],\n        \"binding\": {\n          \"r\": \"r\"\n        },\n        \"conclusion\": \"t\",\n        \"kind\": \"universal_schema\",\n        \"quantifier\": \"forall_boolean_valuations\"\n      }\n    },\n    {\n      \"atom\": \"g\",\n      \"id\": \"step4\",\n      \"parents\": [\n        \"step3\"\n      ],\n      \"rule\": \"step4\",\n      \"view\": {\n        \"assumptions\": [\n          {\n            \"if\": [\n              \"t\"\n            ],\n            \"then\": \"g\"\n          }\n        ],\n        \"binding\": {\n          \"t\": \"t\"\n        },\n        \"conclusion\": \"g\",\n        \"kind\": \"universal_schema\",\n        \"quantifier\": \"forall_boolean_valuations\"\n      }\n    }\n  ],\n  \"reviews\": [\n    {\n      \"check\": \"support_replay\",\n      \"evidence\": [\n        \"step4\",\n        \"step3\",\n        \"step2\",\n        \"step1\",\n        \"fact_p\",\n        \"fact_s\"\n      ],\n      \"finding\": {\n        \"conclusion\": \"g\",\n        \"grounded\": true,\n        \"used_rules\": [\n          \"step1\",\n          \"step2\",\n          \"step3\",\n          \"step4\"\n        ]\n      },\n      \"id\": \"arg_review_1\",\n      \"target\": \"step4\",\n      \"target_kind\": \"argument\"\n    },\n    {\n      \"check\": \"counterexample_probe\",\n      \"finding\": {\n        \"answer_only_accepts\": false,\n        \"gap_detected\": false,\n        \"proof_and_goal_accepts\": false\n      },\n      \"id\": \"acceptance_review_1\",\n      \"probe\": {\n        \"atom\": \"g\",\n        \"parents\": [],\n        \"rule\": null\n      },\n      \"target\": \"valid_proof_and_goal\",\n      \"target_kind\": \"acceptance_criterion\"\n    }\n  ]\n}"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 11797594100,
+        "load_duration": 12716400,
+        "prompt_eval_count": 1908,
+        "prompt_eval_cached_count": 987,
+        "prompt_eval_duration": 262196000,
+        "eval_count": 844,
+        "eval_duration": 11321977000
+      },
+      "response_sha256": "774aa4f6c2dd698304615975512aca4ae2d662539dc58076d1985620c9dd44d0",
+      "expected_status": "invalid_trace",
+      "expected_error": "GOAL: 최종 노드 없음"
+    }
+  ]
+}

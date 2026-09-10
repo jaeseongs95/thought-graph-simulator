@@ -1,0 +1,24 @@
+{
+  "profile": "smoke",
+  "problem_ids": [
+    "chain_2"
+  ],
+  "conditions_per_problem": 6,
+  "repeats": 1,
+  "assigned_calls": 6,
+  "warnings": [],
+  "reference_depths": {
+    "chain_2": {
+      "reachable": true,
+      "depths": [
+        1,
+        2
+      ],
+      "minimum": 1,
+      "maximum": 2,
+      "has_depth_contrast": true,
+      "definition": "simple_branch_paths_facts_are_terminal"
+    }
+  },
+  "note": "계획이며 실행 결과가 아님"
+}

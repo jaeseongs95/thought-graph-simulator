@@ -1,0 +1,1221 @@
+[
+  {
+    "case_id": "4c497931e014e5dbd5597bc1",
+    "role_id": "proof_K01_compact",
+    "status": "accepted",
+    "diagnostics": {
+      "task": "proof",
+      "score_effect": "none",
+      "output_modified": false,
+      "json_valid": true,
+      "shape_errors": [],
+      "support": {
+        "shape_valid": true,
+        "node_count": 3,
+        "locally_valid_nodes": 3,
+        "all_local_steps_valid": true,
+        "final_reference_exists": true,
+        "goal_match": true,
+        "selected_support_valid": true,
+        "full_support_valid": true,
+        "selected_depth_when_valid": 2,
+        "structural_depth_not_semantic_D": 2,
+        "unrelated_node_ids": [],
+        "first_failure": null,
+        "nodes": [
+          {
+            "position": 0,
+            "node_id": "0",
+            "atom": "Ca",
+            "rule_id": null,
+            "parent_node_ids": [],
+            "actual_parent_atoms": [],
+            "expected_parent_atoms": [],
+            "expected_conclusion": null,
+            "missing_premises": [],
+            "extra_premises": [],
+            "faults": [],
+            "locally_valid": true,
+            "grounded": true
+          },
+          {
+            "position": 1,
+            "node_id": "1",
+            "atom": "Cb",
+            "rule_id": "k10",
+            "parent_node_ids": [
+              "0"
+            ],
+            "actual_parent_atoms": [
+              "Ca"
+            ],
+            "expected_parent_atoms": [
+              "Ca"
+            ],
+            "expected_conclusion": "Cb",
+            "missing_premises": [],
+            "extra_premises": [],
+            "faults": [],
+            "locally_valid": true,
+            "grounded": true
+          },
+          {
+            "position": 2,
+            "node_id": "2",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parent_node_ids": [
+              "1"
+            ],
+            "actual_parent_atoms": [
+              "Cb"
+            ],
+            "expected_parent_atoms": [
+              "Cb"
+            ],
+            "expected_conclusion": "Cc",
+            "missing_premises": [],
+            "extra_premises": [],
+            "faults": [],
+            "locally_valid": true,
+            "grounded": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "case_id": "2bfc018132605f8be9e74a40",
+    "role_id": "criterion_01_compact",
+    "status": "invalid_task",
+    "diagnostics": {
+      "task": "criterion",
+      "score_effect": "none",
+      "output_modified": false,
+      "json_valid": true,
+      "shape_errors": [],
+      "criterion": {
+        "input": {
+          "probe_atom": "Cc",
+          "goal": "Cc",
+          "facts": [
+            "Ca"
+          ]
+        },
+        "expected_primitives": {
+          "same_as_goal": true,
+          "in_facts": false
+        },
+        "expected": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": false,
+          "gap_detected": true
+        },
+        "actual": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": true,
+          "gap_detected": false
+        },
+        "matches": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": false,
+          "gap_detected": false
+        },
+        "actual_internal_consistency": true,
+        "primitive_failure_localized": false,
+        "note": "원래 과제는 primitive 출력을 받지 않는다. 내부 어느 연산이 틀렸는지 이 결과로 단정하지 않는다."
+      }
+    }
+  },
+  {
+    "case_id": "81f33b1f70f9cf932f25cf9b",
+    "role_id": "schema_K03_json",
+    "status": "protocol_error",
+    "diagnostics": {
+      "task": "schema",
+      "score_effect": "none",
+      "output_modified": false,
+      "json_valid": true,
+      "shape_errors": [
+        {
+          "path": "$.node_views[0].view.bindings",
+          "error": "type_mismatch",
+          "expected": "array",
+          "actual": "dict"
+        }
+      ],
+      "schema": {
+        "provided_proof_valid": true,
+        "views": [
+          {
+            "node_id": "n4",
+            "kind": "universal_schema",
+            "expected_atoms": [
+              "Ea",
+              "Eb",
+              "Ec",
+              "Ed",
+              "Ee"
+            ],
+            "expected_clauses": [
+              {
+                "if": [],
+                "then": "Ea"
+              },
+              {
+                "if": [
+                  "Ea"
+                ],
+                "then": "Eb"
+              },
+              {
+                "if": [
+                  "Eb"
+                ],
+                "then": "Ec"
+              },
+              {
+                "if": [
+                  "Eb"
+                ],
+                "then": "Ed"
+              },
+              {
+                "if": [
+                  "Ec",
+                  "Ed"
+                ],
+                "then": "Ee"
+              }
+            ],
+            "binding_container": "dict",
+            "issues": [
+              "bindings_object_not_required_array"
+            ],
+            "noncanonical_mapping_observation_only": true,
+            "returned_clauses": [
+              {
+                "if": [
+                  "Ea"
+                ],
+                "then": "Eb"
+              },
+              {
+                "if": [
+                  "Eb"
+                ],
+                "then": "Ec"
+              },
+              {
+                "if": [
+                  "Eb"
+                ],
+                "then": "Ed"
+              },
+              {
+                "if": [
+                  "Ec",
+                  "Ed"
+                ],
+                "then": "Ee"
+              }
+            ],
+            "missing_clauses": [
+              {
+                "if": [],
+                "then": "Ea"
+              }
+            ],
+            "missing_fact_atoms": [
+              "Ea"
+            ],
+            "extra_clauses": [],
+            "duplicate_clauses": [],
+            "grounded_clauses_exact": false,
+            "conclusion_grounding_valid": true,
+            "counterexample_valuation": {
+              "a": false,
+              "b": false,
+              "c": false,
+              "d": false,
+              "e": false
+            },
+            "supplied_clauses_entail_conclusion": false
+          }
+        ],
+        "score_effect": "none",
+        "output_modified": false
+      }
+    }
+  },
+  {
+    "case_id": "40e41ac9f560060e3b3c1cfc",
+    "role_id": "proof_K03_compact",
+    "status": "invalid_task",
+    "diagnostics": {
+      "task": "proof",
+      "score_effect": "none",
+      "output_modified": false,
+      "json_valid": true,
+      "shape_errors": [],
+      "support": {
+        "shape_valid": true,
+        "node_count": 5,
+        "locally_valid_nodes": 3,
+        "all_local_steps_valid": false,
+        "final_reference_exists": true,
+        "goal_match": true,
+        "selected_support_valid": false,
+        "full_support_valid": false,
+        "selected_depth_when_valid": null,
+        "structural_depth_not_semantic_D": 4,
+        "unrelated_node_ids": [],
+        "first_failure": {
+          "position": 3,
+          "node_id": "3",
+          "atom": "Ed",
+          "rule_id": "k24",
+          "parent_node_ids": [
+            "2"
+          ],
+          "actual_parent_atoms": [
+            "Ec"
+          ],
+          "expected_parent_atoms": [
+            "Eb"
+          ],
+          "expected_conclusion": "Ed",
+          "missing_premises": [
+            "Eb"
+          ],
+          "extra_premises": [
+            "Ec"
+          ],
+          "faults": [
+            "wrong_premises"
+          ],
+          "locally_valid": false,
+          "grounded": false
+        },
+        "nodes": [
+          {
+            "position": 0,
+            "node_id": "0",
+            "atom": "Ea",
+            "rule_id": null,
+            "parent_node_ids": [],
+            "actual_parent_atoms": [],
+            "expected_parent_atoms": [],
+            "expected_conclusion": null,
+            "missing_premises": [],
+            "extra_premises": [],
+            "faults": [],
+            "locally_valid": true,
+            "grounded": true
+          },
+          {
+            "position": 1,
+            "node_id": "1",
+            "atom": "Eb",
+            "rule_id": "k10",
+            "parent_node_ids": [
+              "0"
+            ],
+            "actual_parent_atoms": [
+              "Ea"
+            ],
+            "expected_parent_atoms": [
+              "Ea"
+            ],
+            "expected_conclusion": "Eb",
+            "missing_premises": [],
+            "extra_premises": [],
+            "faults": [],
+            "locally_valid": true,
+            "grounded": true
+          },
+          {
+            "position": 2,
+            "node_id": "2",
+            "atom": "Ec",
+            "rule_id": "k17",
+            "parent_node_ids": [
+              "1"
+            ],
+            "actual_parent_atoms": [
+              "Eb"
+            ],
+            "expected_parent_atoms": [
+              "Eb"
+            ],
+            "expected_conclusion": "Ec",
+            "missing_premises": [],
+            "extra_premises": [],
+            "faults": [],
+            "locally_valid": true,
+            "grounded": true
+          },
+          {
+            "position": 3,
+            "node_id": "3",
+            "atom": "Ed",
+            "rule_id": "k24",
+            "parent_node_ids": [
+              "2"
+            ],
+            "actual_parent_atoms": [
+              "Ec"
+            ],
+            "expected_parent_atoms": [
+              "Eb"
+            ],
+            "expected_conclusion": "Ed",
+            "missing_premises": [
+              "Eb"
+            ],
+            "extra_premises": [
+              "Ec"
+            ],
+            "faults": [
+              "wrong_premises"
+            ],
+            "locally_valid": false,
+            "grounded": false
+          },
+          {
+            "position": 4,
+            "node_id": "4",
+            "atom": "Ee",
+            "rule_id": "k00",
+            "parent_node_ids": [
+              "3"
+            ],
+            "actual_parent_atoms": [
+              "Ed"
+            ],
+            "expected_parent_atoms": [
+              "Ec",
+              "Ed"
+            ],
+            "expected_conclusion": "Ee",
+            "missing_premises": [
+              "Ec"
+            ],
+            "extra_premises": [],
+            "faults": [
+              "wrong_premises"
+            ],
+            "locally_valid": false,
+            "grounded": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "case_id": "4a704cacd9dbf22fb2845ff6",
+    "role_id": "schema_K03_schema_only",
+    "status": "invalid_task",
+    "diagnostics": {
+      "task": "schema",
+      "score_effect": "none",
+      "output_modified": false,
+      "json_valid": true,
+      "shape_errors": [],
+      "schema": {
+        "provided_proof_valid": true,
+        "views": [
+          {
+            "node_id": "n4",
+            "kind": "universal_schema",
+            "expected_atoms": [
+              "Ea",
+              "Eb",
+              "Ec",
+              "Ed",
+              "Ee"
+            ],
+            "expected_clauses": [
+              {
+                "if": [],
+                "then": "Ea"
+              },
+              {
+                "if": [
+                  "Ea"
+                ],
+                "then": "Eb"
+              },
+              {
+                "if": [
+                  "Eb"
+                ],
+                "then": "Ec"
+              },
+              {
+                "if": [
+                  "Eb"
+                ],
+                "then": "Ed"
+              },
+              {
+                "if": [
+                  "Ec",
+                  "Ed"
+                ],
+                "then": "Ee"
+              }
+            ],
+            "binding_container": "list",
+            "issues": [],
+            "returned_clauses": [
+              {
+                "if": [
+                  "Ea"
+                ],
+                "then": "Eb"
+              },
+              {
+                "if": [
+                  "Eb"
+                ],
+                "then": "Ec"
+              },
+              {
+                "if": [
+                  "Eb"
+                ],
+                "then": "Ed"
+              },
+              {
+                "if": [
+                  "Ec",
+                  "Ed"
+                ],
+                "then": "Ee"
+              }
+            ],
+            "missing_clauses": [
+              {
+                "if": [],
+                "then": "Ea"
+              }
+            ],
+            "missing_fact_atoms": [
+              "Ea"
+            ],
+            "extra_clauses": [],
+            "duplicate_clauses": [],
+            "grounded_clauses_exact": false,
+            "conclusion_grounding_valid": true,
+            "counterexample_valuation": {
+              "v": false,
+              "w": false,
+              "x": false,
+              "y": false,
+              "z": false
+            },
+            "supplied_clauses_entail_conclusion": false
+          }
+        ],
+        "score_effect": "none",
+        "output_modified": false
+      }
+    }
+  },
+  {
+    "case_id": "889c7087116427a2a8c65f06",
+    "role_id": "proof_K01_baseline",
+    "status": "accepted",
+    "diagnostics": {
+      "task": "proof",
+      "score_effect": "none",
+      "output_modified": false,
+      "json_valid": true,
+      "shape_errors": [],
+      "support": {
+        "shape_valid": true,
+        "node_count": 3,
+        "locally_valid_nodes": 3,
+        "all_local_steps_valid": true,
+        "final_reference_exists": true,
+        "goal_match": true,
+        "selected_support_valid": true,
+        "full_support_valid": true,
+        "selected_depth_when_valid": 2,
+        "structural_depth_not_semantic_D": 2,
+        "unrelated_node_ids": [],
+        "first_failure": null,
+        "nodes": [
+          {
+            "position": 0,
+            "node_id": "n0",
+            "atom": "Ca",
+            "rule_id": null,
+            "parent_node_ids": [],
+            "actual_parent_atoms": [],
+            "expected_parent_atoms": [],
+            "expected_conclusion": null,
+            "missing_premises": [],
+            "extra_premises": [],
+            "faults": [],
+            "locally_valid": true,
+            "grounded": true
+          },
+          {
+            "position": 1,
+            "node_id": "n1",
+            "atom": "Cb",
+            "rule_id": "k10",
+            "parent_node_ids": [
+              "n0"
+            ],
+            "actual_parent_atoms": [
+              "Ca"
+            ],
+            "expected_parent_atoms": [
+              "Ca"
+            ],
+            "expected_conclusion": "Cb",
+            "missing_premises": [],
+            "extra_premises": [],
+            "faults": [],
+            "locally_valid": true,
+            "grounded": true
+          },
+          {
+            "position": 2,
+            "node_id": "n2",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parent_node_ids": [
+              "n1"
+            ],
+            "actual_parent_atoms": [
+              "Cb"
+            ],
+            "expected_parent_atoms": [
+              "Cb"
+            ],
+            "expected_conclusion": "Cc",
+            "missing_premises": [],
+            "extra_premises": [],
+            "faults": [],
+            "locally_valid": true,
+            "grounded": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "case_id": "0c2c23949b8388bf71c4d616",
+    "role_id": "proof_K02_compact",
+    "status": "accepted",
+    "diagnostics": {
+      "task": "proof",
+      "score_effect": "none",
+      "output_modified": false,
+      "json_valid": true,
+      "shape_errors": [],
+      "support": {
+        "shape_valid": true,
+        "node_count": 5,
+        "locally_valid_nodes": 5,
+        "all_local_steps_valid": true,
+        "final_reference_exists": true,
+        "goal_match": true,
+        "selected_support_valid": true,
+        "full_support_valid": true,
+        "selected_depth_when_valid": 3,
+        "structural_depth_not_semantic_D": 3,
+        "unrelated_node_ids": [],
+        "first_failure": null,
+        "nodes": [
+          {
+            "position": 0,
+            "node_id": "n0",
+            "atom": "Da",
+            "rule_id": null,
+            "parent_node_ids": [],
+            "actual_parent_atoms": [],
+            "expected_parent_atoms": [],
+            "expected_conclusion": null,
+            "missing_premises": [],
+            "extra_premises": [],
+            "faults": [],
+            "locally_valid": true,
+            "grounded": true
+          },
+          {
+            "position": 1,
+            "node_id": "n1",
+            "atom": "Db",
+            "rule_id": null,
+            "parent_node_ids": [],
+            "actual_parent_atoms": [],
+            "expected_parent_atoms": [],
+            "expected_conclusion": null,
+            "missing_premises": [],
+            "extra_premises": [],
+            "faults": [],
+            "locally_valid": true,
+            "grounded": true
+          },
+          {
+            "position": 2,
+            "node_id": "n2",
+            "atom": "Dc",
+            "rule_id": "k10",
+            "parent_node_ids": [
+              "n0"
+            ],
+            "actual_parent_atoms": [
+              "Da"
+            ],
+            "expected_parent_atoms": [
+              "Da"
+            ],
+            "expected_conclusion": "Dc",
+            "missing_premises": [],
+            "extra_premises": [],
+            "faults": [],
+            "locally_valid": true,
+            "grounded": true
+          },
+          {
+            "position": 3,
+            "node_id": "n3",
+            "atom": "Dd",
+            "rule_id": "k17",
+            "parent_node_ids": [
+              "n2",
+              "n1"
+            ],
+            "actual_parent_atoms": [
+              "Dc",
+              "Db"
+            ],
+            "expected_parent_atoms": [
+              "Dc",
+              "Db"
+            ],
+            "expected_conclusion": "Dd",
+            "missing_premises": [],
+            "extra_premises": [],
+            "faults": [],
+            "locally_valid": true,
+            "grounded": true
+          },
+          {
+            "position": 4,
+            "node_id": "n4",
+            "atom": "De",
+            "rule_id": "k24",
+            "parent_node_ids": [
+              "n3"
+            ],
+            "actual_parent_atoms": [
+              "Dd"
+            ],
+            "expected_parent_atoms": [
+              "Dd"
+            ],
+            "expected_conclusion": "De",
+            "missing_premises": [],
+            "extra_premises": [],
+            "faults": [],
+            "locally_valid": true,
+            "grounded": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "case_id": "a7aa1a66f52d07bec1e92b7a",
+    "role_id": "proof_K02_baseline",
+    "status": "accepted",
+    "diagnostics": {
+      "task": "proof",
+      "score_effect": "none",
+      "output_modified": false,
+      "json_valid": true,
+      "shape_errors": [],
+      "support": {
+        "shape_valid": true,
+        "node_count": 5,
+        "locally_valid_nodes": 5,
+        "all_local_steps_valid": true,
+        "final_reference_exists": true,
+        "goal_match": true,
+        "selected_support_valid": true,
+        "full_support_valid": true,
+        "selected_depth_when_valid": 3,
+        "structural_depth_not_semantic_D": 3,
+        "unrelated_node_ids": [],
+        "first_failure": null,
+        "nodes": [
+          {
+            "position": 0,
+            "node_id": "n0",
+            "atom": "Da",
+            "rule_id": null,
+            "parent_node_ids": [],
+            "actual_parent_atoms": [],
+            "expected_parent_atoms": [],
+            "expected_conclusion": null,
+            "missing_premises": [],
+            "extra_premises": [],
+            "faults": [],
+            "locally_valid": true,
+            "grounded": true
+          },
+          {
+            "position": 1,
+            "node_id": "n1",
+            "atom": "Db",
+            "rule_id": null,
+            "parent_node_ids": [],
+            "actual_parent_atoms": [],
+            "expected_parent_atoms": [],
+            "expected_conclusion": null,
+            "missing_premises": [],
+            "extra_premises": [],
+            "faults": [],
+            "locally_valid": true,
+            "grounded": true
+          },
+          {
+            "position": 2,
+            "node_id": "n2",
+            "atom": "Dc",
+            "rule_id": "k10",
+            "parent_node_ids": [
+              "n0"
+            ],
+            "actual_parent_atoms": [
+              "Da"
+            ],
+            "expected_parent_atoms": [
+              "Da"
+            ],
+            "expected_conclusion": "Dc",
+            "missing_premises": [],
+            "extra_premises": [],
+            "faults": [],
+            "locally_valid": true,
+            "grounded": true
+          },
+          {
+            "position": 3,
+            "node_id": "n3",
+            "atom": "Dd",
+            "rule_id": "k17",
+            "parent_node_ids": [
+              "n2",
+              "n1"
+            ],
+            "actual_parent_atoms": [
+              "Dc",
+              "Db"
+            ],
+            "expected_parent_atoms": [
+              "Dc",
+              "Db"
+            ],
+            "expected_conclusion": "Dd",
+            "missing_premises": [],
+            "extra_premises": [],
+            "faults": [],
+            "locally_valid": true,
+            "grounded": true
+          },
+          {
+            "position": 4,
+            "node_id": "n4",
+            "atom": "De",
+            "rule_id": "k24",
+            "parent_node_ids": [
+              "n3"
+            ],
+            "actual_parent_atoms": [
+              "Dd"
+            ],
+            "expected_parent_atoms": [
+              "Dd"
+            ],
+            "expected_conclusion": "De",
+            "missing_premises": [],
+            "extra_premises": [],
+            "faults": [],
+            "locally_valid": true,
+            "grounded": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "case_id": "83a24f76670bb887f695c039",
+    "role_id": "criterion_02_compact",
+    "status": "invalid_task",
+    "diagnostics": {
+      "task": "criterion",
+      "score_effect": "none",
+      "output_modified": false,
+      "json_valid": true,
+      "shape_errors": [],
+      "criterion": {
+        "input": {
+          "probe_atom": "Ca",
+          "goal": "Cc",
+          "facts": [
+            "Ca"
+          ]
+        },
+        "expected_primitives": {
+          "same_as_goal": false,
+          "in_facts": true
+        },
+        "expected": {
+          "answer_only_accepts": false,
+          "proof_and_goal_accepts": false,
+          "gap_detected": false
+        },
+        "actual": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": true,
+          "gap_detected": false
+        },
+        "matches": {
+          "answer_only_accepts": false,
+          "proof_and_goal_accepts": false,
+          "gap_detected": true
+        },
+        "actual_internal_consistency": true,
+        "primitive_failure_localized": false,
+        "note": "원래 과제는 primitive 출력을 받지 않는다. 내부 어느 연산이 틀렸는지 이 결과로 단정하지 않는다."
+      }
+    }
+  },
+  {
+    "case_id": "5661058f6e0dbc2eb757b7de",
+    "role_id": "proof_K03_baseline",
+    "status": "invalid_task",
+    "diagnostics": {
+      "task": "proof",
+      "score_effect": "none",
+      "output_modified": false,
+      "json_valid": true,
+      "shape_errors": [],
+      "support": {
+        "shape_valid": true,
+        "node_count": 5,
+        "locally_valid_nodes": 3,
+        "all_local_steps_valid": false,
+        "final_reference_exists": true,
+        "goal_match": true,
+        "selected_support_valid": false,
+        "full_support_valid": false,
+        "selected_depth_when_valid": null,
+        "structural_depth_not_semantic_D": 4,
+        "unrelated_node_ids": [],
+        "first_failure": {
+          "position": 3,
+          "node_id": "n3",
+          "atom": "Ed",
+          "rule_id": "k24",
+          "parent_node_ids": [
+            "n2"
+          ],
+          "actual_parent_atoms": [
+            "Ec"
+          ],
+          "expected_parent_atoms": [
+            "Eb"
+          ],
+          "expected_conclusion": "Ed",
+          "missing_premises": [
+            "Eb"
+          ],
+          "extra_premises": [
+            "Ec"
+          ],
+          "faults": [
+            "wrong_premises"
+          ],
+          "locally_valid": false,
+          "grounded": false
+        },
+        "nodes": [
+          {
+            "position": 0,
+            "node_id": "n0",
+            "atom": "Ea",
+            "rule_id": null,
+            "parent_node_ids": [],
+            "actual_parent_atoms": [],
+            "expected_parent_atoms": [],
+            "expected_conclusion": null,
+            "missing_premises": [],
+            "extra_premises": [],
+            "faults": [],
+            "locally_valid": true,
+            "grounded": true
+          },
+          {
+            "position": 1,
+            "node_id": "n1",
+            "atom": "Eb",
+            "rule_id": "k10",
+            "parent_node_ids": [
+              "n0"
+            ],
+            "actual_parent_atoms": [
+              "Ea"
+            ],
+            "expected_parent_atoms": [
+              "Ea"
+            ],
+            "expected_conclusion": "Eb",
+            "missing_premises": [],
+            "extra_premises": [],
+            "faults": [],
+            "locally_valid": true,
+            "grounded": true
+          },
+          {
+            "position": 2,
+            "node_id": "n2",
+            "atom": "Ec",
+            "rule_id": "k17",
+            "parent_node_ids": [
+              "n1"
+            ],
+            "actual_parent_atoms": [
+              "Eb"
+            ],
+            "expected_parent_atoms": [
+              "Eb"
+            ],
+            "expected_conclusion": "Ec",
+            "missing_premises": [],
+            "extra_premises": [],
+            "faults": [],
+            "locally_valid": true,
+            "grounded": true
+          },
+          {
+            "position": 3,
+            "node_id": "n3",
+            "atom": "Ed",
+            "rule_id": "k24",
+            "parent_node_ids": [
+              "n2"
+            ],
+            "actual_parent_atoms": [
+              "Ec"
+            ],
+            "expected_parent_atoms": [
+              "Eb"
+            ],
+            "expected_conclusion": "Ed",
+            "missing_premises": [
+              "Eb"
+            ],
+            "extra_premises": [
+              "Ec"
+            ],
+            "faults": [
+              "wrong_premises"
+            ],
+            "locally_valid": false,
+            "grounded": false
+          },
+          {
+            "position": 4,
+            "node_id": "n4",
+            "atom": "Ee",
+            "rule_id": "k00",
+            "parent_node_ids": [
+              "n3"
+            ],
+            "actual_parent_atoms": [
+              "Ed"
+            ],
+            "expected_parent_atoms": [
+              "Ec",
+              "Ed"
+            ],
+            "expected_conclusion": "Ee",
+            "missing_premises": [
+              "Ec"
+            ],
+            "extra_premises": [],
+            "faults": [
+              "wrong_premises"
+            ],
+            "locally_valid": false,
+            "grounded": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "case_id": "3a0cd898cd74dad27f41b09b",
+    "role_id": "schema_K03_union",
+    "status": "invalid_task",
+    "diagnostics": {
+      "task": "schema",
+      "score_effect": "none",
+      "output_modified": false,
+      "json_valid": true,
+      "shape_errors": [],
+      "schema": {
+        "provided_proof_valid": true,
+        "views": [
+          {
+            "node_id": "n4",
+            "kind": "universal_schema",
+            "expected_atoms": [
+              "Ea",
+              "Eb",
+              "Ec",
+              "Ed",
+              "Ee"
+            ],
+            "expected_clauses": [
+              {
+                "if": [],
+                "then": "Ea"
+              },
+              {
+                "if": [
+                  "Ea"
+                ],
+                "then": "Eb"
+              },
+              {
+                "if": [
+                  "Eb"
+                ],
+                "then": "Ec"
+              },
+              {
+                "if": [
+                  "Eb"
+                ],
+                "then": "Ed"
+              },
+              {
+                "if": [
+                  "Ec",
+                  "Ed"
+                ],
+                "then": "Ee"
+              }
+            ],
+            "binding_container": "list",
+            "issues": [],
+            "returned_clauses": [
+              {
+                "if": [
+                  "Ea"
+                ],
+                "then": "Eb"
+              },
+              {
+                "if": [
+                  "Eb"
+                ],
+                "then": "Ec"
+              },
+              {
+                "if": [
+                  "Eb"
+                ],
+                "then": "Ed"
+              },
+              {
+                "if": [
+                  "Ec",
+                  "Ed"
+                ],
+                "then": "Ee"
+              }
+            ],
+            "missing_clauses": [
+              {
+                "if": [],
+                "then": "Ea"
+              }
+            ],
+            "missing_fact_atoms": [
+              "Ea"
+            ],
+            "extra_clauses": [],
+            "duplicate_clauses": [],
+            "grounded_clauses_exact": false,
+            "conclusion_grounding_valid": true,
+            "counterexample_valuation": {
+              "v": false,
+              "w": false,
+              "x": false,
+              "y": false,
+              "z": false
+            },
+            "supplied_clauses_entail_conclusion": false
+          }
+        ],
+        "score_effect": "none",
+        "output_modified": false
+      }
+    }
+  },
+  {
+    "case_id": "983de2e30805b31d713439b8",
+    "role_id": "criterion_03_compact",
+    "status": "accepted",
+    "diagnostics": {
+      "task": "criterion",
+      "score_effect": "none",
+      "output_modified": false,
+      "json_valid": true,
+      "shape_errors": [],
+      "criterion": {
+        "input": {
+          "probe_atom": "Cc",
+          "goal": "Cc",
+          "facts": [
+            "Ca",
+            "Cc"
+          ]
+        },
+        "expected_primitives": {
+          "same_as_goal": true,
+          "in_facts": true
+        },
+        "expected": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": true,
+          "gap_detected": false
+        },
+        "actual": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": true,
+          "gap_detected": false
+        },
+        "matches": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": true,
+          "gap_detected": true
+        },
+        "actual_internal_consistency": true,
+        "primitive_failure_localized": false,
+        "note": "원래 과제는 primitive 출력을 받지 않는다. 내부 어느 연산이 틀렸는지 이 결과로 단정하지 않는다."
+      }
+    }
+  }
+]

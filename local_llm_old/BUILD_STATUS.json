@@ -1,0 +1,29 @@
+{
+  "source_version": "0.1.0",
+  "date": "2026-09-10",
+  "delivery_status": "SOURCE_ONLY_NOT_RUNTIME_TESTED",
+  "baseline_repository": "jaeseongs95/thought-graph-simulator",
+  "baseline_commit": "254757486a987475d16541cf84b905d684c1c13d",
+  "baseline_core_git_blob": "b7aa0b58b9257fdb80882b48e4ecf1006ac4ff45",
+  "target_hardware_user_provided": {
+    "cpu": "AMD Ryzen 5 5600X 6C/12T",
+    "ram": "31.9 GiB displayed, nominal 32 GB",
+    "gpu": "NVIDIA GeForce RTX 4060",
+    "dedicated_vram_from_screenshot": null,
+    "os": "Windows"
+  },
+  "source_created": true,
+  "static_ast_syntax_check_performed": true,
+  "static_ast_python_files": 12,
+  "authored_test_methods": 39,
+  "project_imported_by_assistant": false,
+  "project_executed_by_assistant": false,
+  "unit_tests_executed_by_assistant": false,
+  "model_downloaded_by_assistant": false,
+  "llm_inference_executed_by_assistant": false,
+  "gpu_execution_by_assistant": false,
+  "windows_execution_by_assistant": false,
+  "repository_written_or_committed_by_assistant": false,
+  "measured_llm_results": null,
+  "note_ko": "정적 AST 구문 검사와 파일 포장만 수행했다. 테스트 함수 개수는 작성된 개수이며 통과 개수가 아니다. 배포 패키지의 ZIP 무결성 확인은 구현·추론·단위시험 실행이 아니다."
+}

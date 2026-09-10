@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "instance_M0_positive",
+      "passed": true
+    },
+    {
+      "name": "instance_M0_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "instance_M0_problem_binding",
+      "passed": true
+    },
+    {
+      "name": "instance_M0_self_cycle",
+      "passed": true
+    },
+    {
+      "name": "instance_M0_unknown_rule",
+      "passed": true
+    },
+    {
+      "name": "instance_M0_duplicate_node",
+      "passed": true
+    },
+    {
+      "name": "instance_M0_missing_view",
+      "passed": true
+    },
+    {
+      "name": "instance_M0_injected_coordinate",
+      "passed": true
+    },
+    {
+      "name": "instance_M0_ungrounded_fixed_goal",
+      "passed": true
+    },
+    {
+      "name": "schema_M2_positive",
+      "passed": true
+    },
+    {
+      "name": "schema_M2_input_unchanged",
+      "passed": true
+    },
+    {
+      "name": "schema_M2_problem_binding",
+      "passed": true
+    },
+    {
+      "name": "schema_M2_self_cycle",
+      "passed": true
+    },
+    {
+      "name": "schema_M2_unknown_rule",
+      "passed": true
+    },
+    {
+      "name": "schema_M2_duplicate_node",
+      "passed": true
+    },
+    {
+      "name": "schema_M2_missing_view",
+      "passed": true
+    },
+    {
+      "name": "schema_M2_injected_coordinate",
+      "passed": true
+    },
+    {
+      "name": "schema_M2_ungrounded_fixed_goal",
+      "passed": true
+    },
+    {
+      "name": "schema_M2_empty_schema",
+      "passed": true
+    },
+    {
+      "name": "schema_M2_false_review_0",
+      "passed": true
+    },
+    {
+      "name": "schema_M2_false_review_1",
+      "passed": true
+    }
+  ],
+  "model_called": false,
+  "note": "명시된 픽스처를 이용한 코드 검사이며 LLM 실험 결과가 아님"
+}

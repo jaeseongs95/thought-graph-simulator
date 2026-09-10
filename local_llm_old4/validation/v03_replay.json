@@ -1,0 +1,75 @@
+{
+  "analysis_version": "0.4.0",
+  "source_zip_sha256": "7d1758efd2e79148d5a1bd9e87db0b63c8b3eccba3bf91f3136c119b50f4801b",
+  "source_run_sha256": "bc39fce9fed4fc6e18afe506fce7f305c0e85a1db07baf2b4a06401e682efedf",
+  "source_manifest_sha256": "1ba558d68132a5ef823cd44fc7894a41b0670c8a5c5ebf1de8c91891c5e4003c",
+  "source_snapshot_hash_checks": {
+    "__init__.py": true,
+    "__main__.py": true,
+    "audit.py": true,
+    "calibration.py": true,
+    "client.py": true,
+    "common.py": true,
+    "design.py": true,
+    "diagnostics.py": true,
+    "gate.py": true,
+    "prompts.py": true,
+    "prompts_v2.py": true,
+    "prompts_v3.py": true,
+    "protocol.py": true,
+    "protocol_v2.py": true,
+    "report.py": true,
+    "runner.py": true,
+    "selfcheck.py": true
+  },
+  "original_archive_members_compared": 298,
+  "original_archive_members_unchanged": true,
+  "original_verifier_sha256": "24542551351225d4a2ed0e65c95cfca3d850e7bbd102439f1f3662d2eefcfad8",
+  "verifier_modified": false,
+  "counts": {
+    "saved_responses": 39,
+    "original_decision_reproduced": 39,
+    "status_accepted": 12,
+    "normal_stop": 39,
+    "json_valid": 39,
+    "schema_valid": 39,
+    "all_local_steps_valid": 39,
+    "all_problem_rules_emitted": 6,
+    "missing_final_reference": 0,
+    "missing_parent_reference": 0,
+    "empty_binding": 0,
+    "final_is_goal_atom": 0,
+    "valid_completion": 26,
+    "status_invalid_trace": 13,
+    "status_role_mismatch": 14
+  },
+  "corrected_per_axis_adherence": {
+    "A": {
+      "matched": 26,
+      "mismatched": 5,
+      "assigned_directed": 36,
+      "missing_or_not_assessable": 5
+    },
+    "D": {
+      "matched": 16,
+      "mismatched": 15,
+      "assigned_directed": 36,
+      "missing_or_not_assessable": 5
+    },
+    "M": {
+      "matched": 27,
+      "mismatched": 4,
+      "assigned_directed": 36,
+      "missing_or_not_assessable": 5
+    }
+  },
+  "whole_status_counts": {
+    "accepted": 12,
+    "invalid_trace": 13,
+    "role_mismatch": 14
+  },
+  "saved_original_decisions_overwritten": false,
+  "recorded_directed_unassessable_instead_of_mismatch_per_axis": 5,
+  "model_called": false,
+  "note": "보존된 39개 실제 응답의 오프라인 재검사. 새 추론 결과가 아님."
+}

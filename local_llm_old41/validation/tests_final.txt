@@ -1,0 +1,211 @@
+모드 검사: instruct-2507 / non-thinking / think=omitted / context=8192, output=4096
+[1/6] chain_2 / schema_shallow_M0 / seed=1729 -> accepted
+[2/6] chain_2 / instance_deep_M0 / seed=1729 -> accepted
+[3/6] chain_2 / instance_shallow_M0 / seed=1729 -> accepted
+[4/6] chain_2 / instance_shallow_M2 / seed=1729 -> accepted
+[5/6] chain_2 / instance_shallow_M1 / seed=1729 -> accepted
+[6/6] chain_2 / neutral / seed=1729 -> accepted
+결과: /tmp/tmpkofrfnew/mock_smoke/summary.md
+실행 완료: 6/6건 기록 / 전 조건 통과: PASS / 과제 성공: 6/6
+모드 검사: instruct-2507 / non-thinking / think=omitted / context=8192, output=4096
+[1/6] chain_2 / schema_shallow_M0 / seed=1729 -> accepted
+[2/6] chain_2 / instance_deep_M0 / seed=1729 -> accepted
+[3/6] chain_2 / instance_shallow_M0 / seed=1729 -> accepted
+[4/6] chain_2 / instance_shallow_M2 / seed=1729 -> accepted
+[5/6] chain_2 / instance_shallow_M1 / seed=1729 -> accepted
+[6/6] chain_2 / neutral / seed=1729 -> accepted
+결과: /tmp/tmpc6q_3ynh/mock_smoke/summary.md
+실행 완료: 6/6건 기록 / 전 조건 통과: PASS / 과제 성공: 6/6
+모드 검사: instruct-2507 / non-thinking / think=omitted / context=8192, output=4096
+[1/8] calibration_only / proof_shallow / seed=1729 -> accepted
+[2/8] calibration_only / proof_deep / seed=1729 -> accepted
+[3/8] calibration_only / schema_on_fixed_proof / seed=1729 -> accepted
+[4/8] calibration_only / review_valid_proof / seed=1729 -> accepted
+[5/8] calibration_only / review_invalid_proof / seed=1729 -> accepted
+[6/8] calibration_only / criterion_unsupported_goal / seed=1729 -> accepted
+[7/8] calibration_only / criterion_non_goal_fact / seed=1729 -> accepted
+[8/8] calibration_goal_given / criterion_supported_goal / seed=1729 -> accepted
+결과: /tmp/tmpcegz1tqa/mock_calibration/summary.md
+실행 완료: 8/8건 기록 / 전 조건 통과: PASS / 과제 성공: 8/8
+모드 검사: instruct-2507 / non-thinking / think=omitted / context=8192, output=4096
+[1/6] chain_2 / schema_shallow_M0 / seed=1729 -> accepted
+[2/6] chain_2 / instance_deep_M0 / seed=1729 -> accepted
+[3/6] chain_2 / instance_shallow_M0 / seed=1729 -> accepted
+[4/6] chain_2 / instance_shallow_M2 / seed=1729 -> accepted
+[5/6] chain_2 / instance_shallow_M1 / seed=1729 -> accepted
+[6/6] chain_2 / neutral / seed=1729 -> accepted
+결과: /tmp/tmpe_hzo63e/mock_smoke/summary.md
+실행 완료: 6/6건 기록 / 전 조건 통과: PASS / 과제 성공: 6/6
+모드 검사: instruct-2507 / non-thinking / think=omitted / context=8192, output=4096
+[1/6] chain_2 / schema_shallow_M0 / seed=1729 -> role_mismatch
+  요청 역할 미준수: {'A': True, 'D': False, 'M': True}
+[2/6] chain_2 / instance_deep_M0 / seed=1729 -> accepted
+[3/6] chain_2 / instance_shallow_M0 / seed=1729 -> role_mismatch
+  요청 역할 미준수: {'A': True, 'D': False, 'M': True}
+[4/6] chain_2 / instance_shallow_M2 / seed=1729 -> role_mismatch
+  요청 역할 미준수: {'A': True, 'D': False, 'M': False}
+[5/6] chain_2 / instance_shallow_M1 / seed=1729 -> role_mismatch
+  요청 역할 미준수: {'A': True, 'D': False, 'M': True}
+[6/6] chain_2 / neutral / seed=1729 -> invalid_trace
+  VIEW: 치환은 사용 원자에 대한 일대일 대응이어야 함
+결과: /tmp/tmp7ibwd0hg/run/summary.md
+실행 완료: 6/6건 기록 / 전 조건 통과: FAIL / 과제 성공: 5/6
+모드 검사: instruct-2507 / non-thinking / think=omitted / context=8192, output=4096
+[1/6] chain_2 / schema_shallow_M0 / seed=1729 -> role_mismatch
+  요청 역할 미준수: {'A': True, 'D': False, 'M': True}
+[2/6] chain_2 / instance_deep_M0 / seed=1729 -> accepted
+[3/6] chain_2 / instance_shallow_M0 / seed=1729 -> role_mismatch
+  요청 역할 미준수: {'A': True, 'D': False, 'M': True}
+[4/6] chain_2 / instance_shallow_M2 / seed=1729 -> role_mismatch
+  요청 역할 미준수: {'A': True, 'D': False, 'M': False}
+[5/6] chain_2 / instance_shallow_M1 / seed=1729 -> role_mismatch
+  요청 역할 미준수: {'A': True, 'D': False, 'M': True}
+[6/6] chain_2 / neutral / seed=1729 -> invalid_trace
+  VIEW: 치환은 사용 원자에 대한 일대일 대응이어야 함
+결과: /tmp/tmp8i69uqo0/run/summary.md
+실행 완료: 6/6건 기록 / 전 조건 통과: FAIL / 과제 성공: 5/6
+
+test_cloud_model_name_is_rejected_before_network (test_local_llm.NetworkBoundaryTests.test_cloud_model_name_is_rejected_before_network) ... ok
+test_external_url_proxy_paths_and_credentials_are_rejected (test_local_llm.NetworkBoundaryTests.test_external_url_proxy_paths_and_credentials_are_rejected) ... ok
+test_localhost_is_normalized_without_dns (test_local_llm.NetworkBoundaryTests.test_localhost_is_normalized_without_dns) ... ok
+test_missing_model_does_not_trigger_download (test_local_llm.NetworkBoundaryTests.test_missing_model_does_not_trigger_download) ... ok
+test_redirect_is_rejected (test_local_llm.NetworkBoundaryTests.test_redirect_is_rejected) ... ok
+test_remote_metadata_is_rejected (test_local_llm.NetworkBoundaryTests.test_remote_metadata_is_rejected) ... ok
+test_all_role_fixtures_are_accepted (test_local_llm.OfflineContractTests.test_all_role_fixtures_are_accepted) ... ok
+test_artifact_change_is_detected (test_local_llm.OfflineContractTests.test_artifact_change_is_detected) ... ok
+test_coordinate_injection_is_rejected (test_local_llm.OfflineContractTests.test_coordinate_injection_is_rejected) ... ok
+test_cycle_unrolling_is_not_a_deep_policy_success (test_local_llm.OfflineContractTests.test_cycle_unrolling_is_not_a_deep_policy_success) ... ok
+test_depth_is_not_number_of_nodes (test_local_llm.OfflineContractTests.test_depth_is_not_number_of_nodes) ... ok
+test_duplicate_json_key_is_rejected (test_local_llm.OfflineContractTests.test_duplicate_json_key_is_rejected) ... ok
+test_duplicate_node_does_not_overwrite_view (test_local_llm.OfflineContractTests.test_duplicate_node_does_not_overwrite_view) ... ok
+test_empty_results_keep_all_assigned_denominators (test_local_llm.OfflineContractTests.test_empty_results_keep_all_assigned_denominators) ... ok
+test_false_meta_finding_preserves_target_level_but_fails (test_local_llm.OfflineContractTests.test_false_meta_finding_preserves_target_level_but_fails) ... ok
+test_findings_require_boolean_not_integer (test_local_llm.OfflineContractTests.test_findings_require_boolean_not_integer) ... ok
+test_fixed_goal_without_support_is_rejected (test_local_llm.OfflineContractTests.test_fixed_goal_without_support_is_rejected) ... ok
+test_markdown_is_not_silently_repaired (test_local_llm.OfflineContractTests.test_markdown_is_not_silently_repaired) ... ok
+test_missing_view_is_not_synthesized (test_local_llm.OfflineContractTests.test_missing_view_is_not_synthesized) ... ok
+test_nonfinite_json_is_rejected (test_local_llm.OfflineContractTests.test_nonfinite_json_is_rejected) ... ok
+test_output_schema_identical_across_roles (test_local_llm.OfflineContractTests.test_output_schema_identical_across_roles) ... ok
+test_profile_call_counts (test_local_llm.OfflineContractTests.test_profile_call_counts) ... ok
+test_reference_extrema_match_baseline (test_local_llm.OfflineContractTests.test_reference_extrema_match_baseline) ... ok
+test_report_files_are_written_without_model (test_local_llm.OfflineContractTests.test_report_files_are_written_without_model) ... ok
+test_response_assessment_accepts_valid_payload (test_local_llm.OfflineContractTests.test_response_assessment_accepts_valid_payload) ... ok
+test_resume_does_not_recall_request_with_missing_response (test_local_llm.OfflineContractTests.test_resume_does_not_recall_request_with_missing_response) ... ok
+test_round_trip_all_roles_preserves_trace (test_local_llm.OfflineContractTests.test_round_trip_all_roles_preserves_trace) ... ok
+test_runtime_never_calls_simulate_or_download_endpoint (test_local_llm.OfflineContractTests.test_runtime_never_calls_simulate_or_download_endpoint) ... ok
+test_seeded_design_is_reproducible (test_local_llm.OfflineContractTests.test_seeded_design_is_reproducible) ... ok
+test_stale_lock_requires_explicit_operator_action (test_local_llm.OfflineContractTests.test_stale_lock_requires_explicit_operator_action) ... ok
+test_synthetic_complete_design_has_sixty_contrasts (test_local_llm.OfflineContractTests.test_synthetic_complete_design_has_sixty_contrasts) ... ok
+test_tool_calls_are_never_executed (test_local_llm.OfflineContractTests.test_tool_calls_are_never_executed) ... ok
+test_transport_failure_with_retained_audit_is_not_success (test_local_llm.OfflineContractTests.test_transport_failure_with_retained_audit_is_not_success) ... ok
+test_truncated_response_is_not_accepted_even_when_json_is_complete (test_local_llm.OfflineContractTests.test_truncated_response_is_not_accepted_even_when_json_is_complete) ... ok
+test_unexpected_thinking_is_rejected (test_local_llm.OfflineContractTests.test_unexpected_thinking_is_rejected) ... ok
+test_unknown_tokens_are_not_recorded_as_known_zero (test_local_llm.OfflineContractTests.test_unknown_tokens_are_not_recorded_as_known_zero) ... ok
+test_unreachable_problem_is_not_excluded (test_local_llm.OfflineContractTests.test_unreachable_problem_is_not_excluded) ... ok
+test_wrong_A_is_role_mismatch_not_a_valid_A_change (test_local_llm.OfflineContractTests.test_wrong_A_is_role_mismatch_not_a_valid_A_change) ... ok
+test_wrong_model_is_rejected (test_local_llm.OfflineContractTests.test_wrong_model_is_rejected) ... ok
+test_all_eight_calibration_positive_fixtures_pass (test_v02.V02Tests.test_all_eight_calibration_positive_fixtures_pass) ... ok
+test_atom_parent_is_not_autocorrected (test_v02.V02Tests.test_atom_parent_is_not_autocorrected) ... ok
+test_calibration_false_findings_rejected (test_v02.V02Tests.test_calibration_false_findings_rejected) ... ok
+test_calibration_prompt_does_not_include_labels_or_expected_verdict (test_v02.V02Tests.test_calibration_prompt_does_not_include_labels_or_expected_verdict) ... ok
+test_calibration_report_not_counted_as_ADM (test_v02.V02Tests.test_calibration_report_not_counted_as_ADM) ... ok
+test_common_schema_does_not_force_role_answer (test_v02.V02Tests.test_common_schema_does_not_force_role_answer) ... ok
+test_duplicate_binding_cannot_silently_overwrite (test_v02.V02Tests.test_duplicate_binding_cannot_silently_overwrite) ... ok
+test_empty_artifact_manifest_cannot_hide_saved_response (test_v02.V02Tests.test_empty_artifact_manifest_cannot_hide_saved_response) ... ok
+test_empty_binding_list_rejected_but_graph_diagnosed (test_v02.V02Tests.test_empty_binding_list_rejected_but_graph_diagnosed) ... ok
+test_examples_and_selfcheck_are_valid (test_v02.V02Tests.test_examples_and_selfcheck_are_valid) ... ok
+test_gate_replays_instead_of_trusting_summary (test_v02.V02Tests.test_gate_replays_instead_of_trusting_summary) ... ok
+test_goal_atom_is_not_autocorrected_to_node_id (test_v02.V02Tests.test_goal_atom_is_not_autocorrected_to_node_id) ... ok
+test_http_bytes_preserve_nested_schema_order (test_v02.V02Tests.test_http_bytes_preserve_nested_schema_order) ... ok
+test_invalid_schema_content_is_not_repaired (test_v02.V02Tests.test_invalid_schema_content_is_not_repaired) ... ok
+test_m2_inverted_criterion_is_rejected (test_v02.V02Tests.test_m2_inverted_criterion_is_rejected) ... ok
+test_mocked_calibration_runner (test_v02.V02Tests.test_mocked_calibration_runner) ... ok
+test_mocked_full_runner_and_offline_reanalysis (test_v02.V02Tests.test_mocked_full_runner_and_offline_reanalysis) ... ok
+test_names_keep_nodes_before_final_even_when_sorted (test_v02.V02Tests.test_names_keep_nodes_before_final_even_when_sorted) ... ok
+test_partial_or_malformed_content_diagnostics_never_repair (test_v02.V02Tests.test_partial_or_malformed_content_diagnostics_never_repair) ... ok
+test_unexpected_m1_under_m0_is_role_failure (test_v02.V02Tests.test_unexpected_m1_under_m0_is_role_failure) ... ok
+test_unused_alternative_is_not_pruned (test_v02.V02Tests.test_unused_alternative_is_not_pruned) ... ok
+test_uploaded_failure_regressions_reproduced (test_v02.V02Tests.test_uploaded_failure_regressions_reproduced) ... ok
+test_v2_request_only_resume_does_not_recall_model (test_v02.V02Tests.test_v2_request_only_resume_does_not_recall_model) ... ok
+test_v2_roundtrip_36_role_fixtures (test_v02.V02Tests.test_v2_roundtrip_36_role_fixtures) ... ok
+test_actual_v02_smoke_ready_despite_five_failures (test_v03.V03Tests.test_actual_v02_smoke_ready_despite_five_failures) ... ok
+test_changed_generation_budget_cannot_reuse_gate (test_v03.V03Tests.test_changed_generation_budget_cannot_reuse_gate) ... ok
+test_changed_response_without_rehash_rejected (test_v03.V03Tests.test_changed_response_without_rehash_rejected) ... ok
+test_changed_seed_rejected (test_v03.V03Tests.test_changed_seed_rejected) ... ok
+test_completed_failed_experiment_has_zero_exit_by_default (test_v03.V03Tests.test_completed_failed_experiment_has_zero_exit_by_default) ... ok
+test_explicit_calibration_never_includes_case_gold_label (test_v03.V03Tests.test_explicit_calibration_never_includes_case_gold_label) ... ok
+test_explicit_ci_failure_exit_remains_available (test_v03.V03Tests.test_explicit_ci_failure_exit_remains_available) ... ok
+test_explicit_profile_keeps_common_schema_for_all_roles (test_v03.V03Tests.test_explicit_profile_keeps_common_schema_for_all_roles) ... ok
+test_false_model_boolean_is_not_failed_check_boolean (test_v03.V03Tests.test_false_model_boolean_is_not_failed_check_boolean) ... ok
+test_fourteen_legacy_request_bytes_identical (test_v03.V03Tests.test_fourteen_legacy_request_bytes_identical) ... ok
+test_fourteen_original_semantic_verdicts_unchanged (test_v03.V03Tests.test_fourteen_original_semantic_verdicts_unchanged) ... ok
+test_gate_does_not_trust_summary_flag (test_v03.V03Tests.test_gate_does_not_trust_summary_flag) ... ok
+test_inputs_unchanged_after_assessment (test_v03.V03Tests.test_inputs_unchanged_after_assessment) ... ok
+test_live_model_mismatch_stops_before_any_chat (test_v03.V03Tests.test_live_model_mismatch_stops_before_any_chat) ... ok
+test_missing_completed_case_rejected (test_v03.V03Tests.test_missing_completed_case_rejected) ... ok
+test_new_prompt_cannot_reuse_legacy_gate (test_v03.V03Tests.test_new_prompt_cannot_reuse_legacy_gate) ... ok
+test_offline_gate_never_calls_generator_or_model (test_v03.V03Tests.test_offline_gate_never_calls_generator_or_model) ... ok
+test_selected_depths_correct_but_whole_proofs_still_fail (test_v03.V03Tests.test_selected_depths_correct_but_whole_proofs_still_fail) ... ok
+test_smoke_partial_axes_do_not_upgrade_strict_contrasts (test_v03.V03Tests.test_smoke_partial_axes_do_not_upgrade_strict_contrasts) ... ok
+test_source_snapshot_change_rejected (test_v03.V03Tests.test_source_snapshot_change_rejected) ... ok
+test_strict_still_rejects_actual_smoke (test_v03.V03Tests.test_strict_still_rejects_actual_smoke) ... ok
+test_thinking_change_cannot_reuse_gate (test_v03.V03Tests.test_thinking_change_cannot_reuse_gate) ... ok
+test_unknown_prompt_profile_rejected (test_v03.V03Tests.test_unknown_prompt_profile_rejected) ... ok
+test_actual_alias_detected_as_thinking_not_by_tag_name (test_v04.V04Tests.test_actual_alias_detected_as_thinking_not_by_tag_name) ... ok
+test_actual_thirtynine_verdicts_preserved_and_nas_separated (test_v04.V04Tests.test_actual_thirtynine_verdicts_preserved_and_nas_separated) ... ok
+test_all_planned_joint_certificates_are_constructible_offline (test_v04.V04Tests.test_all_planned_joint_certificates_are_constructible_offline) ... ok
+test_all_twentyfour_mocked_run_and_report (test_v04.V04Tests.test_all_twentyfour_mocked_run_and_report) ... ok
+test_auto_chooses_modes_and_separate_budgets (test_v04.V04Tests.test_auto_chooses_modes_and_separate_budgets) ... ok
+test_calibration_twentyfour_and_three_truth_patterns (test_v04.V04Tests.test_calibration_twentyfour_and_three_truth_patterns) ... ok
+test_changed_context_cannot_resume_same_result_folder (test_v04.V04Tests.test_changed_context_cannot_resume_same_result_folder) ... ok
+test_changed_live_digest_rejected_before_pilot (test_v04.V04Tests.test_changed_live_digest_rejected_before_pilot) ... ok
+test_claiming_conclusion_as_fact_still_rejected (test_v04.V04Tests.test_claiming_conclusion_as_fact_still_rejected) ... ok
+test_cli_doctor_only_reads_metadata (test_v04.V04Tests.test_cli_doctor_only_reads_metadata) ... ok
+test_cli_plan_and_selfcheck_have_no_network (test_v04.V04Tests.test_cli_plan_and_selfcheck_have_no_network) ... ok
+test_cli_run_defaults_reach_checked_v4_path (test_v04.V04Tests.test_cli_run_defaults_reach_checked_v4_path) ... ok
+test_dataset_seed_is_deterministic_and_not_rechosen_per_role (test_v04.V04Tests.test_dataset_seed_is_deterministic_and_not_rechosen_per_role) ... ok
+test_examples_ablation_changes_only_common_examples (test_v04.V04Tests.test_examples_ablation_changes_only_common_examples) ... ok
+test_extra_views_are_not_silently_removed_in_final_only_scope (test_v04.V04Tests.test_extra_views_are_not_silently_removed_in_final_only_scope) ... ok
+test_final_only_scope_has_no_conflicting_all_nodes_instruction (test_v04.V04Tests.test_final_only_scope_has_no_conflicting_all_nodes_instruction) ... ok
+test_identity_conflict_unknown_and_missing_capability_rejected (test_v04.V04Tests.test_identity_conflict_unknown_and_missing_capability_rejected) ... ok
+test_instruct_omits_think_and_thinking_sends_true (test_v04.V04Tests.test_instruct_omits_think_and_thinking_sends_true) ... ok
+test_instruct_thinking_configuration_rejected (test_v04.V04Tests.test_instruct_thinking_configuration_rejected) ... ok
+test_legacy_programmatic_config_cannot_bypass_mode_check (test_v04.V04Tests.test_legacy_programmatic_config_cannot_bypass_mode_check) ... ok
+test_length_budget_is_not_a_semantic_failure (test_v04.V04Tests.test_length_budget_is_not_a_semantic_failure) ... ok
+test_license_body_words_do_not_determine_identity (test_v04.V04Tests.test_license_body_words_do_not_determine_identity) ... ok
+test_missing_thinking_or_empty_final_is_mode_error (test_v04.V04Tests.test_missing_thinking_or_empty_final_is_mode_error) ... ok
+test_mode_failure_stops_after_first_call_but_records_remaining (test_v04.V04Tests.test_mode_failure_stops_after_first_call_but_records_remaining) ... ok
+test_model_failures_do_not_prevent_next_case_or_readiness (test_v04.V04Tests.test_model_failures_do_not_prevent_next_case_or_readiness) ... ok
+test_modes_checked_before_any_model_call (test_v04.V04Tests.test_modes_checked_before_any_model_call) ... ok
+test_new_smoke_gate_replays_same_configuration (test_v04.V04Tests.test_new_smoke_gate_replays_same_configuration) ... ok
+test_overlarge_context_and_zero_thinking_temperature_rejected (test_v04.V04Tests.test_overlarge_context_and_zero_thinking_temperature_rejected) ... ok
+test_partial_graph_correctness_does_not_upgrade_failure (test_v04.V04Tests.test_partial_graph_correctness_does_not_upgrade_failure) ... ok
+test_reference_generator_never_used_in_new_prompt_assembly (test_v04.V04Tests.test_reference_generator_never_used_in_new_prompt_assembly) ... ok
+test_resume_does_not_recall_completed_cases (test_v04.V04Tests.test_resume_does_not_recall_completed_cases) ... ok
+test_schema_and_budget_same_for_all_joint_roles (test_v04.V04Tests.test_schema_and_budget_same_for_all_joint_roles) ... ok
+test_thinking_false_configuration_rejected (test_v04.V04Tests.test_thinking_false_configuration_rejected) ... ok
+test_thinking_final_channel_only_is_parsed (test_v04.V04Tests.test_thinking_final_channel_only_is_parsed) ... ok
+test_transfer_suite_has_distinct_depths_and_full_factorial (test_v04.V04Tests.test_transfer_suite_has_distinct_depths_and_full_factorial) ... ok
+test_actual_final_A_and_all_node_kinds_not_conflated (test_v041.V041Tests.test_actual_final_A_and_all_node_kinds_not_conflated) ... ok
+test_all_schema_valid_positive (test_v041.V041Tests.test_all_schema_valid_positive) ... ok
+test_criterion_has_three_distinct_ground_truth_patterns (test_v041.V041Tests.test_criterion_has_three_distinct_ground_truth_patterns) ... ok
+test_duplicate_ids_do_not_receive_selected_support_credit (test_v041.V041Tests.test_duplicate_ids_do_not_receive_selected_support_credit) ... ok
+test_exactly_twelve_probes (test_v041.V041Tests.test_exactly_twelve_probes) ... ok
+test_final_only_schema_still_positive (test_v041.V041Tests.test_final_only_schema_still_positive) ... ok
+test_independent_depth_reference_fixtures (test_v041.V041Tests.test_independent_depth_reference_fixtures) ... ok
+test_invalid_unrelated_nodes_do_not_hide_valid_selected_support (test_v041.V041Tests.test_invalid_unrelated_nodes_do_not_hide_valid_selected_support) ... ok
+test_json_format_response_is_validated_semantically (test_v041.V041Tests.test_json_format_response_is_validated_semantically) ... ok
+test_mixed_schema_false_positive_now_rejected (test_v041.V041Tests.test_mixed_schema_false_positive_now_rejected) ... ok
+test_mock_complete_probe_and_report (test_v041.V041Tests.test_mock_complete_probe_and_report) ... ok
+test_no_simulator_used_to_build_prompts (test_v041.V041Tests.test_no_simulator_used_to_build_prompts) ... ok
+test_old_baseline_request_unchanged (test_v041.V041Tests.test_old_baseline_request_unchanged) ... ok
+test_plan_only_never_constructs_client (test_v041.V041Tests.test_plan_only_never_constructs_client) ... ok
+test_prompt_pairs_change_only_messages (test_v041.V041Tests.test_prompt_pairs_change_only_messages) ... ok
+test_schema_only_is_not_ordinary_A_trial (test_v041.V041Tests.test_schema_only_is_not_ordinary_A_trial) ... ok
+test_schema_variants_change_only_format (test_v041.V041Tests.test_schema_variants_change_only_format) ... ok
+test_wrong_parent_atoms_reported_not_repaired (test_v041.V041Tests.test_wrong_parent_atoms_reported_not_repaired) ... ok
+
+----------------------------------------------------------------------
+Ran 139 tests in 4.129s
+
+OK

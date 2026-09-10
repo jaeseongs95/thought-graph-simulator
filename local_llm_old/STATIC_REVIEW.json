@@ -1,0 +1,80 @@
+{
+  "method": "ast.parse(source_text, feature_version=(3,10)); no project import or execution",
+  "parser_python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "relative_import_target_files_exist": true,
+  "files": [
+    {
+      "file": "__init__.py",
+      "sha256": "761f7434126c841b845250c05f2c29dcbf516b0f93bbf10b1482967364460760",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "__main__.py",
+      "sha256": "195b711cc0fc8cc3e6faa936e852d9d7c65de63e91e4b9f7a0556c4bb61c3798",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "audit.py",
+      "sha256": "bc672bbcd2038274d4ddc7c29ad161babda411eb9a69466e2164264b0f6a35f1",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "client.py",
+      "sha256": "024660dfa7df9ac623666de19081266f0542ea2704f3b82fc204c249e2048766",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "common.py",
+      "sha256": "cd538b69ab764497f1d70a7e83dc0b14f0d22b82c9973bdb9361bab70121f0ae",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "design.py",
+      "sha256": "09806b9c7bbd9c86ac1766ea009a5614644d655edd515d117e089632f83d8f77",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "prompts.py",
+      "sha256": "1a2f1e3a21c7abfbf329f49cb8c8b846d3acafe09ea4a58e2289bdb2b109881c",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "protocol.py",
+      "sha256": "c9d5a0c43fbcc8093433c52759ad9fc311c256b182680c0a003c23580d2a2f35",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "report.py",
+      "sha256": "b0c1ea33d3740ffacfef48a748cd30e20c5faf457a8b676e3e5bab1b983de40b",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "runner.py",
+      "sha256": "f784869d4160ccf509d34470ed4665737d174e80bb27ba4b8c9c895db8b56d2c",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "tests/__init__.py",
+      "sha256": "dc9b3bf1abec69365ebd443fcbcecb7258086604be59c21c14a856754d627666",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "tests/test_local_llm.py",
+      "sha256": "63dcc7da00af1d89a1b275842eebaeb715cb51d035177f13a2865e3c56683fab",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 39
+    }
+  ],
+  "scope_ko": "Python 구문과 상대 import 대상 파일 존재만 정적으로 확인했다. 런타임 동작·모델 호환성·Windows PowerShell 실행·테스트 성공을 확인한 결과가 아니다."
+}

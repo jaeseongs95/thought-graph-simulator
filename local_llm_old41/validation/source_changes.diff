@@ -1,0 +1,647 @@
+--- v0.4/local_llm/__init__.py
++++ v0.4.1/local_llm/__init__.py
+@@ -1,2 +1,2 @@
+ """로컬 LLM 고정 목표 A/D/M 검증 확장."""
+-__version__ = "0.4.0"
++__version__ = "0.4.1"
+--- v0.4/local_llm/calibration.py
++++ v0.4.1/local_llm/calibration.py
+@@ -146,7 +146,8 @@
+         # bare proof에는 view가 없으므로 통합 스키마 검사 결과는 진단에서 제외한다.
+         selection = {key: diagnostic.get(key) for key in
+                      ("all_local_steps_valid", "selected_component_depth", "all_nodes_in_selected_component",
+-                      "unrelated_node_ids", "final_reference_exists")}
++                      "unrelated_node_ids", "final_reference_exists", "selected_component_support_valid",
++                      "selected_component_depth_if_grounded", "first_invalid_step", "unrelated_node_ids_independent")}
+         selection["selected_component_depth_matches_target"] = diagnostic.get("selected_component_depth") == target
+         selection["note"] = "선택 연결부의 깊이만 관측. 무관한 노드를 제거하거나 전체 증명을 성공으로 바꾸지 않음"
+         comparisons = [{"field": "valid_proof", "actual": verified["valid"], "expected": True,
+@@ -165,11 +166,15 @@
+         trace["views"] = {item["node_id"]: view_to_core(item["view"]) for item in items}
+         verified = core.verify(problem, trace)
+         checks = {"valid_schema_views": verified["valid"],
+-                  "all_schema": verified["valid"] and verified["metrics"]["A"] == "schema"}
++                  "all_schema": verified["valid"] and bool(items) and
++                                all(item["view"]["kind"] == "universal_schema" for item in items)}
+         comparisons = [{"field": "valid_schema_views", "actual": verified["valid"], "expected": True,
+                         "matches": checks["valid_schema_views"]},
+                        {"field": "A_on_valid_representation", "actual": verified["metrics"].get("A") if verified["valid"] else None,
+-                        "expected": "schema", "matches": checks["all_schema"]}]
++                        "expected": "schema", "matches": bool(verified["valid"] and verified["metrics"].get("A") == "schema")}]
++        comparisons.append({"field": "all_node_view_kinds", "actual": [item["view"]["kind"] for item in items],
++                            "expected": ["universal_schema"] * len(trace["nodes"]),
++                            "matches": [item["view"]["kind"] for item in items] == ["universal_schema"] * len(trace["nodes"])})
+         details = {"core_audit": verified, "view_kinds_returned": [item["view"]["kind"] for item in items],
+                    "host_supplied": "문제와 전체 증명을 고정 입력으로 제공"}
+     elif task == "review":
+--- v0.4/local_llm/calibration_v4.py
++++ v0.4.1/local_llm/calibration_v4.py
+@@ -131,6 +131,9 @@
+             "task_comparisons": [{"field": k, "actual": v, "expected": True, "matches": v}
+                                  for k, v in checks.items()],
+             "details": {"core_audit": verified, "view_scope": "final_node_only",
++                        "returned_node_ids": [item["node_id"] for item in items],
++                        "expected_node_ids": [trace["final"]],
++                        "returned_view_kinds": [item["view"]["kind"] for item in items],
+                         "host_supplied": "증명 전체와 중간 노드 instance view는 고정 입력/진단용. 최종 도식만 모델 산출물.",
+                         "scope_note": "A 전체 성공이 아니다. 같은 고정 증명의 all_nodes 과제와 작성 부담을 비교한다."},
+             "negative_controls": [], "negative_controls_ok": None,
+--- v0.4/local_llm/causal_probe.py
++++ v0.4.1/local_llm/causal_probe.py
+@@ -0,0 +1,202 @@
++"""12회 원인 분리 진단. 기본 실험을 바꾸거나 과거 응답을 교정하지 않는다.
++
++증명: 동일 3문제에서 기존/간결 프롬프트 대응 6회.
++도식: 동일 지시에서 format만 union/schema_only/json으로 변경 3회.
++기준: 서로 다른 정답 패턴 3회. 모델 판단의 정답은 요청에 넣지 않는다.
++"""
++from __future__ import annotations
++
++import argparse
++import copy
++import json
++import random
++import sys
++from datetime import datetime
++from pathlib import Path
++from typing import Any
++
++from .calibration import output_schema
++from .calibration_v4 import fixtures
++from .common import ContractError, REPO, digest, load_core, require, wire_json, write_json
++from .design import reference_depths
++from .protocol_v2 import SCHEMA_VIEW
++
++CONTRACT = "causal-v041"
++
++
++def build_probe_plan(core: Any, seed: int = 1729) -> dict:
++    require(type(seed) is int and 0 <= seed < 2**31 - 1000, "시드 범위 오류")
++    fixed = fixtures()
++    problems = {p["id"]: copy.deepcopy(p) for p, _ in fixed}
++    cases = []
++
++    def add(name: str, task: str, problem: dict, variant: str, **kwargs: Any) -> None:
++        case = {"problem_id": problem["id"], "problem_sha256": core.digest(problem),
++                "role": {"kind": "neutral", "A": None, "D_policy": None, "M": None},
++                "role_id": name, "task": task, "repeat": 0, "seed": seed,
++                "calibration_version": 4, "probe_contract": CONTRACT,
++                "probe_variant": variant, **kwargs}
++        case["case_id"] = digest(case)[:24]
++        cases.append(case)
++
++    for p, _ in fixed:
++        for variant in ("baseline", "compact"):
++            add(f"proof_{p['id']}_{variant}", "proof", p, variant, depth_policy="deep")
++    p, proof = fixed[2]
++    for variant in ("union", "schema_only", "json"):
++        add(f"schema_{p['id']}_{variant}", "schema", p, variant,
++            view_scope="final_node_only", provided_proof=copy.deepcopy(proof))
++    p = fixed[0][0]
++    given = copy.deepcopy(p)
++    given["id"] = "K11"
++    given["facts"].append(given["goal"])
++    problems[given["id"]] = given
++    for index, problem, atom in ((1, p, p["goal"]), (2, p, p["facts"][0]),
++                                  (3, given, given["goal"])):
++        add(f"criterion_{index:02d}_compact", "criterion", problem, "compact", probe_atom=atom)
++    random.Random(seed + 701117).shuffle(cases)
++    for p in problems.values():
++        core.check_problem(p)
++    return {"profile": "causal-probe", "experiment_kind": "calibration", "probe_contract": CONTRACT,
++            "repeats": 1, "seed": seed, "problems": list(problems.values()), "roles": [],
++            "cases": cases, "assigned_calls": len(cases),
++            "reference_depths": {p["id"]: reference_depths(p) for p in problems.values()},
++            "warnings": [], "scope": "paired_component_diagnostic_not_ADM_validation",
++            "design_note": "증명 대응은 프롬프트 묶음의 효과다. 예시/길이 각각의 효과를 분리했다고 하지 않는다. "
++                           "도식 3조건은 messages가 같고 format만 다르다. schema_only는 호스트 강제다."}
++
++
++def compact_messages(problem: dict, case: dict) -> list[dict]:
++    task = case["task"]
++    content = "문제: " + wire_json(problem)
++    if task == "proof":
++        system = (
++            "주어진 facts와 rules만 사용해 goal의 유효한 증명 하나를 JSON으로 제출한다.\n"
++            "규칙의 premises는 동시에 모두 필요한 명제들이다. 노드를 바로 앞 노드에 자동 연결하지 않는다.\n"
++            "사실 노드는 rule_id=null, parent_node_ids=[]이고 atom은 facts 원소다.\n"
++            "규칙 노드의 atom은 그 규칙 conclusion이다. parent_node_ids는 해당 premises의 원자를 가진 "
++            "이미 제출한 노드 ID를 정확히 가리켜야 한다. 같은 지지 노드를 여러 갈래에서 재사용할 수 있다.\n"
++            "한 분기에서 같은 원자를 다시 도출하거나 facts를 규칙으로 다시 도출하지 않는다.\n"
++            "사실 깊이=0, 규칙 깊이=1+max(부모 깊이). 가능한 증명 중 최종 깊이가 가장 큰 것을 선택한다.\n"
++            "선택한 최종 노드와 그 조상만 부모부터 제출한다. 대안 경로는 넣지 않는다.\n"
++            "출력은 nodes와 selected_final_node_id 두 필드다. 각 노드는 "
++            "node_id, atom, rule_id, parent_node_ids만 가진다. view/review는 쓰지 않는다. "
++            "node_id와 명제 atom/규칙 id를 구분한다. JSON 외 문장은 쓰지 않는다."
++        )
++    elif task == "schema":
++        system = (
++            "고정 증명은 수정하지 않는다. 최종 노드에 대한 universal_schema view 딱 하나만 JSON으로 작성한다.\n"
++            "출력은 {node_views:[{node_id,view}]} 형태다. node_id는 제공한 selected_final_node_id다.\n"
++            "view의 필드는 kind,quantifier,bindings,clauses,conclusion_var다. kind=universal_schema, "
++            "quantifier=forall_boolean_valuations다.\n"
++            "최종 노드와 지지 조상 전체의 서로 다른 원자를 bindings의 {variable,atom} 항목으로 일대일 대응한다.\n"
++            "clauses의 각 항목은 {if:[변수들],then:변수}다. 실제 사실은 if=[], 실제 사용 규칙은 "
++            "모든 전제 변수를 if에 넣는다. 부분 증명에 있는 사실과 사용 규칙을 각각 한 번씩 모두 포함한다.\n"
++            "결론을 새 사실로 추가하지 않는다. conclusion_var는 최종 원자에 대응하는 변수다.\n"
++            "중간 노드 view나 instance view를 반환하지 않는다. JSON 외 문장은 쓰지 않는다."
++        )
++        content += "\n고정 증명: " + wire_json(case["provided_proof"])
++    else:
++        system = (
++            "주어진 problem과 독립된 단독 probe에 대해 아래 정의를 그대로 계산한다.\n"
++            "answer_only_accepts := (probe.atom == problem.goal)\n"
++            "proof_and_goal_accepts := answer_only_accepts AND (probe.atom IN problem.facts)\n"
++            "gap_detected := (answer_only_accepts != proof_and_goal_accepts)\n"
++            "probe는 rule=null, parents=[]다. rules를 통한 도출 가능성은 이 단독 사실 주장의 근거가 아니다.\n"
++            "위 세 필드의 boolean 값을 가진 JSON 객체 하나만 반환한다."
++        )
++        content += "\nprobe: " + wire_json({"atom": case["probe_atom"], "rule": None, "parents": []})
++    return [{"role": "system", "content": system}, {"role": "user", "content": content}]
++
++
++def make_request(config: dict, case: dict, problem: dict) -> dict:
++    require(case.get("probe_contract") == CONTRACT, "원인 분리 계약 불일치")
++    variant = case["probe_variant"]
++    if variant == "baseline":
++        # 기존 요청 팩토리를 그대로 사용한다. 새 case 표지는 프롬프트에 보내지 않는다.
++        from .runner import request_body
++        old_case = copy.deepcopy(case)
++        old_case.pop("probe_contract")
++        old_config = copy.deepcopy(config)
++        old_config["prompt_profile"] = "factorized-v4"
++        return request_body(old_config, old_case, problem)
++    schema: dict | str = output_schema(case)
++    if case["task"] == "schema":
++        require(variant in {"union", "schema_only", "json"}, "도식 진단 변형 오류")
++        if variant == "schema_only":
++            # A를 모델이 선택한 성과로 세지 않는 문법 가용성 진단이다.
++            schema["properties"]["node_views"]["items"]["properties"]["view"] = copy.deepcopy(SCHEMA_VIEW)
++        elif variant == "json":
++            schema = "json"
++    else:
++        require(variant == "compact", "프롬프트 진단 변형 오류")
++    prompt = compact_messages(problem, case)
++    body = {"model": config["model"], "messages": prompt, "stream": False,
++            "keep_alive": "10m", "format": schema,
++            "options": dict(config["options"], seed=case["seed"])}
++    if config.get("think") is not None:
++        body = {"model": config["model"], "messages": prompt, "stream": False,
++                "think": config["think"], "keep_alive": "10m", "format": schema,
++                "options": dict(config["options"], seed=case["seed"])}
++    return body
++
++
++def summarize_probe(plan: dict, records: list[dict]) -> dict:
++    lookup = {r["case"]["case_id"]: r for r in records}
++    pairs: dict[str, dict] = {}
++    cases = []
++    for c in plan["cases"]:
++        r = lookup.get(c["case_id"])
++        item = {"case_id": c["case_id"], "task": c["task"], "problem_id": c["problem_id"],
++                "variant": c["probe_variant"], "status": r["status"] if r else "not_started",
++                "accepted": bool(r and r["status"] == "accepted"),
++                "audit": (r or {}).get("audit"), "usage": (r or {}).get("usage"),
++                "host_forced_schema_kind": c["probe_variant"] == "schema_only"}
++        cases.append(item)
++        if c["task"] == "proof":
++            pairs.setdefault(c["problem_id"], {})[c["probe_variant"]] = {
++                k: item[k] for k in ("case_id", "status", "accepted")}
++    return {"contract": CONTRACT, "cases": cases,
++            "proof_pairs": [{"problem_id": pid, **entry} for pid, entry in pairs.items()],
++            "not_an_ADM_success_rate": True,
++            "interpretation": "대응 결과는 진단 단서다. 단일 시드 결과로 원인의 확률·모델 전체 능력을 확정하지 않는다. "
++                              "baseline/compact는 프롬프트 묶음 비교, 도식 3조건은 format만 바꾼 비교다."}
++
++
++def main(argv: list[str] | None = None) -> int:
++    from .__main__ import generation_arguments, generation_config
++    from .client import APIError
++    from .runner import run
++    parser = argparse.ArgumentParser(description="원인 분리 진단 12회. --plan-only는 네트워크/추론 없음")
++    generation_arguments(parser)
++    parser.add_argument("--seed", type=int, default=1729)
++    parser.add_argument("--allow-core-change", action="store_true")
++    parser.add_argument("--plan-only", action="store_true")
++    parser.add_argument("--save-plan", type=Path)
++    args = parser.parse_args(argv)
++    try:
++        require(args.prompt_profile == "factorized-v4", "이 진단은 고정된 baseline/compact 대응을 사용합니다.")
++        core, info = load_core(args.allow_core_change)
++        plan = build_probe_plan(core, args.seed)
++        if args.save_plan:
++            require(not args.save_plan.exists(), "조건표 파일이 이미 존재합니다.")
++            write_json(args.save_plan, plan)
++        if args.plan_only:
++            print(json.dumps({"assigned_calls": plan["assigned_calls"], "model_called": False,
++                              "cases": [{"id": c["role_id"], "variant": c["probe_variant"]} for c in plan["cases"]],
++                              "note": plan["design_note"]}, ensure_ascii=False, indent=2))
++            return 0
++        config = generation_config(args)
++        out = args.out or REPO / "results_llm" / f"v041_probe_{datetime.now():%Y%m%d_%H%M%S}"
++        print(f"원인 분리 진단: 12회 / 모델: {args.model} / 결과: {out}", flush=True)
++        return run(core, info, plan, config, out, args.resume,
++                   fail_on_model_failure=args.fail_on_model_failure)
++    except (ContractError, APIError, OSError, ValueError) as exc:
++        print(f"오류: {exc}", file=sys.stderr)
++        return 2
++    except KeyboardInterrupt:
++        return 130
++
++
++if __name__ == "__main__":
++    raise SystemExit(main())
+--- v0.4/local_llm/diagnostics.py
++++ v0.4.1/local_llm/diagnostics.py
+@@ -32,6 +32,13 @@
+             output["schema_error"] = str(exc)
+         if not isinstance(value, dict) or not isinstance(value.get("nodes"), list):
+             return output
++        from .evidence import support
++        evidence = support(problem, value, core_format=not v2)
++        output["support_evidence"] = evidence
++        output["selected_component_support_valid"] = evidence.get("selected_support_valid")
++        output["selected_component_depth_if_grounded"] = evidence.get("selected_depth_when_valid")
++        output["first_invalid_step"] = evidence.get("first_failure")
++        output["unrelated_node_ids_independent"] = evidence.get("unrelated_node_ids")
+         nodes = value["nodes"]
+         id_key, parent_key, rule_key, final_key = (
+             ("node_id", "parent_node_ids", "rule_id", "selected_final_node_id") if v2
+@@ -145,7 +152,8 @@
+             frozen["plan"]["reference_depths"][problem["id"]], request["body"], response, frozen["config"].get("mode_policy"))
+         diagnostic = outcome.get("raw_diagnostics") or raw_diagnostics(problem,
+             response.get("message", {}).get("content"),
+-            v2="selected_final_node_id" in request["body"]["format"].get("properties", {}))
++            v2=isinstance(request["body"].get("format"), dict)
++               and "selected_final_node_id" in request["body"]["format"].get("properties", {}))
+         if case.get("task"):
+             from .calibration import output_schema
+             diagnostic["schema_scope"] = "task_specific_calibration_schema"
+@@ -179,7 +187,7 @@
+         counts["empty_binding"] += int(bool(diagnostic.get("empty_binding_node_ids")))
+         counts["final_is_goal_atom"] += int(diagnostic.get("selected_final_reference") == problem["goal"])
+         counts["valid_completion"] += int(bool((outcome.get("audit") or {}).get("valid_completion")))
+-    result = {"analysis_version": "0.4.0", "source_run_sha256": manifest["run_sha256"],
++    result = {"analysis_version": "0.4.1", "source_run_sha256": manifest["run_sha256"],
+               "source_manifest_sha256": bytes_hash((source / "manifest.json").read_bytes()),
+               "source_snapshot_hash_checks": source_checks,
+               "source_modified": False, "model_called": False,
+--- v0.4/local_llm/evidence.py
++++ v0.4.1/local_llm/evidence.py
+@@ -0,0 +1,103 @@
++"""오프라인 교차검사용 별도 구현. adm_minimal/local_llm을 import하지 않는다.
++원문 노드/부모/규칙을 수정하지 않는다. 정답 생성 코드가 아닌 증거 추출기다.
++"""
++from __future__ import annotations
++from collections import Counter
++from itertools import product
++
++
++def support(problem: dict, payload: dict, *, core_format: bool = False) -> dict:
++    ik, rk, pk, fk = ('id','rule','parents','final') if core_format else ('node_id','rule_id','parent_node_ids','selected_final_node_id')
++    rules = {r['id']:r for r in problem['rules']}
++    nodes = payload.get('nodes')
++    if not isinstance(nodes,list) or not nodes:
++        return {'shape_valid':False,'full_support_valid':False,'selected_support_valid':False,'reason':'nodes'}
++    index, closure, depth, grounded, details = {}, {}, {}, {}, []
++    for position,node in enumerate(nodes):
++        faults=[]
++        if not isinstance(node,dict):
++            details.append({'position':position,'faults':['node_not_object']});continue
++        key,atom,rule,parents = node.get(ik),node.get('atom'),node.get(rk),node.get(pk)
++        if not ({ik, 'atom', rk, pk} <= set(node) and isinstance(key,str) and key and isinstance(atom,str) and isinstance(parents,list)
++                and all(isinstance(v,str) for v in parents) and (rule is None or isinstance(rule,str))):
++            details.append({'position':position,'faults':['node_shape']});continue
++        if key in index: faults.append('duplicate_id')
++        if len(parents)!=len(set(parents)): faults.append('duplicate_parent_id')
++        missing_refs=[v for v in parents if v not in index]
++        if missing_refs: faults.append('missing_or_forward_parent')
++        actual=[index[v]['atom'] for v in parents if v in index]
++        expected=None; expected_conclusion=None
++        if rule is None:
++            expected=[]
++            if atom not in problem['facts']: faults.append('ungrounded_fact')
++            if parents: faults.append('fact_with_parents')
++        elif rule not in rules:
++            faults.append('unknown_rule')
++        else:
++            expected=rules[rule]['premises'];expected_conclusion=rules[rule]['conclusion']
++            if atom!=expected_conclusion: faults.append('wrong_conclusion')
++            if Counter(actual)!=Counter(expected): faults.append('wrong_premises')
++        if key not in index:
++            index[key]={'atom':atom,'parents':parents,'rule':rule}
++            structural_ok=not missing_refs and all(v in depth for v in parents)
++            closure[key]={key}.union(*(closure.get(v,set()) for v in parents))
++            if structural_ok:
++                depth[key]=0 if rule is None else 1+max([depth[v] for v in parents],default=0)
++            grounded[key]=not faults and all(grounded.get(v,False) for v in parents)
++        detail={'position':position,'node_id':key,'atom':atom,'rule_id':rule,'parent_node_ids':parents,
++                'actual_parent_atoms':actual,'expected_parent_atoms':expected,'expected_conclusion':expected_conclusion,
++                'missing_premises':list((Counter(expected or [])-Counter(actual)).elements()),
++                'extra_premises':list((Counter(actual)-Counter(expected or [])).elements()),
++                'faults':faults,'locally_valid':not faults,'grounded':grounded.get(key,False)}
++        details.append(detail)
++    final=payload.get(fk);exists=isinstance(final,str) and final in index
++    selected=closure.get(final,set()) if exists else set()
++    unrelated=[k for k in index if k not in selected] if exists else None
++    all_local=len(details)==len(nodes) and all(d.get('locally_valid',False) for d in details)
++    goal_match=exists and index[final]['atom']==problem['goal']
++    selected_valid=bool(len(index)==len(nodes) and exists and grounded.get(final,False) and goal_match)
++    return {'shape_valid':len(index)==len(nodes),'node_count':len(nodes),
++            'locally_valid_nodes':sum(d.get('locally_valid',False) for d in details),
++            'all_local_steps_valid':all_local,'final_reference_exists':exists,'goal_match':bool(goal_match),
++            'selected_support_valid':selected_valid,
++            'full_support_valid':bool(all_local and selected_valid and not unrelated),
++            'selected_depth_when_valid':depth.get(final) if selected_valid else None,
++            'structural_depth_not_semantic_D':depth.get(final) if exists else None,
++            'unrelated_node_ids':unrelated,
++            'first_failure':next((d for d in details if not d.get('locally_valid',False)),None),
++            'nodes':details}
++
++
++def depth_set_forward(problem: dict) -> list[int]:
++    """증명별 원자 집합·깊이의 전방 고정점. 기존 후방 탐색 함수를 부르지 않는다."""
++    facts=set(problem['facts'])
++    states={a:{(frozenset([a]),0)} for a in facts}
++    changed=True
++    while changed:
++        changed=False
++        for rule in problem['rules']:
++            out=rule['conclusion']
++            if out in facts: continue
++            choices=[list(states.get(a,())) for a in rule['premises']]
++            for items in product(*choices):
++                used=frozenset().union(*(x[0] for x in items))
++                if out in used: continue
++                candidate=(used|{out},1+max(x[1] for x in items))
++                target=states.setdefault(out,set())
++                if candidate not in target:
++                    target.add(candidate);changed=True
++    return sorted({d for _,d in states.get(problem['goal'],())})
++
++
++def reachable_forward(problem: dict) -> bool:
++    known=set(problem['facts'])
++    while True:
++        added={r['conclusion'] for r in problem['rules'] if set(r['premises'])<=known}-known
++        if not added: break
++        known|=added
++    return problem['goal'] in known
++
++
++def criterion(problem: dict, atom: str) -> dict:
++    answer=atom==problem['goal'];strict=answer and atom in problem['facts']
++    return {'answer_only_accepts':answer,'proof_and_goal_accepts':strict,'gap_detected':answer!=strict}
+--- v0.4/local_llm/report.py
++++ v0.4.1/local_llm/report.py
+@@ -160,6 +160,9 @@
+                "wire_schema_valid": raw.get("schema_valid"),
+                "final_reference_exists": raw.get("final_reference_exists"),
+                "all_local_steps_valid": raw.get("all_local_steps_valid"),
++               "selected_component_support_valid": raw.get("selected_component_support_valid"),
++               "selected_component_depth_if_grounded": raw.get("selected_component_depth_if_grounded"),
++               "first_invalid_step_json": json.dumps(raw.get("first_invalid_step"), ensure_ascii=False),
+                "missing_parent_reference": bool(raw.get("missing_parent_node_ids")) if raw else None,
+                "empty_binding": bool(raw.get("empty_binding_node_ids")) if raw else None,
+                "wall_seconds": record.get("wall_seconds") if record else None,
+@@ -267,6 +270,9 @@
+         summary["interpretation"] = f"분리 진단 {assigned}회 수행 여부. 고정 입력에 대한 구성요소 작업이며 통합 A/D/M 결과에 합산하지 않음."
+     if is_calibration:
+         summary["component_diagnostics"] = component_summary(plan, records)
++        if plan.get("probe_contract"):
++            from .causal_probe import summarize_probe
++            summary["causal_probe"] = summarize_probe(plan, records)
+     return summary, rows, contrasts
+ 
+ 
+@@ -280,6 +286,8 @@
+     write_json(out / "summary.json", summary)
+     write_json(out / "contrasts.json", contrasts)
+     write_json(out / "descriptive_contrasts.json", summary["descriptive_contrasts"])
++    if summary.get("causal_probe"):
++        write_json(out / "causal_probe.json", summary["causal_probe"])
+     if summary["experiment_kind"] == "calibration":
+         write_json(out / "component_diagnostics.json", summary["component_diagnostics"])
+         write_json(out / "task_comparisons.json", [{"case_id": record["case"]["case_id"],
+@@ -315,7 +323,8 @@
+                  "| 교정 과제 | 상태 |", "| --- | --- |"]
+         lines += [f"| {row['role']} | {row['status']} |" for row in rows]
+     lines += ["", "## 실행 완료와 성능 판정", "",
+-              f"실행 완료: {summary['execution_completed']} / 전체 성능 PASS: {summary['performance_passed']}",
++              f"실행 완료: {summary['execution_completed']} / 전 조건 통과 여부: {summary['performance_passed']}",
++              "전 조건 통과 여부가 False여도 일부 과제는 성공할 수 있다. 위 성공 건수와 구성요소별 결과를 함께 본다.",
+               "완료됐다는 이유로 모델의 실패를 성공으로 바꾸지 않는다.",
+               "프롬프트 프로필: `" + manifest["frozen"].get("config", {}).get("prompt_profile", "legacy-v2") + "`"]
+     if is_calibration:
+@@ -376,6 +385,11 @@
+               "```", "", "## 해석 범위", "", summary["interpretation"], "",
+               "반복 시드는 같은 문제의 반복 측정이다. 독립된 문제 수나 새 표본으로 부풀리지 않는다. "
+               "토큰 수·시간은 서로 다른 출력 작업량과 캐시·최초 로딩을 포함하므로 곧바로 효율 향상으로 읽지 않는다."]
++    if summary.get("causal_probe"):
++        lines += ["", "## 원인 분리 진단 — 성능 개선 주장과 별도", "",
++                  "대응 조건의 원문 요청, 응답과 결과를 causal_probe.json에 보존한다.",
++                  "schema_only는 호스트가 표현 종류를 강제한 문법 점검이다. A 조절 성공으로 세지 않는다.",
++                  "서로 다른 체크포인트·서버 비교는 같은 입력 묶음의 별도 실행으로 수행하며 단일 원인으로 과장하지 않는다."]
+     if summary["plan_warnings"]:
+         lines += ["", "## 문제 구성 경고", ""] + summary["plan_warnings"]
+     (out / "summary.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+--- v0.4/local_llm/runner.py
++++ v0.4.1/local_llm/runner.py
+@@ -44,6 +44,9 @@
+ 
+ 
+ def request_body(config: dict, case: dict, problem: dict) -> dict:
++    if case.get("probe_contract") == "causal-v041":
++        from .causal_probe import make_request
++        return make_request(config, case, problem)
+     options = dict(config["options"], seed=case["seed"])
+     profile = config.get("prompt_profile", "legacy-v2")
+     require(profile in {"legacy-v2", "explicit-v3", "factorized-v4", "definitions-v4"}, "알 수 없는 프롬프트 프로필")
+@@ -82,7 +85,8 @@
+     outcome: dict = {"status": "protocol_error", "audit": None, "error": None,
+                      "usage": usage(response), "done_reason": response.get("done_reason")}
+     trace = None
+-    is_v2 = "selected_final_node_id" in body.get("format", {}).get("properties", {})
++    response_format = body.get("format")
++    is_v2 = isinstance(response_format, dict) and "selected_final_node_id" in response_format.get("properties", {})
+     if not case.get("task"):
+         raw_message = response.get("message")
+         raw_content = raw_message.get("content") if isinstance(raw_message, dict) else None
+@@ -378,7 +382,8 @@
+     summary = write_report(out)
+     print(f"결과: {out / 'summary.md'}")
+     print(f"실행 완료: {summary['recorded_cases']}/{summary['assigned_cases']}건 기록 / "
+-          f"전체 성능 판정: {'PASS' if summary['all_assigned_passed'] else 'FAIL'}")
++          f"전 조건 통과: {'PASS' if summary['all_assigned_passed'] else 'FAIL'} / "
++          f"과제 성공: {summary['valid_completions']}/{summary['assigned_cases']}")
+     if not summary["execution_completed"]:
+         return 2
+     return 1 if fail_on_model_failure and not summary["all_assigned_passed"] else 0
+--- v0.4/local_llm/tests/test_v041.py
++++ v0.4.1/local_llm/tests/test_v041.py
+@@ -0,0 +1,165 @@
++"""실제 실패 분석에서 도출한 회귀/원인 분리 계약 시험. 모의 응답 외 모델 호출 없음."""
++from __future__ import annotations
++import copy
++import contextlib
++import io
++import json
++import tempfile
++import unittest
++from pathlib import Path
++from unittest.mock import patch
++
++from local_llm import calibration_v4, causal_probe, evidence
++from local_llm.common import load_core, read_json, wire_json
++from local_llm.design import reference_depths
++from local_llm.model_policy import resolve_config
++from local_llm.runner import request_body, assess_response
++from local_llm.tests import test_v04 as prior
++
++
++class V041Tests(unittest.TestCase):
++    @classmethod
++    def setUpClass(cls):
++        cls.core, cls.info = load_core()
++        cls.plan = causal_probe.build_probe_plan(cls.core)
++        cls.ps = {p['id']:p for p in cls.plan['problems']}
++        cls.cfg = resolve_config(prior.config(), prior.metadata())
++        cls.helper = prior.V04Tests()
++        cls.helper.core, cls.helper.info = cls.core, cls.info
++
++    def schema_case(self, scope='all_nodes'):
++        p, proof = calibration_v4.fixtures()[0]
++        c = {'task':'schema','provided_proof':proof,'calibration_version':4,'view_scope':scope}
++        return p,c,self.helper.payload(p,c)
++
++    def test_mixed_schema_false_positive_now_rejected(self):
++        p,c,v=self.schema_case()
++        v['node_views'][0]['view']={'kind':'instance','atom':p['facts'][0]}
++        a=calibration_v4.assess_payload(self.core,p,c,v)
++        self.assertTrue(a['task_checks']['valid_schema_views'])
++        self.assertFalse(a['task_checks']['all_schema'])
++        self.assertFalse(a['valid_completion'])
++
++    def test_all_schema_valid_positive(self):
++        p,c,v=self.schema_case()
++        self.assertTrue(calibration_v4.assess_payload(self.core,p,c,v)['valid_completion'])
++
++    def test_final_only_schema_still_positive(self):
++        p,c,v=self.schema_case('final_node_only')
++        self.assertTrue(calibration_v4.assess_payload(self.core,p,c,v)['valid_completion'])
++
++    def test_actual_final_A_and_all_node_kinds_not_conflated(self):
++        p,c,v=self.schema_case()
++        v['node_views'][0]['view']={'kind':'instance','atom':p['facts'][0]}
++        a=calibration_v4.assess_payload(self.core,p,c,v)
++        comparison={x['field']:x for x in a['task_comparisons']}
++        self.assertTrue(comparison['A_on_valid_representation']['matches'])
++        self.assertFalse(comparison['all_node_view_kinds']['matches'])
++
++    def test_invalid_unrelated_nodes_do_not_hide_valid_selected_support(self):
++        p=calibration_v4.fixtures()[0][0]
++        t=self.core.simulate(p,'instance','shallow',0)
++        t['nodes'].append({'id':'bad','atom':'wrong','rule':'missing','parents':[]})
++        before=copy.deepcopy(t)
++        a=evidence.support(p,t,core_format=True)
++        self.assertTrue(a['selected_support_valid'])
++        self.assertFalse(a['full_support_valid'])
++        self.assertEqual(a['unrelated_node_ids'],['bad'])
++        self.assertFalse(self.core.verify(p,t)['valid'])
++        self.assertEqual(t,before)
++
++    def test_duplicate_ids_do_not_receive_selected_support_credit(self):
++        p=calibration_v4.fixtures()[0][0]
++        t=self.core.simulate(p,'instance','deep',0)
++        t['nodes'].append(copy.deepcopy(t['nodes'][0]))
++        self.assertFalse(evidence.support(p,t,core_format=True)['selected_support_valid'])
++
++    def test_wrong_parent_atoms_reported_not_repaired(self):
++        p=calibration_v4.fixtures()[0][0]
++        t=self.core.simulate(p,'instance','deep',0)
++        t['nodes'][-1]['parents']=[t['nodes'][0]['id']]
++        a=evidence.support(p,t,core_format=True)
++        f=a['first_failure']
++        self.assertIn('wrong_premises',f['faults'])
++        self.assertNotEqual(f['actual_parent_atoms'],f['expected_parent_atoms'])
++        self.assertFalse(a['selected_support_valid'])
++
++    def test_independent_depth_reference_fixtures(self):
++        for p in self.ps.values():
++            with self.subTest(p=p['id']):
++                self.assertEqual(evidence.depth_set_forward(p),reference_depths(p)['depths'])
++
++    def test_exactly_twelve_probes(self):
++        self.assertEqual(len(self.plan['cases']),12)
++        self.assertEqual(self.plan['assigned_calls'],12)
++        self.assertEqual(len({c['case_id'] for c in self.plan['cases']}),12)
++
++    def test_old_baseline_request_unchanged(self):
++        for c in self.plan['cases']:
++            if c['probe_variant']=='baseline':
++                old=copy.deepcopy(c);old.pop('probe_contract')
++                self.assertEqual(wire_json(request_body(self.cfg,c,self.ps[c['problem_id']])),
++                                 wire_json(request_body(self.cfg,old,self.ps[c['problem_id']])))
++
++    def test_prompt_pairs_change_only_messages(self):
++        for pid in ('K01','K02','K03'):
++            cases=[c for c in self.plan['cases'] if c['task']=='proof' and c['problem_id']==pid]
++            a,b=[request_body(self.cfg,c,self.ps[pid]) for c in cases]
++            self.assertNotEqual(a.pop('messages'),b.pop('messages'))
++            self.assertEqual(a,b)
++
++    def test_schema_variants_change_only_format(self):
++        cases=[c for c in self.plan['cases'] if c['task']=='schema']
++        bodies=[request_body(self.cfg,c,self.ps[c['problem_id']]) for c in cases]
++        formats=[b.pop('format') for b in bodies]
++        self.assertTrue(all(b==bodies[0] for b in bodies))
++        self.assertEqual(len({wire_json(v) for v in formats}),3)
++
++    def test_schema_only_is_not_ordinary_A_trial(self):
++        c=next(c for c in self.plan['cases'] if c['probe_variant']=='schema_only')
++        body=request_body(self.cfg,c,self.ps[c['problem_id']])
++        v=body['format']['properties']['node_views']['items']['properties']['view']
++        self.assertEqual(v['properties']['kind']['const'],'universal_schema')
++        self.assertEqual(c['role']['kind'],'neutral')
++
++    def test_no_simulator_used_to_build_prompts(self):
++        with patch.object(self.core,'simulate',side_effect=AssertionError('정답 생성 금지')):
++            plan=causal_probe.build_probe_plan(self.core)
++            for c in plan['cases']:
++                body=request_body(self.cfg,c,self.ps[c['problem_id']])
++                self.assertNotIn('reference_depths',body['messages'][1]['content'])
++
++    def test_json_format_response_is_validated_semantically(self):
++        c=next(c for c in self.plan['cases'] if c['probe_variant']=='json')
++        p=self.ps[c['problem_id']];body=request_body(self.cfg,c,p)
++        resp=self.helper.reply(p,c,self.cfg)
++        good,_=assess_response(self.core,p,c,reference_depths(p),body,resp,self.cfg['mode_policy'])
++        self.assertEqual(good['status'],'accepted')
++        bad=json.loads(resp['message']['content']);bad['node_views'][0]['view']={'kind':'instance','atom':p['goal']}
++        resp['message']['content']=wire_json(bad)
++        invalid,_=assess_response(self.core,p,c,reference_depths(p),body,resp,self.cfg['mode_policy'])
++        self.assertNotEqual(invalid['status'],'accepted')
++
++    def test_criterion_has_three_distinct_ground_truth_patterns(self):
++        values=[evidence.criterion(self.ps[c['problem_id']],c['probe_atom'])
++                for c in self.plan['cases'] if c['task']=='criterion']
++        self.assertEqual(len({wire_json(v) for v in values}),3)
++
++    def test_mock_complete_probe_and_report(self):
++        with tempfile.TemporaryDirectory() as temp:
++            out=Path(temp)/'probe'
++            result,client=self.helper.run_mock(self.plan,out)
++            self.assertEqual(result,0)
++            self.assertEqual(client.chat.call_count,12)
++            summary=read_json(out/'causal_probe.json')
++            self.assertEqual(len(summary['proof_pairs']),3)
++            self.assertTrue(summary['not_an_ADM_success_rate'])
++            self.assertEqual(sum(x['accepted'] for x in summary['cases']),12)
++
++    def test_plan_only_never_constructs_client(self):
++        with patch('local_llm.runner.OllamaClient') as client, contextlib.redirect_stdout(io.StringIO()):
++            self.assertEqual(causal_probe.main(['--plan-only']),0)
++        client.assert_not_called()
++
++if __name__=='__main__':
++    unittest.main()

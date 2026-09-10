@@ -1,0 +1,55 @@
+{
+  "assigned_calls": 12,
+  "model_called": false,
+  "cases": [
+    {
+      "id": "proof_K01_compact",
+      "variant": "compact"
+    },
+    {
+      "id": "criterion_01_compact",
+      "variant": "compact"
+    },
+    {
+      "id": "schema_K03_json",
+      "variant": "json"
+    },
+    {
+      "id": "proof_K03_compact",
+      "variant": "compact"
+    },
+    {
+      "id": "schema_K03_schema_only",
+      "variant": "schema_only"
+    },
+    {
+      "id": "proof_K01_baseline",
+      "variant": "baseline"
+    },
+    {
+      "id": "proof_K02_compact",
+      "variant": "compact"
+    },
+    {
+      "id": "proof_K02_baseline",
+      "variant": "baseline"
+    },
+    {
+      "id": "criterion_02_compact",
+      "variant": "compact"
+    },
+    {
+      "id": "proof_K03_baseline",
+      "variant": "baseline"
+    },
+    {
+      "id": "schema_K03_union",
+      "variant": "union"
+    },
+    {
+      "id": "criterion_03_compact",
+      "variant": "compact"
+    }
+  ],
+  "note": "증명 대응은 프롬프트 묶음의 효과다. 예시/길이 각각의 효과를 분리했다고 하지 않는다. 도식 3조건은 messages가 같고 format만 다르다. schema_only는 호스트 강제다."
+}

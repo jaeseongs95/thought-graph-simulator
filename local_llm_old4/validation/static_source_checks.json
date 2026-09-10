@@ -1,0 +1,173 @@
+{
+  "passed": true,
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "files_checked": 27,
+  "checks": [
+    {
+      "file": "local_llm/__init__.py",
+      "sha256": "9ba754cabbd73b1595554684fcb3c21882a43df4fe6802e7bca3d093adc060f2",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/__main__.py",
+      "sha256": "6042264620a8f622e362ebcde2d08e45c5edfc9fb930181d6a80e25f27ce5ebf",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/audit.py",
+      "sha256": "a67013ad9666a2d4e0865f7a8148d6e1885887f3816902a5f3ec60556a5ab659",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/calibration.py",
+      "sha256": "d73142d715fc046f9c03c702247fdfcd9f48ffedca11ef9aaee7123f04cbf2eb",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/calibration_v4.py",
+      "sha256": "eb42052c863c2a3b4fa0a973e4087f9c5a62096def91db47682db42e1cabb77f",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/client.py",
+      "sha256": "20828bec12e77800883be188d3b4258dca033db00831c91dfec2764254babe27",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/common.py",
+      "sha256": "358cd6775c0e85d1fadbeb4615d0bbe11d5dd7cbf17e6f13aed706ace3a9a881",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/component_report.py",
+      "sha256": "350ec68866c6d2937e6635acc02f922efa1021a6fdaa0b248a9177d2de38ce05",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/datasets_v4.py",
+      "sha256": "04177939e72c8b4dc51ee5b1a9e2aedebd6d6f0ab78bc49985bd7320d3997ae7",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/design.py",
+      "sha256": "09806b9c7bbd9c86ac1766ea009a5614644d655edd515d117e089632f83d8f77",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/diagnostics.py",
+      "sha256": "af4fec61634101061d1f19c741efb2f98dd8d0c9dbb5af615f0648c03b9e6b3c",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/gate.py",
+      "sha256": "f91cfa6518113f1c34b58136e95aabb48bcec122410a36a248e6724d2c70a424",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/model_policy.py",
+      "sha256": "d1c84e4c62ce2012814c19bb8a2337a291c79f31bbe8f502be5ac4d8e15f9719",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/prompts.py",
+      "sha256": "1a2f1e3a21c7abfbf329f49cb8c8b846d3acafe09ea4a58e2289bdb2b109881c",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/prompts_v2.py",
+      "sha256": "e392d05b0807467826f7693f9ebc52f65dc9e8ec21bf9f84595c7353db4ba822",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/prompts_v3.py",
+      "sha256": "b32602a6a4f63351c18310fc21837475ea27cba87653176a6cb94e9ca3d38bb5",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/prompts_v4.py",
+      "sha256": "9cb820edba3676f2a23d9702c460e31bdd6e6abede91ea75117e2793d1de65dc",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/protocol.py",
+      "sha256": "c9d5a0c43fbcc8093433c52759ad9fc311c256b182680c0a003c23580d2a2f35",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/protocol_v2.py",
+      "sha256": "458546c3230adad7323b237ed9b34dab7f268d4385099cd56fce3271db39319a",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/report.py",
+      "sha256": "68561fa4d83554515dafb0a368b734a540ae41117482936c9516f2f0fd07e51c",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/runner.py",
+      "sha256": "8373b362989d195c24c76945755962c07393e7c8daffbd9fb8e40fd149fe79d9",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/selfcheck.py",
+      "sha256": "b432eb5125c721ed43f851374a294231a123b8bff4a9028fafb93a4213c25ef8",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/tests/__init__.py",
+      "sha256": "dc9b3bf1abec69365ebd443fcbcecb7258086604be59c21c14a856754d627666",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/tests/test_local_llm.py",
+      "sha256": "63dcc7da00af1d89a1b275842eebaeb715cb51d035177f13a2865e3c56683fab",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/tests/test_v02.py",
+      "sha256": "d07af0bb5aa0c447f7f84d5cf22c53dc6a6367caaf38227f818f3d7efd32f9be",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/tests/test_v03.py",
+      "sha256": "e6fa445c552db90cc80dcf225d1c1fdb5e945d340b0eb7ca806efdb2ef67aeb8",
+      "python310_ast": true,
+      "current_python_compile": true
+    },
+    {
+      "file": "local_llm/tests/test_v04.py",
+      "sha256": "ad5ec95ad6e28ff2367da665e91da65e6f5d08b97e5feecf10dbd49933fb4fbb",
+      "python310_ast": true,
+      "current_python_compile": true
+    }
+  ],
+  "source_executed_by_this_check": false,
+  "python310_runtime_tested": false,
+  "llm_inference_performed": false
+}

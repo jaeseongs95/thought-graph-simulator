@@ -1,0 +1,1313 @@
+{
+  "manual_mutations": [
+    {
+      "name": "valid_manual",
+      "core": {
+        "valid": true,
+        "metrics": {
+          "A": "instance",
+          "D": 2,
+          "M": 0
+        },
+        "states": [
+          {
+            "event": "n0",
+            "A": "instance",
+            "D": 0,
+            "M": 0
+          },
+          {
+            "event": "n1",
+            "A": "instance",
+            "D": 0,
+            "M": 0
+          },
+          {
+            "event": "n2",
+            "A": "instance",
+            "D": 1,
+            "M": 0
+          },
+          {
+            "event": "n3",
+            "A": "instance",
+            "D": 2,
+            "M": 0
+          }
+        ],
+        "node_count": 4,
+        "error": null
+      },
+      "graph_oracle": true,
+      "agreement": true
+    },
+    {
+      "name": "missing_conjunct",
+      "core": {
+        "valid": false,
+        "metrics": {
+          "A": null,
+          "D": null,
+          "M": null
+        },
+        "states": [],
+        "error": "PROOF: 전제 불일치/생략/중복"
+      },
+      "graph_oracle": false,
+      "agreement": true
+    },
+    {
+      "name": "wrong_source",
+      "core": {
+        "valid": false,
+        "metrics": {
+          "A": null,
+          "D": null,
+          "M": null
+        },
+        "states": [],
+        "error": "PROOF: 전제 불일치/생략/중복"
+      },
+      "graph_oracle": false,
+      "agreement": true
+    },
+    {
+      "name": "false_conclusion",
+      "core": {
+        "valid": false,
+        "metrics": {
+          "A": null,
+          "D": null,
+          "M": null
+        },
+        "states": [],
+        "error": "PROOF: 규칙의 결론 불일치"
+      },
+      "graph_oracle": false,
+      "agreement": true
+    },
+    {
+      "name": "unknown_rule",
+      "core": {
+        "valid": false,
+        "metrics": {
+          "A": null,
+          "D": null,
+          "M": null
+        },
+        "states": [],
+        "error": "PROOF: 허용하지 않은 규칙"
+      },
+      "graph_oracle": false,
+      "agreement": true
+    },
+    {
+      "name": "self_cycle",
+      "core": {
+        "valid": false,
+        "metrics": {
+          "A": null,
+          "D": null,
+          "M": null
+        },
+        "states": [],
+        "error": "GRAPH: 순환/전방/누락 참조"
+      },
+      "graph_oracle": false,
+      "agreement": true
+    },
+    {
+      "name": "unrelated_fact",
+      "core": {
+        "valid": false,
+        "metrics": {
+          "A": null,
+          "D": null,
+          "M": null
+        },
+        "states": [],
+        "error": "GRAPH: 최종 증명과 무관한 노드"
+      },
+      "graph_oracle": false,
+      "agreement": true
+    },
+    {
+      "name": "goal_only_ungrounded",
+      "core": {
+        "valid": false,
+        "metrics": {
+          "A": null,
+          "D": null,
+          "M": null
+        },
+        "states": [],
+        "error": "PROOF: 근거 없는 사실"
+      },
+      "graph_oracle": false,
+      "agreement": true
+    },
+    {
+      "name": "duplicate_node_id",
+      "core": {
+        "valid": false,
+        "metrics": {
+          "A": null,
+          "D": null,
+          "M": null
+        },
+        "states": [],
+        "error": "GRAPH: 중복/잘못된 id"
+      },
+      "graph_oracle": false,
+      "agreement": true
+    },
+    {
+      "name": "forward_reference",
+      "core": {
+        "valid": false,
+        "metrics": {
+          "A": null,
+          "D": null,
+          "M": null
+        },
+        "states": [],
+        "error": "GRAPH: 순환/전방/누락 참조"
+      },
+      "graph_oracle": false,
+      "agreement": true
+    },
+    {
+      "name": "duplicate_parent",
+      "core": {
+        "valid": false,
+        "metrics": {
+          "A": null,
+          "D": null,
+          "M": null
+        },
+        "states": [],
+        "error": "SCHEMA: 중복 값"
+      },
+      "graph_oracle": false,
+      "agreement": true
+    },
+    {
+      "name": "binding_mismatch",
+      "core": {
+        "valid": false,
+        "metrics": {
+          "A": null,
+          "D": null,
+          "M": null
+        },
+        "states": [],
+        "error": "BINDING: 다른 문제에 대한 기록"
+      },
+      "graph_oracle": true,
+      "agreement": true
+    }
+  ],
+  "random_problem_count": 120,
+  "depth_crosschecks": [
+    {
+      "id": "random_0",
+      "depths": [
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_1",
+      "depths": [
+        1,
+        3,
+        4
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_2",
+      "depths": [
+        1,
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_3",
+      "depths": [
+        2,
+        3,
+        4
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_4",
+      "depths": [
+        3,
+        4
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_5",
+      "depths": [
+        1,
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_6",
+      "depths": [
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_7",
+      "depths": [
+        1
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_8",
+      "depths": [
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_9",
+      "depths": [
+        1
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_10",
+      "depths": [
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_11",
+      "depths": [
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_12",
+      "depths": [
+        2,
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_13",
+      "depths": [
+        1
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_14",
+      "depths": [
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_15",
+      "depths": [
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_16",
+      "depths": [
+        2,
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_17",
+      "depths": [
+        1,
+        2,
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_18",
+      "depths": [
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_19",
+      "depths": [
+        1,
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_20",
+      "depths": [
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_21",
+      "depths": [
+        1
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_22",
+      "depths": [
+        1
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_23",
+      "depths": [
+        1,
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_24",
+      "depths": [
+        1,
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_25",
+      "depths": [
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_26",
+      "depths": [
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_27",
+      "depths": [
+        2,
+        4
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_28",
+      "depths": [
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_29",
+      "depths": [
+        1,
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_30",
+      "depths": [
+        1,
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_31",
+      "depths": [
+        2,
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_32",
+      "depths": [
+        3,
+        4
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_33",
+      "depths": [
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_34",
+      "depths": [
+        1,
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_35",
+      "depths": [
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_36",
+      "depths": [
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_37",
+      "depths": [
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_38",
+      "depths": [
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_39",
+      "depths": [
+        2,
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_40",
+      "depths": [
+        1,
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_41",
+      "depths": [
+        1
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_42",
+      "depths": [
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_43",
+      "depths": [
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_44",
+      "depths": [
+        1,
+        4
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_45",
+      "depths": [
+        1
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_46",
+      "depths": [
+        1,
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_47",
+      "depths": [
+        2,
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_48",
+      "depths": [
+        1,
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_49",
+      "depths": [
+        2,
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_50",
+      "depths": [
+        1,
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_51",
+      "depths": [
+        1,
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_52",
+      "depths": [
+        3,
+        4,
+        5
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_53",
+      "depths": [
+        2,
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_54",
+      "depths": [
+        4
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_55",
+      "depths": [
+        2,
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_56",
+      "depths": [
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_57",
+      "depths": [
+        1
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_58",
+      "depths": [
+        1,
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_59",
+      "depths": [
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_60",
+      "depths": [
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_61",
+      "depths": [
+        2,
+        3,
+        4
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_62",
+      "depths": [
+        1
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_63",
+      "depths": [
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_64",
+      "depths": [
+        2,
+        3,
+        4
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_65",
+      "depths": [
+        2,
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_66",
+      "depths": [
+        1
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_67",
+      "depths": [
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_68",
+      "depths": [
+        1
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_69",
+      "depths": [
+        4
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_70",
+      "depths": [
+        4,
+        5
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_71",
+      "depths": [
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_72",
+      "depths": [
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_73",
+      "depths": [
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_74",
+      "depths": [
+        1,
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_75",
+      "depths": [
+        2,
+        3,
+        4
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_76",
+      "depths": [
+        1,
+        2,
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_77",
+      "depths": [
+        3,
+        4
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_78",
+      "depths": [
+        1
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_79",
+      "depths": [
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_80",
+      "depths": [
+        2,
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_81",
+      "depths": [
+        1
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_82",
+      "depths": [
+        1,
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_83",
+      "depths": [
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_84",
+      "depths": [
+        1
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_85",
+      "depths": [
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_86",
+      "depths": [
+        1,
+        2,
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_87",
+      "depths": [
+        1
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_88",
+      "depths": [
+        1
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_89",
+      "depths": [
+        1
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_90",
+      "depths": [
+        2,
+        4
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_91",
+      "depths": [
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_92",
+      "depths": [
+        2,
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_93",
+      "depths": [
+        3,
+        4,
+        5
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_94",
+      "depths": [
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_95",
+      "depths": [
+        4
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_96",
+      "depths": [
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_97",
+      "depths": [
+        1
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_98",
+      "depths": [
+        1
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_99",
+      "depths": [
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_100",
+      "depths": [
+        1,
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_101",
+      "depths": [
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_102",
+      "depths": [
+        1
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_103",
+      "depths": [
+        1,
+        3,
+        4
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_104",
+      "depths": [
+        1,
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_105",
+      "depths": [
+        1,
+        3,
+        4
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_106",
+      "depths": [
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_107",
+      "depths": [
+        1,
+        2,
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_108",
+      "depths": [
+        1,
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_109",
+      "depths": [
+        1
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_110",
+      "depths": [
+        1,
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_111",
+      "depths": [
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_112",
+      "depths": [
+        1
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_113",
+      "depths": [
+        1,
+        5
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_114",
+      "depths": [
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_115",
+      "depths": [
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_116",
+      "depths": [
+        1,
+        2,
+        3
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_117",
+      "depths": [
+        3,
+        4
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_118",
+      "depths": [
+        2
+      ],
+      "roles_passed": 12
+    },
+    {
+      "id": "random_119",
+      "depths": [
+        2
+      ],
+      "roles_passed": 12
+    }
+  ],
+  "positive_role_checks": 1440,
+  "negative_proof_mutations": 3366,
+  "fuzz_count": 671,
+  "crashes": [],
+  "all_schema_false_positive": {
+    "problem": {
+      "id": "K01",
+      "facts": [
+        "Ca"
+      ],
+      "rules": [
+        {
+          "id": "k10",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cb"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Cb"
+          ],
+          "conclusion": "Cc"
+        },
+        {
+          "id": "k03",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cc"
+        }
+      ],
+      "goal": "Cc"
+    },
+    "case": {
+      "task": "schema",
+      "calibration_version": 4,
+      "view_scope": "all_nodes",
+      "provided_proof": {
+        "nodes": [
+          {
+            "node_id": "n0",
+            "atom": "Ca",
+            "rule_id": null,
+            "parent_node_ids": []
+          },
+          {
+            "node_id": "n1",
+            "atom": "Cb",
+            "rule_id": "k10",
+            "parent_node_ids": [
+              "n0"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parent_node_ids": [
+              "n1"
+            ]
+          }
+        ],
+        "selected_final_node_id": "n2"
+      }
+    },
+    "payload": {
+      "node_views": [
+        {
+          "node_id": "n0",
+          "view": {
+            "kind": "instance",
+            "atom": "Ca"
+          }
+        },
+        {
+          "node_id": "n1",
+          "view": {
+            "kind": "instance",
+            "atom": "Cb"
+          }
+        },
+        {
+          "node_id": "n2",
+          "view": {
+            "kind": "universal_schema",
+            "quantifier": "forall_boolean_valuations",
+            "bindings": [
+              {
+                "variable": "X0",
+                "atom": "Ca"
+              },
+              {
+                "variable": "X1",
+                "atom": "Cb"
+              },
+              {
+                "variable": "X2",
+                "atom": "Cc"
+              }
+            ],
+            "clauses": [
+              {
+                "if": [],
+                "then": "X0"
+              },
+              {
+                "if": [
+                  "X0"
+                ],
+                "then": "X1"
+              },
+              {
+                "if": [
+                  "X1"
+                ],
+                "then": "X2"
+              }
+            ],
+            "conclusion_var": "X2"
+          }
+        }
+      ]
+    },
+    "audit": {
+      "valid_completion": true,
+      "role_adherent": null,
+      "calibration_task": "schema",
+      "task_checks": {
+        "valid_schema_views": true,
+        "all_schema": true
+      },
+      "details": {
+        "core_audit": {
+          "valid": true,
+          "metrics": {
+            "A": "schema",
+            "D": 2,
+            "M": 0
+          },
+          "states": [
+            {
+              "event": "n0",
+              "A": "instance",
+              "D": 0,
+              "M": 0
+            },
+            {
+              "event": "n1",
+              "A": "instance",
+              "D": 1,
+              "M": 0
+            },
+            {
+              "event": "n2",
+              "A": "schema",
+              "D": 2,
+              "M": 0
+            }
+          ],
+          "node_count": 3,
+          "error": null
+        },
+        "view_kinds_returned": [
+          "instance",
+          "instance",
+          "universal_schema"
+        ],
+        "host_supplied": "문제와 전체 증명을 고정 입력으로 제공"
+      },
+      "task_comparisons": [
+        {
+          "field": "valid_schema_views",
+          "actual": true,
+          "expected": true,
+          "matches": true
+        },
+        {
+          "field": "A_on_valid_representation",
+          "actual": "schema",
+          "expected": "schema",
+          "matches": true
+        }
+      ],
+      "task_checks_note": "task_checks의 true/false는 정답과 일치 여부다. 모델이 출력한 판정값이 아님.",
+      "negative_controls": [],
+      "negative_controls_ok": null,
+      "interpretation": "단독 교정 과제의 성공 여부. 통합 ADM 성공·축 독립성 결과가 아님."
+    }
+  },
+  "llm_called": false
+}

@@ -1,0 +1,86 @@
+{
+  "local_llm/__init__.py": {
+    "python310_syntax": true,
+    "sha256": "6f353e386fdd1fac9ccdc755d94dec2a5ced4ee9516cc51278fa5910abe4afa8"
+  },
+  "local_llm/__main__.py": {
+    "python310_syntax": true,
+    "sha256": "4ca97e8caab3656580c127ae8429585911cee15f66e9132b8ce1c179722a937a"
+  },
+  "local_llm/audit.py": {
+    "python310_syntax": true,
+    "sha256": "9856eb445da5669fcc8a9f059d4c7ea20d2f9f0ce32cb0eb52b2860cc25e2834"
+  },
+  "local_llm/calibration.py": {
+    "python310_syntax": true,
+    "sha256": "d73142d715fc046f9c03c702247fdfcd9f48ffedca11ef9aaee7123f04cbf2eb"
+  },
+  "local_llm/client.py": {
+    "python310_syntax": true,
+    "sha256": "20828bec12e77800883be188d3b4258dca033db00831c91dfec2764254babe27"
+  },
+  "local_llm/common.py": {
+    "python310_syntax": true,
+    "sha256": "358cd6775c0e85d1fadbeb4615d0bbe11d5dd7cbf17e6f13aed706ace3a9a881"
+  },
+  "local_llm/design.py": {
+    "python310_syntax": true,
+    "sha256": "09806b9c7bbd9c86ac1766ea009a5614644d655edd515d117e089632f83d8f77"
+  },
+  "local_llm/diagnostics.py": {
+    "python310_syntax": true,
+    "sha256": "fe954c2e4566cacdd1593f128f1588a3de863f7b53e4bbf3136e8db635a90cc5"
+  },
+  "local_llm/gate.py": {
+    "python310_syntax": true,
+    "sha256": "963d850fe637df4376b14e63c4c4f4cee59ade5c47460735f42428924fd163ef"
+  },
+  "local_llm/prompts.py": {
+    "python310_syntax": true,
+    "sha256": "1a2f1e3a21c7abfbf329f49cb8c8b846d3acafe09ea4a58e2289bdb2b109881c"
+  },
+  "local_llm/prompts_v2.py": {
+    "python310_syntax": true,
+    "sha256": "e392d05b0807467826f7693f9ebc52f65dc9e8ec21bf9f84595c7353db4ba822"
+  },
+  "local_llm/prompts_v3.py": {
+    "python310_syntax": true,
+    "sha256": "b32602a6a4f63351c18310fc21837475ea27cba87653176a6cb94e9ca3d38bb5"
+  },
+  "local_llm/protocol.py": {
+    "python310_syntax": true,
+    "sha256": "c9d5a0c43fbcc8093433c52759ad9fc311c256b182680c0a003c23580d2a2f35"
+  },
+  "local_llm/protocol_v2.py": {
+    "python310_syntax": true,
+    "sha256": "458546c3230adad7323b237ed9b34dab7f268d4385099cd56fce3271db39319a"
+  },
+  "local_llm/report.py": {
+    "python310_syntax": true,
+    "sha256": "33c20c25b4497bb6574cb523cbc1061f1578a37a8108cd4f41e80f8e637d37a9"
+  },
+  "local_llm/runner.py": {
+    "python310_syntax": true,
+    "sha256": "b906cf79c65ac100af9681546b3ed9d460a009b1bf20fffb4248feed8a5b26aa"
+  },
+  "local_llm/selfcheck.py": {
+    "python310_syntax": true,
+    "sha256": "b432eb5125c721ed43f851374a294231a123b8bff4a9028fafb93a4213c25ef8"
+  },
+  "local_llm/tests/__init__.py": {
+    "python310_syntax": true,
+    "sha256": "dc9b3bf1abec69365ebd443fcbcecb7258086604be59c21c14a856754d627666"
+  },
+  "local_llm/tests/test_local_llm.py": {
+    "python310_syntax": true,
+    "sha256": "63dcc7da00af1d89a1b275842eebaeb715cb51d035177f13a2865e3c56683fab"
+  },
+  "local_llm/tests/test_v02.py": {
+    "python310_syntax": true,
+    "sha256": "783496bad9b6acc84f33a4e5b0267731141293fc259a9034f01538983ec35f73"
+  },
+  "local_llm/tests/test_v03.py": {
+    "python310_syntax": true,
+    "sha256": "926ff0f7e3d1686286b56f9d605e44eef4967857a9b4995c59038795b4c35ee6"
+  }
+}

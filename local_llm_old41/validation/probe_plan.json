@@ -1,0 +1,567 @@
+{
+  "profile": "causal-probe",
+  "experiment_kind": "calibration",
+  "probe_contract": "causal-v041",
+  "repeats": 1,
+  "seed": 1729,
+  "problems": [
+    {
+      "id": "K01",
+      "facts": [
+        "Ca"
+      ],
+      "rules": [
+        {
+          "id": "k10",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cb"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Cb"
+          ],
+          "conclusion": "Cc"
+        },
+        {
+          "id": "k03",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cc"
+        }
+      ],
+      "goal": "Cc"
+    },
+    {
+      "id": "K02",
+      "facts": [
+        "Da",
+        "Db"
+      ],
+      "rules": [
+        {
+          "id": "k03",
+          "premises": [
+            "Da",
+            "Db"
+          ],
+          "conclusion": "De"
+        },
+        {
+          "id": "k10",
+          "premises": [
+            "Da"
+          ],
+          "conclusion": "Dc"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Dc",
+            "Db"
+          ],
+          "conclusion": "Dd"
+        },
+        {
+          "id": "k24",
+          "premises": [
+            "Dd"
+          ],
+          "conclusion": "De"
+        }
+      ],
+      "goal": "De"
+    },
+    {
+      "id": "K03",
+      "facts": [
+        "Ea"
+      ],
+      "rules": [
+        {
+          "id": "k03",
+          "premises": [
+            "Ea"
+          ],
+          "conclusion": "Ee"
+        },
+        {
+          "id": "k24",
+          "premises": [
+            "Eb"
+          ],
+          "conclusion": "Ed"
+        },
+        {
+          "id": "k00",
+          "premises": [
+            "Ec",
+            "Ed"
+          ],
+          "conclusion": "Ee"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Eb"
+          ],
+          "conclusion": "Ec"
+        },
+        {
+          "id": "k10",
+          "premises": [
+            "Ea"
+          ],
+          "conclusion": "Eb"
+        }
+      ],
+      "goal": "Ee"
+    },
+    {
+      "id": "K11",
+      "facts": [
+        "Ca",
+        "Cc"
+      ],
+      "rules": [
+        {
+          "id": "k10",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cb"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Cb"
+          ],
+          "conclusion": "Cc"
+        },
+        {
+          "id": "k03",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cc"
+        }
+      ],
+      "goal": "Cc"
+    }
+  ],
+  "roles": [],
+  "cases": [
+    {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "proof_K01_compact",
+      "task": "proof",
+      "repeat": 0,
+      "seed": 1729,
+      "calibration_version": 4,
+      "probe_contract": "causal-v041",
+      "probe_variant": "compact",
+      "depth_policy": "deep",
+      "case_id": "4c497931e014e5dbd5597bc1"
+    },
+    {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_01_compact",
+      "task": "criterion",
+      "repeat": 0,
+      "seed": 1729,
+      "calibration_version": 4,
+      "probe_contract": "causal-v041",
+      "probe_variant": "compact",
+      "probe_atom": "Cc",
+      "case_id": "2bfc018132605f8be9e74a40"
+    },
+    {
+      "problem_id": "K03",
+      "problem_sha256": "da4e6f453a328261b9c3800b8190a2c513b0d1ce27b09052f0f92b722cafff04",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "schema_K03_json",
+      "task": "schema",
+      "repeat": 0,
+      "seed": 1729,
+      "calibration_version": 4,
+      "probe_contract": "causal-v041",
+      "probe_variant": "json",
+      "view_scope": "final_node_only",
+      "provided_proof": {
+        "nodes": [
+          {
+            "node_id": "n0",
+            "atom": "Ea",
+            "rule_id": null,
+            "parent_node_ids": []
+          },
+          {
+            "node_id": "n1",
+            "atom": "Eb",
+            "rule_id": "k10",
+            "parent_node_ids": [
+              "n0"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "atom": "Ec",
+            "rule_id": "k17",
+            "parent_node_ids": [
+              "n1"
+            ]
+          },
+          {
+            "node_id": "n3",
+            "atom": "Ed",
+            "rule_id": "k24",
+            "parent_node_ids": [
+              "n1"
+            ]
+          },
+          {
+            "node_id": "n4",
+            "atom": "Ee",
+            "rule_id": "k00",
+            "parent_node_ids": [
+              "n2",
+              "n3"
+            ]
+          }
+        ],
+        "selected_final_node_id": "n4"
+      },
+      "case_id": "81f33b1f70f9cf932f25cf9b"
+    },
+    {
+      "problem_id": "K03",
+      "problem_sha256": "da4e6f453a328261b9c3800b8190a2c513b0d1ce27b09052f0f92b722cafff04",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "proof_K03_compact",
+      "task": "proof",
+      "repeat": 0,
+      "seed": 1729,
+      "calibration_version": 4,
+      "probe_contract": "causal-v041",
+      "probe_variant": "compact",
+      "depth_policy": "deep",
+      "case_id": "40e41ac9f560060e3b3c1cfc"
+    },
+    {
+      "problem_id": "K03",
+      "problem_sha256": "da4e6f453a328261b9c3800b8190a2c513b0d1ce27b09052f0f92b722cafff04",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "schema_K03_schema_only",
+      "task": "schema",
+      "repeat": 0,
+      "seed": 1729,
+      "calibration_version": 4,
+      "probe_contract": "causal-v041",
+      "probe_variant": "schema_only",
+      "view_scope": "final_node_only",
+      "provided_proof": {
+        "nodes": [
+          {
+            "node_id": "n0",
+            "atom": "Ea",
+            "rule_id": null,
+            "parent_node_ids": []
+          },
+          {
+            "node_id": "n1",
+            "atom": "Eb",
+            "rule_id": "k10",
+            "parent_node_ids": [
+              "n0"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "atom": "Ec",
+            "rule_id": "k17",
+            "parent_node_ids": [
+              "n1"
+            ]
+          },
+          {
+            "node_id": "n3",
+            "atom": "Ed",
+            "rule_id": "k24",
+            "parent_node_ids": [
+              "n1"
+            ]
+          },
+          {
+            "node_id": "n4",
+            "atom": "Ee",
+            "rule_id": "k00",
+            "parent_node_ids": [
+              "n2",
+              "n3"
+            ]
+          }
+        ],
+        "selected_final_node_id": "n4"
+      },
+      "case_id": "4a704cacd9dbf22fb2845ff6"
+    },
+    {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "proof_K01_baseline",
+      "task": "proof",
+      "repeat": 0,
+      "seed": 1729,
+      "calibration_version": 4,
+      "probe_contract": "causal-v041",
+      "probe_variant": "baseline",
+      "depth_policy": "deep",
+      "case_id": "889c7087116427a2a8c65f06"
+    },
+    {
+      "problem_id": "K02",
+      "problem_sha256": "c365b846f96faf4146b5bf938172c97cdaac2f07a7333c6db28aadbeef64beb4",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "proof_K02_compact",
+      "task": "proof",
+      "repeat": 0,
+      "seed": 1729,
+      "calibration_version": 4,
+      "probe_contract": "causal-v041",
+      "probe_variant": "compact",
+      "depth_policy": "deep",
+      "case_id": "0c2c23949b8388bf71c4d616"
+    },
+    {
+      "problem_id": "K02",
+      "problem_sha256": "c365b846f96faf4146b5bf938172c97cdaac2f07a7333c6db28aadbeef64beb4",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "proof_K02_baseline",
+      "task": "proof",
+      "repeat": 0,
+      "seed": 1729,
+      "calibration_version": 4,
+      "probe_contract": "causal-v041",
+      "probe_variant": "baseline",
+      "depth_policy": "deep",
+      "case_id": "a7aa1a66f52d07bec1e92b7a"
+    },
+    {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_02_compact",
+      "task": "criterion",
+      "repeat": 0,
+      "seed": 1729,
+      "calibration_version": 4,
+      "probe_contract": "causal-v041",
+      "probe_variant": "compact",
+      "probe_atom": "Ca",
+      "case_id": "83a24f76670bb887f695c039"
+    },
+    {
+      "problem_id": "K03",
+      "problem_sha256": "da4e6f453a328261b9c3800b8190a2c513b0d1ce27b09052f0f92b722cafff04",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "proof_K03_baseline",
+      "task": "proof",
+      "repeat": 0,
+      "seed": 1729,
+      "calibration_version": 4,
+      "probe_contract": "causal-v041",
+      "probe_variant": "baseline",
+      "depth_policy": "deep",
+      "case_id": "5661058f6e0dbc2eb757b7de"
+    },
+    {
+      "problem_id": "K03",
+      "problem_sha256": "da4e6f453a328261b9c3800b8190a2c513b0d1ce27b09052f0f92b722cafff04",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "schema_K03_union",
+      "task": "schema",
+      "repeat": 0,
+      "seed": 1729,
+      "calibration_version": 4,
+      "probe_contract": "causal-v041",
+      "probe_variant": "union",
+      "view_scope": "final_node_only",
+      "provided_proof": {
+        "nodes": [
+          {
+            "node_id": "n0",
+            "atom": "Ea",
+            "rule_id": null,
+            "parent_node_ids": []
+          },
+          {
+            "node_id": "n1",
+            "atom": "Eb",
+            "rule_id": "k10",
+            "parent_node_ids": [
+              "n0"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "atom": "Ec",
+            "rule_id": "k17",
+            "parent_node_ids": [
+              "n1"
+            ]
+          },
+          {
+            "node_id": "n3",
+            "atom": "Ed",
+            "rule_id": "k24",
+            "parent_node_ids": [
+              "n1"
+            ]
+          },
+          {
+            "node_id": "n4",
+            "atom": "Ee",
+            "rule_id": "k00",
+            "parent_node_ids": [
+              "n2",
+              "n3"
+            ]
+          }
+        ],
+        "selected_final_node_id": "n4"
+      },
+      "case_id": "3a0cd898cd74dad27f41b09b"
+    },
+    {
+      "problem_id": "K11",
+      "problem_sha256": "9b5261a692096b5f81a3b85883bdf42362cb2879a0f0303b6b9e1fc20eca32f3",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_03_compact",
+      "task": "criterion",
+      "repeat": 0,
+      "seed": 1729,
+      "calibration_version": 4,
+      "probe_contract": "causal-v041",
+      "probe_variant": "compact",
+      "probe_atom": "Cc",
+      "case_id": "983de2e30805b31d713439b8"
+    }
+  ],
+  "assigned_calls": 12,
+  "reference_depths": {
+    "K01": {
+      "reachable": true,
+      "depths": [
+        1,
+        2
+      ],
+      "minimum": 1,
+      "maximum": 2,
+      "has_depth_contrast": true,
+      "definition": "simple_branch_paths_facts_are_terminal"
+    },
+    "K02": {
+      "reachable": true,
+      "depths": [
+        1,
+        3
+      ],
+      "minimum": 1,
+      "maximum": 3,
+      "has_depth_contrast": true,
+      "definition": "simple_branch_paths_facts_are_terminal"
+    },
+    "K03": {
+      "reachable": true,
+      "depths": [
+        1,
+        3
+      ],
+      "minimum": 1,
+      "maximum": 3,
+      "has_depth_contrast": true,
+      "definition": "simple_branch_paths_facts_are_terminal"
+    },
+    "K11": {
+      "reachable": true,
+      "depths": [
+        0
+      ],
+      "minimum": 0,
+      "maximum": 0,
+      "has_depth_contrast": false,
+      "definition": "simple_branch_paths_facts_are_terminal"
+    }
+  },
+  "warnings": [],
+  "scope": "paired_component_diagnostic_not_ADM_validation",
+  "design_note": "증명 대응은 프롬프트 묶음의 효과다. 예시/길이 각각의 효과를 분리했다고 하지 않는다. 도식 3조건은 messages가 같고 format만 다르다. schema_only는 호스트 강제다."
+}

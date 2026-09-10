@@ -1,0 +1,116 @@
+{
+  "method": "AST parse with Python 3.10 grammar; runtime tests are separately recorded",
+  "parser_python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "files": [
+    {
+      "file": "__init__.py",
+      "sha256": "7af4bb119f7d7d6904b1b3eb878aa9026775ace5126feebfae19fbe0952c1059",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "__main__.py",
+      "sha256": "8e03ddda1c0b632c806004ff300351382b2651a12651186d5f7f739188309196",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "audit.py",
+      "sha256": "9856eb445da5669fcc8a9f059d4c7ea20d2f9f0ce32cb0eb52b2860cc25e2834",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "calibration.py",
+      "sha256": "53a1f9e8bc9f1974881390f4c886641ce540497d385dccbbaaf80a10feb7036f",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "client.py",
+      "sha256": "20828bec12e77800883be188d3b4258dca033db00831c91dfec2764254babe27",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "common.py",
+      "sha256": "358cd6775c0e85d1fadbeb4615d0bbe11d5dd7cbf17e6f13aed706ace3a9a881",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "design.py",
+      "sha256": "09806b9c7bbd9c86ac1766ea009a5614644d655edd515d117e089632f83d8f77",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "diagnostics.py",
+      "sha256": "6d359fa6dd1f84362ed90cf84c393e4a0324d4de67e9a4ddc66d6dbceb375c8a",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "prompts.py",
+      "sha256": "1a2f1e3a21c7abfbf329f49cb8c8b846d3acafe09ea4a58e2289bdb2b109881c",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "prompts_v2.py",
+      "sha256": "e392d05b0807467826f7693f9ebc52f65dc9e8ec21bf9f84595c7353db4ba822",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "protocol.py",
+      "sha256": "c9d5a0c43fbcc8093433c52759ad9fc311c256b182680c0a003c23580d2a2f35",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "protocol_v2.py",
+      "sha256": "458546c3230adad7323b237ed9b34dab7f268d4385099cd56fce3271db39319a",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "report.py",
+      "sha256": "0c2fe6f6647feecfc7ef173abcdb2a70b770477b6e9edd5f71f6d31a56845eae",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "runner.py",
+      "sha256": "17af2e20ebab0efb1bf1155b6e6abf1bb9524e42125646d0b584c1c64a6300df",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "selfcheck.py",
+      "sha256": "b432eb5125c721ed43f851374a294231a123b8bff4a9028fafb93a4213c25ef8",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "tests/__init__.py",
+      "sha256": "dc9b3bf1abec69365ebd443fcbcecb7258086604be59c21c14a856754d627666",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 0
+    },
+    {
+      "file": "tests/test_local_llm.py",
+      "sha256": "63dcc7da00af1d89a1b275842eebaeb715cb51d035177f13a2865e3c56683fab",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 39
+    },
+    {
+      "file": "tests/test_v02.py",
+      "sha256": "783496bad9b6acc84f33a4e5b0267731141293fc259a9034f01538983ec35f73",
+      "ast_parse_python_3_10_grammar": "PASS",
+      "authored_test_methods": 24
+    }
+  ],
+  "python_files": 18,
+  "scope_ko": "Python 3.10 문법으로 정적 해석했다. 실제 실행 시험은 Linux/Python 3.13에서 별도 수행했다. Windows 실행 검증이 아니다."
+}

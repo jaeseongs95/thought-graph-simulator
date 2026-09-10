@@ -1,0 +1,1949 @@
+{
+  "profile": "full",
+  "repeats": 3,
+  "seed": 1729,
+  "problems": [
+    {
+      "id": "transfer_01",
+      "facts": [
+        "Atom02",
+        "Atom03"
+      ],
+      "rules": [
+        {
+          "id": "rule05",
+          "premises": [
+            "Atom01"
+          ],
+          "conclusion": "Atom06"
+        },
+        {
+          "id": "rule01",
+          "premises": [
+            "Atom03"
+          ],
+          "conclusion": "Atom05"
+        },
+        {
+          "id": "rule04",
+          "premises": [
+            "Atom04"
+          ],
+          "conclusion": "Atom01"
+        },
+        {
+          "id": "rule02",
+          "premises": [
+            "Atom02",
+            "Atom05"
+          ],
+          "conclusion": "Atom04"
+        },
+        {
+          "id": "rule03",
+          "premises": [
+            "Atom02"
+          ],
+          "conclusion": "Atom07"
+        },
+        {
+          "id": "rule06",
+          "premises": [
+            "Atom07",
+            "Atom05"
+          ],
+          "conclusion": "Atom06"
+        }
+      ],
+      "goal": "Atom06"
+    },
+    {
+      "id": "transfer_02",
+      "facts": [
+        "Atom05",
+        "Atom02"
+      ],
+      "rules": [
+        {
+          "id": "rule02",
+          "premises": [
+            "Atom05"
+          ],
+          "conclusion": "Atom01"
+        },
+        {
+          "id": "rule03",
+          "premises": [
+            "Atom03"
+          ],
+          "conclusion": "Atom06"
+        },
+        {
+          "id": "rule05",
+          "premises": [
+            "Atom02",
+            "Atom01"
+          ],
+          "conclusion": "Atom04"
+        },
+        {
+          "id": "rule04",
+          "premises": [
+            "Atom01"
+          ],
+          "conclusion": "Atom07"
+        },
+        {
+          "id": "rule01",
+          "premises": [
+            "Atom07",
+            "Atom04"
+          ],
+          "conclusion": "Atom06"
+        },
+        {
+          "id": "rule06",
+          "premises": [
+            "Atom02",
+            "Atom05"
+          ],
+          "conclusion": "Atom03"
+        }
+      ],
+      "goal": "Atom06"
+    },
+    {
+      "id": "transfer_03",
+      "facts": [
+        "Atom08",
+        "Atom07"
+      ],
+      "rules": [
+        {
+          "id": "rule01",
+          "premises": [
+            "Atom01"
+          ],
+          "conclusion": "Atom02"
+        },
+        {
+          "id": "rule04",
+          "premises": [
+            "Atom07",
+            "Atom08"
+          ],
+          "conclusion": "Atom03"
+        },
+        {
+          "id": "rule02",
+          "premises": [
+            "Atom06"
+          ],
+          "conclusion": "Atom04"
+        },
+        {
+          "id": "rule05",
+          "premises": [
+            "Atom04"
+          ],
+          "conclusion": "Atom06"
+        },
+        {
+          "id": "rule07",
+          "premises": [
+            "Atom04",
+            "Atom08"
+          ],
+          "conclusion": "Atom01"
+        },
+        {
+          "id": "rule08",
+          "premises": [
+            "Atom07"
+          ],
+          "conclusion": "Atom06"
+        },
+        {
+          "id": "rule03",
+          "premises": [
+            "Atom03"
+          ],
+          "conclusion": "Atom09"
+        },
+        {
+          "id": "rule09",
+          "premises": [
+            "Atom09"
+          ],
+          "conclusion": "Atom02"
+        },
+        {
+          "id": "rule06",
+          "premises": [
+            "Atom07"
+          ],
+          "conclusion": "Atom05"
+        }
+      ],
+      "goal": "Atom02"
+    }
+  ],
+  "roles": [
+    {
+      "kind": "neutral",
+      "A": null,
+      "D_policy": null,
+      "M": null
+    },
+    {
+      "kind": "directed",
+      "A": "instance",
+      "D_policy": "shallow",
+      "M": 0
+    },
+    {
+      "kind": "directed",
+      "A": "instance",
+      "D_policy": "shallow",
+      "M": 1
+    },
+    {
+      "kind": "directed",
+      "A": "instance",
+      "D_policy": "shallow",
+      "M": 2
+    },
+    {
+      "kind": "directed",
+      "A": "instance",
+      "D_policy": "deep",
+      "M": 0
+    },
+    {
+      "kind": "directed",
+      "A": "instance",
+      "D_policy": "deep",
+      "M": 1
+    },
+    {
+      "kind": "directed",
+      "A": "instance",
+      "D_policy": "deep",
+      "M": 2
+    },
+    {
+      "kind": "directed",
+      "A": "schema",
+      "D_policy": "shallow",
+      "M": 0
+    },
+    {
+      "kind": "directed",
+      "A": "schema",
+      "D_policy": "shallow",
+      "M": 1
+    },
+    {
+      "kind": "directed",
+      "A": "schema",
+      "D_policy": "shallow",
+      "M": 2
+    },
+    {
+      "kind": "directed",
+      "A": "schema",
+      "D_policy": "deep",
+      "M": 0
+    },
+    {
+      "kind": "directed",
+      "A": "schema",
+      "D_policy": "deep",
+      "M": 1
+    },
+    {
+      "kind": "directed",
+      "A": "schema",
+      "D_policy": "deep",
+      "M": 2
+    }
+  ],
+  "cases": [
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 0
+      },
+      "role_id": "instance_deep_M0",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "909b23f6ceb722d93ccb96e2"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 2
+      },
+      "role_id": "schema_deep_M2",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "7cf52e1f85f4b4e0c7251fab"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 2
+      },
+      "role_id": "instance_deep_M2",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "1835305c4175004517ef10a8"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 2
+      },
+      "role_id": "schema_shallow_M2",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "a9c63c370dc9aa84da674b02"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 2
+      },
+      "role_id": "schema_deep_M2",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "ad6fcac582d45a2deec1f68a"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 1
+      },
+      "role_id": "instance_deep_M1",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "1a148f4ffc46614c7ef4ca97"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 0
+      },
+      "role_id": "instance_shallow_M0",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "3e8350ebbf398b5762843a6f"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 2
+      },
+      "role_id": "instance_deep_M2",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "a89ad88b225eac2674b5b628"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 2
+      },
+      "role_id": "instance_shallow_M2",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "68eb1cc4df744bf1c03a05ab"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 0
+      },
+      "role_id": "schema_shallow_M0",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "737e11602bae15f6c0a8e374"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 1
+      },
+      "role_id": "schema_shallow_M1",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "bf2c23d63b1ca933216067b7"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 1
+      },
+      "role_id": "instance_shallow_M1",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "e5733d9af4f2da267208d609"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 1
+      },
+      "role_id": "schema_deep_M1",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "133663b8903f2509469326c0"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 1
+      },
+      "role_id": "schema_deep_M1",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "1e3857faadc57d585ccd8b8b"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 2
+      },
+      "role_id": "schema_deep_M2",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "dc2869be065caeaf53bd52e3"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 0
+      },
+      "role_id": "instance_deep_M0",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "964a2a0bab186d688fd118b3"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 0
+      },
+      "role_id": "schema_shallow_M0",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "772a0012386fe704ab4d0b6c"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "neutral",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "fef0f771345fae325c13e79c"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 0
+      },
+      "role_id": "instance_shallow_M0",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "ad1c867268665825f6512e61"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "neutral",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "1ba2dba432208638e0dbd586"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 0
+      },
+      "role_id": "instance_shallow_M0",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "f73ffb5fec66f8a81a483ef4"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 0
+      },
+      "role_id": "schema_deep_M0",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "4441a0d7f107a67062148a9b"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 0
+      },
+      "role_id": "schema_shallow_M0",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "71a4676480210224920f5da2"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 1
+      },
+      "role_id": "instance_shallow_M1",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "f1df695ec13ef8c17a055cdc"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 2
+      },
+      "role_id": "instance_shallow_M2",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "5b7df1d2b125a3d900c31ac8"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "neutral",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "15ea84d2e7413198c26de933"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 1
+      },
+      "role_id": "schema_shallow_M1",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "3c85dad5eabe17817c71a808"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 2
+      },
+      "role_id": "schema_shallow_M2",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "5b199578a9a754bf10613535"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 0
+      },
+      "role_id": "schema_deep_M0",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "b31da8be9747104770ebb0be"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 0
+      },
+      "role_id": "instance_deep_M0",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "c20bcbbaafcb6a78cccb22e5"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 2
+      },
+      "role_id": "instance_shallow_M2",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "58ae6bb9d9770178b86532b3"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 1
+      },
+      "role_id": "schema_shallow_M1",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "c9eaa77a52174eec72830ce4"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 2
+      },
+      "role_id": "instance_deep_M2",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "ffdc7eb2464b0a72e48cf86d"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 1
+      },
+      "role_id": "instance_deep_M1",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "87c6544d04163425911529a2"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 0
+      },
+      "role_id": "schema_deep_M0",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "3ee508be14a0696f5c6a5720"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 1
+      },
+      "role_id": "schema_deep_M1",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "b6e2194a25e7293c80235269"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 1
+      },
+      "role_id": "instance_deep_M1",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "88b1a31b23822e266d311500"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 2
+      },
+      "role_id": "schema_shallow_M2",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "1d2cfcc7069fb9496f18d832"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 1
+      },
+      "role_id": "instance_shallow_M1",
+      "repeat": 0,
+      "seed": 1729,
+      "case_id": "2dfe7b9013a0ed92fa426c54"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 0
+      },
+      "role_id": "instance_deep_M0",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "d48d9a3e8dd3b29280fbae31"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 1
+      },
+      "role_id": "schema_shallow_M1",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "9f134c3ca39fc0bae8277cfb"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 0
+      },
+      "role_id": "schema_shallow_M0",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "1e78fc98798b1d2d70da1f8c"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 1
+      },
+      "role_id": "schema_shallow_M1",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "13f7c3d2d344549d253eb4d1"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 2
+      },
+      "role_id": "schema_shallow_M2",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "a39ad50ca62ba5407067e87f"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 1
+      },
+      "role_id": "schema_deep_M1",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "a8f5ea44d34091600e7f33d6"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "neutral",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "428451e2a007ed43d37ce6ad"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 0
+      },
+      "role_id": "instance_deep_M0",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "fa671c6d93cf23cea578e64f"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 2
+      },
+      "role_id": "instance_deep_M2",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "05e5acb03447c56d94921779"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 2
+      },
+      "role_id": "instance_shallow_M2",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "8d8df8767b6dc2da302d73f0"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 1
+      },
+      "role_id": "instance_deep_M1",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "7d4244b02292986ed131d041"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 2
+      },
+      "role_id": "schema_deep_M2",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "c04dfca2b767e517af4b0a18"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 1
+      },
+      "role_id": "instance_shallow_M1",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "6a65ac1f221686c5c8a9e9cf"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 2
+      },
+      "role_id": "instance_shallow_M2",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "638871771f7518006db96c84"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "neutral",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "1c7e776b34fefc6a64b17520"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 0
+      },
+      "role_id": "schema_shallow_M0",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "ddc2f529b593cdf840669e27"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 1
+      },
+      "role_id": "schema_deep_M1",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "2aa0fe2d3a7634bb7b2b9817"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 0
+      },
+      "role_id": "instance_shallow_M0",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "4abae9762d82ac95212596bd"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 1
+      },
+      "role_id": "instance_shallow_M1",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "f7ab05687ed1a6d659620da3"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 1
+      },
+      "role_id": "instance_deep_M1",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "b310d6a9b82cb6b52507246b"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 1
+      },
+      "role_id": "schema_deep_M1",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "6f52d7052ad0739298b08fe5"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 2
+      },
+      "role_id": "schema_deep_M2",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "8c0ef55ec05149a6f678f349"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 1
+      },
+      "role_id": "schema_shallow_M1",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "d6fde723b0a0c8c670314a7d"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 0
+      },
+      "role_id": "instance_shallow_M0",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "ea0fe8d66d4347dcd4efc143"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 2
+      },
+      "role_id": "instance_deep_M2",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "ad32885b0f9a69769e92d033"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "neutral",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "b96686d89794817612c4bf41"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 2
+      },
+      "role_id": "instance_deep_M2",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "ff40a4ab50ec515eda38baf6"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 2
+      },
+      "role_id": "schema_deep_M2",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "e52f223679bd6d42bccd9d3c"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 2
+      },
+      "role_id": "schema_shallow_M2",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "d6d3bcc0ee8a5bd954a9520b"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 2
+      },
+      "role_id": "schema_shallow_M2",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "40327d08c3da3eaa0e68aa20"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 0
+      },
+      "role_id": "schema_deep_M0",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "1801cfc8691669ce5d194a43"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 1
+      },
+      "role_id": "instance_shallow_M1",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "47c19f7e6e31e662a40c0ce5"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 0
+      },
+      "role_id": "schema_deep_M0",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "61d4a573bd7e4ba84d1caed8"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 0
+      },
+      "role_id": "schema_shallow_M0",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "1a82502224e83924cc22eb8d"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 0
+      },
+      "role_id": "schema_deep_M0",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "609d47f9489ab4466e2acae8"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 2
+      },
+      "role_id": "instance_shallow_M2",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "3a1943723860a705b841c1ef"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 0
+      },
+      "role_id": "instance_deep_M0",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "ff8d2e026e6abdb9f216fcba"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 0
+      },
+      "role_id": "instance_shallow_M0",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "c8e7e16559c5ac1bb693374f"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 1
+      },
+      "role_id": "instance_deep_M1",
+      "repeat": 1,
+      "seed": 1730,
+      "case_id": "5ff58cf5ecf94ece34a0a460"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 2
+      },
+      "role_id": "instance_shallow_M2",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "a5f66c698c8354cebd3b9598"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 1
+      },
+      "role_id": "instance_deep_M1",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "c9fe106db5ac37352968e2e7"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 0
+      },
+      "role_id": "instance_deep_M0",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "f107af75f1b6e32e6eef905a"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 0
+      },
+      "role_id": "instance_shallow_M0",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "28700ac0a3f14d52209c30ca"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 2
+      },
+      "role_id": "instance_shallow_M2",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "829279c0dcdbf546c0e964a9"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 0
+      },
+      "role_id": "schema_deep_M0",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "58917593b4504b84f7dad76d"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 2
+      },
+      "role_id": "instance_deep_M2",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "08ffed5c41216a44a9647bbf"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 2
+      },
+      "role_id": "instance_deep_M2",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "ef3704715c06ff645e507603"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 2
+      },
+      "role_id": "schema_deep_M2",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "3c3a709f40a53057b1089515"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 1
+      },
+      "role_id": "instance_shallow_M1",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "e1313d5865ce39ed02fa03a2"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 0
+      },
+      "role_id": "schema_shallow_M0",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "f896bdf61a3ef9c104fe1d11"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 0
+      },
+      "role_id": "instance_deep_M0",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "b7e80dab42a3eb0ade214e76"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 0
+      },
+      "role_id": "schema_deep_M0",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "ffd88bfa6ef4ffc6091e3628"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "neutral",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "d8e453373156c1b25083ca7e"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "neutral",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "f250cd1532019868e316620c"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 1
+      },
+      "role_id": "schema_shallow_M1",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "483fc2179f3bc567f5feeb25"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 2
+      },
+      "role_id": "schema_deep_M2",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "495dc85db997c5f21fb2667d"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 1
+      },
+      "role_id": "instance_deep_M1",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "ed1aace5e56fe4fe63d93505"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 1
+      },
+      "role_id": "instance_shallow_M1",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "bb43393703cf22ca528f3092"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 1
+      },
+      "role_id": "schema_shallow_M1",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "0301a6a1a7ed14d6bf6eff00"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 1
+      },
+      "role_id": "schema_deep_M1",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "65ea3defa9d7f0b478f3681c"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 0
+      },
+      "role_id": "instance_shallow_M0",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "0646745117f181b6c8205c28"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 0
+      },
+      "role_id": "instance_deep_M0",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "2fa0f666d75e4a36d6a77dad"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 1
+      },
+      "role_id": "schema_shallow_M1",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "7e05b3a83e9206b77277e355"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 2
+      },
+      "role_id": "schema_shallow_M2",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "89a118e4d654b561473dcb95"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 2
+      },
+      "role_id": "schema_shallow_M2",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "1f846483d39f77030113b719"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 1
+      },
+      "role_id": "schema_deep_M1",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "e1878494516d06a5adfd2da9"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "neutral",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "bfef369023bde998165f7a12"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 1
+      },
+      "role_id": "schema_deep_M1",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "3ef3db73afecf2b264c1f058"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 0
+      },
+      "role_id": "schema_deep_M0",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "304655f773cfbb8ebb5eb9cd"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 2
+      },
+      "role_id": "instance_shallow_M2",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "fcb6d00de30ba74bf3543443"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 0
+      },
+      "role_id": "schema_shallow_M0",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "8a874eb2be0fc5c5357a3df2"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 0
+      },
+      "role_id": "schema_shallow_M0",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "592fff98ba853f2714d2738a"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 1
+      },
+      "role_id": "instance_shallow_M1",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "7e5ccc99b4e180bd2266fdff"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "deep",
+        "M": 2
+      },
+      "role_id": "schema_deep_M2",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "5d5133daa6a8388ea5c2f0e2"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "shallow",
+        "M": 0
+      },
+      "role_id": "instance_shallow_M0",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "199c9b216507c89024218fd2"
+    },
+    {
+      "problem_id": "transfer_03",
+      "problem_sha256": "6a7320b22989f2e471427f08010a4f3df602ca6abae258bf09ad51d381181827",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 2
+      },
+      "role_id": "instance_deep_M2",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "b0f611138710e85850bbaa36"
+    },
+    {
+      "problem_id": "transfer_02",
+      "problem_sha256": "774f9ba6bd0df450047c5043453395202f788651da768329d5940437d03374db",
+      "role": {
+        "kind": "directed",
+        "A": "schema",
+        "D_policy": "shallow",
+        "M": 2
+      },
+      "role_id": "schema_shallow_M2",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "7b406ec8c38ef7c4e6dd1aab"
+    },
+    {
+      "problem_id": "transfer_01",
+      "problem_sha256": "046d60e41dbb9771a189b407ad50401031a1d62d5b70e0f7acae4678e153da6e",
+      "role": {
+        "kind": "directed",
+        "A": "instance",
+        "D_policy": "deep",
+        "M": 1
+      },
+      "role_id": "instance_deep_M1",
+      "repeat": 2,
+      "seed": 1731,
+      "case_id": "1a0b8889119dc8a1ba38b5ed"
+    }
+  ],
+  "assigned_calls": 117,
+  "reference_depths": {
+    "transfer_01": {
+      "reachable": true,
+      "depths": [
+        2,
+        4
+      ],
+      "minimum": 2,
+      "maximum": 4,
+      "has_depth_contrast": true,
+      "definition": "simple_branch_paths_facts_are_terminal"
+    },
+    "transfer_02": {
+      "reachable": true,
+      "depths": [
+        2,
+        3
+      ],
+      "minimum": 2,
+      "maximum": 3,
+      "has_depth_contrast": true,
+      "definition": "simple_branch_paths_facts_are_terminal"
+    },
+    "transfer_03": {
+      "reachable": true,
+      "depths": [
+        3,
+        4
+      ],
+      "minimum": 3,
+      "maximum": 4,
+      "has_depth_contrast": true,
+      "definition": "simple_branch_paths_facts_are_terminal"
+    }
+  },
+  "warnings": [],
+  "scope": "fixed_goal_formal_trace_role_following_not_latent_cognition"
+}
