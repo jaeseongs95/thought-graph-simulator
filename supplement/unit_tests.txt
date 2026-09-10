@@ -1,0 +1,45 @@
+test_01_identical (test_reference_router.RouterTests.test_01_identical) ... ok
+test_02_disjoint (test_reference_router.RouterTests.test_02_disjoint) ... ok
+test_03_symmetry (test_reference_router.RouterTests.test_03_symmetry) ... ok
+test_04_empty_distribution (test_reference_router.RouterTests.test_04_empty_distribution) ... ok
+test_05_negative_distribution (test_reference_router.RouterTests.test_05_negative_distribution) ... ok
+test_06_nonnormalized (test_reference_router.RouterTests.test_06_nonnormalized) ... ok
+test_07_nan (test_reference_router.RouterTests.test_07_nan) ... ok
+test_08_alphabet_mismatch (test_reference_router.RouterTests.test_08_alphabet_mismatch) ... ok
+test_09_empty_admissible (test_reference_router.RouterTests.test_09_empty_admissible) ... ok
+test_10_forbidden_excluded (test_reference_router.RouterTests.test_10_forbidden_excluded) ... ok
+test_11_zero_weight_exact_fallback (test_reference_router.RouterTests.test_11_zero_weight_exact_fallback) ... ok
+test_12_untrusted_ignores_missing (test_reference_router.RouterTests.test_12_untrusted_ignores_missing) ... ok
+test_13_active_requires_distribution (test_reference_router.RouterTests.test_13_active_requires_distribution) ... ok
+test_14_ties_deterministic (test_reference_router.RouterTests.test_14_ties_deterministic) ... ok
+test_15_change_of_choice (test_reference_router.RouterTests.test_15_change_of_choice) ... ok
+test_16_margin_preserved (test_reference_router.RouterTests.test_16_margin_preserved) ... ok
+test_17_duplicate_id (test_reference_router.RouterTests.test_17_duplicate_id) ... ok
+test_18_negative_weight (test_reference_router.RouterTests.test_18_negative_weight) ... ok
+test_19_randomized_surrogate_bound (test_reference_router.RouterTests.test_19_randomized_surrogate_bound) ... ok
+test_20_input_order_invariance (test_reference_router.RouterTests.test_20_input_order_invariance) ... ok
+test_21_permission_type (test_reference_router.RouterTests.test_21_permission_type) ... ok
+test_22_trust_type (test_reference_router.RouterTests.test_22_trust_type) ... ok
+test_23_nonfinite_weights (test_reference_router.RouterTests.test_23_nonfinite_weights) ... ok
+test_24_nonnumeric_weights (test_reference_router.RouterTests.test_24_nonnumeric_weights) ... ok
+test_25_invalid_utilities (test_reference_router.RouterTests.test_25_invalid_utilities) ... ok
+test_26_blank_id (test_reference_router.RouterTests.test_26_blank_id) ... ok
+test_27_missing_prior (test_reference_router.RouterTests.test_27_missing_prior) ... ok
+test_28_missing_one_effect (test_reference_router.RouterTests.test_28_missing_one_effect) ... ok
+test_29_invalid_prior_ignored_on_fallback (test_reference_router.RouterTests.test_29_invalid_prior_ignored_on_fallback) ... ok
+test_30_invalid_disallowed_effect_ignored (test_reference_router.RouterTests.test_30_invalid_disallowed_effect_ignored) ... ok
+test_31_subnormal_probability (test_reference_router.RouterTests.test_31_subnormal_probability) ... ok
+test_32_score_overflow_rejected (test_reference_router.RouterTests.test_32_score_overflow_rejected) ... ok
+test_33_probability_type (test_reference_router.RouterTests.test_33_probability_type) ... ok
+test_34_probability_overflow (test_reference_router.RouterTests.test_34_probability_overflow) ... ok
+test_35_canonical_alphabet (test_reference_router.RouterTests.test_35_canonical_alphabet) ... ok
+test_36_full_alphabet_equivalence (test_reference_router.RouterTests.test_36_full_alphabet_equivalence) ... ok
+test_37_exact_score_fallback (test_reference_router.RouterTests.test_37_exact_score_fallback) ... ok
+test_38_empty_options (test_reference_router.RouterTests.test_38_empty_options) ... ok
+test_39_wrong_option_object (test_reference_router.RouterTests.test_39_wrong_option_object) ... ok
+test_40_no_silent_normalization (test_reference_router.RouterTests.test_40_no_silent_normalization) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 0.204s
+
+OK

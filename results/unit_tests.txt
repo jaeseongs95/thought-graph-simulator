@@ -1,0 +1,44 @@
+test_a_change_preserves_proof (test_adm.ADMTests.test_a_change_preserves_proof) ... ok
+test_all_36_conditions (test_adm.ADMTests.test_all_36_conditions) ... ok
+test_all_negative_controls (test_adm.ADMTests.test_all_negative_controls) ... ok
+test_alpha_renaming_schema_is_invariant (test_adm.ADMTests.test_alpha_renaming_schema_is_invariant) ... ok
+test_bad_schema_binding (test_adm.ADMTests.test_bad_schema_binding) ... ok
+test_bad_shapes_fail_closed (test_adm.ADMTests.test_bad_shapes_fail_closed) ... ok
+test_cli_verify_exit_codes (test_adm.ADMTests.test_cli_verify_exit_codes) ... ok
+test_criterion_really_distinguishes_fixed_answer_from_proof (test_adm.ADMTests.test_criterion_really_distinguishes_fixed_answer_from_proof) ... ok
+test_cyclic_rules_cannot_manufacture_proof (test_adm.ADMTests.test_cyclic_rules_cannot_manufacture_proof) ... ok
+test_d_is_actual_path_depth (test_adm.ADMTests.test_d_is_actual_path_depth) ... ok
+test_dangling_parent (test_adm.ADMTests.test_dangling_parent) ... ok
+test_depth_is_not_node_count (test_adm.ADMTests.test_depth_is_not_node_count) ... ok
+test_deterministic_replay (test_adm.ADMTests.test_deterministic_replay) ... ok
+test_duplicate_parent (test_adm.ADMTests.test_duplicate_parent) ... ok
+test_duplicate_review (test_adm.ADMTests.test_duplicate_review) ... ok
+test_empty_meta_evidence (test_adm.ADMTests.test_empty_meta_evidence) ... ok
+test_empty_trace (test_adm.ADMTests.test_empty_trace) ... ok
+test_extra_schema_assumption_not_allowed (test_adm.ADMTests.test_extra_schema_assumption_not_allowed) ... ok
+test_fact_goal_is_supported (test_adm.ADMTests.test_fact_goal_is_supported) ... ok
+test_fixed_goal_cannot_be_forged (test_adm.ADMTests.test_fixed_goal_cannot_be_forged) ... ok
+test_fixed_seed_generated_problem_checks (test_adm.ADMTests.test_fixed_seed_generated_problem_checks) ... ok
+test_invalid_final_node (test_adm.ADMTests.test_invalid_final_node) ... ok
+test_invalid_problem_rejected (test_adm.ADMTests.test_invalid_problem_rejected) ... ok
+test_m_change_preserves_proof_and_views (test_adm.ADMTests.test_m_change_preserves_proof_and_views) ... ok
+test_m_level_is_separate_from_review_correctness (test_adm.ADMTests.test_m_level_is_separate_from_review_correctness) ... ok
+test_meta_boolean_is_not_numeric_label (test_adm.ADMTests.test_meta_boolean_is_not_numeric_label) ... ok
+test_meta_two_need_not_contain_meta_one (test_adm.ADMTests.test_meta_two_need_not_contain_meta_one) ... ok
+test_missing_problem_binding (test_adm.ADMTests.test_missing_problem_binding) ... ok
+test_no_network_or_llm_dependencies (test_adm.ADMTests.test_no_network_or_llm_dependencies) ... ok
+test_node_id_renaming_is_invariant (test_adm.ADMTests.test_node_id_renaming_is_invariant) ... ok
+test_non_bijective_schema_binding (test_adm.ADMTests.test_non_bijective_schema_binding) ... ok
+test_schema_clause_order_is_invariant (test_adm.ADMTests.test_schema_clause_order_is_invariant) ... ok
+test_summary_and_artifacts (test_adm.ADMTests.test_summary_and_artifacts) ... ok
+test_unknown_meta_target (test_adm.ADMTests.test_unknown_meta_target) ... ok
+test_unknown_top_level_fields (test_adm.ADMTests.test_unknown_top_level_fields) ... ok
+test_unreachable_goal_raises_instead_of_appending_answer (test_adm.ADMTests.test_unreachable_goal_raises_instead_of_appending_answer) ... ok
+test_unused_valid_fact_cannot_inflate_graph (test_adm.ADMTests.test_unused_valid_fact_cannot_inflate_graph) ... ok
+test_version_bool_not_int (test_adm.ADMTests.test_version_bool_not_int) ... ok
+test_wrong_instance_representation (test_adm.ADMTests.test_wrong_instance_representation) ... ok
+
+----------------------------------------------------------------------
+Ran 39 tests in 1.928s
+
+OK

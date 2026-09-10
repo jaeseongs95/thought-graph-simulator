@@ -1,0 +1,566 @@
+[
+  {
+    "problem_id": "chain_2",
+    "axis": "A",
+    "context": [
+      "shallow",
+      0
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_2",
+    "axis": "A",
+    "context": [
+      "shallow",
+      1
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_2",
+    "axis": "A",
+    "context": [
+      "shallow",
+      2
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_2",
+    "axis": "A",
+    "context": [
+      "deep",
+      0
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_2",
+    "axis": "A",
+    "context": [
+      "deep",
+      1
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_2",
+    "axis": "A",
+    "context": [
+      "deep",
+      2
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_2",
+    "axis": "D",
+    "context": [
+      "instance",
+      0
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_2",
+    "axis": "D",
+    "context": [
+      "instance",
+      1
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_2",
+    "axis": "D",
+    "context": [
+      "instance",
+      2
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_2",
+    "axis": "D",
+    "context": [
+      "schema",
+      0
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_2",
+    "axis": "D",
+    "context": [
+      "schema",
+      1
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_2",
+    "axis": "D",
+    "context": [
+      "schema",
+      2
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_2",
+    "axis": "M",
+    "context": [
+      "instance",
+      "shallow",
+      0
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_2",
+    "axis": "M",
+    "context": [
+      "instance",
+      "shallow",
+      1
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_2",
+    "axis": "M",
+    "context": [
+      "instance",
+      "deep",
+      0
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_2",
+    "axis": "M",
+    "context": [
+      "instance",
+      "deep",
+      1
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_2",
+    "axis": "M",
+    "context": [
+      "schema",
+      "shallow",
+      0
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_2",
+    "axis": "M",
+    "context": [
+      "schema",
+      "shallow",
+      1
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_2",
+    "axis": "M",
+    "context": [
+      "schema",
+      "deep",
+      0
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_2",
+    "axis": "M",
+    "context": [
+      "schema",
+      "deep",
+      1
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_3",
+    "axis": "A",
+    "context": [
+      "shallow",
+      0
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_3",
+    "axis": "A",
+    "context": [
+      "shallow",
+      1
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_3",
+    "axis": "A",
+    "context": [
+      "shallow",
+      2
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_3",
+    "axis": "A",
+    "context": [
+      "deep",
+      0
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_3",
+    "axis": "A",
+    "context": [
+      "deep",
+      1
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_3",
+    "axis": "A",
+    "context": [
+      "deep",
+      2
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_3",
+    "axis": "D",
+    "context": [
+      "instance",
+      0
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_3",
+    "axis": "D",
+    "context": [
+      "instance",
+      1
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_3",
+    "axis": "D",
+    "context": [
+      "instance",
+      2
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_3",
+    "axis": "D",
+    "context": [
+      "schema",
+      0
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_3",
+    "axis": "D",
+    "context": [
+      "schema",
+      1
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_3",
+    "axis": "D",
+    "context": [
+      "schema",
+      2
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_3",
+    "axis": "M",
+    "context": [
+      "instance",
+      "shallow",
+      0
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_3",
+    "axis": "M",
+    "context": [
+      "instance",
+      "shallow",
+      1
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_3",
+    "axis": "M",
+    "context": [
+      "instance",
+      "deep",
+      0
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_3",
+    "axis": "M",
+    "context": [
+      "instance",
+      "deep",
+      1
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_3",
+    "axis": "M",
+    "context": [
+      "schema",
+      "shallow",
+      0
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_3",
+    "axis": "M",
+    "context": [
+      "schema",
+      "shallow",
+      1
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_3",
+    "axis": "M",
+    "context": [
+      "schema",
+      "deep",
+      0
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "chain_3",
+    "axis": "M",
+    "context": [
+      "schema",
+      "deep",
+      1
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "conjunction_4",
+    "axis": "A",
+    "context": [
+      "shallow",
+      0
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "conjunction_4",
+    "axis": "A",
+    "context": [
+      "shallow",
+      1
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "conjunction_4",
+    "axis": "A",
+    "context": [
+      "shallow",
+      2
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "conjunction_4",
+    "axis": "A",
+    "context": [
+      "deep",
+      0
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "conjunction_4",
+    "axis": "A",
+    "context": [
+      "deep",
+      1
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "conjunction_4",
+    "axis": "A",
+    "context": [
+      "deep",
+      2
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "conjunction_4",
+    "axis": "D",
+    "context": [
+      "instance",
+      0
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "conjunction_4",
+    "axis": "D",
+    "context": [
+      "instance",
+      1
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "conjunction_4",
+    "axis": "D",
+    "context": [
+      "instance",
+      2
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "conjunction_4",
+    "axis": "D",
+    "context": [
+      "schema",
+      0
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "conjunction_4",
+    "axis": "D",
+    "context": [
+      "schema",
+      1
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "conjunction_4",
+    "axis": "D",
+    "context": [
+      "schema",
+      2
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "conjunction_4",
+    "axis": "M",
+    "context": [
+      "instance",
+      "shallow",
+      0
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "conjunction_4",
+    "axis": "M",
+    "context": [
+      "instance",
+      "shallow",
+      1
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "conjunction_4",
+    "axis": "M",
+    "context": [
+      "instance",
+      "deep",
+      0
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "conjunction_4",
+    "axis": "M",
+    "context": [
+      "instance",
+      "deep",
+      1
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "conjunction_4",
+    "axis": "M",
+    "context": [
+      "schema",
+      "shallow",
+      0
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "conjunction_4",
+    "axis": "M",
+    "context": [
+      "schema",
+      "shallow",
+      1
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "conjunction_4",
+    "axis": "M",
+    "context": [
+      "schema",
+      "deep",
+      0
+    ],
+    "pass": true
+  },
+  {
+    "problem_id": "conjunction_4",
+    "axis": "M",
+    "context": [
+      "schema",
+      "deep",
+      1
+    ],
+    "pass": true
+  }
+]

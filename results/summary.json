@@ -1,0 +1,15 @@
+{
+  "problems": 3,
+  "conditions": 36,
+  "generation_calls": 75,
+  "primary_generation_calls": 72,
+  "valid_traces": 36,
+  "exact_repeats": 36,
+  "contrasts": 60,
+  "contrasts_passed": 60,
+  "negative_controls": 42,
+  "negative_controls_rejected": 42,
+  "role_compliance": true,
+  "scope": "deterministic_specification_validation_not_llm_evidence",
+  "pass": true
+}

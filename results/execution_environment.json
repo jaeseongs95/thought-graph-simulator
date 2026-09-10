@@ -1,0 +1,19 @@
+{
+  "executed_date": "2026-09-10",
+  "python": "3.13.5",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "unit_test_methods": 39,
+  "unit_tests_passed": 39,
+  "seeded_problem_cases_in_unit_test": 40,
+  "seeded_role_checks_in_unit_test": 480,
+  "python_3_10_syntax_parse": "pass",
+  "python_3_10_runtime_tested": false,
+  "windows_runtime_tested": false,
+  "gpu_used": false,
+  "llm_calls": 0,
+  "network_calls_by_runtime": 0,
+  "external_runtime_dependencies": [],
+  "source_sha256": "24542551351225d4a2ed0e65c95cfca3d850e7bbd102439f1f3662d2eefcfad8",
+  "source_lines": 460,
+  "document_pages": 10
+}

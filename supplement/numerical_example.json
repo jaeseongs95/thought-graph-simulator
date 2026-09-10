@@ -1,0 +1,33 @@
+{
+  "release_version": "1.0",
+  "scope": "constructed arithmetic example; not LLM results",
+  "alphabet": [
+    "pass_A1_D2_M0",
+    "pass_A1_D1_M1",
+    "reject"
+  ],
+  "omitted_zero_mass_categories": 90,
+  "strength": 0.2,
+  "js_derive_vs_review_prior": 0.447067498701919,
+  "baseline": {
+    "selected": "derive",
+    "scores": {
+      "derive": 0.6,
+      "review": 0.56
+    }
+  },
+  "tts_active": {
+    "selected": "review",
+    "scores": {
+      "derive": 0.5105865002596162,
+      "review": 0.56
+    }
+  },
+  "opposite_prior": {
+    "selected": "derive",
+    "scores": {
+      "derive": 0.6,
+      "review": 0.47058650025961624
+    }
+  }
+}

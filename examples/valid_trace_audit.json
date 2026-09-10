@@ -1,0 +1,48 @@
+{
+  "valid": true,
+  "metrics": {
+    "A": "schema",
+    "D": 3,
+    "M": 2
+  },
+  "states": [
+    {
+      "event": "n0",
+      "A": "schema",
+      "D": 0,
+      "M": 0
+    },
+    {
+      "event": "n1",
+      "A": "schema",
+      "D": 1,
+      "M": 0
+    },
+    {
+      "event": "n2",
+      "A": "schema",
+      "D": 2,
+      "M": 0
+    },
+    {
+      "event": "n3",
+      "A": "schema",
+      "D": 3,
+      "M": 0
+    },
+    {
+      "event": "review1",
+      "A": "schema",
+      "D": 3,
+      "M": 1
+    },
+    {
+      "event": "review2",
+      "A": "schema",
+      "D": 3,
+      "M": 2
+    }
+  ],
+  "node_count": 4,
+  "error": null
+}

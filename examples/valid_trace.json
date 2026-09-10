@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "problem_id": "chain_3",
+  "problem_sha256": "bd228182b4898e9644637d0f0906069422d965a67ad46e04882937e10cfbcad5",
+  "nodes": [
+    {
+      "id": "n0",
+      "atom": "p",
+      "rule": null,
+      "parents": []
+    },
+    {
+      "id": "n1",
+      "atom": "q",
+      "rule": "step1",
+      "parents": [
+        "n0"
+      ]
+    },
+    {
+      "id": "n2",
+      "atom": "r",
+      "rule": "step2",
+      "parents": [
+        "n1"
+      ]
+    },
+    {
+      "id": "n3",
+      "atom": "g",
+      "rule": "step3",
+      "parents": [
+        "n2"
+      ]
+    }
+  ],
+  "final": "n3",
+  "views": {
+    "n0": {
+      "kind": "universal_schema",
+      "quantifier": "forall_boolean_valuations",
+      "binding": {
+        "X0": "p"
+      },
+      "assumptions": [
+        {
+          "if": [],
+          "then": "X0"
+        }
+      ],
+      "conclusion": "X0"
+    },
+    "n1": {
+      "kind": "universal_schema",
+      "quantifier": "forall_boolean_valuations",
+      "binding": {
+        "X0": "p",
+        "X1": "q"
+      },
+      "assumptions": [
+        {
+          "if": [],
+          "then": "X0"
+        },
+        {
+          "if": [
+            "X0"
+          ],
+          "then": "X1"
+        }
+      ],
+      "conclusion": "X1"
+    },
+    "n2": {
+      "kind": "universal_schema",
+      "quantifier": "forall_boolean_valuations",
+      "binding": {
+        "X0": "p",
+        "X1": "q",
+        "X2": "r"
+      },
+      "assumptions": [
+        {
+          "if": [],
+          "then": "X0"
+        },
+        {
+          "if": [
+            "X0"
+          ],
+          "then": "X1"
+        },
+        {
+          "if": [
+            "X1"
+          ],
+          "then": "X2"
+        }
+      ],
+      "conclusion": "X2"
+    },
+    "n3": {
+      "kind": "universal_schema",
+      "quantifier": "forall_boolean_valuations",
+      "binding": {
+        "X0": "g",
+        "X1": "p",
+        "X2": "q",
+        "X3": "r"
+      },
+      "assumptions": [
+        {
+          "if": [],
+          "then": "X1"
+        },
+        {
+          "if": [
+            "X1"
+          ],
+          "then": "X2"
+        },
+        {
+          "if": [
+            "X2"
+          ],
+          "then": "X3"
+        },
+        {
+          "if": [
+            "X3"
+          ],
+          "then": "X0"
+        }
+      ],
+      "conclusion": "X0"
+    }
+  },
+  "reviews": [
+    {
+      "id": "review1",
+      "target_kind": "argument",
+      "target": "n3",
+      "check": "support_replay",
+      "evidence": [
+        "n0",
+        "n1",
+        "n2",
+        "n3"
+      ],
+      "finding": {
+        "grounded": true,
+        "used_rules": [
+          "step1",
+          "step2",
+          "step3"
+        ],
+        "conclusion": "g"
+      }
+    },
+    {
+      "id": "review2",
+      "target_kind": "acceptance_criterion",
+      "target": "valid_proof_and_goal",
+      "check": "counterexample_probe",
+      "probe": {
+        "atom": "g",
+        "rule": null,
+        "parents": []
+      },
+      "finding": {
+        "answer_only_accepts": true,
+        "proof_and_goal_accepts": false,
+        "gap_detected": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "id": "chain_2",
+    "facts": ["p"],
+    "rules": [
+      {"id": "direct", "premises": ["p"], "conclusion": "g"},
+      {"id": "step1", "premises": ["p"], "conclusion": "q"},
+      {"id": "step2", "premises": ["q"], "conclusion": "g"}
+    ],
+    "goal": "g"
+  },
+  {
+    "id": "chain_3",
+    "facts": ["p"],
+    "rules": [
+      {"id": "direct", "premises": ["p"], "conclusion": "g"},
+      {"id": "step1", "premises": ["p"], "conclusion": "q"},
+      {"id": "step2", "premises": ["q"], "conclusion": "r"},
+      {"id": "step3", "premises": ["r"], "conclusion": "g"}
+    ],
+    "goal": "g"
+  },
+  {
+    "id": "conjunction_4",
+    "facts": ["p", "s"],
+    "rules": [
+      {"id": "direct", "premises": ["p", "s"], "conclusion": "g"},
+      {"id": "step1", "premises": ["p"], "conclusion": "q"},
+      {"id": "step2", "premises": ["q", "s"], "conclusion": "r"},
+      {"id": "step3", "premises": ["r"], "conclusion": "t"},
+      {"id": "step4", "premises": ["t"], "conclusion": "g"}
+    ],
+    "goal": "g"
+  }
+]

@@ -1,0 +1,254 @@
+[
+  {
+    "problem_id": "chain_2",
+    "mutation": "untrusted_problem",
+    "rejected": true,
+    "error": "BINDING: 다른 문제에 대한 기록"
+  },
+  {
+    "problem_id": "chain_2",
+    "mutation": "missing_support",
+    "rejected": true,
+    "error": "PROOF: 전제 불일치/생략/중복"
+  },
+  {
+    "problem_id": "chain_2",
+    "mutation": "self_cycle",
+    "rejected": true,
+    "error": "GRAPH: 순환/전방/누락 참조"
+  },
+  {
+    "problem_id": "chain_2",
+    "mutation": "wrong_rule",
+    "rejected": true,
+    "error": "PROOF: 허용하지 않은 규칙"
+  },
+  {
+    "problem_id": "chain_2",
+    "mutation": "wrong_conclusion",
+    "rejected": true,
+    "error": "PROOF: 규칙의 결론 불일치"
+  },
+  {
+    "problem_id": "chain_2",
+    "mutation": "ungrounded_fixed_goal",
+    "rejected": true,
+    "error": "PROOF: 근거 없는 사실"
+  },
+  {
+    "problem_id": "chain_2",
+    "mutation": "duplicate_node",
+    "rejected": true,
+    "error": "GRAPH: 중복/잘못된 id"
+  },
+  {
+    "problem_id": "chain_2",
+    "mutation": "missing_view",
+    "rejected": true,
+    "error": "VIEW: 노드별 표현 누락/추가"
+  },
+  {
+    "problem_id": "chain_2",
+    "mutation": "empty_schema",
+    "rejected": true,
+    "error": "VIEW: 도식 가정 누락/초과"
+  },
+  {
+    "problem_id": "chain_2",
+    "mutation": "no_quantifier",
+    "rejected": true,
+    "error": "VIEW: 보편 양화 필요"
+  },
+  {
+    "problem_id": "chain_2",
+    "mutation": "argument_false_finding",
+    "rejected": true,
+    "error": "META: 논증 검토 판정 불일치"
+  },
+  {
+    "problem_id": "chain_2",
+    "mutation": "criterion_false_finding",
+    "rejected": true,
+    "error": "META: 기준 검토 판정 불일치"
+  },
+  {
+    "problem_id": "chain_2",
+    "mutation": "unresolved_meta_target",
+    "rejected": true,
+    "error": "META: 실재하는 논증을 지정해야 함"
+  },
+  {
+    "problem_id": "chain_2",
+    "mutation": "fake_coordinate",
+    "rejected": true,
+    "error": "SCHEMA: 필드가 누락되었거나 허용하지 않은 필드가 있습니다."
+  },
+  {
+    "problem_id": "chain_3",
+    "mutation": "untrusted_problem",
+    "rejected": true,
+    "error": "BINDING: 다른 문제에 대한 기록"
+  },
+  {
+    "problem_id": "chain_3",
+    "mutation": "missing_support",
+    "rejected": true,
+    "error": "PROOF: 전제 불일치/생략/중복"
+  },
+  {
+    "problem_id": "chain_3",
+    "mutation": "self_cycle",
+    "rejected": true,
+    "error": "GRAPH: 순환/전방/누락 참조"
+  },
+  {
+    "problem_id": "chain_3",
+    "mutation": "wrong_rule",
+    "rejected": true,
+    "error": "PROOF: 허용하지 않은 규칙"
+  },
+  {
+    "problem_id": "chain_3",
+    "mutation": "wrong_conclusion",
+    "rejected": true,
+    "error": "PROOF: 규칙의 결론 불일치"
+  },
+  {
+    "problem_id": "chain_3",
+    "mutation": "ungrounded_fixed_goal",
+    "rejected": true,
+    "error": "PROOF: 근거 없는 사실"
+  },
+  {
+    "problem_id": "chain_3",
+    "mutation": "duplicate_node",
+    "rejected": true,
+    "error": "GRAPH: 중복/잘못된 id"
+  },
+  {
+    "problem_id": "chain_3",
+    "mutation": "missing_view",
+    "rejected": true,
+    "error": "VIEW: 노드별 표현 누락/추가"
+  },
+  {
+    "problem_id": "chain_3",
+    "mutation": "empty_schema",
+    "rejected": true,
+    "error": "VIEW: 도식 가정 누락/초과"
+  },
+  {
+    "problem_id": "chain_3",
+    "mutation": "no_quantifier",
+    "rejected": true,
+    "error": "VIEW: 보편 양화 필요"
+  },
+  {
+    "problem_id": "chain_3",
+    "mutation": "argument_false_finding",
+    "rejected": true,
+    "error": "META: 논증 검토 판정 불일치"
+  },
+  {
+    "problem_id": "chain_3",
+    "mutation": "criterion_false_finding",
+    "rejected": true,
+    "error": "META: 기준 검토 판정 불일치"
+  },
+  {
+    "problem_id": "chain_3",
+    "mutation": "unresolved_meta_target",
+    "rejected": true,
+    "error": "META: 실재하는 논증을 지정해야 함"
+  },
+  {
+    "problem_id": "chain_3",
+    "mutation": "fake_coordinate",
+    "rejected": true,
+    "error": "SCHEMA: 필드가 누락되었거나 허용하지 않은 필드가 있습니다."
+  },
+  {
+    "problem_id": "conjunction_4",
+    "mutation": "untrusted_problem",
+    "rejected": true,
+    "error": "BINDING: 다른 문제에 대한 기록"
+  },
+  {
+    "problem_id": "conjunction_4",
+    "mutation": "missing_support",
+    "rejected": true,
+    "error": "PROOF: 전제 불일치/생략/중복"
+  },
+  {
+    "problem_id": "conjunction_4",
+    "mutation": "self_cycle",
+    "rejected": true,
+    "error": "GRAPH: 순환/전방/누락 참조"
+  },
+  {
+    "problem_id": "conjunction_4",
+    "mutation": "wrong_rule",
+    "rejected": true,
+    "error": "PROOF: 허용하지 않은 규칙"
+  },
+  {
+    "problem_id": "conjunction_4",
+    "mutation": "wrong_conclusion",
+    "rejected": true,
+    "error": "PROOF: 규칙의 결론 불일치"
+  },
+  {
+    "problem_id": "conjunction_4",
+    "mutation": "ungrounded_fixed_goal",
+    "rejected": true,
+    "error": "PROOF: 근거 없는 사실"
+  },
+  {
+    "problem_id": "conjunction_4",
+    "mutation": "duplicate_node",
+    "rejected": true,
+    "error": "GRAPH: 중복/잘못된 id"
+  },
+  {
+    "problem_id": "conjunction_4",
+    "mutation": "missing_view",
+    "rejected": true,
+    "error": "VIEW: 노드별 표현 누락/추가"
+  },
+  {
+    "problem_id": "conjunction_4",
+    "mutation": "empty_schema",
+    "rejected": true,
+    "error": "VIEW: 도식 가정 누락/초과"
+  },
+  {
+    "problem_id": "conjunction_4",
+    "mutation": "no_quantifier",
+    "rejected": true,
+    "error": "VIEW: 보편 양화 필요"
+  },
+  {
+    "problem_id": "conjunction_4",
+    "mutation": "argument_false_finding",
+    "rejected": true,
+    "error": "META: 논증 검토 판정 불일치"
+  },
+  {
+    "problem_id": "conjunction_4",
+    "mutation": "criterion_false_finding",
+    "rejected": true,
+    "error": "META: 기준 검토 판정 불일치"
+  },
+  {
+    "problem_id": "conjunction_4",
+    "mutation": "unresolved_meta_target",
+    "rejected": true,
+    "error": "META: 실재하는 논증을 지정해야 함"
+  },
+  {
+    "problem_id": "conjunction_4",
+    "mutation": "fake_coordinate",
+    "rejected": true,
+    "error": "SCHEMA: 필드가 누락되었거나 허용하지 않은 필드가 있습니다."
+  }
+]
