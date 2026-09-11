@@ -1,7 +1,7 @@
 # 고정 목표 A/D/M — 로컬 LLM 검증 소스
 
 **버전:** 0.1.0 · **대상:** Windows / Ryzen 5 5600X / RAM 32GB / RTX 4060  
-**형태:** 기존 `thought-graph-simulator`에 추가하는 `local_llm/` 폴더  
+**형태:** 기존 `thought-graph-simulator`에 추가하는 `../local_llm_0441` 폴더  
 **배포 상태:** 소스 작성 및 정적 구문 검사. 모델 다운로드, 추론, 단위시험, Windows 실행은 작성자가 수행하지 않았다.
 
 ## 1. 이번에 실제로 바뀌는 부분
@@ -244,7 +244,7 @@ py -3 -m local_llm summarize --out results_llm/full_01
 
 ## 9. 흔한 상황
 
-**`No module named local_llm`**: 프로젝트 루트가 아니라 다른 폴더에서 실행했거나 `local_llm/local_llm`처럼 한 단계 깊게 복사했는지 확인한다.
+**`No module named local_llm`**: 프로젝트 루트가 아니라 다른 폴더에서 실행했거나 `../local_llm_0441`처럼 한 단계 깊게 복사했는지 확인한다.
 
 **`adm_minimal.py` 기준 파일 불일치**: 이번 소스가 확인한 커밋 이후 핵심 파일이 바뀌었는지 확인한다. 자동으로 옛 파일을 덮어쓰지 않는다.
 

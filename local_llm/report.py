@@ -440,4 +440,10 @@ def write_report(out: Path) -> dict:
         write_json(out / "decision_tables.json", tables)
         with (out / "summary.md").open("a", encoding="utf-8", newline="\n") as handle:
             handle.write(summary_markdown(tables))
+    if manifest["frozen"]["plan"].get("probe_contract") == "operator-v045":
+        from .operator_probe import summary as operator_summary, summary_markdown as operator_markdown
+        data = operator_summary(manifest["frozen"]["plan"], records)
+        write_json(out / "operator_probe.json", data)
+        with (out / "summary.md").open("a", encoding="utf-8", newline="\n") as handle:
+            handle.write(operator_markdown(data))
     return summary

@@ -1,0 +1,168 @@
+{
+  "counts": {
+    "new_llm_responses": 8,
+    "replayed_decisions": 8,
+    "reproduced_full_audits": 8,
+    "reproduced_http_wires": 8,
+    "source_files_equal": 27,
+    "controls_passed": 4,
+    "witness_cases": 4,
+    "observed_fields_correct": 12,
+    "primitive_bits_correct": 8,
+    "finding_bits_correct": 8,
+    "criterion_correct": 2,
+    "raw_finding_first": 4,
+    "raw_object_orders_inspected": 20,
+    "raw_object_orders_alphabetical": 20,
+    "independent_core_truth_table_combinations": 32,
+    "root_order_permutations_tested": 24,
+    "synthetic_edit_tests": 10
+  },
+  "sources": [
+    {
+      "file": "__init__.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "__main__.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "audit.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "calibration.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "calibration_v4.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "causal_probe.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "client.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "common.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "compare_runs.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "component_report.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "datasets_v4.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "design.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "diagnostics.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "evidence.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "gate.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "micro_probe.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "model_policy.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "prompts.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "prompts_v2.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "prompts_v3.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "prompts_v4.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "protocol.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "protocol_v2.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "report.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "runner.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "selfcheck.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    },
+    {
+      "file": "task_evidence.py",
+      "snapshot_hash_valid": true,
+      "delivery_bytes_equal": true
+    }
+  ],
+  "core": {
+    "path": "adm_minimal.py",
+    "sha256": "24542551351225d4a2ed0e65c95cfca3d850e7bbd102439f1f3662d2eefcfad8",
+    "git_blob_sha1": "b7aa0b58b9257fdb80882b48e4ecf1006ac4ff45",
+    "baseline_matches": true,
+    "baseline_commit": "254757486a987475d16541cf84b905d684c1c13d",
+    "allow_core_change": false
+  },
+  "input_unchanged": true,
+  "llm_called": false
+}

@@ -44,6 +44,9 @@ def usage(response: dict) -> dict:
 
 
 def request_body(config: dict, case: dict, problem: dict) -> dict:
+    if case.get("probe_contract") == "operator-v045":
+        from .operator_probe import make_request
+        return make_request(config, case, problem)
     if case.get("probe_contract") == "factor-v044":
         from .factor_probe import make_request, check_delta
         body = make_request(config, case, problem)
@@ -104,7 +107,9 @@ def assess_response(core: Any, problem: dict, case: dict, reference: dict,
         outcome["raw_diagnostics"] = raw_diagnostics(problem, raw_content, v2=is_v2)
     if case.get("task"):
         from .task_evidence import task_diagnostics
-        if case.get("probe_contract") == "factor-v044":
+        if case.get("probe_contract") == "operator-v045":
+            from .operator_probe import output_schema as task_schema
+        elif case.get("probe_contract") == "factor-v044":
             from .factor_probe import output_schema as task_schema
         elif case.get("probe_contract") == "decision-v043":
             from .decision_probe import output_schema as task_schema
@@ -129,7 +134,9 @@ def assess_response(core: Any, problem: dict, case: dict, reference: dict,
         require(body.get("think") is not False or not message.get("thinking"), "thinking=false 요청과 다른 응답")
         if case.get("task"):
             payload = strict_json(message.get("content"))
-            if case.get("probe_contract") == "factor-v044":
+            if case.get("probe_contract") == "operator-v045":
+                from . import operator_probe as evaluator
+            elif case.get("probe_contract") == "factor-v044":
                 from . import factor_probe as evaluator
             elif case.get("probe_contract") == "decision-v043":
                 from . import decision_probe as evaluator
@@ -338,6 +345,9 @@ def run(core: Any, core_info: dict, plan: dict, config: dict, out: Path,
     if plan.get("probe_contract") in ("decision-v043", "factor-v044"):
         from .decision_probe import validate_runtime
         validate_runtime(plan, core_info, config, metadata)
+    if plan.get("probe_contract") == "operator-v045":
+        from .operator_probe import validate_runtime as validate_operator_runtime
+        validate_operator_runtime(plan, core_info, config, metadata)
     gate_result = validate_gate(core, gate, config, plan, gate_mode) if gate is not None else None
     if gate_result is not None:
         print(f"게이트 통과 ({gate_mode}): {gate_result['replayed_cases']}건 재검사 / "

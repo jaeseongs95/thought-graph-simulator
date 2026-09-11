@@ -1,0 +1,10 @@
+{
+  "records_replayed": 16,
+  "request_wires_reproduced": 16,
+  "selected_inputs": 4,
+  "source_files_checked": 36,
+  "snapshot_code_executed": false,
+  "network_called": false,
+  "model_called": false,
+  "original_failures_preserved": true
+}

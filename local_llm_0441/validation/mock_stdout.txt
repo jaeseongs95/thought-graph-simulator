@@ -1,0 +1,67 @@
+아래 stdout의 FAIL은 의도적인 실패 응답을 주입한 오프라인 회귀시험 출력이다. 실제 모델 결과가 아니다.
+모드 검사: instruct-2507 / non-thinking / think=omitted / context=8192, output=4096
+[1/6] chain_2 / schema_shallow_M0 / seed=1729 -> accepted
+[2/6] chain_2 / instance_deep_M0 / seed=1729 -> accepted
+[3/6] chain_2 / instance_shallow_M0 / seed=1729 -> accepted
+[4/6] chain_2 / instance_shallow_M2 / seed=1729 -> accepted
+[5/6] chain_2 / instance_shallow_M1 / seed=1729 -> accepted
+[6/6] chain_2 / neutral / seed=1729 -> accepted
+결과: /tmp/tmpjvbc6vn_/mock_smoke/summary.md
+실행 완료: 6/6건 기록 / 전 조건 통과: PASS / 과제 성공: 6/6
+모드 검사: instruct-2507 / non-thinking / think=omitted / context=8192, output=4096
+[1/6] chain_2 / schema_shallow_M0 / seed=1729 -> accepted
+[2/6] chain_2 / instance_deep_M0 / seed=1729 -> accepted
+[3/6] chain_2 / instance_shallow_M0 / seed=1729 -> accepted
+[4/6] chain_2 / instance_shallow_M2 / seed=1729 -> accepted
+[5/6] chain_2 / instance_shallow_M1 / seed=1729 -> accepted
+[6/6] chain_2 / neutral / seed=1729 -> accepted
+결과: /tmp/tmp7p7xx3yw/mock_smoke/summary.md
+실행 완료: 6/6건 기록 / 전 조건 통과: PASS / 과제 성공: 6/6
+모드 검사: instruct-2507 / non-thinking / think=omitted / context=8192, output=4096
+[1/8] calibration_only / proof_shallow / seed=1729 -> accepted
+[2/8] calibration_only / proof_deep / seed=1729 -> accepted
+[3/8] calibration_only / schema_on_fixed_proof / seed=1729 -> accepted
+[4/8] calibration_only / review_valid_proof / seed=1729 -> accepted
+[5/8] calibration_only / review_invalid_proof / seed=1729 -> accepted
+[6/8] calibration_only / criterion_unsupported_goal / seed=1729 -> accepted
+[7/8] calibration_only / criterion_non_goal_fact / seed=1729 -> accepted
+[8/8] calibration_goal_given / criterion_supported_goal / seed=1729 -> accepted
+결과: /tmp/tmpanbijhi0/mock_calibration/summary.md
+실행 완료: 8/8건 기록 / 전 조건 통과: PASS / 과제 성공: 8/8
+모드 검사: instruct-2507 / non-thinking / think=omitted / context=8192, output=4096
+[1/6] chain_2 / schema_shallow_M0 / seed=1729 -> accepted
+[2/6] chain_2 / instance_deep_M0 / seed=1729 -> accepted
+[3/6] chain_2 / instance_shallow_M0 / seed=1729 -> accepted
+[4/6] chain_2 / instance_shallow_M2 / seed=1729 -> accepted
+[5/6] chain_2 / instance_shallow_M1 / seed=1729 -> accepted
+[6/6] chain_2 / neutral / seed=1729 -> accepted
+결과: /tmp/tmpqgwxlm1r/mock_smoke/summary.md
+실행 완료: 6/6건 기록 / 전 조건 통과: PASS / 과제 성공: 6/6
+모드 검사: instruct-2507 / non-thinking / think=omitted / context=8192, output=4096
+[1/6] chain_2 / schema_shallow_M0 / seed=1729 -> role_mismatch
+  요청 역할 미준수: {'A': True, 'D': False, 'M': True}
+[2/6] chain_2 / instance_deep_M0 / seed=1729 -> accepted
+[3/6] chain_2 / instance_shallow_M0 / seed=1729 -> role_mismatch
+  요청 역할 미준수: {'A': True, 'D': False, 'M': True}
+[4/6] chain_2 / instance_shallow_M2 / seed=1729 -> role_mismatch
+  요청 역할 미준수: {'A': True, 'D': False, 'M': False}
+[5/6] chain_2 / instance_shallow_M1 / seed=1729 -> role_mismatch
+  요청 역할 미준수: {'A': True, 'D': False, 'M': True}
+[6/6] chain_2 / neutral / seed=1729 -> invalid_trace
+  VIEW: 치환은 사용 원자에 대한 일대일 대응이어야 함
+결과: /tmp/tmpacqzst28/run/summary.md
+실행 완료: 6/6건 기록 / 전 조건 통과: FAIL / 과제 성공: 5/6
+모드 검사: instruct-2507 / non-thinking / think=omitted / context=8192, output=4096
+[1/6] chain_2 / schema_shallow_M0 / seed=1729 -> role_mismatch
+  요청 역할 미준수: {'A': True, 'D': False, 'M': True}
+[2/6] chain_2 / instance_deep_M0 / seed=1729 -> accepted
+[3/6] chain_2 / instance_shallow_M0 / seed=1729 -> role_mismatch
+  요청 역할 미준수: {'A': True, 'D': False, 'M': True}
+[4/6] chain_2 / instance_shallow_M2 / seed=1729 -> role_mismatch
+  요청 역할 미준수: {'A': True, 'D': False, 'M': False}
+[5/6] chain_2 / instance_shallow_M1 / seed=1729 -> role_mismatch
+  요청 역할 미준수: {'A': True, 'D': False, 'M': True}
+[6/6] chain_2 / neutral / seed=1729 -> invalid_trace
+  VIEW: 치환은 사용 원자에 대한 일대일 대응이어야 함
+결과: /tmp/tmpdxdjcx46/run/summary.md
+실행 완료: 6/6건 기록 / 전 조건 통과: FAIL / 과제 성공: 5/6

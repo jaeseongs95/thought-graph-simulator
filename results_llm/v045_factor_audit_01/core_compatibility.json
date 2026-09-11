@@ -1,0 +1,8 @@
+{
+  "same_source": true,
+  "method": "normalized_git_blob_sha1",
+  "recorded_identity": "b7aa0b58b9257fdb80882b48e4ecf1006ac4ff45",
+  "current_identity": "b7aa0b58b9257fdb80882b48e4ecf1006ac4ff45",
+  "raw_sha256_equal": true,
+  "representation_diff_only": false
+}

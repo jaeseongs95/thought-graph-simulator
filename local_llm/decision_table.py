@@ -70,7 +70,21 @@ def table_summary(rows: list[dict], assigned: int | None = None) -> dict:
                     'both_rows_correct': all(r['actual'] == r['expected'] and r['source_prerequisites_correct']
                                              for r in (no_fact,fact)),
                     'note': '실제 네 응답의 대응 관찰. b 무시가 내부 알고리즘이라는 증거는 아니다.'}
-    return {'assigned': assigned, 'recorded': len(rows), 'assessable': len(usable),
+    per_field = {}
+    for i, field in enumerate(FIELDS):
+        tp = sum(r['actual'][i] and r['expected'][i] for r in usable)
+        fn = sum(not r['actual'][i] and r['expected'][i] for r in usable)
+        tn = sum(not r['actual'][i] and not r['expected'][i] for r in usable)
+        fp = sum(r['actual'][i] and not r['expected'][i] for r in usable)
+        per_field[field] = {'correct': tp + tn, 'assessable': len(usable),
+                            'tp': tp, 'fn': fn, 'tn': tn, 'fp': fp,
+                            'positive_expected': tp + fn,
+                            'positive_detected': tp,
+                            'all_outputs_false': bool(usable) and tp + fp == 0}
+    return {'per_field': per_field,
+            'final_field_inconsistency_count': sum(
+                r['actual'][2] != (r['actual'][0] and not r['actual'][1]) for r in usable),
+            'assigned': assigned, 'recorded': len(rows), 'assessable': len(usable),
             'not_assessable': len(rows)-len(usable), 'complete_four_input_table': complete,
             'correct_full_rows': sum(r.get('status')=='accepted' and r['actual']==r['expected'] and r['source_prerequisites_correct'] for r in usable),
             'correct_value_rows': sum(r['actual']==r['expected'] and r['source_prerequisites_correct'] for r in usable),
@@ -101,12 +115,20 @@ def summarize_records(plan: dict, records: list[dict]) -> dict:
 
 
 def summary_markdown(data: dict) -> str:
+    """표 안에 설명 문단을 끼워 Markdown 표를 끊지 않는다. 부분 변화도 별도 표시한다."""
     lines = ['\n## 필요조건과 입력 민감도 진단', '',
-             '| 군 | 기록/배정 | 정확한 행 | 근거 없는 strict 수락 | b 무시 단순식 일치 |',
-             '| --- | ---: | ---: | ---: | ---: |']
-    for name,d in data.items():
-        lines.append(f"| {name} | {d['recorded']}/{d['assigned']} | {d['correct_full_rows']} | {d['false_acceptance_count']} | {d['ignore_b_shortcut_matching_rows']} |")
+             '| 군 | 기록/배정 | 정확한 행 | 정확한 비트 | 근거 없는 strict 수락 | gap 양성 검출 |',
+             '| --- | ---: | ---: | ---: | ---: | ---: |']
+    notes = []
+    for name, d in data.items():
+        gap = d['per_field']['gap_detected']
+        lines.append(f"| {name} | {d['recorded']}/{d['assigned']} | {d['correct_full_rows']} | "
+                     f"{d['correct_bits']}/{3*d['assessable']} | {d['false_acceptance_count']} | "
+                     f"{gap['positive_detected']}/{gap['positive_expected']} |")
         if d['all_four_rows_match_ignore_b_shortcut']:
-            lines.append(f"\n`{name}`: 네 응답이 모두 `(a, a, false)`와 일치한다. 3/4라도 b 필요조건 검증 성공이 아니다.\n")
-    lines.append('\n이는 유한 입력의 기술적 진단이다. 원래 성공/실패는 변경하지 않으며 내부 원인을 확정하지 않는다.')
+            notes.append(f"`{name}`: 네 응답이 `(a, a, false)`와 일치한다. 이는 관측된 출력 패턴이다.")
+        if d['final_field_inconsistency_count']:
+            notes.append(f"`{name}`: 최종 필드끼리의 관계도 모순인 응답 {d['final_field_inconsistency_count']}건.")
+    lines.extend([''] + notes)
+    lines.append('\n고정된 소수 입력의 기술 통계다. 다른 군을 독립 표본으로 합치거나 내부 원인을 확정하지 않는다.')
     return '\n'.join(lines)+'\n'

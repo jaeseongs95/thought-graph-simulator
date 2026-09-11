@@ -1,0 +1,1012 @@
+{
+  "replay": {
+    "per_field": {
+      "answer_only_accepts": {
+        "correct": 4,
+        "assessable": 4,
+        "tp": 2,
+        "fn": 0,
+        "tn": 2,
+        "fp": 0,
+        "positive_expected": 2,
+        "positive_detected": 2,
+        "all_outputs_false": false
+      },
+      "proof_and_goal_accepts": {
+        "correct": 3,
+        "assessable": 4,
+        "tp": 1,
+        "fn": 0,
+        "tn": 2,
+        "fp": 1,
+        "positive_expected": 1,
+        "positive_detected": 1,
+        "all_outputs_false": false
+      },
+      "gap_detected": {
+        "correct": 3,
+        "assessable": 4,
+        "tp": 0,
+        "fn": 1,
+        "tn": 3,
+        "fp": 0,
+        "positive_expected": 1,
+        "positive_detected": 0,
+        "all_outputs_false": true
+      }
+    },
+    "final_field_inconsistency_count": 0,
+    "assigned": 4,
+    "recorded": 4,
+    "assessable": 4,
+    "not_assessable": 0,
+    "complete_four_input_table": true,
+    "correct_full_rows": 3,
+    "correct_value_rows": 3,
+    "correct_bits": 10,
+    "false_acceptance_count": 1,
+    "ignore_b_shortcut_matching_rows": 4,
+    "all_four_rows_match_ignore_b_shortcut": true,
+    "critical_b_pair": {
+      "a_fixed": true,
+      "b_values": [
+        false,
+        true
+      ],
+      "actual_without_fact": [
+        true,
+        true,
+        false
+      ],
+      "actual_with_fact": [
+        true,
+        true,
+        false
+      ],
+      "outputs_identical": true,
+      "both_rows_correct": false,
+      "note": "실제 네 응답의 대응 관찰. b 무시가 내부 알고리즘이라는 증거는 아니다."
+    },
+    "all_conditions_verified": false,
+    "rows": [
+      {
+        "output_modified": false,
+        "internal_process_observed": false,
+        "scope": "observable_contract_not_model_internals",
+        "assessable": true,
+        "input_ab": [
+          false,
+          true
+        ],
+        "reported_primitives": [
+          false,
+          true
+        ],
+        "source_prerequisites_correct": true,
+        "source_provenance": "previous_response",
+        "actual": [
+          false,
+          false,
+          false
+        ],
+        "expected": [
+          false,
+          false,
+          false
+        ],
+        "field_matches": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": true,
+          "gap_detected": true
+        },
+        "consistent_with_supplied_primitives": true,
+        "false_acceptance": false,
+        "matches_ignore_b_shortcut": true,
+        "violations": [],
+        "output_keys": [
+          "answer_only_accepts",
+          "gap_detected",
+          "proof_and_goal_accepts"
+        ],
+        "note": "중간값의 출처와 출력 키 순서는 기록하지만 내부 생성 원인으로 단정하지 않는다.",
+        "case_id": "2849bd92ba3b41bef063441b",
+        "role_id": "criterion_fact_not_goal__v044_replay",
+        "status": "accepted"
+      },
+      {
+        "output_modified": false,
+        "internal_process_observed": false,
+        "scope": "observable_contract_not_model_internals",
+        "assessable": true,
+        "input_ab": [
+          true,
+          true
+        ],
+        "reported_primitives": [
+          true,
+          true
+        ],
+        "source_prerequisites_correct": true,
+        "source_provenance": "previous_response",
+        "actual": [
+          true,
+          true,
+          false
+        ],
+        "expected": [
+          true,
+          true,
+          false
+        ],
+        "field_matches": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": true,
+          "gap_detected": true
+        },
+        "consistent_with_supplied_primitives": true,
+        "false_acceptance": false,
+        "matches_ignore_b_shortcut": true,
+        "violations": [],
+        "output_keys": [
+          "answer_only_accepts",
+          "gap_detected",
+          "proof_and_goal_accepts"
+        ],
+        "note": "중간값의 출처와 출력 키 순서는 기록하지만 내부 생성 원인으로 단정하지 않는다.",
+        "case_id": "8c01af1793200b17293c3d53",
+        "role_id": "criterion_goal_is_fact__v044_replay",
+        "status": "accepted"
+      },
+      {
+        "output_modified": false,
+        "internal_process_observed": false,
+        "scope": "observable_contract_not_model_internals",
+        "assessable": true,
+        "input_ab": [
+          false,
+          false
+        ],
+        "reported_primitives": [
+          false,
+          false
+        ],
+        "source_prerequisites_correct": true,
+        "source_provenance": "previous_response",
+        "actual": [
+          false,
+          false,
+          false
+        ],
+        "expected": [
+          false,
+          false,
+          false
+        ],
+        "field_matches": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": true,
+          "gap_detected": true
+        },
+        "consistent_with_supplied_primitives": true,
+        "false_acceptance": false,
+        "matches_ignore_b_shortcut": true,
+        "violations": [],
+        "output_keys": [
+          "answer_only_accepts",
+          "gap_detected",
+          "proof_and_goal_accepts"
+        ],
+        "note": "중간값의 출처와 출력 키 순서는 기록하지만 내부 생성 원인으로 단정하지 않는다.",
+        "case_id": "27af68287eca0e265cb268db",
+        "role_id": "criterion_neither__v044_replay",
+        "status": "accepted"
+      },
+      {
+        "output_modified": false,
+        "internal_process_observed": false,
+        "scope": "observable_contract_not_model_internals",
+        "assessable": true,
+        "input_ab": [
+          true,
+          false
+        ],
+        "reported_primitives": [
+          true,
+          false
+        ],
+        "source_prerequisites_correct": true,
+        "source_provenance": "previous_response",
+        "actual": [
+          true,
+          true,
+          false
+        ],
+        "expected": [
+          true,
+          false,
+          true
+        ],
+        "field_matches": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": false,
+          "gap_detected": false
+        },
+        "consistent_with_supplied_primitives": false,
+        "false_acceptance": true,
+        "matches_ignore_b_shortcut": true,
+        "violations": [
+          "strict_accept_without_initial_fact",
+          "strict_conjunction",
+          "gap_conjunction_with_negation"
+        ],
+        "output_keys": [
+          "answer_only_accepts",
+          "gap_detected",
+          "proof_and_goal_accepts"
+        ],
+        "note": "중간값의 출처와 출력 키 순서는 기록하지만 내부 생성 원인으로 단정하지 않는다.",
+        "case_id": "9ff71e6a994e1993fc42c7a6",
+        "role_id": "criterion_goal_not_fact__v044_replay",
+        "status": "invalid_task"
+      }
+    ],
+    "interpretation": "3/4만으로 계약 수행을 승인하지 않는다. true/false 양쪽 허용 여부와 핵심 필요조건을 분리한다."
+  },
+  "b_last": {
+    "per_field": {
+      "answer_only_accepts": {
+        "correct": 4,
+        "assessable": 4,
+        "tp": 2,
+        "fn": 0,
+        "tn": 2,
+        "fp": 0,
+        "positive_expected": 2,
+        "positive_detected": 2,
+        "all_outputs_false": false
+      },
+      "proof_and_goal_accepts": {
+        "correct": 4,
+        "assessable": 4,
+        "tp": 1,
+        "fn": 0,
+        "tn": 3,
+        "fp": 0,
+        "positive_expected": 1,
+        "positive_detected": 1,
+        "all_outputs_false": false
+      },
+      "gap_detected": {
+        "correct": 3,
+        "assessable": 4,
+        "tp": 0,
+        "fn": 1,
+        "tn": 3,
+        "fp": 0,
+        "positive_expected": 1,
+        "positive_detected": 0,
+        "all_outputs_false": true
+      }
+    },
+    "final_field_inconsistency_count": 1,
+    "assigned": 4,
+    "recorded": 4,
+    "assessable": 4,
+    "not_assessable": 0,
+    "complete_four_input_table": true,
+    "correct_full_rows": 3,
+    "correct_value_rows": 3,
+    "correct_bits": 11,
+    "false_acceptance_count": 0,
+    "ignore_b_shortcut_matching_rows": 3,
+    "all_four_rows_match_ignore_b_shortcut": false,
+    "critical_b_pair": {
+      "a_fixed": true,
+      "b_values": [
+        false,
+        true
+      ],
+      "actual_without_fact": [
+        true,
+        false,
+        false
+      ],
+      "actual_with_fact": [
+        true,
+        true,
+        false
+      ],
+      "outputs_identical": false,
+      "both_rows_correct": false,
+      "note": "실제 네 응답의 대응 관찰. b 무시가 내부 알고리즘이라는 증거는 아니다."
+    },
+    "all_conditions_verified": false,
+    "rows": [
+      {
+        "output_modified": false,
+        "internal_process_observed": false,
+        "scope": "observable_contract_not_model_internals",
+        "assessable": true,
+        "input_ab": [
+          false,
+          false
+        ],
+        "reported_primitives": [
+          false,
+          false
+        ],
+        "source_prerequisites_correct": true,
+        "source_provenance": "previous_response",
+        "actual": [
+          false,
+          false,
+          false
+        ],
+        "expected": [
+          false,
+          false,
+          false
+        ],
+        "field_matches": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": true,
+          "gap_detected": true
+        },
+        "consistent_with_supplied_primitives": true,
+        "false_acceptance": false,
+        "matches_ignore_b_shortcut": true,
+        "violations": [],
+        "output_keys": [
+          "answer_only_accepts",
+          "gap_detected",
+          "proof_and_goal_accepts"
+        ],
+        "note": "중간값의 출처와 출력 키 순서는 기록하지만 내부 생성 원인으로 단정하지 않는다.",
+        "case_id": "b0b75041b2c11282c7f39d5e",
+        "role_id": "criterion_neither__v044_b_last",
+        "status": "accepted"
+      },
+      {
+        "output_modified": false,
+        "internal_process_observed": false,
+        "scope": "observable_contract_not_model_internals",
+        "assessable": true,
+        "input_ab": [
+          true,
+          false
+        ],
+        "reported_primitives": [
+          true,
+          false
+        ],
+        "source_prerequisites_correct": true,
+        "source_provenance": "previous_response",
+        "actual": [
+          true,
+          false,
+          false
+        ],
+        "expected": [
+          true,
+          false,
+          true
+        ],
+        "field_matches": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": true,
+          "gap_detected": false
+        },
+        "consistent_with_supplied_primitives": false,
+        "false_acceptance": false,
+        "matches_ignore_b_shortcut": false,
+        "violations": [
+          "gap_conjunction_with_negation"
+        ],
+        "output_keys": [
+          "answer_only_accepts",
+          "gap_detected",
+          "proof_and_goal_accepts"
+        ],
+        "note": "중간값의 출처와 출력 키 순서는 기록하지만 내부 생성 원인으로 단정하지 않는다.",
+        "case_id": "ffeeb551b6a82a97959443cb",
+        "role_id": "criterion_goal_not_fact__v044_b_last",
+        "status": "invalid_task"
+      },
+      {
+        "output_modified": false,
+        "internal_process_observed": false,
+        "scope": "observable_contract_not_model_internals",
+        "assessable": true,
+        "input_ab": [
+          false,
+          true
+        ],
+        "reported_primitives": [
+          false,
+          true
+        ],
+        "source_prerequisites_correct": true,
+        "source_provenance": "previous_response",
+        "actual": [
+          false,
+          false,
+          false
+        ],
+        "expected": [
+          false,
+          false,
+          false
+        ],
+        "field_matches": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": true,
+          "gap_detected": true
+        },
+        "consistent_with_supplied_primitives": true,
+        "false_acceptance": false,
+        "matches_ignore_b_shortcut": true,
+        "violations": [],
+        "output_keys": [
+          "answer_only_accepts",
+          "gap_detected",
+          "proof_and_goal_accepts"
+        ],
+        "note": "중간값의 출처와 출력 키 순서는 기록하지만 내부 생성 원인으로 단정하지 않는다.",
+        "case_id": "b67f7e0c7d389e1095caebb2",
+        "role_id": "criterion_fact_not_goal__v044_b_last",
+        "status": "accepted"
+      },
+      {
+        "output_modified": false,
+        "internal_process_observed": false,
+        "scope": "observable_contract_not_model_internals",
+        "assessable": true,
+        "input_ab": [
+          true,
+          true
+        ],
+        "reported_primitives": [
+          true,
+          true
+        ],
+        "source_prerequisites_correct": true,
+        "source_provenance": "previous_response",
+        "actual": [
+          true,
+          true,
+          false
+        ],
+        "expected": [
+          true,
+          true,
+          false
+        ],
+        "field_matches": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": true,
+          "gap_detected": true
+        },
+        "consistent_with_supplied_primitives": true,
+        "false_acceptance": false,
+        "matches_ignore_b_shortcut": true,
+        "violations": [],
+        "output_keys": [
+          "answer_only_accepts",
+          "gap_detected",
+          "proof_and_goal_accepts"
+        ],
+        "note": "중간값의 출처와 출력 키 순서는 기록하지만 내부 생성 원인으로 단정하지 않는다.",
+        "case_id": "d339d4613520cb71b09a5152",
+        "role_id": "criterion_goal_is_fact__v044_b_last",
+        "status": "accepted"
+      }
+    ],
+    "interpretation": "3/4만으로 계약 수행을 승인하지 않는다. true/false 양쪽 허용 여부와 핵심 필요조건을 분리한다."
+  },
+  "json": {
+    "per_field": {
+      "answer_only_accepts": {
+        "correct": 4,
+        "assessable": 4,
+        "tp": 2,
+        "fn": 0,
+        "tn": 2,
+        "fp": 0,
+        "positive_expected": 2,
+        "positive_detected": 2,
+        "all_outputs_false": false
+      },
+      "proof_and_goal_accepts": {
+        "correct": 3,
+        "assessable": 4,
+        "tp": 1,
+        "fn": 0,
+        "tn": 2,
+        "fp": 1,
+        "positive_expected": 1,
+        "positive_detected": 1,
+        "all_outputs_false": false
+      },
+      "gap_detected": {
+        "correct": 3,
+        "assessable": 4,
+        "tp": 0,
+        "fn": 1,
+        "tn": 3,
+        "fp": 0,
+        "positive_expected": 1,
+        "positive_detected": 0,
+        "all_outputs_false": true
+      }
+    },
+    "final_field_inconsistency_count": 0,
+    "assigned": 4,
+    "recorded": 4,
+    "assessable": 4,
+    "not_assessable": 0,
+    "complete_four_input_table": true,
+    "correct_full_rows": 3,
+    "correct_value_rows": 3,
+    "correct_bits": 10,
+    "false_acceptance_count": 1,
+    "ignore_b_shortcut_matching_rows": 4,
+    "all_four_rows_match_ignore_b_shortcut": true,
+    "critical_b_pair": {
+      "a_fixed": true,
+      "b_values": [
+        false,
+        true
+      ],
+      "actual_without_fact": [
+        true,
+        true,
+        false
+      ],
+      "actual_with_fact": [
+        true,
+        true,
+        false
+      ],
+      "outputs_identical": true,
+      "both_rows_correct": false,
+      "note": "실제 네 응답의 대응 관찰. b 무시가 내부 알고리즘이라는 증거는 아니다."
+    },
+    "all_conditions_verified": false,
+    "rows": [
+      {
+        "output_modified": false,
+        "internal_process_observed": false,
+        "scope": "observable_contract_not_model_internals",
+        "assessable": true,
+        "input_ab": [
+          true,
+          false
+        ],
+        "reported_primitives": [
+          true,
+          false
+        ],
+        "source_prerequisites_correct": true,
+        "source_provenance": "previous_response",
+        "actual": [
+          true,
+          true,
+          false
+        ],
+        "expected": [
+          true,
+          false,
+          true
+        ],
+        "field_matches": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": false,
+          "gap_detected": false
+        },
+        "consistent_with_supplied_primitives": false,
+        "false_acceptance": true,
+        "matches_ignore_b_shortcut": true,
+        "violations": [
+          "strict_accept_without_initial_fact",
+          "strict_conjunction",
+          "gap_conjunction_with_negation"
+        ],
+        "output_keys": [
+          "answer_only_accepts",
+          "proof_and_goal_accepts",
+          "gap_detected"
+        ],
+        "note": "중간값의 출처와 출력 키 순서는 기록하지만 내부 생성 원인으로 단정하지 않는다.",
+        "case_id": "c661111064c8153f2f3e9db0",
+        "role_id": "criterion_goal_not_fact__v044_json",
+        "status": "invalid_task"
+      },
+      {
+        "output_modified": false,
+        "internal_process_observed": false,
+        "scope": "observable_contract_not_model_internals",
+        "assessable": true,
+        "input_ab": [
+          false,
+          true
+        ],
+        "reported_primitives": [
+          false,
+          true
+        ],
+        "source_prerequisites_correct": true,
+        "source_provenance": "previous_response",
+        "actual": [
+          false,
+          false,
+          false
+        ],
+        "expected": [
+          false,
+          false,
+          false
+        ],
+        "field_matches": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": true,
+          "gap_detected": true
+        },
+        "consistent_with_supplied_primitives": true,
+        "false_acceptance": false,
+        "matches_ignore_b_shortcut": true,
+        "violations": [],
+        "output_keys": [
+          "answer_only_accepts",
+          "proof_and_goal_accepts",
+          "gap_detected"
+        ],
+        "note": "중간값의 출처와 출력 키 순서는 기록하지만 내부 생성 원인으로 단정하지 않는다.",
+        "case_id": "707233e7937007b693d55545",
+        "role_id": "criterion_fact_not_goal__v044_json",
+        "status": "accepted"
+      },
+      {
+        "output_modified": false,
+        "internal_process_observed": false,
+        "scope": "observable_contract_not_model_internals",
+        "assessable": true,
+        "input_ab": [
+          true,
+          true
+        ],
+        "reported_primitives": [
+          true,
+          true
+        ],
+        "source_prerequisites_correct": true,
+        "source_provenance": "previous_response",
+        "actual": [
+          true,
+          true,
+          false
+        ],
+        "expected": [
+          true,
+          true,
+          false
+        ],
+        "field_matches": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": true,
+          "gap_detected": true
+        },
+        "consistent_with_supplied_primitives": true,
+        "false_acceptance": false,
+        "matches_ignore_b_shortcut": true,
+        "violations": [],
+        "output_keys": [
+          "answer_only_accepts",
+          "proof_and_goal_accepts",
+          "gap_detected"
+        ],
+        "note": "중간값의 출처와 출력 키 순서는 기록하지만 내부 생성 원인으로 단정하지 않는다.",
+        "case_id": "6b6befbdaa7bda65221e59aa",
+        "role_id": "criterion_goal_is_fact__v044_json",
+        "status": "accepted"
+      },
+      {
+        "output_modified": false,
+        "internal_process_observed": false,
+        "scope": "observable_contract_not_model_internals",
+        "assessable": true,
+        "input_ab": [
+          false,
+          false
+        ],
+        "reported_primitives": [
+          false,
+          false
+        ],
+        "source_prerequisites_correct": true,
+        "source_provenance": "previous_response",
+        "actual": [
+          false,
+          false,
+          false
+        ],
+        "expected": [
+          false,
+          false,
+          false
+        ],
+        "field_matches": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": true,
+          "gap_detected": true
+        },
+        "consistent_with_supplied_primitives": true,
+        "false_acceptance": false,
+        "matches_ignore_b_shortcut": true,
+        "violations": [],
+        "output_keys": [
+          "answer_only_accepts",
+          "proof_and_goal_accepts",
+          "gap_detected"
+        ],
+        "note": "중간값의 출처와 출력 키 순서는 기록하지만 내부 생성 원인으로 단정하지 않는다.",
+        "case_id": "3512d942fbd1ce645bb16a0c",
+        "role_id": "criterion_neither__v044_json",
+        "status": "accepted"
+      }
+    ],
+    "interpretation": "3/4만으로 계약 수행을 승인하지 않는다. true/false 양쪽 허용 여부와 핵심 필요조건을 분리한다."
+  },
+  "neutral_keys": {
+    "per_field": {
+      "answer_only_accepts": {
+        "correct": 4,
+        "assessable": 4,
+        "tp": 2,
+        "fn": 0,
+        "tn": 2,
+        "fp": 0,
+        "positive_expected": 2,
+        "positive_detected": 2,
+        "all_outputs_false": false
+      },
+      "proof_and_goal_accepts": {
+        "correct": 3,
+        "assessable": 4,
+        "tp": 1,
+        "fn": 0,
+        "tn": 2,
+        "fp": 1,
+        "positive_expected": 1,
+        "positive_detected": 1,
+        "all_outputs_false": false
+      },
+      "gap_detected": {
+        "correct": 3,
+        "assessable": 4,
+        "tp": 0,
+        "fn": 1,
+        "tn": 3,
+        "fp": 0,
+        "positive_expected": 1,
+        "positive_detected": 0,
+        "all_outputs_false": true
+      }
+    },
+    "final_field_inconsistency_count": 0,
+    "assigned": 4,
+    "recorded": 4,
+    "assessable": 4,
+    "not_assessable": 0,
+    "complete_four_input_table": true,
+    "correct_full_rows": 3,
+    "correct_value_rows": 3,
+    "correct_bits": 10,
+    "false_acceptance_count": 1,
+    "ignore_b_shortcut_matching_rows": 4,
+    "all_four_rows_match_ignore_b_shortcut": true,
+    "critical_b_pair": {
+      "a_fixed": true,
+      "b_values": [
+        false,
+        true
+      ],
+      "actual_without_fact": [
+        true,
+        true,
+        false
+      ],
+      "actual_with_fact": [
+        true,
+        true,
+        false
+      ],
+      "outputs_identical": true,
+      "both_rows_correct": false,
+      "note": "실제 네 응답의 대응 관찰. b 무시가 내부 알고리즘이라는 증거는 아니다."
+    },
+    "all_conditions_verified": false,
+    "rows": [
+      {
+        "output_modified": false,
+        "internal_process_observed": false,
+        "scope": "observable_contract_not_model_internals",
+        "assessable": true,
+        "input_ab": [
+          false,
+          true
+        ],
+        "reported_primitives": [
+          false,
+          true
+        ],
+        "source_prerequisites_correct": true,
+        "source_provenance": "previous_response",
+        "actual": [
+          false,
+          false,
+          false
+        ],
+        "expected": [
+          false,
+          false,
+          false
+        ],
+        "field_matches": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": true,
+          "gap_detected": true
+        },
+        "consistent_with_supplied_primitives": true,
+        "false_acceptance": false,
+        "matches_ignore_b_shortcut": true,
+        "violations": [],
+        "output_keys": [
+          "r0",
+          "r1",
+          "r2"
+        ],
+        "note": "중간값의 출처와 출력 키 순서는 기록하지만 내부 생성 원인으로 단정하지 않는다.",
+        "case_id": "ccd931fd6574579796a7f29e",
+        "role_id": "criterion_fact_not_goal__v044_neutral_keys",
+        "status": "accepted"
+      },
+      {
+        "output_modified": false,
+        "internal_process_observed": false,
+        "scope": "observable_contract_not_model_internals",
+        "assessable": true,
+        "input_ab": [
+          true,
+          false
+        ],
+        "reported_primitives": [
+          true,
+          false
+        ],
+        "source_prerequisites_correct": true,
+        "source_provenance": "previous_response",
+        "actual": [
+          true,
+          true,
+          false
+        ],
+        "expected": [
+          true,
+          false,
+          true
+        ],
+        "field_matches": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": false,
+          "gap_detected": false
+        },
+        "consistent_with_supplied_primitives": false,
+        "false_acceptance": true,
+        "matches_ignore_b_shortcut": true,
+        "violations": [
+          "strict_accept_without_initial_fact",
+          "strict_conjunction",
+          "gap_conjunction_with_negation"
+        ],
+        "output_keys": [
+          "r0",
+          "r1",
+          "r2"
+        ],
+        "note": "중간값의 출처와 출력 키 순서는 기록하지만 내부 생성 원인으로 단정하지 않는다.",
+        "case_id": "52fa9de63ad403c52c6efbb1",
+        "role_id": "criterion_goal_not_fact__v044_neutral_keys",
+        "status": "invalid_task"
+      },
+      {
+        "output_modified": false,
+        "internal_process_observed": false,
+        "scope": "observable_contract_not_model_internals",
+        "assessable": true,
+        "input_ab": [
+          false,
+          false
+        ],
+        "reported_primitives": [
+          false,
+          false
+        ],
+        "source_prerequisites_correct": true,
+        "source_provenance": "previous_response",
+        "actual": [
+          false,
+          false,
+          false
+        ],
+        "expected": [
+          false,
+          false,
+          false
+        ],
+        "field_matches": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": true,
+          "gap_detected": true
+        },
+        "consistent_with_supplied_primitives": true,
+        "false_acceptance": false,
+        "matches_ignore_b_shortcut": true,
+        "violations": [],
+        "output_keys": [
+          "r0",
+          "r1",
+          "r2"
+        ],
+        "note": "중간값의 출처와 출력 키 순서는 기록하지만 내부 생성 원인으로 단정하지 않는다.",
+        "case_id": "6dc8921b8b8d63d3354d8ac7",
+        "role_id": "criterion_neither__v044_neutral_keys",
+        "status": "accepted"
+      },
+      {
+        "output_modified": false,
+        "internal_process_observed": false,
+        "scope": "observable_contract_not_model_internals",
+        "assessable": true,
+        "input_ab": [
+          true,
+          true
+        ],
+        "reported_primitives": [
+          true,
+          true
+        ],
+        "source_prerequisites_correct": true,
+        "source_provenance": "previous_response",
+        "actual": [
+          true,
+          true,
+          false
+        ],
+        "expected": [
+          true,
+          true,
+          false
+        ],
+        "field_matches": {
+          "answer_only_accepts": true,
+          "proof_and_goal_accepts": true,
+          "gap_detected": true
+        },
+        "consistent_with_supplied_primitives": true,
+        "false_acceptance": false,
+        "matches_ignore_b_shortcut": true,
+        "violations": [],
+        "output_keys": [
+          "r0",
+          "r1",
+          "r2"
+        ],
+        "note": "중간값의 출처와 출력 키 순서는 기록하지만 내부 생성 원인으로 단정하지 않는다.",
+        "case_id": "d649e121c5f1844aaad888f7",
+        "role_id": "criterion_goal_is_fact__v044_neutral_keys",
+        "status": "accepted"
+      }
+    ],
+    "interpretation": "3/4만으로 계약 수행을 승인하지 않는다. true/false 양쪽 허용 여부와 핵심 필요조건을 분리한다."
+  }
+}

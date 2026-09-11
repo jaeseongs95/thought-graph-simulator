@@ -67,7 +67,7 @@ results_llm/v041_probe_01/cases/
 
 ## 실제 작성·검사 범위
 
-수정본에서 139개 오프라인 단위/회귀/모의 API 시험, 21개 selfcheck를 실행했다. 기존 69개 응답의 상태와 오류, HTTP 요청 바이트가 유지됨을 확인했다. 새 LLM 추론·모델 다운로드·GPU·Windows 실행은 작성 환경에서 하지 않았다. 상세 기록은 `local_llm/BUILD_STATUS.json`, `local_llm/validation/`을 참조한다.
+수정본에서 139개 오프라인 단위/회귀/모의 API 시험, 21개 selfcheck를 실행했다. 기존 69개 응답의 상태와 오류, HTTP 요청 바이트가 유지됨을 확인했다. 새 LLM 추론·모델 다운로드·GPU·Windows 실행은 작성 환경에서 하지 않았다. 상세 기록은 `../local_llm_0441`, `../local_llm_0441`을 참조한다.
 
 ## 상세 참고
 

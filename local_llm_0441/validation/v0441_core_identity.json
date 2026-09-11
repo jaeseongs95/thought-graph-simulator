@@ -1,0 +1,28 @@
+{
+  "uploaded_lf": {
+    "sha256": "24542551351225d4a2ed0e65c95cfca3d850e7bbd102439f1f3662d2eefcfad8",
+    "git_blob_sha1": "b7aa0b58b9257fdb80882b48e4ecf1006ac4ff45",
+    "normalized_sha256": "24542551351225d4a2ed0e65c95cfca3d850e7bbd102439f1f3662d2eefcfad8",
+    "normalized_git_blob_sha1": "b7aa0b58b9257fdb80882b48e4ecf1006ac4ff45",
+    "normalization_changed_bytes": false
+  },
+  "windows_crlf_reproduction": {
+    "sha256": "60b5c75d8db90621e42aa26aab548b8763de1729113e38d0aefcc4021bd44fad",
+    "git_blob_sha1": "b8020682d9f3cc56e83491811b6a71a83a82b50d",
+    "normalized_sha256": "24542551351225d4a2ed0e65c95cfca3d850e7bbd102439f1f3662d2eefcfad8",
+    "normalized_git_blob_sha1": "b7aa0b58b9257fdb80882b48e4ecf1006ac4ff45",
+    "normalization_changed_bytes": true
+  },
+  "compatibility": {
+    "same_source": true,
+    "method": "normalized_git_blob_sha1",
+    "recorded_identity": "b7aa0b58b9257fdb80882b48e4ecf1006ac4ff45",
+    "current_identity": "b7aa0b58b9257fdb80882b48e4ecf1006ac4ff45",
+    "raw_sha256_equal": false,
+    "representation_diff_only": true
+  },
+  "observed_user_windows_raw_sha256": "60b5c75d8db90621e42aa26aab548b8763de1729113e38d0aefcc4021bd44fad",
+  "remote_git_blob_sha1": "b7aa0b58b9257fdb80882b48e4ecf1006ac4ff45",
+  "model_called": false,
+  "network_called": false
+}

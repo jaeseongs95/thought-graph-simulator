@@ -6,6 +6,7 @@ import importlib.util
 import json
 import math
 import os
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 from types import ModuleType
@@ -90,9 +91,15 @@ def core_identity_compatibility(recorded: dict, current: dict) -> dict:
     current_blob = current.get("normalized_git_blob_sha1") or current.get("git_blob_sha1")
     method = "normalized_git_blob_sha1" if recorded_blob and current_blob else "sha256"
     if recorded_blob and current_blob:
-        same = recorded_blob == current_blob
+        same = (isinstance(recorded_blob, str) and isinstance(current_blob, str)
+                and re.fullmatch(r"[a-f0-9]{40}", recorded_blob) is not None
+                and re.fullmatch(r"[a-f0-9]{40}", current_blob) is not None
+                and recorded_blob == current_blob)
     else:
-        same = recorded.get("sha256") == current.get("sha256")
+        left, right = recorded.get("sha256"), current.get("sha256")
+        same = (isinstance(left, str) and isinstance(right, str)
+                and re.fullmatch(r"[a-f0-9]{64}", left) is not None
+                and re.fullmatch(r"[a-f0-9]{64}", right) is not None and left == right)
     return {
         "same_source": bool(same),
         "method": method,

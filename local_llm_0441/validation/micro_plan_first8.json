@@ -1,0 +1,20 @@
+{
+  "model_called": false,
+  "assigned_calls": 8,
+  "groups": [
+    "control",
+    "criterion"
+  ],
+  "format_mode": "schema",
+  "cases": [
+    "control_equal",
+    "criterion_goal_is_fact",
+    "criterion_neither",
+    "control_echo_2",
+    "control_echo_1",
+    "criterion_goal_not_fact",
+    "criterion_fact_not_goal",
+    "control_not_equal"
+  ],
+  "note": "입력복사·고정 경로 연결은 도움을 제공한 진단이다. 전체 증명/ADM 성공으로 합산하지 않는다. format 대조는 메시지에 같은 전체 스키마를 포함하고 format 필드만 변경한다."
+}

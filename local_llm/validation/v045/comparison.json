@@ -1,0 +1,142 @@
+{
+  "replay": {
+    "rows": 4,
+    "correct_rows": 3,
+    "correct_bits": 10,
+    "false_acceptances": 1,
+    "inconsistent_final_fields": 0,
+    "input_sensitive_strict_at_a_true": false,
+    "fields": {
+      "answer_only_accepts": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2
+      },
+      "proof_and_goal_accepts": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "tn": 2
+      },
+      "gap_detected": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 3
+      }
+    },
+    "tf_output": [
+      true,
+      true,
+      false
+    ],
+    "identical_to_prior_staged_values": 4,
+    "identical_to_prior_staged_bytes": 4
+  },
+  "json": {
+    "rows": 4,
+    "correct_rows": 3,
+    "correct_bits": 10,
+    "false_acceptances": 1,
+    "inconsistent_final_fields": 0,
+    "input_sensitive_strict_at_a_true": false,
+    "fields": {
+      "answer_only_accepts": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2
+      },
+      "proof_and_goal_accepts": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "tn": 2
+      },
+      "gap_detected": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 3
+      }
+    },
+    "tf_output": [
+      true,
+      true,
+      false
+    ],
+    "identical_to_prior_staged_values": 4,
+    "identical_to_prior_staged_bytes": 0
+  },
+  "b_last": {
+    "rows": 4,
+    "correct_rows": 3,
+    "correct_bits": 11,
+    "false_acceptances": 0,
+    "inconsistent_final_fields": 1,
+    "input_sensitive_strict_at_a_true": true,
+    "fields": {
+      "answer_only_accepts": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2
+      },
+      "proof_and_goal_accepts": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3
+      },
+      "gap_detected": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 3
+      }
+    },
+    "tf_output": [
+      true,
+      false,
+      false
+    ],
+    "identical_to_prior_staged_values": 3,
+    "identical_to_prior_staged_bytes": 3
+  },
+  "neutral_keys": {
+    "rows": 4,
+    "correct_rows": 3,
+    "correct_bits": 10,
+    "false_acceptances": 1,
+    "inconsistent_final_fields": 0,
+    "input_sensitive_strict_at_a_true": false,
+    "fields": {
+      "answer_only_accepts": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2
+      },
+      "proof_and_goal_accepts": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "tn": 2
+      },
+      "gap_detected": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 3
+      }
+    },
+    "tf_output": [
+      true,
+      true,
+      false
+    ],
+    "identical_to_prior_staged_values": 4,
+    "identical_to_prior_staged_bytes": 0
+  }
+}

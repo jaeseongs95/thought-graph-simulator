@@ -1,0 +1,32 @@
+{
+  "model_called": false,
+  "network_called": false,
+  "source_validation": {
+    "records_replayed": 16,
+    "request_wires_reproduced": 16,
+    "selected_inputs": 4,
+    "source_files_checked": 36,
+    "snapshot_code_executed": false,
+    "network_called": false,
+    "model_called": false,
+    "original_failures_preserved": true
+  },
+  "core_compatibility": {
+    "same_source": true,
+    "method": "normalized_git_blob_sha1",
+    "recorded_identity": "b7aa0b58b9257fdb80882b48e4ecf1006ac4ff45",
+    "current_identity": "b7aa0b58b9257fdb80882b48e4ecf1006ac4ff45",
+    "raw_sha256_equal": false,
+    "representation_diff_only": true
+  },
+  "new_llm_calls": 16,
+  "operations": {
+    "copy_a": "a",
+    "and_ab": "(a AND b)",
+    "not_b": "(NOT b)",
+    "and_not_b": "(a AND (NOT b))"
+  },
+  "comparison_model": null,
+  "format": "schema",
+  "note": "중간값을 a,b로 투영하고 한 호출에 한 식만 계산한다. 입력 추출·문맥·출력 부담의 묶음 변화이며 순수한 단계 수 효과로 해석하지 않는다. 기존 정답/실패를 덮어쓰지 않는다."
+}

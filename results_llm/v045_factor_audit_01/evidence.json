@@ -1,0 +1,242 @@
+[
+  {
+    "case_id": "2849bd92ba3b41bef063441b",
+    "arm": "replay",
+    "status": "accepted",
+    "request_sha256": "311e8651618dab1ce8e40df614f3bd6ef32894f1bae31fed37fa5aab1adc3e05",
+    "response_sha256": "10724b3b01f9dd5ed9b248b26b3dc6c821b082d4887bed801e113ee50cda31e6",
+    "allowed_delta": {
+      "allowed_delta_verified": true,
+      "arm": "replay",
+      "request_identical": true,
+      "request_wire_sha256": "311e8651618dab1ce8e40df614f3bd6ef32894f1bae31fed37fa5aab1adc3e05",
+      "note": "대조는 요청 수준에서 통제한다. 캐시·GPU 수치 경로·서버 내부 상태를 통제했다는 뜻은 아니다."
+    },
+    "response_content": "{\"finding\":{\"answer_only_accepts\":false,\"gap_detected\":false,\"proof_and_goal_accepts\":false}}"
+  },
+  {
+    "case_id": "b0b75041b2c11282c7f39d5e",
+    "arm": "b_last",
+    "status": "accepted",
+    "request_sha256": "12fe40395ca7ca5b50231a7b8ca0d60e919ac03afe182f595411a61705bb3b1b",
+    "response_sha256": "ff5e9dd50ac2694ce2e0a97e5c8d8d6101aa469525a3bd4349512692e3f5c5d3",
+    "allowed_delta": {
+      "allowed_delta_verified": true,
+      "arm": "b_last",
+      "request_identical": false,
+      "request_wire_sha256": "12fe40395ca7ca5b50231a7b8ca0d60e919ac03afe182f595411a61705bb3b1b",
+      "note": "대조는 요청 수준에서 통제한다. 캐시·GPU 수치 경로·서버 내부 상태를 통제했다는 뜻은 아니다."
+    },
+    "response_content": "{\"finding\":{\"answer_only_accepts\":false,\"gap_detected\":false,\"proof_and_goal_accepts\":false}}"
+  },
+  {
+    "case_id": "8c01af1793200b17293c3d53",
+    "arm": "replay",
+    "status": "accepted",
+    "request_sha256": "7437654cc0e5a65d5650c9cb55557431169d52533e4fc8b09a0d3c0272d8855d",
+    "response_sha256": "e7fbf2c092e7b0cb5a4ed5d143f9d4e0ebb06e462387fa582d658c2626918a8a",
+    "allowed_delta": {
+      "allowed_delta_verified": true,
+      "arm": "replay",
+      "request_identical": true,
+      "request_wire_sha256": "7437654cc0e5a65d5650c9cb55557431169d52533e4fc8b09a0d3c0272d8855d",
+      "note": "대조는 요청 수준에서 통제한다. 캐시·GPU 수치 경로·서버 내부 상태를 통제했다는 뜻은 아니다."
+    },
+    "response_content": "{\"finding\":{\"answer_only_accepts\":true,\"gap_detected\":false,\"proof_and_goal_accepts\":true}}"
+  },
+  {
+    "case_id": "27af68287eca0e265cb268db",
+    "arm": "replay",
+    "status": "accepted",
+    "request_sha256": "469712427d97b05e779c26db28a29fcbfb31a5da9491a8bdbc2a7d9108d140f6",
+    "response_sha256": "d46560f5a2042c817ba0e47d973ab0a67abea8920aba1453c7c8599007e84e8d",
+    "allowed_delta": {
+      "allowed_delta_verified": true,
+      "arm": "replay",
+      "request_identical": true,
+      "request_wire_sha256": "469712427d97b05e779c26db28a29fcbfb31a5da9491a8bdbc2a7d9108d140f6",
+      "note": "대조는 요청 수준에서 통제한다. 캐시·GPU 수치 경로·서버 내부 상태를 통제했다는 뜻은 아니다."
+    },
+    "response_content": "{\"finding\":{\"answer_only_accepts\":false,\"gap_detected\":false,\"proof_and_goal_accepts\":false}}"
+  },
+  {
+    "case_id": "c661111064c8153f2f3e9db0",
+    "arm": "json",
+    "status": "invalid_task",
+    "request_sha256": "58701d2cf2f4d46c553753bf9dce18b2b2973ba4589852ff75169865579526a4",
+    "response_sha256": "78fb436b87d0a5712df4ea1784651f1e02270d0635f706b15cade60053508b43",
+    "allowed_delta": {
+      "allowed_delta_verified": true,
+      "arm": "json",
+      "request_identical": false,
+      "request_wire_sha256": "58701d2cf2f4d46c553753bf9dce18b2b2973ba4589852ff75169865579526a4",
+      "note": "대조는 요청 수준에서 통제한다. 캐시·GPU 수치 경로·서버 내부 상태를 통제했다는 뜻은 아니다."
+    },
+    "response_content": "{\"finding\":{\"answer_only_accepts\":true,\"proof_and_goal_accepts\":true,\"gap_detected\":false}}"
+  },
+  {
+    "case_id": "707233e7937007b693d55545",
+    "arm": "json",
+    "status": "accepted",
+    "request_sha256": "16b32ab4381c2490252b11b2eb59e4bb5ca999dff9a7d3c2162c90afbb1fb0c9",
+    "response_sha256": "5e7406233e05835ee2ba491e7220ec50a35c2c476b987e9400b5ba5c77aa1dfd",
+    "allowed_delta": {
+      "allowed_delta_verified": true,
+      "arm": "json",
+      "request_identical": false,
+      "request_wire_sha256": "16b32ab4381c2490252b11b2eb59e4bb5ca999dff9a7d3c2162c90afbb1fb0c9",
+      "note": "대조는 요청 수준에서 통제한다. 캐시·GPU 수치 경로·서버 내부 상태를 통제했다는 뜻은 아니다."
+    },
+    "response_content": "{\"finding\":{\"answer_only_accepts\":false,\"proof_and_goal_accepts\":false,\"gap_detected\":false}}"
+  },
+  {
+    "case_id": "ccd931fd6574579796a7f29e",
+    "arm": "neutral_keys",
+    "status": "accepted",
+    "request_sha256": "c2b94ddad62abcc18542e3b1c777c0ffe13bdd4a6b2311537fef08c51795487b",
+    "response_sha256": "bfc68676843129a0af982efeaec7d509f601a76603b63be983f510292d9944a0",
+    "allowed_delta": {
+      "allowed_delta_verified": true,
+      "arm": "neutral_keys",
+      "request_identical": false,
+      "request_wire_sha256": "c2b94ddad62abcc18542e3b1c777c0ffe13bdd4a6b2311537fef08c51795487b",
+      "note": "대조는 요청 수준에서 통제한다. 캐시·GPU 수치 경로·서버 내부 상태를 통제했다는 뜻은 아니다."
+    },
+    "response_content": "{\"finding\":{\"r0\":false,\"r1\":false,\"r2\":false}}"
+  },
+  {
+    "case_id": "6b6befbdaa7bda65221e59aa",
+    "arm": "json",
+    "status": "accepted",
+    "request_sha256": "a836afdc760e4055d570ec249044def54de6da6e27bf101bfb2181f09f8bd21e",
+    "response_sha256": "eb27a555ec4a93be6460499764cc1751530d53f1e4e331d273a7f5303760e503",
+    "allowed_delta": {
+      "allowed_delta_verified": true,
+      "arm": "json",
+      "request_identical": false,
+      "request_wire_sha256": "a836afdc760e4055d570ec249044def54de6da6e27bf101bfb2181f09f8bd21e",
+      "note": "대조는 요청 수준에서 통제한다. 캐시·GPU 수치 경로·서버 내부 상태를 통제했다는 뜻은 아니다."
+    },
+    "response_content": "{\"finding\":{\"answer_only_accepts\":true,\"proof_and_goal_accepts\":true,\"gap_detected\":false}}"
+  },
+  {
+    "case_id": "3512d942fbd1ce645bb16a0c",
+    "arm": "json",
+    "status": "accepted",
+    "request_sha256": "49acb260c422a92b1c11e5af083388294e85d1cdc5fcc03f9656bd7bd8bb4442",
+    "response_sha256": "4b97b8b3174ff5a6ecac4110cef2fece242c20f0e7370b47a86bf1664ed60fec",
+    "allowed_delta": {
+      "allowed_delta_verified": true,
+      "arm": "json",
+      "request_identical": false,
+      "request_wire_sha256": "49acb260c422a92b1c11e5af083388294e85d1cdc5fcc03f9656bd7bd8bb4442",
+      "note": "대조는 요청 수준에서 통제한다. 캐시·GPU 수치 경로·서버 내부 상태를 통제했다는 뜻은 아니다."
+    },
+    "response_content": "{\"finding\":{\"answer_only_accepts\":false,\"proof_and_goal_accepts\":false,\"gap_detected\":false}}"
+  },
+  {
+    "case_id": "52fa9de63ad403c52c6efbb1",
+    "arm": "neutral_keys",
+    "status": "invalid_task",
+    "request_sha256": "e9f1f5fe2e187053a087218effc425fe8899296275433a20fad6f1b463f6852d",
+    "response_sha256": "cb5fb22a7d33c609a70d0518ee27a8c9118d044730aae9bf2c197f6c2eb61b17",
+    "allowed_delta": {
+      "allowed_delta_verified": true,
+      "arm": "neutral_keys",
+      "request_identical": false,
+      "request_wire_sha256": "e9f1f5fe2e187053a087218effc425fe8899296275433a20fad6f1b463f6852d",
+      "note": "대조는 요청 수준에서 통제한다. 캐시·GPU 수치 경로·서버 내부 상태를 통제했다는 뜻은 아니다."
+    },
+    "response_content": "{\"finding\":{\"r0\":true,\"r1\":true,\"r2\":false}}"
+  },
+  {
+    "case_id": "ffeeb551b6a82a97959443cb",
+    "arm": "b_last",
+    "status": "invalid_task",
+    "request_sha256": "e06eefb6bd32a7eb7277a9e328c52f0a28814836dd8caf9b16a76015cf4872ac",
+    "response_sha256": "c0cf799c88e8a4e18ba24038a0298af11f6925cfda975a77866e335fd1ad5a9f",
+    "allowed_delta": {
+      "allowed_delta_verified": true,
+      "arm": "b_last",
+      "request_identical": false,
+      "request_wire_sha256": "e06eefb6bd32a7eb7277a9e328c52f0a28814836dd8caf9b16a76015cf4872ac",
+      "note": "대조는 요청 수준에서 통제한다. 캐시·GPU 수치 경로·서버 내부 상태를 통제했다는 뜻은 아니다."
+    },
+    "response_content": "{\"finding\":{\"answer_only_accepts\":true,\"gap_detected\":false,\"proof_and_goal_accepts\":false}}"
+  },
+  {
+    "case_id": "b67f7e0c7d389e1095caebb2",
+    "arm": "b_last",
+    "status": "accepted",
+    "request_sha256": "d308b1be2dc045a3eb142bd720a7f79d850c6d7b9132a70df51c446a0211ff4e",
+    "response_sha256": "dad8fb9250651e98dc6054c4fe41cc42a3fb3d5288562a4f8698f9b269bc9fa9",
+    "allowed_delta": {
+      "allowed_delta_verified": true,
+      "arm": "b_last",
+      "request_identical": false,
+      "request_wire_sha256": "d308b1be2dc045a3eb142bd720a7f79d850c6d7b9132a70df51c446a0211ff4e",
+      "note": "대조는 요청 수준에서 통제한다. 캐시·GPU 수치 경로·서버 내부 상태를 통제했다는 뜻은 아니다."
+    },
+    "response_content": "{\"finding\":{\"answer_only_accepts\":false,\"gap_detected\":false,\"proof_and_goal_accepts\":false}}"
+  },
+  {
+    "case_id": "6dc8921b8b8d63d3354d8ac7",
+    "arm": "neutral_keys",
+    "status": "accepted",
+    "request_sha256": "41abbae911fc96a4226011e2d696553e9570ebe2bed300308d2a414342dfce34",
+    "response_sha256": "1c24ad584529cb5fdb7edd7059063d631d1e5b84d7e898f83d8522c4e1ae87f3",
+    "allowed_delta": {
+      "allowed_delta_verified": true,
+      "arm": "neutral_keys",
+      "request_identical": false,
+      "request_wire_sha256": "41abbae911fc96a4226011e2d696553e9570ebe2bed300308d2a414342dfce34",
+      "note": "대조는 요청 수준에서 통제한다. 캐시·GPU 수치 경로·서버 내부 상태를 통제했다는 뜻은 아니다."
+    },
+    "response_content": "{\"finding\":{\"r0\":false,\"r1\":false,\"r2\":false}}"
+  },
+  {
+    "case_id": "d339d4613520cb71b09a5152",
+    "arm": "b_last",
+    "status": "accepted",
+    "request_sha256": "84895d667d83da114b847392ce8ecb7b53e0fe9f48568d1a158b65f88643d781",
+    "response_sha256": "ca8ac5ab1e7d269eb445a9ee97a1fe524bcfd8e9ce07987ff359e726e9f28402",
+    "allowed_delta": {
+      "allowed_delta_verified": true,
+      "arm": "b_last",
+      "request_identical": false,
+      "request_wire_sha256": "84895d667d83da114b847392ce8ecb7b53e0fe9f48568d1a158b65f88643d781",
+      "note": "대조는 요청 수준에서 통제한다. 캐시·GPU 수치 경로·서버 내부 상태를 통제했다는 뜻은 아니다."
+    },
+    "response_content": "{\"finding\":{\"answer_only_accepts\":true,\"gap_detected\":false,\"proof_and_goal_accepts\":true}}"
+  },
+  {
+    "case_id": "9ff71e6a994e1993fc42c7a6",
+    "arm": "replay",
+    "status": "invalid_task",
+    "request_sha256": "050ea0dc2eb527a40636fb8681ea1f4c88d479fd987c4123a3ab9bdfd97976b4",
+    "response_sha256": "86622262daaffede6abe73439f10c2cccb6e3b56b1b8b389fc56bd3879921d75",
+    "allowed_delta": {
+      "allowed_delta_verified": true,
+      "arm": "replay",
+      "request_identical": true,
+      "request_wire_sha256": "050ea0dc2eb527a40636fb8681ea1f4c88d479fd987c4123a3ab9bdfd97976b4",
+      "note": "대조는 요청 수준에서 통제한다. 캐시·GPU 수치 경로·서버 내부 상태를 통제했다는 뜻은 아니다."
+    },
+    "response_content": "{\"finding\":{\"answer_only_accepts\":true,\"gap_detected\":false,\"proof_and_goal_accepts\":true}}"
+  },
+  {
+    "case_id": "d649e121c5f1844aaad888f7",
+    "arm": "neutral_keys",
+    "status": "accepted",
+    "request_sha256": "4f505621b0d57b23bf75744e708b772120512b2cc67b62684d11003f2a0039e4",
+    "response_sha256": "b40a570f271d7ffbcbb4945421b59e433029d9f430b1dd7b8fc35515a6d8cfc0",
+    "allowed_delta": {
+      "allowed_delta_verified": true,
+      "arm": "neutral_keys",
+      "request_identical": false,
+      "request_wire_sha256": "4f505621b0d57b23bf75744e708b772120512b2cc67b62684d11003f2a0039e4",
+      "note": "대조는 요청 수준에서 통제한다. 캐시·GPU 수치 경로·서버 내부 상태를 통제했다는 뜻은 아니다."
+    },
+    "response_content": "{\"finding\":{\"r0\":true,\"r1\":true,\"r2\":false}}"
+  }
+]
