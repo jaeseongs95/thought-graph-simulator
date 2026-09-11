@@ -1,0 +1,1052 @@
+[
+  {
+    "seed": 580410664,
+    "arms": {
+      "oneshot_original": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 8,
+        "finding_correct": 4,
+        "gap_correct": 6,
+        "witness_correct": 4,
+        "strict_trace_correct": 4,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "finding": 4
+        }
+      },
+      "oneshot_commuted": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 8,
+        "finding_correct": 4,
+        "gap_correct": 6,
+        "witness_correct": 4,
+        "strict_trace_correct": 4,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "finding": 4
+        }
+      },
+      "staged_commuted": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 6,
+        "finding_correct": 6,
+        "gap_correct": 6,
+        "witness_correct": 6,
+        "strict_trace_correct": 6,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "primitives": 2
+        }
+      },
+      "staged_pipeline": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 6,
+        "finding_correct": 6,
+        "gap_correct": 6,
+        "witness_correct": 6,
+        "strict_trace_correct": 6,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "primitives": 2
+        }
+      }
+    }
+  },
+  {
+    "seed": 661935755,
+    "arms": {
+      "oneshot_original": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 8,
+        "finding_correct": 4,
+        "gap_correct": 6,
+        "witness_correct": 4,
+        "strict_trace_correct": 4,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "finding": 4
+        }
+      },
+      "oneshot_commuted": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 8,
+        "finding_correct": 4,
+        "gap_correct": 6,
+        "witness_correct": 4,
+        "strict_trace_correct": 4,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "finding": 4
+        }
+      },
+      "staged_commuted": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 6,
+        "finding_correct": 6,
+        "gap_correct": 6,
+        "witness_correct": 6,
+        "strict_trace_correct": 6,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "primitives": 2
+        }
+      },
+      "staged_pipeline": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 6,
+        "finding_correct": 6,
+        "gap_correct": 6,
+        "witness_correct": 6,
+        "strict_trace_correct": 6,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "primitives": 2
+        }
+      }
+    }
+  },
+  {
+    "seed": 209422594,
+    "arms": {
+      "oneshot_original": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 8,
+        "finding_correct": 4,
+        "gap_correct": 6,
+        "witness_correct": 4,
+        "strict_trace_correct": 4,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "finding": 4
+        }
+      },
+      "oneshot_commuted": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 8,
+        "finding_correct": 4,
+        "gap_correct": 6,
+        "witness_correct": 4,
+        "strict_trace_correct": 4,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "finding": 4
+        }
+      },
+      "staged_commuted": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 6,
+        "finding_correct": 6,
+        "gap_correct": 6,
+        "witness_correct": 6,
+        "strict_trace_correct": 6,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "primitives": 2
+        }
+      },
+      "staged_pipeline": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 6,
+        "finding_correct": 6,
+        "gap_correct": 6,
+        "witness_correct": 6,
+        "strict_trace_correct": 6,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "primitives": 2
+        }
+      }
+    }
+  },
+  {
+    "seed": 1790124989,
+    "arms": {
+      "oneshot_original": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 8,
+        "finding_correct": 4,
+        "gap_correct": 6,
+        "witness_correct": 4,
+        "strict_trace_correct": 4,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "finding": 4
+        }
+      },
+      "oneshot_commuted": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 8,
+        "finding_correct": 4,
+        "gap_correct": 6,
+        "witness_correct": 4,
+        "strict_trace_correct": 4,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "finding": 4
+        }
+      },
+      "staged_commuted": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 6,
+        "finding_correct": 6,
+        "gap_correct": 6,
+        "witness_correct": 6,
+        "strict_trace_correct": 6,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "primitives": 2
+        }
+      },
+      "staged_pipeline": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 6,
+        "finding_correct": 6,
+        "gap_correct": 6,
+        "witness_correct": 6,
+        "strict_trace_correct": 6,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "primitives": 2
+        }
+      }
+    }
+  },
+  {
+    "seed": 267101868,
+    "arms": {
+      "oneshot_original": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 8,
+        "finding_correct": 4,
+        "gap_correct": 6,
+        "witness_correct": 4,
+        "strict_trace_correct": 4,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "finding": 4
+        }
+      },
+      "oneshot_commuted": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 8,
+        "finding_correct": 4,
+        "gap_correct": 6,
+        "witness_correct": 4,
+        "strict_trace_correct": 4,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "finding": 4
+        }
+      },
+      "staged_commuted": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 6,
+        "finding_correct": 6,
+        "gap_correct": 6,
+        "witness_correct": 6,
+        "strict_trace_correct": 6,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "primitives": 2
+        }
+      },
+      "staged_pipeline": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 6,
+        "finding_correct": 6,
+        "gap_correct": 6,
+        "witness_correct": 6,
+        "strict_trace_correct": 6,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "primitives": 2
+        }
+      }
+    }
+  },
+  {
+    "seed": 752235971,
+    "arms": {
+      "oneshot_original": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 8,
+        "finding_correct": 4,
+        "gap_correct": 4,
+        "witness_correct": 4,
+        "strict_trace_correct": 4,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "finding": 4
+        }
+      },
+      "oneshot_commuted": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 8,
+        "finding_correct": 4,
+        "gap_correct": 6,
+        "witness_correct": 4,
+        "strict_trace_correct": 4,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "finding": 4
+        }
+      },
+      "staged_commuted": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 6,
+        "finding_correct": 6,
+        "gap_correct": 6,
+        "witness_correct": 6,
+        "strict_trace_correct": 6,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "primitives": 2
+        }
+      },
+      "staged_pipeline": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 6,
+        "finding_correct": 6,
+        "gap_correct": 6,
+        "witness_correct": 6,
+        "strict_trace_correct": 6,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "primitives": 2
+        }
+      }
+    }
+  },
+  {
+    "seed": 1292559482,
+    "arms": {
+      "oneshot_original": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 8,
+        "finding_correct": 4,
+        "gap_correct": 6,
+        "witness_correct": 4,
+        "strict_trace_correct": 4,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "finding": 4
+        }
+      },
+      "oneshot_commuted": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 8,
+        "finding_correct": 4,
+        "gap_correct": 6,
+        "witness_correct": 4,
+        "strict_trace_correct": 4,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "finding": 4
+        }
+      },
+      "staged_commuted": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 6,
+        "finding_correct": 6,
+        "gap_correct": 6,
+        "witness_correct": 6,
+        "strict_trace_correct": 6,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "primitives": 2
+        }
+      },
+      "staged_pipeline": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 6,
+        "finding_correct": 6,
+        "gap_correct": 6,
+        "witness_correct": 6,
+        "strict_trace_correct": 6,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "primitives": 2
+        }
+      }
+    }
+  },
+  {
+    "seed": 223674688,
+    "arms": {
+      "oneshot_original": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 8,
+        "finding_correct": 4,
+        "gap_correct": 4,
+        "witness_correct": 4,
+        "strict_trace_correct": 4,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "finding": 4
+        }
+      },
+      "oneshot_commuted": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 8,
+        "finding_correct": 4,
+        "gap_correct": 6,
+        "witness_correct": 4,
+        "strict_trace_correct": 4,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "finding": 4
+        }
+      },
+      "staged_commuted": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 6,
+        "finding_correct": 6,
+        "gap_correct": 6,
+        "witness_correct": 6,
+        "strict_trace_correct": 6,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "primitives": 2
+        }
+      },
+      "staged_pipeline": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 6,
+        "finding_correct": 6,
+        "gap_correct": 6,
+        "witness_correct": 6,
+        "strict_trace_correct": 6,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "primitives": 2
+        }
+      }
+    }
+  },
+  {
+    "seed": 860724506,
+    "arms": {
+      "oneshot_original": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 8,
+        "finding_correct": 4,
+        "gap_correct": 6,
+        "witness_correct": 4,
+        "strict_trace_correct": 4,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "finding": 4
+        }
+      },
+      "oneshot_commuted": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 8,
+        "finding_correct": 4,
+        "gap_correct": 6,
+        "witness_correct": 4,
+        "strict_trace_correct": 4,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "finding": 4
+        }
+      },
+      "staged_commuted": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 6,
+        "finding_correct": 6,
+        "gap_correct": 6,
+        "witness_correct": 6,
+        "strict_trace_correct": 6,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "primitives": 2
+        }
+      },
+      "staged_pipeline": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 6,
+        "finding_correct": 6,
+        "gap_correct": 6,
+        "witness_correct": 6,
+        "strict_trace_correct": 6,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "primitives": 2
+        }
+      }
+    }
+  },
+  {
+    "seed": 68285180,
+    "arms": {
+      "oneshot_original": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 8,
+        "finding_correct": 4,
+        "gap_correct": 6,
+        "witness_correct": 4,
+        "strict_trace_correct": 4,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "finding": 4
+        }
+      },
+      "oneshot_commuted": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 8,
+        "finding_correct": 4,
+        "gap_correct": 6,
+        "witness_correct": 4,
+        "strict_trace_correct": 4,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "finding": 4
+        }
+      },
+      "staged_commuted": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 6,
+        "finding_correct": 6,
+        "gap_correct": 6,
+        "witness_correct": 6,
+        "strict_trace_correct": 6,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "primitives": 2
+        }
+      },
+      "staged_pipeline": {
+        "assigned": 8,
+        "observed": 8,
+        "payload_valid": 8,
+        "observed_correct": 8,
+        "primitives_correct": 6,
+        "finding_correct": 6,
+        "gap_correct": 6,
+        "witness_correct": 6,
+        "strict_trace_correct": 6,
+        "positive_assigned": 2,
+        "positive_gap_observed": 2,
+        "measured": {
+          "observed_correct": 8,
+          "primitives_correct": 8,
+          "finding_correct": 8,
+          "gap_correct": 8,
+          "witness_correct": 8,
+          "strict_trace_correct": 8
+        },
+        "positive_gap_correct": 0,
+        "first_failures": {
+          "primitives": 2
+        }
+      }
+    }
+  }
+]

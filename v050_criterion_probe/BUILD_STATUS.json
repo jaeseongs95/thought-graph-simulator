@@ -1,0 +1,40 @@
+{
+  "version": "0.5.0",
+  "contract": "criterion-reintegration-v050-r1",
+  "user_input_analysis": {
+    "bundle": "v049_expression_01_evidence.zip",
+    "http_calls": 480,
+    "manifest_files": 1000,
+    "parent_transfers": 80,
+    "full_report_equality": true
+  },
+  "tests": {
+    "total": 322,
+    "legacy": 243,
+    "v050_new": 79,
+    "final_exit_code": 0,
+    "fresh_zip_test_total": 322,
+    "fresh_zip_exit_code": 0
+  },
+  "review": {
+    "actual_underlying_defects_corrected": 1,
+    "regression_tests_failed_before": 4,
+    "same_regression_tests_passed_after": 4
+  },
+  "synthetic_execution": {
+    "http_calls": 560,
+    "independent_parent_edges_checked": 400,
+    "offline_report_equal": true,
+    "fresh_zip_offline_equal": true
+  },
+  "compatibility": {
+    "actual_v049_prepare": true,
+    "legacy_python_files_unchanged": 26,
+    "release_execution_and_test_files_unchanged": 68
+  },
+  "actual_runtime": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "os": "Linux",
+  "windows_runtime_tested": false,
+  "new_user_llm_inference_performed": false,
+  "source_fingerprint_is_not_external_attestation": true
+}

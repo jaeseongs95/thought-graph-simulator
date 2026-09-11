@@ -1,0 +1,1 @@
+이 실행은 도구의 60초 시간 제한으로 중단되어 완료 결과가 없다. 최종 검증은 FINAL_SELFTEST.log 및 FINAL_SELFTEST.exit를 사용한다.

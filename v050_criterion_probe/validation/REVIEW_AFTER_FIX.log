@@ -1,0 +1,9 @@
+test_bad_not_not_reported_as_input_reading_error (tests_v050.test_review_regressions.ReviewRegressions.test_bad_not_not_reported_as_input_reading_error) ... ok
+test_invalid_proof_must_not_erase_correct_extraction (tests_v050.test_review_regressions.ReviewRegressions.test_invalid_proof_must_not_erase_correct_extraction) ... ok
+test_invalid_proof_must_not_erase_correct_gap (tests_v050.test_review_regressions.ReviewRegressions.test_invalid_proof_must_not_erase_correct_gap) ... ok
+test_missing_later_call_must_preserve_observed_earlier_results (tests_v050.test_review_regressions.ReviewRegressions.test_missing_later_call_must_preserve_observed_earlier_results) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+OK

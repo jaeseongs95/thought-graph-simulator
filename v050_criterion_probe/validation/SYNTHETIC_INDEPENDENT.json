@@ -1,0 +1,36 @@
+{
+  "bundle_sha256": "e99a531c62c0a9b928a46576c7625ebf69851a66f1fed52a5f00f5b9231f4fbd",
+  "manifest_files_checked": 1169,
+  "http_calls": 560,
+  "blocked_slots": 0,
+  "parent_edges_checked": 400,
+  "event_tip": "cc63940be46bc8214120be772cc7b66f46e0c7904a8f3a125adbd1948fa810cc",
+  "arms": {
+    "oneshot_original": {
+      "finding_correct": 60,
+      "gap_correct": 60,
+      "strict_trace_correct": 60,
+      "assigned": 80
+    },
+    "oneshot_commuted": {
+      "finding_correct": 80,
+      "gap_correct": 80,
+      "strict_trace_correct": 80,
+      "assigned": 80
+    },
+    "staged_commuted": {
+      "finding_correct": 80,
+      "gap_correct": 80,
+      "strict_trace_correct": 80,
+      "assigned": 80
+    },
+    "staged_pipeline": {
+      "finding_correct": 80,
+      "gap_correct": 80,
+      "strict_trace_correct": 80,
+      "assigned": 80
+    }
+  },
+  "independent_of_production_imports": true,
+  "matches_saved_scores": true
+}

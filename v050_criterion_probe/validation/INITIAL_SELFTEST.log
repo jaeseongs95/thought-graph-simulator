@@ -1,0 +1,37 @@
+test_duplicate_keys (tests_v050.test_contracts.Contracts.test_duplicate_keys) ... ok
+test_empty_facts_not_filled (tests_v050.test_contracts.Contracts.test_empty_facts_not_filled) ... ok
+test_extra_payload_key (tests_v050.test_contracts.Contracts.test_extra_payload_key) ... ok
+test_extract_valid (tests_v050.test_contracts.Contracts.test_extract_valid) ... ok
+test_missing_usage_stays_null (tests_v050.test_contracts.Contracts.test_missing_usage_stays_null) ... ok
+test_nonfinite (tests_v050.test_contracts.Contracts.test_nonfinite) ... ok
+test_observed_string_not_coerced (tests_v050.test_contracts.Contracts.test_observed_string_not_coerced) ... ok
+test_schema_does_not_contain_answer_const_or_enum (tests_v050.test_contracts.Contracts.test_schema_does_not_contain_answer_const_or_enum) ... ok
+test_semantically_wrong_payload_is_retained (tests_v050.test_contracts.Contracts.test_semantically_wrong_payload_is_retained) ... ok
+test_thinking_channel (tests_v050.test_contracts.Contracts.test_thinking_channel) ... ok
+test_tool_calls (tests_v050.test_contracts.Contracts.test_tool_calls) ... ok
+test_trailing_prose (tests_v050.test_contracts.Contracts.test_trailing_prose) ... ok
+test_truncation (tests_v050.test_contracts.Contracts.test_truncation) ... ok
+test_value_wrong_types (tests_v050.test_contracts.Contracts.test_value_wrong_types) ... ok
+test_witness_valid (tests_v050.test_contracts.Contracts.test_witness_valid) ... ok
+test_wrong_model (tests_v050.test_contracts.Contracts.test_wrong_model) ... ok
+test_80_blocks (tests_v050.test_design.Design.test_80_blocks) ... ok
+test_all_truth_cases_present (tests_v050.test_design.Design.test_all_truth_cases_present) ... ok
+test_bad_primitive_is_forwarded_verbatim (tests_v050.test_design.Design.test_bad_primitive_is_forwarded_verbatim) ... ok
+test_cyclic_order_reversed (tests_v050.test_design.Design.test_cyclic_order_reversed) ... ok
+test_dependencies_are_prior_slots (tests_v050.test_design.Design.test_dependencies_are_prior_slots) ... ok
+test_missing_parent_rejected (tests_v050.test_design.Design.test_missing_parent_rejected) ... ok
+test_no_oracle_in_generation_dependencies (tests_v050.test_design.Design.test_no_oracle_in_generation_dependencies) ... ok
+test_not_result_not_recomputed (tests_v050.test_design.Design.test_not_result_not_recomputed) ... ok
+test_oneshot_only_gap_order_differs (tests_v050.test_design.Design.test_oneshot_only_gap_order_differs) ... ok
+test_plan_cannot_change_case (tests_v050.test_design.Design.test_plan_cannot_change_case) ... ok
+test_plan_cannot_filter_seed (tests_v050.test_design.Design.test_plan_cannot_filter_seed) ... ok
+test_plan_cannot_reorder_after_hash (tests_v050.test_design.Design.test_plan_cannot_reorder_after_hash) ... ok
+test_request_never_contains_gold_answer_fields (tests_v050.test_design.Design.test_request_never_contains_gold_answer_fields) ... ok
+test_seeds_all_and_cycles (tests_v050.test_design.Design.test_seeds_all_and_cycles) ... ok
+test_semantic_requests_keep_runtime_options (tests_v050.test_design.Design.test_semantic_requests_keep_runtime_options) ... ok
+test_slot_count (tests_v050.test_design.Design.test_slot_count) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 5.695s
+
+OK

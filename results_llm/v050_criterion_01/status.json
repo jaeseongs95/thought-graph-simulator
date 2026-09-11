@@ -1,0 +1,16 @@
+{
+  "state": "complete",
+  "complete": true,
+  "recorded_slots": 560,
+  "inference_calls": 560,
+  "event_tip": "c4c35224216c35c6aa673a1c35754ce6b2d52f9d0b3a18e1df1f6e371d47c52e",
+  "runtime_identity_verified": true,
+  "identity_checkpoints": [
+    "runtime.before.json",
+    "runtime.round_001.json",
+    "runtime.after.json"
+  ],
+  "response_identity_mismatch": false,
+  "error": null,
+  "finished_at": "2026-09-11T13:27:25.224+00:00"
+}

@@ -1,0 +1,45 @@
+test_bad_not_not_reported_as_input_reading_error (tests_v050.test_review_regressions.ReviewRegressions.test_bad_not_not_reported_as_input_reading_error) ... FAIL
+test_invalid_proof_must_not_erase_correct_extraction (tests_v050.test_review_regressions.ReviewRegressions.test_invalid_proof_must_not_erase_correct_extraction) ... FAIL
+test_invalid_proof_must_not_erase_correct_gap (tests_v050.test_review_regressions.ReviewRegressions.test_invalid_proof_must_not_erase_correct_gap) ... FAIL
+test_missing_later_call_must_preserve_observed_earlier_results (tests_v050.test_review_regressions.ReviewRegressions.test_missing_later_call_must_preserve_observed_earlier_results) ... FAIL
+
+======================================================================
+FAIL: test_bad_not_not_reported_as_input_reading_error (tests_v050.test_review_regressions.ReviewRegressions.test_bad_not_not_reported_as_input_reading_error)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v050_criterion_probe/tests_v050/test_review_regressions.py", line 31, in test_bad_not_not_reported_as_input_reading_error
+    self.assertIs(r['observed_correct'],True)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not True
+
+======================================================================
+FAIL: test_invalid_proof_must_not_erase_correct_extraction (tests_v050.test_review_regressions.ReviewRegressions.test_invalid_proof_must_not_erase_correct_extraction)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v050_criterion_probe/tests_v050/test_review_regressions.py", line 12, in test_invalid_proof_must_not_erase_correct_extraction
+    self.assertIs(r['observed_correct'],True)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not True
+
+======================================================================
+FAIL: test_invalid_proof_must_not_erase_correct_gap (tests_v050.test_review_regressions.ReviewRegressions.test_invalid_proof_must_not_erase_correct_gap)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v050_criterion_probe/tests_v050/test_review_regressions.py", line 18, in test_invalid_proof_must_not_erase_correct_gap
+    self.assertIs(r['gap_correct'],True)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not True
+
+======================================================================
+FAIL: test_missing_later_call_must_preserve_observed_earlier_results (tests_v050.test_review_regressions.ReviewRegressions.test_missing_later_call_must_preserve_observed_earlier_results)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v050_criterion_probe/tests_v050/test_review_regressions.py", line 23, in test_missing_later_call_must_preserve_observed_earlier_results
+    self.assertIs(r['observed_correct'],True)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None is not True
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=4)

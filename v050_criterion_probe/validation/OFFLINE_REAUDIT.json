@@ -1,0 +1,11 @@
+{
+  "server_process_already_terminated": true,
+  "full_report_equality": true,
+  "calls": 560,
+  "strict_trace": {
+    "oneshot_original": 60,
+    "oneshot_commuted": 80,
+    "staged_commuted": 80,
+    "staged_pipeline": 80
+  }
+}

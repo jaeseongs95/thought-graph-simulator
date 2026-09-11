@@ -1,0 +1,161 @@
+{
+  "legacy_python_files_unchanged": 26,
+  "legacy": [
+    {
+      "path": "paired_probe_v047/__init__.py",
+      "unchanged": true,
+      "sha256": "d62052e57273e4af51cfec26cd5e179d2b3505aa553740cde7f44adcc758f005"
+    },
+    {
+      "path": "paired_probe_v047/__main__.py",
+      "unchanged": true,
+      "sha256": "bef95cc496d47bb59d74729f0a93471dfbd9e41526a890773e649c06e62f02e3"
+    },
+    {
+      "path": "paired_probe_v047/audit.py",
+      "unchanged": true,
+      "sha256": "2ecd330cf9c7df800c9ccffbec426451b1b59c4f86b6e2ee03d80a33b39fc039"
+    },
+    {
+      "path": "paired_probe_v047/contracts.py",
+      "unchanged": true,
+      "sha256": "b773841d40105e1166696b32d72de2a5a5276d7cc6e554e4bd8767af003a307d"
+    },
+    {
+      "path": "paired_probe_v047/oracle.py",
+      "unchanged": true,
+      "sha256": "214beceaa7d1e1a9146e5c4120f4e65234ad8e90fa2127d8d378ce7a66122710"
+    },
+    {
+      "path": "paired_probe_v047/plan.py",
+      "unchanged": true,
+      "sha256": "05791ca7d15157eded8e4cd9ed6f836d271da5216a86385e4996d39c3fc95aab"
+    },
+    {
+      "path": "paired_probe_v047/runner.py",
+      "unchanged": true,
+      "sha256": "e9db377a8dc1d314d055e75a4f4d531f0d8fa65bc328e66daabf7e7a75c11b08"
+    },
+    {
+      "path": "paired_probe_v048/__init__.py",
+      "unchanged": true,
+      "sha256": "dc577bfd118fdf95b958084156aa522592396a5e3c87835988ed53432fbfee39"
+    },
+    {
+      "path": "paired_probe_v048/__main__.py",
+      "unchanged": true,
+      "sha256": "0a9b9f1afcd2d2d28ccfda6cc05ed21eeb2cda90084fb363ac27fcda13213716"
+    },
+    {
+      "path": "paired_probe_v048/audit.py",
+      "unchanged": true,
+      "sha256": "039f055c368c6b96d08702d1bf73a77b87d7198a0f5c041d6e2c992e827812e7"
+    },
+    {
+      "path": "paired_probe_v048/contracts.py",
+      "unchanged": true,
+      "sha256": "c7d1420bf8290c51ca1f434db419da9a5651bddaefd38b1c56823adde36417b3"
+    },
+    {
+      "path": "paired_probe_v048/oracle.py",
+      "unchanged": true,
+      "sha256": "214beceaa7d1e1a9146e5c4120f4e65234ad8e90fa2127d8d378ce7a66122710"
+    },
+    {
+      "path": "paired_probe_v048/plan.py",
+      "unchanged": true,
+      "sha256": "6a54ca0010be93ab33d7ee564a8e09147a9bfcd1bb0af53143aaac6c0e262f3d"
+    },
+    {
+      "path": "paired_probe_v048/reporting.py",
+      "unchanged": true,
+      "sha256": "233114369881a954a27b1b0e8c83442fd73c552fcc65e7d4fcfd7cd4483c2c6b"
+    },
+    {
+      "path": "paired_probe_v048/runner.py",
+      "unchanged": true,
+      "sha256": "2c13fa5619d083a655b5d9855079cd6ee811b40b8f4ba6ecbb1f389a600bfc46"
+    },
+    {
+      "path": "paired_probe_v049/__init__.py",
+      "unchanged": true,
+      "sha256": "2ddc4b30933f257b02401792be7c42372196988344d3259f9dadc341a4f8d55b"
+    },
+    {
+      "path": "paired_probe_v049/__main__.py",
+      "unchanged": true,
+      "sha256": "7c29f1727a28831ee7d85566d37c34ba25d97dee68a9815749c23130a3e56d13"
+    },
+    {
+      "path": "paired_probe_v049/audit.py",
+      "unchanged": true,
+      "sha256": "07469442c6bf562557668c77c00106ba9d88a656c949bcc0041009b64887371e"
+    },
+    {
+      "path": "paired_probe_v049/contracts.py",
+      "unchanged": true,
+      "sha256": "90f4794a8eb2abd7ee2bedb269607f84f71ae92f8a1dee182bdd4adec45efcba"
+    },
+    {
+      "path": "paired_probe_v049/evidence.py",
+      "unchanged": true,
+      "sha256": "076c7573ebb339b61bcd2c0b0ababae8b492826fee7b7c2d5402af022e342f03"
+    },
+    {
+      "path": "paired_probe_v049/oracle.py",
+      "unchanged": true,
+      "sha256": "214beceaa7d1e1a9146e5c4120f4e65234ad8e90fa2127d8d378ce7a66122710"
+    },
+    {
+      "path": "paired_probe_v049/plan.py",
+      "unchanged": true,
+      "sha256": "2331b469032d39d31aa2131164e88c5cec4a5c51e6a35c52800542aa53616d1b"
+    },
+    {
+      "path": "paired_probe_v049/reporting.py",
+      "unchanged": true,
+      "sha256": "d23bce45a259ff52d5c5b635ce8ec0fe8a972c1049b5c41be6a1f5b16d105923"
+    },
+    {
+      "path": "paired_probe_v049/runner.py",
+      "unchanged": true,
+      "sha256": "2c13fa5619d083a655b5d9855079cd6ee811b40b8f4ba6ecbb1f389a600bfc46"
+    },
+    {
+      "path": "test_support/__init__.py",
+      "unchanged": true,
+      "sha256": "9d898b0b209cc1e2b7b35104504d916e3ad19a15056fa76de1a8050f616192a0"
+    },
+    {
+      "path": "test_support/subprocess_text.py",
+      "unchanged": true,
+      "sha256": "264cd1a48c22f22a2094fbdf71d0c4978a063f89940926541d254c15ef455542"
+    }
+  ],
+  "python_3_10_syntax_checked_files": [
+    "criterion_probe_v050/__init__.py",
+    "criterion_probe_v050/__main__.py",
+    "criterion_probe_v050/audit.py",
+    "criterion_probe_v050/contracts.py",
+    "criterion_probe_v050/dataset.py",
+    "criterion_probe_v050/evidence.py",
+    "criterion_probe_v050/plan.py",
+    "criterion_probe_v050/reporting.py",
+    "criterion_probe_v050/requests.py",
+    "criterion_probe_v050/runner.py",
+    "criterion_probe_v050/scoring.py",
+    "tests_v050/__init__.py",
+    "tests_v050/fixtures.py",
+    "tests_v050/test_cli.py",
+    "tests_v050/test_contracts.py",
+    "tests_v050/test_design.py",
+    "tests_v050/test_execution.py",
+    "tests_v050/test_integrity.py",
+    "tests_v050/test_review_regressions.py",
+    "tests_v050/test_scoring.py"
+  ],
+  "syntax_check_is_not_python_3_10_runtime_test": true,
+  "actual_runtime": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "windows_runtime_tested": false
+}
