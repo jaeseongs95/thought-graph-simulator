@@ -1,0 +1,35 @@
+test_bundle_rechecks_the_bytes_it_actually_packages (tests_v049.test_review_regressions.ReviewRegressions.test_bundle_rechecks_the_bytes_it_actually_packages) ... FAIL
+test_unregistered_raw_response_file_is_rejected (tests_v049.test_review_regressions.ReviewRegressions.test_unregistered_raw_response_file_is_rejected) ... FAIL
+test_windows_reserved_device_filename_is_rejected (tests_v049.test_review_regressions.ReviewRegressions.test_windows_reserved_device_filename_is_rejected) ... FAIL
+
+======================================================================
+FAIL: test_bundle_rechecks_the_bytes_it_actually_packages (tests_v049.test_review_regressions.ReviewRegressions.test_bundle_rechecks_the_bytes_it_actually_packages)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v049_expression_probe/tests_v049/test_review_regressions.py", line 25, in test_bundle_rechecks_the_bytes_it_actually_packages
+    with self.assertRaises(ContractError):bundle_run(p,out,root/'e.zip')
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+AssertionError: ContractError not raised
+
+======================================================================
+FAIL: test_unregistered_raw_response_file_is_rejected (tests_v049.test_review_regressions.ReviewRegressions.test_unregistered_raw_response_file_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v049_expression_probe/tests_v049/test_review_regressions.py", line 30, in test_unregistered_raw_response_file_is_rejected
+    with self.assertRaises(ContractError):audit_run(p,out)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+AssertionError: ContractError not raised
+
+======================================================================
+FAIL: test_windows_reserved_device_filename_is_rejected (tests_v049.test_review_regressions.ReviewRegressions.test_windows_reserved_device_filename_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v049_expression_probe/tests_v049/test_review_regressions.py", line 36, in test_windows_reserved_device_filename_is_rejected
+    with tempfile.TemporaryDirectory() as td,self.assertRaises(ContractError):safe_unpack(mem.getvalue(),Path(td))
+                                             ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+AssertionError: ContractError not raised
+
+----------------------------------------------------------------------
+Ran 3 tests in 8.426s
+
+FAILED (failures=3)

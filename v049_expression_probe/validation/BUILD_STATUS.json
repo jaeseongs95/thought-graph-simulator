@@ -1,0 +1,12 @@
+{
+  "actual_runtime": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "tests_passed": 243,
+  "legacy_tests": 171,
+  "new_tests": 72,
+  "release_tests_passed": 243,
+  "release_exit_code": 0,
+  "new_real_model_inference": false,
+  "synthetic_480_http_calls": true,
+  "actual_v048_prepare_passed": true
+}

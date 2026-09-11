@@ -1,0 +1,70 @@
+{
+  "actual_fake_http_calls": 480,
+  "new_real_model_inference": false,
+  "offline_reaudit_equal": true,
+  "data_integrity": true,
+  "data_complete": true,
+  "arms": {
+    "original": {
+      "assigned": 80,
+      "final_correct": 60,
+      "strict_trace_correct": null
+    },
+    "commuted": {
+      "assigned": 80,
+      "final_correct": 80,
+      "strict_trace_correct": null
+    },
+    "original_open": {
+      "assigned": 80,
+      "final_correct": 80,
+      "strict_trace_correct": null
+    },
+    "commuted_open": {
+      "assigned": 80,
+      "final_correct": 80,
+      "strict_trace_correct": null
+    },
+    "pipeline": {
+      "assigned": 80,
+      "final_correct": 80,
+      "strict_trace_correct": 80
+    }
+  },
+  "interaction": 0.25,
+  "independent": {
+    "evidence_kind": "synthetic_fixture",
+    "calls": 480,
+    "parent_links": 80,
+    "independent_arms": {
+      "commuted_open": {
+        "assigned": 80,
+        "final_correct": 80,
+        "trace_correct": null
+      },
+      "original_open": {
+        "assigned": 80,
+        "final_correct": 80,
+        "trace_correct": null
+      },
+      "pipeline": {
+        "assigned": 80,
+        "final_correct": 80,
+        "trace_correct": 80
+      },
+      "commuted": {
+        "assigned": 80,
+        "final_correct": 80,
+        "trace_correct": null
+      },
+      "original": {
+        "assigned": 80,
+        "final_correct": 60,
+        "trace_correct": null
+      }
+    },
+    "agrees_with_summary": true,
+    "event_tip": "028bc8d0ed1913c674eaeb8a395e63cf8a5a0343ad284c322daf1cc5cb38f81b",
+    "scope": "이 검사 실행은 정상형식·완결 480회 합성 증거에 대한 별도 계산이다. 새 LLM 성과가 아님"
+  }
+}

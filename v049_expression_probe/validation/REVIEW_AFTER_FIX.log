@@ -1,0 +1,8 @@
+test_bundle_rechecks_the_bytes_it_actually_packages (tests_v049.test_review_regressions.ReviewRegressions.test_bundle_rechecks_the_bytes_it_actually_packages) ... ok
+test_unregistered_raw_response_file_is_rejected (tests_v049.test_review_regressions.ReviewRegressions.test_unregistered_raw_response_file_is_rejected) ... ok
+test_windows_reserved_device_filename_is_rejected (tests_v049.test_review_regressions.ReviewRegressions.test_windows_reserved_device_filename_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 8.539s
+
+OK
