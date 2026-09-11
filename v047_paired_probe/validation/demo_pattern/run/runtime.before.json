@@ -1,0 +1,37 @@
+{
+  "at": "2026-09-11T03:42:49.167+00:00",
+  "raw_b64": {
+    "server": "eyJ2ZXJzaW9uIjoidGVzdC1maXh0dXJlLTAuMCJ9",
+    "tags": "eyJtb2RlbHMiOlt7Im5hbWUiOiJ0ZXN0LW9ubHk6NGItaW5zdHJ1Y3QiLCJtb2RlbCI6InRlc3Qtb25seTo0Yi1pbnN0cnVjdCIsImRpZ2VzdCI6ImRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGQiLCJkZXRhaWxzIjp7ImZhbWlseSI6ImZpeHR1cmUiLCJwYXJhbWV0ZXJfc2l6ZSI6IjQuMEIiLCJxdWFudGl6YXRpb25fbGV2ZWwiOiJRNF9LX00ifX1dfQ==",
+    "show": "eyJkZXRhaWxzIjp7ImZhbWlseSI6ImZpeHR1cmUiLCJwYXJhbWV0ZXJfc2l6ZSI6IjQuMEIiLCJxdWFudGl6YXRpb25fbGV2ZWwiOiJRNF9LX00ifSwidGVtcGxhdGUiOiJTWU5USEVUSUMgTk9OLVRISU5LSU5HIEZJWFRVUkUiLCJwYXJhbWV0ZXJzIjoidGVtcGVyYXR1cmUgMCIsIm1vZGVsX2luZm8iOnt9fQ=="
+  },
+  "data": {
+    "server": {
+      "version": "test-fixture-0.0"
+    },
+    "tags": {
+      "models": [
+        {
+          "name": "test-only:4b-instruct",
+          "model": "test-only:4b-instruct",
+          "digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+          "details": {
+            "family": "fixture",
+            "parameter_size": "4.0B",
+            "quantization_level": "Q4_K_M"
+          }
+        }
+      ]
+    },
+    "show": {
+      "details": {
+        "family": "fixture",
+        "parameter_size": "4.0B",
+        "quantization_level": "Q4_K_M"
+      },
+      "template": "SYNTHETIC NON-THINKING FIXTURE",
+      "parameters": "temperature 0",
+      "model_info": {}
+    }
+  }
+}

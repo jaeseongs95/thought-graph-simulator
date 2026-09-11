@@ -1,0 +1,407 @@
+{
+  "contract": "paired-boolean-v047-r1",
+  "software_version": "0.4.7-r1",
+  "created_at": "2026-09-11T03:42:49.151+00:00",
+  "baseline": {
+    "source_dir": "/mnt/data/v047_paired_probe/validation/demo_pattern/source_fixture/v046_fixture",
+    "source_contract": "composition-v046",
+    "manifest_b64": "ewogICJmcm96ZW4iOiB7CiAgICAiY29uZmlnIjogewogICAgICAiZW5kcG9pbnQiOiAiaHR0cDovLzEyNy4wLjAuMTo0NDI0NSIsCiAgICAgICJtb2RlbCI6ICJ0ZXN0LW9ubHk6NGItaW5zdHJ1Y3QiLAogICAgICAidGltZW91dF9zZWNvbmRzIjogNSwKICAgICAgIm9wdGlvbnMiOiB7CiAgICAgICAgInRlbXBlcmF0dXJlIjogMCwKICAgICAgICAibnVtX2N0eCI6IDgxOTIsCiAgICAgICAgIm51bV9wcmVkaWN0IjogNDA5NiwKICAgICAgICAidG9wX2siOiAyMCwKICAgICAgICAidG9wX3AiOiAwLjgKICAgICAgfSwKICAgICAgInRoaW5rIjogbnVsbCwKICAgICAgIm1vZGVfcG9saWN5IjogewogICAgICAgICJyZXNvbHZlZF9tb2RlIjogIm5vbi10aGlua2luZyIKICAgICAgfQogICAgfSwKICAgICJtb2RlbCI6IHsKICAgICAgImRpZ2VzdCI6ICJkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkIiwKICAgICAgInNob3dfc2hhMjU2IjogIjc4MDI0M2MyYjRmOTRiYjE3NTQ4Yzg5NzQwOTg2NmMwMmMxNjFjOTcwZGJkMzkzY2I0MjY1YTc1YWRmZGZhMWEiCiAgICB9LAogICAgIm9sbGFtYV9zZXJ2ZXIiOiB7CiAgICAgICJ2ZXJzaW9uIjogInRlc3QtZml4dHVyZS0wLjAiCiAgICB9LAogICAgInBsYW4iOiB7CiAgICAgICJwcm9iZV9jb250cmFjdCI6ICJjb21wb3NpdGlvbi12MDQ2IiwKICAgICAgImNhc2VzIjogWwogICAgICAgIHsKICAgICAgICAgICJjYXNlX2lkIjogImZpeHR1cmVfMDAiLAogICAgICAgICAgInNlZWQiOiAxNzI5LAogICAgICAgICAgImFybSI6ICJjb21tdXRlZCIsCiAgICAgICAgICAib3JpZ2luYWxfaW5wdXQiOiB7CiAgICAgICAgICAgICJhIjogZmFsc2UsCiAgICAgICAgICAgICJiIjogZmFsc2UKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgIHsKICAgICAgICAgICJjYXNlX2lkIjogImZpeHR1cmVfMDEiLAogICAgICAgICAgInNlZWQiOiAxNzI5LAogICAgICAgICAgImFybSI6ICJjb21tdXRlZCIsCiAgICAgICAgICAib3JpZ2luYWxfaW5wdXQiOiB7CiAgICAgICAgICAgICJhIjogZmFsc2UsCiAgICAgICAgICAgICJiIjogdHJ1ZQogICAgICAgICAgfQogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgImNhc2VfaWQiOiAiZml4dHVyZV8xMCIsCiAgICAgICAgICAic2VlZCI6IDE3MjksCiAgICAgICAgICAiYXJtIjogImNvbW11dGVkIiwKICAgICAgICAgICJvcmlnaW5hbF9pbnB1dCI6IHsKICAgICAgICAgICAgImEiOiB0cnVlLAogICAgICAgICAgICAiYiI6IGZhbHNlCiAgICAgICAgICB9CiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAiY2FzZV9pZCI6ICJmaXh0dXJlXzExIiwKICAgICAgICAgICJzZWVkIjogMTcyOSwKICAgICAgICAgICJhcm0iOiAiY29tbXV0ZWQiLAogICAgICAgICAgIm9yaWdpbmFsX2lucHV0IjogewogICAgICAgICAgICAiYSI6IHRydWUsCiAgICAgICAgICAgICJiIjogdHJ1ZQogICAgICAgICAgfQogICAgICAgIH0KICAgICAgXQogICAgfSwKICAgICJldmlkZW5jZV9raW5kIjogInN5bnRoZXRpY19maXh0dXJlIgogIH0sCiAgInJ1bl9zaGEyNTYiOiAiNWZmYTU4Njc5NmYyYWE0ZTU0NjNlOTBiZjU0NzRiNzliN2NlOGU1NDkxNDA0NzE1NWU3MGQyN2FlOTk1ZmIxNiIKfQo=",
+    "manifest_sha256": "0a0e590dc2a12d534546ce92de6156565c356449e390a02aea6fa04619367050",
+    "config": {
+      "endpoint": "http://127.0.0.1:44245",
+      "model": "test-only:4b-instruct",
+      "timeout_seconds": 5,
+      "options": {
+        "temperature": 0,
+        "num_ctx": 8192,
+        "num_predict": 4096,
+        "top_k": 20,
+        "top_p": 0.8
+      },
+      "think": null,
+      "mode_policy": {
+        "resolved_mode": "non-thinking"
+      }
+    },
+    "model": {
+      "digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "show_sha256": "780243c2b4f94bb17548c897409866c02c161c970dbd393cb4265a75adfdfa1a"
+    },
+    "server": {
+      "version": "test-fixture-0.0"
+    },
+    "seed": 1729,
+    "templates": {
+      "00": {
+        "case_id": "fixture_00",
+        "request_b64": "eyJtb2RlbCI6InRlc3Qtb25seTo0Yi1pbnN0cnVjdCIsIm1lc3NhZ2VzIjpbeyJyb2xlIjoic3lzdGVtIiwiY29udGVudCI6IuyeheugpeydmCBh7JmAIGLripQg67aI66as7Ja47J2064ukLiBleHByZXNzaW9u7J2YIOyLnSDtlZjrgpjrp4wg6rOE7IKw7ZW0IHZhbHVl7JeQIOq4sOuhne2VnOuLpC5cbkFOROuKlCDrkZAg7ZS87Jew7IKw7J6Q6rCAIOuqqOuRkCB0cnVl7J28IOuVjCB0cnVl64ukLiBOT1TsnYAgdHJ1ZeyZgCBmYWxzZeulvCDrkqTsp5HripTri6QuIOq0hO2YuCDslYjsnZgg7Jew7IKw7J2EIOuovOyggCDsoIHsmqntlZzri6QuXG5KU09OIOqwneyytCDtlZjrgpjrp4wg7Lac66Cl7ZWc64ukLiDri6TsnYwg7Iqk7YKk66eI64qUIOyekOujjO2YleunjCDsoJztlZztlZjrqbAg7KCV64u17J2EIOyngOygle2VmOyngCDslYrripTri6QuXG57XCJ0eXBlXCI6XCJvYmplY3RcIixcInByb3BlcnRpZXNcIjp7XCJ2YWx1ZVwiOntcInR5cGVcIjpcImJvb2xlYW5cIn19LFwicmVxdWlyZWRcIjpbXCJ2YWx1ZVwiXSxcImFkZGl0aW9uYWxQcm9wZXJ0aWVzXCI6ZmFsc2V9In0seyJyb2xlIjoidXNlciIsImNvbnRlbnQiOiJpbnB1dDoge1wiYVwiOmZhbHNlLFwiYlwiOmZhbHNlLFwiZXhwcmVzc2lvblwiOlwiKChOT1QgYikgQU5EIGEpXCJ9In1dLCJzdHJlYW0iOmZhbHNlLCJrZWVwX2FsaXZlIjoiMTBtIiwib3B0aW9ucyI6eyJ0ZW1wZXJhdHVyZSI6MCwibnVtX2N0eCI6ODE5MiwibnVtX3ByZWRpY3QiOjQwOTYsInRvcF9rIjoyMCwidG9wX3AiOjAuOCwic2VlZCI6MTcyOX0sImZvcm1hdCI6eyJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJ2YWx1ZSI6eyJ0eXBlIjoiYm9vbGVhbiJ9fSwicmVxdWlyZWQiOlsidmFsdWUiXSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfX0=",
+        "request_sha256": "fa05864f474176000240142f2d95e57a9698b0bd1de9cc8b139affb792d7840e",
+        "source_path": "/mnt/data/v047_paired_probe/validation/demo_pattern/source_fixture/v046_fixture/cases/fixture_00/request.wire.json"
+      },
+      "01": {
+        "case_id": "fixture_01",
+        "request_b64": "eyJtb2RlbCI6InRlc3Qtb25seTo0Yi1pbnN0cnVjdCIsIm1lc3NhZ2VzIjpbeyJyb2xlIjoic3lzdGVtIiwiY29udGVudCI6IuyeheugpeydmCBh7JmAIGLripQg67aI66as7Ja47J2064ukLiBleHByZXNzaW9u7J2YIOyLnSDtlZjrgpjrp4wg6rOE7IKw7ZW0IHZhbHVl7JeQIOq4sOuhne2VnOuLpC5cbkFOROuKlCDrkZAg7ZS87Jew7IKw7J6Q6rCAIOuqqOuRkCB0cnVl7J28IOuVjCB0cnVl64ukLiBOT1TsnYAgdHJ1ZeyZgCBmYWxzZeulvCDrkqTsp5HripTri6QuIOq0hO2YuCDslYjsnZgg7Jew7IKw7J2EIOuovOyggCDsoIHsmqntlZzri6QuXG5KU09OIOqwneyytCDtlZjrgpjrp4wg7Lac66Cl7ZWc64ukLiDri6TsnYwg7Iqk7YKk66eI64qUIOyekOujjO2YleunjCDsoJztlZztlZjrqbAg7KCV64u17J2EIOyngOygle2VmOyngCDslYrripTri6QuXG57XCJ0eXBlXCI6XCJvYmplY3RcIixcInByb3BlcnRpZXNcIjp7XCJ2YWx1ZVwiOntcInR5cGVcIjpcImJvb2xlYW5cIn19LFwicmVxdWlyZWRcIjpbXCJ2YWx1ZVwiXSxcImFkZGl0aW9uYWxQcm9wZXJ0aWVzXCI6ZmFsc2V9In0seyJyb2xlIjoidXNlciIsImNvbnRlbnQiOiJpbnB1dDoge1wiYVwiOmZhbHNlLFwiYlwiOnRydWUsXCJleHByZXNzaW9uXCI6XCIoKE5PVCBiKSBBTkQgYSlcIn0ifV0sInN0cmVhbSI6ZmFsc2UsImtlZXBfYWxpdmUiOiIxMG0iLCJvcHRpb25zIjp7InRlbXBlcmF0dXJlIjowLCJudW1fY3R4Ijo4MTkyLCJudW1fcHJlZGljdCI6NDA5NiwidG9wX2siOjIwLCJ0b3BfcCI6MC44LCJzZWVkIjoxNzI5fSwiZm9ybWF0Ijp7InR5cGUiOiJvYmplY3QiLCJwcm9wZXJ0aWVzIjp7InZhbHVlIjp7InR5cGUiOiJib29sZWFuIn19LCJyZXF1aXJlZCI6WyJ2YWx1ZSJdLCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9fQ==",
+        "request_sha256": "0f2d49c9ab79e1915237156c7d16093f8ea34c138d18ff5ec37d2638ec125fde",
+        "source_path": "/mnt/data/v047_paired_probe/validation/demo_pattern/source_fixture/v046_fixture/cases/fixture_01/request.wire.json"
+      },
+      "10": {
+        "case_id": "fixture_10",
+        "request_b64": "eyJtb2RlbCI6InRlc3Qtb25seTo0Yi1pbnN0cnVjdCIsIm1lc3NhZ2VzIjpbeyJyb2xlIjoic3lzdGVtIiwiY29udGVudCI6IuyeheugpeydmCBh7JmAIGLripQg67aI66as7Ja47J2064ukLiBleHByZXNzaW9u7J2YIOyLnSDtlZjrgpjrp4wg6rOE7IKw7ZW0IHZhbHVl7JeQIOq4sOuhne2VnOuLpC5cbkFOROuKlCDrkZAg7ZS87Jew7IKw7J6Q6rCAIOuqqOuRkCB0cnVl7J28IOuVjCB0cnVl64ukLiBOT1TsnYAgdHJ1ZeyZgCBmYWxzZeulvCDrkqTsp5HripTri6QuIOq0hO2YuCDslYjsnZgg7Jew7IKw7J2EIOuovOyggCDsoIHsmqntlZzri6QuXG5KU09OIOqwneyytCDtlZjrgpjrp4wg7Lac66Cl7ZWc64ukLiDri6TsnYwg7Iqk7YKk66eI64qUIOyekOujjO2YleunjCDsoJztlZztlZjrqbAg7KCV64u17J2EIOyngOygle2VmOyngCDslYrripTri6QuXG57XCJ0eXBlXCI6XCJvYmplY3RcIixcInByb3BlcnRpZXNcIjp7XCJ2YWx1ZVwiOntcInR5cGVcIjpcImJvb2xlYW5cIn19LFwicmVxdWlyZWRcIjpbXCJ2YWx1ZVwiXSxcImFkZGl0aW9uYWxQcm9wZXJ0aWVzXCI6ZmFsc2V9In0seyJyb2xlIjoidXNlciIsImNvbnRlbnQiOiJpbnB1dDoge1wiYVwiOnRydWUsXCJiXCI6ZmFsc2UsXCJleHByZXNzaW9uXCI6XCIoKE5PVCBiKSBBTkQgYSlcIn0ifV0sInN0cmVhbSI6ZmFsc2UsImtlZXBfYWxpdmUiOiIxMG0iLCJvcHRpb25zIjp7InRlbXBlcmF0dXJlIjowLCJudW1fY3R4Ijo4MTkyLCJudW1fcHJlZGljdCI6NDA5NiwidG9wX2siOjIwLCJ0b3BfcCI6MC44LCJzZWVkIjoxNzI5fSwiZm9ybWF0Ijp7InR5cGUiOiJvYmplY3QiLCJwcm9wZXJ0aWVzIjp7InZhbHVlIjp7InR5cGUiOiJib29sZWFuIn19LCJyZXF1aXJlZCI6WyJ2YWx1ZSJdLCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9fQ==",
+        "request_sha256": "63de0fea05ee768be084c10681c4a0edddec11c6a66eeca078b5fd731d0a7778",
+        "source_path": "/mnt/data/v047_paired_probe/validation/demo_pattern/source_fixture/v046_fixture/cases/fixture_10/request.wire.json"
+      },
+      "11": {
+        "case_id": "fixture_11",
+        "request_b64": "eyJtb2RlbCI6InRlc3Qtb25seTo0Yi1pbnN0cnVjdCIsIm1lc3NhZ2VzIjpbeyJyb2xlIjoic3lzdGVtIiwiY29udGVudCI6IuyeheugpeydmCBh7JmAIGLripQg67aI66as7Ja47J2064ukLiBleHByZXNzaW9u7J2YIOyLnSDtlZjrgpjrp4wg6rOE7IKw7ZW0IHZhbHVl7JeQIOq4sOuhne2VnOuLpC5cbkFOROuKlCDrkZAg7ZS87Jew7IKw7J6Q6rCAIOuqqOuRkCB0cnVl7J28IOuVjCB0cnVl64ukLiBOT1TsnYAgdHJ1ZeyZgCBmYWxzZeulvCDrkqTsp5HripTri6QuIOq0hO2YuCDslYjsnZgg7Jew7IKw7J2EIOuovOyggCDsoIHsmqntlZzri6QuXG5KU09OIOqwneyytCDtlZjrgpjrp4wg7Lac66Cl7ZWc64ukLiDri6TsnYwg7Iqk7YKk66eI64qUIOyekOujjO2YleunjCDsoJztlZztlZjrqbAg7KCV64u17J2EIOyngOygle2VmOyngCDslYrripTri6QuXG57XCJ0eXBlXCI6XCJvYmplY3RcIixcInByb3BlcnRpZXNcIjp7XCJ2YWx1ZVwiOntcInR5cGVcIjpcImJvb2xlYW5cIn19LFwicmVxdWlyZWRcIjpbXCJ2YWx1ZVwiXSxcImFkZGl0aW9uYWxQcm9wZXJ0aWVzXCI6ZmFsc2V9In0seyJyb2xlIjoidXNlciIsImNvbnRlbnQiOiJpbnB1dDoge1wiYVwiOnRydWUsXCJiXCI6dHJ1ZSxcImV4cHJlc3Npb25cIjpcIigoTk9UIGIpIEFORCBhKVwifSJ9XSwic3RyZWFtIjpmYWxzZSwia2VlcF9hbGl2ZSI6IjEwbSIsIm9wdGlvbnMiOnsidGVtcGVyYXR1cmUiOjAsIm51bV9jdHgiOjgxOTIsIm51bV9wcmVkaWN0Ijo0MDk2LCJ0b3BfayI6MjAsInRvcF9wIjowLjgsInNlZWQiOjE3Mjl9LCJmb3JtYXQiOnsidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsidmFsdWUiOnsidHlwZSI6ImJvb2xlYW4ifX0sInJlcXVpcmVkIjpbInZhbHVlIl0sImFkZGl0aW9uYWxQcm9wZXJ0aWVzIjpmYWxzZX19",
+        "request_sha256": "87bb04703140e2856c04e1eac7fe5999230c43c008bc9231a8e2d8d08f7c28f6",
+        "source_path": "/mnt/data/v047_paired_probe/validation/demo_pattern/source_fixture/v046_fixture/cases/fixture_11/request.wire.json"
+      }
+    },
+    "evidence_kind": "synthetic_fixture",
+    "scope": "원본 요청·설정 수입. 과거 PASS/응답의 재감사 또는 새 추론을 의미하지 않음"
+  },
+  "skipped_sources": [],
+  "source_fingerprint": {
+    "__init__.py": "d62052e57273e4af51cfec26cd5e179d2b3505aa553740cde7f44adcc758f005",
+    "__main__.py": "bef95cc496d47bb59d74729f0a93471dfbd9e41526a890773e649c06e62f02e3",
+    "audit.py": "2ecd330cf9c7df800c9ccffbec426451b1b59c4f86b6e2ee03d80a33b39fc039",
+    "contracts.py": "b773841d40105e1166696b32d72de2a5a5276d7cc6e554e4bd8767af003a307d",
+    "oracle.py": "214beceaa7d1e1a9146e5c4120f4e65234ad8e90fa2127d8d378ce7a66122710",
+    "plan.py": "05791ca7d15157eded8e4cd9ed6f836d271da5216a86385e4996d39c3fc95aab",
+    "runner.py": "e9db377a8dc1d314d055e75a4f4d531f0d8fa65bc328e66daabf7e7a75c11b08"
+  },
+  "seeds": [
+    1729
+  ],
+  "cycles": 6,
+  "order_seed": 4701729,
+  "blocks": [
+    {
+      "id": "s000_r000_ab11",
+      "seed": 1729,
+      "seed_index": 0,
+      "cycle": 0,
+      "a": true,
+      "b": true,
+      "arms": [
+        "commuted",
+        "original",
+        "pipeline"
+      ]
+    },
+    {
+      "id": "s000_r000_ab00",
+      "seed": 1729,
+      "seed_index": 0,
+      "cycle": 0,
+      "a": false,
+      "b": false,
+      "arms": [
+        "original",
+        "pipeline",
+        "commuted"
+      ]
+    },
+    {
+      "id": "s000_r000_ab10",
+      "seed": 1729,
+      "seed_index": 0,
+      "cycle": 0,
+      "a": true,
+      "b": false,
+      "arms": [
+        "commuted",
+        "pipeline",
+        "original"
+      ]
+    },
+    {
+      "id": "s000_r000_ab01",
+      "seed": 1729,
+      "seed_index": 0,
+      "cycle": 0,
+      "a": false,
+      "b": true,
+      "arms": [
+        "pipeline",
+        "commuted",
+        "original"
+      ]
+    },
+    {
+      "id": "s000_r001_ab00",
+      "seed": 1729,
+      "seed_index": 0,
+      "cycle": 1,
+      "a": false,
+      "b": false,
+      "arms": [
+        "commuted",
+        "original",
+        "pipeline"
+      ]
+    },
+    {
+      "id": "s000_r001_ab11",
+      "seed": 1729,
+      "seed_index": 0,
+      "cycle": 1,
+      "a": true,
+      "b": true,
+      "arms": [
+        "commuted",
+        "pipeline",
+        "original"
+      ]
+    },
+    {
+      "id": "s000_r001_ab10",
+      "seed": 1729,
+      "seed_index": 0,
+      "cycle": 1,
+      "a": true,
+      "b": false,
+      "arms": [
+        "pipeline",
+        "original",
+        "commuted"
+      ]
+    },
+    {
+      "id": "s000_r001_ab01",
+      "seed": 1729,
+      "seed_index": 0,
+      "cycle": 1,
+      "a": false,
+      "b": true,
+      "arms": [
+        "original",
+        "commuted",
+        "pipeline"
+      ]
+    },
+    {
+      "id": "s000_r002_ab01",
+      "seed": 1729,
+      "seed_index": 0,
+      "cycle": 2,
+      "a": false,
+      "b": true,
+      "arms": [
+        "original",
+        "pipeline",
+        "commuted"
+      ]
+    },
+    {
+      "id": "s000_r002_ab10",
+      "seed": 1729,
+      "seed_index": 0,
+      "cycle": 2,
+      "a": true,
+      "b": false,
+      "arms": [
+        "pipeline",
+        "commuted",
+        "original"
+      ]
+    },
+    {
+      "id": "s000_r002_ab00",
+      "seed": 1729,
+      "seed_index": 0,
+      "cycle": 2,
+      "a": false,
+      "b": false,
+      "arms": [
+        "commuted",
+        "pipeline",
+        "original"
+      ]
+    },
+    {
+      "id": "s000_r002_ab11",
+      "seed": 1729,
+      "seed_index": 0,
+      "cycle": 2,
+      "a": true,
+      "b": true,
+      "arms": [
+        "pipeline",
+        "original",
+        "commuted"
+      ]
+    },
+    {
+      "id": "s000_r003_ab11",
+      "seed": 1729,
+      "seed_index": 0,
+      "cycle": 3,
+      "a": true,
+      "b": true,
+      "arms": [
+        "pipeline",
+        "commuted",
+        "original"
+      ]
+    },
+    {
+      "id": "s000_r003_ab01",
+      "seed": 1729,
+      "seed_index": 0,
+      "cycle": 3,
+      "a": false,
+      "b": true,
+      "arms": [
+        "commuted",
+        "original",
+        "pipeline"
+      ]
+    },
+    {
+      "id": "s000_r003_ab00",
+      "seed": 1729,
+      "seed_index": 0,
+      "cycle": 3,
+      "a": false,
+      "b": false,
+      "arms": [
+        "pipeline",
+        "original",
+        "commuted"
+      ]
+    },
+    {
+      "id": "s000_r003_ab10",
+      "seed": 1729,
+      "seed_index": 0,
+      "cycle": 3,
+      "a": true,
+      "b": false,
+      "arms": [
+        "original",
+        "commuted",
+        "pipeline"
+      ]
+    },
+    {
+      "id": "s000_r004_ab11",
+      "seed": 1729,
+      "seed_index": 0,
+      "cycle": 4,
+      "a": true,
+      "b": true,
+      "arms": [
+        "original",
+        "commuted",
+        "pipeline"
+      ]
+    },
+    {
+      "id": "s000_r004_ab00",
+      "seed": 1729,
+      "seed_index": 0,
+      "cycle": 4,
+      "a": false,
+      "b": false,
+      "arms": [
+        "pipeline",
+        "commuted",
+        "original"
+      ]
+    },
+    {
+      "id": "s000_r004_ab01",
+      "seed": 1729,
+      "seed_index": 0,
+      "cycle": 4,
+      "a": false,
+      "b": true,
+      "arms": [
+        "commuted",
+        "pipeline",
+        "original"
+      ]
+    },
+    {
+      "id": "s000_r004_ab10",
+      "seed": 1729,
+      "seed_index": 0,
+      "cycle": 4,
+      "a": true,
+      "b": false,
+      "arms": [
+        "original",
+        "pipeline",
+        "commuted"
+      ]
+    },
+    {
+      "id": "s000_r005_ab01",
+      "seed": 1729,
+      "seed_index": 0,
+      "cycle": 5,
+      "a": false,
+      "b": true,
+      "arms": [
+        "pipeline",
+        "original",
+        "commuted"
+      ]
+    },
+    {
+      "id": "s000_r005_ab11",
+      "seed": 1729,
+      "seed_index": 0,
+      "cycle": 5,
+      "a": true,
+      "b": true,
+      "arms": [
+        "original",
+        "pipeline",
+        "commuted"
+      ]
+    },
+    {
+      "id": "s000_r005_ab00",
+      "seed": 1729,
+      "seed_index": 0,
+      "cycle": 5,
+      "a": false,
+      "b": false,
+      "arms": [
+        "original",
+        "commuted",
+        "pipeline"
+      ]
+    },
+    {
+      "id": "s000_r005_ab10",
+      "seed": 1729,
+      "seed_index": 0,
+      "cycle": 5,
+      "a": true,
+      "b": false,
+      "arms": [
+        "commuted",
+        "original",
+        "pipeline"
+      ]
+    }
+  ],
+  "max_calls": 96,
+  "analysis_policy": {
+    "model_correctness_is_not_data_integrity": true,
+    "invalid_counts_as_failure": true,
+    "no_retry": true,
+    "no_answer_correction": true,
+    "primary_final_pairs": [
+      "commuted-original",
+      "pipeline-original"
+    ],
+    "pipeline_primary_strict": "NOT와 AND의 실제 값·연결·최종값 모두 정확",
+    "scope": "고정 1개 식·4개 입력의 동일 배치 재현. ADM 본 가설 검증 아님",
+    "statistics": "paired counts and per-seed descriptive results; no IID p-values"
+  },
+  "plan_sha256": "ceac2e2a3cfdcfa764f688f14c8719bcdb089457ba95dd9cbf6edba98a4986f1"
+}

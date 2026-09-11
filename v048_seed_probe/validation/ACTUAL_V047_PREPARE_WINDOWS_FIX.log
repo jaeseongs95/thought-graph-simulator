@@ -1,0 +1,37 @@
+{
+  "contract": "seed-boolean-v048-r1",
+  "plan_sha256": "6d08bf33ae179a3ca09a7cdfff33f0303cc619286af9f432c75dc389bcba4ae6",
+  "model": "qwen3:4b-instruct",
+  "endpoint": "http://127.0.0.1:11434",
+  "options": {
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "num_ctx": 8192,
+    "num_predict": 4096,
+    "num_thread": 6,
+    "num_batch": 256
+  },
+  "excluded_discovery_seeds": [
+    1729
+  ],
+  "new_seeds": [
+    580410664,
+    661935755,
+    209422594,
+    1790124989,
+    267101868,
+    752235971,
+    1292559482,
+    223674688,
+    860724506,
+    68285180
+  ],
+  "cycles_per_seed": 6,
+  "max_inference_calls": 960,
+  "v047_anchor": "snapshot_only",
+  "evidence_kind": "live_source_artifacts"
+}
+prepare/show는 네트워크·추론을 실행하지 않습니다. run에서만 계획된 로컬 추론을 실행합니다.

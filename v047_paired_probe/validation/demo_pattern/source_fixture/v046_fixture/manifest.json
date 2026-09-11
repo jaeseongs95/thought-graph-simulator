@@ -1,0 +1,70 @@
+{
+  "frozen": {
+    "config": {
+      "endpoint": "http://127.0.0.1:44245",
+      "model": "test-only:4b-instruct",
+      "timeout_seconds": 5,
+      "options": {
+        "temperature": 0,
+        "num_ctx": 8192,
+        "num_predict": 4096,
+        "top_k": 20,
+        "top_p": 0.8
+      },
+      "think": null,
+      "mode_policy": {
+        "resolved_mode": "non-thinking"
+      }
+    },
+    "model": {
+      "digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "show_sha256": "780243c2b4f94bb17548c897409866c02c161c970dbd393cb4265a75adfdfa1a"
+    },
+    "ollama_server": {
+      "version": "test-fixture-0.0"
+    },
+    "plan": {
+      "probe_contract": "composition-v046",
+      "cases": [
+        {
+          "case_id": "fixture_00",
+          "seed": 1729,
+          "arm": "commuted",
+          "original_input": {
+            "a": false,
+            "b": false
+          }
+        },
+        {
+          "case_id": "fixture_01",
+          "seed": 1729,
+          "arm": "commuted",
+          "original_input": {
+            "a": false,
+            "b": true
+          }
+        },
+        {
+          "case_id": "fixture_10",
+          "seed": 1729,
+          "arm": "commuted",
+          "original_input": {
+            "a": true,
+            "b": false
+          }
+        },
+        {
+          "case_id": "fixture_11",
+          "seed": 1729,
+          "arm": "commuted",
+          "original_input": {
+            "a": true,
+            "b": true
+          }
+        }
+      ]
+    },
+    "evidence_kind": "synthetic_fixture"
+  },
+  "run_sha256": "5ffa586796f2aa4e5463e90bf5474b79b7ce8e54914047155e70d27ae995fb16"
+}

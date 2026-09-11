@@ -1,0 +1,18 @@
+{
+  "release": "v048_seed_probe",
+  "tests_total": 166,
+  "legacy_regression_tests": 75,
+  "v048_tests": 91,
+  "initial_v048_tests": 66,
+  "adversarial_regressions_before_fix_failed": 5,
+  "same_adversarial_regressions_after_fix_passed": 5,
+  "synthetic_full_run_recorded_http_calls": 960,
+  "synthetic_independent_recheck_calls": 960,
+  "actual_new_model_inference_executed": false,
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "windows_powershell_executed": false,
+  "v047_vendor_sources_byte_identical": true,
+  "unpacked_release_tests": 166,
+  "unpacked_nested_evidence_offline_audit_passed": true
+}

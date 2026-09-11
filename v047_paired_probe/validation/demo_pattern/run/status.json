@@ -1,0 +1,10 @@
+{
+  "state": "complete",
+  "complete": true,
+  "recorded_slots": 96,
+  "inference_calls": 96,
+  "event_tip": "ac94974b5328f3fe01cc527fbafca2c2bac24927e17d5a76c1f5d1eccbda9f40",
+  "runtime_identity_verified": true,
+  "error": null,
+  "finished_at": "2026-09-11T03:42:49.287+00:00"
+}

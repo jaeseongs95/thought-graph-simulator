@@ -1,0 +1,31 @@
+{
+  "plan_sha256": "97c9940f083ace13fe9b8a057cafa29316661096f2d6294ef6b82a583596c411",
+  "started_at": "2026-09-11T11:09:47.679+00:00",
+  "source_fingerprint": {
+    "paired_probe_v047/__init__.py": "d62052e57273e4af51cfec26cd5e179d2b3505aa553740cde7f44adcc758f005",
+    "paired_probe_v047/__main__.py": "bef95cc496d47bb59d74729f0a93471dfbd9e41526a890773e649c06e62f02e3",
+    "paired_probe_v047/audit.py": "2ecd330cf9c7df800c9ccffbec426451b1b59c4f86b6e2ee03d80a33b39fc039",
+    "paired_probe_v047/contracts.py": "b773841d40105e1166696b32d72de2a5a5276d7cc6e554e4bd8767af003a307d",
+    "paired_probe_v047/oracle.py": "214beceaa7d1e1a9146e5c4120f4e65234ad8e90fa2127d8d378ce7a66122710",
+    "paired_probe_v047/plan.py": "05791ca7d15157eded8e4cd9ed6f836d271da5216a86385e4996d39c3fc95aab",
+    "paired_probe_v047/runner.py": "e9db377a8dc1d314d055e75a4f4d531f0d8fa65bc328e66daabf7e7a75c11b08",
+    "paired_probe_v048/__init__.py": "dc577bfd118fdf95b958084156aa522592396a5e3c87835988ed53432fbfee39",
+    "paired_probe_v048/__main__.py": "0a9b9f1afcd2d2d28ccfda6cc05ed21eeb2cda90084fb363ac27fcda13213716",
+    "paired_probe_v048/audit.py": "039f055c368c6b96d08702d1bf73a77b87d7198a0f5c041d6e2c992e827812e7",
+    "paired_probe_v048/contracts.py": "c7d1420bf8290c51ca1f434db419da9a5651bddaefd38b1c56823adde36417b3",
+    "paired_probe_v048/oracle.py": "214beceaa7d1e1a9146e5c4120f4e65234ad8e90fa2127d8d378ce7a66122710",
+    "paired_probe_v048/plan.py": "6a54ca0010be93ab33d7ee564a8e09147a9bfcd1bb0af53143aaac6c0e262f3d",
+    "paired_probe_v048/reporting.py": "233114369881a954a27b1b0e8c83442fd73c552fcc65e7d4fcfd7cd4483c2c6b",
+    "paired_probe_v048/runner.py": "2c13fa5619d083a655b5d9855079cd6ee811b40b8f4ba6ecbb1f389a600bfc46"
+  },
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "executable": "C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+  "endpoint": "http://127.0.0.1:11434",
+  "evidence_kind": "live_source_artifacts",
+  "new_model_inference": true,
+  "retry_policy": "none",
+  "warmup_calls": 0,
+  "source_plan_path": "C:\\Users\\sjs95\\Desktop\\thought-graph-simulator\\experiments_v048\\v048_seed_01.plan.json",
+  "max_inference_calls": 960
+}

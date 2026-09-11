@@ -1,0 +1,8 @@
+OLD_PATH
+expected_UnicodeDecodeError: UnicodeDecodeError('utf-8', b'\xb0\xcb\xc1\xf5 \xbf\xcf\xb7\xe1', 0, 1, 'invalid start byte')
+NEW_PATH
+returncode= 0
+stdout= 검증 완료
+stderr= 오류 없음
+stdout_encoding= cp949
+stderr_encoding= cp949

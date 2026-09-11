@@ -1,0 +1,25 @@
+{
+  "contract": "v048-default-protocol-description-r1",
+  "mode": "reference_only_not_a_runtime_override",
+  "new_seeds": [
+    580410664,
+    661935755,
+    209422594,
+    1790124989,
+    267101868,
+    752235971,
+    1292559482,
+    223674688,
+    860724506,
+    68285180
+  ],
+  "excluded_discovery_seed": 1729,
+  "cycles": 6,
+  "max_inference_calls": 960,
+  "primary_pair": "commuted-original",
+  "secondary_pairs": [
+    "pipeline-original",
+    "pipeline-commuted"
+  ],
+  "note": "실행 기준은 prepare가 생성하는 동결 계획이다. 이 안내 JSON을 편집해도 실행 설정이 바뀌지 않는다."
+}

@@ -1,0 +1,10 @@
+{
+  "evidence_kind": "synthetic_fixture",
+  "live_llm_calls": 0,
+  "synthetic_http_inference_requests": 96,
+  "offline_replay_equal": true,
+  "original_correct": 18,
+  "commuted_correct": 24,
+  "pipeline_strict_correct": 24,
+  "assigned_per_arm": 24
+}

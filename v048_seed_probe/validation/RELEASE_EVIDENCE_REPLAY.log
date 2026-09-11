@@ -1,0 +1,10 @@
+{
+  "data_integrity": true,
+  "data_complete": true,
+  "comparative_analysis_ready": true,
+  "evidence_kind": "synthetic_fixture",
+  "inference_calls": 960,
+  "max_inference_calls": 960,
+  "matching_v047_seeds": 10,
+  "seed_count": 10
+}

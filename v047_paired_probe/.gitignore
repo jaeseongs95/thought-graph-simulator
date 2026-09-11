@@ -1,0 +1,4 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+validation/demo_pattern_rerun*/

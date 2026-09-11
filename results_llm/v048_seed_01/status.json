@@ -1,0 +1,20 @@
+{
+  "state": "complete",
+  "complete": true,
+  "recorded_slots": 960,
+  "inference_calls": 960,
+  "event_tip": "15e11a934cb8548d22bbb1b90a0e4ad0e265e297b66c0ca3980ec38e9984cee1",
+  "runtime_identity_verified": true,
+  "error": null,
+  "identity_checkpoints": [
+    "runtime.before.json",
+    "runtime.round_001.json",
+    "runtime.round_002.json",
+    "runtime.round_003.json",
+    "runtime.round_004.json",
+    "runtime.round_005.json",
+    "runtime.after.json"
+  ],
+  "response_identity_mismatch": false,
+  "finished_at": "2026-09-11T11:13:21.336+00:00"
+}

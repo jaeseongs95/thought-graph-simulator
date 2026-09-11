@@ -1,0 +1,10 @@
+test_hardlinked_snapshot_not_external_anchor (tests_v048.test_adversarial.AdversarialTests.test_hardlinked_snapshot_not_external_anchor) ... ok
+test_internal_plan_alias_not_external_anchor (tests_v048.test_adversarial.AdversarialTests.test_internal_plan_alias_not_external_anchor) ... ok
+test_reaudit_failure_replaces_previous_pass_reports (tests_v048.test_adversarial.AdversarialTests.test_reaudit_failure_replaces_previous_pass_reports) ... ok
+test_reference_changed_during_audit_is_rejected (tests_v048.test_adversarial.AdversarialTests.test_reference_changed_during_audit_is_rejected) ... ok
+test_v048_audit_cannot_use_own_snapshot_as_external (tests_v048.test_adversarial.AdversarialTests.test_v048_audit_cannot_use_own_snapshot_as_external) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.160s
+
+OK

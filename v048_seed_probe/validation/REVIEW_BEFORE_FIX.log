@@ -1,0 +1,55 @@
+test_hardlinked_snapshot_not_external_anchor (tests_v048.test_adversarial.AdversarialTests.test_hardlinked_snapshot_not_external_anchor) ... FAIL
+test_internal_plan_alias_not_external_anchor (tests_v048.test_adversarial.AdversarialTests.test_internal_plan_alias_not_external_anchor) ... FAIL
+test_reaudit_failure_replaces_previous_pass_reports (tests_v048.test_adversarial.AdversarialTests.test_reaudit_failure_replaces_previous_pass_reports) ... FAIL
+test_reference_changed_during_audit_is_rejected (tests_v048.test_adversarial.AdversarialTests.test_reference_changed_during_audit_is_rejected) ... FAIL
+test_v048_audit_cannot_use_own_snapshot_as_external (tests_v048.test_adversarial.AdversarialTests.test_v048_audit_cannot_use_own_snapshot_as_external) ... FAIL
+
+======================================================================
+FAIL: test_hardlinked_snapshot_not_external_anchor (tests_v048.test_adversarial.AdversarialTests.test_hardlinked_snapshot_not_external_anchor)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v048_seed_probe/tests_v048/test_adversarial.py", line 31, in test_hardlinked_snapshot_not_external_anchor
+    with self.assertRaises(ContractError): prepare(oldrun,root/"hard_new.json",baseline_plan=alias)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+AssertionError: ContractError not raised
+
+======================================================================
+FAIL: test_internal_plan_alias_not_external_anchor (tests_v048.test_adversarial.AdversarialTests.test_internal_plan_alias_not_external_anchor)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v048_seed_probe/tests_v048/test_adversarial.py", line 26, in test_internal_plan_alias_not_external_anchor
+    with self.assertRaises(ContractError): prepare(oldrun,root/"alias_new.json",baseline_plan=alias)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+AssertionError: ContractError not raised
+
+======================================================================
+FAIL: test_reaudit_failure_replaces_previous_pass_reports (tests_v048.test_adversarial.AdversarialTests.test_reaudit_failure_replaces_previous_pass_reports)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v048_seed_probe/tests_v048/test_adversarial.py", line 19, in test_reaudit_failure_replaces_previous_pass_reports
+    self.assertFalse(read_json(out/"audit.json")["data_integrity"])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_reference_changed_during_audit_is_rejected (tests_v048.test_adversarial.AdversarialTests.test_reference_changed_during_audit_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v048_seed_probe/tests_v048/test_adversarial.py", line 44, in test_reference_changed_during_audit_is_rejected
+    with self.assertRaises(ContractError): prepare(oldrun,root/"race.json",baseline_plan=root/"v047.external.plan.json")
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+AssertionError: ContractError not raised
+
+======================================================================
+FAIL: test_v048_audit_cannot_use_own_snapshot_as_external (tests_v048.test_adversarial.AdversarialTests.test_v048_audit_cannot_use_own_snapshot_as_external)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v048_seed_probe/tests_v048/test_adversarial.py", line 34, in test_v048_audit_cannot_use_own_snapshot_as_external
+    with self.assertRaises(ContractError): audit_run(out/"plan.snapshot.json",out)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+AssertionError: ContractError not raised
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.951s
+
+FAILED (failures=5)

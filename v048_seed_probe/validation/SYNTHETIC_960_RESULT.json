@@ -1,0 +1,20 @@
+{
+  "evidence_kind": "synthetic_fixture",
+  "new_model_inference": false,
+  "actual_fake_http_calls": 960,
+  "server_stopped_before_reaudit": true,
+  "offline_reaudit_equal": true,
+  "data_complete": true,
+  "model_scores_are_fixture_outputs": true,
+  "fixture_scores": {
+    "original": 180,
+    "commuted": 240,
+    "pipeline": 240
+  },
+  "fixture_pipeline_strict": 240,
+  "reference_seed_excluded": [
+    1729
+  ],
+  "plan_sha256": "2501da24e2262ea54b4cf26e2366433faf06e832b9b24335c94ac426877c6064",
+  "bundle": "/mnt/data/v048_work/final_synthetic_960/SYNTHETIC_960_EVIDENCE.zip"
+}

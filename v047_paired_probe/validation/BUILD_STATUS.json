@@ -1,0 +1,38 @@
+{
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "unit_tests": {
+    "executed": 75,
+    "passed": 75,
+    "failed": 0,
+    "log": "validation/selftest.txt"
+  },
+  "negative_controls": {
+    "malformed_payloads": 8,
+    "pipeline_parent_final_states": 16,
+    "pipeline_8bit_patterns": 256,
+    "fully_correct_8bit_patterns": 1,
+    "all_final_correct_but_wrong_intermediate_rejected_patterns": 15
+  },
+  "compileall_passed": true,
+  "live_llm_inference_calls": 0,
+  "windows_powershell_executed": false,
+  "pwsh_available": false,
+  "original_v046_zip_reaudited": false,
+  "connected_repository_read_only": true,
+  "original_local_llm_overwritten": false,
+  "demo": {
+    "evidence_kind": "synthetic_fixture",
+    "live_llm_calls": 0,
+    "synthetic_http_inference_requests": 96,
+    "offline_replay_equal": true,
+    "original_correct": 18,
+    "commuted_correct": 24,
+    "pipeline_strict_correct": 24,
+    "assigned_per_arm": 24
+  },
+  "python_3_10_syntax_check": {
+    "passed": true,
+    "files": 14
+  }
+}

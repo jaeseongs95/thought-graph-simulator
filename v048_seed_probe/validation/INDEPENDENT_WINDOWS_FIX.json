@@ -1,0 +1,19 @@
+{
+  "kind": "independent_synthetic_smoke_only",
+  "calls_checked": 960,
+  "new_model_inference": false,
+  "no_import_of_production_evaluator": true,
+  "counts": {
+    "not_calls": 240,
+    "not_correct": 240,
+    "and_calls": 240,
+    "and_local_correct": 240,
+    "pipeline_final_correct": 240,
+    "original_calls": 240,
+    "original_correct": 180,
+    "commuted_calls": 240,
+    "commuted_correct": 240
+  },
+  "pipeline_strict": 240,
+  "event_tip": "b914f5c5dec5bc56c78555af041285953e4a94cd398cf89669bb6a3121a572e3"
+}

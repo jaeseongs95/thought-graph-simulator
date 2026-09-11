@@ -1,0 +1,35 @@
+{
+  "package_version": "0.4.8-r1",
+  "purpose": "Windows subprocess stdout/stderr CP949/UTF-8 decoding boundary fix; experiment logic unchanged",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "selftest": {
+    "passed": 171,
+    "failed": 0,
+    "log": "validation/SELFTEST_WINDOWS_FIX.log"
+  },
+  "encoding_regression": {
+    "old_utf8_text_decode_reproduced_unicode_error": true,
+    "new_bytes_capture_cp949_lossless": true,
+    "log": "validation/WINDOWS_ENCODING_REGRESSION.log"
+  },
+  "synthetic_http": {
+    "calls": 960,
+    "offline_reaudit_equal": true,
+    "log": "validation/SYNTHETIC_960_WINDOWS_FIX.log",
+    "evidence": "validation/SYNTHETIC_960_WINDOWS_FIX_EVIDENCE.zip"
+  },
+  "independent_raw_check": {
+    "calls_checked": 960,
+    "pipeline_strict": 240,
+    "file": "validation/INDEPENDENT_WINDOWS_FIX.json"
+  },
+  "actual_v047_prepare": {
+    "success": true,
+    "new_inference": false,
+    "anchor": "snapshot_only",
+    "log": "validation/ACTUAL_V047_PREPARE_WINDOWS_FIX.log"
+  },
+  "core_logic_diff": "validation/CORE_LOGIC_DIFF.json",
+  "note": "paired_probe_v047 core unchanged; paired_probe_v048 core unchanged except __init__.py version string 0.4.8 -> 0.4.8-r1. subprocess compatibility helper is test/validation-only."
+}

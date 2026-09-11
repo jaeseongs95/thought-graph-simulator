@@ -1,0 +1,23 @@
+{
+  "plan_sha256": "ceac2e2a3cfdcfa764f688f14c8719bcdb089457ba95dd9cbf6edba98a4986f1",
+  "started_at": "2026-09-11T03:42:49.162+00:00",
+  "source_fingerprint": {
+    "__init__.py": "d62052e57273e4af51cfec26cd5e179d2b3505aa553740cde7f44adcc758f005",
+    "__main__.py": "bef95cc496d47bb59d74729f0a93471dfbd9e41526a890773e649c06e62f02e3",
+    "audit.py": "2ecd330cf9c7df800c9ccffbec426451b1b59c4f86b6e2ee03d80a33b39fc039",
+    "contracts.py": "b773841d40105e1166696b32d72de2a5a5276d7cc6e554e4bd8767af003a307d",
+    "oracle.py": "214beceaa7d1e1a9146e5c4120f4e65234ad8e90fa2127d8d378ce7a66122710",
+    "plan.py": "05791ca7d15157eded8e4cd9ed6f836d271da5216a86385e4996d39c3fc95aab",
+    "runner.py": "e9db377a8dc1d314d055e75a4f4d531f0d8fa65bc328e66daabf7e7a75c11b08"
+  },
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "executable": "/opt/pyvenv/bin/python",
+  "endpoint": "http://127.0.0.1:44245",
+  "evidence_kind": "synthetic_fixture",
+  "new_model_inference": false,
+  "retry_policy": "none",
+  "warmup_calls": 0,
+  "source_plan_path": "/mnt/data/v047_paired_probe/validation/demo_pattern/frozen.plan.json",
+  "max_inference_calls": 96
+}
