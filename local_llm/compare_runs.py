@@ -5,7 +5,8 @@ import copy
 import json
 import sys
 from pathlib import Path
-from .common import ContractError, digest, read_json, require, write_json, write_text
+from .common import (ContractError, digest, read_json, require, write_json, write_text,
+                     bytes_hash, source_text_identity, require_core_compatible)
 from .report import read_records
 
 FACTORS = ("format", "temperature", "seed", "model", "server")
@@ -26,7 +27,14 @@ def compare(left: Path, right: Path, vary: str) -> dict:
     require(left != right, "서로 다른 실행을 지정하세요.")
     ma, mb = (read_json(p / "manifest.json") for p in (left, right))
     fa, fb = ma["frozen"], mb["frozen"]
-    require(fa["core"]["sha256"] == fb["core"]["sha256"], "core가 달라 비교 불가")
+    def snapshot_identity(root: Path, frozen: dict) -> dict:
+        path = root / "source_snapshot" / "adm_minimal.py"
+        require(path.is_file(), "core 스냅샷 누락")
+        data = path.read_bytes()
+        require(bytes_hash(data) == frozen["core"]["sha256"], "core 스냅샷과 manifest 불일치")
+        return source_text_identity(data)
+    require_core_compatible(snapshot_identity(left, fa), snapshot_identity(right, fb),
+                            "core 실제 소스 내용이 달라 비교 불가")
     require(fa["runtime_sources_sha256"] == fb["runtime_sources_sha256"], "하네스 소스가 달라 단일 요인 비교 불가")
     require(fa["plan"].get("probe_contract") == fb["plan"].get("probe_contract") == "micro-v042", "같은 micro-v042 계약 실행만 비교")
     require(fa["plan"]["problems"] == fb["plan"]["problems"], "입력 문제가 다름")

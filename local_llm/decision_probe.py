@@ -12,7 +12,8 @@ import sys
 from pathlib import Path
 from typing import Any
 from .common import (ContractError, bytes_hash, digest, load_core, read_json, require,
-                     strict_json, wire_json, write_json)
+                     strict_json, wire_json, write_json, source_text_identity,
+                     require_core_compatible)
 from .approved_v042 import APPROVED_SOURCES
 from .protocol import obj, validate_schema
 from .micro_probe import FINDING, output_schema as source_schema, assess_payload as source_assess
@@ -36,12 +37,16 @@ def load_source(core: Any, core_info: dict, source: Path) -> dict:
     manifest = read_json(source/'manifest.json'); frozen = manifest['frozen']
     require(frozen.get('extension_version') == '0.4.2', '현재 이관은 검토한 v0.4.2 원본만 지원합니다.')
     require(frozen.get('runtime_sources_sha256') == APPROVED_SOURCES, '승인된 v0.4.2 소스가 아닙니다.')
-    require(frozen['core']['sha256'] == core_info['sha256'], '원본과 현재 adm_minimal.py가 다릅니다.')
     require(frozen['plan'].get('probe_contract') == 'micro-v042', 'micro-v042 원본이 필요합니다.')
     for name, expected in APPROVED_SOURCES.items():
         require(bytes_hash((source/'source_snapshot'/name).read_bytes()) == expected,
                 '소스 스냅샷 변조/누락: '+name)
-    require(bytes_hash((source/'source_snapshot/adm_minimal.py').read_bytes()) == core_info['sha256'], 'core 스냅샷 불일치')
+    core_snapshot = source/'source_snapshot/adm_minimal.py'
+    snapshot_bytes = core_snapshot.read_bytes()
+    require(bytes_hash(snapshot_bytes) == frozen['core']['sha256'], '기록된 core 스냅샷 자체가 manifest와 다릅니다.')
+    snapshot_info = source_text_identity(snapshot_bytes)
+    core_compat = require_core_compatible(snapshot_info, core_info,
+        '원본과 현재 adm_minimal.py의 실제 소스 내용이 다릅니다.')
     records = read_records(source, manifest)
     require(len(records) == len(frozen['plan']['cases']), '원본의 모든 배정 기록이 있어야 합니다.')
     problems = {p['id']:p for p in frozen['plan']['problems']}
@@ -77,7 +82,8 @@ def load_source(core: Any, core_info: dict, source: Path) -> dict:
             '네 가지 기준 조건이 각각 한 번 있어야 합니다. 실패 조건을 제외하지 마세요.')
     return {'manifest':manifest,'selected':selected,
             'validation':{'all_source_records_replayed':len(records),'criterion_cases':len(selected),
-                          'snapshot_files_verified':len(APPROVED_SOURCES),'network_called':False}}
+                          'snapshot_files_verified':len(APPROVED_SOURCES),'network_called':False},
+            'core_compatibility':core_compat}
 
 
 def staged_messages(projection: dict) -> list[dict]:
@@ -129,7 +135,7 @@ def build_plan(source: dict, arms: list[str] | None = None) -> dict:
 
 def validate_runtime(plan: dict, info: dict, config: dict, metadata: dict) -> None:
     identity=plan['source_identity']
-    require(info['sha256']==identity['core']['sha256'],'원본과 core 불일치')
+    require_core_compatible(identity['core'], info, '원본과 core의 실제 소스 내용이 다릅니다.')
     require(config==identity['config'],'대조는 원본의 확정된 생성 설정을 그대로 사용해야 합니다.')
     require(metadata['tag']['digest']==identity['model']['digest'],'모델 digest 변경: 이번 단일 조건 대조를 중단합니다.')
     require(digest(metadata['show'])==identity['model']['show_sha256'],'템플릿/모델 메타데이터 변경')

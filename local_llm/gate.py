@@ -11,7 +11,8 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
-from .common import bytes_hash, read_json, require, source_fingerprint, wire_json
+from .common import (bytes_hash, read_json, require, source_fingerprint, wire_json,
+                     source_text_identity, require_core_compatible)
 from .design import build_plan
 from .model_policy import response_channels
 from .report import read_records
@@ -59,8 +60,6 @@ def validate_gate(core: Any, gate: Path, config: dict, next_plan: dict,
             "게이트에는 통합 smoke 결과 폴더를 지정하세요.")
     require(normalized_config(frozen["config"]) == normalized_config(config),
             "smoke와 모델·프롬프트 프로필·추론·샘플링 설정이 다릅니다.")
-    require(frozen["core"]["sha256"] == bytes_hash(Path(core.__file__).read_bytes()),
-            "smoke와 현재 검증기가 다릅니다.")
     require(previous["seed"] == next_plan["seed"], "smoke와 주 실험의 시작 시드가 다릅니다.")
     require(previous["problems"] == next_plan["problems"][:1], "smoke는 주 실험의 첫 문제와 같아야 합니다.")
     expected_plan = build_plan(core, next_plan["problems"], "smoke", previous["repeats"], next_plan["seed"])
@@ -81,8 +80,14 @@ def validate_gate(core: Any, gate: Path, config: dict, next_plan: dict,
         require(path.is_file() and bytes_hash(path.read_bytes()) == expected,
                 f"소스 스냅샷 누락/해시 불일치: {name}")
     core_snapshot = gate / "source_snapshot" / "adm_minimal.py"
-    require(core_snapshot.is_file() and bytes_hash(core_snapshot.read_bytes()) == frozen["core"]["sha256"],
-            "검증기 스냅샷 누락/해시 불일치")
+    require(core_snapshot.is_file(), "검증기 스냅샷 누락")
+    snapshot_bytes = core_snapshot.read_bytes()
+    require(bytes_hash(snapshot_bytes) == frozen["core"]["sha256"],
+            "검증기 스냅샷 자체가 실행 manifest와 다릅니다.")
+    current_core = source_text_identity(Path(core.__file__).read_bytes())
+    snapshot_core = source_text_identity(snapshot_bytes)
+    require_core_compatible(snapshot_core, current_core,
+                            "smoke와 현재 검증기의 실제 소스 내용이 다릅니다.")
 
     records = read_records(gate, manifest)
     require(len(records) == len(previous["cases"]), "smoke가 완료되지 않았습니다.")

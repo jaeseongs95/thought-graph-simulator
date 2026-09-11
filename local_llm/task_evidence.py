@@ -192,6 +192,9 @@ def task_diagnostics(problem: dict, case: dict, content: Any, schema: dict | Non
         elif case.get("task") == "criterion_witness":
             from .decision_evidence import witness_evidence
             output["criterion_witness"] = witness_evidence(problem, case, payload)
+        if case.get("task") in ("criterion_witness", "decision_stage"):
+            from .decision_table import row_evidence
+            output["decision_contract"] = row_evidence(problem, case, payload)
     except (ContractError, TypeError, KeyError, ValueError, RecursionError) as exc:
         output["diagnostic_error"] = f"{type(exc).__name__}: {exc}"
     return output

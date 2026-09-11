@@ -434,4 +434,10 @@ def write_report(out: Path) -> dict:
         extra += ["", d["interpretation"]]
         with (out / "summary.md").open("a", encoding="utf-8", newline="\n") as handle:
             handle.write("\n".join(extra) + "\n")
+    if any(c.get("task") in ("decision_stage", "criterion_witness") for c in manifest["frozen"]["plan"]["cases"]):
+        from .decision_table import summarize_records, summary_markdown
+        tables = summarize_records(manifest["frozen"]["plan"], records)
+        write_json(out / "decision_tables.json", tables)
+        with (out / "summary.md").open("a", encoding="utf-8", newline="\n") as handle:
+            handle.write(summary_markdown(tables))
     return summary

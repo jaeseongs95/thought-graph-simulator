@@ -46,6 +46,69 @@ def bytes_hash(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
+def git_blob_sha1(data: bytes) -> str:
+    """Git blob object id for the supplied bytes, without invoking Git."""
+    return hashlib.sha1(f"blob {len(data)}\0".encode("ascii") + data).hexdigest()
+
+
+def normalize_python_source_bytes(data: bytes) -> bytes:
+    """Normalize only UTF-8 BOM and text line endings for Python-source identity.
+
+    This is intentionally narrow. It does not trim whitespace, reformat code, or
+    alter any non-line-ending content. A real source edit therefore remains a
+    different identity.
+    """
+    try:
+        text = data.decode("utf-8-sig")
+    except UnicodeDecodeError as exc:
+        raise ContractError("Python 소스를 UTF-8로 해석할 수 없습니다.") from exc
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
+    return text.encode("utf-8")
+
+
+def source_text_identity(data: bytes) -> dict:
+    """Return raw and line-ending/BOM-normalized identities for source bytes."""
+    normalized = normalize_python_source_bytes(data)
+    return {
+        "sha256": bytes_hash(data),
+        "git_blob_sha1": git_blob_sha1(data),
+        "normalized_sha256": bytes_hash(normalized),
+        "normalized_git_blob_sha1": git_blob_sha1(normalized),
+        "normalization_changed_bytes": data != normalized,
+    }
+
+
+def core_identity_compatibility(recorded: dict, current: dict) -> dict:
+    """Compare core source identity without treating CRLF/LF/BOM as a code edit.
+
+    Existing manifests (v0.4.4 and earlier) contain raw ``sha256`` and
+    ``git_blob_sha1`` fields only. Their recorded source snapshots were LF, so the
+    legacy git blob is also the normalized blob. New identities additionally carry
+    explicit normalized fields.
+    """
+    recorded_blob = recorded.get("normalized_git_blob_sha1") or recorded.get("git_blob_sha1")
+    current_blob = current.get("normalized_git_blob_sha1") or current.get("git_blob_sha1")
+    method = "normalized_git_blob_sha1" if recorded_blob and current_blob else "sha256"
+    if recorded_blob and current_blob:
+        same = recorded_blob == current_blob
+    else:
+        same = recorded.get("sha256") == current.get("sha256")
+    return {
+        "same_source": bool(same),
+        "method": method,
+        "recorded_identity": recorded_blob if method != "sha256" else recorded.get("sha256"),
+        "current_identity": current_blob if method != "sha256" else current.get("sha256"),
+        "raw_sha256_equal": recorded.get("sha256") == current.get("sha256"),
+        "representation_diff_only": bool(same) and recorded.get("sha256") != current.get("sha256"),
+    }
+
+
+def require_core_compatible(recorded: dict, current: dict, message: str) -> dict:
+    result = core_identity_compatibility(recorded, current)
+    require(result["same_source"], message)
+    return result
+
+
 def utc_now() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
@@ -105,10 +168,8 @@ def load_core(allow_change: bool = False) -> tuple[ModuleType, dict]:
     require(path.is_file(), "저장소 루트의 adm_minimal.py가 없습니다. local_llm 폴더를 "
             "기존 thought-graph-simulator의 adm_minimal.py 옆에 놓으세요.")
     data = path.read_bytes()
-    normalized = data.decode("utf-8-sig").replace("\r\n", "\n").encode("utf-8")
-    def git_blob(raw: bytes) -> str:
-        return hashlib.sha1(f"blob {len(raw)}\0".encode("ascii") + raw).hexdigest()
-    matching = BASE_CORE_BLOB in {git_blob(data), git_blob(normalized)}
+    identity = source_text_identity(data)
+    matching = identity["normalized_git_blob_sha1"] == BASE_CORE_BLOB
     require(matching or allow_change,
             "adm_minimal.py가 확인한 기준 파일과 다릅니다. 변경 내용을 검토한 후 "
             "--allow-core-change를 명시해야 실행할 수 있습니다.")
@@ -118,8 +179,8 @@ def load_core(allow_change: bool = False) -> tuple[ModuleType, dict]:
     spec.loader.exec_module(core)
     for name in ("verify", "check_problem", "digest"):
         require(callable(getattr(core, name, None)), f"기존 모듈 API 누락: {name}")
-    return core, {"path": "adm_minimal.py", "sha256": bytes_hash(data),
-                  "git_blob_sha1": git_blob(data), "baseline_matches": matching,
+    return core, {"path": "adm_minimal.py", **identity,
+                  "baseline_matches": matching,
                   "baseline_commit": BASE_COMMIT,
                   "allow_core_change": allow_change}
 

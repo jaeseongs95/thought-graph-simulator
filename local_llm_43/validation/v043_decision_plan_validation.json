@@ -1,0 +1,16 @@
+{
+  "model_called": false,
+  "new_llm_calls": 8,
+  "source_validation": {
+    "all_source_records_replayed": 8,
+    "criterion_cases": 4,
+    "snapshot_files_verified": 27,
+    "network_called": false
+  },
+  "arms": [
+    "format_json",
+    "staged"
+  ],
+  "source_failures_preserved": true,
+  "note": "format_json은 실제 요청의 format만 변경. staged는 원래 모델 중간값의 두 객체를 다음 호출 입력으로 투영한 새 파이프라인이며 순수 필드 순서 효과가 아니다. 원래 실패는 보존하고 파이프라인 성공을 본 ADM 결과로 합산하지 않는다."
+}

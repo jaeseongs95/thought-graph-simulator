@@ -1,0 +1,354 @@
+[
+  {
+    "case": "criterion_goal_is_fact",
+    "finding": {
+      "answer_only_accepts": false,
+      "proof_and_goal_accepts": false,
+      "gap_detected": false
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_goal_is_fact",
+    "finding": {
+      "answer_only_accepts": false,
+      "proof_and_goal_accepts": false,
+      "gap_detected": true
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_goal_is_fact",
+    "finding": {
+      "answer_only_accepts": false,
+      "proof_and_goal_accepts": true,
+      "gap_detected": false
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_goal_is_fact",
+    "finding": {
+      "answer_only_accepts": false,
+      "proof_and_goal_accepts": true,
+      "gap_detected": true
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_goal_is_fact",
+    "finding": {
+      "answer_only_accepts": true,
+      "proof_and_goal_accepts": false,
+      "gap_detected": false
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_goal_is_fact",
+    "finding": {
+      "answer_only_accepts": true,
+      "proof_and_goal_accepts": false,
+      "gap_detected": true
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_goal_is_fact",
+    "finding": {
+      "answer_only_accepts": true,
+      "proof_and_goal_accepts": true,
+      "gap_detected": false
+    },
+    "truth_table_expected": true,
+    "core": true,
+    "local": true
+  },
+  {
+    "case": "criterion_goal_is_fact",
+    "finding": {
+      "answer_only_accepts": true,
+      "proof_and_goal_accepts": true,
+      "gap_detected": true
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_neither",
+    "finding": {
+      "answer_only_accepts": false,
+      "proof_and_goal_accepts": false,
+      "gap_detected": false
+    },
+    "truth_table_expected": true,
+    "core": true,
+    "local": true
+  },
+  {
+    "case": "criterion_neither",
+    "finding": {
+      "answer_only_accepts": false,
+      "proof_and_goal_accepts": false,
+      "gap_detected": true
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_neither",
+    "finding": {
+      "answer_only_accepts": false,
+      "proof_and_goal_accepts": true,
+      "gap_detected": false
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_neither",
+    "finding": {
+      "answer_only_accepts": false,
+      "proof_and_goal_accepts": true,
+      "gap_detected": true
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_neither",
+    "finding": {
+      "answer_only_accepts": true,
+      "proof_and_goal_accepts": false,
+      "gap_detected": false
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_neither",
+    "finding": {
+      "answer_only_accepts": true,
+      "proof_and_goal_accepts": false,
+      "gap_detected": true
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_neither",
+    "finding": {
+      "answer_only_accepts": true,
+      "proof_and_goal_accepts": true,
+      "gap_detected": false
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_neither",
+    "finding": {
+      "answer_only_accepts": true,
+      "proof_and_goal_accepts": true,
+      "gap_detected": true
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_goal_not_fact",
+    "finding": {
+      "answer_only_accepts": false,
+      "proof_and_goal_accepts": false,
+      "gap_detected": false
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_goal_not_fact",
+    "finding": {
+      "answer_only_accepts": false,
+      "proof_and_goal_accepts": false,
+      "gap_detected": true
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_goal_not_fact",
+    "finding": {
+      "answer_only_accepts": false,
+      "proof_and_goal_accepts": true,
+      "gap_detected": false
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_goal_not_fact",
+    "finding": {
+      "answer_only_accepts": false,
+      "proof_and_goal_accepts": true,
+      "gap_detected": true
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_goal_not_fact",
+    "finding": {
+      "answer_only_accepts": true,
+      "proof_and_goal_accepts": false,
+      "gap_detected": false
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_goal_not_fact",
+    "finding": {
+      "answer_only_accepts": true,
+      "proof_and_goal_accepts": false,
+      "gap_detected": true
+    },
+    "truth_table_expected": true,
+    "core": true,
+    "local": true
+  },
+  {
+    "case": "criterion_goal_not_fact",
+    "finding": {
+      "answer_only_accepts": true,
+      "proof_and_goal_accepts": true,
+      "gap_detected": false
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_goal_not_fact",
+    "finding": {
+      "answer_only_accepts": true,
+      "proof_and_goal_accepts": true,
+      "gap_detected": true
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_fact_not_goal",
+    "finding": {
+      "answer_only_accepts": false,
+      "proof_and_goal_accepts": false,
+      "gap_detected": false
+    },
+    "truth_table_expected": true,
+    "core": true,
+    "local": true
+  },
+  {
+    "case": "criterion_fact_not_goal",
+    "finding": {
+      "answer_only_accepts": false,
+      "proof_and_goal_accepts": false,
+      "gap_detected": true
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_fact_not_goal",
+    "finding": {
+      "answer_only_accepts": false,
+      "proof_and_goal_accepts": true,
+      "gap_detected": false
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_fact_not_goal",
+    "finding": {
+      "answer_only_accepts": false,
+      "proof_and_goal_accepts": true,
+      "gap_detected": true
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_fact_not_goal",
+    "finding": {
+      "answer_only_accepts": true,
+      "proof_and_goal_accepts": false,
+      "gap_detected": false
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_fact_not_goal",
+    "finding": {
+      "answer_only_accepts": true,
+      "proof_and_goal_accepts": false,
+      "gap_detected": true
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_fact_not_goal",
+    "finding": {
+      "answer_only_accepts": true,
+      "proof_and_goal_accepts": true,
+      "gap_detected": false
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  },
+  {
+    "case": "criterion_fact_not_goal",
+    "finding": {
+      "answer_only_accepts": true,
+      "proof_and_goal_accepts": true,
+      "gap_detected": true
+    },
+    "truth_table_expected": false,
+    "core": false,
+    "local": false
+  }
+]

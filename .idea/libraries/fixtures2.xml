@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="fixtures2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/local_llm_43/tests/fixtures/v02_smoke_gate.zip!/" />
+      <root url="jar://$PROJECT_DIR$/local_llm_43/tests/fixtures/v042_micro_run.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

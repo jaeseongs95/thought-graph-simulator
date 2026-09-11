@@ -54,7 +54,9 @@ def component_summary(plan: dict, records: list[dict]) -> dict:
                            "note": "같은 범위에 여러 조건이 있어 한 건을 대표로 선택하지 않음"})
         pairs.append(row)
     from .decision_evidence import aggregate_witnesses
-    return {"criterion_witness_stages": aggregate_witnesses(records), "groups": groups, "criterion_expected_patterns": patterns,
+    from .decision_table import summarize_records
+    return {"decision_contract_by_arm": summarize_records(plan, records),
+            "criterion_witness_stages": aggregate_witnesses(records), "groups": groups, "criterion_expected_patterns": patterns,
             "criterion_actual_patterns": dict(actual_patterns),
             "criterion_constant_output_observed": (len(actual_patterns) == 1 and sum(actual_patterns.values()) > 1),
             "criterion_pattern_field_order": list(fields),

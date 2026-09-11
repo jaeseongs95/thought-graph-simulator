@@ -5,7 +5,8 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
-from .common import ContractError, bytes_hash, read_json, require, strict_json, write_json, write_text
+from .common import (ContractError, bytes_hash, read_json, require, strict_json,
+                     source_text_identity, require_core_compatible, write_json, write_text)
 from .protocol import TRANSPORT_SCHEMA as LEGACY_SCHEMA, validate_schema
 from .protocol_v2 import TRANSPORT_SCHEMA as V2_SCHEMA
 
@@ -132,10 +133,13 @@ def reanalyze(core: Any, source: Path, out: Path) -> dict:
         source_checks[name] = file.is_file() and bytes_hash(file.read_bytes()) == expected
     require(all(source_checks.values()), "저장된 소스 스냅샷이 manifest와 일치하지 않습니다.")
     snapshot = source / "source_snapshot" / "adm_minimal.py"
-    require(snapshot.is_file() and bytes_hash(snapshot.read_bytes()) == frozen["core"]["sha256"],
-            "기존 검증기 스냅샷 해시 불일치")
-    require(bytes_hash(Path(core.__file__).read_bytes()) == frozen["core"]["sha256"],
-            "현재 검증기와 실행 당시 검증기 바이트가 다릅니다. 같은 기준 검증기로 분석하세요.")
+    require(snapshot.is_file(), "기존 검증기 스냅샷 누락")
+    snapshot_bytes = snapshot.read_bytes()
+    require(bytes_hash(snapshot_bytes) == frozen["core"]["sha256"],
+            "기존 검증기 스냅샷 자체가 manifest와 다릅니다.")
+    require_core_compatible(source_text_identity(snapshot_bytes),
+                            source_text_identity(Path(core.__file__).read_bytes()),
+                            "현재 검증기와 실행 당시 검증기의 실제 소스 내용이 다릅니다.")
     problems = {p["id"]: p for p in frozen["plan"]["problems"]}
     rows = []
     counts: Counter = Counter()
