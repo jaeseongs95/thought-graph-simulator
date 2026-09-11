@@ -1,0 +1,534 @@
+{
+  "profile": "micro-probe",
+  "experiment_kind": "calibration",
+  "probe_contract": "micro-v042",
+  "repeats": 1,
+  "seed": 1729,
+  "problems": [
+    {
+      "id": "K01",
+      "facts": [
+        "Ca"
+      ],
+      "rules": [
+        {
+          "id": "k10",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cb"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Cb"
+          ],
+          "conclusion": "Cc"
+        },
+        {
+          "id": "k03",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cc"
+        }
+      ],
+      "goal": "Cc"
+    },
+    {
+      "id": "K03",
+      "facts": [
+        "Ea"
+      ],
+      "rules": [
+        {
+          "id": "k03",
+          "premises": [
+            "Ea"
+          ],
+          "conclusion": "Ee"
+        },
+        {
+          "id": "k24",
+          "premises": [
+            "Eb"
+          ],
+          "conclusion": "Ed"
+        },
+        {
+          "id": "k00",
+          "premises": [
+            "Ec",
+            "Ed"
+          ],
+          "conclusion": "Ee"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Eb"
+          ],
+          "conclusion": "Ec"
+        },
+        {
+          "id": "k10",
+          "premises": [
+            "Ea"
+          ],
+          "conclusion": "Eb"
+        }
+      ],
+      "goal": "Ee"
+    },
+    {
+      "id": "K11",
+      "facts": [
+        "Ca",
+        "Cc"
+      ],
+      "rules": [
+        {
+          "id": "k10",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cb"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Cb"
+          ],
+          "conclusion": "Cc"
+        },
+        {
+          "id": "k03",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cc"
+        }
+      ],
+      "goal": "Cc"
+    }
+  ],
+  "roles": [],
+  "cases": [
+    {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "control_echo_2",
+      "task": "input_echo",
+      "repeat": 0,
+      "seed": 1729,
+      "calibration_version": 4,
+      "probe_contract": "micro-v042",
+      "diagnostic_group": "control",
+      "format_mode": "schema",
+      "echo": {
+        "token": "VT_83R",
+        "flag": true
+      },
+      "case_id": "3a789453ee41aa7fc4d03c45"
+    },
+    {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_neither",
+      "task": "criterion_witness",
+      "repeat": 0,
+      "seed": 1729,
+      "calibration_version": 4,
+      "probe_contract": "micro-v042",
+      "diagnostic_group": "criterion",
+      "format_mode": "schema",
+      "probe_atom": "Cz",
+      "case_id": "12936e238963221446d89682"
+    },
+    {
+      "problem_id": "K11",
+      "problem_sha256": "9b5261a692096b5f81a3b85883bdf42362cb2879a0f0303b6b9e1fc20eca32f3",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_goal_is_fact",
+      "task": "criterion_witness",
+      "repeat": 0,
+      "seed": 1729,
+      "calibration_version": 4,
+      "probe_contract": "micro-v042",
+      "diagnostic_group": "criterion",
+      "format_mode": "schema",
+      "probe_atom": "Cc",
+      "case_id": "ad6684e974d5d934f31b0589"
+    },
+    {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_goal_not_fact",
+      "task": "criterion_witness",
+      "repeat": 0,
+      "seed": 1729,
+      "calibration_version": 4,
+      "probe_contract": "micro-v042",
+      "diagnostic_group": "criterion",
+      "format_mode": "schema",
+      "probe_atom": "Cc",
+      "case_id": "ee1817382e58906fa43b6a6e"
+    },
+    {
+      "problem_id": "K03",
+      "problem_sha256": "da4e6f453a328261b9c3800b8190a2c513b0d1ce27b09052f0f92b722cafff04",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "graph_K03_edges",
+      "task": "edge_map",
+      "repeat": 0,
+      "seed": 1729,
+      "calibration_version": 4,
+      "probe_contract": "micro-v042",
+      "diagnostic_group": "graph",
+      "format_mode": "schema",
+      "skeleton": {
+        "nodes": [
+          {
+            "node_id": "n0",
+            "atom": "Ea",
+            "rule_id": null
+          },
+          {
+            "node_id": "n1",
+            "atom": "Eb",
+            "rule_id": "k10"
+          },
+          {
+            "node_id": "n2",
+            "atom": "Ec",
+            "rule_id": "k17"
+          },
+          {
+            "node_id": "n3",
+            "atom": "Ed",
+            "rule_id": "k24"
+          },
+          {
+            "node_id": "n4",
+            "atom": "Ee",
+            "rule_id": "k00"
+          }
+        ],
+        "selected_final_node_id": "n4"
+      },
+      "host_supplied": "노드 원자/규칙/최종 선택만 제공. 부모 ID는 제공하지 않음. 계획·D 성과로 세지 않음.",
+      "case_id": "1fbe7ad24a911fe4cb2bd980"
+    },
+    {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_fact_not_goal",
+      "task": "criterion_witness",
+      "repeat": 0,
+      "seed": 1729,
+      "calibration_version": 4,
+      "probe_contract": "micro-v042",
+      "diagnostic_group": "criterion",
+      "format_mode": "schema",
+      "probe_atom": "Ca",
+      "case_id": "900f60de9177e4a1cf9296d8"
+    },
+    {
+      "problem_id": "K03",
+      "problem_sha256": "da4e6f453a328261b9c3800b8190a2c513b0d1ce27b09052f0f92b722cafff04",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "schema_K03_fact_first",
+      "task": "schema",
+      "repeat": 0,
+      "seed": 1729,
+      "calibration_version": 4,
+      "probe_contract": "micro-v042",
+      "diagnostic_group": "schema",
+      "format_mode": "schema",
+      "view_scope": "final_node_only",
+      "provided_proof": {
+        "nodes": [
+          {
+            "node_id": "n0",
+            "atom": "Ea",
+            "rule_id": null,
+            "parent_node_ids": []
+          },
+          {
+            "node_id": "n1",
+            "atom": "Eb",
+            "rule_id": "k10",
+            "parent_node_ids": [
+              "n0"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "atom": "Ec",
+            "rule_id": "k17",
+            "parent_node_ids": [
+              "n1"
+            ]
+          },
+          {
+            "node_id": "n3",
+            "atom": "Ed",
+            "rule_id": "k24",
+            "parent_node_ids": [
+              "n1"
+            ]
+          },
+          {
+            "node_id": "n4",
+            "atom": "Ee",
+            "rule_id": "k00",
+            "parent_node_ids": [
+              "n2",
+              "n3"
+            ]
+          }
+        ],
+        "selected_final_node_id": "n4"
+      },
+      "fact_first": true,
+      "case_id": "0b2110ea3822abed2e7ba3b3"
+    },
+    {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "control_equal",
+      "task": "literal_equality",
+      "repeat": 0,
+      "seed": 1729,
+      "calibration_version": 4,
+      "probe_contract": "micro-v042",
+      "diagnostic_group": "control",
+      "format_mode": "schema",
+      "operands": {
+        "left": "Ca",
+        "right": "Ca"
+      },
+      "case_id": "a6d1f9415bfb35c3ef23847c"
+    },
+    {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "control_echo_1",
+      "task": "input_echo",
+      "repeat": 0,
+      "seed": 1729,
+      "calibration_version": 4,
+      "probe_contract": "micro-v042",
+      "diagnostic_group": "control",
+      "format_mode": "schema",
+      "echo": {
+        "token": "NX_47Q",
+        "flag": false
+      },
+      "case_id": "351b7baf25ef3e1659b0814b"
+    },
+    {
+      "problem_id": "K03",
+      "problem_sha256": "da4e6f453a328261b9c3800b8190a2c513b0d1ce27b09052f0f92b722cafff04",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "graph_K03_full",
+      "task": "proof",
+      "repeat": 0,
+      "seed": 1729,
+      "calibration_version": 4,
+      "probe_contract": "micro-v042",
+      "diagnostic_group": "graph",
+      "format_mode": "schema",
+      "depth_policy": "deep",
+      "case_id": "7da83e9162b7568d75d9ae16"
+    },
+    {
+      "problem_id": "K03",
+      "problem_sha256": "da4e6f453a328261b9c3800b8190a2c513b0d1ce27b09052f0f92b722cafff04",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "schema_K03_explicit_contract",
+      "task": "schema",
+      "repeat": 0,
+      "seed": 1729,
+      "calibration_version": 4,
+      "probe_contract": "micro-v042",
+      "diagnostic_group": "schema",
+      "format_mode": "schema",
+      "view_scope": "final_node_only",
+      "provided_proof": {
+        "nodes": [
+          {
+            "node_id": "n0",
+            "atom": "Ea",
+            "rule_id": null,
+            "parent_node_ids": []
+          },
+          {
+            "node_id": "n1",
+            "atom": "Eb",
+            "rule_id": "k10",
+            "parent_node_ids": [
+              "n0"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "atom": "Ec",
+            "rule_id": "k17",
+            "parent_node_ids": [
+              "n1"
+            ]
+          },
+          {
+            "node_id": "n3",
+            "atom": "Ed",
+            "rule_id": "k24",
+            "parent_node_ids": [
+              "n1"
+            ]
+          },
+          {
+            "node_id": "n4",
+            "atom": "Ee",
+            "rule_id": "k00",
+            "parent_node_ids": [
+              "n2",
+              "n3"
+            ]
+          }
+        ],
+        "selected_final_node_id": "n4"
+      },
+      "fact_first": false,
+      "case_id": "6553f7b37df32bb8dfab5fcc"
+    },
+    {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "control_not_equal",
+      "task": "literal_equality",
+      "repeat": 0,
+      "seed": 1729,
+      "calibration_version": 4,
+      "probe_contract": "micro-v042",
+      "diagnostic_group": "control",
+      "format_mode": "schema",
+      "operands": {
+        "left": "Ca",
+        "right": "Cc"
+      },
+      "case_id": "e9a4ce2a7dbd5ebdc63eb18a"
+    }
+  ],
+  "assigned_calls": 12,
+  "reference_depths": {
+    "K01": {
+      "reachable": true,
+      "depths": [
+        1,
+        2
+      ],
+      "minimum": 1,
+      "maximum": 2,
+      "has_depth_contrast": true,
+      "definition": "simple_branch_paths_facts_are_terminal"
+    },
+    "K03": {
+      "reachable": true,
+      "depths": [
+        1,
+        3
+      ],
+      "minimum": 1,
+      "maximum": 3,
+      "has_depth_contrast": true,
+      "definition": "simple_branch_paths_facts_are_terminal"
+    },
+    "K11": {
+      "reachable": true,
+      "depths": [
+        0
+      ],
+      "minimum": 0,
+      "maximum": 0,
+      "has_depth_contrast": false,
+      "definition": "simple_branch_paths_facts_are_terminal"
+    }
+  },
+  "warnings": [],
+  "scope": "diagnostic_only_no_combined_ADM_rate",
+  "groups": [
+    "control",
+    "criterion",
+    "graph",
+    "schema"
+  ],
+  "design_note": "입력복사·고정 경로 연결은 도움을 제공한 진단이다. 전체 증명/ADM 성공으로 합산하지 않는다. format 대조는 메시지에 같은 전체 스키마를 포함하고 format 필드만 변경한다."
+}

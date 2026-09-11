@@ -1,0 +1,104 @@
+{
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "os": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "logical_cpu_count": 12,
+    "nvidia_smi": {
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 4060, 8188 MiB, 560.94",
+      "stderr": ""
+    }
+  },
+  "model": {
+    "name": "qwen3:4b-instruct",
+    "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "4.0B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 262144,
+      "embedding_length": 2560
+    },
+    "show_sha256": "d223770b6393471210267ea75d0870b0770c0ebf3b1f5ae539758f7500816948"
+  },
+  "server": {
+    "version": "0.34.0"
+  },
+  "config": {
+    "config_stage": "resolved",
+    "requested_mode": "auto",
+    "protocol": "adm-json-v2",
+    "prompt_profile": "factorized-v4",
+    "model": "qwen3:4b-instruct",
+    "endpoint": "http://127.0.0.1:11434",
+    "timeout_seconds": 300,
+    "options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repeat_penalty": 1.0,
+      "num_ctx": 8192,
+      "num_predict": 4096,
+      "num_thread": 6,
+      "num_batch": 256
+    },
+    "think": null,
+    "mode_policy": {
+      "policy_version": "qwen3-mode-v4",
+      "checkpoint_kind": "instruct",
+      "checkpoint_version": "2507",
+      "evidence": [
+        {
+          "source": "GGUF finetune + version",
+          "kind": "instruct"
+        },
+        {
+          "source": "GGUF official model repository URI",
+          "kind": "instruct"
+        }
+      ],
+      "identity_fields": {
+        "general.architecture": "qwen3",
+        "general.basename": "Qwen3",
+        "general.name": null,
+        "general.version": "2507",
+        "general.finetune": "Instruct",
+        "general.license.link": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507/blob/main/LICENSE",
+        "general.size_label": "4B"
+      },
+      "capabilities": [
+        "tools",
+        "thinking",
+        "completion"
+      ],
+      "metadata_sha256": "d223770b6393471210267ea75d0870b0770c0ebf3b1f5ae539758f7500816948",
+      "source": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507",
+      "note": "태그 이름은 분류 근거가 아님. 별도 체크포인트 사이의 비교이며 동일 가중치의 on/off 비교가 아님.",
+      "resolved_mode": "non-thinking",
+      "request_think_field": "omitted",
+      "require_separate_thinking": false,
+      "resource_budget": "local_bounded_not_vendor_benchmark_budget"
+    }
+  },
+  "normal_stop": 16,
+  "output_tokens_total": 96,
+  "output_tokens_max": 6,
+  "input_tokens_min": 146,
+  "input_tokens_max": 152,
+  "load_seconds_sum": 4.7060043,
+  "api_total_seconds_sum": 7.3856327,
+  "weights_hash_report_present": false,
+  "not_observed": [
+    "actual_weights_bytes",
+    "GPU_kernel_correctness",
+    "server_internal_token_path",
+    "other_sampling_seeds"
+  ]
+}

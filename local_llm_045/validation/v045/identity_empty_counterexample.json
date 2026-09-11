@@ -1,0 +1,20 @@
+{
+  "v0441": {
+    "same_source": true,
+    "method": "sha256",
+    "recorded_identity": null,
+    "current_identity": null,
+    "raw_sha256_equal": true,
+    "representation_diff_only": false
+  },
+  "v045": {
+    "same_source": false,
+    "method": "sha256",
+    "recorded_identity": null,
+    "current_identity": null,
+    "raw_sha256_equal": true,
+    "representation_diff_only": false
+  },
+  "observed_in_user_run": false,
+  "root_cause_of_current_model_failures": false
+}

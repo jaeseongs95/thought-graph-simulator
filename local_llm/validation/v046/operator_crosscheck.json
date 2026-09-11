@@ -1,0 +1,194 @@
+[
+  {
+    "case_id": "af38a32cecf032874b875d8c",
+    "trial_value": false,
+    "parser_expected_pass": true,
+    "status": "accepted"
+  },
+  {
+    "case_id": "af38a32cecf032874b875d8c",
+    "trial_value": true,
+    "parser_expected_pass": false,
+    "status": "invalid_task"
+  },
+  {
+    "case_id": "09f861090b96af5904105b2f",
+    "trial_value": false,
+    "parser_expected_pass": true,
+    "status": "accepted"
+  },
+  {
+    "case_id": "09f861090b96af5904105b2f",
+    "trial_value": true,
+    "parser_expected_pass": false,
+    "status": "invalid_task"
+  },
+  {
+    "case_id": "28b18d255a17e80c87bd5b80",
+    "trial_value": false,
+    "parser_expected_pass": true,
+    "status": "accepted"
+  },
+  {
+    "case_id": "28b18d255a17e80c87bd5b80",
+    "trial_value": true,
+    "parser_expected_pass": false,
+    "status": "invalid_task"
+  },
+  {
+    "case_id": "11e14bd45e4678bf85fcc66a",
+    "trial_value": false,
+    "parser_expected_pass": false,
+    "status": "invalid_task"
+  },
+  {
+    "case_id": "11e14bd45e4678bf85fcc66a",
+    "trial_value": true,
+    "parser_expected_pass": true,
+    "status": "accepted"
+  },
+  {
+    "case_id": "5e0620085e05eb314ebde056",
+    "trial_value": false,
+    "parser_expected_pass": false,
+    "status": "invalid_task"
+  },
+  {
+    "case_id": "5e0620085e05eb314ebde056",
+    "trial_value": true,
+    "parser_expected_pass": true,
+    "status": "accepted"
+  },
+  {
+    "case_id": "9dd5155af23148ca35eeade0",
+    "trial_value": false,
+    "parser_expected_pass": false,
+    "status": "invalid_task"
+  },
+  {
+    "case_id": "9dd5155af23148ca35eeade0",
+    "trial_value": true,
+    "parser_expected_pass": true,
+    "status": "accepted"
+  },
+  {
+    "case_id": "47badd1edf3341302ec8411f",
+    "trial_value": false,
+    "parser_expected_pass": false,
+    "status": "invalid_task"
+  },
+  {
+    "case_id": "47badd1edf3341302ec8411f",
+    "trial_value": true,
+    "parser_expected_pass": true,
+    "status": "accepted"
+  },
+  {
+    "case_id": "6709f4853b667e5025692592",
+    "trial_value": false,
+    "parser_expected_pass": true,
+    "status": "accepted"
+  },
+  {
+    "case_id": "6709f4853b667e5025692592",
+    "trial_value": true,
+    "parser_expected_pass": false,
+    "status": "invalid_task"
+  },
+  {
+    "case_id": "d210fe1127912d3125695191",
+    "trial_value": false,
+    "parser_expected_pass": true,
+    "status": "accepted"
+  },
+  {
+    "case_id": "d210fe1127912d3125695191",
+    "trial_value": true,
+    "parser_expected_pass": false,
+    "status": "invalid_task"
+  },
+  {
+    "case_id": "e6012b3855fd7c4776a27b10",
+    "trial_value": false,
+    "parser_expected_pass": true,
+    "status": "accepted"
+  },
+  {
+    "case_id": "e6012b3855fd7c4776a27b10",
+    "trial_value": true,
+    "parser_expected_pass": false,
+    "status": "invalid_task"
+  },
+  {
+    "case_id": "4a876c1518f7fb9ec1765d60",
+    "trial_value": false,
+    "parser_expected_pass": true,
+    "status": "accepted"
+  },
+  {
+    "case_id": "4a876c1518f7fb9ec1765d60",
+    "trial_value": true,
+    "parser_expected_pass": false,
+    "status": "invalid_task"
+  },
+  {
+    "case_id": "d48a02b02acf27b67a3b4f1c",
+    "trial_value": false,
+    "parser_expected_pass": false,
+    "status": "invalid_task"
+  },
+  {
+    "case_id": "d48a02b02acf27b67a3b4f1c",
+    "trial_value": true,
+    "parser_expected_pass": true,
+    "status": "accepted"
+  },
+  {
+    "case_id": "42f42dce5c0b2484aaa41522",
+    "trial_value": false,
+    "parser_expected_pass": true,
+    "status": "accepted"
+  },
+  {
+    "case_id": "42f42dce5c0b2484aaa41522",
+    "trial_value": true,
+    "parser_expected_pass": false,
+    "status": "invalid_task"
+  },
+  {
+    "case_id": "1919614581c30bc0f0b9b661",
+    "trial_value": false,
+    "parser_expected_pass": true,
+    "status": "accepted"
+  },
+  {
+    "case_id": "1919614581c30bc0f0b9b661",
+    "trial_value": true,
+    "parser_expected_pass": false,
+    "status": "invalid_task"
+  },
+  {
+    "case_id": "566124c4629d09ac972de4ec",
+    "trial_value": false,
+    "parser_expected_pass": true,
+    "status": "accepted"
+  },
+  {
+    "case_id": "566124c4629d09ac972de4ec",
+    "trial_value": true,
+    "parser_expected_pass": false,
+    "status": "invalid_task"
+  },
+  {
+    "case_id": "05a7034438da3992143be421",
+    "trial_value": false,
+    "parser_expected_pass": false,
+    "status": "invalid_task"
+  },
+  {
+    "case_id": "05a7034438da3992143be421",
+    "trial_value": true,
+    "parser_expected_pass": true,
+    "status": "accepted"
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "input_ab": [
+      false,
+      false
+    ],
+    "direct": false,
+    "commuted": false
+  },
+  {
+    "input_ab": [
+      false,
+      true
+    ],
+    "direct": false,
+    "commuted": false
+  },
+  {
+    "input_ab": [
+      true,
+      false
+    ],
+    "direct": true,
+    "commuted": true
+  },
+  {
+    "input_ab": [
+      true,
+      true
+    ],
+    "direct": false,
+    "commuted": false
+  }
+]

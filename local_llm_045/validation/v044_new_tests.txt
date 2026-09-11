@@ -1,0 +1,36 @@
+test_8_original_decisions_replay (local_llm.tests.test_v044.V044Tests.test_8_original_decisions_replay) ... ok
+test_all_128_outputs_match_independent_truth_table (local_llm.tests.test_v044.V044Tests.test_all_128_outputs_match_independent_truth_table) ... ok
+test_all_four_boolean_inputs_retained_each_arm (local_llm.tests.test_v044.V044Tests.test_all_four_boolean_inputs_retained_each_arm) ... ok
+test_arm_selection_and_extra_temperature_zero (local_llm.tests.test_v044.V044Tests.test_arm_selection_and_extra_temperature_zero) ... ok
+test_b_last_changes_only_key_order_not_value (local_llm.tests.test_v044.V044Tests.test_b_last_changes_only_key_order_not_value) ... ok
+test_checksum_plan_reads_no_weight_file (local_llm.tests.test_v044.V044Tests.test_checksum_plan_reads_no_weight_file) ... ok
+test_correct_values_cannot_override_protocol_failure (local_llm.tests.test_v044.V044Tests.test_correct_values_cannot_override_protocol_failure) ... ok
+test_evaluator_does_not_mutate_values (local_llm.tests.test_v044.V044Tests.test_evaluator_does_not_mutate_values) ... ok
+test_json_2_of_4_and_false_acceptance_retained (local_llm.tests.test_v044.V044Tests.test_json_2_of_4_and_false_acceptance_retained) ... ok
+test_missing_or_repeated_table_not_full_truth_function (local_llm.tests.test_v044.V044Tests.test_missing_or_repeated_table_not_full_truth_function) ... ok
+test_mock_16_calls_report_and_resume (local_llm.tests.test_v044.V044Tests.test_mock_16_calls_report_and_resume) ... ok
+test_neutral_keys_is_reversible_names_only (local_llm.tests.test_v044.V044Tests.test_neutral_keys_is_reversible_names_only) ... ok
+test_no_solution_generator_in_request_path (local_llm.tests.test_v044.V044Tests.test_no_solution_generator_in_request_path) ... ok
+test_non_gguf_and_missing_file_rejected (local_llm.tests.test_v044.V044Tests.test_non_gguf_and_missing_file_rejected) ... ok
+test_nonboolean_diagnostic_not_assessable (local_llm.tests.test_v044.V044Tests.test_nonboolean_diagnostic_not_assessable) ... ok
+test_only_format_field_differs_json (local_llm.tests.test_v044.V044Tests.test_only_format_field_differs_json) ... ok
+test_plan_is_16_calls_four_per_arm (local_llm.tests.test_v044.V044Tests.test_plan_is_16_calls_four_per_arm) ... ok
+test_plan_only_no_network (local_llm.tests.test_v044.V044Tests.test_plan_only_no_network) ... ok
+test_recorded_blob_distinct_from_manifest_digest (local_llm.tests.test_v044.V044Tests.test_recorded_blob_distinct_from_manifest_digest) ... ok
+test_replay_is_byte_identical (local_llm.tests.test_v044.V044Tests.test_replay_is_byte_identical) ... ok
+test_runtime_changes_rejected (local_llm.tests.test_v044.V044Tests.test_runtime_changes_rejected) ... ok
+test_shortcut_not_upgraded_in_any_arm (local_llm.tests.test_v044.V044Tests.test_shortcut_not_upgraded_in_any_arm) ... ok
+test_source_artifact_tamper_rejected (local_llm.tests.test_v044.V044Tests.test_source_artifact_tamper_rejected) ... ok
+test_source_not_mutated (local_llm.tests.test_v044.V044Tests.test_source_not_mutated) ... ok
+test_stage_semantic_diagnostics_previously_missing_are_present (local_llm.tests.test_v044.V044Tests.test_stage_semantic_diagnostics_previously_missing_are_present) ... ok
+test_staged_3_of_4_is_exact_ignore_b_table (local_llm.tests.test_v044.V044Tests.test_staged_3_of_4_is_exact_ignore_b_table) ... ok
+test_synthetic_gguf_checksum_pass_and_fail (local_llm.tests.test_v044.V044Tests.test_synthetic_gguf_checksum_pass_and_fail) ... ok
+test_tag_is_not_accepted_as_blob_digest (local_llm.tests.test_v044.V044Tests.test_tag_is_not_accepted_as_blob_digest) ... ok
+test_temperature_control_is_exactly_one_option (local_llm.tests.test_v044.V044Tests.test_temperature_control_is_exactly_one_option) ... ok
+test_unallowed_changes_rejected (local_llm.tests.test_v044.V044Tests.test_unallowed_changes_rejected) ... ok
+test_wrong_prior_state_still_fails_correct_final (local_llm.tests.test_v044.V044Tests.test_wrong_prior_state_still_fails_correct_final) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.651s
+
+OK

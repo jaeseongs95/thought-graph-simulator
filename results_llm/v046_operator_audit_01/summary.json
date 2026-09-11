@@ -1,0 +1,343 @@
+{
+  "groups": {
+    "copy_a": {
+      "assigned": 4,
+      "recorded": 4,
+      "accepted": 4,
+      "correct_values": 4,
+      "positive_expected": 2,
+      "positive_detected": 2,
+      "false_positive": 0,
+      "not_assessable": 0,
+      "rows": [
+        {
+          "case_id": "9dd5155af23148ca35eeade0",
+          "input_ab": [
+            true,
+            true
+          ],
+          "expected": true,
+          "actual": true,
+          "status": "accepted",
+          "source_prerequisites_correct": true,
+          "operator_correct": true
+        },
+        {
+          "case_id": "d48a02b02acf27b67a3b4f1c",
+          "input_ab": [
+            true,
+            false
+          ],
+          "expected": true,
+          "actual": true,
+          "status": "accepted",
+          "source_prerequisites_correct": true,
+          "operator_correct": true
+        },
+        {
+          "case_id": "42f42dce5c0b2484aaa41522",
+          "input_ab": [
+            false,
+            false
+          ],
+          "expected": false,
+          "actual": false,
+          "status": "accepted",
+          "source_prerequisites_correct": true,
+          "operator_correct": true
+        },
+        {
+          "case_id": "566124c4629d09ac972de4ec",
+          "input_ab": [
+            false,
+            true
+          ],
+          "expected": false,
+          "actual": false,
+          "status": "accepted",
+          "source_prerequisites_correct": true,
+          "operator_correct": true
+        }
+      ]
+    },
+    "and_ab": {
+      "assigned": 4,
+      "recorded": 4,
+      "accepted": 4,
+      "correct_values": 4,
+      "positive_expected": 1,
+      "positive_detected": 1,
+      "false_positive": 0,
+      "not_assessable": 0,
+      "rows": [
+        {
+          "case_id": "28b18d255a17e80c87bd5b80",
+          "input_ab": [
+            false,
+            true
+          ],
+          "expected": false,
+          "actual": false,
+          "status": "accepted",
+          "source_prerequisites_correct": true,
+          "operator_correct": true
+        },
+        {
+          "case_id": "6709f4853b667e5025692592",
+          "input_ab": [
+            false,
+            false
+          ],
+          "expected": false,
+          "actual": false,
+          "status": "accepted",
+          "source_prerequisites_correct": true,
+          "operator_correct": true
+        },
+        {
+          "case_id": "e6012b3855fd7c4776a27b10",
+          "input_ab": [
+            true,
+            false
+          ],
+          "expected": false,
+          "actual": false,
+          "status": "accepted",
+          "source_prerequisites_correct": true,
+          "operator_correct": true
+        },
+        {
+          "case_id": "05a7034438da3992143be421",
+          "input_ab": [
+            true,
+            true
+          ],
+          "expected": true,
+          "actual": true,
+          "status": "accepted",
+          "source_prerequisites_correct": true,
+          "operator_correct": true
+        }
+      ]
+    },
+    "not_b": {
+      "assigned": 4,
+      "recorded": 4,
+      "accepted": 4,
+      "correct_values": 4,
+      "positive_expected": 2,
+      "positive_detected": 2,
+      "false_positive": 0,
+      "not_assessable": 0,
+      "rows": [
+        {
+          "case_id": "11e14bd45e4678bf85fcc66a",
+          "input_ab": [
+            true,
+            false
+          ],
+          "expected": true,
+          "actual": true,
+          "status": "accepted",
+          "source_prerequisites_correct": true,
+          "operator_correct": true
+        },
+        {
+          "case_id": "5e0620085e05eb314ebde056",
+          "input_ab": [
+            false,
+            false
+          ],
+          "expected": true,
+          "actual": true,
+          "status": "accepted",
+          "source_prerequisites_correct": true,
+          "operator_correct": true
+        },
+        {
+          "case_id": "d210fe1127912d3125695191",
+          "input_ab": [
+            false,
+            true
+          ],
+          "expected": false,
+          "actual": false,
+          "status": "accepted",
+          "source_prerequisites_correct": true,
+          "operator_correct": true
+        },
+        {
+          "case_id": "4a876c1518f7fb9ec1765d60",
+          "input_ab": [
+            true,
+            true
+          ],
+          "expected": false,
+          "actual": false,
+          "status": "accepted",
+          "source_prerequisites_correct": true,
+          "operator_correct": true
+        }
+      ]
+    },
+    "and_not_b": {
+      "assigned": 4,
+      "recorded": 4,
+      "accepted": 3,
+      "correct_values": 3,
+      "positive_expected": 1,
+      "positive_detected": 0,
+      "false_positive": 0,
+      "not_assessable": 0,
+      "rows": [
+        {
+          "case_id": "af38a32cecf032874b875d8c",
+          "input_ab": [
+            false,
+            true
+          ],
+          "expected": false,
+          "actual": false,
+          "status": "accepted",
+          "source_prerequisites_correct": true,
+          "operator_correct": true
+        },
+        {
+          "case_id": "09f861090b96af5904105b2f",
+          "input_ab": [
+            false,
+            false
+          ],
+          "expected": false,
+          "actual": false,
+          "status": "accepted",
+          "source_prerequisites_correct": true,
+          "operator_correct": true
+        },
+        {
+          "case_id": "47badd1edf3341302ec8411f",
+          "input_ab": [
+            true,
+            false
+          ],
+          "expected": true,
+          "actual": false,
+          "status": "invalid_task",
+          "source_prerequisites_correct": true,
+          "operator_correct": false
+        },
+        {
+          "case_id": "1919614581c30bc0f0b9b661",
+          "input_ab": [
+            true,
+            true
+          ],
+          "expected": false,
+          "actual": false,
+          "status": "accepted",
+          "source_prerequisites_correct": true,
+          "operator_correct": true
+        }
+      ]
+    }
+  },
+  "conditional_assemblies": [
+    {
+      "input_ab": [
+        false,
+        false
+      ],
+      "model_output_assembly": [
+        false,
+        false,
+        false
+      ],
+      "accepted": true,
+      "source_case_ids": [
+        "42f42dce5c0b2484aaa41522",
+        "6709f4853b667e5025692592",
+        "09f861090b96af5904105b2f"
+      ],
+      "prior_inputs_reused": true,
+      "ADM_success": false
+    },
+    {
+      "input_ab": [
+        false,
+        true
+      ],
+      "model_output_assembly": [
+        false,
+        false,
+        false
+      ],
+      "accepted": true,
+      "source_case_ids": [
+        "566124c4629d09ac972de4ec",
+        "28b18d255a17e80c87bd5b80",
+        "af38a32cecf032874b875d8c"
+      ],
+      "prior_inputs_reused": true,
+      "ADM_success": false
+    },
+    {
+      "input_ab": [
+        true,
+        false
+      ],
+      "model_output_assembly": [
+        true,
+        false,
+        false
+      ],
+      "accepted": false,
+      "source_case_ids": [
+        "d48a02b02acf27b67a3b4f1c",
+        "e6012b3855fd7c4776a27b10",
+        "47badd1edf3341302ec8411f"
+      ],
+      "prior_inputs_reused": true,
+      "ADM_success": false
+    },
+    {
+      "input_ab": [
+        true,
+        true
+      ],
+      "model_output_assembly": [
+        true,
+        true,
+        false
+      ],
+      "accepted": true,
+      "source_case_ids": [
+        "9dd5155af23148ca35eeade0",
+        "05a7034438da3992143be421",
+        "1919614581c30bc0f0b9b661"
+      ],
+      "prior_inputs_reused": true,
+      "ADM_success": false
+    }
+  ],
+  "conditional_assembly_successes": 3,
+  "all_atomic_correct": false,
+  "diagnostic": "composite_formula_failure_with_primitives_passed",
+  "classification": {
+    "primitive_operations": [
+      "copy_a",
+      "and_ab",
+      "not_b"
+    ],
+    "composite_operations": [
+      "and_not_b"
+    ],
+    "primitive_groups_all_passed": true,
+    "all_single_output_tasks_passed": false,
+    "composite_failure_does_not_prove_primitive_failure": true
+  },
+  "comparison_model": null,
+  "format_mode": "schema",
+  "new_calls_assigned": 16,
+  "original_records_modified": false,
+  "interpretation": "단일 연산 과제의 조건부 결과다. 문맥·입력명·출력 부담의 변경이 포함되므로 단일 요인의 인과 증명이 아니다."
+}

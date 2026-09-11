@@ -1,0 +1,33 @@
+{
+  "model_called": false,
+  "validation": {
+    "records_replayed": 8,
+    "selected_staged": 4,
+    "source_files_checked": 30,
+    "network_called": false,
+    "snapshot_code_executed": false
+  },
+  "core_compatibility": {
+    "same_source": true,
+    "method": "normalized_git_blob_sha1",
+    "recorded_identity": "b7aa0b58b9257fdb80882b48e4ecf1006ac4ff45",
+    "current_identity": "b7aa0b58b9257fdb80882b48e4ecf1006ac4ff45",
+    "raw_sha256_equal": false,
+    "representation_diff_only": true
+  },
+  "groups": {
+    "format_json": {
+      "recorded": 4,
+      "correct_full_rows": 2,
+      "false_acceptance_count": 1,
+      "all_four_rows_match_ignore_b_shortcut": false
+    },
+    "staged": {
+      "recorded": 4,
+      "correct_full_rows": 3,
+      "false_acceptance_count": 1,
+      "all_four_rows_match_ignore_b_shortcut": true
+    }
+  },
+  "out": "/mnt/data/v0441_actual_audit2"
+}

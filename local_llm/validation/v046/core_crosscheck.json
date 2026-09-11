@@ -1,0 +1,418 @@
+[
+  {
+    "input_ab": [
+      false,
+      false
+    ],
+    "candidate": [
+      false,
+      false,
+      false
+    ],
+    "expected_accept": true,
+    "core_valid": true
+  },
+  {
+    "input_ab": [
+      false,
+      false
+    ],
+    "candidate": [
+      false,
+      false,
+      true
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      false,
+      false
+    ],
+    "candidate": [
+      false,
+      true,
+      false
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      false,
+      false
+    ],
+    "candidate": [
+      false,
+      true,
+      true
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      false,
+      false
+    ],
+    "candidate": [
+      true,
+      false,
+      false
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      false,
+      false
+    ],
+    "candidate": [
+      true,
+      false,
+      true
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      false,
+      false
+    ],
+    "candidate": [
+      true,
+      true,
+      false
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      false,
+      false
+    ],
+    "candidate": [
+      true,
+      true,
+      true
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      false,
+      true
+    ],
+    "candidate": [
+      false,
+      false,
+      false
+    ],
+    "expected_accept": true,
+    "core_valid": true
+  },
+  {
+    "input_ab": [
+      false,
+      true
+    ],
+    "candidate": [
+      false,
+      false,
+      true
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      false,
+      true
+    ],
+    "candidate": [
+      false,
+      true,
+      false
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      false,
+      true
+    ],
+    "candidate": [
+      false,
+      true,
+      true
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      false,
+      true
+    ],
+    "candidate": [
+      true,
+      false,
+      false
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      false,
+      true
+    ],
+    "candidate": [
+      true,
+      false,
+      true
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      false,
+      true
+    ],
+    "candidate": [
+      true,
+      true,
+      false
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      false,
+      true
+    ],
+    "candidate": [
+      true,
+      true,
+      true
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      true,
+      false
+    ],
+    "candidate": [
+      false,
+      false,
+      false
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      true,
+      false
+    ],
+    "candidate": [
+      false,
+      false,
+      true
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      true,
+      false
+    ],
+    "candidate": [
+      false,
+      true,
+      false
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      true,
+      false
+    ],
+    "candidate": [
+      false,
+      true,
+      true
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      true,
+      false
+    ],
+    "candidate": [
+      true,
+      false,
+      false
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      true,
+      false
+    ],
+    "candidate": [
+      true,
+      false,
+      true
+    ],
+    "expected_accept": true,
+    "core_valid": true
+  },
+  {
+    "input_ab": [
+      true,
+      false
+    ],
+    "candidate": [
+      true,
+      true,
+      false
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      true,
+      false
+    ],
+    "candidate": [
+      true,
+      true,
+      true
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      true,
+      true
+    ],
+    "candidate": [
+      false,
+      false,
+      false
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      true,
+      true
+    ],
+    "candidate": [
+      false,
+      false,
+      true
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      true,
+      true
+    ],
+    "candidate": [
+      false,
+      true,
+      false
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      true,
+      true
+    ],
+    "candidate": [
+      false,
+      true,
+      true
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      true,
+      true
+    ],
+    "candidate": [
+      true,
+      false,
+      false
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      true,
+      true
+    ],
+    "candidate": [
+      true,
+      false,
+      true
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  },
+  {
+    "input_ab": [
+      true,
+      true
+    ],
+    "candidate": [
+      true,
+      true,
+      false
+    ],
+    "expected_accept": true,
+    "core_valid": true
+  },
+  {
+    "input_ab": [
+      true,
+      true
+    ],
+    "candidate": [
+      true,
+      true,
+      true
+    ],
+    "expected_accept": false,
+    "core_valid": false
+  }
+]

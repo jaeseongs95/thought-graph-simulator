@@ -191,18 +191,32 @@ def summary(plan: dict, records: list[dict]) -> dict:
                           'source_case_ids': [r['case_id'] for r in used if r],
                           'prior_inputs_reused': True, 'ADM_success': False})
     all_atomic = all(g['accepted'] == 4 for g in groups.values())
-    diagnostic = ('all_atomic_operators_passed_but_original_multioutput_failures_remain'
-                  if all_atomic else 'atomic_operator_failures_remain_compare_same_workload_across_model_or_runtime')
+    primitives_passed = all(groups[k]['accepted'] == 4 for k in ('copy_a', 'and_ab', 'not_b'))
+    completed = all(g['recorded'] == 4 for g in groups.values())
+    if not completed:
+        diagnostic = 'not_completed'
+    elif all_atomic:
+        diagnostic = 'all_single_output_operators_passed'
+    elif primitives_passed:
+        diagnostic = 'composite_formula_failure_with_primitives_passed'
+    else:
+        diagnostic = 'primitive_failures_remain'
+    # 기존 all_atomic_correct는 파일 호환성용으로 남기되, 복합식과 단일 게이트를 구분한다.
+    classification = {'primitive_operations': ['copy_a', 'and_ab', 'not_b'],
+                      'composite_operations': ['and_not_b'],
+                      'primitive_groups_all_passed': primitives_passed,
+                      'all_single_output_tasks_passed': all_atomic,
+                      'composite_failure_does_not_prove_primitive_failure': True}
     return {'groups': groups, 'conditional_assemblies': pipelines,
             'conditional_assembly_successes': sum(r['accepted'] for r in pipelines),
-            'all_atomic_correct': all_atomic, 'diagnostic': diagnostic,
+            'all_atomic_correct': all_atomic, 'diagnostic': diagnostic, 'classification': classification,
             'comparison_model': plan.get('comparison_model'), 'format_mode': plan['format_mode'],
             'new_calls_assigned': 16, 'original_records_modified': False,
             'interpretation': '단일 연산 과제의 조건부 결과다. 문맥·입력명·출력 부담의 변경이 포함되므로 단일 요인의 인과 증명이 아니다.'}
 
 
 def summary_markdown(data: dict) -> str:
-    lines = ['\n## 단일 연산별 진단', '',
+    lines = ['\n## 한 출력 과제별 진단 — 단일 게이트와 복합식 구분', '',
              '| 연산 | 성공/배정 | 양성 검출/양성 입력 | 거짓 양성 | 평가 불가 |',
              '| --- | ---: | ---: | ---: | ---: |']
     for op, g in data['groups'].items():
@@ -210,7 +224,7 @@ def summary_markdown(data: dict) -> str:
                      f"{g['false_positive']} | {g['not_assessable']} |")
     lines += ['', f"세 모델 반환값을 그대로 조립한 조건부 성공: {data['conditional_assembly_successes']}/4.",
               'NOT 단독 결과로 다른 답을 자동 보충하지 않는다. 과거 중간값 재사용이므로 신규 종단 간 ADM 성공이 아니다.',
-              '단일 연산이 모두 맞으면 원래 다중 출력 과제와 분리해서 해석한다. 실패가 남으면 같은 진단의 다른 모델/환경 대조가 필요하며, 모델 크기를 단독 원인으로 단정하지 않는다.']
+              'and_not_b는 출력이 하나여도 NOT→AND 두 게이트의 복합식이다. 다른 세 과제의 성공과 구분한다. 원인으로 모델 크기나 NOT 단독의 수행 불가를 자동 지목하지 않는다.']
     return '\n'.join(lines) + '\n'
 
 

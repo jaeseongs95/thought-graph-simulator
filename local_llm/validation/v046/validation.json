@@ -1,0 +1,11 @@
+{
+  "model_called": false,
+  "network_called": false,
+  "new_observations": 16,
+  "accepted": 15,
+  "operator_oracle_checks": 32,
+  "core_criterion_checks": 32,
+  "synthetic_response_changes": 2,
+  "template_renders": 16,
+  "input_unmodified": true
+}

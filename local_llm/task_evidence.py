@@ -192,6 +192,11 @@ def task_diagnostics(problem: dict, case: dict, content: Any, schema: dict | Non
         elif case.get("task") == "criterion_witness":
             from .decision_evidence import witness_evidence
             output["criterion_witness"] = witness_evidence(problem, case, payload)
+        if case.get("task") == "composition_gate":
+            output["composition"] = {"arm": case["arm"], "original_input": case["original_input"],
+                                     "returned_value": payload.get("value") if isinstance(payload, dict) else None,
+                                     "parent_case_id": case.get("parent", {}).get("case_id"),
+                                     "host_supplied_graph": True, "output_modified": False}
         if case.get("task") == "operator_atom":
             output["operator"] = {"operation": case["operation"],
                                   "supplied_literals": case["input_literals"],

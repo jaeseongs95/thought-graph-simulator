@@ -1,0 +1,29 @@
+{
+  "version": "0.4.4.1",
+  "unit_tests": {
+    "executed": 241,
+    "passed": 241,
+    "new_tests": 6,
+    "mode": "offline_with_mock_API_and_CRLF_core"
+  },
+  "selfcheck": {
+    "executed": 21,
+    "passed": 21
+  },
+  "core_provenance_regression": {
+    "user_windows_raw_sha256_reproduced": "60b5c75d8db90621e42aa26aab548b8763de1729113e38d0aefcc4021bd44fad",
+    "normalized_git_blob_sha1": "b7aa0b58b9257fdb80882b48e4ecf1006ac4ff45",
+    "lf_crlf_accepted_as_same_source": true,
+    "utf8_bom_difference_accepted_as_same_source": true,
+    "real_source_edit_rejected": true,
+    "v043_decision_audit_replayed": 8,
+    "v043_decision_audit_exit_code": 0,
+    "factor_probe_plan_only_exit_code": 0
+  },
+  "model_inference_executed": false,
+  "model_download_executed": false,
+  "windows_execution": false,
+  "gpu_execution": false,
+  "adm_minimal_modified": false,
+  "scope": "provenance_fix_only_plus_regression_tests"
+}

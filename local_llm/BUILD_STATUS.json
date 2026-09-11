@@ -1,27 +1,20 @@
 {
-  "version": "0.4.5",
-  "based_on": "0.4.4.1",
-  "offline_tests": {
-    "run": 276,
-    "passed": 276,
-    "failed": 0
-  },
-  "selfcheck": {
-    "run": 21,
-    "passed": 21
-  },
-  "actual_factor_replay": {
-    "cases": 16,
-    "request_wire_matches": 16,
-    "audit_matches": 16,
-    "original_accepted": 12,
-    "new_accepted": 12
-  },
-  "new_model_inference_run": false,
-  "windows_run": false,
-  "gpu_run": false,
-  "weights_downloaded": false,
-  "user_weight_bytes_checked": false,
-  "validation_directory": "validation/v045",
-  "core_replacement_in_distribution": false
+  "version": "0.4.6",
+  "llm_inference_run": false,
+  "windows_gpu_run": false,
+  "offline_tests_passed": 304,
+  "new_test_methods": 28,
+  "selfcheck_passed": 21,
+  "original_decisions_replayed": 16,
+  "original_successes_unchanged": 15,
+  "original_runtime_sources_checked": 39,
+  "current_core_sha256_for_tests": "60b5c75d8db90621e42aa26aab548b8763de1729113e38d0aefcc4021bd44fad",
+  "python_test_environment": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "source_scope": "단일 게이트/복합식 진단 구분 및 실제 NOT→AND 호출 연결",
+  "not_claimed": [
+    "새 모델 성능 개선",
+    "가중치 무결성 확인",
+    "외부 독립 심사자 호출"
+  ]
 }

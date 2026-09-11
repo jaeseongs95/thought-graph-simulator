@@ -1,0 +1,11 @@
+{
+  "records_replayed": 16,
+  "request_wires_reproduced": 16,
+  "source_files_checked": 39,
+  "snapshot_code_executed": false,
+  "network_called": false,
+  "model_called": false,
+  "upstream_projection_checked_against_problem": true,
+  "upstream_new_inference_performed": false,
+  "note": "해시 검사는 보존 파일의 일관성 검사이며 외부 서명 인증이 아니다."
+}

@@ -1,0 +1,1927 @@
+{
+  "count": 128,
+  "agreements": 128,
+  "key_order_checks": 96,
+  "rows": [
+    {
+      "arm": "replay",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        false,
+        false,
+        false
+      ],
+      "core": true,
+      "harness": true,
+      "literal_truth": true
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        false,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        false,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        false,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        true,
+        false,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        true,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        true,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        true,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        false,
+        false,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        false,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        false,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        false,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        true,
+        false,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        true,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        true,
+        true,
+        false
+      ],
+      "core": true,
+      "harness": true,
+      "literal_truth": true
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        true,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        false,
+        false,
+        false
+      ],
+      "core": true,
+      "harness": true,
+      "literal_truth": true
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        false,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        false,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        false,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        true,
+        false,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        true,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        true,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        true,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        false,
+        false,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        false,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        false,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        false,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        true,
+        false,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        true,
+        false,
+        true
+      ],
+      "core": true,
+      "harness": true,
+      "literal_truth": true
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        true,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "replay",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        true,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        false,
+        false,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        false,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        false,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        false,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        true,
+        false,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        true,
+        false,
+        true
+      ],
+      "core": true,
+      "harness": true,
+      "literal_truth": true
+    },
+    {
+      "arm": "json",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        true,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        true,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        false,
+        false,
+        false
+      ],
+      "core": true,
+      "harness": true,
+      "literal_truth": true
+    },
+    {
+      "arm": "json",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        false,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        false,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        false,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        true,
+        false,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        true,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        true,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        true,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        false,
+        false,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        false,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        false,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        false,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        true,
+        false,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        true,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        true,
+        true,
+        false
+      ],
+      "core": true,
+      "harness": true,
+      "literal_truth": true
+    },
+    {
+      "arm": "json",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        true,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        false,
+        false,
+        false
+      ],
+      "core": true,
+      "harness": true,
+      "literal_truth": true
+    },
+    {
+      "arm": "json",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        false,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        false,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        false,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        true,
+        false,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        true,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        true,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "json",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        true,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        false,
+        false,
+        false
+      ],
+      "core": true,
+      "harness": true,
+      "literal_truth": true
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        false,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        false,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        false,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        true,
+        false,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        true,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        true,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        true,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        false,
+        false,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        false,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        false,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        false,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        true,
+        false,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        true,
+        false,
+        true
+      ],
+      "core": true,
+      "harness": true,
+      "literal_truth": true
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        true,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        true,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        false,
+        false,
+        false
+      ],
+      "core": true,
+      "harness": true,
+      "literal_truth": true
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        false,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        false,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        false,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        true,
+        false,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        true,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        true,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        true,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        false,
+        false,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        false,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        false,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        false,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        true,
+        false,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        true,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        true,
+        true,
+        false
+      ],
+      "core": true,
+      "harness": true,
+      "literal_truth": true
+    },
+    {
+      "arm": "b_last",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        true,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        false,
+        false,
+        false
+      ],
+      "core": true,
+      "harness": true,
+      "literal_truth": true
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        false,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        false,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        false,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        true,
+        false,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        true,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        true,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        false,
+        true
+      ],
+      "bits": [
+        true,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        false,
+        false,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        false,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        false,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        false,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        true,
+        false,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        true,
+        false,
+        true
+      ],
+      "core": true,
+      "harness": true,
+      "literal_truth": true
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        true,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        true,
+        false
+      ],
+      "bits": [
+        true,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        false,
+        false,
+        false
+      ],
+      "core": true,
+      "harness": true,
+      "literal_truth": true
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        false,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        false,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        false,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        true,
+        false,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        true,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        true,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        false,
+        false
+      ],
+      "bits": [
+        true,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        false,
+        false,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        false,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        false,
+        true,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        false,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        true,
+        false,
+        false
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        true,
+        false,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        true,
+        true,
+        false
+      ],
+      "core": true,
+      "harness": true,
+      "literal_truth": true
+    },
+    {
+      "arm": "neutral_keys",
+      "ab": [
+        true,
+        true
+      ],
+      "bits": [
+        true,
+        true,
+        true
+      ],
+      "core": false,
+      "harness": false,
+      "literal_truth": false
+    }
+  ]
+}

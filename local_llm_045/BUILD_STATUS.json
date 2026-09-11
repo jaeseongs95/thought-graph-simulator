@@ -1,0 +1,27 @@
+{
+  "version": "0.4.5",
+  "based_on": "0.4.4.1",
+  "offline_tests": {
+    "run": 276,
+    "passed": 276,
+    "failed": 0
+  },
+  "selfcheck": {
+    "run": 21,
+    "passed": 21
+  },
+  "actual_factor_replay": {
+    "cases": 16,
+    "request_wire_matches": 16,
+    "audit_matches": 16,
+    "original_accepted": 12,
+    "new_accepted": 12
+  },
+  "new_model_inference_run": false,
+  "windows_run": false,
+  "gpu_run": false,
+  "weights_downloaded": false,
+  "user_weight_bytes_checked": false,
+  "validation_directory": "validation/v045",
+  "core_replacement_in_distribution": false
+}

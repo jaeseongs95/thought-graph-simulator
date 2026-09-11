@@ -1,0 +1,18 @@
+{
+  "model_called": false,
+  "new_llm_calls": 16,
+  "arms": [
+    "replay",
+    "json",
+    "b_last",
+    "neutral_keys"
+  ],
+  "source_validation": {
+    "records_replayed": 8,
+    "selected_staged": 4,
+    "source_files_checked": 30,
+    "network_called": false,
+    "snapshot_code_executed": false
+  },
+  "note": "재실행·format·b 순서·출력 필드명을 각각 대조한다. 한 군의 성공으로 이전 응답을 대체하지 않는다."
+}

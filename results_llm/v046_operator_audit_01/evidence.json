@@ -1,0 +1,5190 @@
+[
+  {
+    "case": {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_fact_not_goal__v045_and_not_b",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "operator_atom",
+      "calibration_version": 4,
+      "probe_contract": "operator-v045",
+      "operation": "and_not_b",
+      "diagnostic_group": "and_not_b",
+      "format_mode": "schema",
+      "probe_atom": "Ca",
+      "source_projection": {
+        "observed": {
+          "facts": [
+            "Ca"
+          ],
+          "goal_atom": "Cc",
+          "probe_atom": "Ca"
+        },
+        "primitives": {
+          "in_facts": true,
+          "same_as_goal": false
+        }
+      },
+      "input_literals": {
+        "a": false,
+        "b": true
+      },
+      "source_case_id": "2849bd92ba3b41bef063441b",
+      "source_status": "accepted",
+      "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+      "case_id": "af38a32cecf032874b875d8c"
+    },
+    "problem": {
+      "id": "K01",
+      "facts": [
+        "Ca"
+      ],
+      "rules": [
+        {
+          "id": "k10",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cb"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Cb"
+          ],
+          "conclusion": "Cc"
+        },
+        {
+          "id": "k03",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cc"
+        }
+      ],
+      "goal": "Cc"
+    },
+    "request": {
+      "model": "qwen3:4b-instruct",
+      "messages": [
+        {
+          "role": "system",
+          "content": "입력의 a와 b는 불리언이다. expression의 식 하나만 계산해 value에 기록한다.\nAND는 두 피연산자가 모두 true일 때 true다. NOT은 true와 false를 뒤집는다. 괄호 안의 연산을 먼저 적용한다.\nJSON 객체 하나만 출력한다. 다음 스키마는 자료형만 제한하며 정답을 지정하지 않는다.\n{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[\"value\"],\"additionalProperties\":false}"
+        },
+        {
+          "role": "user",
+          "content": "input: {\"a\":false,\"b\":true,\"expression\":\"(a AND (NOT b))\"}"
+        }
+      ],
+      "stream": false,
+      "keep_alive": "10m",
+      "options": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "num_ctx": 8192,
+        "num_predict": 4096,
+        "num_thread": 6,
+        "num_batch": 256,
+        "seed": 1729
+      },
+      "format": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "record": {
+      "case": {
+        "problem_id": "K01",
+        "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "criterion_fact_not_goal__v045_and_not_b",
+        "repeat": 0,
+        "seed": 1729,
+        "task": "operator_atom",
+        "calibration_version": 4,
+        "probe_contract": "operator-v045",
+        "operation": "and_not_b",
+        "diagnostic_group": "and_not_b",
+        "format_mode": "schema",
+        "probe_atom": "Ca",
+        "source_projection": {
+          "observed": {
+            "facts": [
+              "Ca"
+            ],
+            "goal_atom": "Cc",
+            "probe_atom": "Ca"
+          },
+          "primitives": {
+            "in_facts": true,
+            "same_as_goal": false
+          }
+        },
+        "input_literals": {
+          "a": false,
+          "b": true
+        },
+        "source_case_id": "2849bd92ba3b41bef063441b",
+        "source_status": "accepted",
+        "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+        "case_id": "af38a32cecf032874b875d8c"
+      },
+      "run_sha256": "d5f2d76eaeadff369a97a49e398925f6ec9c67ad77b471ff36de5624f959e5e3",
+      "recorded_at": "2026-09-11T01:06:42+00:00",
+      "status": "accepted",
+      "api_attempted": true,
+      "wall_seconds": 4.718067499999961,
+      "usage": {
+        "prompt_eval_count": 152,
+        "prompt_eval_cached_count": 0,
+        "eval_count": 6,
+        "total_duration": 4702935900,
+        "load_duration": 4492419700,
+        "prompt_eval_duration": 61411000,
+        "eval_duration": 68976000,
+        "total_seconds": 4.7029359,
+        "load_seconds": 4.4924197,
+        "prompt_eval_seconds": 0.061411,
+        "generation_seconds": 0.068976,
+        "tokens_per_second": 86.98677800974252
+      },
+      "audit": {
+        "valid_completion": true,
+        "role_adherent": null,
+        "calibration_task": "operator_atom/and_not_b",
+        "task_checks": {
+          "source.observed": true,
+          "source.primitives": true,
+          "input_projection": true,
+          "operator.value": true
+        },
+        "task_comparisons": [
+          {
+            "field": "source.observed",
+            "actual": {
+              "facts": [
+                "Ca"
+              ],
+              "goal_atom": "Cc",
+              "probe_atom": "Ca"
+            },
+            "expected": {
+              "probe_atom": "Ca",
+              "goal_atom": "Cc",
+              "facts": [
+                "Ca"
+              ]
+            },
+            "matches": true
+          },
+          {
+            "field": "source.primitives",
+            "actual": {
+              "in_facts": true,
+              "same_as_goal": false
+            },
+            "expected": {
+              "same_as_goal": false,
+              "in_facts": true
+            },
+            "matches": true
+          },
+          {
+            "field": "input_projection",
+            "actual": {
+              "a": false,
+              "b": true
+            },
+            "expected": {
+              "a": false,
+              "b": true
+            },
+            "matches": true
+          },
+          {
+            "field": "operator.value",
+            "actual": false,
+            "expected": false,
+            "matches": true
+          }
+        ],
+        "details": {
+          "operation": "and_not_b",
+          "input_ab": [
+            false,
+            true
+          ],
+          "actual": false,
+          "expected_from_supplied_values": false,
+          "source_prerequisites_correct": true,
+          "operator_correct": true,
+          "source_status": "accepted",
+          "output_modified": false
+        },
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단일 연산 진단이다. 모델 반환값을 보정하지 않고 원래 ADM 성공률에 합산하지 않는다."
+      },
+      "gpu": {
+        "name": "qwen3:4b-instruct",
+        "model": "qwen3:4b-instruct",
+        "size": 3742808145,
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-09-11T10:16:47.2179602+09:00",
+        "size_vram": 3742808145,
+        "context_length": 8192
+      },
+      "error": null,
+      "done_reason": "stop",
+      "task_diagnostics": {
+        "task": "operator_atom",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "operator": {
+          "operation": "and_not_b",
+          "supplied_literals": {
+            "a": false,
+            "b": true
+          },
+          "returned_value": false,
+          "new_proof_generated": false,
+          "output_modified": false
+        }
+      },
+      "response_channels": {
+        "thinking_field_present": false,
+        "thinking_nonempty": false,
+        "thinking_characters": 0,
+        "final_characters": 15,
+        "final_nonempty": true,
+        "eval_count_scope": "API total generated tokens; no separate final/thinking token counts inferred"
+      },
+      "artifacts_sha256": {
+        "request.json": "3593c2eb42a91eb1109a046870838c22d49d2da9a9901da074db6123fef4056e",
+        "request.wire.json": "43335c00a886632184d320705955f3bc40e854dd7f9b311ab9890a07930cc2d2",
+        "response.raw.json": "9bc766f0874353e4255313e9830046ab9aaa0e4fc5b7de2a54d3dc6646d203bf",
+        "timing.json": "8035847ad52b7e4c141fefbae3ea1ccf4d18e05212734f7601b43ed17d2c0f3c",
+        "gpu.json": "6e91b80ce2f16dda10ab2deba48a0498e4807e57fe793371022f2132edb7c812"
+      }
+    },
+    "response": {
+      "model": "qwen3:4b-instruct",
+      "created_at": "2026-09-11T01:06:47.2179602Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"value\":false}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 4702935900,
+      "load_duration": 4492419700,
+      "prompt_eval_count": 152,
+      "prompt_eval_cached_count": 0,
+      "prompt_eval_duration": 61411000,
+      "eval_count": 6,
+      "eval_duration": 68976000
+    },
+    "response_sha256": "9bc766f0874353e4255313e9830046ab9aaa0e4fc5b7de2a54d3dc6646d203bf",
+    "request_sha256": "43335c00a886632184d320705955f3bc40e854dd7f9b311ab9890a07930cc2d2"
+  },
+  {
+    "case": {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_neither__v045_and_not_b",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "operator_atom",
+      "calibration_version": 4,
+      "probe_contract": "operator-v045",
+      "operation": "and_not_b",
+      "diagnostic_group": "and_not_b",
+      "format_mode": "schema",
+      "probe_atom": "Cz",
+      "source_projection": {
+        "observed": {
+          "facts": [
+            "Ca"
+          ],
+          "goal_atom": "Cc",
+          "probe_atom": "Cz"
+        },
+        "primitives": {
+          "in_facts": false,
+          "same_as_goal": false
+        }
+      },
+      "input_literals": {
+        "a": false,
+        "b": false
+      },
+      "source_case_id": "27af68287eca0e265cb268db",
+      "source_status": "accepted",
+      "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+      "case_id": "09f861090b96af5904105b2f"
+    },
+    "problem": {
+      "id": "K01",
+      "facts": [
+        "Ca"
+      ],
+      "rules": [
+        {
+          "id": "k10",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cb"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Cb"
+          ],
+          "conclusion": "Cc"
+        },
+        {
+          "id": "k03",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cc"
+        }
+      ],
+      "goal": "Cc"
+    },
+    "request": {
+      "model": "qwen3:4b-instruct",
+      "messages": [
+        {
+          "role": "system",
+          "content": "입력의 a와 b는 불리언이다. expression의 식 하나만 계산해 value에 기록한다.\nAND는 두 피연산자가 모두 true일 때 true다. NOT은 true와 false를 뒤집는다. 괄호 안의 연산을 먼저 적용한다.\nJSON 객체 하나만 출력한다. 다음 스키마는 자료형만 제한하며 정답을 지정하지 않는다.\n{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[\"value\"],\"additionalProperties\":false}"
+        },
+        {
+          "role": "user",
+          "content": "input: {\"a\":false,\"b\":false,\"expression\":\"(a AND (NOT b))\"}"
+        }
+      ],
+      "stream": false,
+      "keep_alive": "10m",
+      "options": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "num_ctx": 8192,
+        "num_predict": 4096,
+        "num_thread": 6,
+        "num_batch": 256,
+        "seed": 1729
+      },
+      "format": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "record": {
+      "case": {
+        "problem_id": "K01",
+        "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "criterion_neither__v045_and_not_b",
+        "repeat": 0,
+        "seed": 1729,
+        "task": "operator_atom",
+        "calibration_version": 4,
+        "probe_contract": "operator-v045",
+        "operation": "and_not_b",
+        "diagnostic_group": "and_not_b",
+        "format_mode": "schema",
+        "probe_atom": "Cz",
+        "source_projection": {
+          "observed": {
+            "facts": [
+              "Ca"
+            ],
+            "goal_atom": "Cc",
+            "probe_atom": "Cz"
+          },
+          "primitives": {
+            "in_facts": false,
+            "same_as_goal": false
+          }
+        },
+        "input_literals": {
+          "a": false,
+          "b": false
+        },
+        "source_case_id": "27af68287eca0e265cb268db",
+        "source_status": "accepted",
+        "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+        "case_id": "09f861090b96af5904105b2f"
+      },
+      "run_sha256": "d5f2d76eaeadff369a97a49e398925f6ec9c67ad77b471ff36de5624f959e5e3",
+      "recorded_at": "2026-09-11T01:06:47+00:00",
+      "status": "accepted",
+      "api_attempted": true,
+      "wall_seconds": 0.19300970000040252,
+      "usage": {
+        "prompt_eval_count": 152,
+        "prompt_eval_cached_count": 135,
+        "eval_count": 6,
+        "total_duration": 176245300,
+        "load_duration": 14807200,
+        "prompt_eval_duration": 18612000,
+        "eval_duration": 63431000,
+        "total_seconds": 0.1762453,
+        "load_seconds": 0.0148072,
+        "prompt_eval_seconds": 0.018612,
+        "generation_seconds": 0.063431,
+        "tokens_per_second": 94.59097286815594
+      },
+      "audit": {
+        "valid_completion": true,
+        "role_adherent": null,
+        "calibration_task": "operator_atom/and_not_b",
+        "task_checks": {
+          "source.observed": true,
+          "source.primitives": true,
+          "input_projection": true,
+          "operator.value": true
+        },
+        "task_comparisons": [
+          {
+            "field": "source.observed",
+            "actual": {
+              "facts": [
+                "Ca"
+              ],
+              "goal_atom": "Cc",
+              "probe_atom": "Cz"
+            },
+            "expected": {
+              "probe_atom": "Cz",
+              "goal_atom": "Cc",
+              "facts": [
+                "Ca"
+              ]
+            },
+            "matches": true
+          },
+          {
+            "field": "source.primitives",
+            "actual": {
+              "in_facts": false,
+              "same_as_goal": false
+            },
+            "expected": {
+              "same_as_goal": false,
+              "in_facts": false
+            },
+            "matches": true
+          },
+          {
+            "field": "input_projection",
+            "actual": {
+              "a": false,
+              "b": false
+            },
+            "expected": {
+              "a": false,
+              "b": false
+            },
+            "matches": true
+          },
+          {
+            "field": "operator.value",
+            "actual": false,
+            "expected": false,
+            "matches": true
+          }
+        ],
+        "details": {
+          "operation": "and_not_b",
+          "input_ab": [
+            false,
+            false
+          ],
+          "actual": false,
+          "expected_from_supplied_values": false,
+          "source_prerequisites_correct": true,
+          "operator_correct": true,
+          "source_status": "accepted",
+          "output_modified": false
+        },
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단일 연산 진단이다. 모델 반환값을 보정하지 않고 원래 ADM 성공률에 합산하지 않는다."
+      },
+      "gpu": {
+        "name": "qwen3:4b-instruct",
+        "model": "qwen3:4b-instruct",
+        "size": 3742808145,
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-09-11T10:16:47.4864151+09:00",
+        "size_vram": 3742808145,
+        "context_length": 8192
+      },
+      "error": null,
+      "done_reason": "stop",
+      "task_diagnostics": {
+        "task": "operator_atom",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "operator": {
+          "operation": "and_not_b",
+          "supplied_literals": {
+            "a": false,
+            "b": false
+          },
+          "returned_value": false,
+          "new_proof_generated": false,
+          "output_modified": false
+        }
+      },
+      "response_channels": {
+        "thinking_field_present": false,
+        "thinking_nonempty": false,
+        "thinking_characters": 0,
+        "final_characters": 15,
+        "final_nonempty": true,
+        "eval_count_scope": "API total generated tokens; no separate final/thinking token counts inferred"
+      },
+      "artifacts_sha256": {
+        "request.json": "e93a13a06ead8d90d89b1d4e54d43d1e83f6b7c4a753feaa05d1d1f8987e8adb",
+        "request.wire.json": "24be68a149b3fcb474db52d3e37713b39bbb9ea914429edc1cf7271bf2555c01",
+        "response.raw.json": "2274432797ced482a8e77b38a16fdcfb82e45ca87b46cc71b11dbc40e1798180",
+        "timing.json": "6df62d0445bea751707015ede1ac2b45953597494ff0accf2003fcd0a82f25d4",
+        "gpu.json": "794ce2ac0a9d113fa608bb8702f0425d8f12d3bb693daaa8ec0e22445c0d193c"
+      }
+    },
+    "response": {
+      "model": "qwen3:4b-instruct",
+      "created_at": "2026-09-11T01:06:47.4864151Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"value\":false}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 176245300,
+      "load_duration": 14807200,
+      "prompt_eval_count": 152,
+      "prompt_eval_cached_count": 135,
+      "prompt_eval_duration": 18612000,
+      "eval_count": 6,
+      "eval_duration": 63431000
+    },
+    "response_sha256": "2274432797ced482a8e77b38a16fdcfb82e45ca87b46cc71b11dbc40e1798180",
+    "request_sha256": "24be68a149b3fcb474db52d3e37713b39bbb9ea914429edc1cf7271bf2555c01"
+  },
+  {
+    "case": {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_fact_not_goal__v045_and_ab",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "operator_atom",
+      "calibration_version": 4,
+      "probe_contract": "operator-v045",
+      "operation": "and_ab",
+      "diagnostic_group": "and_ab",
+      "format_mode": "schema",
+      "probe_atom": "Ca",
+      "source_projection": {
+        "observed": {
+          "facts": [
+            "Ca"
+          ],
+          "goal_atom": "Cc",
+          "probe_atom": "Ca"
+        },
+        "primitives": {
+          "in_facts": true,
+          "same_as_goal": false
+        }
+      },
+      "input_literals": {
+        "a": false,
+        "b": true
+      },
+      "source_case_id": "2849bd92ba3b41bef063441b",
+      "source_status": "accepted",
+      "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+      "case_id": "28b18d255a17e80c87bd5b80"
+    },
+    "problem": {
+      "id": "K01",
+      "facts": [
+        "Ca"
+      ],
+      "rules": [
+        {
+          "id": "k10",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cb"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Cb"
+          ],
+          "conclusion": "Cc"
+        },
+        {
+          "id": "k03",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cc"
+        }
+      ],
+      "goal": "Cc"
+    },
+    "request": {
+      "model": "qwen3:4b-instruct",
+      "messages": [
+        {
+          "role": "system",
+          "content": "입력의 a와 b는 불리언이다. expression의 식 하나만 계산해 value에 기록한다.\nAND는 두 피연산자가 모두 true일 때 true다. NOT은 true와 false를 뒤집는다. 괄호 안의 연산을 먼저 적용한다.\nJSON 객체 하나만 출력한다. 다음 스키마는 자료형만 제한하며 정답을 지정하지 않는다.\n{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[\"value\"],\"additionalProperties\":false}"
+        },
+        {
+          "role": "user",
+          "content": "input: {\"a\":false,\"b\":true,\"expression\":\"(a AND b)\"}"
+        }
+      ],
+      "stream": false,
+      "keep_alive": "10m",
+      "options": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "num_ctx": 8192,
+        "num_predict": 4096,
+        "num_thread": 6,
+        "num_batch": 256,
+        "seed": 1729
+      },
+      "format": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "record": {
+      "case": {
+        "problem_id": "K01",
+        "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "criterion_fact_not_goal__v045_and_ab",
+        "repeat": 0,
+        "seed": 1729,
+        "task": "operator_atom",
+        "calibration_version": 4,
+        "probe_contract": "operator-v045",
+        "operation": "and_ab",
+        "diagnostic_group": "and_ab",
+        "format_mode": "schema",
+        "probe_atom": "Ca",
+        "source_projection": {
+          "observed": {
+            "facts": [
+              "Ca"
+            ],
+            "goal_atom": "Cc",
+            "probe_atom": "Ca"
+          },
+          "primitives": {
+            "in_facts": true,
+            "same_as_goal": false
+          }
+        },
+        "input_literals": {
+          "a": false,
+          "b": true
+        },
+        "source_case_id": "2849bd92ba3b41bef063441b",
+        "source_status": "accepted",
+        "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+        "case_id": "28b18d255a17e80c87bd5b80"
+      },
+      "run_sha256": "d5f2d76eaeadff369a97a49e398925f6ec9c67ad77b471ff36de5624f959e5e3",
+      "recorded_at": "2026-09-11T01:06:47+00:00",
+      "status": "accepted",
+      "api_attempted": true,
+      "wall_seconds": 0.1885110999992321,
+      "usage": {
+        "prompt_eval_count": 150,
+        "prompt_eval_cached_count": 135,
+        "eval_count": 6,
+        "total_duration": 173351400,
+        "load_duration": 13503700,
+        "prompt_eval_duration": 19530000,
+        "eval_duration": 63427000,
+        "total_seconds": 0.1733514,
+        "load_seconds": 0.0135037,
+        "prompt_eval_seconds": 0.01953,
+        "generation_seconds": 0.063427,
+        "tokens_per_second": 94.5969382124332
+      },
+      "audit": {
+        "valid_completion": true,
+        "role_adherent": null,
+        "calibration_task": "operator_atom/and_ab",
+        "task_checks": {
+          "source.observed": true,
+          "source.primitives": true,
+          "input_projection": true,
+          "operator.value": true
+        },
+        "task_comparisons": [
+          {
+            "field": "source.observed",
+            "actual": {
+              "facts": [
+                "Ca"
+              ],
+              "goal_atom": "Cc",
+              "probe_atom": "Ca"
+            },
+            "expected": {
+              "probe_atom": "Ca",
+              "goal_atom": "Cc",
+              "facts": [
+                "Ca"
+              ]
+            },
+            "matches": true
+          },
+          {
+            "field": "source.primitives",
+            "actual": {
+              "in_facts": true,
+              "same_as_goal": false
+            },
+            "expected": {
+              "same_as_goal": false,
+              "in_facts": true
+            },
+            "matches": true
+          },
+          {
+            "field": "input_projection",
+            "actual": {
+              "a": false,
+              "b": true
+            },
+            "expected": {
+              "a": false,
+              "b": true
+            },
+            "matches": true
+          },
+          {
+            "field": "operator.value",
+            "actual": false,
+            "expected": false,
+            "matches": true
+          }
+        ],
+        "details": {
+          "operation": "and_ab",
+          "input_ab": [
+            false,
+            true
+          ],
+          "actual": false,
+          "expected_from_supplied_values": false,
+          "source_prerequisites_correct": true,
+          "operator_correct": true,
+          "source_status": "accepted",
+          "output_modified": false
+        },
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단일 연산 진단이다. 모델 반환값을 보정하지 않고 원래 ADM 성공률에 합산하지 않는다."
+      },
+      "gpu": {
+        "name": "qwen3:4b-instruct",
+        "model": "qwen3:4b-instruct",
+        "size": 3742808145,
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-09-11T10:16:47.7513244+09:00",
+        "size_vram": 3742808145,
+        "context_length": 8192
+      },
+      "error": null,
+      "done_reason": "stop",
+      "task_diagnostics": {
+        "task": "operator_atom",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "operator": {
+          "operation": "and_ab",
+          "supplied_literals": {
+            "a": false,
+            "b": true
+          },
+          "returned_value": false,
+          "new_proof_generated": false,
+          "output_modified": false
+        }
+      },
+      "response_channels": {
+        "thinking_field_present": false,
+        "thinking_nonempty": false,
+        "thinking_characters": 0,
+        "final_characters": 15,
+        "final_nonempty": true,
+        "eval_count_scope": "API total generated tokens; no separate final/thinking token counts inferred"
+      },
+      "artifacts_sha256": {
+        "request.json": "7ad4012247452f1d3d4884070107d430551ae07dd535698bddd4bbbab73337c3",
+        "request.wire.json": "93721c2a05ac9ca8b800a894200ddea306f26500ce29dc99ba9fbde989c8d1fb",
+        "response.raw.json": "02d58a07341e8ba40a18e0e9a3fa359164f46f8afc1ad7574d26686e0aa568b3",
+        "timing.json": "d734a61f85f7c655b2179fad070f32935a4cadaa7059490a32f13221b397aa12",
+        "gpu.json": "e70254b83e5b08f0a71822dde780ceb89ff389465863bebca73b77ad350532e5"
+      }
+    },
+    "response": {
+      "model": "qwen3:4b-instruct",
+      "created_at": "2026-09-11T01:06:47.7513244Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"value\":false}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 173351400,
+      "load_duration": 13503700,
+      "prompt_eval_count": 150,
+      "prompt_eval_cached_count": 135,
+      "prompt_eval_duration": 19530000,
+      "eval_count": 6,
+      "eval_duration": 63427000
+    },
+    "response_sha256": "02d58a07341e8ba40a18e0e9a3fa359164f46f8afc1ad7574d26686e0aa568b3",
+    "request_sha256": "93721c2a05ac9ca8b800a894200ddea306f26500ce29dc99ba9fbde989c8d1fb"
+  },
+  {
+    "case": {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_goal_not_fact__v045_not_b",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "operator_atom",
+      "calibration_version": 4,
+      "probe_contract": "operator-v045",
+      "operation": "not_b",
+      "diagnostic_group": "not_b",
+      "format_mode": "schema",
+      "probe_atom": "Cc",
+      "source_projection": {
+        "observed": {
+          "facts": [
+            "Ca"
+          ],
+          "goal_atom": "Cc",
+          "probe_atom": "Cc"
+        },
+        "primitives": {
+          "in_facts": false,
+          "same_as_goal": true
+        }
+      },
+      "input_literals": {
+        "a": true,
+        "b": false
+      },
+      "source_case_id": "9ff71e6a994e1993fc42c7a6",
+      "source_status": "invalid_task",
+      "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+      "case_id": "11e14bd45e4678bf85fcc66a"
+    },
+    "problem": {
+      "id": "K01",
+      "facts": [
+        "Ca"
+      ],
+      "rules": [
+        {
+          "id": "k10",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cb"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Cb"
+          ],
+          "conclusion": "Cc"
+        },
+        {
+          "id": "k03",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cc"
+        }
+      ],
+      "goal": "Cc"
+    },
+    "request": {
+      "model": "qwen3:4b-instruct",
+      "messages": [
+        {
+          "role": "system",
+          "content": "입력의 a와 b는 불리언이다. expression의 식 하나만 계산해 value에 기록한다.\nAND는 두 피연산자가 모두 true일 때 true다. NOT은 true와 false를 뒤집는다. 괄호 안의 연산을 먼저 적용한다.\nJSON 객체 하나만 출력한다. 다음 스키마는 자료형만 제한하며 정답을 지정하지 않는다.\n{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[\"value\"],\"additionalProperties\":false}"
+        },
+        {
+          "role": "user",
+          "content": "input: {\"a\":true,\"b\":false,\"expression\":\"(NOT b)\"}"
+        }
+      ],
+      "stream": false,
+      "keep_alive": "10m",
+      "options": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "num_ctx": 8192,
+        "num_predict": 4096,
+        "num_thread": 6,
+        "num_batch": 256,
+        "seed": 1729
+      },
+      "format": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "record": {
+      "case": {
+        "problem_id": "K01",
+        "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "criterion_goal_not_fact__v045_not_b",
+        "repeat": 0,
+        "seed": 1729,
+        "task": "operator_atom",
+        "calibration_version": 4,
+        "probe_contract": "operator-v045",
+        "operation": "not_b",
+        "diagnostic_group": "not_b",
+        "format_mode": "schema",
+        "probe_atom": "Cc",
+        "source_projection": {
+          "observed": {
+            "facts": [
+              "Ca"
+            ],
+            "goal_atom": "Cc",
+            "probe_atom": "Cc"
+          },
+          "primitives": {
+            "in_facts": false,
+            "same_as_goal": true
+          }
+        },
+        "input_literals": {
+          "a": true,
+          "b": false
+        },
+        "source_case_id": "9ff71e6a994e1993fc42c7a6",
+        "source_status": "invalid_task",
+        "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+        "case_id": "11e14bd45e4678bf85fcc66a"
+      },
+      "run_sha256": "d5f2d76eaeadff369a97a49e398925f6ec9c67ad77b471ff36de5624f959e5e3",
+      "recorded_at": "2026-09-11T01:06:47+00:00",
+      "status": "accepted",
+      "api_attempted": true,
+      "wall_seconds": 0.19133870000041497,
+      "usage": {
+        "prompt_eval_count": 149,
+        "prompt_eval_cached_count": 131,
+        "eval_count": 6,
+        "total_duration": 175636900,
+        "load_duration": 13925700,
+        "prompt_eval_duration": 18309000,
+        "eval_duration": 63565000,
+        "total_seconds": 0.1756369,
+        "load_seconds": 0.0139257,
+        "prompt_eval_seconds": 0.018309,
+        "generation_seconds": 0.063565,
+        "tokens_per_second": 94.39156768662001
+      },
+      "audit": {
+        "valid_completion": true,
+        "role_adherent": null,
+        "calibration_task": "operator_atom/not_b",
+        "task_checks": {
+          "source.observed": true,
+          "source.primitives": true,
+          "input_projection": true,
+          "operator.value": true
+        },
+        "task_comparisons": [
+          {
+            "field": "source.observed",
+            "actual": {
+              "facts": [
+                "Ca"
+              ],
+              "goal_atom": "Cc",
+              "probe_atom": "Cc"
+            },
+            "expected": {
+              "probe_atom": "Cc",
+              "goal_atom": "Cc",
+              "facts": [
+                "Ca"
+              ]
+            },
+            "matches": true
+          },
+          {
+            "field": "source.primitives",
+            "actual": {
+              "in_facts": false,
+              "same_as_goal": true
+            },
+            "expected": {
+              "same_as_goal": true,
+              "in_facts": false
+            },
+            "matches": true
+          },
+          {
+            "field": "input_projection",
+            "actual": {
+              "a": true,
+              "b": false
+            },
+            "expected": {
+              "a": true,
+              "b": false
+            },
+            "matches": true
+          },
+          {
+            "field": "operator.value",
+            "actual": true,
+            "expected": true,
+            "matches": true
+          }
+        ],
+        "details": {
+          "operation": "not_b",
+          "input_ab": [
+            true,
+            false
+          ],
+          "actual": true,
+          "expected_from_supplied_values": true,
+          "source_prerequisites_correct": true,
+          "operator_correct": true,
+          "source_status": "invalid_task",
+          "output_modified": false
+        },
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단일 연산 진단이다. 모델 반환값을 보정하지 않고 원래 ADM 성공률에 합산하지 않는다."
+      },
+      "gpu": {
+        "name": "qwen3:4b-instruct",
+        "model": "qwen3:4b-instruct",
+        "size": 3742808145,
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-09-11T10:16:48.0185795+09:00",
+        "size_vram": 3742808145,
+        "context_length": 8192
+      },
+      "error": null,
+      "done_reason": "stop",
+      "task_diagnostics": {
+        "task": "operator_atom",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "operator": {
+          "operation": "not_b",
+          "supplied_literals": {
+            "a": true,
+            "b": false
+          },
+          "returned_value": true,
+          "new_proof_generated": false,
+          "output_modified": false
+        }
+      },
+      "response_channels": {
+        "thinking_field_present": false,
+        "thinking_nonempty": false,
+        "thinking_characters": 0,
+        "final_characters": 14,
+        "final_nonempty": true,
+        "eval_count_scope": "API total generated tokens; no separate final/thinking token counts inferred"
+      },
+      "artifacts_sha256": {
+        "request.json": "8e06de7a597ad9b502fb48a470bdf422b6815cf33844ee3cb93150df13170bad",
+        "request.wire.json": "ed15d80b7f668f6651d4a7bac889a6e13bee63cd63263a76327e46f8e5412116",
+        "response.raw.json": "58bed04c6f63f9c96cb3fe82ac8b73251a3efb1d1287352cf88d5ed825b5266a",
+        "timing.json": "ff0e7682677d5cb5c1569175b0a9b57289de9108c62555145c906ee495aee9d5",
+        "gpu.json": "c3bdb1f71b71200bea1c0348d28a5bcbf2f41ad370987df1404e592d429404ea"
+      }
+    },
+    "response": {
+      "model": "qwen3:4b-instruct",
+      "created_at": "2026-09-11T01:06:48.0185795Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"value\":true}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 175636900,
+      "load_duration": 13925700,
+      "prompt_eval_count": 149,
+      "prompt_eval_cached_count": 131,
+      "prompt_eval_duration": 18309000,
+      "eval_count": 6,
+      "eval_duration": 63565000
+    },
+    "response_sha256": "58bed04c6f63f9c96cb3fe82ac8b73251a3efb1d1287352cf88d5ed825b5266a",
+    "request_sha256": "ed15d80b7f668f6651d4a7bac889a6e13bee63cd63263a76327e46f8e5412116"
+  },
+  {
+    "case": {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_neither__v045_not_b",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "operator_atom",
+      "calibration_version": 4,
+      "probe_contract": "operator-v045",
+      "operation": "not_b",
+      "diagnostic_group": "not_b",
+      "format_mode": "schema",
+      "probe_atom": "Cz",
+      "source_projection": {
+        "observed": {
+          "facts": [
+            "Ca"
+          ],
+          "goal_atom": "Cc",
+          "probe_atom": "Cz"
+        },
+        "primitives": {
+          "in_facts": false,
+          "same_as_goal": false
+        }
+      },
+      "input_literals": {
+        "a": false,
+        "b": false
+      },
+      "source_case_id": "27af68287eca0e265cb268db",
+      "source_status": "accepted",
+      "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+      "case_id": "5e0620085e05eb314ebde056"
+    },
+    "problem": {
+      "id": "K01",
+      "facts": [
+        "Ca"
+      ],
+      "rules": [
+        {
+          "id": "k10",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cb"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Cb"
+          ],
+          "conclusion": "Cc"
+        },
+        {
+          "id": "k03",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cc"
+        }
+      ],
+      "goal": "Cc"
+    },
+    "request": {
+      "model": "qwen3:4b-instruct",
+      "messages": [
+        {
+          "role": "system",
+          "content": "입력의 a와 b는 불리언이다. expression의 식 하나만 계산해 value에 기록한다.\nAND는 두 피연산자가 모두 true일 때 true다. NOT은 true와 false를 뒤집는다. 괄호 안의 연산을 먼저 적용한다.\nJSON 객체 하나만 출력한다. 다음 스키마는 자료형만 제한하며 정답을 지정하지 않는다.\n{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[\"value\"],\"additionalProperties\":false}"
+        },
+        {
+          "role": "user",
+          "content": "input: {\"a\":false,\"b\":false,\"expression\":\"(NOT b)\"}"
+        }
+      ],
+      "stream": false,
+      "keep_alive": "10m",
+      "options": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "num_ctx": 8192,
+        "num_predict": 4096,
+        "num_thread": 6,
+        "num_batch": 256,
+        "seed": 1729
+      },
+      "format": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "record": {
+      "case": {
+        "problem_id": "K01",
+        "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "criterion_neither__v045_not_b",
+        "repeat": 0,
+        "seed": 1729,
+        "task": "operator_atom",
+        "calibration_version": 4,
+        "probe_contract": "operator-v045",
+        "operation": "not_b",
+        "diagnostic_group": "not_b",
+        "format_mode": "schema",
+        "probe_atom": "Cz",
+        "source_projection": {
+          "observed": {
+            "facts": [
+              "Ca"
+            ],
+            "goal_atom": "Cc",
+            "probe_atom": "Cz"
+          },
+          "primitives": {
+            "in_facts": false,
+            "same_as_goal": false
+          }
+        },
+        "input_literals": {
+          "a": false,
+          "b": false
+        },
+        "source_case_id": "27af68287eca0e265cb268db",
+        "source_status": "accepted",
+        "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+        "case_id": "5e0620085e05eb314ebde056"
+      },
+      "run_sha256": "d5f2d76eaeadff369a97a49e398925f6ec9c67ad77b471ff36de5624f959e5e3",
+      "recorded_at": "2026-09-11T01:06:48+00:00",
+      "status": "accepted",
+      "api_attempted": true,
+      "wall_seconds": 0.19014179999976477,
+      "usage": {
+        "prompt_eval_count": 149,
+        "prompt_eval_cached_count": 131,
+        "eval_count": 6,
+        "total_duration": 172550200,
+        "load_duration": 13690700,
+        "prompt_eval_duration": 18378000,
+        "eval_duration": 64138000,
+        "total_seconds": 0.1725502,
+        "load_seconds": 0.0136907,
+        "prompt_eval_seconds": 0.018378,
+        "generation_seconds": 0.064138,
+        "tokens_per_second": 93.5482865072188
+      },
+      "audit": {
+        "valid_completion": true,
+        "role_adherent": null,
+        "calibration_task": "operator_atom/not_b",
+        "task_checks": {
+          "source.observed": true,
+          "source.primitives": true,
+          "input_projection": true,
+          "operator.value": true
+        },
+        "task_comparisons": [
+          {
+            "field": "source.observed",
+            "actual": {
+              "facts": [
+                "Ca"
+              ],
+              "goal_atom": "Cc",
+              "probe_atom": "Cz"
+            },
+            "expected": {
+              "probe_atom": "Cz",
+              "goal_atom": "Cc",
+              "facts": [
+                "Ca"
+              ]
+            },
+            "matches": true
+          },
+          {
+            "field": "source.primitives",
+            "actual": {
+              "in_facts": false,
+              "same_as_goal": false
+            },
+            "expected": {
+              "same_as_goal": false,
+              "in_facts": false
+            },
+            "matches": true
+          },
+          {
+            "field": "input_projection",
+            "actual": {
+              "a": false,
+              "b": false
+            },
+            "expected": {
+              "a": false,
+              "b": false
+            },
+            "matches": true
+          },
+          {
+            "field": "operator.value",
+            "actual": true,
+            "expected": true,
+            "matches": true
+          }
+        ],
+        "details": {
+          "operation": "not_b",
+          "input_ab": [
+            false,
+            false
+          ],
+          "actual": true,
+          "expected_from_supplied_values": true,
+          "source_prerequisites_correct": true,
+          "operator_correct": true,
+          "source_status": "accepted",
+          "output_modified": false
+        },
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단일 연산 진단이다. 모델 반환값을 보정하지 않고 원래 ADM 성공률에 합산하지 않는다."
+      },
+      "gpu": {
+        "name": "qwen3:4b-instruct",
+        "model": "qwen3:4b-instruct",
+        "size": 3742808145,
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-09-11T10:16:48.2837478+09:00",
+        "size_vram": 3742808145,
+        "context_length": 8192
+      },
+      "error": null,
+      "done_reason": "stop",
+      "task_diagnostics": {
+        "task": "operator_atom",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "operator": {
+          "operation": "not_b",
+          "supplied_literals": {
+            "a": false,
+            "b": false
+          },
+          "returned_value": true,
+          "new_proof_generated": false,
+          "output_modified": false
+        }
+      },
+      "response_channels": {
+        "thinking_field_present": false,
+        "thinking_nonempty": false,
+        "thinking_characters": 0,
+        "final_characters": 14,
+        "final_nonempty": true,
+        "eval_count_scope": "API total generated tokens; no separate final/thinking token counts inferred"
+      },
+      "artifacts_sha256": {
+        "request.json": "6b837e780c91bcc6c37ffe00da21938fdb62817392dbc8165b76e8eccabd0571",
+        "request.wire.json": "46d2bfea013b457946978d2cf42b8dd38e17f1859eb169929bf267efa858f9d2",
+        "response.raw.json": "877098f883c73f574ef73ee242621a78ce3f6f05440ee0f44ec336586ed84dc4",
+        "timing.json": "e0498de1976bdd0b5fd9176aef036d94ebe258e802f52f4586b88b41791c6cb5",
+        "gpu.json": "d2b8cf04e0ce6177af3c8d18cae6bd2931421afc685ff2248844585485e8effb"
+      }
+    },
+    "response": {
+      "model": "qwen3:4b-instruct",
+      "created_at": "2026-09-11T01:06:48.2837478Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"value\":true}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 172550200,
+      "load_duration": 13690700,
+      "prompt_eval_count": 149,
+      "prompt_eval_cached_count": 131,
+      "prompt_eval_duration": 18378000,
+      "eval_count": 6,
+      "eval_duration": 64138000
+    },
+    "response_sha256": "877098f883c73f574ef73ee242621a78ce3f6f05440ee0f44ec336586ed84dc4",
+    "request_sha256": "46d2bfea013b457946978d2cf42b8dd38e17f1859eb169929bf267efa858f9d2"
+  },
+  {
+    "case": {
+      "problem_id": "K11",
+      "problem_sha256": "9b5261a692096b5f81a3b85883bdf42362cb2879a0f0303b6b9e1fc20eca32f3",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_goal_is_fact__v045_copy_a",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "operator_atom",
+      "calibration_version": 4,
+      "probe_contract": "operator-v045",
+      "operation": "copy_a",
+      "diagnostic_group": "copy_a",
+      "format_mode": "schema",
+      "probe_atom": "Cc",
+      "source_projection": {
+        "observed": {
+          "facts": [
+            "Ca",
+            "Cc"
+          ],
+          "goal_atom": "Cc",
+          "probe_atom": "Cc"
+        },
+        "primitives": {
+          "in_facts": true,
+          "same_as_goal": true
+        }
+      },
+      "input_literals": {
+        "a": true,
+        "b": true
+      },
+      "source_case_id": "8c01af1793200b17293c3d53",
+      "source_status": "accepted",
+      "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+      "case_id": "9dd5155af23148ca35eeade0"
+    },
+    "problem": {
+      "id": "K11",
+      "facts": [
+        "Ca",
+        "Cc"
+      ],
+      "rules": [
+        {
+          "id": "k10",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cb"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Cb"
+          ],
+          "conclusion": "Cc"
+        },
+        {
+          "id": "k03",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cc"
+        }
+      ],
+      "goal": "Cc"
+    },
+    "request": {
+      "model": "qwen3:4b-instruct",
+      "messages": [
+        {
+          "role": "system",
+          "content": "입력의 a와 b는 불리언이다. expression의 식 하나만 계산해 value에 기록한다.\nAND는 두 피연산자가 모두 true일 때 true다. NOT은 true와 false를 뒤집는다. 괄호 안의 연산을 먼저 적용한다.\nJSON 객체 하나만 출력한다. 다음 스키마는 자료형만 제한하며 정답을 지정하지 않는다.\n{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[\"value\"],\"additionalProperties\":false}"
+        },
+        {
+          "role": "user",
+          "content": "input: {\"a\":true,\"b\":true,\"expression\":\"a\"}"
+        }
+      ],
+      "stream": false,
+      "keep_alive": "10m",
+      "options": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "num_ctx": 8192,
+        "num_predict": 4096,
+        "num_thread": 6,
+        "num_batch": 256,
+        "seed": 1729
+      },
+      "format": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "record": {
+      "case": {
+        "problem_id": "K11",
+        "problem_sha256": "9b5261a692096b5f81a3b85883bdf42362cb2879a0f0303b6b9e1fc20eca32f3",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "criterion_goal_is_fact__v045_copy_a",
+        "repeat": 0,
+        "seed": 1729,
+        "task": "operator_atom",
+        "calibration_version": 4,
+        "probe_contract": "operator-v045",
+        "operation": "copy_a",
+        "diagnostic_group": "copy_a",
+        "format_mode": "schema",
+        "probe_atom": "Cc",
+        "source_projection": {
+          "observed": {
+            "facts": [
+              "Ca",
+              "Cc"
+            ],
+            "goal_atom": "Cc",
+            "probe_atom": "Cc"
+          },
+          "primitives": {
+            "in_facts": true,
+            "same_as_goal": true
+          }
+        },
+        "input_literals": {
+          "a": true,
+          "b": true
+        },
+        "source_case_id": "8c01af1793200b17293c3d53",
+        "source_status": "accepted",
+        "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+        "case_id": "9dd5155af23148ca35eeade0"
+      },
+      "run_sha256": "d5f2d76eaeadff369a97a49e398925f6ec9c67ad77b471ff36de5624f959e5e3",
+      "recorded_at": "2026-09-11T01:06:48+00:00",
+      "status": "accepted",
+      "api_attempted": true,
+      "wall_seconds": 0.23002599999927043,
+      "usage": {
+        "prompt_eval_count": 146,
+        "prompt_eval_cached_count": 131,
+        "eval_count": 6,
+        "total_duration": 211417900,
+        "load_duration": 17068500,
+        "prompt_eval_duration": 23268000,
+        "eval_duration": 68883000,
+        "total_seconds": 0.2114179,
+        "load_seconds": 0.0170685,
+        "prompt_eval_seconds": 0.023268,
+        "generation_seconds": 0.068883,
+        "tokens_per_second": 87.10422019946867
+      },
+      "audit": {
+        "valid_completion": true,
+        "role_adherent": null,
+        "calibration_task": "operator_atom/copy_a",
+        "task_checks": {
+          "source.observed": true,
+          "source.primitives": true,
+          "input_projection": true,
+          "operator.value": true
+        },
+        "task_comparisons": [
+          {
+            "field": "source.observed",
+            "actual": {
+              "facts": [
+                "Ca",
+                "Cc"
+              ],
+              "goal_atom": "Cc",
+              "probe_atom": "Cc"
+            },
+            "expected": {
+              "probe_atom": "Cc",
+              "goal_atom": "Cc",
+              "facts": [
+                "Ca",
+                "Cc"
+              ]
+            },
+            "matches": true
+          },
+          {
+            "field": "source.primitives",
+            "actual": {
+              "in_facts": true,
+              "same_as_goal": true
+            },
+            "expected": {
+              "same_as_goal": true,
+              "in_facts": true
+            },
+            "matches": true
+          },
+          {
+            "field": "input_projection",
+            "actual": {
+              "a": true,
+              "b": true
+            },
+            "expected": {
+              "a": true,
+              "b": true
+            },
+            "matches": true
+          },
+          {
+            "field": "operator.value",
+            "actual": true,
+            "expected": true,
+            "matches": true
+          }
+        ],
+        "details": {
+          "operation": "copy_a",
+          "input_ab": [
+            true,
+            true
+          ],
+          "actual": true,
+          "expected_from_supplied_values": true,
+          "source_prerequisites_correct": true,
+          "operator_correct": true,
+          "source_status": "accepted",
+          "output_modified": false
+        },
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단일 연산 진단이다. 모델 반환값을 보정하지 않고 원래 ADM 성공률에 합산하지 않는다."
+      },
+      "gpu": {
+        "name": "qwen3:4b-instruct",
+        "model": "qwen3:4b-instruct",
+        "size": 3742808145,
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-09-11T10:16:48.5955065+09:00",
+        "size_vram": 3742808145,
+        "context_length": 8192
+      },
+      "error": null,
+      "done_reason": "stop",
+      "task_diagnostics": {
+        "task": "operator_atom",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "operator": {
+          "operation": "copy_a",
+          "supplied_literals": {
+            "a": true,
+            "b": true
+          },
+          "returned_value": true,
+          "new_proof_generated": false,
+          "output_modified": false
+        }
+      },
+      "response_channels": {
+        "thinking_field_present": false,
+        "thinking_nonempty": false,
+        "thinking_characters": 0,
+        "final_characters": 14,
+        "final_nonempty": true,
+        "eval_count_scope": "API total generated tokens; no separate final/thinking token counts inferred"
+      },
+      "artifacts_sha256": {
+        "request.json": "dc998e0dc7aaaf6bcbd1e935ef58cebe8e92095b1678a3993ef8d02ba55c0bf3",
+        "request.wire.json": "5042ebb88b146bdea02fe9ccd5f66d4024222ee77e1e42e87339024437dbd7ec",
+        "response.raw.json": "99f7a3aed942f253afc154e63971321e5e59347a8371ffba77f40229ab2e9174",
+        "timing.json": "ce22d2ba3adf1c04abd90fc458ccca27a5c9826cd624e32681d29c31b8e3d701",
+        "gpu.json": "29127b33d4d6654c85e7ee9eaeff9d609d1bfcc3decead94bf524133db1d927c"
+      }
+    },
+    "response": {
+      "model": "qwen3:4b-instruct",
+      "created_at": "2026-09-11T01:06:48.5955065Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"value\":true}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 211417900,
+      "load_duration": 17068500,
+      "prompt_eval_count": 146,
+      "prompt_eval_cached_count": 131,
+      "prompt_eval_duration": 23268000,
+      "eval_count": 6,
+      "eval_duration": 68883000
+    },
+    "response_sha256": "99f7a3aed942f253afc154e63971321e5e59347a8371ffba77f40229ab2e9174",
+    "request_sha256": "5042ebb88b146bdea02fe9ccd5f66d4024222ee77e1e42e87339024437dbd7ec"
+  },
+  {
+    "case": {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_goal_not_fact__v045_and_not_b",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "operator_atom",
+      "calibration_version": 4,
+      "probe_contract": "operator-v045",
+      "operation": "and_not_b",
+      "diagnostic_group": "and_not_b",
+      "format_mode": "schema",
+      "probe_atom": "Cc",
+      "source_projection": {
+        "observed": {
+          "facts": [
+            "Ca"
+          ],
+          "goal_atom": "Cc",
+          "probe_atom": "Cc"
+        },
+        "primitives": {
+          "in_facts": false,
+          "same_as_goal": true
+        }
+      },
+      "input_literals": {
+        "a": true,
+        "b": false
+      },
+      "source_case_id": "9ff71e6a994e1993fc42c7a6",
+      "source_status": "invalid_task",
+      "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+      "case_id": "47badd1edf3341302ec8411f"
+    },
+    "problem": {
+      "id": "K01",
+      "facts": [
+        "Ca"
+      ],
+      "rules": [
+        {
+          "id": "k10",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cb"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Cb"
+          ],
+          "conclusion": "Cc"
+        },
+        {
+          "id": "k03",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cc"
+        }
+      ],
+      "goal": "Cc"
+    },
+    "request": {
+      "model": "qwen3:4b-instruct",
+      "messages": [
+        {
+          "role": "system",
+          "content": "입력의 a와 b는 불리언이다. expression의 식 하나만 계산해 value에 기록한다.\nAND는 두 피연산자가 모두 true일 때 true다. NOT은 true와 false를 뒤집는다. 괄호 안의 연산을 먼저 적용한다.\nJSON 객체 하나만 출력한다. 다음 스키마는 자료형만 제한하며 정답을 지정하지 않는다.\n{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[\"value\"],\"additionalProperties\":false}"
+        },
+        {
+          "role": "user",
+          "content": "input: {\"a\":true,\"b\":false,\"expression\":\"(a AND (NOT b))\"}"
+        }
+      ],
+      "stream": false,
+      "keep_alive": "10m",
+      "options": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "num_ctx": 8192,
+        "num_predict": 4096,
+        "num_thread": 6,
+        "num_batch": 256,
+        "seed": 1729
+      },
+      "format": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "record": {
+      "case": {
+        "problem_id": "K01",
+        "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "criterion_goal_not_fact__v045_and_not_b",
+        "repeat": 0,
+        "seed": 1729,
+        "task": "operator_atom",
+        "calibration_version": 4,
+        "probe_contract": "operator-v045",
+        "operation": "and_not_b",
+        "diagnostic_group": "and_not_b",
+        "format_mode": "schema",
+        "probe_atom": "Cc",
+        "source_projection": {
+          "observed": {
+            "facts": [
+              "Ca"
+            ],
+            "goal_atom": "Cc",
+            "probe_atom": "Cc"
+          },
+          "primitives": {
+            "in_facts": false,
+            "same_as_goal": true
+          }
+        },
+        "input_literals": {
+          "a": true,
+          "b": false
+        },
+        "source_case_id": "9ff71e6a994e1993fc42c7a6",
+        "source_status": "invalid_task",
+        "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+        "case_id": "47badd1edf3341302ec8411f"
+      },
+      "run_sha256": "d5f2d76eaeadff369a97a49e398925f6ec9c67ad77b471ff36de5624f959e5e3",
+      "recorded_at": "2026-09-11T01:06:48+00:00",
+      "status": "invalid_task",
+      "api_attempted": true,
+      "wall_seconds": 0.21247300000140967,
+      "usage": {
+        "prompt_eval_count": 152,
+        "prompt_eval_cached_count": 135,
+        "eval_count": 6,
+        "total_duration": 195690400,
+        "load_duration": 13865800,
+        "prompt_eval_duration": 20128000,
+        "eval_duration": 65811000,
+        "total_seconds": 0.1956904,
+        "load_seconds": 0.0138658,
+        "prompt_eval_seconds": 0.020128,
+        "generation_seconds": 0.065811,
+        "tokens_per_second": 91.17016912066373
+      },
+      "audit": {
+        "valid_completion": false,
+        "role_adherent": null,
+        "calibration_task": "operator_atom/and_not_b",
+        "task_checks": {
+          "source.observed": true,
+          "source.primitives": true,
+          "input_projection": true,
+          "operator.value": false
+        },
+        "task_comparisons": [
+          {
+            "field": "source.observed",
+            "actual": {
+              "facts": [
+                "Ca"
+              ],
+              "goal_atom": "Cc",
+              "probe_atom": "Cc"
+            },
+            "expected": {
+              "probe_atom": "Cc",
+              "goal_atom": "Cc",
+              "facts": [
+                "Ca"
+              ]
+            },
+            "matches": true
+          },
+          {
+            "field": "source.primitives",
+            "actual": {
+              "in_facts": false,
+              "same_as_goal": true
+            },
+            "expected": {
+              "same_as_goal": true,
+              "in_facts": false
+            },
+            "matches": true
+          },
+          {
+            "field": "input_projection",
+            "actual": {
+              "a": true,
+              "b": false
+            },
+            "expected": {
+              "a": true,
+              "b": false
+            },
+            "matches": true
+          },
+          {
+            "field": "operator.value",
+            "actual": false,
+            "expected": true,
+            "matches": false
+          }
+        ],
+        "details": {
+          "operation": "and_not_b",
+          "input_ab": [
+            true,
+            false
+          ],
+          "actual": false,
+          "expected_from_supplied_values": true,
+          "source_prerequisites_correct": true,
+          "operator_correct": false,
+          "source_status": "invalid_task",
+          "output_modified": false
+        },
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단일 연산 진단이다. 모델 반환값을 보정하지 않고 원래 ADM 성공률에 합산하지 않는다."
+      },
+      "gpu": {
+        "name": "qwen3:4b-instruct",
+        "model": "qwen3:4b-instruct",
+        "size": 3742808145,
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-09-11T10:16:48.8884193+09:00",
+        "size_vram": 3742808145,
+        "context_length": 8192
+      },
+      "error": "진단 검사 불일치 항목: operator.value (각 판정의 실제값/기대값은 task_comparisons에 저장)",
+      "done_reason": "stop",
+      "task_diagnostics": {
+        "task": "operator_atom",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "operator": {
+          "operation": "and_not_b",
+          "supplied_literals": {
+            "a": true,
+            "b": false
+          },
+          "returned_value": false,
+          "new_proof_generated": false,
+          "output_modified": false
+        }
+      },
+      "response_channels": {
+        "thinking_field_present": false,
+        "thinking_nonempty": false,
+        "thinking_characters": 0,
+        "final_characters": 15,
+        "final_nonempty": true,
+        "eval_count_scope": "API total generated tokens; no separate final/thinking token counts inferred"
+      },
+      "artifacts_sha256": {
+        "request.json": "10e3229f304e4600ea6dcc5a1493f734ffbab8b0183250baee0718d800993585",
+        "request.wire.json": "88a979e76909390795250f51db1f627e1224c7b91c02507a3180a19816699129",
+        "response.raw.json": "fabfc76fbf63fc67eef175ca2a8085db9637c568f82f478768d08f7d8c3e0ba1",
+        "timing.json": "5d30f082c047fcc13082d236dcb0d8c46709bd9777ba0d31491b66d6aa96e743",
+        "gpu.json": "61f0c0d368bbdb76291afcdf2393468c2109c0a31c47f5d9a14bee756cdab6fd"
+      }
+    },
+    "response": {
+      "model": "qwen3:4b-instruct",
+      "created_at": "2026-09-11T01:06:48.8884193Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"value\":false}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 195690400,
+      "load_duration": 13865800,
+      "prompt_eval_count": 152,
+      "prompt_eval_cached_count": 135,
+      "prompt_eval_duration": 20128000,
+      "eval_count": 6,
+      "eval_duration": 65811000
+    },
+    "response_sha256": "fabfc76fbf63fc67eef175ca2a8085db9637c568f82f478768d08f7d8c3e0ba1",
+    "request_sha256": "88a979e76909390795250f51db1f627e1224c7b91c02507a3180a19816699129"
+  },
+  {
+    "case": {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_neither__v045_and_ab",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "operator_atom",
+      "calibration_version": 4,
+      "probe_contract": "operator-v045",
+      "operation": "and_ab",
+      "diagnostic_group": "and_ab",
+      "format_mode": "schema",
+      "probe_atom": "Cz",
+      "source_projection": {
+        "observed": {
+          "facts": [
+            "Ca"
+          ],
+          "goal_atom": "Cc",
+          "probe_atom": "Cz"
+        },
+        "primitives": {
+          "in_facts": false,
+          "same_as_goal": false
+        }
+      },
+      "input_literals": {
+        "a": false,
+        "b": false
+      },
+      "source_case_id": "27af68287eca0e265cb268db",
+      "source_status": "accepted",
+      "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+      "case_id": "6709f4853b667e5025692592"
+    },
+    "problem": {
+      "id": "K01",
+      "facts": [
+        "Ca"
+      ],
+      "rules": [
+        {
+          "id": "k10",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cb"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Cb"
+          ],
+          "conclusion": "Cc"
+        },
+        {
+          "id": "k03",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cc"
+        }
+      ],
+      "goal": "Cc"
+    },
+    "request": {
+      "model": "qwen3:4b-instruct",
+      "messages": [
+        {
+          "role": "system",
+          "content": "입력의 a와 b는 불리언이다. expression의 식 하나만 계산해 value에 기록한다.\nAND는 두 피연산자가 모두 true일 때 true다. NOT은 true와 false를 뒤집는다. 괄호 안의 연산을 먼저 적용한다.\nJSON 객체 하나만 출력한다. 다음 스키마는 자료형만 제한하며 정답을 지정하지 않는다.\n{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[\"value\"],\"additionalProperties\":false}"
+        },
+        {
+          "role": "user",
+          "content": "input: {\"a\":false,\"b\":false,\"expression\":\"(a AND b)\"}"
+        }
+      ],
+      "stream": false,
+      "keep_alive": "10m",
+      "options": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "num_ctx": 8192,
+        "num_predict": 4096,
+        "num_thread": 6,
+        "num_batch": 256,
+        "seed": 1729
+      },
+      "format": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "record": {
+      "case": {
+        "problem_id": "K01",
+        "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "criterion_neither__v045_and_ab",
+        "repeat": 0,
+        "seed": 1729,
+        "task": "operator_atom",
+        "calibration_version": 4,
+        "probe_contract": "operator-v045",
+        "operation": "and_ab",
+        "diagnostic_group": "and_ab",
+        "format_mode": "schema",
+        "probe_atom": "Cz",
+        "source_projection": {
+          "observed": {
+            "facts": [
+              "Ca"
+            ],
+            "goal_atom": "Cc",
+            "probe_atom": "Cz"
+          },
+          "primitives": {
+            "in_facts": false,
+            "same_as_goal": false
+          }
+        },
+        "input_literals": {
+          "a": false,
+          "b": false
+        },
+        "source_case_id": "27af68287eca0e265cb268db",
+        "source_status": "accepted",
+        "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+        "case_id": "6709f4853b667e5025692592"
+      },
+      "run_sha256": "d5f2d76eaeadff369a97a49e398925f6ec9c67ad77b471ff36de5624f959e5e3",
+      "recorded_at": "2026-09-11T01:06:48+00:00",
+      "status": "accepted",
+      "api_attempted": true,
+      "wall_seconds": 0.18974429999980202,
+      "usage": {
+        "prompt_eval_count": 150,
+        "prompt_eval_cached_count": 131,
+        "eval_count": 6,
+        "total_duration": 172820700,
+        "load_duration": 14662800,
+        "prompt_eval_duration": 18117000,
+        "eval_duration": 63121000,
+        "total_seconds": 0.1728207,
+        "load_seconds": 0.0146628,
+        "prompt_eval_seconds": 0.018117,
+        "generation_seconds": 0.063121,
+        "tokens_per_second": 95.05552827109837
+      },
+      "audit": {
+        "valid_completion": true,
+        "role_adherent": null,
+        "calibration_task": "operator_atom/and_ab",
+        "task_checks": {
+          "source.observed": true,
+          "source.primitives": true,
+          "input_projection": true,
+          "operator.value": true
+        },
+        "task_comparisons": [
+          {
+            "field": "source.observed",
+            "actual": {
+              "facts": [
+                "Ca"
+              ],
+              "goal_atom": "Cc",
+              "probe_atom": "Cz"
+            },
+            "expected": {
+              "probe_atom": "Cz",
+              "goal_atom": "Cc",
+              "facts": [
+                "Ca"
+              ]
+            },
+            "matches": true
+          },
+          {
+            "field": "source.primitives",
+            "actual": {
+              "in_facts": false,
+              "same_as_goal": false
+            },
+            "expected": {
+              "same_as_goal": false,
+              "in_facts": false
+            },
+            "matches": true
+          },
+          {
+            "field": "input_projection",
+            "actual": {
+              "a": false,
+              "b": false
+            },
+            "expected": {
+              "a": false,
+              "b": false
+            },
+            "matches": true
+          },
+          {
+            "field": "operator.value",
+            "actual": false,
+            "expected": false,
+            "matches": true
+          }
+        ],
+        "details": {
+          "operation": "and_ab",
+          "input_ab": [
+            false,
+            false
+          ],
+          "actual": false,
+          "expected_from_supplied_values": false,
+          "source_prerequisites_correct": true,
+          "operator_correct": true,
+          "source_status": "accepted",
+          "output_modified": false
+        },
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단일 연산 진단이다. 모델 반환값을 보정하지 않고 원래 ADM 성공률에 합산하지 않는다."
+      },
+      "gpu": {
+        "name": "qwen3:4b-instruct",
+        "model": "qwen3:4b-instruct",
+        "size": 3742808145,
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-09-11T10:16:49.1553902+09:00",
+        "size_vram": 3742808145,
+        "context_length": 8192
+      },
+      "error": null,
+      "done_reason": "stop",
+      "task_diagnostics": {
+        "task": "operator_atom",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "operator": {
+          "operation": "and_ab",
+          "supplied_literals": {
+            "a": false,
+            "b": false
+          },
+          "returned_value": false,
+          "new_proof_generated": false,
+          "output_modified": false
+        }
+      },
+      "response_channels": {
+        "thinking_field_present": false,
+        "thinking_nonempty": false,
+        "thinking_characters": 0,
+        "final_characters": 15,
+        "final_nonempty": true,
+        "eval_count_scope": "API total generated tokens; no separate final/thinking token counts inferred"
+      },
+      "artifacts_sha256": {
+        "request.json": "c388ec6145b316a6ea430636f9c34f3cb925714950c8d3457a2fb77f0cde3221",
+        "request.wire.json": "0a00ea0917cbb9b4c89acb05574d0feea5252428d4e61201542dc29c8f63a0ba",
+        "response.raw.json": "3bd44025cac51eae4d647b28c651a56f14c4a4fad21c2c0091c16bef77ca73fa",
+        "timing.json": "12d47681d08a15e4730e862b8859d5a194226eed26c54bb30d62f92870cc0618",
+        "gpu.json": "af8bb3ae97ab9671b273f8c976080450dad694cd1991c61a2b78785fac00b4ca"
+      }
+    },
+    "response": {
+      "model": "qwen3:4b-instruct",
+      "created_at": "2026-09-11T01:06:49.1553902Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"value\":false}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 172820700,
+      "load_duration": 14662800,
+      "prompt_eval_count": 150,
+      "prompt_eval_cached_count": 131,
+      "prompt_eval_duration": 18117000,
+      "eval_count": 6,
+      "eval_duration": 63121000
+    },
+    "response_sha256": "3bd44025cac51eae4d647b28c651a56f14c4a4fad21c2c0091c16bef77ca73fa",
+    "request_sha256": "0a00ea0917cbb9b4c89acb05574d0feea5252428d4e61201542dc29c8f63a0ba"
+  },
+  {
+    "case": {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_fact_not_goal__v045_not_b",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "operator_atom",
+      "calibration_version": 4,
+      "probe_contract": "operator-v045",
+      "operation": "not_b",
+      "diagnostic_group": "not_b",
+      "format_mode": "schema",
+      "probe_atom": "Ca",
+      "source_projection": {
+        "observed": {
+          "facts": [
+            "Ca"
+          ],
+          "goal_atom": "Cc",
+          "probe_atom": "Ca"
+        },
+        "primitives": {
+          "in_facts": true,
+          "same_as_goal": false
+        }
+      },
+      "input_literals": {
+        "a": false,
+        "b": true
+      },
+      "source_case_id": "2849bd92ba3b41bef063441b",
+      "source_status": "accepted",
+      "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+      "case_id": "d210fe1127912d3125695191"
+    },
+    "problem": {
+      "id": "K01",
+      "facts": [
+        "Ca"
+      ],
+      "rules": [
+        {
+          "id": "k10",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cb"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Cb"
+          ],
+          "conclusion": "Cc"
+        },
+        {
+          "id": "k03",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cc"
+        }
+      ],
+      "goal": "Cc"
+    },
+    "request": {
+      "model": "qwen3:4b-instruct",
+      "messages": [
+        {
+          "role": "system",
+          "content": "입력의 a와 b는 불리언이다. expression의 식 하나만 계산해 value에 기록한다.\nAND는 두 피연산자가 모두 true일 때 true다. NOT은 true와 false를 뒤집는다. 괄호 안의 연산을 먼저 적용한다.\nJSON 객체 하나만 출력한다. 다음 스키마는 자료형만 제한하며 정답을 지정하지 않는다.\n{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[\"value\"],\"additionalProperties\":false}"
+        },
+        {
+          "role": "user",
+          "content": "input: {\"a\":false,\"b\":true,\"expression\":\"(NOT b)\"}"
+        }
+      ],
+      "stream": false,
+      "keep_alive": "10m",
+      "options": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "num_ctx": 8192,
+        "num_predict": 4096,
+        "num_thread": 6,
+        "num_batch": 256,
+        "seed": 1729
+      },
+      "format": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "record": {
+      "case": {
+        "problem_id": "K01",
+        "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "criterion_fact_not_goal__v045_not_b",
+        "repeat": 0,
+        "seed": 1729,
+        "task": "operator_atom",
+        "calibration_version": 4,
+        "probe_contract": "operator-v045",
+        "operation": "not_b",
+        "diagnostic_group": "not_b",
+        "format_mode": "schema",
+        "probe_atom": "Ca",
+        "source_projection": {
+          "observed": {
+            "facts": [
+              "Ca"
+            ],
+            "goal_atom": "Cc",
+            "probe_atom": "Ca"
+          },
+          "primitives": {
+            "in_facts": true,
+            "same_as_goal": false
+          }
+        },
+        "input_literals": {
+          "a": false,
+          "b": true
+        },
+        "source_case_id": "2849bd92ba3b41bef063441b",
+        "source_status": "accepted",
+        "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+        "case_id": "d210fe1127912d3125695191"
+      },
+      "run_sha256": "d5f2d76eaeadff369a97a49e398925f6ec9c67ad77b471ff36de5624f959e5e3",
+      "recorded_at": "2026-09-11T01:06:49+00:00",
+      "status": "accepted",
+      "api_attempted": true,
+      "wall_seconds": 0.1883642000011605,
+      "usage": {
+        "prompt_eval_count": 149,
+        "prompt_eval_cached_count": 135,
+        "eval_count": 6,
+        "total_duration": 173379300,
+        "load_duration": 14297300,
+        "prompt_eval_duration": 18918000,
+        "eval_duration": 63023000,
+        "total_seconds": 0.1733793,
+        "load_seconds": 0.0142973,
+        "prompt_eval_seconds": 0.018918,
+        "generation_seconds": 0.063023,
+        "tokens_per_second": 95.20333846373546
+      },
+      "audit": {
+        "valid_completion": true,
+        "role_adherent": null,
+        "calibration_task": "operator_atom/not_b",
+        "task_checks": {
+          "source.observed": true,
+          "source.primitives": true,
+          "input_projection": true,
+          "operator.value": true
+        },
+        "task_comparisons": [
+          {
+            "field": "source.observed",
+            "actual": {
+              "facts": [
+                "Ca"
+              ],
+              "goal_atom": "Cc",
+              "probe_atom": "Ca"
+            },
+            "expected": {
+              "probe_atom": "Ca",
+              "goal_atom": "Cc",
+              "facts": [
+                "Ca"
+              ]
+            },
+            "matches": true
+          },
+          {
+            "field": "source.primitives",
+            "actual": {
+              "in_facts": true,
+              "same_as_goal": false
+            },
+            "expected": {
+              "same_as_goal": false,
+              "in_facts": true
+            },
+            "matches": true
+          },
+          {
+            "field": "input_projection",
+            "actual": {
+              "a": false,
+              "b": true
+            },
+            "expected": {
+              "a": false,
+              "b": true
+            },
+            "matches": true
+          },
+          {
+            "field": "operator.value",
+            "actual": false,
+            "expected": false,
+            "matches": true
+          }
+        ],
+        "details": {
+          "operation": "not_b",
+          "input_ab": [
+            false,
+            true
+          ],
+          "actual": false,
+          "expected_from_supplied_values": false,
+          "source_prerequisites_correct": true,
+          "operator_correct": true,
+          "source_status": "accepted",
+          "output_modified": false
+        },
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단일 연산 진단이다. 모델 반환값을 보정하지 않고 원래 ADM 성공률에 합산하지 않는다."
+      },
+      "gpu": {
+        "name": "qwen3:4b-instruct",
+        "model": "qwen3:4b-instruct",
+        "size": 3742808145,
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-09-11T10:16:49.4255788+09:00",
+        "size_vram": 3742808145,
+        "context_length": 8192
+      },
+      "error": null,
+      "done_reason": "stop",
+      "task_diagnostics": {
+        "task": "operator_atom",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "operator": {
+          "operation": "not_b",
+          "supplied_literals": {
+            "a": false,
+            "b": true
+          },
+          "returned_value": false,
+          "new_proof_generated": false,
+          "output_modified": false
+        }
+      },
+      "response_channels": {
+        "thinking_field_present": false,
+        "thinking_nonempty": false,
+        "thinking_characters": 0,
+        "final_characters": 15,
+        "final_nonempty": true,
+        "eval_count_scope": "API total generated tokens; no separate final/thinking token counts inferred"
+      },
+      "artifacts_sha256": {
+        "request.json": "d92493feda8ffad575efc24ef8deea9099183ee5f45090df86ffb1189736b8e9",
+        "request.wire.json": "34b4dd643e86ec883f8e2a300ce665028629e8a75bff6ab95224a1609f6da40e",
+        "response.raw.json": "5dc3344a1eded3da772c5e1520f4b5fb9efe77849420a5ee7085d20ee7890ef6",
+        "timing.json": "1800af9271141192695319679983e5b4e61d3bb5dc107ce3c3c36c6035cd612b",
+        "gpu.json": "e93aa56ab6086fe9f80e70b5822ebd572b703861b1c855b260a960e70afffaf9"
+      }
+    },
+    "response": {
+      "model": "qwen3:4b-instruct",
+      "created_at": "2026-09-11T01:06:49.4255788Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"value\":false}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 173379300,
+      "load_duration": 14297300,
+      "prompt_eval_count": 149,
+      "prompt_eval_cached_count": 135,
+      "prompt_eval_duration": 18918000,
+      "eval_count": 6,
+      "eval_duration": 63023000
+    },
+    "response_sha256": "5dc3344a1eded3da772c5e1520f4b5fb9efe77849420a5ee7085d20ee7890ef6",
+    "request_sha256": "34b4dd643e86ec883f8e2a300ce665028629e8a75bff6ab95224a1609f6da40e"
+  },
+  {
+    "case": {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_goal_not_fact__v045_and_ab",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "operator_atom",
+      "calibration_version": 4,
+      "probe_contract": "operator-v045",
+      "operation": "and_ab",
+      "diagnostic_group": "and_ab",
+      "format_mode": "schema",
+      "probe_atom": "Cc",
+      "source_projection": {
+        "observed": {
+          "facts": [
+            "Ca"
+          ],
+          "goal_atom": "Cc",
+          "probe_atom": "Cc"
+        },
+        "primitives": {
+          "in_facts": false,
+          "same_as_goal": true
+        }
+      },
+      "input_literals": {
+        "a": true,
+        "b": false
+      },
+      "source_case_id": "9ff71e6a994e1993fc42c7a6",
+      "source_status": "invalid_task",
+      "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+      "case_id": "e6012b3855fd7c4776a27b10"
+    },
+    "problem": {
+      "id": "K01",
+      "facts": [
+        "Ca"
+      ],
+      "rules": [
+        {
+          "id": "k10",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cb"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Cb"
+          ],
+          "conclusion": "Cc"
+        },
+        {
+          "id": "k03",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cc"
+        }
+      ],
+      "goal": "Cc"
+    },
+    "request": {
+      "model": "qwen3:4b-instruct",
+      "messages": [
+        {
+          "role": "system",
+          "content": "입력의 a와 b는 불리언이다. expression의 식 하나만 계산해 value에 기록한다.\nAND는 두 피연산자가 모두 true일 때 true다. NOT은 true와 false를 뒤집는다. 괄호 안의 연산을 먼저 적용한다.\nJSON 객체 하나만 출력한다. 다음 스키마는 자료형만 제한하며 정답을 지정하지 않는다.\n{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[\"value\"],\"additionalProperties\":false}"
+        },
+        {
+          "role": "user",
+          "content": "input: {\"a\":true,\"b\":false,\"expression\":\"(a AND b)\"}"
+        }
+      ],
+      "stream": false,
+      "keep_alive": "10m",
+      "options": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "num_ctx": 8192,
+        "num_predict": 4096,
+        "num_thread": 6,
+        "num_batch": 256,
+        "seed": 1729
+      },
+      "format": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "record": {
+      "case": {
+        "problem_id": "K01",
+        "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "criterion_goal_not_fact__v045_and_ab",
+        "repeat": 0,
+        "seed": 1729,
+        "task": "operator_atom",
+        "calibration_version": 4,
+        "probe_contract": "operator-v045",
+        "operation": "and_ab",
+        "diagnostic_group": "and_ab",
+        "format_mode": "schema",
+        "probe_atom": "Cc",
+        "source_projection": {
+          "observed": {
+            "facts": [
+              "Ca"
+            ],
+            "goal_atom": "Cc",
+            "probe_atom": "Cc"
+          },
+          "primitives": {
+            "in_facts": false,
+            "same_as_goal": true
+          }
+        },
+        "input_literals": {
+          "a": true,
+          "b": false
+        },
+        "source_case_id": "9ff71e6a994e1993fc42c7a6",
+        "source_status": "invalid_task",
+        "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+        "case_id": "e6012b3855fd7c4776a27b10"
+      },
+      "run_sha256": "d5f2d76eaeadff369a97a49e398925f6ec9c67ad77b471ff36de5624f959e5e3",
+      "recorded_at": "2026-09-11T01:06:49+00:00",
+      "status": "accepted",
+      "api_attempted": true,
+      "wall_seconds": 0.18738200000007055,
+      "usage": {
+        "prompt_eval_count": 150,
+        "prompt_eval_cached_count": 131,
+        "eval_count": 6,
+        "total_duration": 172348500,
+        "load_duration": 13561500,
+        "prompt_eval_duration": 18157000,
+        "eval_duration": 63066000,
+        "total_seconds": 0.1723485,
+        "load_seconds": 0.0135615,
+        "prompt_eval_seconds": 0.018157,
+        "generation_seconds": 0.063066,
+        "tokens_per_second": 95.13842641042717
+      },
+      "audit": {
+        "valid_completion": true,
+        "role_adherent": null,
+        "calibration_task": "operator_atom/and_ab",
+        "task_checks": {
+          "source.observed": true,
+          "source.primitives": true,
+          "input_projection": true,
+          "operator.value": true
+        },
+        "task_comparisons": [
+          {
+            "field": "source.observed",
+            "actual": {
+              "facts": [
+                "Ca"
+              ],
+              "goal_atom": "Cc",
+              "probe_atom": "Cc"
+            },
+            "expected": {
+              "probe_atom": "Cc",
+              "goal_atom": "Cc",
+              "facts": [
+                "Ca"
+              ]
+            },
+            "matches": true
+          },
+          {
+            "field": "source.primitives",
+            "actual": {
+              "in_facts": false,
+              "same_as_goal": true
+            },
+            "expected": {
+              "same_as_goal": true,
+              "in_facts": false
+            },
+            "matches": true
+          },
+          {
+            "field": "input_projection",
+            "actual": {
+              "a": true,
+              "b": false
+            },
+            "expected": {
+              "a": true,
+              "b": false
+            },
+            "matches": true
+          },
+          {
+            "field": "operator.value",
+            "actual": false,
+            "expected": false,
+            "matches": true
+          }
+        ],
+        "details": {
+          "operation": "and_ab",
+          "input_ab": [
+            true,
+            false
+          ],
+          "actual": false,
+          "expected_from_supplied_values": false,
+          "source_prerequisites_correct": true,
+          "operator_correct": true,
+          "source_status": "invalid_task",
+          "output_modified": false
+        },
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단일 연산 진단이다. 모델 반환값을 보정하지 않고 원래 ADM 성공률에 합산하지 않는다."
+      },
+      "gpu": {
+        "name": "qwen3:4b-instruct",
+        "model": "qwen3:4b-instruct",
+        "size": 3742808145,
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-09-11T10:16:49.6970749+09:00",
+        "size_vram": 3742808145,
+        "context_length": 8192
+      },
+      "error": null,
+      "done_reason": "stop",
+      "task_diagnostics": {
+        "task": "operator_atom",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "operator": {
+          "operation": "and_ab",
+          "supplied_literals": {
+            "a": true,
+            "b": false
+          },
+          "returned_value": false,
+          "new_proof_generated": false,
+          "output_modified": false
+        }
+      },
+      "response_channels": {
+        "thinking_field_present": false,
+        "thinking_nonempty": false,
+        "thinking_characters": 0,
+        "final_characters": 15,
+        "final_nonempty": true,
+        "eval_count_scope": "API total generated tokens; no separate final/thinking token counts inferred"
+      },
+      "artifacts_sha256": {
+        "request.json": "c939bb68bf80cc63bab9c4db7833f1226fcc19ec30c6054880d82016fb317fcb",
+        "request.wire.json": "78b61bcec946d1577174710197978709eba44e74807bf8154ede58200f1143c8",
+        "response.raw.json": "6be616849dd6183458663d4a7351ce0b6c5e8448e869b2833ceab1d146ee46ed",
+        "timing.json": "1aae707a1a9946cb4b4fe76609120ad3ed1963beae79ff5b4f0f9a9eec5744b3",
+        "gpu.json": "d101409b635d9db5bed81c57d06cae6844bed1feb7b82fbedb5c293805803a54"
+      }
+    },
+    "response": {
+      "model": "qwen3:4b-instruct",
+      "created_at": "2026-09-11T01:06:49.6970749Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"value\":false}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 172348500,
+      "load_duration": 13561500,
+      "prompt_eval_count": 150,
+      "prompt_eval_cached_count": 131,
+      "prompt_eval_duration": 18157000,
+      "eval_count": 6,
+      "eval_duration": 63066000
+    },
+    "response_sha256": "6be616849dd6183458663d4a7351ce0b6c5e8448e869b2833ceab1d146ee46ed",
+    "request_sha256": "78b61bcec946d1577174710197978709eba44e74807bf8154ede58200f1143c8"
+  },
+  {
+    "case": {
+      "problem_id": "K11",
+      "problem_sha256": "9b5261a692096b5f81a3b85883bdf42362cb2879a0f0303b6b9e1fc20eca32f3",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_goal_is_fact__v045_not_b",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "operator_atom",
+      "calibration_version": 4,
+      "probe_contract": "operator-v045",
+      "operation": "not_b",
+      "diagnostic_group": "not_b",
+      "format_mode": "schema",
+      "probe_atom": "Cc",
+      "source_projection": {
+        "observed": {
+          "facts": [
+            "Ca",
+            "Cc"
+          ],
+          "goal_atom": "Cc",
+          "probe_atom": "Cc"
+        },
+        "primitives": {
+          "in_facts": true,
+          "same_as_goal": true
+        }
+      },
+      "input_literals": {
+        "a": true,
+        "b": true
+      },
+      "source_case_id": "8c01af1793200b17293c3d53",
+      "source_status": "accepted",
+      "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+      "case_id": "4a876c1518f7fb9ec1765d60"
+    },
+    "problem": {
+      "id": "K11",
+      "facts": [
+        "Ca",
+        "Cc"
+      ],
+      "rules": [
+        {
+          "id": "k10",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cb"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Cb"
+          ],
+          "conclusion": "Cc"
+        },
+        {
+          "id": "k03",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cc"
+        }
+      ],
+      "goal": "Cc"
+    },
+    "request": {
+      "model": "qwen3:4b-instruct",
+      "messages": [
+        {
+          "role": "system",
+          "content": "입력의 a와 b는 불리언이다. expression의 식 하나만 계산해 value에 기록한다.\nAND는 두 피연산자가 모두 true일 때 true다. NOT은 true와 false를 뒤집는다. 괄호 안의 연산을 먼저 적용한다.\nJSON 객체 하나만 출력한다. 다음 스키마는 자료형만 제한하며 정답을 지정하지 않는다.\n{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[\"value\"],\"additionalProperties\":false}"
+        },
+        {
+          "role": "user",
+          "content": "input: {\"a\":true,\"b\":true,\"expression\":\"(NOT b)\"}"
+        }
+      ],
+      "stream": false,
+      "keep_alive": "10m",
+      "options": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "num_ctx": 8192,
+        "num_predict": 4096,
+        "num_thread": 6,
+        "num_batch": 256,
+        "seed": 1729
+      },
+      "format": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "record": {
+      "case": {
+        "problem_id": "K11",
+        "problem_sha256": "9b5261a692096b5f81a3b85883bdf42362cb2879a0f0303b6b9e1fc20eca32f3",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "criterion_goal_is_fact__v045_not_b",
+        "repeat": 0,
+        "seed": 1729,
+        "task": "operator_atom",
+        "calibration_version": 4,
+        "probe_contract": "operator-v045",
+        "operation": "not_b",
+        "diagnostic_group": "not_b",
+        "format_mode": "schema",
+        "probe_atom": "Cc",
+        "source_projection": {
+          "observed": {
+            "facts": [
+              "Ca",
+              "Cc"
+            ],
+            "goal_atom": "Cc",
+            "probe_atom": "Cc"
+          },
+          "primitives": {
+            "in_facts": true,
+            "same_as_goal": true
+          }
+        },
+        "input_literals": {
+          "a": true,
+          "b": true
+        },
+        "source_case_id": "8c01af1793200b17293c3d53",
+        "source_status": "accepted",
+        "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+        "case_id": "4a876c1518f7fb9ec1765d60"
+      },
+      "run_sha256": "d5f2d76eaeadff369a97a49e398925f6ec9c67ad77b471ff36de5624f959e5e3",
+      "recorded_at": "2026-09-11T01:06:49+00:00",
+      "status": "accepted",
+      "api_attempted": true,
+      "wall_seconds": 0.1915963000010379,
+      "usage": {
+        "prompt_eval_count": 149,
+        "prompt_eval_cached_count": 135,
+        "eval_count": 6,
+        "total_duration": 173337700,
+        "load_duration": 13327700,
+        "prompt_eval_duration": 18830000,
+        "eval_duration": 63127000,
+        "total_seconds": 0.1733377,
+        "load_seconds": 0.0133277,
+        "prompt_eval_seconds": 0.01883,
+        "generation_seconds": 0.063127,
+        "tokens_per_second": 95.04649357644114
+      },
+      "audit": {
+        "valid_completion": true,
+        "role_adherent": null,
+        "calibration_task": "operator_atom/not_b",
+        "task_checks": {
+          "source.observed": true,
+          "source.primitives": true,
+          "input_projection": true,
+          "operator.value": true
+        },
+        "task_comparisons": [
+          {
+            "field": "source.observed",
+            "actual": {
+              "facts": [
+                "Ca",
+                "Cc"
+              ],
+              "goal_atom": "Cc",
+              "probe_atom": "Cc"
+            },
+            "expected": {
+              "probe_atom": "Cc",
+              "goal_atom": "Cc",
+              "facts": [
+                "Ca",
+                "Cc"
+              ]
+            },
+            "matches": true
+          },
+          {
+            "field": "source.primitives",
+            "actual": {
+              "in_facts": true,
+              "same_as_goal": true
+            },
+            "expected": {
+              "same_as_goal": true,
+              "in_facts": true
+            },
+            "matches": true
+          },
+          {
+            "field": "input_projection",
+            "actual": {
+              "a": true,
+              "b": true
+            },
+            "expected": {
+              "a": true,
+              "b": true
+            },
+            "matches": true
+          },
+          {
+            "field": "operator.value",
+            "actual": false,
+            "expected": false,
+            "matches": true
+          }
+        ],
+        "details": {
+          "operation": "not_b",
+          "input_ab": [
+            true,
+            true
+          ],
+          "actual": false,
+          "expected_from_supplied_values": false,
+          "source_prerequisites_correct": true,
+          "operator_correct": true,
+          "source_status": "accepted",
+          "output_modified": false
+        },
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단일 연산 진단이다. 모델 반환값을 보정하지 않고 원래 ADM 성공률에 합산하지 않는다."
+      },
+      "gpu": {
+        "name": "qwen3:4b-instruct",
+        "model": "qwen3:4b-instruct",
+        "size": 3742808145,
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-09-11T10:16:49.9702989+09:00",
+        "size_vram": 3742808145,
+        "context_length": 8192
+      },
+      "error": null,
+      "done_reason": "stop",
+      "task_diagnostics": {
+        "task": "operator_atom",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "operator": {
+          "operation": "not_b",
+          "supplied_literals": {
+            "a": true,
+            "b": true
+          },
+          "returned_value": false,
+          "new_proof_generated": false,
+          "output_modified": false
+        }
+      },
+      "response_channels": {
+        "thinking_field_present": false,
+        "thinking_nonempty": false,
+        "thinking_characters": 0,
+        "final_characters": 15,
+        "final_nonempty": true,
+        "eval_count_scope": "API total generated tokens; no separate final/thinking token counts inferred"
+      },
+      "artifacts_sha256": {
+        "request.json": "3743644fd9c634d8ed240cda68a2b40be3033c3dd92cc1e4ddd853b0a1e4aebe",
+        "request.wire.json": "4d2daf3fe416c1156674f5d0ab70f5e160c91f654322a3a189ca5602f7f85d79",
+        "response.raw.json": "c02b716984a965a77fd9d7f4a5bed688b63eec2d3caa3ada206d7493b224a4bc",
+        "timing.json": "1c96589e0a11b256f80c7be5443ca49dcc836de96373efc67b225fc5214a03ac",
+        "gpu.json": "0ac8cc8498bbfa0cee6d5452ad4534ece05836ee2645006e20f662e5f9147b3d"
+      }
+    },
+    "response": {
+      "model": "qwen3:4b-instruct",
+      "created_at": "2026-09-11T01:06:49.9702989Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"value\":false}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 173337700,
+      "load_duration": 13327700,
+      "prompt_eval_count": 149,
+      "prompt_eval_cached_count": 135,
+      "prompt_eval_duration": 18830000,
+      "eval_count": 6,
+      "eval_duration": 63127000
+    },
+    "response_sha256": "c02b716984a965a77fd9d7f4a5bed688b63eec2d3caa3ada206d7493b224a4bc",
+    "request_sha256": "4d2daf3fe416c1156674f5d0ab70f5e160c91f654322a3a189ca5602f7f85d79"
+  },
+  {
+    "case": {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_goal_not_fact__v045_copy_a",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "operator_atom",
+      "calibration_version": 4,
+      "probe_contract": "operator-v045",
+      "operation": "copy_a",
+      "diagnostic_group": "copy_a",
+      "format_mode": "schema",
+      "probe_atom": "Cc",
+      "source_projection": {
+        "observed": {
+          "facts": [
+            "Ca"
+          ],
+          "goal_atom": "Cc",
+          "probe_atom": "Cc"
+        },
+        "primitives": {
+          "in_facts": false,
+          "same_as_goal": true
+        }
+      },
+      "input_literals": {
+        "a": true,
+        "b": false
+      },
+      "source_case_id": "9ff71e6a994e1993fc42c7a6",
+      "source_status": "invalid_task",
+      "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+      "case_id": "d48a02b02acf27b67a3b4f1c"
+    },
+    "problem": {
+      "id": "K01",
+      "facts": [
+        "Ca"
+      ],
+      "rules": [
+        {
+          "id": "k10",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cb"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Cb"
+          ],
+          "conclusion": "Cc"
+        },
+        {
+          "id": "k03",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cc"
+        }
+      ],
+      "goal": "Cc"
+    },
+    "request": {
+      "model": "qwen3:4b-instruct",
+      "messages": [
+        {
+          "role": "system",
+          "content": "입력의 a와 b는 불리언이다. expression의 식 하나만 계산해 value에 기록한다.\nAND는 두 피연산자가 모두 true일 때 true다. NOT은 true와 false를 뒤집는다. 괄호 안의 연산을 먼저 적용한다.\nJSON 객체 하나만 출력한다. 다음 스키마는 자료형만 제한하며 정답을 지정하지 않는다.\n{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[\"value\"],\"additionalProperties\":false}"
+        },
+        {
+          "role": "user",
+          "content": "input: {\"a\":true,\"b\":false,\"expression\":\"a\"}"
+        }
+      ],
+      "stream": false,
+      "keep_alive": "10m",
+      "options": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "num_ctx": 8192,
+        "num_predict": 4096,
+        "num_thread": 6,
+        "num_batch": 256,
+        "seed": 1729
+      },
+      "format": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "record": {
+      "case": {
+        "problem_id": "K01",
+        "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "criterion_goal_not_fact__v045_copy_a",
+        "repeat": 0,
+        "seed": 1729,
+        "task": "operator_atom",
+        "calibration_version": 4,
+        "probe_contract": "operator-v045",
+        "operation": "copy_a",
+        "diagnostic_group": "copy_a",
+        "format_mode": "schema",
+        "probe_atom": "Cc",
+        "source_projection": {
+          "observed": {
+            "facts": [
+              "Ca"
+            ],
+            "goal_atom": "Cc",
+            "probe_atom": "Cc"
+          },
+          "primitives": {
+            "in_facts": false,
+            "same_as_goal": true
+          }
+        },
+        "input_literals": {
+          "a": true,
+          "b": false
+        },
+        "source_case_id": "9ff71e6a994e1993fc42c7a6",
+        "source_status": "invalid_task",
+        "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+        "case_id": "d48a02b02acf27b67a3b4f1c"
+      },
+      "run_sha256": "d5f2d76eaeadff369a97a49e398925f6ec9c67ad77b471ff36de5624f959e5e3",
+      "recorded_at": "2026-09-11T01:06:50+00:00",
+      "status": "accepted",
+      "api_attempted": true,
+      "wall_seconds": 0.1884026999996422,
+      "usage": {
+        "prompt_eval_count": 146,
+        "prompt_eval_cached_count": 135,
+        "eval_count": 6,
+        "total_duration": 173271700,
+        "load_duration": 13464400,
+        "prompt_eval_duration": 18862000,
+        "eval_duration": 63195000,
+        "total_seconds": 0.1732717,
+        "load_seconds": 0.0134644,
+        "prompt_eval_seconds": 0.018862,
+        "generation_seconds": 0.063195,
+        "tokens_per_second": 94.94422027059103
+      },
+      "audit": {
+        "valid_completion": true,
+        "role_adherent": null,
+        "calibration_task": "operator_atom/copy_a",
+        "task_checks": {
+          "source.observed": true,
+          "source.primitives": true,
+          "input_projection": true,
+          "operator.value": true
+        },
+        "task_comparisons": [
+          {
+            "field": "source.observed",
+            "actual": {
+              "facts": [
+                "Ca"
+              ],
+              "goal_atom": "Cc",
+              "probe_atom": "Cc"
+            },
+            "expected": {
+              "probe_atom": "Cc",
+              "goal_atom": "Cc",
+              "facts": [
+                "Ca"
+              ]
+            },
+            "matches": true
+          },
+          {
+            "field": "source.primitives",
+            "actual": {
+              "in_facts": false,
+              "same_as_goal": true
+            },
+            "expected": {
+              "same_as_goal": true,
+              "in_facts": false
+            },
+            "matches": true
+          },
+          {
+            "field": "input_projection",
+            "actual": {
+              "a": true,
+              "b": false
+            },
+            "expected": {
+              "a": true,
+              "b": false
+            },
+            "matches": true
+          },
+          {
+            "field": "operator.value",
+            "actual": true,
+            "expected": true,
+            "matches": true
+          }
+        ],
+        "details": {
+          "operation": "copy_a",
+          "input_ab": [
+            true,
+            false
+          ],
+          "actual": true,
+          "expected_from_supplied_values": true,
+          "source_prerequisites_correct": true,
+          "operator_correct": true,
+          "source_status": "invalid_task",
+          "output_modified": false
+        },
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단일 연산 진단이다. 모델 반환값을 보정하지 않고 원래 ADM 성공률에 합산하지 않는다."
+      },
+      "gpu": {
+        "name": "qwen3:4b-instruct",
+        "model": "qwen3:4b-instruct",
+        "size": 3742808145,
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-09-11T10:16:50.2429943+09:00",
+        "size_vram": 3742808145,
+        "context_length": 8192
+      },
+      "error": null,
+      "done_reason": "stop",
+      "task_diagnostics": {
+        "task": "operator_atom",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "operator": {
+          "operation": "copy_a",
+          "supplied_literals": {
+            "a": true,
+            "b": false
+          },
+          "returned_value": true,
+          "new_proof_generated": false,
+          "output_modified": false
+        }
+      },
+      "response_channels": {
+        "thinking_field_present": false,
+        "thinking_nonempty": false,
+        "thinking_characters": 0,
+        "final_characters": 14,
+        "final_nonempty": true,
+        "eval_count_scope": "API total generated tokens; no separate final/thinking token counts inferred"
+      },
+      "artifacts_sha256": {
+        "request.json": "cd11ed164c4c7eac8960c127937e6d23382d1e09faea30a1a2c39058f1bfdd3f",
+        "request.wire.json": "eccb426f25c24a0fbb80779aa14139031ab8564a0fec350fa578b31a8d98575f",
+        "response.raw.json": "1df0c11cbcb9cfc5624ef0e597fe17e25fd7a8a851b3960ee2f2b44f1a0a0d7e",
+        "timing.json": "bca6a169475799f106604855c8cde1a7e7cc032c33d57a9b295e4405c8c61b39",
+        "gpu.json": "888cf25505b28d08f71e1c5114c435277e2e1898408c9f5784d83e9f8366051a"
+      }
+    },
+    "response": {
+      "model": "qwen3:4b-instruct",
+      "created_at": "2026-09-11T01:06:50.2429943Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"value\":true}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 173271700,
+      "load_duration": 13464400,
+      "prompt_eval_count": 146,
+      "prompt_eval_cached_count": 135,
+      "prompt_eval_duration": 18862000,
+      "eval_count": 6,
+      "eval_duration": 63195000
+    },
+    "response_sha256": "1df0c11cbcb9cfc5624ef0e597fe17e25fd7a8a851b3960ee2f2b44f1a0a0d7e",
+    "request_sha256": "eccb426f25c24a0fbb80779aa14139031ab8564a0fec350fa578b31a8d98575f"
+  },
+  {
+    "case": {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_neither__v045_copy_a",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "operator_atom",
+      "calibration_version": 4,
+      "probe_contract": "operator-v045",
+      "operation": "copy_a",
+      "diagnostic_group": "copy_a",
+      "format_mode": "schema",
+      "probe_atom": "Cz",
+      "source_projection": {
+        "observed": {
+          "facts": [
+            "Ca"
+          ],
+          "goal_atom": "Cc",
+          "probe_atom": "Cz"
+        },
+        "primitives": {
+          "in_facts": false,
+          "same_as_goal": false
+        }
+      },
+      "input_literals": {
+        "a": false,
+        "b": false
+      },
+      "source_case_id": "27af68287eca0e265cb268db",
+      "source_status": "accepted",
+      "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+      "case_id": "42f42dce5c0b2484aaa41522"
+    },
+    "problem": {
+      "id": "K01",
+      "facts": [
+        "Ca"
+      ],
+      "rules": [
+        {
+          "id": "k10",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cb"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Cb"
+          ],
+          "conclusion": "Cc"
+        },
+        {
+          "id": "k03",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cc"
+        }
+      ],
+      "goal": "Cc"
+    },
+    "request": {
+      "model": "qwen3:4b-instruct",
+      "messages": [
+        {
+          "role": "system",
+          "content": "입력의 a와 b는 불리언이다. expression의 식 하나만 계산해 value에 기록한다.\nAND는 두 피연산자가 모두 true일 때 true다. NOT은 true와 false를 뒤집는다. 괄호 안의 연산을 먼저 적용한다.\nJSON 객체 하나만 출력한다. 다음 스키마는 자료형만 제한하며 정답을 지정하지 않는다.\n{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[\"value\"],\"additionalProperties\":false}"
+        },
+        {
+          "role": "user",
+          "content": "input: {\"a\":false,\"b\":false,\"expression\":\"a\"}"
+        }
+      ],
+      "stream": false,
+      "keep_alive": "10m",
+      "options": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "num_ctx": 8192,
+        "num_predict": 4096,
+        "num_thread": 6,
+        "num_batch": 256,
+        "seed": 1729
+      },
+      "format": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "record": {
+      "case": {
+        "problem_id": "K01",
+        "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "criterion_neither__v045_copy_a",
+        "repeat": 0,
+        "seed": 1729,
+        "task": "operator_atom",
+        "calibration_version": 4,
+        "probe_contract": "operator-v045",
+        "operation": "copy_a",
+        "diagnostic_group": "copy_a",
+        "format_mode": "schema",
+        "probe_atom": "Cz",
+        "source_projection": {
+          "observed": {
+            "facts": [
+              "Ca"
+            ],
+            "goal_atom": "Cc",
+            "probe_atom": "Cz"
+          },
+          "primitives": {
+            "in_facts": false,
+            "same_as_goal": false
+          }
+        },
+        "input_literals": {
+          "a": false,
+          "b": false
+        },
+        "source_case_id": "27af68287eca0e265cb268db",
+        "source_status": "accepted",
+        "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+        "case_id": "42f42dce5c0b2484aaa41522"
+      },
+      "run_sha256": "d5f2d76eaeadff369a97a49e398925f6ec9c67ad77b471ff36de5624f959e5e3",
+      "recorded_at": "2026-09-11T01:06:50+00:00",
+      "status": "accepted",
+      "api_attempted": true,
+      "wall_seconds": 0.18974270000035176,
+      "usage": {
+        "prompt_eval_count": 146,
+        "prompt_eval_cached_count": 131,
+        "eval_count": 6,
+        "total_duration": 174175800,
+        "load_duration": 14202300,
+        "prompt_eval_duration": 19184000,
+        "eval_duration": 63095000,
+        "total_seconds": 0.1741758,
+        "load_seconds": 0.0142023,
+        "prompt_eval_seconds": 0.019184,
+        "generation_seconds": 0.063095,
+        "tokens_per_second": 95.09469847056027
+      },
+      "audit": {
+        "valid_completion": true,
+        "role_adherent": null,
+        "calibration_task": "operator_atom/copy_a",
+        "task_checks": {
+          "source.observed": true,
+          "source.primitives": true,
+          "input_projection": true,
+          "operator.value": true
+        },
+        "task_comparisons": [
+          {
+            "field": "source.observed",
+            "actual": {
+              "facts": [
+                "Ca"
+              ],
+              "goal_atom": "Cc",
+              "probe_atom": "Cz"
+            },
+            "expected": {
+              "probe_atom": "Cz",
+              "goal_atom": "Cc",
+              "facts": [
+                "Ca"
+              ]
+            },
+            "matches": true
+          },
+          {
+            "field": "source.primitives",
+            "actual": {
+              "in_facts": false,
+              "same_as_goal": false
+            },
+            "expected": {
+              "same_as_goal": false,
+              "in_facts": false
+            },
+            "matches": true
+          },
+          {
+            "field": "input_projection",
+            "actual": {
+              "a": false,
+              "b": false
+            },
+            "expected": {
+              "a": false,
+              "b": false
+            },
+            "matches": true
+          },
+          {
+            "field": "operator.value",
+            "actual": false,
+            "expected": false,
+            "matches": true
+          }
+        ],
+        "details": {
+          "operation": "copy_a",
+          "input_ab": [
+            false,
+            false
+          ],
+          "actual": false,
+          "expected_from_supplied_values": false,
+          "source_prerequisites_correct": true,
+          "operator_correct": true,
+          "source_status": "accepted",
+          "output_modified": false
+        },
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단일 연산 진단이다. 모델 반환값을 보정하지 않고 원래 ADM 성공률에 합산하지 않는다."
+      },
+      "gpu": {
+        "name": "qwen3:4b-instruct",
+        "model": "qwen3:4b-instruct",
+        "size": 3742808145,
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-09-11T10:16:50.5164484+09:00",
+        "size_vram": 3742808145,
+        "context_length": 8192
+      },
+      "error": null,
+      "done_reason": "stop",
+      "task_diagnostics": {
+        "task": "operator_atom",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "operator": {
+          "operation": "copy_a",
+          "supplied_literals": {
+            "a": false,
+            "b": false
+          },
+          "returned_value": false,
+          "new_proof_generated": false,
+          "output_modified": false
+        }
+      },
+      "response_channels": {
+        "thinking_field_present": false,
+        "thinking_nonempty": false,
+        "thinking_characters": 0,
+        "final_characters": 15,
+        "final_nonempty": true,
+        "eval_count_scope": "API total generated tokens; no separate final/thinking token counts inferred"
+      },
+      "artifacts_sha256": {
+        "request.json": "5aea9723460d46958ee9b0937e8d6f29a75ba4db36c5763df2ed8d05b8640564",
+        "request.wire.json": "b092c9b0a18ae4ebd3c79d52494392a35a83a1f3cafe923d80030d184adc74b4",
+        "response.raw.json": "fb520bbfa6da92b080821c625450e1ef3aaf62b46d82d4d3f7a392e14fc1f0c6",
+        "timing.json": "ed477896d95cafd9b0c2894d7de4afe6f08a03e4e0c584c7ab10e7205f7e02db",
+        "gpu.json": "5c903f509f2a083b476e4f05aaab9afc56a35732ce43d8c2cdcf7887f8594346"
+      }
+    },
+    "response": {
+      "model": "qwen3:4b-instruct",
+      "created_at": "2026-09-11T01:06:50.5164484Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"value\":false}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 174175800,
+      "load_duration": 14202300,
+      "prompt_eval_count": 146,
+      "prompt_eval_cached_count": 131,
+      "prompt_eval_duration": 19184000,
+      "eval_count": 6,
+      "eval_duration": 63095000
+    },
+    "response_sha256": "fb520bbfa6da92b080821c625450e1ef3aaf62b46d82d4d3f7a392e14fc1f0c6",
+    "request_sha256": "b092c9b0a18ae4ebd3c79d52494392a35a83a1f3cafe923d80030d184adc74b4"
+  },
+  {
+    "case": {
+      "problem_id": "K11",
+      "problem_sha256": "9b5261a692096b5f81a3b85883bdf42362cb2879a0f0303b6b9e1fc20eca32f3",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_goal_is_fact__v045_and_not_b",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "operator_atom",
+      "calibration_version": 4,
+      "probe_contract": "operator-v045",
+      "operation": "and_not_b",
+      "diagnostic_group": "and_not_b",
+      "format_mode": "schema",
+      "probe_atom": "Cc",
+      "source_projection": {
+        "observed": {
+          "facts": [
+            "Ca",
+            "Cc"
+          ],
+          "goal_atom": "Cc",
+          "probe_atom": "Cc"
+        },
+        "primitives": {
+          "in_facts": true,
+          "same_as_goal": true
+        }
+      },
+      "input_literals": {
+        "a": true,
+        "b": true
+      },
+      "source_case_id": "8c01af1793200b17293c3d53",
+      "source_status": "accepted",
+      "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+      "case_id": "1919614581c30bc0f0b9b661"
+    },
+    "problem": {
+      "id": "K11",
+      "facts": [
+        "Ca",
+        "Cc"
+      ],
+      "rules": [
+        {
+          "id": "k10",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cb"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Cb"
+          ],
+          "conclusion": "Cc"
+        },
+        {
+          "id": "k03",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cc"
+        }
+      ],
+      "goal": "Cc"
+    },
+    "request": {
+      "model": "qwen3:4b-instruct",
+      "messages": [
+        {
+          "role": "system",
+          "content": "입력의 a와 b는 불리언이다. expression의 식 하나만 계산해 value에 기록한다.\nAND는 두 피연산자가 모두 true일 때 true다. NOT은 true와 false를 뒤집는다. 괄호 안의 연산을 먼저 적용한다.\nJSON 객체 하나만 출력한다. 다음 스키마는 자료형만 제한하며 정답을 지정하지 않는다.\n{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[\"value\"],\"additionalProperties\":false}"
+        },
+        {
+          "role": "user",
+          "content": "input: {\"a\":true,\"b\":true,\"expression\":\"(a AND (NOT b))\"}"
+        }
+      ],
+      "stream": false,
+      "keep_alive": "10m",
+      "options": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "num_ctx": 8192,
+        "num_predict": 4096,
+        "num_thread": 6,
+        "num_batch": 256,
+        "seed": 1729
+      },
+      "format": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "record": {
+      "case": {
+        "problem_id": "K11",
+        "problem_sha256": "9b5261a692096b5f81a3b85883bdf42362cb2879a0f0303b6b9e1fc20eca32f3",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "criterion_goal_is_fact__v045_and_not_b",
+        "repeat": 0,
+        "seed": 1729,
+        "task": "operator_atom",
+        "calibration_version": 4,
+        "probe_contract": "operator-v045",
+        "operation": "and_not_b",
+        "diagnostic_group": "and_not_b",
+        "format_mode": "schema",
+        "probe_atom": "Cc",
+        "source_projection": {
+          "observed": {
+            "facts": [
+              "Ca",
+              "Cc"
+            ],
+            "goal_atom": "Cc",
+            "probe_atom": "Cc"
+          },
+          "primitives": {
+            "in_facts": true,
+            "same_as_goal": true
+          }
+        },
+        "input_literals": {
+          "a": true,
+          "b": true
+        },
+        "source_case_id": "8c01af1793200b17293c3d53",
+        "source_status": "accepted",
+        "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+        "case_id": "1919614581c30bc0f0b9b661"
+      },
+      "run_sha256": "d5f2d76eaeadff369a97a49e398925f6ec9c67ad77b471ff36de5624f959e5e3",
+      "recorded_at": "2026-09-11T01:06:50+00:00",
+      "status": "accepted",
+      "api_attempted": true,
+      "wall_seconds": 0.1879090999991604,
+      "usage": {
+        "prompt_eval_count": 152,
+        "prompt_eval_cached_count": 131,
+        "eval_count": 6,
+        "total_duration": 172282900,
+        "load_duration": 14240300,
+        "prompt_eval_duration": 18076000,
+        "eval_duration": 63106000,
+        "total_seconds": 0.1722829,
+        "load_seconds": 0.0142403,
+        "prompt_eval_seconds": 0.018076,
+        "generation_seconds": 0.063106,
+        "tokens_per_second": 95.07812252400723
+      },
+      "audit": {
+        "valid_completion": true,
+        "role_adherent": null,
+        "calibration_task": "operator_atom/and_not_b",
+        "task_checks": {
+          "source.observed": true,
+          "source.primitives": true,
+          "input_projection": true,
+          "operator.value": true
+        },
+        "task_comparisons": [
+          {
+            "field": "source.observed",
+            "actual": {
+              "facts": [
+                "Ca",
+                "Cc"
+              ],
+              "goal_atom": "Cc",
+              "probe_atom": "Cc"
+            },
+            "expected": {
+              "probe_atom": "Cc",
+              "goal_atom": "Cc",
+              "facts": [
+                "Ca",
+                "Cc"
+              ]
+            },
+            "matches": true
+          },
+          {
+            "field": "source.primitives",
+            "actual": {
+              "in_facts": true,
+              "same_as_goal": true
+            },
+            "expected": {
+              "same_as_goal": true,
+              "in_facts": true
+            },
+            "matches": true
+          },
+          {
+            "field": "input_projection",
+            "actual": {
+              "a": true,
+              "b": true
+            },
+            "expected": {
+              "a": true,
+              "b": true
+            },
+            "matches": true
+          },
+          {
+            "field": "operator.value",
+            "actual": false,
+            "expected": false,
+            "matches": true
+          }
+        ],
+        "details": {
+          "operation": "and_not_b",
+          "input_ab": [
+            true,
+            true
+          ],
+          "actual": false,
+          "expected_from_supplied_values": false,
+          "source_prerequisites_correct": true,
+          "operator_correct": true,
+          "source_status": "accepted",
+          "output_modified": false
+        },
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단일 연산 진단이다. 모델 반환값을 보정하지 않고 원래 ADM 성공률에 합산하지 않는다."
+      },
+      "gpu": {
+        "name": "qwen3:4b-instruct",
+        "model": "qwen3:4b-instruct",
+        "size": 3742808145,
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-09-11T10:16:50.7917018+09:00",
+        "size_vram": 3742808145,
+        "context_length": 8192
+      },
+      "error": null,
+      "done_reason": "stop",
+      "task_diagnostics": {
+        "task": "operator_atom",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "operator": {
+          "operation": "and_not_b",
+          "supplied_literals": {
+            "a": true,
+            "b": true
+          },
+          "returned_value": false,
+          "new_proof_generated": false,
+          "output_modified": false
+        }
+      },
+      "response_channels": {
+        "thinking_field_present": false,
+        "thinking_nonempty": false,
+        "thinking_characters": 0,
+        "final_characters": 15,
+        "final_nonempty": true,
+        "eval_count_scope": "API total generated tokens; no separate final/thinking token counts inferred"
+      },
+      "artifacts_sha256": {
+        "request.json": "9fd51d76af7d1d41a5a6d66b9a5f44d0374dd06fbb540229694981b00386e003",
+        "request.wire.json": "1a217227c73a805383454baa57697a3a1339785c2db50556c02c894a186c6581",
+        "response.raw.json": "c2b0b44fcb59944b39557c143d7e313f244aea9bd057eae54ac0f0e78179b25f",
+        "timing.json": "263095096224f9c41f61254012864800ae421077cf26f3a86975532299546358",
+        "gpu.json": "6bd53b12de20873f2c1d7587a35f0c92c6e97ef1ca3c1c8d4d27b9f0dad68e5e"
+      }
+    },
+    "response": {
+      "model": "qwen3:4b-instruct",
+      "created_at": "2026-09-11T01:06:50.7917018Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"value\":false}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 172282900,
+      "load_duration": 14240300,
+      "prompt_eval_count": 152,
+      "prompt_eval_cached_count": 131,
+      "prompt_eval_duration": 18076000,
+      "eval_count": 6,
+      "eval_duration": 63106000
+    },
+    "response_sha256": "c2b0b44fcb59944b39557c143d7e313f244aea9bd057eae54ac0f0e78179b25f",
+    "request_sha256": "1a217227c73a805383454baa57697a3a1339785c2db50556c02c894a186c6581"
+  },
+  {
+    "case": {
+      "problem_id": "K01",
+      "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_fact_not_goal__v045_copy_a",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "operator_atom",
+      "calibration_version": 4,
+      "probe_contract": "operator-v045",
+      "operation": "copy_a",
+      "diagnostic_group": "copy_a",
+      "format_mode": "schema",
+      "probe_atom": "Ca",
+      "source_projection": {
+        "observed": {
+          "facts": [
+            "Ca"
+          ],
+          "goal_atom": "Cc",
+          "probe_atom": "Ca"
+        },
+        "primitives": {
+          "in_facts": true,
+          "same_as_goal": false
+        }
+      },
+      "input_literals": {
+        "a": false,
+        "b": true
+      },
+      "source_case_id": "2849bd92ba3b41bef063441b",
+      "source_status": "accepted",
+      "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+      "case_id": "566124c4629d09ac972de4ec"
+    },
+    "problem": {
+      "id": "K01",
+      "facts": [
+        "Ca"
+      ],
+      "rules": [
+        {
+          "id": "k10",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cb"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Cb"
+          ],
+          "conclusion": "Cc"
+        },
+        {
+          "id": "k03",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cc"
+        }
+      ],
+      "goal": "Cc"
+    },
+    "request": {
+      "model": "qwen3:4b-instruct",
+      "messages": [
+        {
+          "role": "system",
+          "content": "입력의 a와 b는 불리언이다. expression의 식 하나만 계산해 value에 기록한다.\nAND는 두 피연산자가 모두 true일 때 true다. NOT은 true와 false를 뒤집는다. 괄호 안의 연산을 먼저 적용한다.\nJSON 객체 하나만 출력한다. 다음 스키마는 자료형만 제한하며 정답을 지정하지 않는다.\n{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[\"value\"],\"additionalProperties\":false}"
+        },
+        {
+          "role": "user",
+          "content": "input: {\"a\":false,\"b\":true,\"expression\":\"a\"}"
+        }
+      ],
+      "stream": false,
+      "keep_alive": "10m",
+      "options": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "num_ctx": 8192,
+        "num_predict": 4096,
+        "num_thread": 6,
+        "num_batch": 256,
+        "seed": 1729
+      },
+      "format": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "record": {
+      "case": {
+        "problem_id": "K01",
+        "problem_sha256": "5268b73a8a295a69c718b101be0321f8ad9a3f93989e6eccbbae5dabd15bbc05",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "criterion_fact_not_goal__v045_copy_a",
+        "repeat": 0,
+        "seed": 1729,
+        "task": "operator_atom",
+        "calibration_version": 4,
+        "probe_contract": "operator-v045",
+        "operation": "copy_a",
+        "diagnostic_group": "copy_a",
+        "format_mode": "schema",
+        "probe_atom": "Ca",
+        "source_projection": {
+          "observed": {
+            "facts": [
+              "Ca"
+            ],
+            "goal_atom": "Cc",
+            "probe_atom": "Ca"
+          },
+          "primitives": {
+            "in_facts": true,
+            "same_as_goal": false
+          }
+        },
+        "input_literals": {
+          "a": false,
+          "b": true
+        },
+        "source_case_id": "2849bd92ba3b41bef063441b",
+        "source_status": "accepted",
+        "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+        "case_id": "566124c4629d09ac972de4ec"
+      },
+      "run_sha256": "d5f2d76eaeadff369a97a49e398925f6ec9c67ad77b471ff36de5624f959e5e3",
+      "recorded_at": "2026-09-11T01:06:50+00:00",
+      "status": "accepted",
+      "api_attempted": true,
+      "wall_seconds": 0.19481470000027912,
+      "usage": {
+        "prompt_eval_count": 146,
+        "prompt_eval_cached_count": 131,
+        "eval_count": 6,
+        "total_duration": 179137300,
+        "load_duration": 13554500,
+        "prompt_eval_duration": 18969000,
+        "eval_duration": 63094000,
+        "total_seconds": 0.1791373,
+        "load_seconds": 0.0135545,
+        "prompt_eval_seconds": 0.018969,
+        "generation_seconds": 0.063094,
+        "tokens_per_second": 95.09620566139411
+      },
+      "audit": {
+        "valid_completion": true,
+        "role_adherent": null,
+        "calibration_task": "operator_atom/copy_a",
+        "task_checks": {
+          "source.observed": true,
+          "source.primitives": true,
+          "input_projection": true,
+          "operator.value": true
+        },
+        "task_comparisons": [
+          {
+            "field": "source.observed",
+            "actual": {
+              "facts": [
+                "Ca"
+              ],
+              "goal_atom": "Cc",
+              "probe_atom": "Ca"
+            },
+            "expected": {
+              "probe_atom": "Ca",
+              "goal_atom": "Cc",
+              "facts": [
+                "Ca"
+              ]
+            },
+            "matches": true
+          },
+          {
+            "field": "source.primitives",
+            "actual": {
+              "in_facts": true,
+              "same_as_goal": false
+            },
+            "expected": {
+              "same_as_goal": false,
+              "in_facts": true
+            },
+            "matches": true
+          },
+          {
+            "field": "input_projection",
+            "actual": {
+              "a": false,
+              "b": true
+            },
+            "expected": {
+              "a": false,
+              "b": true
+            },
+            "matches": true
+          },
+          {
+            "field": "operator.value",
+            "actual": false,
+            "expected": false,
+            "matches": true
+          }
+        ],
+        "details": {
+          "operation": "copy_a",
+          "input_ab": [
+            false,
+            true
+          ],
+          "actual": false,
+          "expected_from_supplied_values": false,
+          "source_prerequisites_correct": true,
+          "operator_correct": true,
+          "source_status": "accepted",
+          "output_modified": false
+        },
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단일 연산 진단이다. 모델 반환값을 보정하지 않고 원래 ADM 성공률에 합산하지 않는다."
+      },
+      "gpu": {
+        "name": "qwen3:4b-instruct",
+        "model": "qwen3:4b-instruct",
+        "size": 3742808145,
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-09-11T10:16:51.0736948+09:00",
+        "size_vram": 3742808145,
+        "context_length": 8192
+      },
+      "error": null,
+      "done_reason": "stop",
+      "task_diagnostics": {
+        "task": "operator_atom",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "operator": {
+          "operation": "copy_a",
+          "supplied_literals": {
+            "a": false,
+            "b": true
+          },
+          "returned_value": false,
+          "new_proof_generated": false,
+          "output_modified": false
+        }
+      },
+      "response_channels": {
+        "thinking_field_present": false,
+        "thinking_nonempty": false,
+        "thinking_characters": 0,
+        "final_characters": 15,
+        "final_nonempty": true,
+        "eval_count_scope": "API total generated tokens; no separate final/thinking token counts inferred"
+      },
+      "artifacts_sha256": {
+        "request.json": "e14241581c1e4c11fff191e875aef076f4eb1e38bdb33e91291b225eade41bcd",
+        "request.wire.json": "f8e7bb164ac6b9f6cdaac14a1bf0e62abc6d76c01c5d03f80fe5be418f65bca6",
+        "response.raw.json": "0de000d495a763d6161ed4246738ccc7e84af9e41b3d0059475a9ec8667ed5ad",
+        "timing.json": "a1cbd2a49cc0b27b965a0fcc0baf978f2d1e75815e36f0eb98ae4ac832c35a58",
+        "gpu.json": "f388fa7bb3fbdc68f3bb7b1db67e885d66b5e72f4d076e2bad850430017c6484"
+      }
+    },
+    "response": {
+      "model": "qwen3:4b-instruct",
+      "created_at": "2026-09-11T01:06:51.0736948Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"value\":false}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 179137300,
+      "load_duration": 13554500,
+      "prompt_eval_count": 146,
+      "prompt_eval_cached_count": 131,
+      "prompt_eval_duration": 18969000,
+      "eval_count": 6,
+      "eval_duration": 63094000
+    },
+    "response_sha256": "0de000d495a763d6161ed4246738ccc7e84af9e41b3d0059475a9ec8667ed5ad",
+    "request_sha256": "f8e7bb164ac6b9f6cdaac14a1bf0e62abc6d76c01c5d03f80fe5be418f65bca6"
+  },
+  {
+    "case": {
+      "problem_id": "K11",
+      "problem_sha256": "9b5261a692096b5f81a3b85883bdf42362cb2879a0f0303b6b9e1fc20eca32f3",
+      "role": {
+        "kind": "neutral",
+        "A": null,
+        "D_policy": null,
+        "M": null
+      },
+      "role_id": "criterion_goal_is_fact__v045_and_ab",
+      "repeat": 0,
+      "seed": 1729,
+      "task": "operator_atom",
+      "calibration_version": 4,
+      "probe_contract": "operator-v045",
+      "operation": "and_ab",
+      "diagnostic_group": "and_ab",
+      "format_mode": "schema",
+      "probe_atom": "Cc",
+      "source_projection": {
+        "observed": {
+          "facts": [
+            "Ca",
+            "Cc"
+          ],
+          "goal_atom": "Cc",
+          "probe_atom": "Cc"
+        },
+        "primitives": {
+          "in_facts": true,
+          "same_as_goal": true
+        }
+      },
+      "input_literals": {
+        "a": true,
+        "b": true
+      },
+      "source_case_id": "8c01af1793200b17293c3d53",
+      "source_status": "accepted",
+      "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+      "case_id": "05a7034438da3992143be421"
+    },
+    "problem": {
+      "id": "K11",
+      "facts": [
+        "Ca",
+        "Cc"
+      ],
+      "rules": [
+        {
+          "id": "k10",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cb"
+        },
+        {
+          "id": "k17",
+          "premises": [
+            "Cb"
+          ],
+          "conclusion": "Cc"
+        },
+        {
+          "id": "k03",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cc"
+        }
+      ],
+      "goal": "Cc"
+    },
+    "request": {
+      "model": "qwen3:4b-instruct",
+      "messages": [
+        {
+          "role": "system",
+          "content": "입력의 a와 b는 불리언이다. expression의 식 하나만 계산해 value에 기록한다.\nAND는 두 피연산자가 모두 true일 때 true다. NOT은 true와 false를 뒤집는다. 괄호 안의 연산을 먼저 적용한다.\nJSON 객체 하나만 출력한다. 다음 스키마는 자료형만 제한하며 정답을 지정하지 않는다.\n{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[\"value\"],\"additionalProperties\":false}"
+        },
+        {
+          "role": "user",
+          "content": "input: {\"a\":true,\"b\":true,\"expression\":\"(a AND b)\"}"
+        }
+      ],
+      "stream": false,
+      "keep_alive": "10m",
+      "options": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "num_ctx": 8192,
+        "num_predict": 4096,
+        "num_thread": 6,
+        "num_batch": 256,
+        "seed": 1729
+      },
+      "format": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "record": {
+      "case": {
+        "problem_id": "K11",
+        "problem_sha256": "9b5261a692096b5f81a3b85883bdf42362cb2879a0f0303b6b9e1fc20eca32f3",
+        "role": {
+          "kind": "neutral",
+          "A": null,
+          "D_policy": null,
+          "M": null
+        },
+        "role_id": "criterion_goal_is_fact__v045_and_ab",
+        "repeat": 0,
+        "seed": 1729,
+        "task": "operator_atom",
+        "calibration_version": 4,
+        "probe_contract": "operator-v045",
+        "operation": "and_ab",
+        "diagnostic_group": "and_ab",
+        "format_mode": "schema",
+        "probe_atom": "Cc",
+        "source_projection": {
+          "observed": {
+            "facts": [
+              "Ca",
+              "Cc"
+            ],
+            "goal_atom": "Cc",
+            "probe_atom": "Cc"
+          },
+          "primitives": {
+            "in_facts": true,
+            "same_as_goal": true
+          }
+        },
+        "input_literals": {
+          "a": true,
+          "b": true
+        },
+        "source_case_id": "8c01af1793200b17293c3d53",
+        "source_status": "accepted",
+        "source_run_sha256": "eba0bb69582de4ef932b54a065da6bc6fc76c4e74b15a11d70accf37357530e5",
+        "case_id": "05a7034438da3992143be421"
+      },
+      "run_sha256": "d5f2d76eaeadff369a97a49e398925f6ec9c67ad77b471ff36de5624f959e5e3",
+      "recorded_at": "2026-09-11T01:06:51+00:00",
+      "status": "accepted",
+      "api_attempted": true,
+      "wall_seconds": 0.20215620000089984,
+      "usage": {
+        "prompt_eval_count": 150,
+        "prompt_eval_cached_count": 131,
+        "eval_count": 6,
+        "total_duration": 187050800,
+        "load_duration": 15412200,
+        "prompt_eval_duration": 18545000,
+        "eval_duration": 65949000,
+        "total_seconds": 0.1870508,
+        "load_seconds": 0.0154122,
+        "prompt_eval_seconds": 0.018545,
+        "generation_seconds": 0.065949,
+        "tokens_per_second": 90.97939316744758
+      },
+      "audit": {
+        "valid_completion": true,
+        "role_adherent": null,
+        "calibration_task": "operator_atom/and_ab",
+        "task_checks": {
+          "source.observed": true,
+          "source.primitives": true,
+          "input_projection": true,
+          "operator.value": true
+        },
+        "task_comparisons": [
+          {
+            "field": "source.observed",
+            "actual": {
+              "facts": [
+                "Ca",
+                "Cc"
+              ],
+              "goal_atom": "Cc",
+              "probe_atom": "Cc"
+            },
+            "expected": {
+              "probe_atom": "Cc",
+              "goal_atom": "Cc",
+              "facts": [
+                "Ca",
+                "Cc"
+              ]
+            },
+            "matches": true
+          },
+          {
+            "field": "source.primitives",
+            "actual": {
+              "in_facts": true,
+              "same_as_goal": true
+            },
+            "expected": {
+              "same_as_goal": true,
+              "in_facts": true
+            },
+            "matches": true
+          },
+          {
+            "field": "input_projection",
+            "actual": {
+              "a": true,
+              "b": true
+            },
+            "expected": {
+              "a": true,
+              "b": true
+            },
+            "matches": true
+          },
+          {
+            "field": "operator.value",
+            "actual": true,
+            "expected": true,
+            "matches": true
+          }
+        ],
+        "details": {
+          "operation": "and_ab",
+          "input_ab": [
+            true,
+            true
+          ],
+          "actual": true,
+          "expected_from_supplied_values": true,
+          "source_prerequisites_correct": true,
+          "operator_correct": true,
+          "source_status": "accepted",
+          "output_modified": false
+        },
+        "negative_controls": [],
+        "negative_controls_ok": null,
+        "interpretation": "단일 연산 진단이다. 모델 반환값을 보정하지 않고 원래 ADM 성공률에 합산하지 않는다."
+      },
+      "gpu": {
+        "name": "qwen3:4b-instruct",
+        "model": "qwen3:4b-instruct",
+        "size": 3742808145,
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-09-11T10:16:51.3678366+09:00",
+        "size_vram": 3742808145,
+        "context_length": 8192
+      },
+      "error": null,
+      "done_reason": "stop",
+      "task_diagnostics": {
+        "task": "operator_atom",
+        "score_effect": "none",
+        "output_modified": false,
+        "json_valid": true,
+        "shape_errors": [],
+        "operator": {
+          "operation": "and_ab",
+          "supplied_literals": {
+            "a": true,
+            "b": true
+          },
+          "returned_value": true,
+          "new_proof_generated": false,
+          "output_modified": false
+        }
+      },
+      "response_channels": {
+        "thinking_field_present": false,
+        "thinking_nonempty": false,
+        "thinking_characters": 0,
+        "final_characters": 14,
+        "final_nonempty": true,
+        "eval_count_scope": "API total generated tokens; no separate final/thinking token counts inferred"
+      },
+      "artifacts_sha256": {
+        "request.json": "796c0b2a43c9de2c7eba1d9e3a492ee063525b7c939472ca25f9e4398bd9751b",
+        "request.wire.json": "87100a074745db12960d2f4fd5ffc71c3fc4aea10ca23c9984e59764a42d54b5",
+        "response.raw.json": "ed167b891a63511df437460d634da7d2807f3959401b5dac0a7402d40e0b83c9",
+        "timing.json": "b2997765b13d9fd52ecb3a3cc81ff373dc57a2c11b7b471bd10a80600f62b34a",
+        "gpu.json": "1debf4c1611a651541c697c7daef4ca890371ed61bef9f5daf1e2c28240f5535"
+      }
+    },
+    "response": {
+      "model": "qwen3:4b-instruct",
+      "created_at": "2026-09-11T01:06:51.3678366Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"value\":true}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 187050800,
+      "load_duration": 15412200,
+      "prompt_eval_count": 150,
+      "prompt_eval_cached_count": 131,
+      "prompt_eval_duration": 18545000,
+      "eval_count": 6,
+      "eval_duration": 65949000
+    },
+    "response_sha256": "ed167b891a63511df437460d634da7d2807f3959401b5dac0a7402d40e0b83c9",
+    "request_sha256": "87100a074745db12960d2f4fd5ffc71c3fc4aea10ca23c9984e59764a42d54b5"
+  }
+]

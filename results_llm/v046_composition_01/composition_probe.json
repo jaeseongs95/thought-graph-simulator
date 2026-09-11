@@ -1,0 +1,153 @@
+{
+  "rows": [
+    {
+      "input_ab": [
+        false,
+        false
+      ],
+      "expected": false,
+      "baseline_direct": {
+        "status": "accepted",
+        "value": false
+      },
+      "commuted": {
+        "case_id": "bab465fe7cf72a1911dd236f",
+        "status": "accepted",
+        "value": false,
+        "accepted": true,
+        "response_sha256": "8db49fffea8134c603ca7705cdeece82b146f22bf1f8394f9c2b69db97d76b55"
+      },
+      "not": {
+        "case_id": "0f7253ffb49a408650917365",
+        "status": "accepted",
+        "value": true,
+        "accepted": true,
+        "response_sha256": "2948d2e6128381b998e2701b544e4f381ea744716b3f78b557b561b279f9fea5"
+      },
+      "and_after_not": {
+        "case_id": "963e0e50f50089e8fbf88a50",
+        "status": "accepted",
+        "value": false,
+        "accepted": true,
+        "response_sha256": "56f0c6844c466265cc1ae69b985913fc114abd0c25cb481a63aaaaf657db4829"
+      },
+      "pipeline_pass": true,
+      "final_formula_correct": true
+    },
+    {
+      "input_ab": [
+        false,
+        true
+      ],
+      "expected": false,
+      "baseline_direct": {
+        "status": "accepted",
+        "value": false
+      },
+      "commuted": {
+        "case_id": "c288b2d7cc0620e12379c3ed",
+        "status": "accepted",
+        "value": false,
+        "accepted": true,
+        "response_sha256": "b8951d583f26fb057e565a4633fec5e1cb88368bd04d47f797c3e4756d5eee22"
+      },
+      "not": {
+        "case_id": "fb569d057764d4e74c20eeb5",
+        "status": "accepted",
+        "value": false,
+        "accepted": true,
+        "response_sha256": "7d779b09d44a2583198d26ba659175e043b62eec734954ea2b78626eb7edfbc1"
+      },
+      "and_after_not": {
+        "case_id": "2d488c8d707b13ad7b5f1c5b",
+        "status": "accepted",
+        "value": false,
+        "accepted": true,
+        "response_sha256": "920bc457642685d306c87c32a32fc717d83511d712661998c01cd864f3df8936"
+      },
+      "pipeline_pass": true,
+      "final_formula_correct": true
+    },
+    {
+      "input_ab": [
+        true,
+        false
+      ],
+      "expected": true,
+      "baseline_direct": {
+        "status": "invalid_task",
+        "value": false
+      },
+      "commuted": {
+        "case_id": "489d82e0c834f64f71393d2c",
+        "status": "accepted",
+        "value": true,
+        "accepted": true,
+        "response_sha256": "a7511d4b8dcc56643e5cf5ad8acc1de90bcfb699f9fc38afcc19f511fe69d8e3"
+      },
+      "not": {
+        "case_id": "b81d5c481a14187279b2a796",
+        "status": "accepted",
+        "value": true,
+        "accepted": true,
+        "response_sha256": "cfa96344614b27c638958eed8380b1996056215eed3d376be78a8483dfc10e67"
+      },
+      "and_after_not": {
+        "case_id": "6502b35caef6083e165ed327",
+        "status": "accepted",
+        "value": true,
+        "accepted": true,
+        "response_sha256": "25b8a378cd548ab4492533fa544657da9408b3bce9054ce1f0b2a2274e261220"
+      },
+      "pipeline_pass": true,
+      "final_formula_correct": true
+    },
+    {
+      "input_ab": [
+        true,
+        true
+      ],
+      "expected": false,
+      "baseline_direct": {
+        "status": "accepted",
+        "value": false
+      },
+      "commuted": {
+        "case_id": "0417dcd8f34e74a8429bcc63",
+        "status": "accepted",
+        "value": false,
+        "accepted": true,
+        "response_sha256": "6982c2c93e42485b0f566c0cb881e94bfb6a253aa514bf19e9a6aa7b72166a71"
+      },
+      "not": {
+        "case_id": "28c2e16fc3e9fb3912ff004f",
+        "status": "accepted",
+        "value": false,
+        "accepted": true,
+        "response_sha256": "a732d8daf67ec6b1906c956da76670a7e3143d57e8b343121533aed94eb2619f"
+      },
+      "and_after_not": {
+        "case_id": "9f9bdd107a5f481786e887fc",
+        "status": "accepted",
+        "value": false,
+        "accepted": true,
+        "response_sha256": "143ba21334e44c42915654db81cf99a72202489528e80f63fbe2cb8f790ab161"
+      },
+      "pipeline_pass": true,
+      "final_formula_correct": true
+    }
+  ],
+  "pipeline_assigned": 4,
+  "pipeline_passed": 4,
+  "final_formula_correct": 4,
+  "blocked_inputs": [],
+  "fresh_not_calls_recorded": 4,
+  "fresh_and_calls_recorded": 4,
+  "commuted_calls_recorded": 4,
+  "original_failures_preserved": true,
+  "host_evaluated_answer_in_request": false,
+  "host_supplied_dependency_graph": "NOT(b) -> AND(a, previous_model_value)",
+  "ADM_success": false,
+  "scope": "이전 중간 입력을 재사용한다. NOT와 AND는 새 호출이며 전처리 추출까지 포함한 신규 종단 간 실행은 아니다.",
+  "causal_limit": "직접식 대 체인은 호출 수/식 구조/입력 배치가 함께 다르다. 일반적 모델 크기/양자화 효과나 내부 원인 확정이 아니다."
+}
