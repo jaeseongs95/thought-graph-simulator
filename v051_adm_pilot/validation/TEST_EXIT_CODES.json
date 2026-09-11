@@ -1,0 +1,8 @@
+{
+  "FULL_SELFTEST.exit": "0",
+  "REAL_BASELINE_PREPARE.exit": "0",
+  "RELEASE_SELFTEST.exit": "0",
+  "REVIEW_AFTER_FIX.exit": "0",
+  "REVIEW_BEFORE_FIX.exit": "1",
+  "SYNTHETIC_VALIDATION.exit": "0"
+}

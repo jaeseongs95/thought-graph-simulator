@@ -1,0 +1,48 @@
+test_component_contrast_not_erased_by_wrong_M2_finding (tests_v051.test_review_regressions.ReviewRegressions.test_component_contrast_not_erased_by_wrong_M2_finding) ... ERROR
+test_malformed_M2_finding_does_not_erase_valid_proof_A_D (tests_v051.test_review_regressions.ReviewRegressions.test_malformed_M2_finding_does_not_erase_valid_proof_A_D) ... FAIL
+test_malformed_view_does_not_erase_valid_support_depth (tests_v051.test_review_regressions.ReviewRegressions.test_malformed_view_does_not_erase_valid_support_depth) ... FAIL
+test_raw_http_M2_format_failure_keeps_AD_observations (tests_v051.test_review_regressions.ReviewRegressions.test_raw_http_M2_format_failure_keeps_AD_observations) ... FAIL
+
+======================================================================
+ERROR: test_component_contrast_not_erased_by_wrong_M2_finding (tests_v051.test_review_regressions.ReviewRegressions.test_component_contrast_not_erased_by_wrong_M2_finding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v051_adm_pilot/tests_v051/test_review_regressions.py", line 25, in test_component_contrast_not_erased_by_wrong_M2_finding
+    self.assertEqual(sum(x['coordinate_change_observed'] for x in a),120)
+                     ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/v051_adm_pilot/tests_v051/test_review_regressions.py", line 25, in <genexpr>
+    self.assertEqual(sum(x['coordinate_change_observed'] for x in a),120)
+                         ~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'coordinate_change_observed'
+
+======================================================================
+FAIL: test_malformed_M2_finding_does_not_erase_valid_proof_A_D (tests_v051.test_review_regressions.ReviewRegressions.test_malformed_M2_finding_does_not_erase_valid_proof_A_D)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v051_adm_pilot/tests_v051/test_review_regressions.py", line 13, in test_malformed_M2_finding_does_not_erase_valid_proof_A_D
+    self.assertTrue(m['proof_valid']);self.assertEqual((m['A'],m['D'],m['M']),('schema',2,2))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+AssertionError: None is not true
+
+======================================================================
+FAIL: test_malformed_view_does_not_erase_valid_support_depth (tests_v051.test_review_regressions.ReviewRegressions.test_malformed_view_does_not_erase_valid_support_depth)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v051_adm_pilot/tests_v051/test_review_regressions.py", line 16, in test_malformed_view_does_not_erase_valid_support_depth
+    m=measure(PROBLEM,t);self.assertFalse(m['format_valid']);self.assertTrue(m['proof_valid']);self.assertEqual(m['D'],2)
+                                                             ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+AssertionError: None is not true
+
+======================================================================
+FAIL: test_raw_http_M2_format_failure_keeps_AD_observations (tests_v051.test_review_regressions.ReviewRegressions.test_raw_http_M2_format_failure_keeps_AD_observations)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v051_adm_pilot/tests_v051/test_review_regressions.py", line 20, in test_raw_http_M2_format_failure_keeps_AD_observations
+    self.assertEqual(sum(x['proof_valid'] for x in r['roles'].values()),240)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 160 != 240
+
+----------------------------------------------------------------------
+Ran 4 tests in 10.459s
+
+FAILED (failures=3, errors=1)

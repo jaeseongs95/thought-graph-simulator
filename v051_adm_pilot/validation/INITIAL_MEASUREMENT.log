@@ -1,0 +1,38 @@
+test_M1_accurately_rejects_invalid_proof_not_full_success (tests_v051.test_measure.Measurement.test_M1_accurately_rejects_invalid_proof_not_full_success) ... ok
+test_M1_false_verdict (tests_v051.test_measure.Measurement.test_M1_false_verdict) ... ok
+test_M1_missing_evidence (tests_v051.test_measure.Measurement.test_M1_missing_evidence) ... ok
+test_M1_wrong_used_rules (tests_v051.test_measure.Measurement.test_M1_wrong_used_rules) ... ok
+test_M2_alone_no_required_M1 (tests_v051.test_measure.Measurement.test_M2_alone_no_required_M1) ... ok
+test_M2_false_finding_preserves_target_and_AD (tests_v051.test_measure.Measurement.test_M2_false_finding_preserves_target_and_AD) ... ok
+test_M2_wrong_probe (tests_v051.test_measure.Measurement.test_M2_wrong_probe) ... ok
+test_all_12_roles (tests_v051.test_measure.Measurement.test_all_12_roles) ... ok
+test_all_eight_M2_bool_combinations (tests_v051.test_measure.Measurement.test_all_eight_M2_bool_combinations) ... ok
+test_changed_goal (tests_v051.test_measure.Measurement.test_changed_goal) ... ok
+test_cycle (tests_v051.test_measure.Measurement.test_cycle) ... ok
+test_duplicate_node_id (tests_v051.test_measure.Measurement.test_duplicate_node_id) ... ok
+test_duplicate_parent (tests_v051.test_measure.Measurement.test_duplicate_parent) ... ok
+test_duplicate_schema_assumption (tests_v051.test_measure.Measurement.test_duplicate_schema_assumption) ... ok
+test_extra_ADM_selflabels_rejected (tests_v051.test_measure.Measurement.test_extra_ADM_selflabels_rejected) ... ok
+test_extra_review_not_clean_M_role (tests_v051.test_measure.Measurement.test_extra_review_not_clean_M_role) ... ok
+test_forward_reference (tests_v051.test_measure.Measurement.test_forward_reference) ... ok
+test_goal_string_without_proof_fails (tests_v051.test_measure.Measurement.test_goal_string_without_proof_fails) ... ok
+test_missing_parent (tests_v051.test_measure.Measurement.test_missing_parent) ... ok
+test_missing_requested_review_not_role_match (tests_v051.test_measure.Measurement.test_missing_requested_review_not_role_match) ... ok
+test_missing_schema_assumption (tests_v051.test_measure.Measurement.test_missing_schema_assumption) ... ok
+test_mixed_A_not_claimed_uniform (tests_v051.test_measure.Measurement.test_mixed_A_not_claimed_uniform) ... ok
+test_no_integer_boolean (tests_v051.test_measure.Measurement.test_no_integer_boolean) ... ok
+test_non_bijective_binding (tests_v051.test_measure.Measurement.test_non_bijective_binding) ... ok
+test_nonexistent_rule (tests_v051.test_measure.Measurement.test_nonexistent_rule) ... ok
+test_renamed_variables_preserve_A (tests_v051.test_measure.Measurement.test_renamed_variables_preserve_A) ... ok
+test_requested_role_does_not_create_measurement (tests_v051.test_measure.Measurement.test_requested_role_does_not_create_measurement) ... ok
+test_review_does_not_add_support_depth (tests_v051.test_measure.Measurement.test_review_does_not_add_support_depth) ... ok
+test_target_added_as_assumption_rejected (tests_v051.test_measure.Measurement.test_target_added_as_assumption_rejected) ... ok
+test_unrelated_nodes_do_not_inflate_depth (tests_v051.test_measure.Measurement.test_unrelated_nodes_do_not_inflate_depth) ... ok
+test_unused_binding (tests_v051.test_measure.Measurement.test_unused_binding) ... ok
+test_wrong_M2_target (tests_v051.test_measure.Measurement.test_wrong_M2_target) ... ok
+test_wrong_view_atom (tests_v051.test_measure.Measurement.test_wrong_view_atom) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 0.003s
+
+OK

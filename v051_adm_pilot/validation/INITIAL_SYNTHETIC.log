@@ -1,0 +1,2 @@
+{'data_integrity': True, 'data_complete': True, 'inference_calls': 240, 'all_requested_roles_succeeded': True}
+{'instance_shallow_M0': 20, 'instance_shallow_M1': 20, 'instance_shallow_M2': 20, 'instance_deep_M0': 20, 'instance_deep_M1': 20, 'instance_deep_M2': 20, 'schema_shallow_M0': 20, 'schema_shallow_M1': 20, 'schema_shallow_M2': 20, 'schema_deep_M0': 20, 'schema_deep_M1': 20, 'schema_deep_M2': 20}

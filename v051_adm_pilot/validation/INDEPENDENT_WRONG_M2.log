@@ -1,0 +1,25 @@
+{
+  "bundle_sha256": "7cba57d77e72cefa71e79aa4a1368e641e4bcd9cbef6be2e3291bc39461b843c",
+  "manifest_files_checked": 537,
+  "http_calls_checked": 240,
+  "fixed_problem_and_goal": true,
+  "event_tip": "e07ca38ef54fde19d2cc1d6afdbd241f5703d0c88718946ab95b448cb61ac985",
+  "role_matches": {
+    "instance_shallow_M0": 20,
+    "instance_shallow_M1": 20,
+    "instance_shallow_M2": 0,
+    "instance_deep_M0": 20,
+    "instance_deep_M1": 20,
+    "instance_deep_M2": 0,
+    "schema_shallow_M0": 20,
+    "schema_shallow_M1": 20,
+    "schema_shallow_M2": 0,
+    "schema_deep_M0": 20,
+    "schema_deep_M1": 20,
+    "schema_deep_M2": 0
+  },
+  "strict_valid_total": 160,
+  "production_imports": false,
+  "scores_match_saved_report": true,
+  "evidence_kind": "synthetic_fixture"
+}

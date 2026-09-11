@@ -1,0 +1,9 @@
+{
+  "contract": "v051-adm-pilot-report-r1",
+  "data_integrity": true,
+  "data_complete": true,
+  "comparative_analysis_ready": true,
+  "inference_calls": 240,
+  "plan_sha256": "6e52eaa9fc55a889e7244c051bf66aad63483b9cde8086bdb9e15e81350bf5bf",
+  "event_tip": "10e36f31329cf319ad54c8c417d7921e4ebe27f6a80b39c6917d0f8d887626c2"
+}

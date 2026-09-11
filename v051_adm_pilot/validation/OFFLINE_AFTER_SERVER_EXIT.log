@@ -1,0 +1,8 @@
+{
+  "data_integrity": true,
+  "data_complete": true,
+  "comparative_analysis_ready": true,
+  "evidence_kind": "synthetic_fixture",
+  "inference_calls": 240,
+  "max_inference_calls": 240
+}
