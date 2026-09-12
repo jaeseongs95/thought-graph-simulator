@@ -12,7 +12,7 @@
 | 연구 문서 | `docs/`, `research/` | 기준선 연구 노트와 논문·보충 자료 |
 | 현재 LLM 기준선 | `local_llm/` | v0.4.6 실행 코드 |
 | 초기 LLM 실험 | `archive/local_llm/` | v0.1~v0.4.5 계열의 역사적 소스 스냅샷 |
-| v047 이후 실험 코드 | `v047_paired_probe/` ~ `v057_selection_probe/` | 버전마다 동결된 구현, 시험, 실행 스크립트, 검증 자료 |
+| v047 이후 실험 코드 | `v047_paired_probe/` ~ `v054_order_probe/` | 현재 Git에 기록된 버전별 구현, 시험, 실행 스크립트, 검증 자료 |
 | 실행 전 동결 계획 | `experiments_v047/` ~ `experiments_v054/` | 해당 버전의 실험 입력 또는 계획 |
 | LLM 실행 결과 | `results_llm/` | run별 원문, 감사 결과, capture, plan, evidence ZIP |
 | 배포 무결성 | `MANIFEST.sha256` | 결정론적 기준선 배포 파일의 SHA-256 목록 |
@@ -42,10 +42,7 @@
 ├─ v051_adm_pilot
 ├─ v052_adm_diagnostic
 ├─ v053_depth_probe
-├─ v054_order_probe
-├─ v055_model_probe
-├─ v056_layout_probe
-└─ v057_selection_probe
+└─ v054_order_probe
 
 연구 자료
 ├─ docs/                           결정론적 기준선 연구 노트
