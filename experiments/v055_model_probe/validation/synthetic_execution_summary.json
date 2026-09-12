@@ -1,0 +1,618 @@
+[
+  {
+    "mode": "perfect",
+    "calls": 240,
+    "complete": true,
+    "kind": "synthetic_fixture",
+    "independent": {
+      "evidence_kind": "synthetic_fixture",
+      "bundle_sha256": "bc251accbce59b5849a9f367efad685ae7598091d82e4d9fae51b5187c701895",
+      "manifest_files": 622,
+      "observed_responses": 240,
+      "metadata_records": 40,
+      "data_complete": true,
+      "semantic_fields_compared": 2203,
+      "differences": [],
+      "models": {
+        "reference": {
+          "observed": 120,
+          "valid_proofs": 120,
+          "selective_pairs": 40,
+          "robust_groups": 20,
+          "order_depth_changed": 0,
+          "order_unmeasured": 0
+        },
+        "candidate": {
+          "observed": 120,
+          "valid_proofs": 120,
+          "selective_pairs": 40,
+          "robust_groups": 20,
+          "order_depth_changed": 0,
+          "order_unmeasured": 0
+        }
+      },
+      "scope": "독립 원문 그래프·대응 비교·해시 검사. metadata identity 의미와 파일 허용목록/계획 계약은 생산 감사와 병행. 새 실제 LLM 추론 결과 아님."
+    },
+    "cross_model_results": {
+      "K01/original": {
+        "assigned": 10,
+        "observed_pairs": 10,
+        "unobserved_pairs": 0,
+        "both_success": 10,
+        "reference_only": 0,
+        "candidate_only": 0,
+        "neither_success": 0,
+        "candidate_minus_reference_rate": 0.0
+      },
+      "K01/swapped": {
+        "assigned": 10,
+        "observed_pairs": 10,
+        "unobserved_pairs": 0,
+        "both_success": 10,
+        "reference_only": 0,
+        "candidate_only": 0,
+        "neither_success": 0,
+        "candidate_minus_reference_rate": 0.0
+      },
+      "T02/original": {
+        "assigned": 10,
+        "observed_pairs": 10,
+        "unobserved_pairs": 0,
+        "both_success": 10,
+        "reference_only": 0,
+        "candidate_only": 0,
+        "neither_success": 0,
+        "candidate_minus_reference_rate": 0.0
+      },
+      "T02/swapped": {
+        "assigned": 10,
+        "observed_pairs": 10,
+        "unobserved_pairs": 0,
+        "both_success": 10,
+        "reference_only": 0,
+        "candidate_only": 0,
+        "neither_success": 0,
+        "candidate_minus_reference_rate": 0.0
+      }
+    }
+  },
+  {
+    "mode": "first_branch",
+    "calls": 240,
+    "complete": true,
+    "kind": "synthetic_fixture",
+    "independent": {
+      "evidence_kind": "synthetic_fixture",
+      "bundle_sha256": "d871811aee2a62ac57cda3ec610e5ce499a877bc4cdfd7f23e9b8a94b7c0d83c",
+      "manifest_files": 622,
+      "observed_responses": 240,
+      "metadata_records": 40,
+      "data_complete": true,
+      "semantic_fields_compared": 2203,
+      "differences": [],
+      "models": {
+        "reference": {
+          "observed": 120,
+          "valid_proofs": 120,
+          "selective_pairs": 0,
+          "robust_groups": 0,
+          "order_depth_changed": 60,
+          "order_unmeasured": 0
+        },
+        "candidate": {
+          "observed": 120,
+          "valid_proofs": 120,
+          "selective_pairs": 0,
+          "robust_groups": 0,
+          "order_depth_changed": 60,
+          "order_unmeasured": 0
+        }
+      },
+      "scope": "독립 원문 그래프·대응 비교·해시 검사. metadata identity 의미와 파일 허용목록/계획 계약은 생산 감사와 병행. 새 실제 LLM 추론 결과 아님."
+    },
+    "cross_model_results": {
+      "K01/original": {
+        "assigned": 10,
+        "observed_pairs": 10,
+        "unobserved_pairs": 0,
+        "both_success": 0,
+        "reference_only": 0,
+        "candidate_only": 0,
+        "neither_success": 10,
+        "candidate_minus_reference_rate": 0.0
+      },
+      "K01/swapped": {
+        "assigned": 10,
+        "observed_pairs": 10,
+        "unobserved_pairs": 0,
+        "both_success": 0,
+        "reference_only": 0,
+        "candidate_only": 0,
+        "neither_success": 10,
+        "candidate_minus_reference_rate": 0.0
+      },
+      "T02/original": {
+        "assigned": 10,
+        "observed_pairs": 10,
+        "unobserved_pairs": 0,
+        "both_success": 0,
+        "reference_only": 0,
+        "candidate_only": 0,
+        "neither_success": 10,
+        "candidate_minus_reference_rate": 0.0
+      },
+      "T02/swapped": {
+        "assigned": 10,
+        "observed_pairs": 10,
+        "unobserved_pairs": 0,
+        "both_success": 0,
+        "reference_only": 0,
+        "candidate_only": 0,
+        "neither_success": 10,
+        "candidate_minus_reference_rate": 0.0
+      }
+    }
+  },
+  {
+    "mode": "v054_vs_perfect",
+    "calls": 240,
+    "complete": true,
+    "kind": "synthetic_fixture",
+    "independent": {
+      "evidence_kind": "synthetic_fixture",
+      "bundle_sha256": "585dd9a28f93bfb79beab66b9cff5a36a1e184da98bec58aa9fe3d655c6ac4ef",
+      "manifest_files": 622,
+      "observed_responses": 240,
+      "metadata_records": 40,
+      "data_complete": true,
+      "semantic_fields_compared": 2203,
+      "differences": [],
+      "models": {
+        "reference": {
+          "observed": 120,
+          "valid_proofs": 90,
+          "selective_pairs": 0,
+          "robust_groups": 0,
+          "order_depth_changed": 30,
+          "order_unmeasured": 30
+        },
+        "candidate": {
+          "observed": 120,
+          "valid_proofs": 120,
+          "selective_pairs": 40,
+          "robust_groups": 20,
+          "order_depth_changed": 0,
+          "order_unmeasured": 0
+        }
+      },
+      "scope": "독립 원문 그래프·대응 비교·해시 검사. metadata identity 의미와 파일 허용목록/계획 계약은 생산 감사와 병행. 새 실제 LLM 추론 결과 아님."
+    },
+    "cross_model_results": {
+      "K01/original": {
+        "assigned": 10,
+        "observed_pairs": 10,
+        "unobserved_pairs": 0,
+        "both_success": 0,
+        "reference_only": 0,
+        "candidate_only": 10,
+        "neither_success": 0,
+        "candidate_minus_reference_rate": 1.0
+      },
+      "K01/swapped": {
+        "assigned": 10,
+        "observed_pairs": 10,
+        "unobserved_pairs": 0,
+        "both_success": 0,
+        "reference_only": 0,
+        "candidate_only": 10,
+        "neither_success": 0,
+        "candidate_minus_reference_rate": 1.0
+      },
+      "T02/original": {
+        "assigned": 10,
+        "observed_pairs": 10,
+        "unobserved_pairs": 0,
+        "both_success": 0,
+        "reference_only": 0,
+        "candidate_only": 10,
+        "neither_success": 0,
+        "candidate_minus_reference_rate": 1.0
+      },
+      "T02/swapped": {
+        "assigned": 10,
+        "observed_pairs": 10,
+        "unobserved_pairs": 0,
+        "both_success": 0,
+        "reference_only": 0,
+        "candidate_only": 10,
+        "neither_success": 0,
+        "candidate_minus_reference_rate": 1.0
+      }
+    }
+  },
+  {
+    "mode": "candidate_first",
+    "calls": 240,
+    "complete": true,
+    "kind": "synthetic_fixture",
+    "independent": {
+      "evidence_kind": "synthetic_fixture",
+      "bundle_sha256": "091b7e3e0cb46ffe1b2528dec4515ccb5d62f84eb717e76aafd72be05d03f182",
+      "manifest_files": 622,
+      "observed_responses": 240,
+      "metadata_records": 40,
+      "data_complete": true,
+      "semantic_fields_compared": 2203,
+      "differences": [],
+      "models": {
+        "reference": {
+          "observed": 120,
+          "valid_proofs": 120,
+          "selective_pairs": 40,
+          "robust_groups": 20,
+          "order_depth_changed": 0,
+          "order_unmeasured": 0
+        },
+        "candidate": {
+          "observed": 120,
+          "valid_proofs": 120,
+          "selective_pairs": 0,
+          "robust_groups": 0,
+          "order_depth_changed": 60,
+          "order_unmeasured": 0
+        }
+      },
+      "scope": "독립 원문 그래프·대응 비교·해시 검사. metadata identity 의미와 파일 허용목록/계획 계약은 생산 감사와 병행. 새 실제 LLM 추론 결과 아님."
+    },
+    "cross_model_results": {
+      "K01/original": {
+        "assigned": 10,
+        "observed_pairs": 10,
+        "unobserved_pairs": 0,
+        "both_success": 0,
+        "reference_only": 10,
+        "candidate_only": 0,
+        "neither_success": 0,
+        "candidate_minus_reference_rate": -1.0
+      },
+      "K01/swapped": {
+        "assigned": 10,
+        "observed_pairs": 10,
+        "unobserved_pairs": 0,
+        "both_success": 0,
+        "reference_only": 10,
+        "candidate_only": 0,
+        "neither_success": 0,
+        "candidate_minus_reference_rate": -1.0
+      },
+      "T02/original": {
+        "assigned": 10,
+        "observed_pairs": 10,
+        "unobserved_pairs": 0,
+        "both_success": 0,
+        "reference_only": 10,
+        "candidate_only": 0,
+        "neither_success": 0,
+        "candidate_minus_reference_rate": -1.0
+      },
+      "T02/swapped": {
+        "assigned": 10,
+        "observed_pairs": 10,
+        "unobserved_pairs": 0,
+        "both_success": 0,
+        "reference_only": 10,
+        "candidate_only": 0,
+        "neither_success": 0,
+        "candidate_minus_reference_rate": -1.0
+      }
+    }
+  },
+  {
+    "mode": "invalid_rule",
+    "calls": 240,
+    "complete": true,
+    "kind": "synthetic_fixture",
+    "independent": {
+      "evidence_kind": "synthetic_fixture",
+      "bundle_sha256": "fccbf109dcff969c6cc723ff164606975a1957fe674b6bc0e504a108e87d2d61",
+      "manifest_files": 622,
+      "observed_responses": 240,
+      "metadata_records": 40,
+      "data_complete": true,
+      "semantic_fields_compared": 2203,
+      "differences": [],
+      "models": {
+        "reference": {
+          "observed": 120,
+          "valid_proofs": 0,
+          "selective_pairs": 0,
+          "robust_groups": 0,
+          "order_depth_changed": 0,
+          "order_unmeasured": 60
+        },
+        "candidate": {
+          "observed": 120,
+          "valid_proofs": 0,
+          "selective_pairs": 0,
+          "robust_groups": 0,
+          "order_depth_changed": 0,
+          "order_unmeasured": 60
+        }
+      },
+      "scope": "독립 원문 그래프·대응 비교·해시 검사. metadata identity 의미와 파일 허용목록/계획 계약은 생산 감사와 병행. 새 실제 LLM 추론 결과 아님."
+    },
+    "cross_model_results": {
+      "K01/original": {
+        "assigned": 10,
+        "observed_pairs": 10,
+        "unobserved_pairs": 0,
+        "both_success": 0,
+        "reference_only": 0,
+        "candidate_only": 0,
+        "neither_success": 10,
+        "candidate_minus_reference_rate": 0.0
+      },
+      "K01/swapped": {
+        "assigned": 10,
+        "observed_pairs": 10,
+        "unobserved_pairs": 0,
+        "both_success": 0,
+        "reference_only": 0,
+        "candidate_only": 0,
+        "neither_success": 10,
+        "candidate_minus_reference_rate": 0.0
+      },
+      "T02/original": {
+        "assigned": 10,
+        "observed_pairs": 10,
+        "unobserved_pairs": 0,
+        "both_success": 0,
+        "reference_only": 0,
+        "candidate_only": 0,
+        "neither_success": 10,
+        "candidate_minus_reference_rate": 0.0
+      },
+      "T02/swapped": {
+        "assigned": 10,
+        "observed_pairs": 10,
+        "unobserved_pairs": 0,
+        "both_success": 0,
+        "reference_only": 0,
+        "candidate_only": 0,
+        "neither_success": 10,
+        "candidate_minus_reference_rate": 0.0
+      }
+    }
+  },
+  {
+    "mode": "syntax_error",
+    "calls": 240,
+    "complete": true,
+    "kind": "synthetic_fixture",
+    "independent": {
+      "evidence_kind": "synthetic_fixture",
+      "bundle_sha256": "0c017c6c8d199f21702312d5efe7fd73224bb0d0757c084affce86007bddb534",
+      "manifest_files": 622,
+      "observed_responses": 240,
+      "metadata_records": 40,
+      "data_complete": true,
+      "semantic_fields_compared": 2203,
+      "differences": [],
+      "models": {
+        "reference": {
+          "observed": 120,
+          "valid_proofs": 0,
+          "selective_pairs": 0,
+          "robust_groups": 0,
+          "order_depth_changed": 0,
+          "order_unmeasured": 60
+        },
+        "candidate": {
+          "observed": 120,
+          "valid_proofs": 0,
+          "selective_pairs": 0,
+          "robust_groups": 0,
+          "order_depth_changed": 0,
+          "order_unmeasured": 60
+        }
+      },
+      "scope": "독립 원문 그래프·대응 비교·해시 검사. metadata identity 의미와 파일 허용목록/계획 계약은 생산 감사와 병행. 새 실제 LLM 추론 결과 아님."
+    },
+    "cross_model_results": {
+      "K01/original": {
+        "assigned": 10,
+        "observed_pairs": 10,
+        "unobserved_pairs": 0,
+        "both_success": 0,
+        "reference_only": 0,
+        "candidate_only": 0,
+        "neither_success": 10,
+        "candidate_minus_reference_rate": 0.0
+      },
+      "K01/swapped": {
+        "assigned": 10,
+        "observed_pairs": 10,
+        "unobserved_pairs": 0,
+        "both_success": 0,
+        "reference_only": 0,
+        "candidate_only": 0,
+        "neither_success": 10,
+        "candidate_minus_reference_rate": 0.0
+      },
+      "T02/original": {
+        "assigned": 10,
+        "observed_pairs": 10,
+        "unobserved_pairs": 0,
+        "both_success": 0,
+        "reference_only": 0,
+        "candidate_only": 0,
+        "neither_success": 10,
+        "candidate_minus_reference_rate": 0.0
+      },
+      "T02/swapped": {
+        "assigned": 10,
+        "observed_pairs": 10,
+        "unobserved_pairs": 0,
+        "both_success": 0,
+        "reference_only": 0,
+        "candidate_only": 0,
+        "neither_success": 10,
+        "candidate_minus_reference_rate": 0.0
+      }
+    }
+  },
+  {
+    "mode": "http_error",
+    "calls": 1,
+    "complete": false,
+    "kind": "synthetic_fixture",
+    "independent": {
+      "evidence_kind": "synthetic_fixture",
+      "bundle_sha256": "0d9b749a010fd37a827d4422b4d1040086a134c2fec620a787d1eeeeb707dcd2",
+      "manifest_files": 105,
+      "observed_responses": 1,
+      "metadata_records": 1,
+      "data_complete": false,
+      "semantic_fields_compared": 1008,
+      "differences": [],
+      "models": {
+        "reference": {
+          "observed": 1,
+          "valid_proofs": 0,
+          "selective_pairs": 0,
+          "robust_groups": 0,
+          "order_depth_changed": 0,
+          "order_unmeasured": 60
+        },
+        "candidate": {
+          "observed": 0,
+          "valid_proofs": 0,
+          "selective_pairs": 0,
+          "robust_groups": 0,
+          "order_depth_changed": 0,
+          "order_unmeasured": 60
+        }
+      },
+      "scope": "독립 원문 그래프·대응 비교·해시 검사. metadata identity 의미와 파일 허용목록/계획 계약은 생산 감사와 병행. 새 실제 LLM 추론 결과 아님."
+    },
+    "cross_model_results": {
+      "K01/original": {
+        "assigned": 10,
+        "observed_pairs": 0,
+        "unobserved_pairs": 10,
+        "both_success": 0,
+        "reference_only": 0,
+        "candidate_only": 0,
+        "neither_success": 0,
+        "candidate_minus_reference_rate": null
+      },
+      "K01/swapped": {
+        "assigned": 10,
+        "observed_pairs": 0,
+        "unobserved_pairs": 10,
+        "both_success": 0,
+        "reference_only": 0,
+        "candidate_only": 0,
+        "neither_success": 0,
+        "candidate_minus_reference_rate": null
+      },
+      "T02/original": {
+        "assigned": 10,
+        "observed_pairs": 0,
+        "unobserved_pairs": 10,
+        "both_success": 0,
+        "reference_only": 0,
+        "candidate_only": 0,
+        "neither_success": 0,
+        "candidate_minus_reference_rate": null
+      },
+      "T02/swapped": {
+        "assigned": 10,
+        "observed_pairs": 0,
+        "unobserved_pairs": 10,
+        "both_success": 0,
+        "reference_only": 0,
+        "candidate_only": 0,
+        "neither_success": 0,
+        "candidate_minus_reference_rate": null
+      }
+    }
+  },
+  {
+    "mode": "candidate_http",
+    "calls": 13,
+    "complete": false,
+    "kind": "synthetic_fixture",
+    "independent": {
+      "evidence_kind": "synthetic_fixture",
+      "bundle_sha256": "1865563e46d445e960a17f1c3a0bc7d957b01e3d3a33e11bd873e280bf0dd862",
+      "manifest_files": 131,
+      "observed_responses": 13,
+      "metadata_records": 3,
+      "data_complete": false,
+      "semantic_fields_compared": 1068,
+      "differences": [],
+      "models": {
+        "reference": {
+          "observed": 12,
+          "valid_proofs": 12,
+          "selective_pairs": 4,
+          "robust_groups": 2,
+          "order_depth_changed": 0,
+          "order_unmeasured": 54
+        },
+        "candidate": {
+          "observed": 1,
+          "valid_proofs": 0,
+          "selective_pairs": 0,
+          "robust_groups": 0,
+          "order_depth_changed": 0,
+          "order_unmeasured": 60
+        }
+      },
+      "scope": "독립 원문 그래프·대응 비교·해시 검사. metadata identity 의미와 파일 허용목록/계획 계약은 생산 감사와 병행. 새 실제 LLM 추론 결과 아님."
+    },
+    "cross_model_results": {
+      "K01/original": {
+        "assigned": 10,
+        "observed_pairs": 0,
+        "unobserved_pairs": 10,
+        "both_success": 0,
+        "reference_only": 0,
+        "candidate_only": 0,
+        "neither_success": 0,
+        "candidate_minus_reference_rate": null
+      },
+      "K01/swapped": {
+        "assigned": 10,
+        "observed_pairs": 0,
+        "unobserved_pairs": 10,
+        "both_success": 0,
+        "reference_only": 0,
+        "candidate_only": 0,
+        "neither_success": 0,
+        "candidate_minus_reference_rate": null
+      },
+      "T02/original": {
+        "assigned": 10,
+        "observed_pairs": 0,
+        "unobserved_pairs": 10,
+        "both_success": 0,
+        "reference_only": 0,
+        "candidate_only": 0,
+        "neither_success": 0,
+        "candidate_minus_reference_rate": null
+      },
+      "T02/swapped": {
+        "assigned": 10,
+        "observed_pairs": 0,
+        "unobserved_pairs": 10,
+        "both_success": 0,
+        "reference_only": 0,
+        "candidate_only": 0,
+        "neither_success": 0,
+        "candidate_minus_reference_rate": null
+      }
+    }
+  }
+]

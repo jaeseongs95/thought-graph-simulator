@@ -1,0 +1,20 @@
+test_bad_envelope_not_proof_error (tests_v055.test_independent.Semantic.test_bad_envelope_not_proof_error) ... ok
+test_deep (tests_v055.test_independent.Semantic.test_deep) ... ok
+test_duplicate_id_not_overwritten (tests_v055.test_independent.Semantic.test_duplicate_id_not_overwritten) ... ok
+test_envelope_error_is_not_answer (tests_v055.test_independent.Semantic.test_envelope_error_is_not_answer) ... ok
+test_extra_top_field_separates_format_proof (tests_v055.test_independent.Semantic.test_extra_top_field_separates_format_proof) ... ok
+test_missing_final (tests_v055.test_independent.Semantic.test_missing_final) ... ok
+test_none_is_unmeasured (tests_v055.test_independent.Semantic.test_none_is_unmeasured) ... ok
+test_production_cross_check_defined_mutations (tests_v055.test_independent.Semantic.test_production_cross_check_defined_mutations) ... ok
+test_requested_role_not_parameter (tests_v055.test_independent.Semantic.test_requested_role_not_parameter) ... ok
+test_schema_constraints_not_inferred (tests_v055.test_independent.Semantic.test_schema_constraints_not_inferred) ... ok
+test_shallow (tests_v055.test_independent.Semantic.test_shallow) ... ok
+test_two_paths_not_pruned (tests_v055.test_independent.Semantic.test_two_paths_not_pruned) ... ok
+test_unreachable_fact_rejected (tests_v055.test_independent.Semantic.test_unreachable_fact_rejected) ... ok
+test_wrong_parent_not_repaired (tests_v055.test_independent.Semantic.test_wrong_parent_not_repaired) ... ok
+test_wrong_rule_keeps_reference (tests_v055.test_independent.Semantic.test_wrong_rule_keeps_reference) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.004s
+
+OK

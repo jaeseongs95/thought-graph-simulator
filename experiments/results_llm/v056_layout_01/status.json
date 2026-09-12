@@ -1,0 +1,13 @@
+{
+  "state": "complete",
+  "complete": true,
+  "recorded_actions": 520,
+  "inference_calls": 480,
+  "event_tip": "7b0bf4dd755f5ba0a5300ca993d997d178735caaa912ad65b5764c56368d9993",
+  "active_action": null,
+  "failure_stage": null,
+  "failure_kind": null,
+  "failure_slot_id": null,
+  "error": null,
+  "finished_at": "2026-09-12T06:16:59.731+00:00"
+}

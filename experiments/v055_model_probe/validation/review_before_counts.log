@@ -1,0 +1,45 @@
+test_both_observed_failure_retained (tests_v055.test_review_counts.MissingObservations.test_both_observed_failure_retained) ... ERROR
+test_candidate_improvement_retained (tests_v055.test_review_counts.MissingObservations.test_candidate_improvement_retained) ... ERROR
+test_reference_observed_not_reference_only (tests_v055.test_review_counts.MissingObservations.test_reference_observed_not_reference_only) ... FAIL
+test_unexecuted_not_neither_success (tests_v055.test_review_counts.MissingObservations.test_unexecuted_not_neither_success) ... FAIL
+
+======================================================================
+ERROR: test_both_observed_failure_retained (tests_v055.test_review_counts.MissingObservations.test_both_observed_failure_retained)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/work_v055/v055_model_probe/tests_v055/test_review_counts.py", line 30, in test_both_observed_failure_retained
+    self.assertEqual(c['unobserved_pairs'],0)
+                     ~^^^^^^^^^^^^^^^^^^^^
+KeyError: 'unobserved_pairs'
+
+======================================================================
+ERROR: test_candidate_improvement_retained (tests_v055.test_review_counts.MissingObservations.test_candidate_improvement_retained)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/work_v055/v055_model_probe/tests_v055/test_review_counts.py", line 35, in test_candidate_improvement_retained
+    self.assertEqual(c['unobserved_pairs'],0)
+                     ~^^^^^^^^^^^^^^^^^^^^
+KeyError: 'unobserved_pairs'
+
+======================================================================
+FAIL: test_reference_observed_not_reference_only (tests_v055.test_review_counts.MissingObservations.test_reference_observed_not_reference_only)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/work_v055/v055_model_probe/tests_v055/test_review_counts.py", line 25, in test_reference_observed_not_reference_only
+    self.assertEqual(c['reference_only'],0)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 10 != 0
+
+======================================================================
+FAIL: test_unexecuted_not_neither_success (tests_v055.test_review_counts.MissingObservations.test_unexecuted_not_neither_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/work_v055/v055_model_probe/tests_v055/test_review_counts.py", line 20, in test_unexecuted_not_neither_success
+    self.assertEqual(c['neither_success'],0)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 10 != 0
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.003s
+
+FAILED (failures=2, errors=2)

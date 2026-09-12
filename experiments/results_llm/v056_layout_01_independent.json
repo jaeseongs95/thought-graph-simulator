@@ -1,0 +1,37 @@
+{
+  "contract": "independent-v056-r1",
+  "bundle_sha256": "426f49a62aa8687bed8a678277f866a85369b6621effa2b25a776b81bf7998db",
+  "manifest_files": 1113,
+  "observed_calls": 480,
+  "metadata_records": 40,
+  "complete": true,
+  "compared_fields": 3738,
+  "differences": [],
+  "results": {
+    "split/reference": {
+      "observed": 120,
+      "valid": 90,
+      "both_valid_pairs": 30,
+      "selective_pairs": 0
+    },
+    "split/candidate": {
+      "observed": 120,
+      "valid": 0,
+      "both_valid_pairs": 0,
+      "selective_pairs": 0
+    },
+    "merged/reference": {
+      "observed": 120,
+      "valid": 87,
+      "both_valid_pairs": 30,
+      "selective_pairs": 0
+    },
+    "merged/candidate": {
+      "observed": 120,
+      "valid": 3,
+      "both_valid_pairs": 0,
+      "selective_pairs": 0
+    }
+  },
+  "production_imports": false
+}

@@ -1,0 +1,29 @@
+{
+  "evidence_kind": "live_source_artifacts",
+  "bundle_sha256": "0505cb1f21db51c213422f8e07ec0303b440d6f2234d790c96224f428b921932",
+  "manifest_files": 622,
+  "observed_responses": 240,
+  "metadata_records": 40,
+  "data_complete": true,
+  "semantic_fields_compared": 2203,
+  "differences": [],
+  "models": {
+    "reference": {
+      "observed": 120,
+      "valid_proofs": 90,
+      "selective_pairs": 0,
+      "robust_groups": 0,
+      "order_depth_changed": 30,
+      "order_unmeasured": 30
+    },
+    "candidate": {
+      "observed": 120,
+      "valid_proofs": 2,
+      "selective_pairs": 0,
+      "robust_groups": 0,
+      "order_depth_changed": 0,
+      "order_unmeasured": 60
+    }
+  },
+  "scope": "독립 원문 그래프·대응 비교·해시 검사. metadata identity 의미와 파일 허용목록/계획 계약은 생산 감사와 병행. 새 실제 LLM 추론 결과 아님."
+}

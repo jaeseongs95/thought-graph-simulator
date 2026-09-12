@@ -1,0 +1,54 @@
+{
+  "contract": "independent-v057-r1",
+  "bundle_sha256": "1949d10375a1848982c427a79f3b2cd5c751e44cdc7045945d2b2ff7be3a083e",
+  "manifest_files": 1124,
+  "observed_calls": 480,
+  "metadata_records": 40,
+  "complete": true,
+  "compared_fields": 4361,
+  "differences": [],
+  "results": {
+    "reference": {
+      "graph": {
+        "observed_calls": 120,
+        "format_valid": 120,
+        "task_valid": 82,
+        "observed_pairs": 40,
+        "selective_success": 0,
+        "selective_rate": 0.0,
+        "full_proof_D_control_success": 0
+      },
+      "choice": {
+        "observed_calls": 120,
+        "format_valid": 120,
+        "task_valid": 120,
+        "observed_pairs": 40,
+        "selective_success": 33,
+        "selective_rate": 0.825,
+        "full_proof_D_control_success": null
+      }
+    },
+    "candidate": {
+      "graph": {
+        "observed_calls": 120,
+        "format_valid": 120,
+        "task_valid": 5,
+        "observed_pairs": 40,
+        "selective_success": 0,
+        "selective_rate": 0.0,
+        "full_proof_D_control_success": 0
+      },
+      "choice": {
+        "observed_calls": 120,
+        "format_valid": 120,
+        "task_valid": 120,
+        "observed_pairs": 40,
+        "selective_success": 7,
+        "selective_rate": 0.175,
+        "full_proof_D_control_success": null
+      }
+    }
+  },
+  "production_imports": false,
+  "baseline_independent_compared_fields": 3738
+}

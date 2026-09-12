@@ -1,0 +1,17 @@
+{
+  "baseline_bundle_sha256": "46bd0c8abeb074c7ed218a6b3b3ce83eaa7ad042ad00c9ab939d495aa70c6f40",
+  "baseline_audit": "complete and exact stored report",
+  "reference_requests_byte_equal": 120,
+  "candidate_requests_only_model_changed": 120,
+  "slots": 240,
+  "metadata_actions": 40,
+  "request_language": "Korean instructions, ASCII/English field and rule identifiers; no translation",
+  "old_python_files_preserved": 152,
+  "old_production_fingerprint_files": 83,
+  "new_production_fingerprint_files": 94,
+  "new_live_capture": false,
+  "new_real_model_inference": 0,
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "notes": "실제 v054를 읽고 요청을 오프라인 구성/비교. candidate identity를 가짜로 발급하거나 actual prepare 성공으로 보고하지 않음."
+}

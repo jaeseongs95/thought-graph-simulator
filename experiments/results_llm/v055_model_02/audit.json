@@ -1,0 +1,15 @@
+{
+  "contract": "v055-model-probe-report-r1",
+  "data_integrity": true,
+  "data_complete": true,
+  "comparative_analysis_ready": true,
+  "inference_calls": 240,
+  "max_inference_calls": 240,
+  "plan_sha256": "3414191469c3955336beae9219569344dff5a1cedeb58b45fda8b2a085cb078e",
+  "event_tip": "d9f163a528ba37433c1dda798daced52ebe872dd311c2817189fa73e4a4b08c5",
+  "run_state": "complete",
+  "failure_stage": null,
+  "failure_kind": null,
+  "failure_slot_id": null,
+  "run_error": null
+}

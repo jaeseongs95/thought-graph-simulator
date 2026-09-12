@@ -1,0 +1,15 @@
+{
+  "contract": "v056-layout-report-r1",
+  "data_integrity": true,
+  "data_complete": true,
+  "comparative_analysis_ready": true,
+  "inference_calls": 480,
+  "max_inference_calls": 480,
+  "plan_sha256": "e9105f9de8dd8ad9b635dbc0f97696596168336d725882852ad2ae6059c604dc",
+  "event_tip": "7b0bf4dd755f5ba0a5300ca993d997d178735caaa912ad65b5764c56368d9993",
+  "run_state": "complete",
+  "failure_stage": null,
+  "failure_kind": null,
+  "failure_slot_id": null,
+  "run_error": null
+}

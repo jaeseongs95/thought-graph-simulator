@@ -1,0 +1,15 @@
+{
+  "contract": "v057-selection-report-r1",
+  "data_integrity": true,
+  "data_complete": true,
+  "comparative_analysis_ready": true,
+  "inference_calls": 480,
+  "max_inference_calls": 480,
+  "plan_sha256": "fcacb55543a2c76895a16c0da439a31dd03ee633253a6d4321a8da78fc55eade",
+  "event_tip": "4edc29f43c26671619eee99e67cc89ee8bc7244f4dac0a0a8d602959dadb8234",
+  "run_state": "complete",
+  "failure_stage": null,
+  "failure_kind": null,
+  "failure_slot_id": null,
+  "run_error": null
+}
