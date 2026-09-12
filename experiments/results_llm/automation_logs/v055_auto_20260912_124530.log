@@ -1,0 +1,49 @@
+﻿**********************
+Windows PowerShell 기록 시작
+시작 시간: 20260912124531
+사용자 이름: DESKTOP-DKTCA33\sjs95
+RunAs 사용자: DESKTOP-DKTCA33\sjs95
+구성 이름: 
+Machine: DESKTOP-DKTCA33 (Microsoft Windows NT 10.0.26200.0)
+호스트 응용 프로그램: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Run-v055-Auto.ps1
+프로세스 ID: 14428
+PSVersion: 5.1.26100.9444
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9444
+BuildVersion: 10.0.26100.9444
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+자동화 로그: C:\Users\sjs95\Desktop\thought-graph-simulator\results_llm\automation_logs\v055_auto_20260912_124530.log
+
+==============================================================================
+3/10  Python 환경 확인
+==============================================================================
+Python: 3.12.10
+
+==============================================================================
+4/10  Ollama 서버 확인/자동 기동
+==============================================================================
+Ollama server: 0.34.0
+
+==============================================================================
+5/10  기준 Qwen 모델 확인
+==============================================================================
+기준 모델 존재 확인: qwen3:4b-instruct
+
+==============================================================================
+6/10  Gemma 비교 모델 준비
+==============================================================================
+PS>종료 오류(ollama.exe): "기본 설정 변수 "ErrorActionPreference" 또는 일반 매개 변수가 Stop으로 설정되어 있으므로 실행 중인 명령이 중지되었습니다. Error: model 'gemma3:4b' not found"
+>> 종료 오류(ollama.exe): "기본 설정 변수 "ErrorActionPreference" 또는 일반 매개 변수가 Stop으로 설정되어 있으므로 실행 중인 명령이 중지되었습니다. Error: model 'gemma3:4b' not found"
+
+자동화가 중단되었습니다.
+Error: model 'gemma3:4b' not found
+
+실험 중 실패했다면 자동 재시도/삭제를 하지 않았습니다. results_llm의 raw evidence를 그대로 보존하세요.
+**********************
+Windows PowerShell 기록 끝
+종료 시간: 20260912124531
+**********************

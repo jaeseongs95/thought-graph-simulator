@@ -1,0 +1,8 @@
+{
+  "completed": true,
+  "inference_calls": 480,
+  "bundle": "C:\\Users\\sjs95\\Desktop\\thought-graph-simulator\\results_llm\\v057_selection_01_evidence.zip",
+  "sha256": "1949d10375a1848982c427a79f3b2cd5c751e44cdc7045945d2b2ff7be3a083e",
+  "independent": "C:\\Users\\sjs95\\Desktop\\thought-graph-simulator\\results_llm\\v057_selection_01_independent.json",
+  "log": "C:\\Users\\sjs95\\Desktop\\thought-graph-simulator\\results_llm\\automation_logs\\v057_20260912_180536_e2158d12\\automation.log"
+}
