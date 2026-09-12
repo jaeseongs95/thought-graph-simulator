@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="v02_smoke_gate4">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/local_llm_old3/tests/fixtures/v02_smoke_gate.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
