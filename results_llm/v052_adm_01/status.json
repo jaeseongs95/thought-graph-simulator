@@ -1,0 +1,12 @@
+{
+  "state": "incomplete",
+  "complete": false,
+  "recorded_slots": 0,
+  "inference_calls": 0,
+  "event_tip": "27eb7cfc1c4d7627af12df91738e744d5b7896caef78330ff0d89b38ff323c8b",
+  "runtime_identity_verified": false,
+  "identity_checkpoints": [],
+  "response_identity_mismatch": false,
+  "error": "ContractError: 기준선과 모델 템플릿/정보가 다릅니다.",
+  "finished_at": "2026-09-11T23:13:36.543+00:00"
+}

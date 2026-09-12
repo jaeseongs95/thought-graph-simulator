@@ -1,0 +1,14 @@
+{
+  "contract": "v054-order-probe-report-r1",
+  "data_integrity": true,
+  "data_complete": true,
+  "comparative_analysis_ready": true,
+  "inference_calls": 120,
+  "plan_sha256": "192f4745bdfe488e9f6d9675e3824444afd6107f6460fc1f4a26b4921eccd8ec",
+  "event_tip": "d78d44f93083027cea546489fd81ef98644d8b374c98c1b5ce177383dfa912b8",
+  "run_state": "complete",
+  "failure_stage": null,
+  "failure_kind": null,
+  "failure_slot_id": null,
+  "run_error": null
+}

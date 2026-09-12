@@ -1,0 +1,17 @@
+{
+  "state": "incomplete",
+  "complete": false,
+  "recorded_slots": 0,
+  "inference_calls": 0,
+  "event_tip": "8ee3647b17c81f6c392284afc7542342e4a8b646759033f8f107ff4165300beb",
+  "runtime_identity_verified": false,
+  "identity_checkpoints": [],
+  "response_identity_mismatch": false,
+  "error": "ContractError: 추론 전/후 Ollama 메타데이터 확인 실패: server: URLError: <urlopen error [Errno 111] Connection refused>",
+  "active_stage": "preflight_metadata",
+  "active_slot_id": null,
+  "failure_stage": "preflight_metadata",
+  "failure_kind": "runtime_metadata_error",
+  "failure_slot_id": null,
+  "finished_at": "2026-09-11T23:33:17.062+00:00"
+}

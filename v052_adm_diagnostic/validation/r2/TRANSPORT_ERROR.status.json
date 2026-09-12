@@ -1,0 +1,19 @@
+{
+  "state": "incomplete",
+  "complete": false,
+  "recorded_slots": 1,
+  "inference_calls": 1,
+  "event_tip": "43c267f9028fd12acde2cd41253f4b688d7dc3005f2fa3cc069b09a4cd0804b5",
+  "runtime_identity_verified": false,
+  "identity_checkpoints": [
+    "runtime.before.json"
+  ],
+  "response_identity_mismatch": false,
+  "error": "ContractError: 통신 오류. 원문 보존, 자동 재시도 없음: HTTP 503",
+  "active_stage": "inference",
+  "active_slot_id": "s08_K01_factorial_schema_deep_M1",
+  "failure_stage": "inference",
+  "failure_kind": "transport_error",
+  "failure_slot_id": "s08_K01_factorial_schema_deep_M1",
+  "finished_at": "2026-09-11T23:33:26.829+00:00"
+}

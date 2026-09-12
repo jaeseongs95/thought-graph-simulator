@@ -1,0 +1,14 @@
+{
+  "contract": "v053-depth-probe-report-r1",
+  "data_integrity": true,
+  "data_complete": true,
+  "comparative_analysis_ready": true,
+  "inference_calls": 120,
+  "plan_sha256": "6b0000fa54dec517067a6c0e7de2d628ed34df86d4fd133de54c0431997e6d63",
+  "event_tip": "4129430640661bc24a2c0b910a1c89769690ea6ba6a4753a300b630d1e14e967",
+  "run_state": "complete",
+  "failure_stage": null,
+  "failure_kind": null,
+  "failure_slot_id": null,
+  "run_error": null
+}

@@ -1,0 +1,10 @@
+{
+  "calls": 440,
+  "primary_assigned": 240,
+  "primary_valid": 0,
+  "primary_role_success": 0,
+  "copy_calls": 20,
+  "local_result_agreements": 440,
+  "evidence_kind": "synthetic_fixture",
+  "manifest_files": 949
+}

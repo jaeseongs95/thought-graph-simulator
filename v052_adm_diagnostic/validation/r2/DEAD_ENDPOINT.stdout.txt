@@ -1,0 +1,13 @@
+{
+  "data_integrity": true,
+  "data_complete": false,
+  "comparative_analysis_ready": false,
+  "evidence_kind": "synthetic_fixture",
+  "inference_calls": 0,
+  "max_inference_calls": 440,
+  "run_state": "incomplete",
+  "failure_stage": "preflight_metadata",
+  "failure_kind": "runtime_metadata_error",
+  "failure_slot_id": null,
+  "run_error": "ContractError: 추론 전/후 Ollama 메타데이터 확인 실패: server: URLError: <urlopen error [Errno 111] Connection refused>"
+}

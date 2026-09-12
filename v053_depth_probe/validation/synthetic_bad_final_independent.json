@@ -1,0 +1,274 @@
+{
+  "bundle_sha256": "72d924bd40c69186e40497d09b5e120f97f0f2141629a41d242ba6e6b642c002",
+  "source": "raw_only_independent_semantic_replay",
+  "evidence_kind": "synthetic_fixture",
+  "raw_responses": 120,
+  "manifest_files": 321,
+  "semantic_fields_compared": 680,
+  "discrepancies": [],
+  "groups": {
+    "K01/original": {
+      "valid": 0,
+      "requested_depth_success": 0,
+      "selective_pairs": 0
+    },
+    "K01/defined": {
+      "valid": 0,
+      "requested_depth_success": 0,
+      "selective_pairs": 0
+    },
+    "T02/original": {
+      "valid": 0,
+      "requested_depth_success": 0,
+      "selective_pairs": 0
+    },
+    "T02/defined": {
+      "valid": 0,
+      "requested_depth_success": 0,
+      "selective_pairs": 0
+    }
+  },
+  "pairs": [
+    {
+      "problem_id": "K01",
+      "arm": "original",
+      "seed": 580410664,
+      "selective_success": false
+    },
+    {
+      "problem_id": "K01",
+      "arm": "original",
+      "seed": 661935755,
+      "selective_success": false
+    },
+    {
+      "problem_id": "K01",
+      "arm": "original",
+      "seed": 209422594,
+      "selective_success": false
+    },
+    {
+      "problem_id": "K01",
+      "arm": "original",
+      "seed": 1790124989,
+      "selective_success": false
+    },
+    {
+      "problem_id": "K01",
+      "arm": "original",
+      "seed": 267101868,
+      "selective_success": false
+    },
+    {
+      "problem_id": "K01",
+      "arm": "original",
+      "seed": 752235971,
+      "selective_success": false
+    },
+    {
+      "problem_id": "K01",
+      "arm": "original",
+      "seed": 1292559482,
+      "selective_success": false
+    },
+    {
+      "problem_id": "K01",
+      "arm": "original",
+      "seed": 223674688,
+      "selective_success": false
+    },
+    {
+      "problem_id": "K01",
+      "arm": "original",
+      "seed": 860724506,
+      "selective_success": false
+    },
+    {
+      "problem_id": "K01",
+      "arm": "original",
+      "seed": 68285180,
+      "selective_success": false
+    },
+    {
+      "problem_id": "K01",
+      "arm": "defined",
+      "seed": 580410664,
+      "selective_success": false
+    },
+    {
+      "problem_id": "K01",
+      "arm": "defined",
+      "seed": 661935755,
+      "selective_success": false
+    },
+    {
+      "problem_id": "K01",
+      "arm": "defined",
+      "seed": 209422594,
+      "selective_success": false
+    },
+    {
+      "problem_id": "K01",
+      "arm": "defined",
+      "seed": 1790124989,
+      "selective_success": false
+    },
+    {
+      "problem_id": "K01",
+      "arm": "defined",
+      "seed": 267101868,
+      "selective_success": false
+    },
+    {
+      "problem_id": "K01",
+      "arm": "defined",
+      "seed": 752235971,
+      "selective_success": false
+    },
+    {
+      "problem_id": "K01",
+      "arm": "defined",
+      "seed": 1292559482,
+      "selective_success": false
+    },
+    {
+      "problem_id": "K01",
+      "arm": "defined",
+      "seed": 223674688,
+      "selective_success": false
+    },
+    {
+      "problem_id": "K01",
+      "arm": "defined",
+      "seed": 860724506,
+      "selective_success": false
+    },
+    {
+      "problem_id": "K01",
+      "arm": "defined",
+      "seed": 68285180,
+      "selective_success": false
+    },
+    {
+      "problem_id": "T02",
+      "arm": "original",
+      "seed": 580410664,
+      "selective_success": false
+    },
+    {
+      "problem_id": "T02",
+      "arm": "original",
+      "seed": 661935755,
+      "selective_success": false
+    },
+    {
+      "problem_id": "T02",
+      "arm": "original",
+      "seed": 209422594,
+      "selective_success": false
+    },
+    {
+      "problem_id": "T02",
+      "arm": "original",
+      "seed": 1790124989,
+      "selective_success": false
+    },
+    {
+      "problem_id": "T02",
+      "arm": "original",
+      "seed": 267101868,
+      "selective_success": false
+    },
+    {
+      "problem_id": "T02",
+      "arm": "original",
+      "seed": 752235971,
+      "selective_success": false
+    },
+    {
+      "problem_id": "T02",
+      "arm": "original",
+      "seed": 1292559482,
+      "selective_success": false
+    },
+    {
+      "problem_id": "T02",
+      "arm": "original",
+      "seed": 223674688,
+      "selective_success": false
+    },
+    {
+      "problem_id": "T02",
+      "arm": "original",
+      "seed": 860724506,
+      "selective_success": false
+    },
+    {
+      "problem_id": "T02",
+      "arm": "original",
+      "seed": 68285180,
+      "selective_success": false
+    },
+    {
+      "problem_id": "T02",
+      "arm": "defined",
+      "seed": 580410664,
+      "selective_success": false
+    },
+    {
+      "problem_id": "T02",
+      "arm": "defined",
+      "seed": 661935755,
+      "selective_success": false
+    },
+    {
+      "problem_id": "T02",
+      "arm": "defined",
+      "seed": 209422594,
+      "selective_success": false
+    },
+    {
+      "problem_id": "T02",
+      "arm": "defined",
+      "seed": 1790124989,
+      "selective_success": false
+    },
+    {
+      "problem_id": "T02",
+      "arm": "defined",
+      "seed": 267101868,
+      "selective_success": false
+    },
+    {
+      "problem_id": "T02",
+      "arm": "defined",
+      "seed": 752235971,
+      "selective_success": false
+    },
+    {
+      "problem_id": "T02",
+      "arm": "defined",
+      "seed": 1292559482,
+      "selective_success": false
+    },
+    {
+      "problem_id": "T02",
+      "arm": "defined",
+      "seed": 223674688,
+      "selective_success": false
+    },
+    {
+      "problem_id": "T02",
+      "arm": "defined",
+      "seed": 860724506,
+      "selective_success": false
+    },
+    {
+      "problem_id": "T02",
+      "arm": "defined",
+      "seed": 68285180,
+      "selective_success": false
+    }
+  ],
+  "scope": "완료·정상 전송 120회만 지원. 생산 감사기의 source/runtime/request 재생성 검사와 함께 사용."
+}

@@ -1,0 +1,449 @@
+{
+  "actual_baseline_bundle_sha256": "007224aeb536329868ae619a3740bfb02d1df4852c4ebe0cd192c446fcd396cd",
+  "offline_prepare_success": true,
+  "new_model_inference": false,
+  "new_plan_sha256": "79682740c43356535a314dd706bfc8ec252d9fe9ce0aa2ad833297f8dd3a5d05",
+  "source_fingerprint_count": 71,
+  "actual_original_request_checks": [
+    {
+      "new_slot": "s01_T02_original_deep",
+      "old_slot": "s01_T02_graph_only_instance_deep_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s06_T02_original_shallow",
+      "old_slot": "s06_T02_graph_only_instance_shallow_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s07_K01_original_shallow",
+      "old_slot": "s07_K01_graph_only_instance_shallow_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s05_T02_original_deep",
+      "old_slot": "s05_T02_graph_only_instance_deep_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s00_K01_original_shallow",
+      "old_slot": "s00_K01_graph_only_instance_shallow_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s00_T02_original_deep",
+      "old_slot": "s00_T02_graph_only_instance_deep_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s07_T02_original_deep",
+      "old_slot": "s07_T02_graph_only_instance_deep_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s06_T02_original_deep",
+      "old_slot": "s06_T02_graph_only_instance_deep_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s04_T02_original_deep",
+      "old_slot": "s04_T02_graph_only_instance_deep_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s09_K01_original_deep",
+      "old_slot": "s09_K01_graph_only_instance_deep_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s01_T02_original_shallow",
+      "old_slot": "s01_T02_graph_only_instance_shallow_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s05_T02_original_shallow",
+      "old_slot": "s05_T02_graph_only_instance_shallow_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s09_T02_original_shallow",
+      "old_slot": "s09_T02_graph_only_instance_shallow_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s08_T02_original_deep",
+      "old_slot": "s08_T02_graph_only_instance_deep_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s03_T02_original_shallow",
+      "old_slot": "s03_T02_graph_only_instance_shallow_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s07_T02_original_shallow",
+      "old_slot": "s07_T02_graph_only_instance_shallow_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s06_K01_original_deep",
+      "old_slot": "s06_K01_graph_only_instance_deep_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s07_K01_original_deep",
+      "old_slot": "s07_K01_graph_only_instance_deep_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s08_T02_original_shallow",
+      "old_slot": "s08_T02_graph_only_instance_shallow_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s00_K01_original_deep",
+      "old_slot": "s00_K01_graph_only_instance_deep_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s02_K01_original_deep",
+      "old_slot": "s02_K01_graph_only_instance_deep_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s08_K01_original_shallow",
+      "old_slot": "s08_K01_graph_only_instance_shallow_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s02_T02_original_shallow",
+      "old_slot": "s02_T02_graph_only_instance_shallow_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s04_T02_original_shallow",
+      "old_slot": "s04_T02_graph_only_instance_shallow_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s00_T02_original_shallow",
+      "old_slot": "s00_T02_graph_only_instance_shallow_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s09_T02_original_deep",
+      "old_slot": "s09_T02_graph_only_instance_deep_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s05_K01_original_deep",
+      "old_slot": "s05_K01_graph_only_instance_deep_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s02_T02_original_deep",
+      "old_slot": "s02_T02_graph_only_instance_deep_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s09_K01_original_shallow",
+      "old_slot": "s09_K01_graph_only_instance_shallow_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s04_K01_original_deep",
+      "old_slot": "s04_K01_graph_only_instance_deep_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s04_K01_original_shallow",
+      "old_slot": "s04_K01_graph_only_instance_shallow_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s03_K01_original_shallow",
+      "old_slot": "s03_K01_graph_only_instance_shallow_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s05_K01_original_shallow",
+      "old_slot": "s05_K01_graph_only_instance_shallow_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s08_K01_original_deep",
+      "old_slot": "s08_K01_graph_only_instance_deep_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s02_K01_original_shallow",
+      "old_slot": "s02_K01_graph_only_instance_shallow_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s03_T02_original_deep",
+      "old_slot": "s03_T02_graph_only_instance_deep_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s06_K01_original_shallow",
+      "old_slot": "s06_K01_graph_only_instance_shallow_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s01_K01_original_deep",
+      "old_slot": "s01_K01_graph_only_instance_deep_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s03_K01_original_deep",
+      "old_slot": "s03_K01_graph_only_instance_deep_M0",
+      "byte_identical": true
+    },
+    {
+      "new_slot": "s01_K01_original_shallow",
+      "old_slot": "s01_K01_graph_only_instance_shallow_M0",
+      "byte_identical": true
+    }
+  ],
+  "defined_single_paragraph_checks": 60,
+  "defined_single_paragraph_all_equal": true,
+  "preserved_old_core": [
+    {
+      "path": "paired_probe_v047/__init__.py",
+      "byte_identical": true
+    },
+    {
+      "path": "paired_probe_v047/__main__.py",
+      "byte_identical": true
+    },
+    {
+      "path": "paired_probe_v047/audit.py",
+      "byte_identical": true
+    },
+    {
+      "path": "paired_probe_v047/contracts.py",
+      "byte_identical": true
+    },
+    {
+      "path": "paired_probe_v047/oracle.py",
+      "byte_identical": true
+    },
+    {
+      "path": "paired_probe_v047/plan.py",
+      "byte_identical": true
+    },
+    {
+      "path": "paired_probe_v047/runner.py",
+      "byte_identical": true
+    },
+    {
+      "path": "paired_probe_v048/__init__.py",
+      "byte_identical": true
+    },
+    {
+      "path": "paired_probe_v048/__main__.py",
+      "byte_identical": true
+    },
+    {
+      "path": "paired_probe_v048/audit.py",
+      "byte_identical": true
+    },
+    {
+      "path": "paired_probe_v048/contracts.py",
+      "byte_identical": true
+    },
+    {
+      "path": "paired_probe_v048/oracle.py",
+      "byte_identical": true
+    },
+    {
+      "path": "paired_probe_v048/plan.py",
+      "byte_identical": true
+    },
+    {
+      "path": "paired_probe_v048/reporting.py",
+      "byte_identical": true
+    },
+    {
+      "path": "paired_probe_v048/runner.py",
+      "byte_identical": true
+    },
+    {
+      "path": "paired_probe_v049/__init__.py",
+      "byte_identical": true
+    },
+    {
+      "path": "paired_probe_v049/__main__.py",
+      "byte_identical": true
+    },
+    {
+      "path": "paired_probe_v049/audit.py",
+      "byte_identical": true
+    },
+    {
+      "path": "paired_probe_v049/contracts.py",
+      "byte_identical": true
+    },
+    {
+      "path": "paired_probe_v049/evidence.py",
+      "byte_identical": true
+    },
+    {
+      "path": "paired_probe_v049/oracle.py",
+      "byte_identical": true
+    },
+    {
+      "path": "paired_probe_v049/plan.py",
+      "byte_identical": true
+    },
+    {
+      "path": "paired_probe_v049/reporting.py",
+      "byte_identical": true
+    },
+    {
+      "path": "paired_probe_v049/runner.py",
+      "byte_identical": true
+    },
+    {
+      "path": "criterion_probe_v050/__init__.py",
+      "byte_identical": true
+    },
+    {
+      "path": "criterion_probe_v050/__main__.py",
+      "byte_identical": true
+    },
+    {
+      "path": "criterion_probe_v050/audit.py",
+      "byte_identical": true
+    },
+    {
+      "path": "criterion_probe_v050/contracts.py",
+      "byte_identical": true
+    },
+    {
+      "path": "criterion_probe_v050/dataset.py",
+      "byte_identical": true
+    },
+    {
+      "path": "criterion_probe_v050/evidence.py",
+      "byte_identical": true
+    },
+    {
+      "path": "criterion_probe_v050/plan.py",
+      "byte_identical": true
+    },
+    {
+      "path": "criterion_probe_v050/reporting.py",
+      "byte_identical": true
+    },
+    {
+      "path": "criterion_probe_v050/requests.py",
+      "byte_identical": true
+    },
+    {
+      "path": "criterion_probe_v050/runner.py",
+      "byte_identical": true
+    },
+    {
+      "path": "criterion_probe_v050/scoring.py",
+      "byte_identical": true
+    },
+    {
+      "path": "adm_pilot_v051/__init__.py",
+      "byte_identical": true
+    },
+    {
+      "path": "adm_pilot_v051/__main__.py",
+      "byte_identical": true
+    },
+    {
+      "path": "adm_pilot_v051/audit.py",
+      "byte_identical": true
+    },
+    {
+      "path": "adm_pilot_v051/contracts.py",
+      "byte_identical": true
+    },
+    {
+      "path": "adm_pilot_v051/design.py",
+      "byte_identical": true
+    },
+    {
+      "path": "adm_pilot_v051/evidence.py",
+      "byte_identical": true
+    },
+    {
+      "path": "adm_pilot_v051/measure.py",
+      "byte_identical": true
+    },
+    {
+      "path": "adm_pilot_v051/plan.py",
+      "byte_identical": true
+    },
+    {
+      "path": "adm_pilot_v051/reporting.py",
+      "byte_identical": true
+    },
+    {
+      "path": "adm_pilot_v051/requests.py",
+      "byte_identical": true
+    },
+    {
+      "path": "adm_pilot_v051/runner.py",
+      "byte_identical": true
+    },
+    {
+      "path": "adm_diagnostic_v052/__init__.py",
+      "byte_identical": true
+    },
+    {
+      "path": "adm_diagnostic_v052/__main__.py",
+      "byte_identical": true
+    },
+    {
+      "path": "adm_diagnostic_v052/audit.py",
+      "byte_identical": true
+    },
+    {
+      "path": "adm_diagnostic_v052/calibration.py",
+      "byte_identical": true
+    },
+    {
+      "path": "adm_diagnostic_v052/contracts.py",
+      "byte_identical": true
+    },
+    {
+      "path": "adm_diagnostic_v052/design.py",
+      "byte_identical": true
+    },
+    {
+      "path": "adm_diagnostic_v052/evidence.py",
+      "byte_identical": true
+    },
+    {
+      "path": "adm_diagnostic_v052/measure.py",
+      "byte_identical": true
+    },
+    {
+      "path": "adm_diagnostic_v052/plan.py",
+      "byte_identical": true
+    },
+    {
+      "path": "adm_diagnostic_v052/reporting.py",
+      "byte_identical": true
+    },
+    {
+      "path": "adm_diagnostic_v052/requests.py",
+      "byte_identical": true
+    },
+    {
+      "path": "adm_diagnostic_v052/runner.py",
+      "byte_identical": true
+    },
+    {
+      "path": "adm_diagnostic_v052/schema.py",
+      "byte_identical": true
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+실행 중단 원인: ContractError: 추론 전/후 Ollama 메타데이터 확인 실패: server: URLError: <urlopen error [Errno 111] Connection refused>

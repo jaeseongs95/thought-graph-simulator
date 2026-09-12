@@ -1,0 +1,314 @@
+{
+  "bundle_sha256": "a61df645b4b50d620c95a90ba2e885b05bc1c8bb28ef637337725a12c83bce57",
+  "manifest_files": 321,
+  "calls": 120,
+  "compared_semantic_fields": 680,
+  "semantic_discrepancies": [],
+  "all_possible_depths": {
+    "K01": [
+      1,
+      2
+    ],
+    "T02": [
+      1,
+      4
+    ]
+  },
+  "valid_proofs": 116,
+  "format_valid": 120,
+  "selective_pairs": 0,
+  "assigned_pairs": 40,
+  "all_three_valid_same_structure": 36,
+  "definition_only_request_pairs": 60,
+  "historical_request_pairs": 40,
+  "historical_measurement_matches": 40,
+  "groups": {
+    "K01/original/shallow": {
+      "assigned": 10,
+      "format_valid": 10,
+      "proof_valid": 10,
+      "unmeasured_depth": 0,
+      "depth_distribution": {
+        "2": 10
+      },
+      "direction_success": 0,
+      "prompt_tokens": 4890,
+      "generated_tokens": 1344,
+      "server_ns": 18204203900
+    },
+    "K01/original/deep": {
+      "assigned": 10,
+      "format_valid": 10,
+      "proof_valid": 10,
+      "unmeasured_depth": 0,
+      "depth_distribution": {
+        "2": 10
+      },
+      "direction_success": 10,
+      "prompt_tokens": 4920,
+      "generated_tokens": 1350,
+      "server_ns": 18290645200
+    },
+    "K01/original/neutral": {
+      "assigned": 10,
+      "format_valid": 10,
+      "proof_valid": 10,
+      "unmeasured_depth": 0,
+      "depth_distribution": {
+        "2": 10
+      },
+      "direction_success": null,
+      "prompt_tokens": 4560,
+      "generated_tokens": 1350,
+      "server_ns": 20370354600
+    },
+    "K01/defined/shallow": {
+      "assigned": 10,
+      "format_valid": 10,
+      "proof_valid": 6,
+      "unmeasured_depth": 4,
+      "depth_distribution": {
+        "None": 4,
+        "2": 6
+      },
+      "direction_success": 0,
+      "prompt_tokens": 6050,
+      "generated_tokens": 1340,
+      "server_ns": 18178880000
+    },
+    "K01/defined/deep": {
+      "assigned": 10,
+      "format_valid": 10,
+      "proof_valid": 10,
+      "unmeasured_depth": 0,
+      "depth_distribution": {
+        "2": 10
+      },
+      "direction_success": 10,
+      "prompt_tokens": 6080,
+      "generated_tokens": 1340,
+      "server_ns": 18270180700
+    },
+    "K01/defined/neutral": {
+      "assigned": 10,
+      "format_valid": 10,
+      "proof_valid": 10,
+      "unmeasured_depth": 0,
+      "depth_distribution": {
+        "2": 10
+      },
+      "direction_success": null,
+      "prompt_tokens": 5720,
+      "generated_tokens": 1340,
+      "server_ns": 18157022200
+    },
+    "T02/original/shallow": {
+      "assigned": 10,
+      "format_valid": 10,
+      "proof_valid": 10,
+      "unmeasured_depth": 0,
+      "depth_distribution": {
+        "1": 10
+      },
+      "direction_success": 10,
+      "prompt_tokens": 5420,
+      "generated_tokens": 1300,
+      "server_ns": 17737826100
+    },
+    "T02/original/deep": {
+      "assigned": 10,
+      "format_valid": 10,
+      "proof_valid": 10,
+      "unmeasured_depth": 0,
+      "depth_distribution": {
+        "1": 10
+      },
+      "direction_success": 0,
+      "prompt_tokens": 5450,
+      "generated_tokens": 1300,
+      "server_ns": 17858860200
+    },
+    "T02/original/neutral": {
+      "assigned": 10,
+      "format_valid": 10,
+      "proof_valid": 10,
+      "unmeasured_depth": 0,
+      "depth_distribution": {
+        "1": 10
+      },
+      "direction_success": null,
+      "prompt_tokens": 5090,
+      "generated_tokens": 1304,
+      "server_ns": 17739414200
+    },
+    "T02/defined/shallow": {
+      "assigned": 10,
+      "format_valid": 10,
+      "proof_valid": 10,
+      "unmeasured_depth": 0,
+      "depth_distribution": {
+        "1": 10
+      },
+      "direction_success": 10,
+      "prompt_tokens": 6580,
+      "generated_tokens": 1300,
+      "server_ns": 18000374800
+    },
+    "T02/defined/deep": {
+      "assigned": 10,
+      "format_valid": 10,
+      "proof_valid": 10,
+      "unmeasured_depth": 0,
+      "depth_distribution": {
+        "1": 10
+      },
+      "direction_success": 0,
+      "prompt_tokens": 6610,
+      "generated_tokens": 1300,
+      "server_ns": 17826849700
+    },
+    "T02/defined/neutral": {
+      "assigned": 10,
+      "format_valid": 10,
+      "proof_valid": 10,
+      "unmeasured_depth": 0,
+      "depth_distribution": {
+        "1": 10
+      },
+      "direction_success": null,
+      "prompt_tokens": 6250,
+      "generated_tokens": 1300,
+      "server_ns": 17883268000
+    }
+  },
+  "errors": [
+    {
+      "id": "s06_K01_defined_shallow",
+      "seed": 1292559482,
+      "error": "unknown_rule:k1",
+      "payload": {
+        "final_node_id": "k17",
+        "nodes": [
+          {
+            "atom": "Ca",
+            "id": "f1",
+            "parents": [],
+            "rule": null
+          },
+          {
+            "atom": "Cb",
+            "id": "k10",
+            "parents": [
+              "f1"
+            ],
+            "rule": "k10"
+          },
+          {
+            "atom": "Cc",
+            "id": "k17",
+            "parents": [
+              "k10"
+            ],
+            "rule": "k1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s07_K01_defined_shallow",
+      "seed": 223674688,
+      "error": "unknown_rule:k1_7",
+      "payload": {
+        "final_node_id": "k17",
+        "nodes": [
+          {
+            "atom": "Ca",
+            "id": "fact0",
+            "parents": [],
+            "rule": null
+          },
+          {
+            "atom": "Cb",
+            "id": "k10",
+            "parents": [
+              "fact0"
+            ],
+            "rule": "k10"
+          },
+          {
+            "atom": "Cc",
+            "id": "k17",
+            "parents": [
+              "k10"
+            ],
+            "rule": "k1_7"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s03_K01_defined_shallow",
+      "seed": 1790124989,
+      "error": "unknown_rule:k1",
+      "payload": {
+        "final_node_id": "k17",
+        "nodes": [
+          {
+            "atom": "Ca",
+            "id": "f0",
+            "parents": [],
+            "rule": null
+          },
+          {
+            "atom": "Cb",
+            "id": "k10",
+            "parents": [
+              "f0"
+            ],
+            "rule": "k10"
+          },
+          {
+            "atom": "Cc",
+            "id": "k17",
+            "parents": [
+              "k10"
+            ],
+            "rule": "k1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s00_K01_defined_shallow",
+      "seed": 580410664,
+      "error": "unknown_rule:k1_7",
+      "payload": {
+        "final_node_id": "k17",
+        "nodes": [
+          {
+            "atom": "Ca",
+            "id": "f1",
+            "parents": [],
+            "rule": null
+          },
+          {
+            "atom": "Cb",
+            "id": "k10",
+            "parents": [
+              "f1"
+            ],
+            "rule": "k10"
+          },
+          {
+            "atom": "Cc",
+            "id": "k17",
+            "parents": [
+              "k10"
+            ],
+            "rule": "k1_7"
+          }
+        ]
+      }
+    }
+  ]
+}

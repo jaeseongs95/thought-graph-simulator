@@ -1,0 +1,20 @@
+{
+  "dead_endpoint": {
+    "exit": 3,
+    "inference_calls": 0,
+    "failure_stage": "preflight_metadata",
+    "failure_kind": "runtime_metadata_error"
+  },
+  "identity_mismatch": {
+    "exit": 3,
+    "inference_calls": 0,
+    "failure_stage": "preflight_identity",
+    "failure_kind": "runtime_identity_error"
+  },
+  "first_chat_http_503": {
+    "exit": 3,
+    "inference_calls": 1,
+    "failure_stage": "inference",
+    "failure_kind": "transport_error"
+  }
+}

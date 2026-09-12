@@ -1,0 +1,41 @@
+{
+  "changed": [
+    "README.md",
+    "adm_diagnostic_v052/__init__.py",
+    "adm_diagnostic_v052/__main__.py",
+    "adm_diagnostic_v052/audit.py",
+    "adm_diagnostic_v052/reporting.py",
+    "adm_diagnostic_v052/runner.py",
+    "windows/Run-All.ps1"
+  ],
+  "added": [
+    "docs/R2_FAILURE_DIAGNOSTICS.ko.md",
+    "tests_v052/test_failure_diagnostics.py",
+    "validation/R2_VALIDATION.ko.md",
+    "validation/r2/DEAD_ENDPOINT.status.json",
+    "validation/r2/DEAD_ENDPOINT.stderr.txt",
+    "validation/r2/DEAD_ENDPOINT.stdout.txt",
+    "validation/r2/IDENTITY_MISMATCH.status.json",
+    "validation/r2/IDENTITY_MISMATCH.stderr.txt",
+    "validation/r2/IDENTITY_MISMATCH.stdout.txt",
+    "validation/r2/NEW_SELFTEST_PARTIAL_TIMEOUT.log",
+    "validation/r2/TARGETED_TESTS.log",
+    "validation/r2/TARGETED_TESTS_FINAL.log",
+    "validation/r2/TRANSPORT_ERROR.status.json",
+    "validation/r2/TRANSPORT_ERROR.stderr.txt",
+    "validation/r2/TRANSPORT_ERROR.stdout.txt"
+  ],
+  "removed": [
+    "FILE_MANIFEST.json"
+  ],
+  "research_core_unchanged": true,
+  "research_core": [
+    "adm_diagnostic_v052/design.py",
+    "adm_diagnostic_v052/requests.py",
+    "adm_diagnostic_v052/schema.py",
+    "adm_diagnostic_v052/measure.py",
+    "adm_diagnostic_v052/calibration.py",
+    "adm_diagnostic_v052/plan.py",
+    "adm_diagnostic_v052/evidence.py"
+  ]
+}

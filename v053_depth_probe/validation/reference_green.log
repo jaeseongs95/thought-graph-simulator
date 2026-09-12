@@ -1,0 +1,8 @@
+test_missing_parent (__main__.FinalReferenceContract.test_missing_parent) ... ok
+test_unsupported_fact (__main__.FinalReferenceContract.test_unsupported_fact) ... ok
+test_wrong_rule_conclusion (__main__.FinalReferenceContract.test_wrong_rule_conclusion) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK

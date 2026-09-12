@@ -1,0 +1,87 @@
+test_chain_internal_order_preserved (tests_v054.test_design.Design.test_chain_internal_order_preserved) ... ok
+test_definition_not_mixed_into_order_intervention (tests_v054.test_design.Design.test_definition_not_mixed_into_order_intervention) ... ok
+test_existing_plan_preserved (tests_v054.test_design.Design.test_existing_plan_preserved) ... ok
+test_generator_does_not_import_answer_oracle (tests_v054.test_design.Design.test_generator_does_not_import_answer_oracle) ... ok
+test_neutral_has_no_direction_instruction (tests_v054.test_design.Design.test_neutral_has_no_direction_instruction) ... ok
+test_only_rules_array_order_changes (tests_v054.test_design.Design.test_only_rules_array_order_changes) ... ok
+test_order_does_not_depend_on_direction (tests_v054.test_design.Design.test_order_does_not_depend_on_direction) ... ok
+test_original_sixty_wire_requests_identical (tests_v054.test_design.Design.test_original_sixty_wire_requests_identical) ... ok
+test_prepare_is_offline (tests_v054.test_design.Design.test_prepare_is_offline) ... ok
+test_problem_semantics_and_bounds_preserved (tests_v054.test_design.Design.test_problem_semantics_and_bounds_preserved) ... ok
+test_resealed_policy_change_rejected (tests_v054.test_design.Design.test_resealed_policy_change_rejected) ... ok
+test_resealed_rule_content_change_rejected (tests_v054.test_design.Design.test_resealed_rule_content_change_rejected) ... ok
+test_resealed_rule_order_change_rejected (tests_v054.test_design.Design.test_resealed_rule_order_change_rejected) ... ok
+test_resealed_seed_change_rejected (tests_v054.test_design.Design.test_resealed_seed_change_rejected) ... ok
+test_resealed_source_change_rejected (tests_v054.test_design.Design.test_resealed_source_change_rejected) ... ok
+test_schedule_is_fixed (tests_v054.test_design.Design.test_schedule_is_fixed) ... ok
+test_schema_and_messages_do_not_supply_answers (tests_v054.test_design.Design.test_schema_and_messages_do_not_supply_answers) ... ok
+test_seed_and_model_configuration_preserved (tests_v054.test_design.Design.test_seed_and_model_configuration_preserved) ... ok
+test_total_and_cell_balance (tests_v054.test_design.Design.test_total_and_cell_balance) ... ok
+test_added_call_file_rejected (tests_v054.test_execution.Execution.test_added_call_file_rejected) ... ok
+test_always_same_depth_is_not_control (tests_v054.test_execution.Execution.test_always_same_depth_is_not_control) ... ok
+test_bad_final_not_repaired (tests_v054.test_execution.Execution.test_bad_final_not_repaired) ... ok
+test_bundle_reauditable (tests_v054.test_execution.Execution.test_bundle_reauditable) ... ok
+test_cli_exit3_surfaces_failure (tests_v054.test_execution.Execution.test_cli_exit3_surfaces_failure) ... ok
+test_complete_perfect_run (tests_v054.test_execution.Execution.test_complete_perfect_run) ... ok
+test_existing_bundle_not_overwritten (tests_v054.test_execution.Execution.test_existing_bundle_not_overwritten) ... ok
+test_failed_audit_invalidates_old_summary (tests_v054.test_execution.Execution.test_failed_audit_invalidates_old_summary) ... ok
+test_identity_failure_before_inference (tests_v054.test_execution.Execution.test_identity_failure_before_inference) ... ok
+test_infra_failure_stops_one_call (tests_v054.test_execution.Execution.test_infra_failure_stops_one_call) ... ok
+test_neutral_one_output_not_two_calls (tests_v054.test_execution.Execution.test_neutral_one_output_not_two_calls) ... ok
+test_offline_report_exact (tests_v054.test_execution.Execution.test_offline_report_exact) ... ok
+test_perfect_is_robust_across_both_orders (tests_v054.test_execution.Execution.test_perfect_is_robust_across_both_orders) ... ok
+test_primary_denominator_excludes_neutral (tests_v054.test_execution.Execution.test_primary_denominator_excludes_neutral) ... ok
+test_raw_tamper_rejected (tests_v054.test_execution.Execution.test_raw_tamper_rejected) ... ok
+test_report_prints_depth_and_pair_tables (tests_v054.test_execution.Execution.test_report_prints_depth_and_pair_tables) ... FAIL
+test_resealed_request_tamper_rejected (tests_v054.test_execution.Execution.test_resealed_request_tamper_rejected) ... ok
+test_runtime_drift_rejected (tests_v054.test_execution.Execution.test_runtime_drift_rejected) ... ok
+test_source_snapshot_change_rejected (tests_v054.test_execution.Execution.test_source_snapshot_change_rejected) ... ok
+test_truncated_generation_is_not_unexecuted (tests_v054.test_execution.Execution.test_truncated_generation_is_not_unexecuted) ... ok
+test_wrong_model_stops_one_call (tests_v054.test_execution.Execution.test_wrong_model_stops_one_call) ... ok
+test_all_valid_paths_and_bounds (tests_v054.test_independent.IndependentChecker.test_all_valid_paths_and_bounds) ... ok
+test_cycle_rejected (tests_v054.test_independent.IndependentChecker.test_cycle_rejected) ... ok
+test_duplicate_json_keys_rejected (tests_v054.test_independent.IndependentChecker.test_duplicate_json_keys_rejected) ... ok
+test_duplicate_node_rejected (tests_v054.test_independent.IndependentChecker.test_duplicate_node_rejected) ... ok
+test_nonfinite_json_rejected (tests_v054.test_independent.IndependentChecker.test_nonfinite_json_rejected) ... ok
+test_unrelated_node_rejected (tests_v054.test_independent.IndependentChecker.test_unrelated_node_rejected) ... ok
+test_wrong_final_not_repaired (tests_v054.test_independent.IndependentChecker.test_wrong_final_not_repaired) ... ok
+test_wrong_rule_is_existing_but_invalid (tests_v054.test_independent.IndependentChecker.test_wrong_rule_is_existing_but_invalid) ... ok
+test_absent_final_reference_rejected (tests_v054.test_measure.Measurement.test_absent_final_reference_rejected) ... ok
+test_actual_depth_not_total_nodes (tests_v054.test_measure.Measurement.test_actual_depth_not_total_nodes) ... ok
+test_all_four_valid_paths (tests_v054.test_measure.Measurement.test_all_four_valid_paths) ... ok
+test_alternative_unused_nodes_rejected (tests_v054.test_measure.Measurement.test_alternative_unused_nodes_rejected) ... ok
+test_bare_goal_not_auto_corrected (tests_v054.test_measure.Measurement.test_bare_goal_not_auto_corrected) ... ok
+test_bounds_are_recomputed (tests_v054.test_measure.Measurement.test_bounds_are_recomputed) ... ok
+test_cycle_rejected (tests_v054.test_measure.Measurement.test_cycle_rejected) ... ok
+test_duplicate_final_id_is_ambiguous (tests_v054.test_measure.Measurement.test_duplicate_final_id_is_ambiguous) ... ok
+test_extra_field_not_allowed (tests_v054.test_measure.Measurement.test_extra_field_not_allowed) ... ok
+test_graph_only_A_M_not_measured (tests_v054.test_measure.Measurement.test_graph_only_A_M_not_measured) ... ok
+test_invalid_rule_conclusion_still_has_reference (tests_v054.test_measure.Measurement.test_invalid_rule_conclusion_still_has_reference) ... ok
+test_missing_parent_still_has_reference (tests_v054.test_measure.Measurement.test_missing_parent_still_has_reference) ... ok
+test_premise_omission_rejected (tests_v054.test_measure.Measurement.test_premise_omission_rejected) ... ok
+test_role_label_does_not_change_measurement (tests_v054.test_measure.Measurement.test_role_label_does_not_change_measurement) ... ok
+test_unparsed_is_not_false_proof (tests_v054.test_measure.Measurement.test_unparsed_is_not_false_proof) ... ok
+test_unsupported_goal_still_has_existing_reference (tests_v054.test_measure.Measurement.test_unsupported_goal_still_has_existing_reference) ... ok
+test_wrong_direction_not_success (tests_v054.test_measure.Measurement.test_wrong_direction_not_success) ... ok
+test_actual_typo_k1_and_k1_7_are_not_repaired (tests_v054.test_order_controls.OrderControls.test_actual_typo_k1_and_k1_7_are_not_repaired) ... ok
+test_control_in_only_one_order_is_not_robust (tests_v054.test_order_controls.OrderControls.test_control_in_only_one_order_is_not_robust) ... ok
+test_first_branch_changes_all_sixty_order_pairs_but_controls_no_D_pairs (tests_v054.test_order_controls.OrderControls.test_first_branch_changes_all_sixty_order_pairs_but_controls_no_D_pairs) ... ok
+test_inverse_direction_is_never_success (tests_v054.test_order_controls.OrderControls.test_inverse_direction_is_never_success) ... ok
+test_misspelled_rule_has_reference_but_no_proof (tests_v054.test_order_controls.OrderControls.test_misspelled_rule_has_reference_but_no_proof) ... ok
+test_no_independent_sample_inflation (tests_v054.test_order_controls.OrderControls.test_no_independent_sample_inflation) ... ok
+test_no_order_effect_for_perfect_direction_follower (tests_v054.test_order_controls.OrderControls.test_no_order_effect_for_perfect_direction_follower) ... ok
+test_unmeasured_order_contrast_is_not_unchanged (tests_v054.test_order_controls.OrderControls.test_unmeasured_order_contrast_is_not_unchanged) ... ok
+
+======================================================================
+FAIL: test_report_prints_depth_and_pair_tables (tests_v054.test_execution.Execution.test_report_prints_depth_and_pair_tables)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v054_release/v054_order_probe/tests_v054/test_execution.py", line 86, in test_report_prints_depth_and_pair_tables
+    self.assertIn('방향 이행',text);self.assertIn('선택적 제어',text);self.assertIn('중립',text)
+                                                                      ~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: '중립' not found in "# v054 규칙 순서와 D 방향 제어 대조\n\n자료 무결성: True / 완료: True / 호출: 120/120\n모델: test-only:4b-instruct / 출처: synthetic_fixture\n\n규칙 순서에 따라 경로가 바뀌는 것과, 요청한 shallow/deep에 따라 바뀌는 것은 다른 결과다.\n\n## 실제 깊이와 방향 이행\n\n|문제/규칙순서/방향|배정|유효 증명|방향 일치|실제 깊이|\n|---|---:|---:|---:|---|\n|K01/original/shallow|10|10|10|{'1': 10}|\n|K01/original/deep|10|10|10|{'2': 10}|\n|K01/original/neutral|10|10|해당 없음|{'1': 10}|\n|K01/swapped/shallow|10|10|10|{'1': 10}|\n|K01/swapped/deep|10|10|10|{'2': 10}|\n|K01/swapped/neutral|10|10|해당 없음|{'1': 10}|\n|T02/original/shallow|10|10|10|{'1': 10}|\n|T02/original/deep|10|10|10|{'4': 10}|\n|T02/original/neutral|10|10|해당 없음|{'1': 10}|\n|T02/swapped/shallow|10|10|10|{'1': 10}|\n|T02/swapped/deep|10|10|10|{'4': 10}|\n|T02/swapped/neutral|10|10|해당 없음|{'1': 10}|\n\n## 같은 순서에서 shallow/deep 선택적 제어\n\n|문제/순서|배정 대응쌍|둘 다 유효|선택적 성공|\n|---|---:|---:|---:|\n|K01/original|10|10|10|\n|K01/swapped|10|10|10|\n|T02/original|10|10|10|\n|T02/swapped|10|10|10|\n\n## 두 순서 모두에서 유지되는 선택적 제어\n\n|문제|seed 묶음|4응답 유효|두 순서 모두 성공|\n|---|---:|---:|---:|\n|K01|10|10|10|\n|T02|10|10|10|\n\n## 방향을 고정하고 순서만 바꾼 효과\n\n|문제/방향|배정|둘 다 유효|깊이 변경|비교 미측정|\n|---|---:|---:|---:|---:|\n|K01/shallow|10|10|0|0|\n|K01/deep|10|10|0|0|\n|K01/neutral|10|10|0|0|\n|T02/shallow|10|10|0|0|\n|T02/deep|10|10|0|0|\n|T02/neutral|10|10|0|0|\n\n## 판정 범위\n\noriginal 60요청은 v053 original과 바이트 동일. swapped는 입력 rules의 블록 순서만 다르다.\n규칙 내용·ID·연쇄 내부 순서·facts·goal·모델·옵션·seed·system·schema는 보존한다.\n선택적 성공 0인데 순서 효과만 있으면 규칙 제시 방식에 따른 경로 변화이지 D 제어 성공이 아니다.\n정답 깊이·증명·선택할 규칙을 제공하지 않고 자동 보정·재시도하지 않는다.\n모든 seed·실패를 보존한다. A/M 통합·내부 사고 제어·광범위 일반화는 이 실험의 판정 범위가 아니다.\n고정 문제 2개. 방향쌍 40·순서쌍 60·견고성 20은 같은 120응답의 서로 다른 재집계이며 합산하지 않음\n계획 SHA-256: 43ef4dbe9ddc07364f2129907da3a5c264a02cfe6c67abf58cc613654a75a35f\n마지막 event: 4c901e3a387911f3cf1995ee75d377cf9bac8b9fee5157f729b8dacf327fc5b0\n해시는 동봉 원문·계획의 일관성 검사이며 외부 실행 전자서명이 아니다.\n"
+
+----------------------------------------------------------------------
+Ran 73 tests in 61.680s
+
+FAILED (failures=1)

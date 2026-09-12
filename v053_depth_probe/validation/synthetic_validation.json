@@ -1,0 +1,29 @@
+[
+  {
+    "mode": "perfect",
+    "inference_calls": 120,
+    "valid": 120,
+    "selective_pairs": 40,
+    "independent_discrepancies": 0,
+    "bundle_sha256": "404572316968e4e6b347453fdbf08f7446d6e98ab2fa5b5b47168479a4967a27",
+    "evidence_kind": "synthetic_fixture"
+  },
+  {
+    "mode": "ignore_roles",
+    "inference_calls": 120,
+    "valid": 120,
+    "selective_pairs": 0,
+    "independent_discrepancies": 0,
+    "bundle_sha256": "173e999289d33b9c0ec54395140f2983c2d2e99556e08d54ae688efdf358807b",
+    "evidence_kind": "synthetic_fixture"
+  },
+  {
+    "mode": "bad_final",
+    "inference_calls": 120,
+    "valid": 0,
+    "selective_pairs": 0,
+    "independent_discrepancies": 0,
+    "bundle_sha256": "72d924bd40c69186e40497d09b5e120f97f0f2141629a41d242ba6e6b642c002",
+    "evidence_kind": "synthetic_fixture"
+  }
+]

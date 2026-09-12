@@ -1,0 +1,21 @@
+test_actual_original_request_bytes_120_match (tests_v052.test_design.Design.test_actual_original_request_bytes_120_match) ... ok
+test_axis_pairs_differ_only_one_instruction_line (tests_v052.test_design.Design.test_axis_pairs_differ_only_one_instruction_line) ... ok
+test_bad_plan_rehashed_rejected (tests_v052.test_design.Design.test_bad_plan_rehashed_rejected) ... ok
+test_full_and_graph_problem_equal (tests_v052.test_design.Design.test_full_and_graph_problem_equal) ... ok
+test_legacy_not_on_transfer (tests_v052.test_design.Design.test_legacy_not_on_transfer) ... ok
+test_model_settings_inherit (tests_v052.test_design.Design.test_model_settings_inherit) ... ok
+test_neutral_omits_role_instructions (tests_v052.test_design.Design.test_neutral_omits_role_instructions) ... ok
+test_no_copy_id_reused_as_primary (tests_v052.test_design.Design.test_no_copy_id_reused_as_primary) ... ok
+test_primary_request_no_reference (tests_v052.test_design.Design.test_primary_request_no_reference) ... ok
+test_runner_request_do_not_import_test_or_solver (tests_v052.test_design.Design.test_runner_request_do_not_import_test_or_solver) ... ok
+test_same_schema_all_primary_roles (tests_v052.test_design.Design.test_same_schema_all_primary_roles) ... ok
+test_schedule_440 (tests_v052.test_design.Design.test_schedule_440) ... ok
+test_schedule_deterministic (tests_v052.test_design.Design.test_schedule_deterministic) ... ok
+test_schedule_seed_all_roles (tests_v052.test_design.Design.test_schedule_seed_all_roles) ... ok
+test_schema_nodes_before_final (tests_v052.test_design.Design.test_schema_nodes_before_final) ... ok
+test_schema_not_answer_enumeration (tests_v052.test_design.Design.test_schema_not_answer_enumeration) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 11.777s
+
+OK

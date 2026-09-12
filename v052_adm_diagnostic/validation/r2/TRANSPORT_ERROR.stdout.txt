@@ -1,0 +1,14 @@
+[1/440] s08_K01_factorial_schema_deep_M1
+{
+  "data_integrity": true,
+  "data_complete": false,
+  "comparative_analysis_ready": false,
+  "evidence_kind": "synthetic_fixture",
+  "inference_calls": 1,
+  "max_inference_calls": 440,
+  "run_state": "incomplete",
+  "failure_stage": "inference",
+  "failure_kind": "transport_error",
+  "failure_slot_id": "s08_K01_factorial_schema_deep_M1",
+  "run_error": "ContractError: 통신 오류. 원문 보존, 자동 재시도 없음: HTTP 503"
+}

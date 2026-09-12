@@ -1,0 +1,9 @@
+{
+  "contract": "v052-adm-diagnostic-report-r1",
+  "data_integrity": true,
+  "data_complete": false,
+  "comparative_analysis_ready": false,
+  "inference_calls": 0,
+  "plan_sha256": "27eb7cfc1c4d7627af12df91738e744d5b7896caef78330ff0d89b38ff323c8b",
+  "event_tip": "27eb7cfc1c4d7627af12df91738e744d5b7896caef78330ff0d89b38ff323c8b"
+}

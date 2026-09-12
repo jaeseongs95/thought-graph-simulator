@@ -1,0 +1,14 @@
+{
+  "contract": "v052-adm-diagnostic-report-r1",
+  "data_integrity": true,
+  "data_complete": true,
+  "comparative_analysis_ready": true,
+  "inference_calls": 440,
+  "plan_sha256": "63eeb71806683b6d5771be988edfa71e1441fbe1728dca01b5feb516a8f0aab2",
+  "event_tip": "6a3ceeec1b75fdca9b467c3caf72b22a6dfa47007fd06cc76febdab0094cdfce",
+  "run_state": "complete",
+  "failure_stage": null,
+  "failure_kind": null,
+  "failure_slot_id": null,
+  "run_error": null
+}

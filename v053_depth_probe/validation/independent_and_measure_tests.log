@@ -1,0 +1,30 @@
+test_all_valid_paths_and_bounds (tests_v053.test_independent.IndependentChecker.test_all_valid_paths_and_bounds) ... ok
+test_cycle_rejected (tests_v053.test_independent.IndependentChecker.test_cycle_rejected) ... ok
+test_duplicate_json_keys_rejected (tests_v053.test_independent.IndependentChecker.test_duplicate_json_keys_rejected) ... ok
+test_duplicate_node_rejected (tests_v053.test_independent.IndependentChecker.test_duplicate_node_rejected) ... ok
+test_nonfinite_json_rejected (tests_v053.test_independent.IndependentChecker.test_nonfinite_json_rejected) ... ok
+test_unrelated_node_rejected (tests_v053.test_independent.IndependentChecker.test_unrelated_node_rejected) ... ok
+test_wrong_final_not_repaired (tests_v053.test_independent.IndependentChecker.test_wrong_final_not_repaired) ... ok
+test_wrong_rule_is_existing_but_invalid (tests_v053.test_independent.IndependentChecker.test_wrong_rule_is_existing_but_invalid) ... ok
+test_absent_final_reference_rejected (tests_v053.test_measure.Measurement.test_absent_final_reference_rejected) ... ok
+test_actual_depth_not_total_nodes (tests_v053.test_measure.Measurement.test_actual_depth_not_total_nodes) ... ok
+test_all_four_valid_paths (tests_v053.test_measure.Measurement.test_all_four_valid_paths) ... ok
+test_alternative_unused_nodes_rejected (tests_v053.test_measure.Measurement.test_alternative_unused_nodes_rejected) ... ok
+test_bare_goal_not_auto_corrected (tests_v053.test_measure.Measurement.test_bare_goal_not_auto_corrected) ... ok
+test_bounds_are_recomputed (tests_v053.test_measure.Measurement.test_bounds_are_recomputed) ... ok
+test_cycle_rejected (tests_v053.test_measure.Measurement.test_cycle_rejected) ... ok
+test_duplicate_final_id_is_ambiguous (tests_v053.test_measure.Measurement.test_duplicate_final_id_is_ambiguous) ... ok
+test_extra_field_not_allowed (tests_v053.test_measure.Measurement.test_extra_field_not_allowed) ... ok
+test_graph_only_A_M_not_measured (tests_v053.test_measure.Measurement.test_graph_only_A_M_not_measured) ... ok
+test_invalid_rule_conclusion_still_has_reference (tests_v053.test_measure.Measurement.test_invalid_rule_conclusion_still_has_reference) ... ok
+test_missing_parent_still_has_reference (tests_v053.test_measure.Measurement.test_missing_parent_still_has_reference) ... ok
+test_premise_omission_rejected (tests_v053.test_measure.Measurement.test_premise_omission_rejected) ... ok
+test_role_label_does_not_change_measurement (tests_v053.test_measure.Measurement.test_role_label_does_not_change_measurement) ... ok
+test_unparsed_is_not_false_proof (tests_v053.test_measure.Measurement.test_unparsed_is_not_false_proof) ... ok
+test_unsupported_goal_still_has_existing_reference (tests_v053.test_measure.Measurement.test_unsupported_goal_still_has_existing_reference) ... ok
+test_wrong_direction_not_success (tests_v053.test_measure.Measurement.test_wrong_direction_not_success) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.003s
+
+OK

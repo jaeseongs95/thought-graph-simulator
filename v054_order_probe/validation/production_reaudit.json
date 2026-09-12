@@ -1,0 +1,40 @@
+{
+  "full_report_equal": true,
+  "data_integrity": true,
+  "data_complete": true,
+  "calls": 120,
+  "core": {
+    "K01/original": {
+      "assigned_pairs": 10,
+      "both_valid_pairs": 10,
+      "direction_selective_success": 0,
+      "rate_over_assigned": 0.0,
+      "mean_directed_minus_neutral": 0.0,
+      "interpretation": "selective_D_control_not_observed"
+    },
+    "K01/defined": {
+      "assigned_pairs": 10,
+      "both_valid_pairs": 6,
+      "direction_selective_success": 0,
+      "rate_over_assigned": 0.0,
+      "mean_directed_minus_neutral": 0.0,
+      "interpretation": "selective_D_control_not_observed"
+    },
+    "T02/original": {
+      "assigned_pairs": 10,
+      "both_valid_pairs": 10,
+      "direction_selective_success": 0,
+      "rate_over_assigned": 0.0,
+      "mean_directed_minus_neutral": 0.0,
+      "interpretation": "selective_D_control_not_observed"
+    },
+    "T02/defined": {
+      "assigned_pairs": 10,
+      "both_valid_pairs": 10,
+      "direction_selective_success": 0,
+      "rate_over_assigned": 0.0,
+      "mean_directed_minus_neutral": 0.0,
+      "interpretation": "selective_D_control_not_observed"
+    }
+  }
+}

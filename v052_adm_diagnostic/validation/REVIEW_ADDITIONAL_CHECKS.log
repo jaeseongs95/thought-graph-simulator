@@ -1,0 +1,7 @@
+test_unparsed_graph_only_does_not_claim_proof_error (tests_v052.test_review_regressions.ReviewRegression.test_unparsed_graph_only_does_not_claim_proof_error) ... ok
+test_unparsed_response_proof_is_unmeasured_not_incorrect (tests_v052.test_review_regressions.ReviewRegression.test_unparsed_response_proof_is_unmeasured_not_incorrect) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK

@@ -1,0 +1,34 @@
+test_cli_exit3_surfaces_run_error (tests_v052.test_failure_diagnostics.FailureDiagnostics.test_cli_exit3_surfaces_run_error) ... ok
+test_failure_kind_inference_transport (tests_v052.test_failure_diagnostics.FailureDiagnostics.test_failure_kind_inference_transport) ... ok
+test_failure_kind_preflight_identity (tests_v052.test_failure_diagnostics.FailureDiagnostics.test_failure_kind_preflight_identity) ... ok
+test_failure_kind_preflight_metadata (tests_v052.test_failure_diagnostics.FailureDiagnostics.test_failure_kind_preflight_metadata) ... ok
+test_M1_target_atom_rejected (tests_v052.test_measure.Measurement.test_M1_target_atom_rejected) ... ok
+test_M2_all_eight_values_only_one_succeeds (tests_v052.test_measure.Measurement.test_M2_all_eight_values_only_one_succeeds) ... ok
+test_M2_false_keeps_AD (tests_v052.test_measure.Measurement.test_M2_false_keeps_AD) ... ok
+test_all_24_valid_combinations (tests_v052.test_measure.Measurement.test_all_24_valid_combinations) ... ok
+test_depth_is_actual_dependency (tests_v052.test_measure.Measurement.test_depth_is_actual_dependency) ... ok
+test_duplicate_binding_not_last_wins (tests_v052.test_measure.Measurement.test_duplicate_binding_not_last_wins) ... ok
+test_duplicate_node_view_not_last_wins (tests_v052.test_measure.Measurement.test_duplicate_node_view_not_last_wins) ... ok
+test_false_fact_rejected (tests_v052.test_measure.Measurement.test_false_fact_rejected) ... ok
+test_format_reference_copy (tests_v052.test_measure.Measurement.test_format_reference_copy) ... ok
+test_goal_atom_not_node_id (tests_v052.test_measure.Measurement.test_goal_atom_not_node_id) ... ok
+test_graph_only_has_no_A_M_claim (tests_v052.test_measure.Measurement.test_graph_only_has_no_A_M_claim) ... ok
+test_invalid_rule_rejected (tests_v052.test_measure.Measurement.test_invalid_rule_rejected) ... ok
+test_missing_premise_rejected (tests_v052.test_measure.Measurement.test_missing_premise_rejected) ... ok
+test_no_path_pruning (tests_v052.test_measure.Measurement.test_no_path_pruning) ... ok
+test_non_boolean_review_rejected (tests_v052.test_measure.Measurement.test_non_boolean_review_rejected) ... ok
+test_output_bad_final_not_repaired_in_projection (tests_v052.test_measure.Measurement.test_output_bad_final_not_repaired_in_projection) ... ok
+test_requested_role_not_measurement_input (tests_v052.test_measure.Measurement.test_requested_role_not_measurement_input) ... ok
+test_roundtrip_preserves_every_semantic_value (tests_v052.test_measure.Measurement.test_roundtrip_preserves_every_semantic_value) ... ok
+test_schema_premise_injection_rejected (tests_v052.test_measure.Measurement.test_schema_premise_injection_rejected) ... ok
+test_schema_wrong_binding_rejected (tests_v052.test_measure.Measurement.test_schema_wrong_binding_rejected) ... ok
+test_selective_D_not_read_from_role (tests_v052.test_measure.Measurement.test_selective_D_not_read_from_role) ... ok
+test_strict_json_rejects_duplicate (tests_v052.test_measure.Measurement.test_strict_json_rejects_duplicate) ... ok
+test_wrong_goal_rejected (tests_v052.test_measure.Measurement.test_wrong_goal_rejected) ... ok
+test_unparsed_graph_only_does_not_claim_proof_error (tests_v052.test_review_regressions.ReviewRegression.test_unparsed_graph_only_does_not_claim_proof_error) ... ok
+test_unparsed_response_proof_is_unmeasured_not_incorrect (tests_v052.test_review_regressions.ReviewRegression.test_unparsed_response_proof_is_unmeasured_not_incorrect) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.016s
+
+OK

@@ -1,0 +1,35 @@
+test_missing_parent (__main__.FinalReferenceContract.test_missing_parent) ... FAIL
+test_unsupported_fact (__main__.FinalReferenceContract.test_unsupported_fact) ... FAIL
+test_wrong_rule_conclusion (__main__.FinalReferenceContract.test_wrong_rule_conclusion) ... FAIL
+
+======================================================================
+FAIL: test_missing_parent (__main__.FinalReferenceContract.test_missing_parent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v052_02_analysis/reference_red_green.py", line 20, in test_missing_parent
+    m=measure(p,v);self.assertFalse(m['proof_valid']);self.assertTrue(m['final_ref_valid'])
+                                                      ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_unsupported_fact (__main__.FinalReferenceContract.test_unsupported_fact)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v052_02_analysis/reference_red_green.py", line 14, in test_unsupported_fact
+    m=measure(p,v);self.assertFalse(m['proof_valid']);self.assertTrue(m['final_ref_valid'])
+                                                      ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_wrong_rule_conclusion (__main__.FinalReferenceContract.test_wrong_rule_conclusion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v052_02_analysis/reference_red_green.py", line 17, in test_wrong_rule_conclusion
+    m=measure(p,v);self.assertFalse(m['proof_valid']);self.assertTrue(m['final_ref_valid'])
+                                                      ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (failures=3)

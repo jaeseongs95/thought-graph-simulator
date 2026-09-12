@@ -1,0 +1,20 @@
+{
+  "state": "complete",
+  "complete": true,
+  "recorded_slots": 440,
+  "inference_calls": 440,
+  "event_tip": "6a3ceeec1b75fdca9b467c3caf72b22a6dfa47007fd06cc76febdab0094cdfce",
+  "runtime_identity_verified": true,
+  "identity_checkpoints": [
+    "runtime.before.json",
+    "runtime.after.json"
+  ],
+  "response_identity_mismatch": false,
+  "error": null,
+  "active_stage": "complete",
+  "active_slot_id": null,
+  "failure_stage": null,
+  "failure_kind": null,
+  "failure_slot_id": null,
+  "finished_at": "2026-09-12T00:48:02.780+00:00"
+}
