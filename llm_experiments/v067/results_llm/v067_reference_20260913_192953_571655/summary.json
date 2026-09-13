@@ -1,0 +1,908 @@
+{
+  "contract": "v067-report-r1",
+  "run_name": "v067_reference_20260913_192953_571655",
+  "provenance": "live",
+  "plan_sha256": "1d88337db00c2ede3fc26e72a359e62867e43f2ea17fed1b04d77afcf7327710",
+  "state": "complete",
+  "full_complete": true,
+  "assigned_calls": 12,
+  "observed_calls": 12,
+  "rows": [
+    {
+      "id": "b00_p0_reference_short",
+      "block": 0,
+      "period": 0,
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_short",
+      "reference_rule_ids": [
+        "r83"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": null,
+      "previous_condition": null,
+      "status": "ok",
+      "http_status": 200,
+      "error": null,
+      "elapsed_ns": 5314979900,
+      "request_sha256": "19e5eabf02327f58b9b71dcd8517b9990b0a5bd5383f6263df75f1deea850f40",
+      "response_sha256": "d4458b3ad43c2742008b9917d5cc3660350690cfc42f50e44f4ed4622110e12c",
+      "response_b64": "eyJtb2RlbCI6InF3ZW4zOjRiLWluc3RydWN0IiwiY3JlYXRlZF9hdCI6IjIwMjYtMDktMTNUMTA6MzA6MDIuMzI0NTg0WiIsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOiJ7XG4gIFwiZmluYWxfbm9kZV9pZFwiOiBcInI4M1wiLFxuICBcIm5vZGVzXCI6IFtcbiAgICB7XG4gICAgICBcImF0b21cIjogXCJMcFwiLFxuICAgICAgXCJpZFwiOiBcImYxXCIsXG4gICAgICBcInBhcmVudHNcIjogW10sXG4gICAgICBcInJ1bGVcIjogbnVsbFxuICAgIH0sXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiTHNcIixcbiAgICAgIFwiaWRcIjogXCJmMlwiLFxuICAgICAgXCJwYXJlbnRzXCI6IFtdLFxuICAgICAgXCJydWxlXCI6IG51bGxcbiAgICB9LFxuICAgIHtcbiAgICAgIFwiYXRvbVwiOiBcIkxnXCIsXG4gICAgICBcImlkXCI6IFwicjgzXCIsXG4gICAgICBcInBhcmVudHNcIjogW1wiZjFcIiwgXCJmMlwiXSxcbiAgICAgIFwicnVsZVwiOiBcInI4M1wiXG4gICAgfVxuICBdXG59In0sImRvbmUiOnRydWUsImRvbmVfcmVhc29uIjoic3RvcCIsInRvdGFsX2R1cmF0aW9uIjo1Mjg0NjcyMDAwLCJsb2FkX2R1cmF0aW9uIjozMjQyNjgxOTAwLCJwcm9tcHRfZXZhbF9jb3VudCI6NjgyLCJwcm9tcHRfZXZhbF9jYWNoZWRfY291bnQiOjAsInByb21wdF9ldmFsX2R1cmF0aW9uIjoyMzQ0OTUwMDAsImV2YWxfY291bnQiOjEyNSwiZXZhbF9kdXJhdGlvbiI6MTc0Nzc5NjAwMH0=",
+      "format_valid": true,
+      "proof_valid": true,
+      "strict_valid": true,
+      "actual_D": 1,
+      "final_rule_id": "r83",
+      "error_codes": [],
+      "usage": {
+        "prompt_eval_count": 682,
+        "eval_count": 125,
+        "total_duration": 5284672000,
+        "prompt_eval_cached_count": 0
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Lp",
+          "Ls"
+        ],
+        "fixed_goal": "Lg",
+        "emitted_node_atoms": [
+          "Lp",
+          "Ls",
+          "Lg"
+        ],
+        "added_propositions": [],
+        "strict_proof_path_sha256": "2ffd96051b5cfc2a7be4736444aa046855349074ca21266df55ec6c71cd4918b"
+      },
+      "reference_input_D": 1,
+      "emitted_rule_ids": [
+        "r83"
+      ],
+      "reference_order_followed": true,
+      "reference_reconstruction_success": true,
+      "D_instruction_control_success": null
+    },
+    {
+      "id": "b00_p0_reference_long",
+      "block": 0,
+      "period": 1,
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_long",
+      "reference_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b00_p0_reference_short",
+      "previous_condition": "reference_short",
+      "status": "ok",
+      "http_status": 200,
+      "error": null,
+      "elapsed_ns": 3682503100,
+      "request_sha256": "baf278aa9eb6c038a3255757105d277d347f3b04db2f5ae3f8c58d1645491108",
+      "response_sha256": "33391185eec9ba1c0e107a40666a68fec637ace3289f3fe8855328885aa863bc",
+      "response_b64": "eyJtb2RlbCI6InF3ZW4zOjRiLWluc3RydWN0IiwiY3JlYXRlZF9hdCI6IjIwMjYtMDktMTNUMTA6MzA6MDYuMDA5ODYwNFoiLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50Ijoie1xuICBcImZpbmFsX25vZGVfaWRcIjogXCJyODNcIixcbiAgXCJub2Rlc1wiOiBbXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiTHBcIixcbiAgICAgIFwiaWRcIjogXCJmMVwiLFxuICAgICAgXCJwYXJlbnRzXCI6IFtdLFxuICAgICAgXCJydWxlXCI6IG51bGxcbiAgICB9LFxuICAgIHtcbiAgICAgIFwiYXRvbVwiOiBcIkxzXCIsXG4gICAgICBcImlkXCI6IFwiZjJcIixcbiAgICAgIFwicGFyZW50c1wiOiBbXSxcbiAgICAgIFwicnVsZVwiOiBudWxsXG4gICAgfSxcbiAgICB7XG4gICAgICBcImF0b21cIjogXCJMcVwiLFxuICAgICAgXCJpZFwiOiBcInIyMVwiLFxuICAgICAgXCJwYXJlbnRzXCI6IFtcbiAgICAgICAgXCJmMVwiXG4gICAgICBdLFxuICAgICAgXCJydWxlXCI6IFwicjIxXCJcbiAgICB9LFxuICAgIHtcbiAgICAgIFwiYXRvbVwiOiBcIkxyXCIsXG4gICAgICBcImlkXCI6IFwicjU3XCIsXG4gICAgICBcInBhcmVudHNcIjogW1xuICAgICAgICBcInIyMVwiLFxuICAgICAgICBcImYyXCJcbiAgICAgIF0sXG4gICAgICBcInJ1bGVcIjogXCJyNTdcIlxuICAgIH0sXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiTHRcIixcbiAgICAgIFwiaWRcIjogXCJyMDRcIixcbiAgICAgIFwicGFyZW50c1wiOiBbXG4gICAgICAgIFwicjU3XCJcbiAgICAgIF0sXG4gICAgICBcInJ1bGVcIjogXCJyMDRcIlxuICAgIH0sXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiTGdcIixcbiAgICAgIFwiaWRcIjogXCJyNjlcIixcbiAgICAgIFwicGFyZW50c1wiOiBbXG4gICAgICAgIFwicjA0XCJcbiAgICAgIF0sXG4gICAgICBcInJ1bGVcIjogXCJyNjlcIlxuICAgIH1cbiAgXVxufSJ9LCJkb25lIjp0cnVlLCJkb25lX3JlYXNvbiI6InN0b3AiLCJ0b3RhbF9kdXJhdGlvbiI6MzY0ODQxMjcwMCwibG9hZF9kdXJhdGlvbiI6MTg5OTczMDAsInByb21wdF9ldmFsX2NvdW50Ijo2OTQsInByb21wdF9ldmFsX2NhY2hlZF9jb3VudCI6Njc0LCJwcm9tcHRfZXZhbF9kdXJhdGlvbiI6MjA1NDUwMDAsImV2YWxfY291bnQiOjI1OCwiZXZhbF9kdXJhdGlvbiI6MzU1ODQ0OTAwMH0=",
+      "format_valid": true,
+      "proof_valid": false,
+      "strict_valid": false,
+      "actual_D": null,
+      "final_rule_id": null,
+      "error_codes": [
+        "missing_final_node"
+      ],
+      "usage": {
+        "prompt_eval_count": 694,
+        "eval_count": 258,
+        "total_duration": 3648412700,
+        "prompt_eval_cached_count": 674
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Lp",
+          "Ls"
+        ],
+        "fixed_goal": "Lg",
+        "emitted_node_atoms": [
+          "Lp",
+          "Ls",
+          "Lq",
+          "Lr",
+          "Lt",
+          "Lg"
+        ],
+        "added_propositions": [
+          "Lq",
+          "Lr",
+          "Lt"
+        ]
+      },
+      "reference_input_D": 4,
+      "emitted_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "reference_order_followed": true,
+      "reference_reconstruction_success": false,
+      "D_instruction_control_success": null
+    },
+    {
+      "id": "b01_p0_reference_long",
+      "block": 1,
+      "period": 0,
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_long",
+      "reference_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b00_p0_reference_long",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "http_status": 200,
+      "error": null,
+      "elapsed_ns": 3634116300,
+      "request_sha256": "08cb4f5b1950ec3929582679abf150238cad6ab975d82c1f76e0c3ea92f89b2a",
+      "response_sha256": "bacfc9f59253c5fbd6ea7bd5a9274f962af4c917225e14d6f62dad8592ad5334",
+      "response_b64": "eyJtb2RlbCI6InF3ZW4zOjRiLWluc3RydWN0IiwiY3JlYXRlZF9hdCI6IjIwMjYtMDktMTNUMTA6MzA6MDkuODYxNDU5NloiLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50Ijoie1xuICBcImZpbmFsX25vZGVfaWRcIjogXCJyODNcIixcbiAgXCJub2Rlc1wiOiBbXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiTHBcIixcbiAgICAgIFwiaWRcIjogXCJmMVwiLFxuICAgICAgXCJwYXJlbnRzXCI6IFtdLFxuICAgICAgXCJydWxlXCI6IG51bGxcbiAgICB9LFxuICAgIHtcbiAgICAgIFwiYXRvbVwiOiBcIkxzXCIsXG4gICAgICBcImlkXCI6IFwiZjJcIixcbiAgICAgIFwicGFyZW50c1wiOiBbXSxcbiAgICAgIFwicnVsZVwiOiBudWxsXG4gICAgfSxcbiAgICB7XG4gICAgICBcImF0b21cIjogXCJMcVwiLFxuICAgICAgXCJpZFwiOiBcInIyMVwiLFxuICAgICAgXCJwYXJlbnRzXCI6IFtcbiAgICAgICAgXCJmMVwiXG4gICAgICBdLFxuICAgICAgXCJydWxlXCI6IFwicjIxXCJcbiAgICB9LFxuICAgIHtcbiAgICAgIFwiYXRvbVwiOiBcIkxyXCIsXG4gICAgICBcImlkXCI6IFwicjU3XCIsXG4gICAgICBcInBhcmVudHNcIjogW1xuICAgICAgICBcInIyMVwiLFxuICAgICAgICBcImYyXCJcbiAgICAgIF0sXG4gICAgICBcInJ1bGVcIjogXCJyNTdcIlxuICAgIH0sXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiTHRcIixcbiAgICAgIFwiaWRcIjogXCJyMDRcIixcbiAgICAgIFwicGFyZW50c1wiOiBbXG4gICAgICAgIFwicjU3XCJcbiAgICAgIF0sXG4gICAgICBcInJ1bGVcIjogXCJyMDRcIlxuICAgIH0sXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiTGdcIixcbiAgICAgIFwiaWRcIjogXCJyNjlcIixcbiAgICAgIFwicGFyZW50c1wiOiBbXG4gICAgICAgIFwicjA0XCJcbiAgICAgIF0sXG4gICAgICBcInJ1bGVcIjogXCJyNjlcIlxuICAgIH1cbiAgXVxufSJ9LCJkb25lIjp0cnVlLCJkb25lX3JlYXNvbiI6InN0b3AiLCJ0b3RhbF9kdXJhdGlvbiI6MzYwMDY2NTAwMCwibG9hZF9kdXJhdGlvbiI6MTgyNTIwMDAsInByb21wdF9ldmFsX2NvdW50Ijo2OTQsInByb21wdF9ldmFsX2NhY2hlZF9jb3VudCI6NjkzLCJwcm9tcHRfZXZhbF9kdXJhdGlvbiI6MTY2NTQwMDAsImV2YWxfY291bnQiOjI1OCwiZXZhbF9kdXJhdGlvbiI6MzUyMDE5NDAwMH0=",
+      "format_valid": true,
+      "proof_valid": false,
+      "strict_valid": false,
+      "actual_D": null,
+      "final_rule_id": null,
+      "error_codes": [
+        "missing_final_node"
+      ],
+      "usage": {
+        "prompt_eval_count": 694,
+        "eval_count": 258,
+        "total_duration": 3600665000,
+        "prompt_eval_cached_count": 693
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Lp",
+          "Ls"
+        ],
+        "fixed_goal": "Lg",
+        "emitted_node_atoms": [
+          "Lp",
+          "Ls",
+          "Lq",
+          "Lr",
+          "Lt",
+          "Lg"
+        ],
+        "added_propositions": [
+          "Lq",
+          "Lr",
+          "Lt"
+        ]
+      },
+      "reference_input_D": 4,
+      "emitted_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "reference_order_followed": true,
+      "reference_reconstruction_success": false,
+      "D_instruction_control_success": null
+    },
+    {
+      "id": "b01_p0_reference_short",
+      "block": 1,
+      "period": 1,
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_short",
+      "reference_rule_ids": [
+        "r83"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b01_p0_reference_long",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "http_status": 200,
+      "error": null,
+      "elapsed_ns": 1919445800,
+      "request_sha256": "948c0edbaa1aadfd70969fa62ef16db27beac2bb4956e2d07244f4ed04f30eb5",
+      "response_sha256": "9582a328536daea06ca194119f547575158459437152c1c5541bbfe10efa5b94",
+      "response_b64": "eyJtb2RlbCI6InF3ZW4zOjRiLWluc3RydWN0IiwiY3JlYXRlZF9hdCI6IjIwMjYtMDktMTNUMTA6MzA6MTEuNzg0ODUzMVoiLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50Ijoie1xuICBcImZpbmFsX25vZGVfaWRcIjogXCJyODNcIixcbiAgXCJub2Rlc1wiOiBbXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiTHBcIixcbiAgICAgIFwiaWRcIjogXCJmMVwiLFxuICAgICAgXCJwYXJlbnRzXCI6IFtdLFxuICAgICAgXCJydWxlXCI6IG51bGxcbiAgICB9LFxuICAgIHtcbiAgICAgIFwiYXRvbVwiOiBcIkxzXCIsXG4gICAgICBcImlkXCI6IFwiZjJcIixcbiAgICAgIFwicGFyZW50c1wiOiBbXSxcbiAgICAgIFwicnVsZVwiOiBudWxsXG4gICAgfSxcbiAgICB7XG4gICAgICBcImF0b21cIjogXCJMZ1wiLFxuICAgICBcImlkXCI6IFwicjgzXCIsXG4gICAgICBcInBhcmVudHNcIjogW1xuICAgICAgICBcImYxXCIsXG4gICAgICAgIFwiZjJcIlxuICAgICAgXSxcbiAgICAgIFwicnVsZVwiOiBcInI4M1wiXG4gICAgfVxuICBdXG59In0sImRvbmUiOnRydWUsImRvbmVfcmVhc29uIjoic3RvcCIsInRvdGFsX2R1cmF0aW9uIjoxODg2MTUzODAwLCJsb2FkX2R1cmF0aW9uIjoxOTAyMjQwMCwicHJvbXB0X2V2YWxfY291bnQiOjY4MiwicHJvbXB0X2V2YWxfY2FjaGVkX2NvdW50Ijo2NzQsInByb21wdF9ldmFsX2R1cmF0aW9uIjoyNzI5NzAwMCwiZXZhbF9jb3VudCI6MTMwLCJldmFsX2R1cmF0aW9uIjoxNzkxODg3MDAwfQ==",
+      "format_valid": true,
+      "proof_valid": true,
+      "strict_valid": true,
+      "actual_D": 1,
+      "final_rule_id": "r83",
+      "error_codes": [],
+      "usage": {
+        "prompt_eval_count": 682,
+        "eval_count": 130,
+        "total_duration": 1886153800,
+        "prompt_eval_cached_count": 674
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Lp",
+          "Ls"
+        ],
+        "fixed_goal": "Lg",
+        "emitted_node_atoms": [
+          "Lp",
+          "Ls",
+          "Lg"
+        ],
+        "added_propositions": [],
+        "strict_proof_path_sha256": "2ffd96051b5cfc2a7be4736444aa046855349074ca21266df55ec6c71cd4918b"
+      },
+      "reference_input_D": 1,
+      "emitted_rule_ids": [
+        "r83"
+      ],
+      "reference_order_followed": true,
+      "reference_reconstruction_success": true,
+      "D_instruction_control_success": null
+    },
+    {
+      "id": "b02_p1_reference_short",
+      "block": 2,
+      "period": 0,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_short",
+      "reference_rule_ids": [
+        "n52"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b01_p0_reference_short",
+      "previous_condition": "reference_short",
+      "status": "ok",
+      "http_status": 200,
+      "error": null,
+      "elapsed_ns": 1869803800,
+      "request_sha256": "e72b3a80a605dfc6e3f162e32dfb1766313c43be319c6116024adc9d487ec269",
+      "response_sha256": "1ba40d2f6f63b9b650571ec338cb21aed4346be5b38e8b3df4d2900cd8aeaf85",
+      "response_b64": "eyJtb2RlbCI6InF3ZW4zOjRiLWluc3RydWN0IiwiY3JlYXRlZF9hdCI6IjIwMjYtMDktMTNUMTA6MzA6MTMuODc1OTEyM1oiLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50Ijoie1xuICBcImZpbmFsX25vZGVfaWRcIjogXCJuNTJcIixcbiAgXCJub2Rlc1wiOiBbXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiQWFcIixcbiAgICAgIFwiaWRcIjogXCJBYVwiLFxuICAgICAgXCJwYXJlbnRzXCI6IFtdLFxuICAgICAgXCJydWxlXCI6IG51bGxcbiAgICB9LFxuICAgIHtcbiAgICAgIFwiYXRvbVwiOiBcIkFiXCIsXG4gICAgICBcImlkXCI6IFwiQWJcIixcbiAgICAgIFwicGFyZW50c1wiOiBbXSxcbiAgICAgIFwicnVsZVwiOiBudWxsXG4gICAgfSxcbiAgICB7XG4gICAgICBcImF0b21cIjogXCJBZ1wiLFxuICAgICAgXCJpZFwiOiBcIm41MlwiLFxuICAgICAgXCJwYXJlbnRzXCI6IFtcIkFhXCIsIFwiQWJcIl0sXG4gICAgICBcInJ1bGVcIjogXCJuNTJcIlxuICAgIH1cbiAgXVxufSJ9LCJkb25lIjp0cnVlLCJkb25lX3JlYXNvbiI6InN0b3AiLCJ0b3RhbF9kdXJhdGlvbiI6MTgzNTM3NzgwMCwibG9hZF9kdXJhdGlvbiI6MTg3OTA3MDAsInByb21wdF9ldmFsX2NvdW50Ijo2NzgsInByb21wdF9ldmFsX2NhY2hlZF9jb3VudCI6NDE5LCJwcm9tcHRfZXZhbF9kdXJhdGlvbiI6ODg4MTgwMDAsImV2YWxfY291bnQiOjEyNSwiZXZhbF9kdXJhdGlvbiI6MTY3NzA2NzAwMH0=",
+      "format_valid": true,
+      "proof_valid": true,
+      "strict_valid": true,
+      "actual_D": 1,
+      "final_rule_id": "n52",
+      "error_codes": [],
+      "usage": {
+        "prompt_eval_count": 678,
+        "eval_count": 125,
+        "total_duration": 1835377800,
+        "prompt_eval_cached_count": 419
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Aa",
+          "Ab"
+        ],
+        "fixed_goal": "Ag",
+        "emitted_node_atoms": [
+          "Aa",
+          "Ab",
+          "Ag"
+        ],
+        "added_propositions": [],
+        "strict_proof_path_sha256": "73a37701a5955c82e5d86c439bd2f784b7c040fbb74ece786cf571dd7346e3f3"
+      },
+      "reference_input_D": 1,
+      "emitted_rule_ids": [
+        "n52"
+      ],
+      "reference_order_followed": true,
+      "reference_reconstruction_success": true,
+      "D_instruction_control_success": null
+    },
+    {
+      "id": "b02_p1_reference_long",
+      "block": 2,
+      "period": 1,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_long",
+      "reference_rule_ids": [
+        "n08",
+        "n91",
+        "n37"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b02_p1_reference_short",
+      "previous_condition": "reference_short",
+      "status": "ok",
+      "http_status": 200,
+      "error": null,
+      "elapsed_ns": 3065557400,
+      "request_sha256": "42cb8f0cada42faf6e0a83e1ab6b41465b1cda61f4ffda548b93d2ee10125a31",
+      "response_sha256": "da2fc9d016b21b39e18efb4448f4705ca96fe16d1369547756315c59a3466b2c",
+      "response_b64": "eyJtb2RlbCI6InF3ZW4zOjRiLWluc3RydWN0IiwiY3JlYXRlZF9hdCI6IjIwMjYtMDktMTNUMTA6MzA6MTYuOTQ1NzY1NloiLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50Ijoie1xuICBcImZpbmFsX25vZGVfaWRcIjogXCJuNTJcIixcbiAgXCJub2Rlc1wiOiBbXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiQWFcIixcbiAgICAgIFwiaWRcIjogXCJuMDFcIixcbiAgICAgIFwicGFyZW50c1wiOiBbXSxcbiAgICAgIFwicnVsZVwiOiBudWxsXG4gICAgfSxcbiAgICB7XG4gICAgICBcImF0b21cIjogXCJBYlwiLFxuICAgICAgXCJpZFwiOiBcIm4wMlwiLFxuICAgICAgXCJwYXJlbnRzXCI6IFtdLFxuICAgICAgXCJydWxlXCI6IG51bGxcbiAgICB9LFxuICAgIHtcbiAgICAgIFwiYXRvbVwiOiBcIkF4XCIsXG4gICAgICBcImlkXCI6IFwibjA4XCIsXG4gICAgICBcInBhcmVudHNcIjogW1xuICAgICAgICBcIm4wMVwiXG4gICAgICBdLFxuICAgICAgXCJydWxlXCI6IFwibjA4XCJcbiAgICB9LFxuICAgIHtcbiAgICAgIFwiYXRvbVwiOiBcIkF5XCIsXG4gICAgICBcImlkXCI6IFwibjkxXCIsXG4gICAgICBcInBhcmVudHNcIjogW1xuICAgICAgICBcIm4wMVwiXG4gICAgICBdLFxuICAgICAgXCJydWxlXCI6IFwibjkxXCJcbiAgICB9LFxuICAgIHtcbiAgICAgIFwiYXRvbVwiOiBcIkFnXCIsXG4gICAgICBcImlkXCI6IFwibjUyXCIsXG4gICAgICBcInBhcmVudHNcIjogW1xuICAgICAgICBcIm4wMVwiLFxuICAgICAgICBcIm4wMlwiXG4gICAgICBdLFxuICAgICAgXCJydWxlXCI6IFwibjUyXCJcbiAgICB9XG4gIF1cbn0ifSwiZG9uZSI6dHJ1ZSwiZG9uZV9yZWFzb24iOiJzdG9wIiwidG90YWxfZHVyYXRpb24iOjMwMzA4ODMxMDAsImxvYWRfZHVyYXRpb24iOjE4MzQxNjAwLCJwcm9tcHRfZXZhbF9jb3VudCI6Njg2LCJwcm9tcHRfZXZhbF9jYWNoZWRfY291bnQiOjY3MCwicHJvbXB0X2V2YWxfZHVyYXRpb24iOjIxMDA0MDAwLCJldmFsX2NvdW50IjoyMjAsImV2YWxfZHVyYXRpb24iOjI5NDc1NDEwMDB9",
+      "format_valid": true,
+      "proof_valid": true,
+      "strict_valid": false,
+      "actual_D": null,
+      "final_rule_id": "n52",
+      "error_codes": [
+        "extra_unused_node"
+      ],
+      "usage": {
+        "prompt_eval_count": 686,
+        "eval_count": 220,
+        "total_duration": 3030883100,
+        "prompt_eval_cached_count": 670
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Aa",
+          "Ab"
+        ],
+        "fixed_goal": "Ag",
+        "emitted_node_atoms": [
+          "Aa",
+          "Ab",
+          "Ax",
+          "Ay",
+          "Ag"
+        ],
+        "added_propositions": [
+          "Ax",
+          "Ay"
+        ]
+      },
+      "reference_input_D": 2,
+      "emitted_rule_ids": [
+        "n08",
+        "n91",
+        "n52"
+      ],
+      "reference_order_followed": false,
+      "reference_reconstruction_success": false,
+      "D_instruction_control_success": null
+    },
+    {
+      "id": "b03_p1_reference_long",
+      "block": 3,
+      "period": 0,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_long",
+      "reference_rule_ids": [
+        "n08",
+        "n91",
+        "n37"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b02_p1_reference_long",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "http_status": 200,
+      "error": null,
+      "elapsed_ns": 3094052300,
+      "request_sha256": "202ef4ed8e9e29db3dd251dd84d8b7f1430b0771c0654c03bab27c38346c06e8",
+      "response_sha256": "1f8be630083f5b93f0732f409281d8ecbed6fdb351c979aafbe3c755498fa71a",
+      "response_b64": "eyJtb2RlbCI6InF3ZW4zOjRiLWluc3RydWN0IiwiY3JlYXRlZF9hdCI6IjIwMjYtMDktMTNUMTA6MzA6MjAuMjY3OTYzMloiLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50Ijoie1xuICBcImZpbmFsX25vZGVfaWRcIjogXCJuNTJcIixcbiAgXCJub2Rlc1wiOiBbXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiQWFcIixcbiAgICAgIFwiaWRcIjogXCJuMDFcIixcbiAgICAgIFwicGFyZW50c1wiOiBbXSxcbiAgICAgIFwicnVsZVwiOiBudWxsXG4gICAgfSxcbiAgICB7XG4gICAgICBcImF0b21cIjogXCJBYlwiLFxuICAgICAgXCJpZFwiOiBcIm4wMlwiLFxuICAgICAgXCJwYXJlbnRzXCI6IFtdLFxuICAgICAgXCJydWxlXCI6IG51bGxcbiAgICB9LFxuICAgIHtcbiAgICAgIFwiYXRvbVwiOiBcIkF4XCIsXG4gICAgICBcImlkXCI6IFwibjA4XCIsXG4gICAgICBcInBhcmVudHNcIjogW1xuICAgICAgICBcIm4wMVwiXG4gICAgICBdLFxuICAgICAgXCJydWxlXCI6IFwibjA4XCJcbiAgICB9LFxuICAgIHtcbiAgICAgIFwiYXRvbVwiOiBcIkF5XCIsXG4gICAgICBcImlkXCI6IFwibjkxXCIsXG4gICAgICBcInBhcmVudHNcIjogW1xuICAgICAgICBcIm4wMVwiXG4gICAgICBdLFxuICAgICAgXCJydWxlXCI6IFwibjkxXCJcbiAgICB9LFxuICAgIHtcbiAgICAgIFwiYXRvbVwiOiBcIkFnXCIsXG4gICAgICBcImlkXCI6IFwibjUyXCIsXG4gICAgICBcInBhcmVudHNcIjogW1xuICAgICAgICBcIm4wMVwiLFxuICAgICAgICBcIm4wMlwiXG4gICAgICBdLFxuICAgICAgXCJydWxlXCI6IFwibjUyXCJcbiAgICB9XG4gIF1cbn0ifSwiZG9uZSI6dHJ1ZSwiZG9uZV9yZWFzb24iOiJzdG9wIiwidG90YWxfZHVyYXRpb24iOjMwNTg4NzAwMDAsImxvYWRfZHVyYXRpb24iOjE3MzIyNDAwLCJwcm9tcHRfZXZhbF9jb3VudCI6Njg2LCJwcm9tcHRfZXZhbF9jYWNoZWRfY291bnQiOjY4NSwicHJvbXB0X2V2YWxfZHVyYXRpb24iOjE2MDg0MDAwLCJldmFsX2NvdW50IjoyMjAsImV2YWxfZHVyYXRpb24iOjI5NzI4MTUwMDB9",
+      "format_valid": true,
+      "proof_valid": true,
+      "strict_valid": false,
+      "actual_D": null,
+      "final_rule_id": "n52",
+      "error_codes": [
+        "extra_unused_node"
+      ],
+      "usage": {
+        "prompt_eval_count": 686,
+        "eval_count": 220,
+        "total_duration": 3058870000,
+        "prompt_eval_cached_count": 685
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Aa",
+          "Ab"
+        ],
+        "fixed_goal": "Ag",
+        "emitted_node_atoms": [
+          "Aa",
+          "Ab",
+          "Ax",
+          "Ay",
+          "Ag"
+        ],
+        "added_propositions": [
+          "Ax",
+          "Ay"
+        ]
+      },
+      "reference_input_D": 2,
+      "emitted_rule_ids": [
+        "n08",
+        "n91",
+        "n52"
+      ],
+      "reference_order_followed": false,
+      "reference_reconstruction_success": false,
+      "D_instruction_control_success": null
+    },
+    {
+      "id": "b03_p1_reference_short",
+      "block": 3,
+      "period": 1,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_short",
+      "reference_rule_ids": [
+        "n52"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b03_p1_reference_long",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "http_status": 200,
+      "error": null,
+      "elapsed_ns": 1831472900,
+      "request_sha256": "9d1c0725aa0889f14d76e49fe73be5068ce5962786f75d84d5490de255bbe6ba",
+      "response_sha256": "13b2f4b3586f73e6955228b9139c1b927f2a5b247b1b284ba91684a58607e733",
+      "response_b64": "eyJtb2RlbCI6InF3ZW4zOjRiLWluc3RydWN0IiwiY3JlYXRlZF9hdCI6IjIwMjYtMDktMTNUMTA6MzA6MjIuMTAxNDU0OFoiLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50Ijoie1xuICBcImZpbmFsX25vZGVfaWRcIjogXCJuNTJcIixcbiAgXCJub2Rlc1wiOiBbXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiQWFcIixcbiAgICAgIFwiaWRcIjogXCJBYVwiLFxuICAgICAgXCJwYXJlbnRzXCI6IFtdLFxuICAgICAgXCJydWxlXCI6IG51bGxcbiAgICB9LFxuICAgIHtcbiAgICAgIFwiYXRvbVwiOiBcIkFiXCIsXG4gICAgICBcImlkXCI6IFwiQWJcIixcbiAgICAgIFwicGFyZW50c1wiOiBbXSxcbiAgICAgIFwicnVsZVwiOiBudWxsXG4gICAgfSxcbiAgICB7XG4gICAgICBcImF0b21cIjogXCJBZ1wiLFxuICAgICAgXCJpZFwiOiBcIm41MlwiLFxuICAgICAgXCJwYXJlbnRzXCI6IFtcIkFhXCIsIFwiQWJcIl0sXG4gICAgICBcInJ1bGVcIjogXCJuNTJcIlxuICAgIH1cbiAgXVxufSJ9LCJkb25lIjp0cnVlLCJkb25lX3JlYXNvbiI6InN0b3AiLCJ0b3RhbF9kdXJhdGlvbiI6MTc5NzgyMDMwMCwibG9hZF9kdXJhdGlvbiI6MTg0NTA2MDAsInByb21wdF9ldmFsX2NvdW50Ijo2NzgsInByb21wdF9ldmFsX2NhY2hlZF9jb3VudCI6NjcwLCJwcm9tcHRfZXZhbF9kdXJhdGlvbiI6MTk1MjcwMDAsImV2YWxfY291bnQiOjEyNSwiZXZhbF9kdXJhdGlvbiI6MTcxMTgxMjAwMH0=",
+      "format_valid": true,
+      "proof_valid": true,
+      "strict_valid": true,
+      "actual_D": 1,
+      "final_rule_id": "n52",
+      "error_codes": [],
+      "usage": {
+        "prompt_eval_count": 678,
+        "eval_count": 125,
+        "total_duration": 1797820300,
+        "prompt_eval_cached_count": 670
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Aa",
+          "Ab"
+        ],
+        "fixed_goal": "Ag",
+        "emitted_node_atoms": [
+          "Aa",
+          "Ab",
+          "Ag"
+        ],
+        "added_propositions": [],
+        "strict_proof_path_sha256": "73a37701a5955c82e5d86c439bd2f784b7c040fbb74ece786cf571dd7346e3f3"
+      },
+      "reference_input_D": 1,
+      "emitted_rule_ids": [
+        "n52"
+      ],
+      "reference_order_followed": true,
+      "reference_reconstruction_success": true,
+      "D_instruction_control_success": null
+    },
+    {
+      "id": "b04_p2_reference_short",
+      "block": 4,
+      "period": 0,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_short",
+      "reference_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b03_p1_reference_short",
+      "previous_condition": "reference_short",
+      "status": "ok",
+      "http_status": 200,
+      "error": null,
+      "elapsed_ns": 3002455400,
+      "request_sha256": "628dc0d4247580469acd798033d91d919f7522983af6396e0fb168a86ef63cac",
+      "response_sha256": "48faa4d1d0d1f8f53064b4adb118c71aae4b926e3ff1b99a4a3a5ebf7fb7900b",
+      "response_b64": "eyJtb2RlbCI6InF3ZW4zOjRiLWluc3RydWN0IiwiY3JlYXRlZF9hdCI6IjIwMjYtMDktMTNUMTA6MzA6MjUuMzMzMjQ3MVoiLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50Ijoie1xuICBcImZpbmFsX25vZGVfaWRcIjogXCJtNzZcIixcbiAgXCJub2Rlc1wiOiBbXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiUGFcIixcbiAgICAgIFwiaWRcIjogXCJmYWN0X3BhXCIsXG4gICAgICBcInBhcmVudHNcIjogW10sXG4gICAgICBcInJ1bGVcIjogbnVsbFxuICAgIH0sXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiUGJcIixcbiAgICAgIFwiaWRcIjogXCJmYWN0X3BiXCIsXG4gICAgICBcInBhcmVudHNcIjogW10sXG4gICAgICBcInJ1bGVcIjogbnVsbFxuICAgIH0sXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiUGNcIixcbiAgICAgIFwiaWRcIjogXCJmYWN0X3BjXCIsXG4gICAgICBcInBhcmVudHNcIjogW10sXG4gICAgICBcInJ1bGVcIjogbnVsbFxuICAgIH0sXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiUHNcIixcbiAgICAgIFwiaWRcIjogXCJtMThcIixcbiAgICAgIFwicGFyZW50c1wiOiBbXG4gICAgICAgIFwiZmFjdF9wYVwiLFxuICAgICAgICBcImZhY3RfcGJcIlxuICAgICAgXSxcbiAgICAgIFwicnVsZVwiOiBcIm0xOFwiXG4gICAgfSxcbiAgICB7XG4gICAgICBcImF0b21cIjogXCJQZ1wiLFxuICAgICAgXCJpZFwiOiBcIm03NlwiLFxuICAgICAgXCJwYXJlbnRzXCI6IFtcbiAgICAgICAgXCJQc1wiLFxuICAgICAgICBcIlBjXCJcbiAgICAgIF0sXG4gICAgICBcInJ1bGVcIjogXCJtNzZcIlxuICAgIH1cbiAgXVxufSJ9LCJkb25lIjp0cnVlLCJkb25lX3JlYXNvbiI6InN0b3AiLCJ0b3RhbF9kdXJhdGlvbiI6Mjk2ODY4MTcwMCwibG9hZF9kdXJhdGlvbiI6MTczODEzMDAsInByb21wdF9ldmFsX2NvdW50Ijo3MDksInByb21wdF9ldmFsX2NhY2hlZF9jb3VudCI6NDIxLCJwcm9tcHRfZXZhbF9kdXJhdGlvbiI6ODg0NTIwMDAsImV2YWxfY291bnQiOjIwOCwiZXZhbF9kdXJhdGlvbiI6MjgxMjE5MjAwMH0=",
+      "format_valid": true,
+      "proof_valid": false,
+      "strict_valid": false,
+      "actual_D": null,
+      "final_rule_id": "m76",
+      "error_codes": [
+        "missing_parent"
+      ],
+      "usage": {
+        "prompt_eval_count": 709,
+        "eval_count": 208,
+        "total_duration": 2968681700,
+        "prompt_eval_cached_count": 421
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Pa",
+          "Pb",
+          "Pc"
+        ],
+        "fixed_goal": "Pg",
+        "emitted_node_atoms": [
+          "Pa",
+          "Pb",
+          "Pc",
+          "Ps",
+          "Pg"
+        ],
+        "added_propositions": [
+          "Ps"
+        ]
+      },
+      "reference_input_D": 2,
+      "emitted_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "reference_order_followed": true,
+      "reference_reconstruction_success": false,
+      "D_instruction_control_success": null
+    },
+    {
+      "id": "b04_p2_reference_long",
+      "block": 4,
+      "period": 1,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_long",
+      "reference_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b04_p2_reference_short",
+      "previous_condition": "reference_short",
+      "status": "ok",
+      "http_status": 200,
+      "error": null,
+      "elapsed_ns": 3859592300,
+      "request_sha256": "7f8dadbd15cbafc1418dcce3f2eb743153003e8a0bfe62443c74c5e465fa5dee",
+      "response_sha256": "9cc144770bcd2186995026e80d46b0689a1fe6678c2ac8dc60d7c3c8be5a4104",
+      "response_b64": "eyJtb2RlbCI6InF3ZW4zOjRiLWluc3RydWN0IiwiY3JlYXRlZF9hdCI6IjIwMjYtMDktMTNUMTA6MzA6MjkuMTk0ODU5OFoiLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50Ijoie1xuICBcImZpbmFsX25vZGVfaWRcIjogXCJtNzZcIixcbiAgXCJub2Rlc1wiOiBbXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiUGFcIixcbiAgICAgIFwiaWRcIjogXCJmYWN0MVwiLFxuICAgICAgXCJwYXJlbnRzXCI6IFtdLFxuICAgICAgXCJydWxlXCI6IG51bGxcbiAgICB9LFxuICAgIHtcbiAgICAgIFwiYXRvbVwiOiBcIlB1XCIsXG4gICAgICBcImlkXCI6IFwibTMzXCIsXG4gICAgICBcInBhcmVudHNcIjogW1xuICAgICAgICBcImZhY3QxXCJcbiAgICAgIF0sXG4gICAgICBcInJ1bGVcIjogXCJtMzNcIlxuICAgIH0sXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiUHNcIixcbiAgICAgIFwiaWRcIjogXCJtMThcIixcbiAgICAgIFwicGFyZW50c1wiOiBbXG4gICAgICAgIFwiZmFjdDFcIixcbiAgICAgICAgXCJmYWN0MlwiXG4gICAgICBdLFxuICAgICAgXCJydWxlXCI6IFwibTE4XCJcbiAgICB9LFxuICAgIHtcbiAgICAgIFwiYXRvbVwiOiBcIlB2XCIsXG4gICAgICBcImlkXCI6IFwibTA1XCIsXG4gICAgICBcInBhcmVudHNcIjogW1xuICAgICAgICBcIm0zM1wiLFxuICAgICAgICBcImZhY3QyXCJcbiAgICAgIF0sXG4gICAgICBcInJ1bGVcIjogXCJtMDVcIlxuICAgIH0sXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiUHdcIixcbiAgICAgIFwiaWRcIjogXCJtODRcIixcbiAgICAgIFwicGFyZW50c1wiOiBbXG4gICAgICAgIFwibTA1XCIsXG4gICAgICAgIFwiZmFjdDNcIlxuICAgICAgXSxcbiAgICAgIFwicnVsZVwiOiBcIm04NFwiXG4gICAgfSxcbiAgICB7XG4gICAgICBcImF0b21cIjogXCJQZ1wiLFxuICAgICAgXCJpZFwiOiBcIm00MVwiLFxuICAgICAgXCJwYXJlbnRzXCI6IFtcbiAgICAgICAgXCJQd1wiXG4gICAgICBdLFxuICAgICAgXCJydWxlXCI6IFwibTQxXCJcbiAgICB9XG4gIF1cbn0ifSwiZG9uZSI6dHJ1ZSwiZG9uZV9yZWFzb24iOiJzdG9wIiwidG90YWxfZHVyYXRpb24iOjM4MjQ5MTkwMDAsImxvYWRfZHVyYXRpb24iOjE3MzI3MTAwLCJwcm9tcHRfZXZhbF9jb3VudCI6NzE3LCJwcm9tcHRfZXZhbF9jYWNoZWRfY291bnQiOjY5NywicHJvbXB0X2V2YWxfZHVyYXRpb24iOjE5NTU3MDAwLCJldmFsX2NvdW50IjoyNzUsImV2YWxfZHVyYXRpb24iOjM3Mzg2MDUwMDB9",
+      "format_valid": true,
+      "proof_valid": false,
+      "strict_valid": false,
+      "actual_D": null,
+      "final_rule_id": null,
+      "error_codes": [
+        "missing_final_node",
+        "missing_parent"
+      ],
+      "usage": {
+        "prompt_eval_count": 717,
+        "eval_count": 275,
+        "total_duration": 3824919000,
+        "prompt_eval_cached_count": 697
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Pa",
+          "Pb",
+          "Pc"
+        ],
+        "fixed_goal": "Pg",
+        "emitted_node_atoms": [
+          "Pa",
+          "Pu",
+          "Ps",
+          "Pv",
+          "Pw",
+          "Pg"
+        ],
+        "added_propositions": [
+          "Ps",
+          "Pu",
+          "Pv",
+          "Pw"
+        ]
+      },
+      "reference_input_D": 4,
+      "emitted_rule_ids": [
+        "m33",
+        "m18",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "reference_order_followed": false,
+      "reference_reconstruction_success": false,
+      "D_instruction_control_success": null
+    },
+    {
+      "id": "b05_p2_reference_long",
+      "block": 5,
+      "period": 0,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_long",
+      "reference_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b04_p2_reference_long",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "http_status": 200,
+      "error": null,
+      "elapsed_ns": 4788982400,
+      "request_sha256": "afc3ae2c4eea5b71808e5e8ccbb041005d830c11fdd499c62fbd8fb0d55aa686",
+      "response_sha256": "e980ff43643a2496f42528d58a650f4a9ee5f57e250e51d74c270eb03c4355ad",
+      "response_b64": "eyJtb2RlbCI6InF3ZW4zOjRiLWluc3RydWN0IiwiY3JlYXRlZF9hdCI6IjIwMjYtMDktMTNUMTA6MzA6MzQuMjExNzE2NVoiLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50Ijoie1xuICBcImZpbmFsX25vZGVfaWRcIjogXCJtNzZcIixcbiAgXCJub2Rlc1wiOiBbXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiUGFcIixcbiAgICAgIFwiaWRcIjogXCJmYWN0X3BhXCIsXG4gICAgICBcInBhcmVudHNcIjogW10sXG4gICAgICBcInJ1bGVcIjogbnVsbFxuICAgIH0sXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiUGJcIixcbiAgICAgIFwiaWRcIjogXCJmYWN0X3BiXCIsXG4gICAgICBcInBhcmVudHNcIjogW10sXG4gICAgICBcInJ1bGVcIjogbnVsbFxuICAgIH0sXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiUGNcIixcbiAgICAgIFwiaWRcIjogXCJmYWN0X3BjXCIsXG4gICAgICBcInBhcmVudHNcIjogW10sXG4gICAgICBcInJ1bGVcIjogbnVsbFxuICAgIH0sXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiUHVcIixcbiAgICAgIFwiaWRcIjogXCJtMzNcIixcbiAgICAgIFwicGFyZW50c1wiOiBbXG4gICAgICAgIFwiZmFjdF9wYVwiXG4gICAgICBdLFxuICAgICAgXCJydWxlXCI6IFwibTMzXCJcbiAgICB9LFxuICAgIHtcbiAgICAgIFwiYXRvbVwiOiBcIlBzXCIsXG4gICAgICBcImlkXCI6IFwibTE4XCIsXG4gICAgICBcInBhcmVudHNcIjogW1xuICAgICAgICBcImZhY3RfcGFcIixcbiAgICAgICAgXCJmYWN0X3BiXCJcbiAgICAgIF0sXG4gICAgICBcInJ1bGVcIjogXCJtMThcIlxuICAgIH0sXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiUHZcIixcbiAgICAgIFwiaWRcIjogXCJtMDVcIixcbiAgICAgIFwicGFyZW50c1wiOiBbXG4gICAgICAgIFwibTMzXCIsXG4gICAgICAgIFwiZmFjdF9wYlwiXG4gICAgICBdLFxuICAgICAgXCJydWxlXCI6IFwibTA1XCJcbiAgICB9LFxuICAgIHtcbiAgICAgIFwiYXRvbVwiOiBcIlB3XCIsXG4gICAgICBcImlkXCI6IFwibTg0XCIsXG4gICAgICBcInBhcmVudHNcIjogW1xuICAgICAgICBcIm0wNVwiLFxuICAgICAgICBcImZhY3RfcGNcIlxuICAgICAgXSxcbiAgICAgIFwicnVsZVwiOiBcIm04NFwiXG4gICAgfSxcbiAgICB7XG4gICAgICBcImF0b21cIjogXCJQZ1wiLFxuICAgICAgXCJpZFwiOiBcIm00MVwiLFxuICAgICAgXCJwYXJlbnRzXCI6IFtcbiAgICAgICAgXCJQd1wiXG4gICAgICBdLFxuICAgICAgXCJydWxlXCI6IFwibTQxXCJcbiAgICB9XG4gIF1cbn0ifSwiZG9uZSI6dHJ1ZSwiZG9uZV9yZWFzb24iOiJzdG9wIiwidG90YWxfZHVyYXRpb24iOjQ3NTIzODMwMDAsImxvYWRfZHVyYXRpb24iOjE4NTc2OTAwLCJwcm9tcHRfZXZhbF9jb3VudCI6NzE3LCJwcm9tcHRfZXZhbF9jYWNoZWRfY291bnQiOjcxNiwicHJvbXB0X2V2YWxfZHVyYXRpb24iOjE2NjYxMDAwLCJldmFsX2NvdW50IjozMzcsImV2YWxfZHVyYXRpb24iOjQ2Njc1OTMwMDB9",
+      "format_valid": true,
+      "proof_valid": false,
+      "strict_valid": false,
+      "actual_D": null,
+      "final_rule_id": null,
+      "error_codes": [
+        "missing_final_node",
+        "missing_parent"
+      ],
+      "usage": {
+        "prompt_eval_count": 717,
+        "eval_count": 337,
+        "total_duration": 4752383000,
+        "prompt_eval_cached_count": 716
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Pa",
+          "Pb",
+          "Pc"
+        ],
+        "fixed_goal": "Pg",
+        "emitted_node_atoms": [
+          "Pa",
+          "Pb",
+          "Pc",
+          "Pu",
+          "Ps",
+          "Pv",
+          "Pw",
+          "Pg"
+        ],
+        "added_propositions": [
+          "Ps",
+          "Pu",
+          "Pv",
+          "Pw"
+        ]
+      },
+      "reference_input_D": 4,
+      "emitted_rule_ids": [
+        "m33",
+        "m18",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "reference_order_followed": false,
+      "reference_reconstruction_success": false,
+      "D_instruction_control_success": null
+    },
+    {
+      "id": "b05_p2_reference_short",
+      "block": 5,
+      "period": 1,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_short",
+      "reference_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b05_p2_reference_long",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "http_status": 200,
+      "error": null,
+      "elapsed_ns": 2899402100,
+      "request_sha256": "d4a8808a5296bc7812f358d31c7566780708e1f341faeb10e096cbcb1bebab5f",
+      "response_sha256": "e050c4417458119828d288de763274f7a084d3d857d52a5e1fd97b20d9372233",
+      "response_b64": "eyJtb2RlbCI6InF3ZW4zOjRiLWluc3RydWN0IiwiY3JlYXRlZF9hdCI6IjIwMjYtMDktMTNUMTA6MzA6MzcuMTEzODgwOFoiLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50Ijoie1xuICBcImZpbmFsX25vZGVfaWRcIjogXCJtNzZcIixcbiAgXCJub2Rlc1wiOiBbXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiUGFcIixcbiAgICAgIFwiaWRcIjogXCJmYWN0X3BhXCIsXG4gICAgICBcInBhcmVudHNcIjogW10sXG4gICAgICBcInJ1bGVcIjogbnVsbFxuICAgIH0sXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiUGJcIixcbiAgICAgIFwiaWRcIjogXCJmYWN0X3BiXCIsXG4gICAgICBcInBhcmVudHNcIjogW10sXG4gICAgICBcInJ1bGVcIjogbnVsbFxuICAgIH0sXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiUGNcIixcbiAgICAgIFwiaWRcIjogXCJmYWN0X3BjXCIsXG4gICAgICBcInBhcmVudHNcIjogW10sXG4gICAgICBcInJ1bGVcIjogbnVsbFxuICAgIH0sXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiUHNcIixcbiAgICAgIFwiaWRcIjogXCJtMThfcmVzdWx0XCIsXG4gICAgICBcInBhcmVudHNcIjogW1xuICAgIFwiZmFjdF9wYVwiLFxuICAgIFwiZmFjdF9wYlwiXG4gIF0sXG4gICAgICBcInJ1bGVcIjogXCJtMThcIlxuICAgIH0sXG4gICAge1xuICAgICAgXCJhdG9tXCI6IFwiUGdcIixcbiAgICAgIFwiaWRcIjogXCJtNzZfcmVzdWx0XCIsXG4gICAgICBcInBhcmVudHNcIjogW1xuICAgIFwibTE4X3Jlc3VsdFwiLFxuICAgIFwiZmFjdF9wY1wiXG4gIF0sXG4gICAgICBcInJ1bGVcIjogXCJtNzZcIlxuICAgIH1cbiAgXVxufSJ9LCJkb25lIjp0cnVlLCJkb25lX3JlYXNvbiI6InN0b3AiLCJ0b3RhbF9kdXJhdGlvbiI6Mjg2MjA0MjgwMCwibG9hZF9kdXJhdGlvbiI6MjEwMzEzMDAsInByb21wdF9ldmFsX2NvdW50Ijo3MDksInByb21wdF9ldmFsX2NhY2hlZF9jb3VudCI6Njk3LCJwcm9tcHRfZXZhbF9kdXJhdGlvbiI6MjEwOTMwMDAsImV2YWxfY291bnQiOjIxMywiZXZhbF9kdXJhdGlvbiI6Mjc2NDM0MzAwMH0=",
+      "format_valid": true,
+      "proof_valid": false,
+      "strict_valid": false,
+      "actual_D": null,
+      "final_rule_id": null,
+      "error_codes": [
+        "missing_final_node"
+      ],
+      "usage": {
+        "prompt_eval_count": 709,
+        "eval_count": 213,
+        "total_duration": 2862042800,
+        "prompt_eval_cached_count": 697
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Pa",
+          "Pb",
+          "Pc"
+        ],
+        "fixed_goal": "Pg",
+        "emitted_node_atoms": [
+          "Pa",
+          "Pb",
+          "Pc",
+          "Ps",
+          "Pg"
+        ],
+        "added_propositions": [
+          "Ps"
+        ]
+      },
+      "reference_input_D": 2,
+      "emitted_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "reference_order_followed": true,
+      "reference_reconstruction_success": false,
+      "D_instruction_control_success": null
+    }
+  ],
+  "groups": [
+    {
+      "problem_id": "T02",
+      "condition": "reference_short",
+      "reference_rule_ids": [
+        "r83"
+      ],
+      "assigned": 2,
+      "observed": 2,
+      "logical_valid": 2,
+      "strict_valid": 2,
+      "reference_order_followed": 2,
+      "reconstruction_successes": 2,
+      "unmeasured": 0,
+      "rate": 1.0
+    },
+    {
+      "problem_id": "T02",
+      "condition": "reference_long",
+      "reference_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "assigned": 2,
+      "observed": 2,
+      "logical_valid": 0,
+      "strict_valid": 0,
+      "reference_order_followed": 2,
+      "reconstruction_successes": 0,
+      "unmeasured": 0,
+      "rate": 0.0
+    },
+    {
+      "problem_id": "E01_shared_fork",
+      "condition": "reference_short",
+      "reference_rule_ids": [
+        "n52"
+      ],
+      "assigned": 2,
+      "observed": 2,
+      "logical_valid": 2,
+      "strict_valid": 2,
+      "reference_order_followed": 2,
+      "reconstruction_successes": 2,
+      "unmeasured": 0,
+      "rate": 1.0
+    },
+    {
+      "problem_id": "E01_shared_fork",
+      "condition": "reference_long",
+      "reference_rule_ids": [
+        "n08",
+        "n91",
+        "n37"
+      ],
+      "assigned": 2,
+      "observed": 2,
+      "logical_valid": 2,
+      "strict_valid": 0,
+      "reference_order_followed": 0,
+      "reconstruction_successes": 0,
+      "unmeasured": 0,
+      "rate": 0.0
+    },
+    {
+      "problem_id": "E02_two_vs_four",
+      "condition": "reference_short",
+      "reference_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "assigned": 2,
+      "observed": 2,
+      "logical_valid": 0,
+      "strict_valid": 0,
+      "reference_order_followed": 2,
+      "reconstruction_successes": 0,
+      "unmeasured": 0,
+      "rate": 0.0
+    },
+    {
+      "problem_id": "E02_two_vs_four",
+      "condition": "reference_long",
+      "reference_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "assigned": 2,
+      "observed": 2,
+      "logical_valid": 0,
+      "strict_valid": 0,
+      "reference_order_followed": 0,
+      "reconstruction_successes": 0,
+      "unmeasured": 0,
+      "rate": 0.0
+    }
+  ],
+  "overall": {
+    "measured_graphs": 12,
+    "reconstruction_successes": 4,
+    "positive_control_ready": false,
+    "reconstruction_rate": 0.3333333333333333,
+    "D_instruction_control": "not_measured",
+    "A_or_M_gate": null,
+    "v066_failure_preserved": true,
+    "next_decision": "preserve_partial_scope_no_automatic_extension"
+  },
+  "failure_layers": {
+    "proof_failures": 6,
+    "strict_only_failures": 2,
+    "reference_order_mismatch": 4,
+    "unmeasured": 0,
+    "not_observed": 0
+  },
+  "usage": {
+    "prompt_eval_count": 8332,
+    "eval_count": 2494,
+    "total_duration": 38550881200,
+    "prompt_eval_cached_count": 7016
+  },
+  "limits": {
+    "reference_origin": "experimenter_verified_reference",
+    "solution_rule_path_provided": true,
+    "output_graph_host_repair": false,
+    "model_chose_reference_path": false,
+    "A": "not_measured",
+    "M": "not_measured",
+    "not_holdout": true,
+    "historical_comparison_not_causal_effect": true
+  }
+}

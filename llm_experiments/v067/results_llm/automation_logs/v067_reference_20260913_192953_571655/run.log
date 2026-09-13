@@ -1,0 +1,72 @@
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_logic.py', '-v']
+test_12_calls_and_24_actions (test_logic.Logic.test_12_calls_and_24_actions) ... ok
+test_all_six_canonical_proofs (test_logic.Logic.test_all_six_canonical_proofs) ... ok
+test_duplicate_and_nonfinite_json_rejected (test_logic.Logic.test_duplicate_and_nonfinite_json_rejected) ... ok
+test_empty_records_not_declared_semantic_failure (test_logic.Logic.test_empty_records_not_declared_semantic_failure) ... ok
+test_exact_request_independent_reconstruction (test_logic.Logic.test_exact_request_independent_reconstruction) ... ok
+test_graph_extra_nodes_not_deleted (test_logic.Logic.test_graph_extra_nodes_not_deleted) ... ok
+test_independent_verifier_does_not_import_production (test_logic.Logic.test_independent_verifier_does_not_import_production) ... ok
+test_missing_reference_premise_rejected (test_logic.Logic.test_missing_reference_premise_rejected) ... ok
+test_model_options_schema_unchanged (test_logic.Logic.test_model_options_schema_unchanged) ... ok
+test_no_free_shallow_deep_instruction (test_logic.Logic.test_no_free_shallow_deep_instruction) ... ok
+test_positions_balanced_per_problem (test_logic.Logic.test_positions_balanced_per_problem) ... ok
+test_reference_foreground_no_correct_dag (test_logic.Logic.test_reference_foreground_no_correct_dag) ... ok
+test_reference_input_declares_experimenter_origin (test_logic.Logic.test_reference_input_declares_experimenter_origin) ... ok
+test_reference_list_valid_and_depth_not_model_measurement (test_logic.Logic.test_reference_list_valid_and_depth_not_model_measurement) ... ok
+test_reference_never_selected_from_user_successes (test_logic.Logic.test_reference_never_selected_from_user_successes) ... ok
+test_requests_do_not_score_or_construct_graphs (test_logic.Logic.test_requests_do_not_score_or_construct_graphs) ... ok
+test_unfinished_reference_rejected (test_logic.Logic.test_unfinished_reference_rejected) ... ok
+test_unknown_reference_rule_rejected (test_logic.Logic.test_unknown_reference_rule_rejected) ... ok
+test_unused_reference_rules_rejected (test_logic.Logic.test_unused_reference_rules_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 1.097s
+
+OK
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'run.py', 'prepare', '--baseline', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v066\\results_llm\\v066_staged_20260913_185054_745451_evidence.zip', '--run-name', 'v067_reference_20260913_192953_571655', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v067\\experiments\\v067_reference_20260913_192953_571655.plan.json']
+{
+  "prepared": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v067\\experiments\\v067_reference_20260913_192953_571655.plan.json",
+  "new_model_inference": false,
+  "max_inference_calls_when_executed": 12,
+  "plan_sha256": "1d88337db00c2ede3fc26e72a359e62867e43f2ea17fed1b04d77afcf7327710"
+}
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'run.py', 'execute', '--plan', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v067\\experiments\\v067_reference_20260913_192953_571655.plan.json', '--baseline', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v066\\results_llm\\v066_staged_20260913_185054_745451_evidence.zip', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v067\\results_llm\\v067_reference_20260913_192953_571655', '--endpoint', 'http://127.0.0.1:11434']
+1/24: b00_before
+2/24: b00_p0_reference_short
+3/24: b00_p0_reference_long
+4/24: b00_after
+5/24: b01_before
+6/24: b01_p0_reference_long
+7/24: b01_p0_reference_short
+8/24: b01_after
+9/24: b02_before
+10/24: b02_p1_reference_short
+11/24: b02_p1_reference_long
+12/24: b02_after
+13/24: b03_before
+14/24: b03_p1_reference_long
+15/24: b03_p1_reference_short
+16/24: b03_after
+17/24: b04_before
+18/24: b04_p2_reference_short
+19/24: b04_p2_reference_long
+20/24: b04_after
+21/24: b05_before
+22/24: b05_p2_reference_long
+23/24: b05_p2_reference_short
+24/24: b05_after
+{
+  "state": "complete",
+  "evidence_zip": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v067\\results_llm\\v067_reference_20260913_192953_571655_evidence.zip",
+  "independent_verification": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v067\\results_llm\\v067_reference_20260913_192953_571655_independent.json",
+  "inference_calls": 12
+}
+
+EXIT 0

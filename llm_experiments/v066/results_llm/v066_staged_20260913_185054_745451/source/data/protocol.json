@@ -1,0 +1,221 @@
+{
+  "contract": "v066-direct-vs-staged-D-r1",
+  "baseline_sha256": "5fdba7ace2bfe29dc9b5d4f30d75bf32d7963ed82943afe77f5de6e087a6ff09",
+  "model": "qwen3:4b-instruct",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "problems": [
+    {
+      "id": "T02",
+      "facts": [
+        "Lp",
+        "Ls"
+      ],
+      "rules": [
+        {
+          "id": "r83",
+          "premises": [
+            "Lp",
+            "Ls"
+          ],
+          "conclusion": "Lg"
+        },
+        {
+          "id": "r21",
+          "premises": [
+            "Lp"
+          ],
+          "conclusion": "Lq"
+        },
+        {
+          "id": "r57",
+          "premises": [
+            "Lq",
+            "Ls"
+          ],
+          "conclusion": "Lr"
+        },
+        {
+          "id": "r04",
+          "premises": [
+            "Lr"
+          ],
+          "conclusion": "Lt"
+        },
+        {
+          "id": "r69",
+          "premises": [
+            "Lt"
+          ],
+          "conclusion": "Lg"
+        }
+      ],
+      "goal": "Lg"
+    },
+    {
+      "id": "E01_shared_fork",
+      "facts": [
+        "Aa",
+        "Ab"
+      ],
+      "rules": [
+        {
+          "id": "n08",
+          "premises": [
+            "Aa"
+          ],
+          "conclusion": "Ax"
+        },
+        {
+          "id": "n52",
+          "premises": [
+            "Aa",
+            "Ab"
+          ],
+          "conclusion": "Ag"
+        },
+        {
+          "id": "n37",
+          "premises": [
+            "Ax",
+            "Ay",
+            "Ab"
+          ],
+          "conclusion": "Ag"
+        },
+        {
+          "id": "n91",
+          "premises": [
+            "Aa"
+          ],
+          "conclusion": "Ay"
+        },
+        {
+          "id": "n64",
+          "premises": [
+            "Ab"
+          ],
+          "conclusion": "Az"
+        }
+      ],
+      "goal": "Ag"
+    },
+    {
+      "id": "E02_two_vs_four",
+      "facts": [
+        "Pa",
+        "Pb",
+        "Pc"
+      ],
+      "rules": [
+        {
+          "id": "m33",
+          "premises": [
+            "Pa"
+          ],
+          "conclusion": "Pu"
+        },
+        {
+          "id": "m76",
+          "premises": [
+            "Ps",
+            "Pc"
+          ],
+          "conclusion": "Pg"
+        },
+        {
+          "id": "m18",
+          "premises": [
+            "Pa",
+            "Pb"
+          ],
+          "conclusion": "Ps"
+        },
+        {
+          "id": "m05",
+          "premises": [
+            "Pu",
+            "Pb"
+          ],
+          "conclusion": "Pv"
+        },
+        {
+          "id": "m41",
+          "premises": [
+            "Pw"
+          ],
+          "conclusion": "Pg"
+        },
+        {
+          "id": "m84",
+          "premises": [
+            "Pv",
+            "Pc"
+          ],
+          "conclusion": "Pw"
+        }
+      ],
+      "goal": "Pg"
+    }
+  ],
+  "depth_ranges": {
+    "T02": [
+      1,
+      4
+    ],
+    "E01_shared_fork": [
+      1,
+      2
+    ],
+    "E02_two_vs_four": [
+      2,
+      4
+    ]
+  },
+  "seeds": [
+    64001001,
+    64001002
+  ],
+  "max_inference_calls": 36,
+  "metadata_records": 12,
+  "generation_token_upper_bound": 147456,
+  "request_utf8_byte_limit": 1081344,
+  "num_predict": 4096,
+  "timeout_seconds": 300,
+  "no_warmup": true,
+  "automatic_retry": false,
+  "no_result_based_gate": true,
+  "content_control": "Base-fixed",
+  "A": "not_measured",
+  "M": "not_measured",
+  "evaluation_scope": "v064_used_structures_diagnostic_not_holdout",
+  "frozen_before_real_model_output": true,
+  "prior_verifier_source_sha256": "6c399d7a017ffb465dd78be589a66a18942524fd4e2bebd63ded6f456b94cc5b",
+  "historical_problem_roles": {
+    "T02": "v064_development",
+    "E01_shared_fork": "v064_evaluation_now_seen",
+    "E02_two_vs_four": "v064_evaluation_now_seen"
+  },
+  "original_v065_plan_sha256": "5242fca99402ed5c65075b2a1e5dbdaf11223fdf3468962316b17e4ca4a58902",
+  "arms": [
+    "direct",
+    "staged"
+  ],
+  "directions": [
+    "shallow",
+    "deep"
+  ],
+  "stages": [
+    "direct",
+    "plan",
+    "construct"
+  ],
+  "neutral": "not_repeated_in_this_system_comparison; v064 neutral evidence preserved",
+  "research_claim": "external_system_D_control; staged includes two model calls and additional budget; not hidden_state or equal_cost_advantage",
+  "decision_rule": "bounded 36-call direct-vs-staged comparison; preserve previous failure and close prescribed-terminal branch; no automatic followup",
+  "transfer_policy": "one model planner content string forwarded exactly once even if syntactically or semantically wrong; host never repairs/selects/trims list; malformed envelope yields null content with raw digest; no retries",
+  "stage_success": "plan validity and direction + exact ordered-rule preservation + strict generated graph and direction; local success separated",
+  "neutral_reason": "current question is whether an alternate execution architecture changes directed end-to-end performance, not basic no-instruction default policy",
+  "request_contract_change": "planner and construct prompts differ as necessary for staging; direct frozen v064 request unchanged; no externally prescribed rule IDs; host does not choose path or enforce target depth",
+  "stopping": "one batch then judge. No staged E2E success: stop this architecture; partial success: retain ranges, no automatic tuning; six of six: restricted system-level D checkpoint only, separate new-structure replication before broad claims",
+  "comparison": "direct 12 calls vs staged 24 calls, not equal inference opportunity, no standalone causal decomposition or efficiency claim"
+}

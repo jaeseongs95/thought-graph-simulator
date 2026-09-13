@@ -1,0 +1,46 @@
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_logic.py', '-v']
+test_48_independent_semantic_cases (test_logic.Semantics.test_48_independent_semantic_cases) ... ok
+test_bound_12_and_49152 (test_logic.Semantics.test_bound_12_and_49152) ... ok
+test_duplicate_key_rejected (test_logic.Semantics.test_duplicate_key_rejected) ... ok
+test_duplicate_node_not_last_wins (test_logic.Semantics.test_duplicate_node_not_last_wins) ... ok
+test_extra_is_not_logical_error (test_logic.Semantics.test_extra_is_not_logical_error) ... ok
+test_input_false_fact (test_logic.Semantics.test_input_false_fact) ... ok
+test_missing_final_not_repaired (test_logic.Semantics.test_missing_final_not_repaired) ... ok
+test_node_order_is_not_logical_error (test_logic.Semantics.test_node_order_is_not_logical_error) ... ok
+test_nonfinite_rejected (test_logic.Semantics.test_nonfinite_rejected) ... ok
+test_request_generator_does_not_call_depth_calculator (test_logic.Semantics.test_request_generator_does_not_call_depth_calculator) ... ok
+test_response_limit (test_logic.Semantics.test_response_limit) ... ok
+test_schedule_balanced_twelve (test_logic.Semantics.test_schedule_balanced_twelve) ... ok
+test_six_specified_paths (test_logic.Semantics.test_six_specified_paths) ... ok
+test_unknown_rule_not_repaired (test_logic.Semantics.test_unknown_rule_not_repaired) ... ok
+test_verifier_no_producer_import (test_logic.Semantics.test_verifier_no_producer_import) ... ok
+test_wrong_parents_stay_wrong (test_logic.Semantics.test_wrong_parents_stay_wrong) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.024s
+
+OK
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'run.py', 'prepare', '--baseline', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v064\\results_llm\\v064_direct_20260913_172703_019_evidence.zip', '--run-name', 'v065_construct_20260913_184912_343205', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v065\\experiments\\v065_construct_20260913_184912_343205.plan.json']
+{
+  "prepared": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v065\\experiments\\v065_construct_20260913_184912_343205.plan.json",
+  "new_model_inference": false,
+  "max_inference_calls_when_executed": 12,
+  "plan_sha256": "d325d2edcd104b7f4448b867a0031b8ba188b4216bf6aeeb3877fe95164fabb0"
+}
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'run.py', 'execute', '--plan', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v065\\experiments\\v065_construct_20260913_184912_343205.plan.json', '--baseline', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v064\\results_llm\\v064_direct_20260913_172703_019_evidence.zip', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v065\\results_llm\\v065_construct_20260913_184912_343205', '--endpoint', 'http://127.0.0.1:11434']
+1/24: b00_before
+{
+  "state": "stopped",
+  "evidence_zip": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v065\\results_llm\\v065_construct_20260913_184912_343205_evidence.zip",
+  "independent_verification": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v065\\results_llm\\v065_construct_20260913_184912_343205_independent.json",
+  "inference_calls": 0
+}
+
+EXIT 2

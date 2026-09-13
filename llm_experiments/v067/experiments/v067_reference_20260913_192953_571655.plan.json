@@ -1,0 +1,743 @@
+{
+  "contract": "v067-plan-r1",
+  "run_name": "v067_reference_20260913_192953_571655",
+  "provenance": "live",
+  "protocol": {
+    "model": "qwen3:4b-instruct",
+    "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "problems": [
+      {
+        "id": "T02",
+        "facts": [
+          "Lp",
+          "Ls"
+        ],
+        "rules": [
+          {
+            "id": "r83",
+            "premises": [
+              "Lp",
+              "Ls"
+            ],
+            "conclusion": "Lg"
+          },
+          {
+            "id": "r21",
+            "premises": [
+              "Lp"
+            ],
+            "conclusion": "Lq"
+          },
+          {
+            "id": "r57",
+            "premises": [
+              "Lq",
+              "Ls"
+            ],
+            "conclusion": "Lr"
+          },
+          {
+            "id": "r04",
+            "premises": [
+              "Lr"
+            ],
+            "conclusion": "Lt"
+          },
+          {
+            "id": "r69",
+            "premises": [
+              "Lt"
+            ],
+            "conclusion": "Lg"
+          }
+        ],
+        "goal": "Lg"
+      },
+      {
+        "id": "E01_shared_fork",
+        "facts": [
+          "Aa",
+          "Ab"
+        ],
+        "rules": [
+          {
+            "id": "n08",
+            "premises": [
+              "Aa"
+            ],
+            "conclusion": "Ax"
+          },
+          {
+            "id": "n52",
+            "premises": [
+              "Aa",
+              "Ab"
+            ],
+            "conclusion": "Ag"
+          },
+          {
+            "id": "n37",
+            "premises": [
+              "Ax",
+              "Ay",
+              "Ab"
+            ],
+            "conclusion": "Ag"
+          },
+          {
+            "id": "n91",
+            "premises": [
+              "Aa"
+            ],
+            "conclusion": "Ay"
+          },
+          {
+            "id": "n64",
+            "premises": [
+              "Ab"
+            ],
+            "conclusion": "Az"
+          }
+        ],
+        "goal": "Ag"
+      },
+      {
+        "id": "E02_two_vs_four",
+        "facts": [
+          "Pa",
+          "Pb",
+          "Pc"
+        ],
+        "rules": [
+          {
+            "id": "m33",
+            "premises": [
+              "Pa"
+            ],
+            "conclusion": "Pu"
+          },
+          {
+            "id": "m76",
+            "premises": [
+              "Ps",
+              "Pc"
+            ],
+            "conclusion": "Pg"
+          },
+          {
+            "id": "m18",
+            "premises": [
+              "Pa",
+              "Pb"
+            ],
+            "conclusion": "Ps"
+          },
+          {
+            "id": "m05",
+            "premises": [
+              "Pu",
+              "Pb"
+            ],
+            "conclusion": "Pv"
+          },
+          {
+            "id": "m41",
+            "premises": [
+              "Pw"
+            ],
+            "conclusion": "Pg"
+          },
+          {
+            "id": "m84",
+            "premises": [
+              "Pv",
+              "Pc"
+            ],
+            "conclusion": "Pw"
+          }
+        ],
+        "goal": "Pg"
+      }
+    ],
+    "depth_ranges": {
+      "T02": [
+        1,
+        4
+      ],
+      "E01_shared_fork": [
+        1,
+        2
+      ],
+      "E02_two_vs_four": [
+        2,
+        4
+      ]
+    },
+    "seeds": [
+      64001001,
+      64001002
+    ],
+    "num_predict": 4096,
+    "timeout_seconds": 300,
+    "historical_problem_roles": {
+      "T02": "v064_development",
+      "E01_shared_fork": "v064_evaluation_now_seen",
+      "E02_two_vs_four": "v064_evaluation_now_seen"
+    },
+    "contract": "v067-reference-plan-positive-control-r1",
+    "baseline_sha256": "9ad2cf76455d5b10584183b0123be96a9211586210732af7e9ffb649aac9f90e",
+    "prior_verifier_source_sha256": "375d5fd79bc81a4b547d07567a97eb33d8e8176256b24d013c87c54f97785331",
+    "original_v066_plan_sha256": "1031d4d6af330b34c609dc83ac0789547f88bded8abde4c558b84d4e84caec49",
+    "max_inference_calls": 12,
+    "metadata_records": 12,
+    "generation_token_upper_bound": 49152,
+    "request_utf8_byte_limit": 24000,
+    "reference_plans": {
+      "T02": {
+        "reference_short": [
+          "r83"
+        ],
+        "reference_long": [
+          "r21",
+          "r57",
+          "r04",
+          "r69"
+        ]
+      },
+      "E01_shared_fork": {
+        "reference_short": [
+          "n52"
+        ],
+        "reference_long": [
+          "n08",
+          "n91",
+          "n37"
+        ]
+      },
+      "E02_two_vs_four": {
+        "reference_short": [
+          "m18",
+          "m76"
+        ],
+        "reference_long": [
+          "m33",
+          "m05",
+          "m84",
+          "m41"
+        ]
+      }
+    },
+    "conditions": [
+      "reference_short",
+      "reference_long"
+    ],
+    "orders": [
+      [
+        "reference_short",
+        "reference_long"
+      ],
+      [
+        "reference_long",
+        "reference_short"
+      ],
+      [
+        "reference_short",
+        "reference_long"
+      ],
+      [
+        "reference_long",
+        "reference_short"
+      ],
+      [
+        "reference_short",
+        "reference_long"
+      ],
+      [
+        "reference_long",
+        "reference_short"
+      ]
+    ],
+    "input_provenance": "experimenter_verified_reference; correct ordered rule list supplied; not model_generated_plan",
+    "research_claim": "positive control of reconstruction from a fully supplied valid route; NOT autonomous D control or two-stage model pipeline success",
+    "prior_architecture": "v066 two-model-call pipeline is closed with 0/12 end_to_end_successes and 0/6 selective pairs",
+    "no_warmup": true,
+    "automatic_retry": false,
+    "host_output_repair": false,
+    "no_result_based_gate": true,
+    "A": "not_measured",
+    "M": "not_measured",
+    "D_instruction_control": "not_measured",
+    "independent_holdout": false,
+    "stopping": "exactly one bounded positive-control batch; no automatic prompt/model/interface/seed changes. Preserve failed cases. No A/M gate promotion.",
+    "decision_rule": "all 12 measured: 12/12 reference-conformant strict graphs establishes constructor with supplied solutions only; 0/12 closes this output task branch; partial retained by cell; any unmeasured or incomplete leaves gate null",
+    "comparison_limit": "historical v066 constructor saw only invalid model plans; new prompts declare provided experimenter reference and no free D selection. Not a contemporaneous causal ablation or performance gain estimate"
+  },
+  "protocol_sha256": "2a8f1cb27bdd9b303a35a46763c5ef0c8a3766b453c6459187e65fa809fcd481",
+  "source_hashes": {
+    "README.md": "b1d94b2bb971353257ebd71fabd640e4084b9e0182e65d5a4376838fb33ef128",
+    "analyze_baseline.py": "3c0855b3fe90921a9cd1181d53c29acfa949d8e69151e66d7c214041762174ce",
+    "build_release.py": "b06fc3cb83b640da1680d7f784726469fc85b8d565da4077e526bb93509351ad",
+    "common.py": "56653119a7bf4869296269994c3a15c68d3f7882a2249a6c5d879ca4a242f528",
+    "data/protocol.json": "2a8f1cb27bdd9b303a35a46763c5ef0c8a3766b453c6459187e65fa809fcd481",
+    "design.py": "46151d0dd58c2f67f849fd571805c68895d7c7bb4332ffaddcbefd510a1f435c",
+    "docs/PROTOCOL.ko.md": "a826b08dff4fea24827de55a592a10180ed90cffde4554aa76fc5729476f49c0",
+    "docs/REVIEW_AND_CHANGES.ko.md": "40778538b73278aa12499154e3418af270d81c12429c5021c3e5845f0880b9d8",
+    "launch.py": "2baf32c19d5ea0d3a03ebb5fc2bad75fb4654186990ec20333fcb0b31e6e772e",
+    "measure.py": "47e6a93f5e96e8346ccb21c77034a5859ad8fbe9a326e77bff44acd58d610f71",
+    "previous.py": "9db2f5e429a8349a1a82fab938ff910a5575e4072484c878817a6b0cbba44a04",
+    "prior/v066_source.zip": "375d5fd79bc81a4b547d07567a97eb33d8e8176256b24d013c87c54f97785331",
+    "reference.py": "a30fa90e90bb8acef8d96e8cd74c37537e8b16b7dac0631eddde021cb588ff24",
+    "report.py": "023d26f72a2a9dbd6b241350be45fa7d420fe5280e63c1decc27b84c12c0898a",
+    "run.py": "7b8cd082eb454c296abeb11e878485d2ce0c3e6f73a87a55efef9afe9ec8675a",
+    "tests/fixtures.py": "2a6994a2e177d665058b6f44f12044c5de2219a9b0a144b6e873aa42f2962cb2",
+    "tests/test_integration.py": "acba43dea6da7ee88c8b6b58d4e360fe3797c8bc3bc4f57acbe33ee490e73a6f",
+    "tests/test_integrity.py": "7db36385ee45d2cb459cba0fe2757db78b0b919afcdfe2c8da3529e3fd71c287",
+    "tests/test_launch.py": "7c24a2329da252699d03813fbc76912bae303cbdeb31525b1a91dd98e778b6a4",
+    "tests/test_logic.py": "bd4a3130c6e2e7d9a642f37eef638a47245b002638d4960ad6a184f3d374cb56",
+    "tests/test_native.py": "5234fd9a7f4ede5298b12353cccb5b709017f2563eadfe87631e660fa256c476",
+    "verify.py": "ecea69a1a8697512ab6f1cd5faca529919af5833d96525f7f978353f54fb07c3",
+    "windows/Run-v067.cmd": "ebc14f2c95d4af054e8c346e77cbdaa687bb4031cb3713163ef6ef47de6584f7",
+    "windows/Run-v067.ps1": "4373171d3b968e9ec774b9c6057c31ff741e96c9d99f4a9abbe6988ddb505fd7",
+    "windows/native.ps1": "b77cdfdc8033daa3594a936ba0d32e4e03aae500196bc83ccfc97a912770d063"
+  },
+  "baseline_sha256": "9ad2cf76455d5b10584183b0123be96a9211586210732af7e9ffb649aac9f90e",
+  "baseline_request": {
+    "model": "qwen3:4b-instruct",
+    "messages": [
+      {
+        "role": "user",
+        "content": "facts와 rules만 사용하여 goal을 지지하는 증명 DAG 하나를 작성한다.\n한 증명만 선택한다. 서로 대안인 두 경로를 모두 나열하면 안 된다. 모든 노드는 선택한 목표 노드의 조상이어야 한다.\nnodes는 위상 순서의 id, atom, rule, parents 배열이다. 초기 사실의 rule은 null이고 parents는 []다.\n규칙 적용의 rule은 실제 규칙 id이며 parents에는 모든 전제 노드 id를 쓴다.\nfinal_node_id는 선택한 목표 노드의 id이다. 원자 이름(goal 문자열)을 쓰는 필드가 아니다.\n최종 노드는 nodes 안에 있어야 한다. 목표 문자열이 같아도 근거 없는 단독 주장은 유효한 증명이 아니다.\n\n경로 지시:\n허용된 유효한 증명 중 최종 지지 깊이가 가장 작은 경로를 선택한다.\nJSON 객체 하나만 출력한다. 출력 형식(JSON Schema):\n{\"type\":\"object\",\"properties\":{\"nodes\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":128},\"atom\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":128},\"rule\":{\"anyOf\":[{\"type\":\"string\",\"minLength\":1,\"maxLength\":128},{\"type\":\"null\"}]},\"parents\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":128},\"minItems\":0,\"maxItems\":16}},\"required\":[\"id\",\"atom\",\"rule\",\"parents\"],\"additionalProperties\":false},\"minItems\":1,\"maxItems\":16},\"final_node_id\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":128}},\"required\":[\"nodes\",\"final_node_id\"],\"additionalProperties\":false}\n\nproblem: {\"id\":\"T02\",\"facts\":[\"Lp\",\"Ls\"],\"rules\":[{\"id\":\"r83\",\"premises\":[\"Lp\",\"Ls\"],\"conclusion\":\"Lg\"},{\"id\":\"r21\",\"premises\":[\"Lp\"],\"conclusion\":\"Lq\"},{\"id\":\"r57\",\"premises\":[\"Lq\",\"Ls\"],\"conclusion\":\"Lr\"},{\"id\":\"r04\",\"premises\":[\"Lr\"],\"conclusion\":\"Lt\"},{\"id\":\"r69\",\"premises\":[\"Lt\"],\"conclusion\":\"Lg\"}],\"goal\":\"Lg\"}"
+      }
+    ],
+    "stream": false,
+    "keep_alive": "10m",
+    "options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repeat_penalty": 1.0,
+      "num_ctx": 8192,
+      "num_predict": 4096,
+      "num_thread": 6,
+      "num_batch": 256,
+      "seed": 64001001
+    },
+    "format": {
+      "type": "object",
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "atom": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "rule": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 128
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "parents": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 128
+                },
+                "minItems": 0,
+                "maxItems": 16
+              }
+            },
+            "required": [
+              "id",
+              "atom",
+              "rule",
+              "parents"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 16
+        },
+        "final_node_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        }
+      },
+      "required": [
+        "nodes",
+        "final_node_id"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "identity": {
+    "model": "qwen3:4b-instruct",
+    "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "show_sha256": "d223770b6393471210267ea75d0870b0770c0ebf3b1f5ae539758f7500816948",
+    "server": {
+      "version": "0.34.0"
+    },
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "4.0B",
+      "quantization_level": "Q4_K_M"
+    },
+    "template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0].role == 'system' %}\n        {{- messages[0].content + '\\n\\n' }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0].content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" and message.content is string and not(message.content.startswith('<tool_response>') and message.content.endswith('</tool_response>')) %}\n        {%- set ns.multi_step_tool = false %}\n        {%- set ns.last_query_index = index %}\n    {%- endif %}\n{%- endfor %}\n{%- for message in messages %}\n    {%- if message.content is string %}\n        {%- set content = message.content %}\n    {%- else %}\n        {%- set content = '' %}\n    {%- endif %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {%- if loop.last or (not loop.last and reasoning_content) %}\n                {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content.strip('\\n') + '\\n</think>\\n\\n' + content.lstrip('\\n') }}\n            {%- else %}\n                {{- '<|im_start|>' + message.role + '\\n' + content }}\n            {%- endif %}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if (loop.first and content) or (not loop.first) %}\n                    {{- '\\n' }}\n                {%- endif %}\n                {%- if tool_call.function %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {{- '<tool_call>\\n{\"name\": \"' }}\n                {{- tool_call.name }}\n                {{- '\", \"arguments\": ' }}\n                {%- if tool_call.arguments is string %}\n                    {{- tool_call.arguments }}\n                {%- else %}\n                    {{- tool_call.arguments | tojson }}\n                {%- endif %}\n                {{- '}\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.first or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}",
+    "parameters": "repeat_penalty                 1\nstop                           \"<|im_start|>\"\nstop                           \"<|im_end|>\"\ntemperature                    0.7\ntop_k                          20\ntop_p                          0.8",
+    "model_info": {
+      "general.architecture": "qwen3",
+      "general.basename": "Qwen3",
+      "general.file_type": 15,
+      "general.finetune": "Instruct",
+      "general.license": "apache-2.0",
+      "general.license.link": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507/blob/main/LICENSE",
+      "general.parameter_count": 4022468096,
+      "general.quantization_version": 2,
+      "general.size_label": "4B",
+      "general.tags": null,
+      "general.type": "model",
+      "general.version": "2507",
+      "qwen3.attention.head_count": 32,
+      "qwen3.attention.head_count_kv": 8,
+      "qwen3.attention.key_length": 128,
+      "qwen3.attention.layer_norm_rms_epsilon": 1e-06,
+      "qwen3.attention.value_length": 128,
+      "qwen3.block_count": 36,
+      "qwen3.context_length": 262144,
+      "qwen3.embedding_length": 2560,
+      "qwen3.feed_forward_length": 9728,
+      "qwen3.rope.freq_base": 5000000,
+      "tokenizer.ggml.add_bos_token": false,
+      "tokenizer.ggml.bos_token_id": 151643,
+      "tokenizer.ggml.eos_token_id": 151645,
+      "tokenizer.ggml.merges": null,
+      "tokenizer.ggml.model": "gpt2",
+      "tokenizer.ggml.padding_token_id": 151643,
+      "tokenizer.ggml.pre": "qwen2",
+      "tokenizer.ggml.token_type": null,
+      "tokenizer.ggml.tokens": null
+    }
+  },
+  "slots": [
+    {
+      "id": "b00_p0_reference_short",
+      "block": 0,
+      "period": 0,
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_short",
+      "reference_rule_ids": [
+        "r83"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": null,
+      "previous_condition": null
+    },
+    {
+      "id": "b00_p0_reference_long",
+      "block": 0,
+      "period": 1,
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_long",
+      "reference_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b00_p0_reference_short",
+      "previous_condition": "reference_short"
+    },
+    {
+      "id": "b01_p0_reference_long",
+      "block": 1,
+      "period": 0,
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_long",
+      "reference_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b00_p0_reference_long",
+      "previous_condition": "reference_long"
+    },
+    {
+      "id": "b01_p0_reference_short",
+      "block": 1,
+      "period": 1,
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_short",
+      "reference_rule_ids": [
+        "r83"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b01_p0_reference_long",
+      "previous_condition": "reference_long"
+    },
+    {
+      "id": "b02_p1_reference_short",
+      "block": 2,
+      "period": 0,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_short",
+      "reference_rule_ids": [
+        "n52"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b01_p0_reference_short",
+      "previous_condition": "reference_short"
+    },
+    {
+      "id": "b02_p1_reference_long",
+      "block": 2,
+      "period": 1,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_long",
+      "reference_rule_ids": [
+        "n08",
+        "n91",
+        "n37"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b02_p1_reference_short",
+      "previous_condition": "reference_short"
+    },
+    {
+      "id": "b03_p1_reference_long",
+      "block": 3,
+      "period": 0,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_long",
+      "reference_rule_ids": [
+        "n08",
+        "n91",
+        "n37"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b02_p1_reference_long",
+      "previous_condition": "reference_long"
+    },
+    {
+      "id": "b03_p1_reference_short",
+      "block": 3,
+      "period": 1,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_short",
+      "reference_rule_ids": [
+        "n52"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b03_p1_reference_long",
+      "previous_condition": "reference_long"
+    },
+    {
+      "id": "b04_p2_reference_short",
+      "block": 4,
+      "period": 0,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_short",
+      "reference_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b03_p1_reference_short",
+      "previous_condition": "reference_short"
+    },
+    {
+      "id": "b04_p2_reference_long",
+      "block": 4,
+      "period": 1,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_long",
+      "reference_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b04_p2_reference_short",
+      "previous_condition": "reference_short"
+    },
+    {
+      "id": "b05_p2_reference_long",
+      "block": 5,
+      "period": 0,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_long",
+      "reference_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b04_p2_reference_long",
+      "previous_condition": "reference_long"
+    },
+    {
+      "id": "b05_p2_reference_short",
+      "block": 5,
+      "period": 1,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_short",
+      "reference_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b05_p2_reference_long",
+      "previous_condition": "reference_long"
+    }
+  ],
+  "actions": [
+    {
+      "kind": "metadata",
+      "id": "b00_before"
+    },
+    {
+      "kind": "call",
+      "id": "b00_p0_reference_short"
+    },
+    {
+      "kind": "call",
+      "id": "b00_p0_reference_long"
+    },
+    {
+      "kind": "metadata",
+      "id": "b00_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b01_before"
+    },
+    {
+      "kind": "call",
+      "id": "b01_p0_reference_long"
+    },
+    {
+      "kind": "call",
+      "id": "b01_p0_reference_short"
+    },
+    {
+      "kind": "metadata",
+      "id": "b01_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b02_before"
+    },
+    {
+      "kind": "call",
+      "id": "b02_p1_reference_short"
+    },
+    {
+      "kind": "call",
+      "id": "b02_p1_reference_long"
+    },
+    {
+      "kind": "metadata",
+      "id": "b02_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b03_before"
+    },
+    {
+      "kind": "call",
+      "id": "b03_p1_reference_long"
+    },
+    {
+      "kind": "call",
+      "id": "b03_p1_reference_short"
+    },
+    {
+      "kind": "metadata",
+      "id": "b03_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b04_before"
+    },
+    {
+      "kind": "call",
+      "id": "b04_p2_reference_short"
+    },
+    {
+      "kind": "call",
+      "id": "b04_p2_reference_long"
+    },
+    {
+      "kind": "metadata",
+      "id": "b04_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b05_before"
+    },
+    {
+      "kind": "call",
+      "id": "b05_p2_reference_long"
+    },
+    {
+      "kind": "call",
+      "id": "b05_p2_reference_short"
+    },
+    {
+      "kind": "metadata",
+      "id": "b05_after"
+    }
+  ],
+  "plan_sha256": "1d88337db00c2ede3fc26e72a359e62867e43f2ea17fed1b04d77afcf7327710"
+}

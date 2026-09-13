@@ -1,0 +1,27 @@
+{
+  "contract": "v066-independent-verify-r1",
+  "bundle_sha256": "9ad2cf76455d5b10584183b0123be96a9211586210732af7e9ffb649aac9f90e",
+  "plan_sha256": "1031d4d6af330b34c609dc83ac0789547f88bded8abde4c558b84d4e84caec49",
+  "provenance": "live",
+  "state": "complete",
+  "completed_actions": 48,
+  "started_actions": 48,
+  "inference_calls": 36,
+  "observed_calls": 36,
+  "pending_action": null,
+  "compared_groups": [
+    "manifest_and_layout",
+    "plan_baseline_source",
+    "runtime_and_action_schedule",
+    "start_markers_events_records",
+    "metadata_and_identity",
+    "call_requests_and_responses",
+    "stop_budget_and_status",
+    "independent_semantics",
+    "summary_and_korean_report"
+  ],
+  "differences": [],
+  "production_imports": false,
+  "limitation": "번들 내부 일관성 검산이며 외부 실행 사실을 인증하지 않는다. 중단 실행의 inference_calls는 시작 표지 기준이며 모델 수신은 별도 인증되지 않는다.",
+  "verified": true
+}

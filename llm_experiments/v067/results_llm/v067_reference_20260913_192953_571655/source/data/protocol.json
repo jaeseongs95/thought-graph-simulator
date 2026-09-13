@@ -1,0 +1,270 @@
+{
+  "model": "qwen3:4b-instruct",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "problems": [
+    {
+      "id": "T02",
+      "facts": [
+        "Lp",
+        "Ls"
+      ],
+      "rules": [
+        {
+          "id": "r83",
+          "premises": [
+            "Lp",
+            "Ls"
+          ],
+          "conclusion": "Lg"
+        },
+        {
+          "id": "r21",
+          "premises": [
+            "Lp"
+          ],
+          "conclusion": "Lq"
+        },
+        {
+          "id": "r57",
+          "premises": [
+            "Lq",
+            "Ls"
+          ],
+          "conclusion": "Lr"
+        },
+        {
+          "id": "r04",
+          "premises": [
+            "Lr"
+          ],
+          "conclusion": "Lt"
+        },
+        {
+          "id": "r69",
+          "premises": [
+            "Lt"
+          ],
+          "conclusion": "Lg"
+        }
+      ],
+      "goal": "Lg"
+    },
+    {
+      "id": "E01_shared_fork",
+      "facts": [
+        "Aa",
+        "Ab"
+      ],
+      "rules": [
+        {
+          "id": "n08",
+          "premises": [
+            "Aa"
+          ],
+          "conclusion": "Ax"
+        },
+        {
+          "id": "n52",
+          "premises": [
+            "Aa",
+            "Ab"
+          ],
+          "conclusion": "Ag"
+        },
+        {
+          "id": "n37",
+          "premises": [
+            "Ax",
+            "Ay",
+            "Ab"
+          ],
+          "conclusion": "Ag"
+        },
+        {
+          "id": "n91",
+          "premises": [
+            "Aa"
+          ],
+          "conclusion": "Ay"
+        },
+        {
+          "id": "n64",
+          "premises": [
+            "Ab"
+          ],
+          "conclusion": "Az"
+        }
+      ],
+      "goal": "Ag"
+    },
+    {
+      "id": "E02_two_vs_four",
+      "facts": [
+        "Pa",
+        "Pb",
+        "Pc"
+      ],
+      "rules": [
+        {
+          "id": "m33",
+          "premises": [
+            "Pa"
+          ],
+          "conclusion": "Pu"
+        },
+        {
+          "id": "m76",
+          "premises": [
+            "Ps",
+            "Pc"
+          ],
+          "conclusion": "Pg"
+        },
+        {
+          "id": "m18",
+          "premises": [
+            "Pa",
+            "Pb"
+          ],
+          "conclusion": "Ps"
+        },
+        {
+          "id": "m05",
+          "premises": [
+            "Pu",
+            "Pb"
+          ],
+          "conclusion": "Pv"
+        },
+        {
+          "id": "m41",
+          "premises": [
+            "Pw"
+          ],
+          "conclusion": "Pg"
+        },
+        {
+          "id": "m84",
+          "premises": [
+            "Pv",
+            "Pc"
+          ],
+          "conclusion": "Pw"
+        }
+      ],
+      "goal": "Pg"
+    }
+  ],
+  "depth_ranges": {
+    "T02": [
+      1,
+      4
+    ],
+    "E01_shared_fork": [
+      1,
+      2
+    ],
+    "E02_two_vs_four": [
+      2,
+      4
+    ]
+  },
+  "seeds": [
+    64001001,
+    64001002
+  ],
+  "num_predict": 4096,
+  "timeout_seconds": 300,
+  "historical_problem_roles": {
+    "T02": "v064_development",
+    "E01_shared_fork": "v064_evaluation_now_seen",
+    "E02_two_vs_four": "v064_evaluation_now_seen"
+  },
+  "contract": "v067-reference-plan-positive-control-r1",
+  "baseline_sha256": "9ad2cf76455d5b10584183b0123be96a9211586210732af7e9ffb649aac9f90e",
+  "prior_verifier_source_sha256": "375d5fd79bc81a4b547d07567a97eb33d8e8176256b24d013c87c54f97785331",
+  "original_v066_plan_sha256": "1031d4d6af330b34c609dc83ac0789547f88bded8abde4c558b84d4e84caec49",
+  "max_inference_calls": 12,
+  "metadata_records": 12,
+  "generation_token_upper_bound": 49152,
+  "request_utf8_byte_limit": 24000,
+  "reference_plans": {
+    "T02": {
+      "reference_short": [
+        "r83"
+      ],
+      "reference_long": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ]
+    },
+    "E01_shared_fork": {
+      "reference_short": [
+        "n52"
+      ],
+      "reference_long": [
+        "n08",
+        "n91",
+        "n37"
+      ]
+    },
+    "E02_two_vs_four": {
+      "reference_short": [
+        "m18",
+        "m76"
+      ],
+      "reference_long": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ]
+    }
+  },
+  "conditions": [
+    "reference_short",
+    "reference_long"
+  ],
+  "orders": [
+    [
+      "reference_short",
+      "reference_long"
+    ],
+    [
+      "reference_long",
+      "reference_short"
+    ],
+    [
+      "reference_short",
+      "reference_long"
+    ],
+    [
+      "reference_long",
+      "reference_short"
+    ],
+    [
+      "reference_short",
+      "reference_long"
+    ],
+    [
+      "reference_long",
+      "reference_short"
+    ]
+  ],
+  "input_provenance": "experimenter_verified_reference; correct ordered rule list supplied; not model_generated_plan",
+  "research_claim": "positive control of reconstruction from a fully supplied valid route; NOT autonomous D control or two-stage model pipeline success",
+  "prior_architecture": "v066 two-model-call pipeline is closed with 0/12 end_to_end_successes and 0/6 selective pairs",
+  "no_warmup": true,
+  "automatic_retry": false,
+  "host_output_repair": false,
+  "no_result_based_gate": true,
+  "A": "not_measured",
+  "M": "not_measured",
+  "D_instruction_control": "not_measured",
+  "independent_holdout": false,
+  "stopping": "exactly one bounded positive-control batch; no automatic prompt/model/interface/seed changes. Preserve failed cases. No A/M gate promotion.",
+  "decision_rule": "all 12 measured: 12/12 reference-conformant strict graphs establishes constructor with supplied solutions only; 0/12 closes this output task branch; partial retained by cell; any unmeasured or incomplete leaves gate null",
+  "comparison_limit": "historical v066 constructor saw only invalid model plans; new prompts declare provided experimenter reference and no free D selection. Not a contemporaneous causal ablation or performance gain estimate"
+}
