@@ -1,0 +1,266 @@
+{
+  "contract": "v061-independent-source-audit-r1",
+  "phase": "pre-execution-source-release",
+  "gate": "PASS",
+  "completed_at_local_date": "2026-09-13",
+  "audit_target": {
+    "kind": "sealed-source-release-zip",
+    "path": "llm_experiments/v061/releases/v061_direction_choice_source_r1.zip",
+    "sha256": "ee0e877ec0dd80b2210c0530e50f12aad0d55af8fd6b83a3086f32b48167e760",
+    "size_bytes": 755106,
+    "release_contract": "v061-source-release-r1",
+    "manifest_files": 336,
+    "zip_file_entries_including_manifest": 337,
+    "entrypoint": "llm_experiments/v061/probe",
+    "new_model_inference": false
+  },
+  "independence": {
+    "auditor_role": "fresh final source auditor",
+    "participated_in_analysis_design_or_implementation": false,
+    "fresh_context": true,
+    "delegated": false,
+    "source_or_zip_modified": false,
+    "allowed_writes": [
+      "llm_experiments/v061/validation/source_audit_r1.json",
+      "llm_experiments/v061/validation/SOURCE_AUDIT_R1.ko.md"
+    ]
+  },
+  "applicable_instructions": {
+    "repository_agents_path": "AGENTS.md",
+    "repository_agents_sha256_applied": "67a6973db5708b2d7daff01451fb0d2b80b96f1ca39e5cdb7b2382a313b55f58",
+    "structure_path": "STRUCTURE.md",
+    "note": "AGENTS.md changed outside the audit target during the audit. The current file was reread and applied; Git file counts were not used as preservation evidence."
+  },
+  "risk_classification": {
+    "level": "low-runtime-impact-but-explicit-independent-gate",
+    "rationale": "The target is a local, reproducible source archive and this audit performed no LLM inference, server start, model download, deployment, publication, or external communication. The user explicitly required a fresh independent final audit, so the release gate applies."
+  },
+  "requirements_checked": [
+    "Use one fixed K01 problem with rules [k03,k17,k10] in both arms.",
+    "Change only the Korean directive word from 작은 to 큰 between shallow and deep requests while holding all other wire bytes fixed for the same seed.",
+    "Use 10 unique historical seeds, five ABBA and five BAAB blocks, two observations per arm, 40 calls, 20 metadata actions, and schedule_seed 6102026.",
+    "Bind direction and role_id to the condition and preserve call-history fields without claiming reset or cache control.",
+    "Separate shallow_success from direction-specific instruction_fulfilled and set role_match to the latter.",
+    "Keep D, actual_D, proof_valid, and strict_valid null for ID-only responses.",
+    "Report paired joint instruction success together with selected-ID change; preserve missing or unmeasured values as null.",
+    "Do not retry, repair, or resume after inference starts; preserve raw request, raw response, events, source snapshots, metadata, and plan bindings.",
+    "Use an independent verifier that does not import v061 production request, measurement, plan, reporting, runner, audit, or evidence modules.",
+    "Document all four joint profiles, the single-problem scope, competing explanations, and limits on generalization.",
+    "Seal the source ZIP with a complete manifest, preserve the 312 v060 r2 files byte-for-byte, and pass self-test from a fresh extraction."
+  ],
+  "evidence_checked": [
+    {
+      "id": "E01",
+      "result": "PASS",
+      "evidence": "Direct SHA-256 calculation returned ee0e877ec0dd80b2210c0530e50f12aad0d55af8fd6b83a3086f32b48167e760 for the 755106-byte target ZIP."
+    },
+    {
+      "id": "E02",
+      "result": "PASS",
+      "evidence": "Direct ZIP inspection found 336 manifest members plus RELEASE_MANIFEST.json, 337 unique case-folded paths, zero unsafe paths, zero manifest/hash mismatches, and zero ZIP-versus-fresh-tree file-set differences. The packaged build_release.py --check independently printed release manifest: PASS (336 files)."
+    },
+    {
+      "id": "E03",
+      "result": "PASS",
+      "evidence": "After the fresh self-test, the extraction still contained exactly 337 files and all 336 manifest members matched. The 24 v061 files plus RELEASE_MANIFEST.json had zero UTF-8, BOM, or CR-line-ending violations."
+    },
+    {
+      "id": "E04",
+      "result": "PASS",
+      "evidence": "The v060 source r2 manifest contained 312 files; every name and hash matched the corresponding member in the v061 ZIP. The v061 ZIP added 24 files."
+    },
+    {
+      "id": "E05",
+      "result": "PASS",
+      "evidence": "An independent reconstruction from v061_check.plan.json produced 40 call slots and 60 actions: 40 calls, 20 metadata actions, 10 blocks, five ABBA blocks, five BAAB blocks, 20 shallow calls, 20 deep calls, repeat distances 1 or 3, and schedule_seed 6102026. All 40 slots satisfied role_id == direction == variant."
+    },
+    {
+      "id": "E06",
+      "result": "PASS",
+      "evidence": "For all 10 seeds, same-condition repeat request bytes were identical and the shallow/deep requests differed only by replacing the unique directive span 작은 with 큰. Independently reconstructed request hashes exactly matched the frozen plan request_hashes. The plan's internal plan_sha256 was 6ac771e951f25681ecc614230aaf8dfd14de371fe13d62c0bbe5609d4533d58d; the serialized plan file SHA-256 was d26b98bd30ca4c69f184bbb9b39cea2345591033a187eaab65877d8b576b99fd."
+    },
+    {
+      "id": "E07",
+      "result": "PASS",
+      "evidence": "The production and independent measurement paths both keep actual_D, D, proof_valid, and strict_valid null; compute shallow_success independently of direction; compute instruction_fulfilled from shallow/min or deep/max; and bind role_match to instruction_fulfilled. Reporting separately counts both_success_and_changed_pairs and returns full rates only for complete, fully measured denominators."
+    },
+    {
+      "id": "E08",
+      "result": "PASS",
+      "evidence": "The runner and audit bind plan, source fingerprint, request and response hashes, metadata hashes, exact action order, event hash chain, status, and expected file set. Transport and identity failures stop execution; partial and unmeasured states remain explicit. Tests cover deletion, mutation, extra files, rehashed semantic forgery, invalid payloads, identity drift, transport failure, partial runs, and symlink refusal."
+    },
+    {
+      "id": "E09",
+      "result": "PASS",
+      "evidence": "tools/verify_v061.py imports only the standard library and preserved prior independent verifier utilities, reconstructs schedule and requests, independently measures and aggregates results, and compares raw requests, responses, metadata, events, source snapshots, JSON reports, and exact Korean summary bytes. It does not import v061 production modules."
+    },
+    {
+      "id": "E10",
+      "result": "PASS",
+      "evidence": "The actual v060 evidence ZIP SHA-256 was 5a2aeeaf28e9b445b61f3cf78ce87c11aeea1b57cc36ba74bd772fecc15c2c68. Offline reanalysis independently verified 40 calls, 20 metadata records, 882 compared fields, and no differences; it reproduced k17 20/20 for deep_first and k03 20/20 for shallow_first. Historical v059 separately verified 40 calls, 20 metadata records, 802 compared fields, and no differences. A fresh full recomputation equaled v060_reanalysis_final.json exactly."
+    },
+    {
+      "id": "E11",
+      "result": "PASS",
+      "evidence": "The original-tree final self-test ran 33 tests and passed. The fresh extraction self-test also ran 33 tests and passed in 91.924 seconds; fresh_selftest_r1.log SHA-256 was 10b8e08967d59e302be6ae849f6ebb12930147ba5bddcf46bbc1b1f9679477d7."
+    },
+    {
+      "id": "E12",
+      "result": "PASS",
+      "evidence": "The Windows PowerShell 5.1 CheckOnly run used -SkipSelfTest and completed actual v060 evidence reanalysis, v058 baseline validation, plan preparation, and plan show/validation without starting Ollama or performing inference. The 33-test self-test results are separate E11 runs."
+    }
+  ],
+  "axes": [
+    {
+      "id": "A1",
+      "name": "single problem and interpretation scope",
+      "status": "PASS",
+      "evidence_refs": ["E07", "E10"],
+      "source_refs": [
+        "llm_experiments/v061/probe/docs/V061_PROTOCOL.ko.md:5",
+        "llm_experiments/v061/probe/docs/V061_PROTOCOL.ko.md:28",
+        "llm_experiments/v061/probe/docs/V061_PROTOCOL.ko.md:36",
+        "llm_experiments/v061/probe/docs/V060_ANALYSIS.ko.md:84",
+        "llm_experiments/v061/probe/direction_choice_v061/reporting.py:99"
+      ]
+    },
+    {
+      "id": "A2",
+      "name": "manipulation and wire-byte isolation",
+      "status": "PASS",
+      "evidence_refs": ["E05", "E06"],
+      "source_refs": [
+        "llm_experiments/v061/probe/direction_choice_v061/requests.py:9",
+        "llm_experiments/v061/probe/direction_choice_v061/requests.py:22",
+        "llm_experiments/v061/probe/direction_choice_v061/requests.py:52",
+        "llm_experiments/v061/probe/tests/test_design_measure.py:61"
+      ]
+    },
+    {
+      "id": "A3",
+      "name": "schedule history and repeats",
+      "status": "PASS",
+      "evidence_refs": ["E05", "E12"],
+      "source_refs": [
+        "llm_experiments/v061/probe/direction_choice_v061/design.py:9",
+        "llm_experiments/v061/probe/direction_choice_v061/design.py:29",
+        "llm_experiments/v061/probe/direction_choice_v061/design.py:70",
+        "llm_experiments/v061/probe/docs/V061_PROTOCOL.ko.md:22"
+      ]
+    },
+    {
+      "id": "A4",
+      "name": "measurement missingness and paired joint success",
+      "status": "PASS",
+      "evidence_refs": ["E07", "E08", "E11"],
+      "source_refs": [
+        "llm_experiments/v061/probe/direction_choice_v061/measure.py:5",
+        "llm_experiments/v061/probe/direction_choice_v061/reporting.py:45",
+        "llm_experiments/v061/probe/direction_choice_v061/reporting.py:62",
+        "llm_experiments/v061/probe/tests/test_design_measure.py:162",
+        "llm_experiments/v061/probe/tests/test_design_measure.py:213",
+        "llm_experiments/v061/probe/tests/test_design_measure.py:222"
+      ]
+    },
+    {
+      "id": "A5",
+      "name": "evidence and independent recomputation",
+      "status": "PASS",
+      "evidence_refs": ["E08", "E09", "E10"],
+      "source_refs": [
+        "llm_experiments/v061/probe/direction_choice_v061/audit.py:121",
+        "llm_experiments/v061/probe/direction_choice_v061/audit.py:284",
+        "llm_experiments/v061/probe/tools/verify_v061.py:1",
+        "llm_experiments/v061/probe/tools/verify_v061.py:496",
+        "llm_experiments/v061/probe/tools/analyze_v060.py:85"
+      ]
+    },
+    {
+      "id": "A6",
+      "name": "runner manifest and fresh extraction",
+      "status": "PASS",
+      "evidence_refs": ["E01", "E02", "E03", "E08", "E11", "E12"],
+      "source_refs": [
+        "llm_experiments/v061/probe/direction_choice_v061/runner.py:70",
+        "llm_experiments/v061/probe/direction_choice_v061/runner.py:121",
+        "llm_experiments/v061/probe/tools/build_release.py:50",
+        "llm_experiments/v061/probe/windows/Run-v061.ps1:199"
+      ]
+    },
+    {
+      "id": "A7",
+      "name": "preservation and document versioning",
+      "status": "PASS",
+      "evidence_refs": ["E03", "E04", "E10"],
+      "source_refs": [
+        "llm_experiments/v061/probe/docs/V060_ANALYSIS.ko.md:41",
+        "llm_experiments/v061/probe/docs/V060_ANALYSIS.ko.md:72",
+        "llm_experiments/v061/probe/docs/V061_PROTOCOL.ko.md:58",
+        "llm_experiments/v061/probe/README.md:58"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "F01",
+      "severity": "blocking",
+      "status": "resolved",
+      "statement": "An earlier pre-seal self-test had three independent-verifier errors because reconstructed slots did not include the condition-specific role_id contract.",
+      "file": "llm_experiments/v061/probe/tools/verify_v061.py",
+      "line": 127,
+      "evidence": "producer_selftest.log records three reconstructed schedule errors. The sealed verifier now sets direction and role_id from variant, producer_selftest_final.log passes 33 tests, and fresh_selftest_r1.log independently passes the same 33 tests. Direct reconstruction confirmed role_id == direction == variant in all 40 slots.",
+      "impact": "The earlier verifier could not validate otherwise valid synthetic evidence, so that earlier candidate was not releasable.",
+      "action": "No change is required for the sealed target. Any subsequent change to scheduling, role_id, direction, verifier logic, tests, or ZIP bytes requires a new target digest and re-audit."
+    },
+    {
+      "id": "F02",
+      "severity": "non_blocking",
+      "status": "not_observable",
+      "statement": "No v061 LLM inference or current runtime identity check was performed in this source audit.",
+      "file": "llm_experiments/v061/probe/README.md",
+      "line": 34,
+      "evidence": "The target manifest says new_model_inference=false; the CheckOnly log explicitly records no Ollama start or inference; only offline and synthetic-fixture tests were run for v061.",
+      "impact": "PASS means the sealed source is internally consistent and ready for the separately authorized experiment. It does not report a v061 scientific result or attest the future runtime model/server state.",
+      "action": "At execution time, use a new frozen plan and run name, retain the 40 calls and 20 metadata records, and require both production audit and independent evidence verification before interpreting results."
+    },
+    {
+      "id": "F03",
+      "severity": "non_blocking",
+      "status": "open",
+      "statement": "The independent v061 verifier avoids production modules but reuses preserved prior independent verifier utilities, so a shared specification or inherited verifier defect remains possible.",
+      "file": "llm_experiments/v061/probe/tools/verify_v061.py",
+      "line": 20,
+      "evidence": "Imports are limited to verify_v058, independent_graph_forensic, and independent_verify_v057 plus the standard library. V061_PROTOCOL.ko.md:52 discloses the shared-utility limitation.",
+      "impact": "Independent recomputation is materially separate from v061 production scoring, but it is not an implementation-diverse external attestation.",
+      "action": "Retain this limitation in result interpretation. If stronger assurance is needed, verify the future evidence with a separately implemented parser and graph-depth calculator."
+    },
+    {
+      "id": "F04",
+      "severity": "non_blocking",
+      "status": "not_observable",
+      "statement": "The actual internal model setting of the review tools or panel workers is unverified.",
+      "file": "llm_experiments/v061/probe/docs/V060_ANALYSIS.ko.md",
+      "line": 92,
+      "evidence": "The document explicitly distinguishes the requested model and reasoning level from the unverified internal setting.",
+      "impact": "This metadata cannot be used as scientific or independence evidence. The audit instead relies on worker-role separation and directly inspected artifacts.",
+      "action": "Keep the setting labeled unverified and do not use it to strengthen the source or v060 result claims."
+    }
+  ],
+  "remediation_and_reaudit": {
+    "required_before_source_release": [],
+    "stale": false,
+    "staleness_rule": "Any change to the ZIP bytes, manifest, packaged source, tests, README, or protocol makes this PASS stale and requires digest verification plus impact-scoped re-audit; semantic changes require full affected-axis revalidation."
+  },
+  "limitations": [
+    "This PASS is restricted to v061_direction_choice_source_r1.zip with SHA-256 ee0e877ec0dd80b2210c0530e50f12aad0d55af8fd6b83a3086f32b48167e760.",
+    "No v061 model inference, Ollama server start, model download, deployment, or external publication was performed.",
+    "The v061 self-tests use a synthetic local HTTP fixture for runtime paths. The actual v058, v059, and v060 evidence checks were separate offline verification of preserved records.",
+    "Hash and event-chain consistency do not externally attest that historical or future model calls occurred as recorded.",
+    "K01 is one problem. Ten seeds, repeated calls, 20 pairs, and history strata do not create 40 independent problems or justify population-wide generalization.",
+    "implied_depth is a property of the selected rule under the external rule graph. It is not actual generated-proof D or evidence of an internal depth mechanism.",
+    "Metadata boundaries do not reset model state or cache, and the first call may have prior server history.",
+    "The actual internal model setting of tool workers is unverified.",
+    "AGENTS.md changed outside the sealed target during the audit; the current SHA-256 was reread and applied, and that unrelated change was not treated as target preservation evidence."
+  ],
+  "gate_reason": "All seven required axes passed on the exact sealed ZIP. No open blocking finding remains. The one earlier blocking verifier defect was fixed before sealing and passed both final-tree and fresh-extraction self-tests. Open items are explicit epistemic limits that do not prevent source release or later separately authorized execution."
+}

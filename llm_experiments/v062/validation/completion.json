@@ -1,0 +1,38 @@
+{
+  "contract": "v062-task-completion-r1",
+  "completed_at_utc": "2026-09-13T04:32:13.029698+00:00",
+  "source_zip": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v062\\releases\\v062_construction_source_r1.zip",
+  "candidate_sha256": "33830e414b93174b2fbc36ec46d4675ab8e15321abd5608db301a487d8561da4",
+  "audit_state": "completed",
+  "candidate_completion": "complete",
+  "profile": "cooperative-sealed",
+  "provider": "sealed-artifact-v1",
+  "source_zip_unchanged_after_audit": true,
+  "all_360_working_manifest_files_match": true,
+  "prior_evidence_unchanged": true,
+  "new_model_inference": false,
+  "source_audit_result_sha256": "bd05242f7bd5a6afbecd00b74bb96eb899d73ce2f67a8b5909acd58a005c3fe4",
+  "final_review_sha256": "ab2307309c9eb86532a9d7917404356e2f244666d5b8a7c2c43218254c6fb0d3",
+  "findings": [
+    {
+      "audit_observation_id": "v062-source-audit-20260913T042732Z",
+      "finding_id": "V062-SA-D01",
+      "severity": "diagnostic",
+      "disposition": "accepted",
+      "disposition_evidence": "Independent auditor reproduced a rehashed parse_error text mutation; raw-derived research metrics and gate are unaffected.",
+      "resolution_status": "unresolved",
+      "resolution_evidence": "Retained as a disclosed nonblocking limitation in FINAL_REVIEW.ko.md. No post-audit candidate mutation.",
+      "rechecks": [],
+      "candidate_digest": "33830e414b93174b2fbc36ec46d4675ab8e15321abd5608db301a487d8561da4"
+    }
+  ],
+  "verification": {
+    "original_selftest": 27,
+    "fresh_source_selftest": 27,
+    "analyzer_regressions": 7,
+    "real_request_variants": 20,
+    "auditor_randomized_dags": 5000,
+    "blocking_findings": 0,
+    "diagnostic_findings": 1
+  }
+}

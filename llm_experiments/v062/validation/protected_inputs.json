@@ -1,0 +1,12 @@
+{
+  "contract": "v062-protected-inputs-r1",
+  "prior_source_zip_sha256": "ee0e877ec0dd80b2210c0530e50f12aad0d55af8fd6b83a3086f32b48167e760",
+  "prior_source_files": 336,
+  "differences": [],
+  "evidence_hashes": {
+    "llm_experiments\\v058\\results_llm\\v058_order_02_evidence.zip": "d8fd5b2123d38023aaf7c7c0427f54ab6fe650d6b85a695790cb7a5b5b852761",
+    "llm_experiments\\v059\\results_llm\\v059_rules_01_evidence.zip": "3f9b1e1462fa48f8b88f3ec71b69020adc7257c826e84d4b893b1d24eba685c5",
+    "llm_experiments\\v060\\results_llm\\v060_position_01_evidence.zip": "5a2aeeaf28e9b445b61f3cf78ce87c11aeea1b57cc36ba74bd772fecc15c2c68",
+    "llm_experiments\\v061\\results_llm\\v061_direction_01_evidence.zip": "650c3f5296a37978255755e4f416b90c94184fc787bad8ae8405887d869fe4dc"
+  }
+}

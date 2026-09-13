@@ -1,0 +1,36 @@
+{
+  "contract": "v061-final-completion-r1",
+  "status": "complete",
+  "source_zip_sha256": "ee0e877ec0dd80b2210c0530e50f12aad0d55af8fd6b83a3086f32b48167e760",
+  "source_manifest_files": 336,
+  "source_and_fresh_files_still_match": true,
+  "new_source_files": 24,
+  "preserved_dependency_files": 312,
+  "source_tests_passed": 33,
+  "fresh_extraction_tests_passed": 33,
+  "windows_check_only_passed": true,
+  "independent_audit": "PASS",
+  "audit_axes_passed": 7,
+  "open_blocking_findings": 0,
+  "new_model_inference": false,
+  "protected_input_hashes": {
+    "llm_experiments/v060/results_llm/v060_position_01_evidence.zip": "5a2aeeaf28e9b445b61f3cf78ce87c11aeea1b57cc36ba74bd772fecc15c2c68",
+    "llm_experiments/v060/results_llm/v060_position_01_independent.json": "99d9794bc683a0d5fc48282a8c7a63362b7de6ed167d1247d0c2c1a29018a508"
+  },
+  "current_AGENTS_sha256": "67a6973db5708b2d7daff01451fb0d2b80b96f1ca39e5cdb7b2382a313b55f58",
+  "artifact_hashes": {
+    "source_audit_r1.json": "e4aab5085ecbadfaec52ada2ee87ff46cfb8fecde0e4936674dc539dec8548d3",
+    "SOURCE_AUDIT_R1.ko.md": "0319f26e2bc37a9ac4b8e6abbe0d143820a2f81c9372c80af565521ca5fb095c",
+    "source_seal_r1.json": "0fa3a00ea78c64a8595435dbdd68808ae6bbc5dd8e344f6f146a856e53d67d36",
+    "v060_reanalysis_final.json": "7915c9adb2e11156c9e3c8d43018bca12436df458fd646291f1320191d52713f",
+    "producer_selftest_final.log": "039ee8be577e802984e37045870b6706f9c9a3d29e08c453a8d092d28dfbf5b6",
+    "fresh_selftest_r1.log": "10b8e08967d59e302be6ae849f6ebb12930147ba5bddcf46bbc1b1f9679477d7",
+    "FINAL_REVIEW.ko.md": "f7e3ad912bde5a34ee796466e8e108344e855f8b381f2d9854c2c195198054a4"
+  },
+  "limitations": [
+    "Single K01 problem and repeated seed blocks.",
+    "No actual v061 inference or current runtime identity attestation.",
+    "Internal consistency does not prove internal model mechanisms or external execution.",
+    "Prior independent utilities and shared specifications remain common-mode risks."
+  ]
+}

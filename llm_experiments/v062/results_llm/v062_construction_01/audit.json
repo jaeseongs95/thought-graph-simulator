@@ -1,0 +1,15 @@
+{
+  "contract": "v062-conditional-construction-report-r1",
+  "data_integrity": true,
+  "data_complete": true,
+  "comparative_analysis_ready": true,
+  "inference_calls": 40,
+  "max_inference_calls": 40,
+  "plan_sha256": "071b17338d23e067297bbec0f60bc527a41100d0a1f274789b752767a3bbcbf3",
+  "event_tip": "6a4f1aa93788b07d8068094a6b6fba777342cd80b8b4c4d2b75a2d9e0a50a457",
+  "run_state": "complete",
+  "failure_stage": null,
+  "failure_kind": null,
+  "failure_slot_id": null,
+  "run_error": null
+}

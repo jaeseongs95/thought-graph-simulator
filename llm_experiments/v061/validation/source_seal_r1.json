@@ -1,0 +1,10 @@
+{
+  "contract": "v061-source-seal-r1",
+  "sha256": "ee0e877ec0dd80b2210c0530e50f12aad0d55af8fd6b83a3086f32b48167e760",
+  "manifest_files": 336,
+  "workspace_equal": true,
+  "fresh_extract_equal": true,
+  "preserved_dependency_files": 312,
+  "new_files": 24,
+  "new_model_inference": false
+}

@@ -1,0 +1,23 @@
+{
+  "contract": "v062-release-validation-r1",
+  "zip_sha256": "33830e414b93174b2fbc36ec46d4675ab8e15321abd5608db301a487d8561da4",
+  "manifest_files": 360,
+  "preserved_prior_files": 336,
+  "new_files": 24,
+  "manifest_pass": true,
+  "working_files_match_zip": true,
+  "fresh_extract": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v062\\validation\\fresh_source_r1",
+  "command": [
+    "C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "-m",
+    "construction_probe_v062",
+    "selftest"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 73.5,
+  "log": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v062\\validation\\fresh_source_selftest.log",
+  "new_model_inference": false
+}

@@ -1,0 +1,6297 @@
+{
+  "contract": "v061-reanalysis-r1",
+  "bundle_sha256": "650c3f5296a37978255755e4f416b90c94184fc787bad8ae8405887d869fe4dc",
+  "independent_receipt": {
+    "contract": "independent-v061-r1",
+    "bundle_sha256": "650c3f5296a37978255755e4f416b90c94184fc787bad8ae8405887d869fe4dc",
+    "complete": true,
+    "observed_calls": 40,
+    "metadata_records": 20,
+    "compared_fields": 882,
+    "differences": [],
+    "production_imports": false,
+    "baseline_compared_fields": 1649,
+    "limitation": "원문·계획·측정 일관성 검산이며 외부 실행 인증이나 규칙 위치·캐시·내부 기제의 인과 검증은 아니다."
+  },
+  "model": "gemma3:4b",
+  "model_digest": "a2af6cc3eb7fa8be8504abaf9b04e88f17a119ec3f04a3addf55f92841195f5a",
+  "rows": [
+    {
+      "id": "b00_p0_shallow_r0",
+      "seed": 1790124989,
+      "variant": "shallow",
+      "repeat": 0,
+      "sequence": "ABBA",
+      "period": 0,
+      "previous_variant": null,
+      "repeat_distance": null,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": true,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 0,
+      "request_sha256": "3655d85a9b3d1d48dd96e443024771246089b5fae6bc0541134accf769a842f1",
+      "response_sha256": "fbc74ebd81da97c92ea3a8fd4c56c63223f845d403eaee5914c0d88a22cb5250"
+    },
+    {
+      "id": "b00_p1_deep_r0",
+      "seed": 1790124989,
+      "variant": "deep",
+      "repeat": 0,
+      "sequence": "ABBA",
+      "period": 1,
+      "previous_variant": "shallow",
+      "repeat_distance": null,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": false,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "8a3ac4c570e476f9c215defa1f6cd4a1c46dcd179566eab0252a0ca9b94f4e1b",
+      "response_sha256": "b02b9e4fe7f36890b14a1cf5cdcfcb31228f2aebfef94d0c393ccb26d2ffe64c"
+    },
+    {
+      "id": "b00_p2_deep_r1",
+      "seed": 1790124989,
+      "variant": "deep",
+      "repeat": 1,
+      "sequence": "ABBA",
+      "period": 2,
+      "previous_variant": "deep",
+      "repeat_distance": 1,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": false,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 280,
+      "request_sha256": "8a3ac4c570e476f9c215defa1f6cd4a1c46dcd179566eab0252a0ca9b94f4e1b",
+      "response_sha256": "7d75c34d2bf262c64290c2fddaaa1d182381e04a41392f9cc41a8b90f4c09aaa"
+    },
+    {
+      "id": "b00_p3_shallow_r1",
+      "seed": 1790124989,
+      "variant": "shallow",
+      "repeat": 1,
+      "sequence": "ABBA",
+      "period": 3,
+      "previous_variant": "deep",
+      "repeat_distance": 3,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": true,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "3655d85a9b3d1d48dd96e443024771246089b5fae6bc0541134accf769a842f1",
+      "response_sha256": "1f8d06e9008a68608777b8cd9a3149b9ddfce1c4cdceb3e33549c760c2133300"
+    },
+    {
+      "id": "b01_p0_shallow_r0",
+      "seed": 580410664,
+      "variant": "shallow",
+      "repeat": 0,
+      "sequence": "ABBA",
+      "period": 0,
+      "previous_variant": "shallow",
+      "repeat_distance": null,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": true,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 280,
+      "request_sha256": "982383e964619b167de053751fefba5b4e621270e943122269a4d0c0b6262b2f",
+      "response_sha256": "925d9c72698d7e83bbf3a4aaa40b326aaaf44c4ff42a1a83788eac36f2c09b04"
+    },
+    {
+      "id": "b01_p1_deep_r0",
+      "seed": 580410664,
+      "variant": "deep",
+      "repeat": 0,
+      "sequence": "ABBA",
+      "period": 1,
+      "previous_variant": "shallow",
+      "repeat_distance": null,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": false,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "378a2d7dae6272053e642bf4fd3b17390d3ed9d164cede28955bd00d1ec0e290",
+      "response_sha256": "81c44f6960e8baedaa7aaf9ae9c5e70b370ec22aac6486293c3e5f905b4624e2"
+    },
+    {
+      "id": "b01_p2_deep_r1",
+      "seed": 580410664,
+      "variant": "deep",
+      "repeat": 1,
+      "sequence": "ABBA",
+      "period": 2,
+      "previous_variant": "deep",
+      "repeat_distance": 1,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": false,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 280,
+      "request_sha256": "378a2d7dae6272053e642bf4fd3b17390d3ed9d164cede28955bd00d1ec0e290",
+      "response_sha256": "def8abec3bac5aafc2eea23dd6b04b6436992e99c14ad30dfc475182fead90a0"
+    },
+    {
+      "id": "b01_p3_shallow_r1",
+      "seed": 580410664,
+      "variant": "shallow",
+      "repeat": 1,
+      "sequence": "ABBA",
+      "period": 3,
+      "previous_variant": "deep",
+      "repeat_distance": 3,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": true,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "982383e964619b167de053751fefba5b4e621270e943122269a4d0c0b6262b2f",
+      "response_sha256": "4bc26fd232db62ae088d43d776b77e4efb06a2d49dfafd8dee71fd6d9a59200c"
+    },
+    {
+      "id": "b02_p0_deep_r0",
+      "seed": 267101868,
+      "variant": "deep",
+      "repeat": 0,
+      "sequence": "BAAB",
+      "period": 0,
+      "previous_variant": "shallow",
+      "repeat_distance": null,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": false,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "313b09f4be9f910cdc21128c3ff07f49f93d36ba5675489ac617c4dba16f347e",
+      "response_sha256": "10159623adc4c51fdfba02aea9f2494c27988a40097eebba5c148d23c6d83030"
+    },
+    {
+      "id": "b02_p1_shallow_r0",
+      "seed": 267101868,
+      "variant": "shallow",
+      "repeat": 0,
+      "sequence": "BAAB",
+      "period": 1,
+      "previous_variant": "deep",
+      "repeat_distance": null,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": true,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "0300920ad0d576a222a6ff4f0d0d7e4edf42470e017c69e025e15149388a4b3e",
+      "response_sha256": "c8eeddafceb91d85da9efa85911d735e42433e8c63946b5e262e420245f5e528"
+    },
+    {
+      "id": "b02_p2_shallow_r1",
+      "seed": 267101868,
+      "variant": "shallow",
+      "repeat": 1,
+      "sequence": "BAAB",
+      "period": 2,
+      "previous_variant": "shallow",
+      "repeat_distance": 1,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": true,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 280,
+      "request_sha256": "0300920ad0d576a222a6ff4f0d0d7e4edf42470e017c69e025e15149388a4b3e",
+      "response_sha256": "4e20f4f9b604714c56ccc711e1650ed69bb95f740651ed82586bbe08eeb4be58"
+    },
+    {
+      "id": "b02_p3_deep_r1",
+      "seed": 267101868,
+      "variant": "deep",
+      "repeat": 1,
+      "sequence": "BAAB",
+      "period": 3,
+      "previous_variant": "shallow",
+      "repeat_distance": 3,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": false,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "313b09f4be9f910cdc21128c3ff07f49f93d36ba5675489ac617c4dba16f347e",
+      "response_sha256": "5520e396ee69ef3d4e6b508d485a1ae67b3024ea70820664bd8ec45f5e64b68c"
+    },
+    {
+      "id": "b03_p0_deep_r0",
+      "seed": 1292559482,
+      "variant": "deep",
+      "repeat": 0,
+      "sequence": "BAAB",
+      "period": 0,
+      "previous_variant": "deep",
+      "repeat_distance": null,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": false,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 280,
+      "request_sha256": "b7b26438458f4d7f93dee176e7af5b8ccb5d83f80c5b83f2f2c97d7d8546d00d",
+      "response_sha256": "6f941d448ba82b8512ce37afaa22d7b04d593fdc6a3948c521888d459ddda9c2"
+    },
+    {
+      "id": "b03_p1_shallow_r0",
+      "seed": 1292559482,
+      "variant": "shallow",
+      "repeat": 0,
+      "sequence": "BAAB",
+      "period": 1,
+      "previous_variant": "deep",
+      "repeat_distance": null,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": true,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "8de4d484f09b035a8455b1fba92d1385628028d7cea5ef26654614108fb20a77",
+      "response_sha256": "a5d41dfc8144a04ba8d8927db272614af036c8a2405d2caf0c735b367d57334d"
+    },
+    {
+      "id": "b03_p2_shallow_r1",
+      "seed": 1292559482,
+      "variant": "shallow",
+      "repeat": 1,
+      "sequence": "BAAB",
+      "period": 2,
+      "previous_variant": "shallow",
+      "repeat_distance": 1,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": true,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 280,
+      "request_sha256": "8de4d484f09b035a8455b1fba92d1385628028d7cea5ef26654614108fb20a77",
+      "response_sha256": "e6a638e865f3f64bd7a5c33921896d7d188b79395d0fabd1bd68c0f5c7b3ecbc"
+    },
+    {
+      "id": "b03_p3_deep_r1",
+      "seed": 1292559482,
+      "variant": "deep",
+      "repeat": 1,
+      "sequence": "BAAB",
+      "period": 3,
+      "previous_variant": "shallow",
+      "repeat_distance": 3,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": false,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "b7b26438458f4d7f93dee176e7af5b8ccb5d83f80c5b83f2f2c97d7d8546d00d",
+      "response_sha256": "b15690411358bb352b7e3bfa6605c96f7c490de0043ab3b60bb34aacb2b16740"
+    },
+    {
+      "id": "b04_p0_deep_r0",
+      "seed": 860724506,
+      "variant": "deep",
+      "repeat": 0,
+      "sequence": "BAAB",
+      "period": 0,
+      "previous_variant": "deep",
+      "repeat_distance": null,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": false,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 280,
+      "request_sha256": "b6e00bab529b0a32ab850efbc369d561aee2809f8d74b0872ef2fdfc861a4802",
+      "response_sha256": "07b7bb73a1cc3cc01463778ca5a7f54d112ba5f74a9c61325cbc5ecd6792f478"
+    },
+    {
+      "id": "b04_p1_shallow_r0",
+      "seed": 860724506,
+      "variant": "shallow",
+      "repeat": 0,
+      "sequence": "BAAB",
+      "period": 1,
+      "previous_variant": "deep",
+      "repeat_distance": null,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": true,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "3651e2dd630867ca2ad0b7d7926ead477a7636ba04436a1d9f9a7a0c926e1c64",
+      "response_sha256": "26e9dc45b308bc81b02031af8d95f7d680949814d58caa2ba9f675e70e1abcfc"
+    },
+    {
+      "id": "b04_p2_shallow_r1",
+      "seed": 860724506,
+      "variant": "shallow",
+      "repeat": 1,
+      "sequence": "BAAB",
+      "period": 2,
+      "previous_variant": "shallow",
+      "repeat_distance": 1,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": true,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 280,
+      "request_sha256": "3651e2dd630867ca2ad0b7d7926ead477a7636ba04436a1d9f9a7a0c926e1c64",
+      "response_sha256": "7eb9d3910b6f0b8e81b0954c316c34b6c9c09fa75e6f2a41c5e5e40df89ea35e"
+    },
+    {
+      "id": "b04_p3_deep_r1",
+      "seed": 860724506,
+      "variant": "deep",
+      "repeat": 1,
+      "sequence": "BAAB",
+      "period": 3,
+      "previous_variant": "shallow",
+      "repeat_distance": 3,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": false,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "b6e00bab529b0a32ab850efbc369d561aee2809f8d74b0872ef2fdfc861a4802",
+      "response_sha256": "400b92d2f1102b32a4638ec5fc6e5b4c2e088197d1882507f8cc5e3ee1251b8c"
+    },
+    {
+      "id": "b05_p0_shallow_r0",
+      "seed": 209422594,
+      "variant": "shallow",
+      "repeat": 0,
+      "sequence": "ABBA",
+      "period": 0,
+      "previous_variant": "deep",
+      "repeat_distance": null,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": true,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "b2ba9222471b84629a117fc7b6c79c8bd389b5e756d1b05ba0cae54c6593ffd3",
+      "response_sha256": "19e5f4db713e354294ded3063f614a894a689a49d6fc6fe53ff1ebc0c3b8e68f"
+    },
+    {
+      "id": "b05_p1_deep_r0",
+      "seed": 209422594,
+      "variant": "deep",
+      "repeat": 0,
+      "sequence": "ABBA",
+      "period": 1,
+      "previous_variant": "shallow",
+      "repeat_distance": null,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": false,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "bd5e1b8e9fefba0a2f6cac9ebf80f2a03938a4990d0d5abbf5d4e6414cdfb76d",
+      "response_sha256": "732cd6aaf8baa9008bfcc85ed6de5bb7bf4c91f3c92644b8b889f6511644050f"
+    },
+    {
+      "id": "b05_p2_deep_r1",
+      "seed": 209422594,
+      "variant": "deep",
+      "repeat": 1,
+      "sequence": "ABBA",
+      "period": 2,
+      "previous_variant": "deep",
+      "repeat_distance": 1,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": false,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 280,
+      "request_sha256": "bd5e1b8e9fefba0a2f6cac9ebf80f2a03938a4990d0d5abbf5d4e6414cdfb76d",
+      "response_sha256": "e7a91dd4906893538895492d477ff0ec0fd364fc6cef63263e75aaf4ec62fd09"
+    },
+    {
+      "id": "b05_p3_shallow_r1",
+      "seed": 209422594,
+      "variant": "shallow",
+      "repeat": 1,
+      "sequence": "ABBA",
+      "period": 3,
+      "previous_variant": "deep",
+      "repeat_distance": 3,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": true,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "b2ba9222471b84629a117fc7b6c79c8bd389b5e756d1b05ba0cae54c6593ffd3",
+      "response_sha256": "ffa6c606e8c90221033461218c8c2e8c8bbba4a001a9b423963c9e208953ade3"
+    },
+    {
+      "id": "b06_p0_shallow_r0",
+      "seed": 68285180,
+      "variant": "shallow",
+      "repeat": 0,
+      "sequence": "ABBA",
+      "period": 0,
+      "previous_variant": "shallow",
+      "repeat_distance": null,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": true,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 280,
+      "request_sha256": "9ce2cf03a24458abe63a98fda04f3083880f217ec446be22aad6f8f8d3d3fcbc",
+      "response_sha256": "f36658357047ae436347ad6d55673a0dc6799616769e5f6fe1e808bba6577407"
+    },
+    {
+      "id": "b06_p1_deep_r0",
+      "seed": 68285180,
+      "variant": "deep",
+      "repeat": 0,
+      "sequence": "ABBA",
+      "period": 1,
+      "previous_variant": "shallow",
+      "repeat_distance": null,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": false,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "577145239bb730acd64ca1244edfcb74ce1d52edc99cd321dce91c01945beb23",
+      "response_sha256": "ef0a54db70c20a745f07e894724a300556d817f219a35b2ec22ab00f48523256"
+    },
+    {
+      "id": "b06_p2_deep_r1",
+      "seed": 68285180,
+      "variant": "deep",
+      "repeat": 1,
+      "sequence": "ABBA",
+      "period": 2,
+      "previous_variant": "deep",
+      "repeat_distance": 1,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": false,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 280,
+      "request_sha256": "577145239bb730acd64ca1244edfcb74ce1d52edc99cd321dce91c01945beb23",
+      "response_sha256": "b2b58cd8ac2580c831d94ff9b358736f46d38b30b7ed70f5f2c6ea93b05243ed"
+    },
+    {
+      "id": "b06_p3_shallow_r1",
+      "seed": 68285180,
+      "variant": "shallow",
+      "repeat": 1,
+      "sequence": "ABBA",
+      "period": 3,
+      "previous_variant": "deep",
+      "repeat_distance": 3,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": true,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "9ce2cf03a24458abe63a98fda04f3083880f217ec446be22aad6f8f8d3d3fcbc",
+      "response_sha256": "ba940a17435ca415dce097c8a722edfb5c66fda1f9e15c2c4c652b942f500e07"
+    },
+    {
+      "id": "b07_p0_deep_r0",
+      "seed": 661935755,
+      "variant": "deep",
+      "repeat": 0,
+      "sequence": "BAAB",
+      "period": 0,
+      "previous_variant": "shallow",
+      "repeat_distance": null,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": false,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "94262da3b04ae739462400b52df3554d4beee45f3f9ff602c8244a6742776593",
+      "response_sha256": "b8cdb1c87d32b82152ec6694ef3a9ffabb0a9cd00fea302203835d3ec292d190"
+    },
+    {
+      "id": "b07_p1_shallow_r0",
+      "seed": 661935755,
+      "variant": "shallow",
+      "repeat": 0,
+      "sequence": "BAAB",
+      "period": 1,
+      "previous_variant": "deep",
+      "repeat_distance": null,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": true,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "610ab8a85f665d04ca19a90f45d092e64fdb80123538dabdcb6eca9845ca7e85",
+      "response_sha256": "7a53fed03549331c4e603ef406119c48776cf5e51a564f9c3a5bfdd339e26ad9"
+    },
+    {
+      "id": "b07_p2_shallow_r1",
+      "seed": 661935755,
+      "variant": "shallow",
+      "repeat": 1,
+      "sequence": "BAAB",
+      "period": 2,
+      "previous_variant": "shallow",
+      "repeat_distance": 1,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": true,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 280,
+      "request_sha256": "610ab8a85f665d04ca19a90f45d092e64fdb80123538dabdcb6eca9845ca7e85",
+      "response_sha256": "a3142e733006e4ae28713ca6989a89fb95f30891d51561100acbf0fd02d46721"
+    },
+    {
+      "id": "b07_p3_deep_r1",
+      "seed": 661935755,
+      "variant": "deep",
+      "repeat": 1,
+      "sequence": "BAAB",
+      "period": 3,
+      "previous_variant": "shallow",
+      "repeat_distance": 3,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": false,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "94262da3b04ae739462400b52df3554d4beee45f3f9ff602c8244a6742776593",
+      "response_sha256": "82d7b976de854f529411af4e0c850118e99bb2324abf650d4ec24b2b36385050"
+    },
+    {
+      "id": "b08_p0_shallow_r0",
+      "seed": 752235971,
+      "variant": "shallow",
+      "repeat": 0,
+      "sequence": "ABBA",
+      "period": 0,
+      "previous_variant": "deep",
+      "repeat_distance": null,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": true,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "73bff6044ecaaf5940b5985dc88a4ce823b5df574b2cf4a5fddc043b01bb0d2d",
+      "response_sha256": "36402265b9dc70bfc1c4f3d4b7949190926ad99e6d4d12066a5e6d9a4108b943"
+    },
+    {
+      "id": "b08_p1_deep_r0",
+      "seed": 752235971,
+      "variant": "deep",
+      "repeat": 0,
+      "sequence": "ABBA",
+      "period": 1,
+      "previous_variant": "shallow",
+      "repeat_distance": null,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": false,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "4bab47fe95b4d5c6c525783760cb6020bf39651216f889dcc7b9634e9b465f87",
+      "response_sha256": "bb482a35562f0978d7c31536e57a700c022ca07e1f0f6295b42db46d07fb1182"
+    },
+    {
+      "id": "b08_p2_deep_r1",
+      "seed": 752235971,
+      "variant": "deep",
+      "repeat": 1,
+      "sequence": "ABBA",
+      "period": 2,
+      "previous_variant": "deep",
+      "repeat_distance": 1,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": false,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 280,
+      "request_sha256": "4bab47fe95b4d5c6c525783760cb6020bf39651216f889dcc7b9634e9b465f87",
+      "response_sha256": "3b393a12eddc84c2dc9f3b7df5ce6f5e28680341576ce2ee61c5bb894eb968e5"
+    },
+    {
+      "id": "b08_p3_shallow_r1",
+      "seed": 752235971,
+      "variant": "shallow",
+      "repeat": 1,
+      "sequence": "ABBA",
+      "period": 3,
+      "previous_variant": "deep",
+      "repeat_distance": 3,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": true,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "73bff6044ecaaf5940b5985dc88a4ce823b5df574b2cf4a5fddc043b01bb0d2d",
+      "response_sha256": "6e9934101ee43ec323e796fe394bb34a6b1e225d86f3fb744d2d0b3fe3d64723"
+    },
+    {
+      "id": "b09_p0_deep_r0",
+      "seed": 223674688,
+      "variant": "deep",
+      "repeat": 0,
+      "sequence": "BAAB",
+      "period": 0,
+      "previous_variant": "shallow",
+      "repeat_distance": null,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": false,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "430958dc6f8b2d842bc938884a4c61695fc3d6e7a55de22157c52c81ea339b93",
+      "response_sha256": "a661577459e198cfc0443aa094bc45a900c5f4122cac61fdbb33268badad2ff3"
+    },
+    {
+      "id": "b09_p1_shallow_r0",
+      "seed": 223674688,
+      "variant": "shallow",
+      "repeat": 0,
+      "sequence": "BAAB",
+      "period": 1,
+      "previous_variant": "deep",
+      "repeat_distance": null,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": true,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "226659219eb7131598c06b0e967a90f754a67dc7acd156a1186ae5fb5465f942",
+      "response_sha256": "50c992c0d29519613be544017ba8fe7fa11437c164288df3da80eaece98a25f4"
+    },
+    {
+      "id": "b09_p2_shallow_r1",
+      "seed": 223674688,
+      "variant": "shallow",
+      "repeat": 1,
+      "sequence": "BAAB",
+      "period": 2,
+      "previous_variant": "shallow",
+      "repeat_distance": 1,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": true,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 280,
+      "request_sha256": "226659219eb7131598c06b0e967a90f754a67dc7acd156a1186ae5fb5465f942",
+      "response_sha256": "be1df2ca9947c61dc7dd8c6c4ba5269d1910381d7157970527fcb772f28d0447"
+    },
+    {
+      "id": "b09_p3_deep_r1",
+      "seed": 223674688,
+      "variant": "deep",
+      "repeat": 1,
+      "sequence": "BAAB",
+      "period": 3,
+      "previous_variant": "shallow",
+      "repeat_distance": 3,
+      "observed": true,
+      "measurement": {
+        "kind": "terminal_rule_choice",
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null,
+        "errors": [],
+        "selected_rule_position": 0,
+        "actual_D": null,
+        "goal_reachable_choice": true,
+        "instruction_fulfilled": false,
+        "terminal_rank": 0,
+        "shallow_success": true
+      },
+      "model": "gemma3:4b",
+      "rule_order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "prompt_eval_cached_count": 28,
+      "request_sha256": "430958dc6f8b2d842bc938884a4c61695fc3d6e7a55de22157c52c81ea339b93",
+      "response_sha256": "d3ca77bc492d321c121caf9762f5815ccda1dab0bdae5d67334c26e3e3f6549c"
+    }
+  ],
+  "groups": {
+    "shallow": {
+      "assigned": 20,
+      "observed": 20,
+      "measured": 20,
+      "format_valid": 20,
+      "goal_reachable_choice": 20,
+      "instruction_fulfilled": 20,
+      "instruction_rate": 1.0,
+      "selected_ids": {
+        "k03": 20
+      }
+    },
+    "deep": {
+      "assigned": 20,
+      "observed": 20,
+      "measured": 20,
+      "format_valid": 20,
+      "goal_reachable_choice": 20,
+      "instruction_fulfilled": 0,
+      "instruction_rate": 0.0,
+      "selected_ids": {
+        "k03": 20
+      }
+    }
+  },
+  "seed_rows": [
+    {
+      "seed": 580410664,
+      "ids_A0_A1_B0_B1": [
+        "k03",
+        "k03",
+        "k03",
+        "k03"
+      ],
+      "stable_within_both": true,
+      "profile": "fixed_shallow_or_first_terminal"
+    },
+    {
+      "seed": 661935755,
+      "ids_A0_A1_B0_B1": [
+        "k03",
+        "k03",
+        "k03",
+        "k03"
+      ],
+      "stable_within_both": true,
+      "profile": "fixed_shallow_or_first_terminal"
+    },
+    {
+      "seed": 209422594,
+      "ids_A0_A1_B0_B1": [
+        "k03",
+        "k03",
+        "k03",
+        "k03"
+      ],
+      "stable_within_both": true,
+      "profile": "fixed_shallow_or_first_terminal"
+    },
+    {
+      "seed": 1790124989,
+      "ids_A0_A1_B0_B1": [
+        "k03",
+        "k03",
+        "k03",
+        "k03"
+      ],
+      "stable_within_both": true,
+      "profile": "fixed_shallow_or_first_terminal"
+    },
+    {
+      "seed": 267101868,
+      "ids_A0_A1_B0_B1": [
+        "k03",
+        "k03",
+        "k03",
+        "k03"
+      ],
+      "stable_within_both": true,
+      "profile": "fixed_shallow_or_first_terminal"
+    },
+    {
+      "seed": 752235971,
+      "ids_A0_A1_B0_B1": [
+        "k03",
+        "k03",
+        "k03",
+        "k03"
+      ],
+      "stable_within_both": true,
+      "profile": "fixed_shallow_or_first_terminal"
+    },
+    {
+      "seed": 1292559482,
+      "ids_A0_A1_B0_B1": [
+        "k03",
+        "k03",
+        "k03",
+        "k03"
+      ],
+      "stable_within_both": true,
+      "profile": "fixed_shallow_or_first_terminal"
+    },
+    {
+      "seed": 223674688,
+      "ids_A0_A1_B0_B1": [
+        "k03",
+        "k03",
+        "k03",
+        "k03"
+      ],
+      "stable_within_both": true,
+      "profile": "fixed_shallow_or_first_terminal"
+    },
+    {
+      "seed": 860724506,
+      "ids_A0_A1_B0_B1": [
+        "k03",
+        "k03",
+        "k03",
+        "k03"
+      ],
+      "stable_within_both": true,
+      "profile": "fixed_shallow_or_first_terminal"
+    },
+    {
+      "seed": 68285180,
+      "ids_A0_A1_B0_B1": [
+        "k03",
+        "k03",
+        "k03",
+        "k03"
+      ],
+      "stable_within_both": true,
+      "profile": "fixed_shallow_or_first_terminal"
+    }
+  ],
+  "pairs": [
+    {
+      "seed": 580410664,
+      "repeat": 0,
+      "changed": false,
+      "both_instructions": false
+    },
+    {
+      "seed": 580410664,
+      "repeat": 1,
+      "changed": false,
+      "both_instructions": false
+    },
+    {
+      "seed": 661935755,
+      "repeat": 0,
+      "changed": false,
+      "both_instructions": false
+    },
+    {
+      "seed": 661935755,
+      "repeat": 1,
+      "changed": false,
+      "both_instructions": false
+    },
+    {
+      "seed": 209422594,
+      "repeat": 0,
+      "changed": false,
+      "both_instructions": false
+    },
+    {
+      "seed": 209422594,
+      "repeat": 1,
+      "changed": false,
+      "both_instructions": false
+    },
+    {
+      "seed": 1790124989,
+      "repeat": 0,
+      "changed": false,
+      "both_instructions": false
+    },
+    {
+      "seed": 1790124989,
+      "repeat": 1,
+      "changed": false,
+      "both_instructions": false
+    },
+    {
+      "seed": 267101868,
+      "repeat": 0,
+      "changed": false,
+      "both_instructions": false
+    },
+    {
+      "seed": 267101868,
+      "repeat": 1,
+      "changed": false,
+      "both_instructions": false
+    },
+    {
+      "seed": 752235971,
+      "repeat": 0,
+      "changed": false,
+      "both_instructions": false
+    },
+    {
+      "seed": 752235971,
+      "repeat": 1,
+      "changed": false,
+      "both_instructions": false
+    },
+    {
+      "seed": 1292559482,
+      "repeat": 0,
+      "changed": false,
+      "both_instructions": false
+    },
+    {
+      "seed": 1292559482,
+      "repeat": 1,
+      "changed": false,
+      "both_instructions": false
+    },
+    {
+      "seed": 223674688,
+      "repeat": 0,
+      "changed": false,
+      "both_instructions": false
+    },
+    {
+      "seed": 223674688,
+      "repeat": 1,
+      "changed": false,
+      "both_instructions": false
+    },
+    {
+      "seed": 860724506,
+      "repeat": 0,
+      "changed": false,
+      "both_instructions": false
+    },
+    {
+      "seed": 860724506,
+      "repeat": 1,
+      "changed": false,
+      "both_instructions": false
+    },
+    {
+      "seed": 68285180,
+      "repeat": 0,
+      "changed": false,
+      "both_instructions": false
+    },
+    {
+      "seed": 68285180,
+      "repeat": 1,
+      "changed": false,
+      "both_instructions": false
+    }
+  ],
+  "repeats": [
+    {
+      "seed": 580410664,
+      "variant": "shallow",
+      "changed": false
+    },
+    {
+      "seed": 580410664,
+      "variant": "deep",
+      "changed": false
+    },
+    {
+      "seed": 661935755,
+      "variant": "shallow",
+      "changed": false
+    },
+    {
+      "seed": 661935755,
+      "variant": "deep",
+      "changed": false
+    },
+    {
+      "seed": 209422594,
+      "variant": "shallow",
+      "changed": false
+    },
+    {
+      "seed": 209422594,
+      "variant": "deep",
+      "changed": false
+    },
+    {
+      "seed": 1790124989,
+      "variant": "shallow",
+      "changed": false
+    },
+    {
+      "seed": 1790124989,
+      "variant": "deep",
+      "changed": false
+    },
+    {
+      "seed": 267101868,
+      "variant": "shallow",
+      "changed": false
+    },
+    {
+      "seed": 267101868,
+      "variant": "deep",
+      "changed": false
+    },
+    {
+      "seed": 752235971,
+      "variant": "shallow",
+      "changed": false
+    },
+    {
+      "seed": 752235971,
+      "variant": "deep",
+      "changed": false
+    },
+    {
+      "seed": 1292559482,
+      "variant": "shallow",
+      "changed": false
+    },
+    {
+      "seed": 1292559482,
+      "variant": "deep",
+      "changed": false
+    },
+    {
+      "seed": 223674688,
+      "variant": "shallow",
+      "changed": false
+    },
+    {
+      "seed": 223674688,
+      "variant": "deep",
+      "changed": false
+    },
+    {
+      "seed": 860724506,
+      "variant": "shallow",
+      "changed": false
+    },
+    {
+      "seed": 860724506,
+      "variant": "deep",
+      "changed": false
+    },
+    {
+      "seed": 68285180,
+      "variant": "shallow",
+      "changed": false
+    },
+    {
+      "seed": 68285180,
+      "variant": "deep",
+      "changed": false
+    }
+  ],
+  "profile_counts": {
+    "fixed_shallow_or_first_terminal": 10
+  },
+  "strata": {
+    "sequence": {
+      "ABBA": {
+        "shallow": {
+          "assigned": 10,
+          "observed": 10,
+          "selected_ids": {
+            "k03": 10
+          }
+        },
+        "deep": {
+          "assigned": 10,
+          "observed": 10,
+          "selected_ids": {
+            "k03": 10
+          }
+        }
+      },
+      "BAAB": {
+        "shallow": {
+          "assigned": 10,
+          "observed": 10,
+          "selected_ids": {
+            "k03": 10
+          }
+        },
+        "deep": {
+          "assigned": 10,
+          "observed": 10,
+          "selected_ids": {
+            "k03": 10
+          }
+        }
+      }
+    },
+    "period": {
+      "0": {
+        "shallow": {
+          "assigned": 5,
+          "observed": 5,
+          "selected_ids": {
+            "k03": 5
+          }
+        },
+        "deep": {
+          "assigned": 5,
+          "observed": 5,
+          "selected_ids": {
+            "k03": 5
+          }
+        }
+      },
+      "1": {
+        "shallow": {
+          "assigned": 5,
+          "observed": 5,
+          "selected_ids": {
+            "k03": 5
+          }
+        },
+        "deep": {
+          "assigned": 5,
+          "observed": 5,
+          "selected_ids": {
+            "k03": 5
+          }
+        }
+      },
+      "2": {
+        "shallow": {
+          "assigned": 5,
+          "observed": 5,
+          "selected_ids": {
+            "k03": 5
+          }
+        },
+        "deep": {
+          "assigned": 5,
+          "observed": 5,
+          "selected_ids": {
+            "k03": 5
+          }
+        }
+      },
+      "3": {
+        "shallow": {
+          "assigned": 5,
+          "observed": 5,
+          "selected_ids": {
+            "k03": 5
+          }
+        },
+        "deep": {
+          "assigned": 5,
+          "observed": 5,
+          "selected_ids": {
+            "k03": 5
+          }
+        }
+      }
+    },
+    "previous_variant": {
+      "None": {
+        "shallow": {
+          "assigned": 1,
+          "observed": 1,
+          "selected_ids": {
+            "k03": 1
+          }
+        }
+      },
+      "deep": {
+        "shallow": {
+          "assigned": 12,
+          "observed": 12,
+          "selected_ids": {
+            "k03": 12
+          }
+        },
+        "deep": {
+          "assigned": 7,
+          "observed": 7,
+          "selected_ids": {
+            "k03": 7
+          }
+        }
+      },
+      "shallow": {
+        "shallow": {
+          "assigned": 7,
+          "observed": 7,
+          "selected_ids": {
+            "k03": 7
+          }
+        },
+        "deep": {
+          "assigned": 13,
+          "observed": 13,
+          "selected_ids": {
+            "k03": 13
+          }
+        }
+      }
+    },
+    "repeat_distance": {
+      "1": {
+        "shallow": {
+          "assigned": 5,
+          "observed": 5,
+          "selected_ids": {
+            "k03": 5
+          }
+        },
+        "deep": {
+          "assigned": 5,
+          "observed": 5,
+          "selected_ids": {
+            "k03": 5
+          }
+        }
+      },
+      "3": {
+        "shallow": {
+          "assigned": 5,
+          "observed": 5,
+          "selected_ids": {
+            "k03": 5
+          }
+        },
+        "deep": {
+          "assigned": 5,
+          "observed": 5,
+          "selected_ids": {
+            "k03": 5
+          }
+        }
+      },
+      "None": {
+        "shallow": {
+          "assigned": 10,
+          "observed": 10,
+          "selected_ids": {
+            "k03": 10
+          }
+        },
+        "deep": {
+          "assigned": 10,
+          "observed": 10,
+          "selected_ids": {
+            "k03": 10
+          }
+        }
+      }
+    },
+    "prompt_eval_cached_count": {
+      "0": {
+        "shallow": {
+          "assigned": 1,
+          "observed": 1,
+          "selected_ids": {
+            "k03": 1
+          }
+        }
+      },
+      "28": {
+        "shallow": {
+          "assigned": 12,
+          "observed": 12,
+          "selected_ids": {
+            "k03": 12
+          }
+        },
+        "deep": {
+          "assigned": 13,
+          "observed": 13,
+          "selected_ids": {
+            "k03": 13
+          }
+        }
+      },
+      "280": {
+        "shallow": {
+          "assigned": 7,
+          "observed": 7,
+          "selected_ids": {
+            "k03": 7
+          }
+        },
+        "deep": {
+          "assigned": 7,
+          "observed": 7,
+          "selected_ids": {
+            "k03": 7
+          }
+        }
+      }
+    }
+  },
+  "historical_runs": {
+    "contract": "v060-multiperspective-reanalysis-r1",
+    "current": {
+      "version": "v060",
+      "bundle_sha256": "5a2aeeaf28e9b445b61f3cf78ce87c11aeea1b57cc36ba74bd772fecc15c2c68",
+      "independent_receipt": {
+        "contract": "independent-v060-r1",
+        "bundle_sha256": "5a2aeeaf28e9b445b61f3cf78ce87c11aeea1b57cc36ba74bd772fecc15c2c68",
+        "complete": true,
+        "observed_calls": 40,
+        "metadata_records": 20,
+        "compared_fields": 882,
+        "differences": [],
+        "production_imports": false,
+        "baseline_compared_fields": 1649,
+        "limitation": "원문·계획·측정 일관성 검산이며 외부 실행 인증이나 규칙 위치·캐시·내부 기제의 인과 검증은 아니다."
+      },
+      "rows": [
+        {
+          "id": "b00_p0_deep_first_r0",
+          "seed": 223674688,
+          "variant": "deep_first",
+          "repeat": 0,
+          "period": 0,
+          "sequence": "ABBA",
+          "position": 0,
+          "previous_variant": null,
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k17",
+            "k03",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 0,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "0c0af02c98ff4daf355084897034a30c28904259ba06537d206b82ae6942635c",
+          "response_sha256": "5c921bf9966a4e68c32b5decf06277bcb20e052f383e9b5c38e0e914ab87dbcb"
+        },
+        {
+          "id": "b00_p1_shallow_first_r0",
+          "seed": 223674688,
+          "variant": "shallow_first",
+          "repeat": 0,
+          "period": 1,
+          "sequence": "ABBA",
+          "position": 1,
+          "previous_variant": "deep_first",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k03",
+            "k17",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "226659219eb7131598c06b0e967a90f754a67dc7acd156a1186ae5fb5465f942",
+          "response_sha256": "f12213fa152986e9741f799c1e9f97da73344cc8681bd9705291f170433e3a3b"
+        },
+        {
+          "id": "b00_p2_shallow_first_r1",
+          "seed": 223674688,
+          "variant": "shallow_first",
+          "repeat": 1,
+          "period": 2,
+          "sequence": "ABBA",
+          "position": 2,
+          "previous_variant": "shallow_first",
+          "repeat_distance": 1,
+          "observed": true,
+          "rule_order": [
+            "k03",
+            "k17",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "226659219eb7131598c06b0e967a90f754a67dc7acd156a1186ae5fb5465f942",
+          "response_sha256": "57a7668d7127a20c22f1b861c4b92e0921699d0ec6f3b115d5de0d76092ce814"
+        },
+        {
+          "id": "b00_p3_deep_first_r1",
+          "seed": 223674688,
+          "variant": "deep_first",
+          "repeat": 1,
+          "period": 3,
+          "sequence": "ABBA",
+          "position": 3,
+          "previous_variant": "shallow_first",
+          "repeat_distance": 3,
+          "observed": true,
+          "rule_order": [
+            "k17",
+            "k03",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "0c0af02c98ff4daf355084897034a30c28904259ba06537d206b82ae6942635c",
+          "response_sha256": "5f34ed1e22dbbc7176e05d02fa163d6f2abefea8c1197a1f63ac973e206eea28"
+        },
+        {
+          "id": "b01_p0_shallow_first_r0",
+          "seed": 752235971,
+          "variant": "shallow_first",
+          "repeat": 0,
+          "period": 0,
+          "sequence": "BAAB",
+          "position": 4,
+          "previous_variant": "deep_first",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k03",
+            "k17",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "73bff6044ecaaf5940b5985dc88a4ce823b5df574b2cf4a5fddc043b01bb0d2d",
+          "response_sha256": "4d80d17d733d2a18a9548214466cf42aafc71a1c38f2c71e39f605b6ec312543"
+        },
+        {
+          "id": "b01_p1_deep_first_r0",
+          "seed": 752235971,
+          "variant": "deep_first",
+          "repeat": 0,
+          "period": 1,
+          "sequence": "BAAB",
+          "position": 5,
+          "previous_variant": "shallow_first",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k17",
+            "k03",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "14099de66824a70417e4c6c996e2e13e7257369783f519f37f9d5478d7d36e37",
+          "response_sha256": "3cf080c6697b48bab652e9f0946e32d5dd11f01968d3dd3aa73064e1bee23bd0"
+        },
+        {
+          "id": "b01_p2_deep_first_r1",
+          "seed": 752235971,
+          "variant": "deep_first",
+          "repeat": 1,
+          "period": 2,
+          "sequence": "BAAB",
+          "position": 6,
+          "previous_variant": "deep_first",
+          "repeat_distance": 1,
+          "observed": true,
+          "rule_order": [
+            "k17",
+            "k03",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "14099de66824a70417e4c6c996e2e13e7257369783f519f37f9d5478d7d36e37",
+          "response_sha256": "3a7f17c0132c47ba28c47c0b0e9b9400bc5358746e23ceae4749d8b839dc8836"
+        },
+        {
+          "id": "b01_p3_shallow_first_r1",
+          "seed": 752235971,
+          "variant": "shallow_first",
+          "repeat": 1,
+          "period": 3,
+          "sequence": "BAAB",
+          "position": 7,
+          "previous_variant": "deep_first",
+          "repeat_distance": 3,
+          "observed": true,
+          "rule_order": [
+            "k03",
+            "k17",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "73bff6044ecaaf5940b5985dc88a4ce823b5df574b2cf4a5fddc043b01bb0d2d",
+          "response_sha256": "e3f247aa1de19ae5788e00184bf8c191d512785f525f0b2ec34489771d05a477"
+        },
+        {
+          "id": "b02_p0_shallow_first_r0",
+          "seed": 1292559482,
+          "variant": "shallow_first",
+          "repeat": 0,
+          "period": 0,
+          "sequence": "BAAB",
+          "position": 8,
+          "previous_variant": "shallow_first",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k03",
+            "k17",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "8de4d484f09b035a8455b1fba92d1385628028d7cea5ef26654614108fb20a77",
+          "response_sha256": "4ecfe8646b13618d97538130910cad87a7b1127c39db212aa9347fbc3d4c8680"
+        },
+        {
+          "id": "b02_p1_deep_first_r0",
+          "seed": 1292559482,
+          "variant": "deep_first",
+          "repeat": 0,
+          "period": 1,
+          "sequence": "BAAB",
+          "position": 9,
+          "previous_variant": "shallow_first",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k17",
+            "k03",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "fbbae8d3b461c7d1e850d987f8941f7855eb1c786c095c49854c88cc7bf8945f",
+          "response_sha256": "7053d69b83674cbbe97c41dca6755df5ef442fcfca47127a18063b8bd12e5511"
+        },
+        {
+          "id": "b02_p2_deep_first_r1",
+          "seed": 1292559482,
+          "variant": "deep_first",
+          "repeat": 1,
+          "period": 2,
+          "sequence": "BAAB",
+          "position": 10,
+          "previous_variant": "deep_first",
+          "repeat_distance": 1,
+          "observed": true,
+          "rule_order": [
+            "k17",
+            "k03",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "fbbae8d3b461c7d1e850d987f8941f7855eb1c786c095c49854c88cc7bf8945f",
+          "response_sha256": "19127963381c1a78c2feb9612b27cf9d3f70fdf41e6b629c5ff2d2b2ee12919c"
+        },
+        {
+          "id": "b02_p3_shallow_first_r1",
+          "seed": 1292559482,
+          "variant": "shallow_first",
+          "repeat": 1,
+          "period": 3,
+          "sequence": "BAAB",
+          "position": 11,
+          "previous_variant": "deep_first",
+          "repeat_distance": 3,
+          "observed": true,
+          "rule_order": [
+            "k03",
+            "k17",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "8de4d484f09b035a8455b1fba92d1385628028d7cea5ef26654614108fb20a77",
+          "response_sha256": "c02e46967f5bc2bfcb41658a12175c7761f0db093a9c71bf6d1257da6e1b3ed4"
+        },
+        {
+          "id": "b03_p0_deep_first_r0",
+          "seed": 267101868,
+          "variant": "deep_first",
+          "repeat": 0,
+          "period": 0,
+          "sequence": "ABBA",
+          "position": 12,
+          "previous_variant": "shallow_first",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k17",
+            "k03",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "2149ac17f975cc51ed1ee959661af8c83884da964d7dd118e7558c7bea15515c",
+          "response_sha256": "ef72cc4edd494b97a2dff1c459e0dd02e29eee4bc22ae91353b658068d3e6ac3"
+        },
+        {
+          "id": "b03_p1_shallow_first_r0",
+          "seed": 267101868,
+          "variant": "shallow_first",
+          "repeat": 0,
+          "period": 1,
+          "sequence": "ABBA",
+          "position": 13,
+          "previous_variant": "deep_first",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k03",
+            "k17",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "0300920ad0d576a222a6ff4f0d0d7e4edf42470e017c69e025e15149388a4b3e",
+          "response_sha256": "ff9d6d67f5dc61ce2d8c0db4abc0becdd7e3d24d55ab18e5fa04178821032173"
+        },
+        {
+          "id": "b03_p2_shallow_first_r1",
+          "seed": 267101868,
+          "variant": "shallow_first",
+          "repeat": 1,
+          "period": 2,
+          "sequence": "ABBA",
+          "position": 14,
+          "previous_variant": "shallow_first",
+          "repeat_distance": 1,
+          "observed": true,
+          "rule_order": [
+            "k03",
+            "k17",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "0300920ad0d576a222a6ff4f0d0d7e4edf42470e017c69e025e15149388a4b3e",
+          "response_sha256": "706f49c0423b1a49b5aef1decb76bb4da9eb9fc8ee7653ac8d1d48816c432d5e"
+        },
+        {
+          "id": "b03_p3_deep_first_r1",
+          "seed": 267101868,
+          "variant": "deep_first",
+          "repeat": 1,
+          "period": 3,
+          "sequence": "ABBA",
+          "position": 15,
+          "previous_variant": "shallow_first",
+          "repeat_distance": 3,
+          "observed": true,
+          "rule_order": [
+            "k17",
+            "k03",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "2149ac17f975cc51ed1ee959661af8c83884da964d7dd118e7558c7bea15515c",
+          "response_sha256": "ffe7d138c156f0479a98fd67885f5392b39c2d5aaa095378127fcc9c727a6909"
+        },
+        {
+          "id": "b04_p0_deep_first_r0",
+          "seed": 580410664,
+          "variant": "deep_first",
+          "repeat": 0,
+          "period": 0,
+          "sequence": "ABBA",
+          "position": 16,
+          "previous_variant": "deep_first",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k17",
+            "k03",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "9e48742fec50933a73ad8de0d99c8a54eb32c907edab9534fc39137bc9ee08c0",
+          "response_sha256": "21857ef53970956b4b1aa0be84beefb32d85519d4aea22c4dd1b054e9ab4273a"
+        },
+        {
+          "id": "b04_p1_shallow_first_r0",
+          "seed": 580410664,
+          "variant": "shallow_first",
+          "repeat": 0,
+          "period": 1,
+          "sequence": "ABBA",
+          "position": 17,
+          "previous_variant": "deep_first",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k03",
+            "k17",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "982383e964619b167de053751fefba5b4e621270e943122269a4d0c0b6262b2f",
+          "response_sha256": "00e31921f09450f96b4675723e0844861c26577e2f2d59451c9da8fee0094eae"
+        },
+        {
+          "id": "b04_p2_shallow_first_r1",
+          "seed": 580410664,
+          "variant": "shallow_first",
+          "repeat": 1,
+          "period": 2,
+          "sequence": "ABBA",
+          "position": 18,
+          "previous_variant": "shallow_first",
+          "repeat_distance": 1,
+          "observed": true,
+          "rule_order": [
+            "k03",
+            "k17",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "982383e964619b167de053751fefba5b4e621270e943122269a4d0c0b6262b2f",
+          "response_sha256": "2b9801bf5c7e405ab81b8b8ddbae96ffa1ae6ca56c7941626fe45c167007f1f1"
+        },
+        {
+          "id": "b04_p3_deep_first_r1",
+          "seed": 580410664,
+          "variant": "deep_first",
+          "repeat": 1,
+          "period": 3,
+          "sequence": "ABBA",
+          "position": 19,
+          "previous_variant": "shallow_first",
+          "repeat_distance": 3,
+          "observed": true,
+          "rule_order": [
+            "k17",
+            "k03",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "9e48742fec50933a73ad8de0d99c8a54eb32c907edab9534fc39137bc9ee08c0",
+          "response_sha256": "04e44fd0436403602be915ff62d93567b25513e7d6dc67701733b93744b34869"
+        },
+        {
+          "id": "b05_p0_shallow_first_r0",
+          "seed": 1790124989,
+          "variant": "shallow_first",
+          "repeat": 0,
+          "period": 0,
+          "sequence": "BAAB",
+          "position": 20,
+          "previous_variant": "deep_first",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k03",
+            "k17",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "3655d85a9b3d1d48dd96e443024771246089b5fae6bc0541134accf769a842f1",
+          "response_sha256": "fab0452bf027728e201a988a0e4a5e308d1e86101ae3dbc816366176060fee8e"
+        },
+        {
+          "id": "b05_p1_deep_first_r0",
+          "seed": 1790124989,
+          "variant": "deep_first",
+          "repeat": 0,
+          "period": 1,
+          "sequence": "BAAB",
+          "position": 21,
+          "previous_variant": "shallow_first",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k17",
+            "k03",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "72779371182e4d422b15678664848e4c3ed83134415167dad6e808487ab8cc5d",
+          "response_sha256": "0ad056ebe0885300acb31bae937cf25e33494caa42db69181fd407c8a04ebdbb"
+        },
+        {
+          "id": "b05_p2_deep_first_r1",
+          "seed": 1790124989,
+          "variant": "deep_first",
+          "repeat": 1,
+          "period": 2,
+          "sequence": "BAAB",
+          "position": 22,
+          "previous_variant": "deep_first",
+          "repeat_distance": 1,
+          "observed": true,
+          "rule_order": [
+            "k17",
+            "k03",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "72779371182e4d422b15678664848e4c3ed83134415167dad6e808487ab8cc5d",
+          "response_sha256": "fdc23e0b3ba4280d9589ab16b6ccc15eb2318923ff0ed6104d6c55a4da0f4976"
+        },
+        {
+          "id": "b05_p3_shallow_first_r1",
+          "seed": 1790124989,
+          "variant": "shallow_first",
+          "repeat": 1,
+          "period": 3,
+          "sequence": "BAAB",
+          "position": 23,
+          "previous_variant": "deep_first",
+          "repeat_distance": 3,
+          "observed": true,
+          "rule_order": [
+            "k03",
+            "k17",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "3655d85a9b3d1d48dd96e443024771246089b5fae6bc0541134accf769a842f1",
+          "response_sha256": "10026bc8d09bfa1efefeb505cdca266e3a8c50a1966a1e1876f3d8ee03fa0e4b"
+        },
+        {
+          "id": "b06_p0_shallow_first_r0",
+          "seed": 860724506,
+          "variant": "shallow_first",
+          "repeat": 0,
+          "period": 0,
+          "sequence": "BAAB",
+          "position": 24,
+          "previous_variant": "shallow_first",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k03",
+            "k17",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "3651e2dd630867ca2ad0b7d7926ead477a7636ba04436a1d9f9a7a0c926e1c64",
+          "response_sha256": "ccf8668732b029c85395a4a446503f54f219dcad9aeff1fe779a7a0c2722eb35"
+        },
+        {
+          "id": "b06_p1_deep_first_r0",
+          "seed": 860724506,
+          "variant": "deep_first",
+          "repeat": 0,
+          "period": 1,
+          "sequence": "BAAB",
+          "position": 25,
+          "previous_variant": "shallow_first",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k17",
+            "k03",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "ff329a0e8d3fb4a229b72047f9158760b2cbc459c2d2ab9ecf99dc48621c3a8f",
+          "response_sha256": "22da4f8ce860926ac7d3a2e942fcdaf6a9645fb469467a6133c65b157cec4a98"
+        },
+        {
+          "id": "b06_p2_deep_first_r1",
+          "seed": 860724506,
+          "variant": "deep_first",
+          "repeat": 1,
+          "period": 2,
+          "sequence": "BAAB",
+          "position": 26,
+          "previous_variant": "deep_first",
+          "repeat_distance": 1,
+          "observed": true,
+          "rule_order": [
+            "k17",
+            "k03",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "ff329a0e8d3fb4a229b72047f9158760b2cbc459c2d2ab9ecf99dc48621c3a8f",
+          "response_sha256": "7cf507bb9a1b5e985ff1b4fd7af666a6dde325e714a1ece84b796268bd33e88e"
+        },
+        {
+          "id": "b06_p3_shallow_first_r1",
+          "seed": 860724506,
+          "variant": "shallow_first",
+          "repeat": 1,
+          "period": 3,
+          "sequence": "BAAB",
+          "position": 27,
+          "previous_variant": "deep_first",
+          "repeat_distance": 3,
+          "observed": true,
+          "rule_order": [
+            "k03",
+            "k17",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "3651e2dd630867ca2ad0b7d7926ead477a7636ba04436a1d9f9a7a0c926e1c64",
+          "response_sha256": "aa313a24c31712db1e15b2579d8502f24cd9f5ff15c5669db5a382044a5a30f4"
+        },
+        {
+          "id": "b07_p0_deep_first_r0",
+          "seed": 68285180,
+          "variant": "deep_first",
+          "repeat": 0,
+          "period": 0,
+          "sequence": "ABBA",
+          "position": 28,
+          "previous_variant": "shallow_first",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k17",
+            "k03",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "ef0110565a980d55f5a3fdfd95b16692db1be2c5b0c72459a980116712a52d7e",
+          "response_sha256": "d669ed7c211db054ee87b96bbf1f000fcbcdc4d35dce14ef5051f80c29e9511d"
+        },
+        {
+          "id": "b07_p1_shallow_first_r0",
+          "seed": 68285180,
+          "variant": "shallow_first",
+          "repeat": 0,
+          "period": 1,
+          "sequence": "ABBA",
+          "position": 29,
+          "previous_variant": "deep_first",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k03",
+            "k17",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "9ce2cf03a24458abe63a98fda04f3083880f217ec446be22aad6f8f8d3d3fcbc",
+          "response_sha256": "1f29ad3be1fd380696b09ffda140cd0ccfa2924dded2a70ec135d0d6378725dd"
+        },
+        {
+          "id": "b07_p2_shallow_first_r1",
+          "seed": 68285180,
+          "variant": "shallow_first",
+          "repeat": 1,
+          "period": 2,
+          "sequence": "ABBA",
+          "position": 30,
+          "previous_variant": "shallow_first",
+          "repeat_distance": 1,
+          "observed": true,
+          "rule_order": [
+            "k03",
+            "k17",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "9ce2cf03a24458abe63a98fda04f3083880f217ec446be22aad6f8f8d3d3fcbc",
+          "response_sha256": "9a779bbcd5b1c2a122d2f5090938f83209e47a578e66782ad8d65ade355a1dd9"
+        },
+        {
+          "id": "b07_p3_deep_first_r1",
+          "seed": 68285180,
+          "variant": "deep_first",
+          "repeat": 1,
+          "period": 3,
+          "sequence": "ABBA",
+          "position": 31,
+          "previous_variant": "shallow_first",
+          "repeat_distance": 3,
+          "observed": true,
+          "rule_order": [
+            "k17",
+            "k03",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "ef0110565a980d55f5a3fdfd95b16692db1be2c5b0c72459a980116712a52d7e",
+          "response_sha256": "2dbfb01a6ecb07a531bb491d9875e28c2cac73fda6513aa596650933e2155cf1"
+        },
+        {
+          "id": "b08_p0_deep_first_r0",
+          "seed": 209422594,
+          "variant": "deep_first",
+          "repeat": 0,
+          "period": 0,
+          "sequence": "ABBA",
+          "position": 32,
+          "previous_variant": "deep_first",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k17",
+            "k03",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "64781317793ad82b1dae06ce86d483d63f2b9c45f7481ec8d901435e6bb4b499",
+          "response_sha256": "163738628e8650cb28457838e6d6591c3bf10cf9597d5935913450d2b9baba7a"
+        },
+        {
+          "id": "b08_p1_shallow_first_r0",
+          "seed": 209422594,
+          "variant": "shallow_first",
+          "repeat": 0,
+          "period": 1,
+          "sequence": "ABBA",
+          "position": 33,
+          "previous_variant": "deep_first",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k03",
+            "k17",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "b2ba9222471b84629a117fc7b6c79c8bd389b5e756d1b05ba0cae54c6593ffd3",
+          "response_sha256": "348285977dbf5eda583725b290a570305679fa42cea34841c8b88337db7409f5"
+        },
+        {
+          "id": "b08_p2_shallow_first_r1",
+          "seed": 209422594,
+          "variant": "shallow_first",
+          "repeat": 1,
+          "period": 2,
+          "sequence": "ABBA",
+          "position": 34,
+          "previous_variant": "shallow_first",
+          "repeat_distance": 1,
+          "observed": true,
+          "rule_order": [
+            "k03",
+            "k17",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "b2ba9222471b84629a117fc7b6c79c8bd389b5e756d1b05ba0cae54c6593ffd3",
+          "response_sha256": "759f1b77f0b90dde009a017697f975f47300e6974876e085b3ac33ca79092619"
+        },
+        {
+          "id": "b08_p3_deep_first_r1",
+          "seed": 209422594,
+          "variant": "deep_first",
+          "repeat": 1,
+          "period": 3,
+          "sequence": "ABBA",
+          "position": 35,
+          "previous_variant": "shallow_first",
+          "repeat_distance": 3,
+          "observed": true,
+          "rule_order": [
+            "k17",
+            "k03",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "64781317793ad82b1dae06ce86d483d63f2b9c45f7481ec8d901435e6bb4b499",
+          "response_sha256": "baba9758f19d8a3920fe8bcccffed39d4c97ec73d757196b2112c8f554a5d8fc"
+        },
+        {
+          "id": "b09_p0_shallow_first_r0",
+          "seed": 661935755,
+          "variant": "shallow_first",
+          "repeat": 0,
+          "period": 0,
+          "sequence": "BAAB",
+          "position": 36,
+          "previous_variant": "deep_first",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k03",
+            "k17",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "610ab8a85f665d04ca19a90f45d092e64fdb80123538dabdcb6eca9845ca7e85",
+          "response_sha256": "4038eede9ecfee6985ed1e63d7b5524637c6da636ae7a0901648006ac876b7ee"
+        },
+        {
+          "id": "b09_p1_deep_first_r0",
+          "seed": 661935755,
+          "variant": "deep_first",
+          "repeat": 0,
+          "period": 1,
+          "sequence": "BAAB",
+          "position": 37,
+          "previous_variant": "shallow_first",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k17",
+            "k03",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "2ceb401fb2270cae2ad846e99632cfa3ee2b034bd06959fdce186e5954c77671",
+          "response_sha256": "7aa18efff1c589c0698cbdd89e9c7c168ef0882ddc5eedda13617d1ac8c2c6bb"
+        },
+        {
+          "id": "b09_p2_deep_first_r1",
+          "seed": 661935755,
+          "variant": "deep_first",
+          "repeat": 1,
+          "period": 2,
+          "sequence": "BAAB",
+          "position": 38,
+          "previous_variant": "deep_first",
+          "repeat_distance": 1,
+          "observed": true,
+          "rule_order": [
+            "k17",
+            "k03",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "2ceb401fb2270cae2ad846e99632cfa3ee2b034bd06959fdce186e5954c77671",
+          "response_sha256": "aa115e6aad136b97b4f3e200a0e2b8f9a3e39150e520ca91ebd4bfd546ca76e7"
+        },
+        {
+          "id": "b09_p3_shallow_first_r1",
+          "seed": 661935755,
+          "variant": "shallow_first",
+          "repeat": 1,
+          "period": 3,
+          "sequence": "BAAB",
+          "position": 39,
+          "previous_variant": "deep_first",
+          "repeat_distance": 3,
+          "observed": true,
+          "rule_order": [
+            "k03",
+            "k17",
+            "k10"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 0,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "610ab8a85f665d04ca19a90f45d092e64fdb80123538dabdcb6eca9845ca7e85",
+          "response_sha256": "bd558b92d6b099a552b279a0140a30b1bbee7e0b0783c69d73c310694deaaf7c"
+        }
+      ],
+      "groups": {
+        "deep_first": {
+          "assigned": 20,
+          "observed": 20,
+          "measured": 20,
+          "format_valid": 20,
+          "goal_reachable_choice": 20,
+          "shallow_success": 0,
+          "selected_ids": {
+            "k17": 20
+          },
+          "selected_positions": {
+            "0": 20
+          },
+          "terminal_ranks": {
+            "0": 20
+          }
+        },
+        "shallow_first": {
+          "assigned": 20,
+          "observed": 20,
+          "measured": 20,
+          "format_valid": 20,
+          "goal_reachable_choice": 20,
+          "shallow_success": 20,
+          "selected_ids": {
+            "k03": 20
+          },
+          "selected_positions": {
+            "0": 20
+          },
+          "terminal_ranks": {
+            "0": 20
+          }
+        }
+      },
+      "prediction_fits": {
+        "first_terminal": {
+          "assigned": 40,
+          "measured": 40,
+          "matching": 40,
+          "full_match": true
+        },
+        "first_item": {
+          "assigned": 40,
+          "measured": 40,
+          "matching": 40,
+          "full_match": true
+        },
+        "absolute_second": {
+          "assigned": 40,
+          "measured": 40,
+          "matching": 0,
+          "full_match": false
+        },
+        "last_terminal": {
+          "assigned": 40,
+          "measured": 40,
+          "matching": 0,
+          "full_match": false
+        },
+        "fixed_shallow": {
+          "assigned": 40,
+          "measured": 40,
+          "matching": 20,
+          "full_match": false
+        },
+        "fixed_deep": {
+          "assigned": 40,
+          "measured": 40,
+          "matching": 20,
+          "full_match": false
+        }
+      },
+      "repeats": [
+        {
+          "seed": 580410664,
+          "variant": "deep_first",
+          "changed": false
+        },
+        {
+          "seed": 580410664,
+          "variant": "shallow_first",
+          "changed": false
+        },
+        {
+          "seed": 661935755,
+          "variant": "deep_first",
+          "changed": false
+        },
+        {
+          "seed": 661935755,
+          "variant": "shallow_first",
+          "changed": false
+        },
+        {
+          "seed": 209422594,
+          "variant": "deep_first",
+          "changed": false
+        },
+        {
+          "seed": 209422594,
+          "variant": "shallow_first",
+          "changed": false
+        },
+        {
+          "seed": 1790124989,
+          "variant": "deep_first",
+          "changed": false
+        },
+        {
+          "seed": 1790124989,
+          "variant": "shallow_first",
+          "changed": false
+        },
+        {
+          "seed": 267101868,
+          "variant": "deep_first",
+          "changed": false
+        },
+        {
+          "seed": 267101868,
+          "variant": "shallow_first",
+          "changed": false
+        },
+        {
+          "seed": 752235971,
+          "variant": "deep_first",
+          "changed": false
+        },
+        {
+          "seed": 752235971,
+          "variant": "shallow_first",
+          "changed": false
+        },
+        {
+          "seed": 1292559482,
+          "variant": "deep_first",
+          "changed": false
+        },
+        {
+          "seed": 1292559482,
+          "variant": "shallow_first",
+          "changed": false
+        },
+        {
+          "seed": 223674688,
+          "variant": "deep_first",
+          "changed": false
+        },
+        {
+          "seed": 223674688,
+          "variant": "shallow_first",
+          "changed": false
+        },
+        {
+          "seed": 860724506,
+          "variant": "deep_first",
+          "changed": false
+        },
+        {
+          "seed": 860724506,
+          "variant": "shallow_first",
+          "changed": false
+        },
+        {
+          "seed": 68285180,
+          "variant": "deep_first",
+          "changed": false
+        },
+        {
+          "seed": 68285180,
+          "variant": "shallow_first",
+          "changed": false
+        }
+      ],
+      "seed_rows": [
+        {
+          "seed": 580410664,
+          "selected_ids_by_variant": {
+            "deep_first": [
+              "k17",
+              "k17"
+            ],
+            "shallow_first": [
+              "k03",
+              "k03"
+            ]
+          },
+          "both_repeats_stable": true
+        },
+        {
+          "seed": 661935755,
+          "selected_ids_by_variant": {
+            "deep_first": [
+              "k17",
+              "k17"
+            ],
+            "shallow_first": [
+              "k03",
+              "k03"
+            ]
+          },
+          "both_repeats_stable": true
+        },
+        {
+          "seed": 209422594,
+          "selected_ids_by_variant": {
+            "deep_first": [
+              "k17",
+              "k17"
+            ],
+            "shallow_first": [
+              "k03",
+              "k03"
+            ]
+          },
+          "both_repeats_stable": true
+        },
+        {
+          "seed": 1790124989,
+          "selected_ids_by_variant": {
+            "deep_first": [
+              "k17",
+              "k17"
+            ],
+            "shallow_first": [
+              "k03",
+              "k03"
+            ]
+          },
+          "both_repeats_stable": true
+        },
+        {
+          "seed": 267101868,
+          "selected_ids_by_variant": {
+            "deep_first": [
+              "k17",
+              "k17"
+            ],
+            "shallow_first": [
+              "k03",
+              "k03"
+            ]
+          },
+          "both_repeats_stable": true
+        },
+        {
+          "seed": 752235971,
+          "selected_ids_by_variant": {
+            "deep_first": [
+              "k17",
+              "k17"
+            ],
+            "shallow_first": [
+              "k03",
+              "k03"
+            ]
+          },
+          "both_repeats_stable": true
+        },
+        {
+          "seed": 1292559482,
+          "selected_ids_by_variant": {
+            "deep_first": [
+              "k17",
+              "k17"
+            ],
+            "shallow_first": [
+              "k03",
+              "k03"
+            ]
+          },
+          "both_repeats_stable": true
+        },
+        {
+          "seed": 223674688,
+          "selected_ids_by_variant": {
+            "deep_first": [
+              "k17",
+              "k17"
+            ],
+            "shallow_first": [
+              "k03",
+              "k03"
+            ]
+          },
+          "both_repeats_stable": true
+        },
+        {
+          "seed": 860724506,
+          "selected_ids_by_variant": {
+            "deep_first": [
+              "k17",
+              "k17"
+            ],
+            "shallow_first": [
+              "k03",
+              "k03"
+            ]
+          },
+          "both_repeats_stable": true
+        },
+        {
+          "seed": 68285180,
+          "selected_ids_by_variant": {
+            "deep_first": [
+              "k17",
+              "k17"
+            ],
+            "shallow_first": [
+              "k03",
+              "k03"
+            ]
+          },
+          "both_repeats_stable": true
+        }
+      ],
+      "strata": {
+        "sequence": {
+          "ABBA": {
+            "deep_first": {
+              "assigned": 10,
+              "observed": 10,
+              "selected_ids": {
+                "k17": 10
+              },
+              "shallow_success": 0
+            },
+            "shallow_first": {
+              "assigned": 10,
+              "observed": 10,
+              "selected_ids": {
+                "k03": 10
+              },
+              "shallow_success": 10
+            }
+          },
+          "BAAB": {
+            "deep_first": {
+              "assigned": 10,
+              "observed": 10,
+              "selected_ids": {
+                "k17": 10
+              },
+              "shallow_success": 0
+            },
+            "shallow_first": {
+              "assigned": 10,
+              "observed": 10,
+              "selected_ids": {
+                "k03": 10
+              },
+              "shallow_success": 10
+            }
+          }
+        },
+        "period": {
+          "0": {
+            "deep_first": {
+              "assigned": 5,
+              "observed": 5,
+              "selected_ids": {
+                "k17": 5
+              },
+              "shallow_success": 0
+            },
+            "shallow_first": {
+              "assigned": 5,
+              "observed": 5,
+              "selected_ids": {
+                "k03": 5
+              },
+              "shallow_success": 5
+            }
+          },
+          "1": {
+            "deep_first": {
+              "assigned": 5,
+              "observed": 5,
+              "selected_ids": {
+                "k17": 5
+              },
+              "shallow_success": 0
+            },
+            "shallow_first": {
+              "assigned": 5,
+              "observed": 5,
+              "selected_ids": {
+                "k03": 5
+              },
+              "shallow_success": 5
+            }
+          },
+          "2": {
+            "deep_first": {
+              "assigned": 5,
+              "observed": 5,
+              "selected_ids": {
+                "k17": 5
+              },
+              "shallow_success": 0
+            },
+            "shallow_first": {
+              "assigned": 5,
+              "observed": 5,
+              "selected_ids": {
+                "k03": 5
+              },
+              "shallow_success": 5
+            }
+          },
+          "3": {
+            "deep_first": {
+              "assigned": 5,
+              "observed": 5,
+              "selected_ids": {
+                "k17": 5
+              },
+              "shallow_success": 0
+            },
+            "shallow_first": {
+              "assigned": 5,
+              "observed": 5,
+              "selected_ids": {
+                "k03": 5
+              },
+              "shallow_success": 5
+            }
+          }
+        },
+        "previous_variant": {
+          "None": {
+            "deep_first": {
+              "assigned": 1,
+              "observed": 1,
+              "selected_ids": {
+                "k17": 1
+              },
+              "shallow_success": 0
+            }
+          },
+          "deep_first": {
+            "deep_first": {
+              "assigned": 7,
+              "observed": 7,
+              "selected_ids": {
+                "k17": 7
+              },
+              "shallow_success": 0
+            },
+            "shallow_first": {
+              "assigned": 13,
+              "observed": 13,
+              "selected_ids": {
+                "k03": 13
+              },
+              "shallow_success": 13
+            }
+          },
+          "shallow_first": {
+            "deep_first": {
+              "assigned": 12,
+              "observed": 12,
+              "selected_ids": {
+                "k17": 12
+              },
+              "shallow_success": 0
+            },
+            "shallow_first": {
+              "assigned": 7,
+              "observed": 7,
+              "selected_ids": {
+                "k03": 7
+              },
+              "shallow_success": 7
+            }
+          }
+        },
+        "repeat_distance": {
+          "1": {
+            "deep_first": {
+              "assigned": 5,
+              "observed": 5,
+              "selected_ids": {
+                "k17": 5
+              },
+              "shallow_success": 0
+            },
+            "shallow_first": {
+              "assigned": 5,
+              "observed": 5,
+              "selected_ids": {
+                "k03": 5
+              },
+              "shallow_success": 5
+            }
+          },
+          "3": {
+            "deep_first": {
+              "assigned": 5,
+              "observed": 5,
+              "selected_ids": {
+                "k17": 5
+              },
+              "shallow_success": 0
+            },
+            "shallow_first": {
+              "assigned": 5,
+              "observed": 5,
+              "selected_ids": {
+                "k03": 5
+              },
+              "shallow_success": 5
+            }
+          },
+          "None": {
+            "deep_first": {
+              "assigned": 10,
+              "observed": 10,
+              "selected_ids": {
+                "k17": 10
+              },
+              "shallow_success": 0
+            },
+            "shallow_first": {
+              "assigned": 10,
+              "observed": 10,
+              "selected_ids": {
+                "k03": 10
+              },
+              "shallow_success": 10
+            }
+          }
+        },
+        "prompt_eval_cached_count": {
+          "0": {
+            "deep_first": {
+              "assigned": 1,
+              "observed": 1,
+              "selected_ids": {
+                "k17": 1
+              },
+              "shallow_success": 0
+            }
+          },
+          "28": {
+            "deep_first": {
+              "assigned": 12,
+              "observed": 12,
+              "selected_ids": {
+                "k17": 12
+              },
+              "shallow_success": 0
+            },
+            "shallow_first": {
+              "assigned": 13,
+              "observed": 13,
+              "selected_ids": {
+                "k03": 13
+              },
+              "shallow_success": 13
+            }
+          },
+          "280": {
+            "deep_first": {
+              "assigned": 7,
+              "observed": 7,
+              "selected_ids": {
+                "k17": 7
+              },
+              "shallow_success": 0
+            },
+            "shallow_first": {
+              "assigned": 7,
+              "observed": 7,
+              "selected_ids": {
+                "k03": 7
+              },
+              "shallow_success": 7
+            }
+          }
+        }
+      },
+      "independent_problem_count": 1,
+      "unique_seed_blocks": 10
+    },
+    "historical": {
+      "version": "v059",
+      "bundle_sha256": "3f9b1e1462fa48f8b88f3ec71b69020adc7257c826e84d4b893b1d24eba685c5",
+      "independent_receipt": {
+        "contract": "independent-v059-r1",
+        "bundle_sha256": "3f9b1e1462fa48f8b88f3ec71b69020adc7257c826e84d4b893b1d24eba685c5",
+        "complete": true,
+        "observed_calls": 40,
+        "metadata_records": 20,
+        "compared_fields": 802,
+        "differences": [],
+        "production_imports": false,
+        "baseline_compared_fields": 1649,
+        "limitation": "원문·계획·측정 일관성 검산이며 외부 실행 인증이나 규칙 위치·캐시·내부 기제의 인과 검증은 아니다."
+      },
+      "rows": [
+        {
+          "id": "b00_p0_original_r0",
+          "seed": 68285180,
+          "variant": "original",
+          "repeat": 0,
+          "period": 0,
+          "sequence": "ABBA",
+          "position": 0,
+          "previous_variant": null,
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k17",
+            "k03"
+          ],
+          "prompt_eval_cached_count": 0,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "78d25d5da2410af367cb65cfc30451856a8092e1567764d2cb1145e163200108",
+          "response_sha256": "de0264ecd3d792af7f6f7ddd9a5369268774cdd7d99694d18a184442067f4b49"
+        },
+        {
+          "id": "b00_p1_terminal_swap_r0",
+          "seed": 68285180,
+          "variant": "terminal_swap",
+          "repeat": 0,
+          "period": 1,
+          "sequence": "ABBA",
+          "position": 1,
+          "previous_variant": "original",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k03",
+            "k17"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "9a370ef952425ec7fc09913d98b6832043d20c847d26e4317ee1755c731ae6f4",
+          "response_sha256": "eee193f9ae37123292e6e435339f0805f1955f69af78900bf5d25fac6dc1a87a"
+        },
+        {
+          "id": "b00_p2_terminal_swap_r1",
+          "seed": 68285180,
+          "variant": "terminal_swap",
+          "repeat": 1,
+          "period": 2,
+          "sequence": "ABBA",
+          "position": 2,
+          "previous_variant": "terminal_swap",
+          "repeat_distance": 1,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k03",
+            "k17"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "9a370ef952425ec7fc09913d98b6832043d20c847d26e4317ee1755c731ae6f4",
+          "response_sha256": "84b12f67e0cf5660c8230a3b1f02b6fe902a610389c5454cb204a771111fe271"
+        },
+        {
+          "id": "b00_p3_original_r1",
+          "seed": 68285180,
+          "variant": "original",
+          "repeat": 1,
+          "period": 3,
+          "sequence": "ABBA",
+          "position": 3,
+          "previous_variant": "terminal_swap",
+          "repeat_distance": 3,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k17",
+            "k03"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "78d25d5da2410af367cb65cfc30451856a8092e1567764d2cb1145e163200108",
+          "response_sha256": "9f063a04c75cdcf6d61797491adb5e02bf99c5c1794f546815c46f1d820d7e31"
+        },
+        {
+          "id": "b01_p0_terminal_swap_r0",
+          "seed": 860724506,
+          "variant": "terminal_swap",
+          "repeat": 0,
+          "period": 0,
+          "sequence": "BAAB",
+          "position": 4,
+          "previous_variant": "original",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k03",
+            "k17"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "96c6e6817e9229ac3a41066a8b661adb46f146b1a05f9bced04de90fc9652b9c",
+          "response_sha256": "440d12ed48bd0267a38e9a5a9acfb04afc9de6dfd4ffda186673b2d40d9e673c"
+        },
+        {
+          "id": "b01_p1_original_r0",
+          "seed": 860724506,
+          "variant": "original",
+          "repeat": 0,
+          "period": 1,
+          "sequence": "BAAB",
+          "position": 5,
+          "previous_variant": "terminal_swap",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k17",
+            "k03"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "72b37ec64d220c595b6104a6117e62ae19f3d573345655174ca2ccc2f42d762c",
+          "response_sha256": "2bcb1a133e8b409c4c9206b6156b40e619532a639f997208711b8a3cd57a1083"
+        },
+        {
+          "id": "b01_p2_original_r1",
+          "seed": 860724506,
+          "variant": "original",
+          "repeat": 1,
+          "period": 2,
+          "sequence": "BAAB",
+          "position": 6,
+          "previous_variant": "original",
+          "repeat_distance": 1,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k17",
+            "k03"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "72b37ec64d220c595b6104a6117e62ae19f3d573345655174ca2ccc2f42d762c",
+          "response_sha256": "163781f1cc9ffa69fcabec0b13a59a91bea51abcc4695e2b2ba1c5dc00edc364"
+        },
+        {
+          "id": "b01_p3_terminal_swap_r1",
+          "seed": 860724506,
+          "variant": "terminal_swap",
+          "repeat": 1,
+          "period": 3,
+          "sequence": "BAAB",
+          "position": 7,
+          "previous_variant": "original",
+          "repeat_distance": 3,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k03",
+            "k17"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "96c6e6817e9229ac3a41066a8b661adb46f146b1a05f9bced04de90fc9652b9c",
+          "response_sha256": "54c308c9cbf80fbeb2345c5478ec68f9b6c20cc4209b34c61824fe67622b71dc"
+        },
+        {
+          "id": "b02_p0_terminal_swap_r0",
+          "seed": 267101868,
+          "variant": "terminal_swap",
+          "repeat": 0,
+          "period": 0,
+          "sequence": "BAAB",
+          "position": 8,
+          "previous_variant": "terminal_swap",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k03",
+            "k17"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "69e0b4c22fa9ab5d158dfa295a10a00a670501f7593cb8ab4697a90bcb313f9d",
+          "response_sha256": "e5f180d827dbbdc85d029df2be8c55eb4fcd4b713fb711ab4b86d1ac4c62c897"
+        },
+        {
+          "id": "b02_p1_original_r0",
+          "seed": 267101868,
+          "variant": "original",
+          "repeat": 0,
+          "period": 1,
+          "sequence": "BAAB",
+          "position": 9,
+          "previous_variant": "terminal_swap",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k17",
+            "k03"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "77edf4f4c12deb0fa49be3b957b8a96080f63acadb1a428934d7a3cbe37cfcf8",
+          "response_sha256": "7dfd7374c3f4c0bc1621fee4cf22258735d68e3d4dec21ce97e60eec4d168d7c"
+        },
+        {
+          "id": "b02_p2_original_r1",
+          "seed": 267101868,
+          "variant": "original",
+          "repeat": 1,
+          "period": 2,
+          "sequence": "BAAB",
+          "position": 10,
+          "previous_variant": "original",
+          "repeat_distance": 1,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k17",
+            "k03"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "77edf4f4c12deb0fa49be3b957b8a96080f63acadb1a428934d7a3cbe37cfcf8",
+          "response_sha256": "b90305a67fd8a8119c7f6488059de29df410f95fd867b1c5210d74fb11da6f74"
+        },
+        {
+          "id": "b02_p3_terminal_swap_r1",
+          "seed": 267101868,
+          "variant": "terminal_swap",
+          "repeat": 1,
+          "period": 3,
+          "sequence": "BAAB",
+          "position": 11,
+          "previous_variant": "original",
+          "repeat_distance": 3,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k03",
+            "k17"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "69e0b4c22fa9ab5d158dfa295a10a00a670501f7593cb8ab4697a90bcb313f9d",
+          "response_sha256": "61a28cd70ec332056dd745023827fb7b9ea6abf63c7e6275ea14fe844f01b324"
+        },
+        {
+          "id": "b03_p0_original_r0",
+          "seed": 1292559482,
+          "variant": "original",
+          "repeat": 0,
+          "period": 0,
+          "sequence": "ABBA",
+          "position": 12,
+          "previous_variant": "terminal_swap",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k17",
+            "k03"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "a2504b8dc9a27535be5e3d1336ffd2645e7c45f5bedbe587f09260e2462d82b8",
+          "response_sha256": "371b0f160746bf045390eddf61d74287d5a77fcf9ac826a89c84245b5cd37172"
+        },
+        {
+          "id": "b03_p1_terminal_swap_r0",
+          "seed": 1292559482,
+          "variant": "terminal_swap",
+          "repeat": 0,
+          "period": 1,
+          "sequence": "ABBA",
+          "position": 13,
+          "previous_variant": "original",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k03",
+            "k17"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "21d17af4c6477f55a0c7429cc6c9ccbf04e78b77a34ca5281d73de9452a26467",
+          "response_sha256": "d7b073622fc362ad0b60e214e5f0eb5135504065e55347c2ba09c1040f9921ae"
+        },
+        {
+          "id": "b03_p2_terminal_swap_r1",
+          "seed": 1292559482,
+          "variant": "terminal_swap",
+          "repeat": 1,
+          "period": 2,
+          "sequence": "ABBA",
+          "position": 14,
+          "previous_variant": "terminal_swap",
+          "repeat_distance": 1,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k03",
+            "k17"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "21d17af4c6477f55a0c7429cc6c9ccbf04e78b77a34ca5281d73de9452a26467",
+          "response_sha256": "38c45d608f316a6afe7369ea49d2a40a69056d367eb7a37b9efceac75bf5fab9"
+        },
+        {
+          "id": "b03_p3_original_r1",
+          "seed": 1292559482,
+          "variant": "original",
+          "repeat": 1,
+          "period": 3,
+          "sequence": "ABBA",
+          "position": 15,
+          "previous_variant": "terminal_swap",
+          "repeat_distance": 3,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k17",
+            "k03"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "a2504b8dc9a27535be5e3d1336ffd2645e7c45f5bedbe587f09260e2462d82b8",
+          "response_sha256": "d911b3f63315ea888c8568a991bcc909a0c6bab16346666272a6d31b3b45ae7c"
+        },
+        {
+          "id": "b04_p0_terminal_swap_r0",
+          "seed": 580410664,
+          "variant": "terminal_swap",
+          "repeat": 0,
+          "period": 0,
+          "sequence": "BAAB",
+          "position": 16,
+          "previous_variant": "original",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k03",
+            "k17"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "76d043e3ad4ffe38e0d217527934934d8000ce7a30a9dbe475b1bfa7c57c6902",
+          "response_sha256": "f4b989ad76daedcd0ac015a80371df0e832514436d6384fab600763e099edefb"
+        },
+        {
+          "id": "b04_p1_original_r0",
+          "seed": 580410664,
+          "variant": "original",
+          "repeat": 0,
+          "period": 1,
+          "sequence": "BAAB",
+          "position": 17,
+          "previous_variant": "terminal_swap",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k17",
+            "k03"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "a6f935d9cb3d4b663c74f2c9a36cbe3ef63dafccaea3da62aef2826eb8944786",
+          "response_sha256": "e8cc12689334a7a02dba9de943970f8f5ba172e8c90c7a553b321c0416c150c0"
+        },
+        {
+          "id": "b04_p2_original_r1",
+          "seed": 580410664,
+          "variant": "original",
+          "repeat": 1,
+          "period": 2,
+          "sequence": "BAAB",
+          "position": 18,
+          "previous_variant": "original",
+          "repeat_distance": 1,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k17",
+            "k03"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "a6f935d9cb3d4b663c74f2c9a36cbe3ef63dafccaea3da62aef2826eb8944786",
+          "response_sha256": "f3f8ce7d950a169c60b1fa204bf8f46cf8d3422ec5da14681b4b1d082b6debcb"
+        },
+        {
+          "id": "b04_p3_terminal_swap_r1",
+          "seed": 580410664,
+          "variant": "terminal_swap",
+          "repeat": 1,
+          "period": 3,
+          "sequence": "BAAB",
+          "position": 19,
+          "previous_variant": "original",
+          "repeat_distance": 3,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k03",
+            "k17"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "76d043e3ad4ffe38e0d217527934934d8000ce7a30a9dbe475b1bfa7c57c6902",
+          "response_sha256": "71fdb7f974bcd7e6432b754ae2fba200d74221c0f56c2930720b5102e4aea2c6"
+        },
+        {
+          "id": "b05_p0_terminal_swap_r0",
+          "seed": 1790124989,
+          "variant": "terminal_swap",
+          "repeat": 0,
+          "period": 0,
+          "sequence": "BAAB",
+          "position": 20,
+          "previous_variant": "terminal_swap",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k03",
+            "k17"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "3454062144f647fad1e2c834669615c57ea48fbcbfe6d06dce80f339223565b6",
+          "response_sha256": "182613d203caf203c66021c9fe6711dc1308e430e2e2c20f0dc63f278a80e6a6"
+        },
+        {
+          "id": "b05_p1_original_r0",
+          "seed": 1790124989,
+          "variant": "original",
+          "repeat": 0,
+          "period": 1,
+          "sequence": "BAAB",
+          "position": 21,
+          "previous_variant": "terminal_swap",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k17",
+            "k03"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "eac72adc4342f3195ad532efec8dd207c1180b1ba61feb586a85ac3c2c0822ff",
+          "response_sha256": "891d9b4e1321321ea5a9dc1325fcc50ce6a74a78075589164d8be54fb6f6ba4e"
+        },
+        {
+          "id": "b05_p2_original_r1",
+          "seed": 1790124989,
+          "variant": "original",
+          "repeat": 1,
+          "period": 2,
+          "sequence": "BAAB",
+          "position": 22,
+          "previous_variant": "original",
+          "repeat_distance": 1,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k17",
+            "k03"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "eac72adc4342f3195ad532efec8dd207c1180b1ba61feb586a85ac3c2c0822ff",
+          "response_sha256": "afcd64300b992aae67c5c5c3eb7ca7a20c7e77811590a2108cad910b714ae2e8"
+        },
+        {
+          "id": "b05_p3_terminal_swap_r1",
+          "seed": 1790124989,
+          "variant": "terminal_swap",
+          "repeat": 1,
+          "period": 3,
+          "sequence": "BAAB",
+          "position": 23,
+          "previous_variant": "original",
+          "repeat_distance": 3,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k03",
+            "k17"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "3454062144f647fad1e2c834669615c57ea48fbcbfe6d06dce80f339223565b6",
+          "response_sha256": "1d02c1987a978556c2f51b1a4634b608a2a9428a079c371af9db9e22fdbe7360"
+        },
+        {
+          "id": "b06_p0_original_r0",
+          "seed": 223674688,
+          "variant": "original",
+          "repeat": 0,
+          "period": 0,
+          "sequence": "ABBA",
+          "position": 24,
+          "previous_variant": "terminal_swap",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k17",
+            "k03"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "25d21753d86bfb5ad1b1ac8dc22b841b84d386cb545a3a1a1d8a886c81a32e09",
+          "response_sha256": "08d7564d04d62bc8cdf2b554319fcc0a1068ba9bebcee31195c43dec32ef7826"
+        },
+        {
+          "id": "b06_p1_terminal_swap_r0",
+          "seed": 223674688,
+          "variant": "terminal_swap",
+          "repeat": 0,
+          "period": 1,
+          "sequence": "ABBA",
+          "position": 25,
+          "previous_variant": "original",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k03",
+            "k17"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "52f925cba0cf062011dcccbd80d38549431fdd8e4a58c5c15868a3d0f917a03b",
+          "response_sha256": "768ba3e382ef2978f27c4444ae322afbc088aea442e22d7dc508da2562359344"
+        },
+        {
+          "id": "b06_p2_terminal_swap_r1",
+          "seed": 223674688,
+          "variant": "terminal_swap",
+          "repeat": 1,
+          "period": 2,
+          "sequence": "ABBA",
+          "position": 26,
+          "previous_variant": "terminal_swap",
+          "repeat_distance": 1,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k03",
+            "k17"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "52f925cba0cf062011dcccbd80d38549431fdd8e4a58c5c15868a3d0f917a03b",
+          "response_sha256": "189b28fa8dfca844b49f5005683f1fd14e5218f99466426d5717081961fdcad3"
+        },
+        {
+          "id": "b06_p3_original_r1",
+          "seed": 223674688,
+          "variant": "original",
+          "repeat": 1,
+          "period": 3,
+          "sequence": "ABBA",
+          "position": 27,
+          "previous_variant": "terminal_swap",
+          "repeat_distance": 3,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k17",
+            "k03"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "25d21753d86bfb5ad1b1ac8dc22b841b84d386cb545a3a1a1d8a886c81a32e09",
+          "response_sha256": "82f75d81b56e8024f61f67394674d23ff92989122b055c8d0daa6ec40d309c11"
+        },
+        {
+          "id": "b07_p0_original_r0",
+          "seed": 661935755,
+          "variant": "original",
+          "repeat": 0,
+          "period": 0,
+          "sequence": "ABBA",
+          "position": 28,
+          "previous_variant": "original",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k17",
+            "k03"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "cb275235311cf8bc191ed80fa6742d0a49a0de370b715b69d36b2e8df4979d27",
+          "response_sha256": "8b5615b0469fde7fd899f44986f4ae39b5ce79b97858d2aaa3fc6d205c78d67e"
+        },
+        {
+          "id": "b07_p1_terminal_swap_r0",
+          "seed": 661935755,
+          "variant": "terminal_swap",
+          "repeat": 0,
+          "period": 1,
+          "sequence": "ABBA",
+          "position": 29,
+          "previous_variant": "original",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k03",
+            "k17"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "79b88454d8204ec753d279bc49936b9e2d914f83355cb58546a0c92dbe312a06",
+          "response_sha256": "5504bbcb13f207de75f68fd0ed2bf8bd7d0151f4828e70d0e888c92da18c6daa"
+        },
+        {
+          "id": "b07_p2_terminal_swap_r1",
+          "seed": 661935755,
+          "variant": "terminal_swap",
+          "repeat": 1,
+          "period": 2,
+          "sequence": "ABBA",
+          "position": 30,
+          "previous_variant": "terminal_swap",
+          "repeat_distance": 1,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k03",
+            "k17"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "79b88454d8204ec753d279bc49936b9e2d914f83355cb58546a0c92dbe312a06",
+          "response_sha256": "b5f8abc1a789781380f7446a9c488c746c7f8b81e2c17a6ba7b7d6c0041e411c"
+        },
+        {
+          "id": "b07_p3_original_r1",
+          "seed": 661935755,
+          "variant": "original",
+          "repeat": 1,
+          "period": 3,
+          "sequence": "ABBA",
+          "position": 31,
+          "previous_variant": "terminal_swap",
+          "repeat_distance": 3,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k17",
+            "k03"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "cb275235311cf8bc191ed80fa6742d0a49a0de370b715b69d36b2e8df4979d27",
+          "response_sha256": "1e1ee9618fc7e7de7dde730e7069a22f0daad6003e4ae5b794bfa4b9014ed830"
+        },
+        {
+          "id": "b08_p0_original_r0",
+          "seed": 209422594,
+          "variant": "original",
+          "repeat": 0,
+          "period": 0,
+          "sequence": "ABBA",
+          "position": 32,
+          "previous_variant": "original",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k17",
+            "k03"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "fd2d72c0dffb3bedb9795e331df73f18febf78588a5dc3f384188ef40d6df146",
+          "response_sha256": "364088a52a8035e903f78566a6fd4be7be482df47709e8d315b13164d100d5b5"
+        },
+        {
+          "id": "b08_p1_terminal_swap_r0",
+          "seed": 209422594,
+          "variant": "terminal_swap",
+          "repeat": 0,
+          "period": 1,
+          "sequence": "ABBA",
+          "position": 33,
+          "previous_variant": "original",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k03",
+            "k17"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "8b2ae82f3e75f4ce403a49e892405a227918ac9514422f29936557a3fa36ab48",
+          "response_sha256": "be6f497d2f1795ef5bff906f1a8f5573de2989db1f0ce54482129f951871cf7e"
+        },
+        {
+          "id": "b08_p2_terminal_swap_r1",
+          "seed": 209422594,
+          "variant": "terminal_swap",
+          "repeat": 1,
+          "period": 2,
+          "sequence": "ABBA",
+          "position": 34,
+          "previous_variant": "terminal_swap",
+          "repeat_distance": 1,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k03",
+            "k17"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "8b2ae82f3e75f4ce403a49e892405a227918ac9514422f29936557a3fa36ab48",
+          "response_sha256": "79661c6a6eff5f46245570602a3d3eb8cced87a87a694f4d6dc37969b1e83edb"
+        },
+        {
+          "id": "b08_p3_original_r1",
+          "seed": 209422594,
+          "variant": "original",
+          "repeat": 1,
+          "period": 3,
+          "sequence": "ABBA",
+          "position": 35,
+          "previous_variant": "terminal_swap",
+          "repeat_distance": 3,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k17",
+            "k03"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "fd2d72c0dffb3bedb9795e331df73f18febf78588a5dc3f384188ef40d6df146",
+          "response_sha256": "990f86af44d5da7658d6e27dab8b0171db0f983ca2bcb226a339c8307e2293d2"
+        },
+        {
+          "id": "b09_p0_terminal_swap_r0",
+          "seed": 752235971,
+          "variant": "terminal_swap",
+          "repeat": 0,
+          "period": 0,
+          "sequence": "BAAB",
+          "position": 36,
+          "previous_variant": "original",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k03",
+            "k17"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "1909d2e7db7e07e2c4333d4d061820bf616b238753dbc10ecf4606e3265a5c91",
+          "response_sha256": "a21b7329a9cb554860ba98efbe9cf1a762f43ce2e019d096e8a4cc5778a271f2"
+        },
+        {
+          "id": "b09_p1_original_r0",
+          "seed": 752235971,
+          "variant": "original",
+          "repeat": 0,
+          "period": 1,
+          "sequence": "BAAB",
+          "position": 37,
+          "previous_variant": "terminal_swap",
+          "repeat_distance": null,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k17",
+            "k03"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "a64256771f8b9c2f2e05587cb898c033e0d14d52331299bbaba923966ad32d2d",
+          "response_sha256": "f99e460c932623b9e00fcd0e6d88de5117f3f2eec4a2a8d3227ed9c915ba0386"
+        },
+        {
+          "id": "b09_p2_original_r1",
+          "seed": 752235971,
+          "variant": "original",
+          "repeat": 1,
+          "period": 2,
+          "sequence": "BAAB",
+          "position": 38,
+          "previous_variant": "original",
+          "repeat_distance": 1,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k17",
+            "k03"
+          ],
+          "prompt_eval_cached_count": 280,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k17",
+            "implied_depth": 2,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": false,
+            "terminal_rank": 0,
+            "shallow_success": false
+          },
+          "request_sha256": "a64256771f8b9c2f2e05587cb898c033e0d14d52331299bbaba923966ad32d2d",
+          "response_sha256": "f9f2ae666ee00071ece25f20a947cc46922f57bb3f959fa17e91f9eeac59d973"
+        },
+        {
+          "id": "b09_p3_terminal_swap_r1",
+          "seed": 752235971,
+          "variant": "terminal_swap",
+          "repeat": 1,
+          "period": 3,
+          "sequence": "BAAB",
+          "position": 39,
+          "previous_variant": "original",
+          "repeat_distance": 3,
+          "observed": true,
+          "rule_order": [
+            "k10",
+            "k03",
+            "k17"
+          ],
+          "prompt_eval_cached_count": 28,
+          "measurement": {
+            "kind": "terminal_rule_choice",
+            "format_valid": true,
+            "choice_valid": true,
+            "selected_rule_id": "k03",
+            "implied_depth": 1,
+            "proof_valid": null,
+            "strict_valid": null,
+            "D": null,
+            "errors": [],
+            "selected_rule_position": 1,
+            "actual_D": null,
+            "goal_reachable_choice": true,
+            "instruction_fulfilled": true,
+            "terminal_rank": 0,
+            "shallow_success": true
+          },
+          "request_sha256": "1909d2e7db7e07e2c4333d4d061820bf616b238753dbc10ecf4606e3265a5c91",
+          "response_sha256": "8cdeca5b7d4ac4c2ec30bb552bd3a8d186c07ba064d91fb352f686a61bbfcba5"
+        }
+      ],
+      "groups": {
+        "original": {
+          "assigned": 20,
+          "observed": 20,
+          "measured": 20,
+          "format_valid": 20,
+          "goal_reachable_choice": 20,
+          "shallow_success": 0,
+          "selected_ids": {
+            "k17": 20
+          },
+          "selected_positions": {
+            "1": 20
+          },
+          "terminal_ranks": {
+            "0": 20
+          }
+        },
+        "terminal_swap": {
+          "assigned": 20,
+          "observed": 20,
+          "measured": 20,
+          "format_valid": 20,
+          "goal_reachable_choice": 20,
+          "shallow_success": 20,
+          "selected_ids": {
+            "k03": 20
+          },
+          "selected_positions": {
+            "1": 20
+          },
+          "terminal_ranks": {
+            "0": 20
+          }
+        }
+      },
+      "prediction_fits": {
+        "first_terminal": {
+          "assigned": 40,
+          "measured": 40,
+          "matching": 40,
+          "full_match": true
+        },
+        "first_item": {
+          "assigned": 40,
+          "measured": 40,
+          "matching": 0,
+          "full_match": false
+        },
+        "absolute_second": {
+          "assigned": 40,
+          "measured": 40,
+          "matching": 40,
+          "full_match": true
+        },
+        "last_terminal": {
+          "assigned": 40,
+          "measured": 40,
+          "matching": 0,
+          "full_match": false
+        },
+        "fixed_shallow": {
+          "assigned": 40,
+          "measured": 40,
+          "matching": 20,
+          "full_match": false
+        },
+        "fixed_deep": {
+          "assigned": 40,
+          "measured": 40,
+          "matching": 20,
+          "full_match": false
+        }
+      },
+      "repeats": [
+        {
+          "seed": 580410664,
+          "variant": "original",
+          "changed": false
+        },
+        {
+          "seed": 580410664,
+          "variant": "terminal_swap",
+          "changed": false
+        },
+        {
+          "seed": 661935755,
+          "variant": "original",
+          "changed": false
+        },
+        {
+          "seed": 661935755,
+          "variant": "terminal_swap",
+          "changed": false
+        },
+        {
+          "seed": 209422594,
+          "variant": "original",
+          "changed": false
+        },
+        {
+          "seed": 209422594,
+          "variant": "terminal_swap",
+          "changed": false
+        },
+        {
+          "seed": 1790124989,
+          "variant": "original",
+          "changed": false
+        },
+        {
+          "seed": 1790124989,
+          "variant": "terminal_swap",
+          "changed": false
+        },
+        {
+          "seed": 267101868,
+          "variant": "original",
+          "changed": false
+        },
+        {
+          "seed": 267101868,
+          "variant": "terminal_swap",
+          "changed": false
+        },
+        {
+          "seed": 752235971,
+          "variant": "original",
+          "changed": false
+        },
+        {
+          "seed": 752235971,
+          "variant": "terminal_swap",
+          "changed": false
+        },
+        {
+          "seed": 1292559482,
+          "variant": "original",
+          "changed": false
+        },
+        {
+          "seed": 1292559482,
+          "variant": "terminal_swap",
+          "changed": false
+        },
+        {
+          "seed": 223674688,
+          "variant": "original",
+          "changed": false
+        },
+        {
+          "seed": 223674688,
+          "variant": "terminal_swap",
+          "changed": false
+        },
+        {
+          "seed": 860724506,
+          "variant": "original",
+          "changed": false
+        },
+        {
+          "seed": 860724506,
+          "variant": "terminal_swap",
+          "changed": false
+        },
+        {
+          "seed": 68285180,
+          "variant": "original",
+          "changed": false
+        },
+        {
+          "seed": 68285180,
+          "variant": "terminal_swap",
+          "changed": false
+        }
+      ],
+      "seed_rows": [
+        {
+          "seed": 580410664,
+          "selected_ids_by_variant": {
+            "original": [
+              "k17",
+              "k17"
+            ],
+            "terminal_swap": [
+              "k03",
+              "k03"
+            ]
+          },
+          "both_repeats_stable": true
+        },
+        {
+          "seed": 661935755,
+          "selected_ids_by_variant": {
+            "original": [
+              "k17",
+              "k17"
+            ],
+            "terminal_swap": [
+              "k03",
+              "k03"
+            ]
+          },
+          "both_repeats_stable": true
+        },
+        {
+          "seed": 209422594,
+          "selected_ids_by_variant": {
+            "original": [
+              "k17",
+              "k17"
+            ],
+            "terminal_swap": [
+              "k03",
+              "k03"
+            ]
+          },
+          "both_repeats_stable": true
+        },
+        {
+          "seed": 1790124989,
+          "selected_ids_by_variant": {
+            "original": [
+              "k17",
+              "k17"
+            ],
+            "terminal_swap": [
+              "k03",
+              "k03"
+            ]
+          },
+          "both_repeats_stable": true
+        },
+        {
+          "seed": 267101868,
+          "selected_ids_by_variant": {
+            "original": [
+              "k17",
+              "k17"
+            ],
+            "terminal_swap": [
+              "k03",
+              "k03"
+            ]
+          },
+          "both_repeats_stable": true
+        },
+        {
+          "seed": 752235971,
+          "selected_ids_by_variant": {
+            "original": [
+              "k17",
+              "k17"
+            ],
+            "terminal_swap": [
+              "k03",
+              "k03"
+            ]
+          },
+          "both_repeats_stable": true
+        },
+        {
+          "seed": 1292559482,
+          "selected_ids_by_variant": {
+            "original": [
+              "k17",
+              "k17"
+            ],
+            "terminal_swap": [
+              "k03",
+              "k03"
+            ]
+          },
+          "both_repeats_stable": true
+        },
+        {
+          "seed": 223674688,
+          "selected_ids_by_variant": {
+            "original": [
+              "k17",
+              "k17"
+            ],
+            "terminal_swap": [
+              "k03",
+              "k03"
+            ]
+          },
+          "both_repeats_stable": true
+        },
+        {
+          "seed": 860724506,
+          "selected_ids_by_variant": {
+            "original": [
+              "k17",
+              "k17"
+            ],
+            "terminal_swap": [
+              "k03",
+              "k03"
+            ]
+          },
+          "both_repeats_stable": true
+        },
+        {
+          "seed": 68285180,
+          "selected_ids_by_variant": {
+            "original": [
+              "k17",
+              "k17"
+            ],
+            "terminal_swap": [
+              "k03",
+              "k03"
+            ]
+          },
+          "both_repeats_stable": true
+        }
+      ],
+      "strata": {
+        "sequence": {
+          "ABBA": {
+            "original": {
+              "assigned": 10,
+              "observed": 10,
+              "selected_ids": {
+                "k17": 10
+              },
+              "shallow_success": 0
+            },
+            "terminal_swap": {
+              "assigned": 10,
+              "observed": 10,
+              "selected_ids": {
+                "k03": 10
+              },
+              "shallow_success": 10
+            }
+          },
+          "BAAB": {
+            "original": {
+              "assigned": 10,
+              "observed": 10,
+              "selected_ids": {
+                "k17": 10
+              },
+              "shallow_success": 0
+            },
+            "terminal_swap": {
+              "assigned": 10,
+              "observed": 10,
+              "selected_ids": {
+                "k03": 10
+              },
+              "shallow_success": 10
+            }
+          }
+        },
+        "period": {
+          "0": {
+            "original": {
+              "assigned": 5,
+              "observed": 5,
+              "selected_ids": {
+                "k17": 5
+              },
+              "shallow_success": 0
+            },
+            "terminal_swap": {
+              "assigned": 5,
+              "observed": 5,
+              "selected_ids": {
+                "k03": 5
+              },
+              "shallow_success": 5
+            }
+          },
+          "1": {
+            "original": {
+              "assigned": 5,
+              "observed": 5,
+              "selected_ids": {
+                "k17": 5
+              },
+              "shallow_success": 0
+            },
+            "terminal_swap": {
+              "assigned": 5,
+              "observed": 5,
+              "selected_ids": {
+                "k03": 5
+              },
+              "shallow_success": 5
+            }
+          },
+          "2": {
+            "original": {
+              "assigned": 5,
+              "observed": 5,
+              "selected_ids": {
+                "k17": 5
+              },
+              "shallow_success": 0
+            },
+            "terminal_swap": {
+              "assigned": 5,
+              "observed": 5,
+              "selected_ids": {
+                "k03": 5
+              },
+              "shallow_success": 5
+            }
+          },
+          "3": {
+            "original": {
+              "assigned": 5,
+              "observed": 5,
+              "selected_ids": {
+                "k17": 5
+              },
+              "shallow_success": 0
+            },
+            "terminal_swap": {
+              "assigned": 5,
+              "observed": 5,
+              "selected_ids": {
+                "k03": 5
+              },
+              "shallow_success": 5
+            }
+          }
+        },
+        "previous_variant": {
+          "None": {
+            "original": {
+              "assigned": 1,
+              "observed": 1,
+              "selected_ids": {
+                "k17": 1
+              },
+              "shallow_success": 0
+            }
+          },
+          "original": {
+            "original": {
+              "assigned": 7,
+              "observed": 7,
+              "selected_ids": {
+                "k17": 7
+              },
+              "shallow_success": 0
+            },
+            "terminal_swap": {
+              "assigned": 13,
+              "observed": 13,
+              "selected_ids": {
+                "k03": 13
+              },
+              "shallow_success": 13
+            }
+          },
+          "terminal_swap": {
+            "original": {
+              "assigned": 12,
+              "observed": 12,
+              "selected_ids": {
+                "k17": 12
+              },
+              "shallow_success": 0
+            },
+            "terminal_swap": {
+              "assigned": 7,
+              "observed": 7,
+              "selected_ids": {
+                "k03": 7
+              },
+              "shallow_success": 7
+            }
+          }
+        },
+        "repeat_distance": {
+          "1": {
+            "original": {
+              "assigned": 5,
+              "observed": 5,
+              "selected_ids": {
+                "k17": 5
+              },
+              "shallow_success": 0
+            },
+            "terminal_swap": {
+              "assigned": 5,
+              "observed": 5,
+              "selected_ids": {
+                "k03": 5
+              },
+              "shallow_success": 5
+            }
+          },
+          "3": {
+            "original": {
+              "assigned": 5,
+              "observed": 5,
+              "selected_ids": {
+                "k17": 5
+              },
+              "shallow_success": 0
+            },
+            "terminal_swap": {
+              "assigned": 5,
+              "observed": 5,
+              "selected_ids": {
+                "k03": 5
+              },
+              "shallow_success": 5
+            }
+          },
+          "None": {
+            "original": {
+              "assigned": 10,
+              "observed": 10,
+              "selected_ids": {
+                "k17": 10
+              },
+              "shallow_success": 0
+            },
+            "terminal_swap": {
+              "assigned": 10,
+              "observed": 10,
+              "selected_ids": {
+                "k03": 10
+              },
+              "shallow_success": 10
+            }
+          }
+        },
+        "prompt_eval_cached_count": {
+          "0": {
+            "original": {
+              "assigned": 1,
+              "observed": 1,
+              "selected_ids": {
+                "k17": 1
+              },
+              "shallow_success": 0
+            }
+          },
+          "28": {
+            "original": {
+              "assigned": 12,
+              "observed": 12,
+              "selected_ids": {
+                "k17": 12
+              },
+              "shallow_success": 0
+            },
+            "terminal_swap": {
+              "assigned": 13,
+              "observed": 13,
+              "selected_ids": {
+                "k03": 13
+              },
+              "shallow_success": 13
+            }
+          },
+          "280": {
+            "original": {
+              "assigned": 7,
+              "observed": 7,
+              "selected_ids": {
+                "k17": 7
+              },
+              "shallow_success": 0
+            },
+            "terminal_swap": {
+              "assigned": 7,
+              "observed": 7,
+              "selected_ids": {
+                "k03": 7
+              },
+              "shallow_success": 7
+            }
+          }
+        }
+      },
+      "independent_problem_count": 1,
+      "unique_seed_blocks": 10
+    },
+    "compatible_in_each_separate_run": [
+      "first_terminal"
+    ],
+    "pooled_effect_estimate": null,
+    "new_model_inference": false,
+    "actual_D": null,
+    "limits": [
+      "Matching a rule-selection prediction does not establish an internal mechanism.",
+      "Historical runs are separate evidence, not randomized layout contrasts.",
+      "Repeated seeds do not create independent problem samples.",
+      "Integrity verification is not external execution attestation."
+    ]
+  },
+  "independent_problem_count": 1,
+  "seed_blocks": 10,
+  "actual_D": null,
+  "pooled_effect_estimate": null,
+  "new_model_inference": false,
+  "limits": [
+    "Direction insensitivity is scoped to one wording, layout, model and problem.",
+    "Rule ID selection does not measure a generated proof DAG.",
+    "Repeated seeds and historical runs are not independent new problems.",
+    "Hashes prove internal consistency, not external execution authenticity."
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "contract": "v062-scope-check-r1",
+  "evidence_hashes_unchanged": true,
+  "all_manifest_files_match_working_source": true,
+  "checkonly_plan_matches_final_source_fingerprint": true,
+  "python_fingerprint_files": 325,
+  "tracked_status": " M llm_experiments/v061/probe/tools/analyze_v060.py\n M llm_experiments/v061/probe/tools/verify_v061.py\n",
+  "initial_tracked_changes_preserved": true,
+  "new_model_inference": false
+}

@@ -1,0 +1,204 @@
+[2026-09-13 12:27:24] Repository: D:\codex\AI논문\thought-graph-simulator
+[2026-09-13 12:27:24] Python: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe
+[2026-09-13 12:27:24] Log: D:\codex\AI논문\thought-graph-simulator\llm_experiments\v061\results_llm\automation_logs\v061_20260913_122724_452\run.log
+[2026-09-13 12:27:24] v058 reference evidence: D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\results_llm\v058_order_02_evidence.zip
+[2026-09-13 12:27:24] v060 diagnostic evidence: D:\codex\AI논문\thought-graph-simulator\llm_experiments\v060\results_llm\v060_position_01_evidence.zip
+[2026-09-13 12:27:24] START: v061 self-test
+[2026-09-13 12:27:24] COMMAND: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -B -m direction_choice_v061 selftest
+[2026-09-13 12:27:25] test_balanced_full_schedule_and_history (tests.test_design_measure.DesignTests.test_balanced_full_schedule_and_history) ... ok
+[2026-09-13 12:27:26] test_duplicate_seed_rejected (tests.test_design_measure.DesignTests.test_duplicate_seed_rejected) ... ok
+[2026-09-13 12:27:26] test_frozen_hypothesis_patterns (tests.test_design_measure.DesignTests.test_frozen_hypothesis_patterns) ... ok
+[2026-09-13 12:27:26] test_generation_does_not_import_scoring (tests.test_design_measure.DesignTests.test_generation_does_not_import_scoring) ... ok
+[2026-09-13 12:27:27] test_missing_or_duplicated_directive_is_rejected (tests.test_design_measure.DesignTests.test_missing_or_duplicated_directive_is_rejected) ... ok
+[2026-09-13 12:27:27] test_nonfinite_duplicate_json_rejected (tests.test_design_measure.DesignTests.test_nonfinite_duplicate_json_rejected) ... ok
+[2026-09-13 12:27:28] test_only_one_directive_span_differs_between_variants (tests.test_design_measure.DesignTests.test_only_one_directive_span_differs_between_variants) ... ok
+[2026-09-13 12:27:28] test_rehashed_schedule_mutation_refused (tests.test_design_measure.DesignTests.test_rehashed_schedule_mutation_refused) ... ok
+[2026-09-13 12:27:28] test_v060_analysis_predictions_and_missing_stability (tests.test_design_measure.DesignTests.test_v060_analysis_predictions_and_missing_stability) ... ok
+[2026-09-13 12:27:29] test_choice_depth_is_not_proof_depth (tests.test_design_measure.MeasurementTests.test_choice_depth_is_not_proof_depth) ... ok
+[2026-09-13 12:27:29] test_four_frozen_joint_patterns_are_separate (tests.test_design_measure.MeasurementTests.test_four_frozen_joint_patterns_are_separate) ... ok
+[2026-09-13 12:27:30] test_missing_invalid_and_wrong_goal_stay_distinct (tests.test_design_measure.MeasurementTests.test_missing_invalid_and_wrong_goal_stay_distinct) ... ok
+[2026-09-13 12:27:30] test_overall_position_and_terminal_rank_are_distinct (tests.test_design_measure.MeasurementTests.test_overall_position_and_terminal_rank_are_distinct) ... ok
+[2026-09-13 12:27:30] test_partial_summary_has_null_rates (tests.test_design_measure.MeasurementTests.test_partial_summary_has_null_rates) ... ok
+[2026-09-13 12:27:31] test_within_instability_is_not_cross_condition_difference (tests.test_design_measure.MeasurementTests.test_within_instability_is_not_cross_condition_difference) ... ok
+[2026-09-13 12:27:35] test_failed_audit_does_not_follow_report_symlink (tests.test_execution_integrity.ExecutionIntegrityTests.test_failed_audit_does_not_follow_report_symlink) ... ok
+[2026-09-13 12:27:37] test_identity_drift_after_first_block_stops (tests.test_execution_integrity.ExecutionIntegrityTests.test_identity_drift_after_first_block_stops) ... ok
+[2026-09-13 12:27:41] test_invalid_payloads_are_recorded_without_host_repair (tests.test_execution_integrity.ExecutionIntegrityTests.test_invalid_payloads_are_recorded_without_host_repair) ... ok
+[2026-09-13 12:27:43] test_metadata_failure_before_inference (tests.test_execution_integrity.ExecutionIntegrityTests.test_metadata_failure_before_inference) ... ok
+[2026-09-13 12:27:43] test_metadata_parameter_line_order_is_stable_identity (tests.test_execution_integrity.ExecutionIntegrityTests.test_metadata_parameter_line_order_is_stable_identity) ... ok
+[2026-09-13 12:27:44] test_minimal_v058_bundle_reconstructs_reference_and_checks_opposite (tests.test_execution_integrity.ExecutionIntegrityTests.test_minimal_v058_bundle_reconstructs_reference_and_checks_opposite) ... ok
+[2026-09-13 12:27:46] test_response_identity_failure_stops_without_retry (tests.test_execution_integrity.ExecutionIntegrityTests.test_response_identity_failure_stops_without_retry) ... ok
+[2026-09-13 12:27:54] test_run_artifact_mutations_are_rejected (tests.test_execution_integrity.ExecutionIntegrityTests.test_run_artifact_mutations_are_rejected) ... ok
+[2026-09-13 12:27:58] test_syntax_errors_continue_but_remain_unmeasured (tests.test_execution_integrity.ExecutionIntegrityTests.test_syntax_errors_continue_but_remain_unmeasured) ... ok
+[2026-09-13 12:28:01] test_synthetic_40_call_run_and_offline_audit (tests.test_execution_integrity.ExecutionIntegrityTests.test_synthetic_40_call_run_and_offline_audit) ... ok
+[2026-09-13 12:28:03] test_transport_failure_stops_without_retry_and_keeps_partial (tests.test_execution_integrity.ExecutionIntegrityTests.test_transport_failure_stops_without_retry_and_keeps_partial) ... ok
+[2026-09-13 12:28:09] test_complete_fake_http_bundle_is_independently_verified (tests.test_independent.IndependentTests.test_complete_fake_http_bundle_is_independently_verified) ... ok
+[2026-09-13 12:28:15] test_failed_v058_verification_cannot_be_ignored (tests.test_independent.IndependentTests.test_failed_v058_verification_cannot_be_ignored) ... ok
+[2026-09-13 12:28:21] test_invalid_rule_is_preserved_as_format_valid_choice_failure (tests.test_independent.IndependentTests.test_invalid_rule_is_preserved_as_format_valid_choice_failure) ... ok
+[2026-09-13 12:28:21] test_opposite_v058_sequence_request_mismatch_is_rejected (tests.test_independent.IndependentTests.test_opposite_v058_sequence_request_mismatch_is_rejected) ... ok
+[2026-09-13 12:28:24] test_partial_fake_http_bundle_is_not_complete (tests.test_independent.IndependentTests.test_partial_fake_http_bundle_is_not_complete) ... ok
+[2026-09-13 12:28:32] test_rehashed_manifest_cannot_hide_semantic_or_file_mutations (tests.test_independent.IndependentTests.test_rehashed_manifest_cannot_hide_semantic_or_file_mutations) ... ok
+[2026-09-13 12:28:32] test_verifier_imports_only_standard_and_prior_independent_modules (tests.test_independent.IndependentTests.test_verifier_imports_only_standard_and_prior_independent_modules) ... ok
+[2026-09-13 12:28:32] System.Management.Automation.RemoteException
+[2026-09-13 12:28:32] ----------------------------------------------------------------------
+[2026-09-13 12:28:32] Ran 33 tests in 67.465s
+[2026-09-13 12:28:32] System.Management.Automation.RemoteException
+[2026-09-13 12:28:32] OK
+[2026-09-13 12:28:32] DONE: v061 self-test
+[2026-09-13 12:28:32] START: v060 evidence reanalysis
+[2026-09-13 12:28:32] COMMAND: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -B tools\analyze_v060.py D:\codex\AI논문\thought-graph-simulator\llm_experiments\v060\results_llm\v060_position_01_evidence.zip --out D:\codex\AI논문\thought-graph-simulator\llm_experiments\v061\results_llm\automation_logs\v061_20260913_122724_452\v060_analysis.json
+[2026-09-13 12:28:34] {"groups": {"deep_first": {"assigned": 20, "observed": 20, "measured": 20, "format_valid": 20, "goal_reachable_choice": 20, "shallow_success": 0, "selected_ids": {"k17": 20}, "selected_positions": {"0": 20}, "terminal_ranks": {"0": 20}}, "shallow_first": {"assigned": 20, "observed": 20, "measured": 20, "format_valid": 20, "goal_reachable_choice": 20, "shallow_success": 20, "selected_ids": {"k03": 20}, "selected_positions": {"0": 20}, "terminal_ranks": {"0": 20}}}, "prediction_fits": {"first_terminal": {"assigned": 40, "measured": 40, "matching": 40, "full_match": true}, "first_item": {"assigned": 40, "measured": 40, "matching": 40, "full_match": true}, "absolute_second": {"assigned": 40, "measured": 40, "matching": 0, "full_match": false}, "last_terminal": {"assigned": 40, "measured": 40, "matching": 0, "full_match": false}, "fixed_shallow": {"assigned": 40, "measured": 40, "matching": 20, "full_match": false}, "fixed_deep": {"assigned": 40, "measured": 40, "matching": 20, "full_match": false}}, "compatible_in_each_separate_run": null, "receipt": {"contract": "independent-v060-r1", "bundle_sha256": "5a2aeeaf28e9b445b61f3cf78ce87c11aeea1b57cc36ba74bd772fecc15c2c68", "complete": true, "observed_calls": 40, "metadata_records": 20, "compared_fields": 882, "differences": [], "production_imports": false, "baseline_compared_fields": 1649, "limitation": "원문·계획·측정 일관성 검산이며 외부 실행 인증이나 규칙 위치·캐시·내부 기제의 인과 검증은 아니다."}}
+[2026-09-13 12:28:34] DONE: v060 evidence reanalysis
+[2026-09-13 12:28:34] Run name: v061_direction_01
+[2026-09-13 12:28:34] Contract: 40 inference calls, no automatic retry, no overwrite of existing results.
+[2026-09-13 12:28:34] START: v061 plan preparation
+[2026-09-13 12:28:34] COMMAND: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -B -m direction_choice_v061 prepare --baseline-bundle D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\results_llm\v058_order_02_evidence.zip --out D:\codex\AI논문\thought-graph-simulator\llm_experiments\v061\experiments\v061_direction_01.plan.json
+[2026-09-13 12:29:01] {
+[2026-09-13 12:29:01]   "contract": "direction-choice-v061-r1",
+[2026-09-13 12:29:01]   "plan_sha256": "0af48276d0ff65b3bbccc5d4f1967fe6738c430110b7e62cae98a8a6c36302bc",
+[2026-09-13 12:29:01]   "model_keys": [
+[2026-09-13 12:29:01]     "candidate"
+[2026-09-13 12:29:01]   ],
+[2026-09-13 12:29:01]   "modes": [
+[2026-09-13 12:29:01]     "choice"
+[2026-09-13 12:29:01]   ],
+[2026-09-13 12:29:01]   "variants": [
+[2026-09-13 12:29:01]     "shallow",
+[2026-09-13 12:29:01]     "deep"
+[2026-09-13 12:29:01]   ],
+[2026-09-13 12:29:01]   "schedule_seed": 6102026,
+[2026-09-13 12:29:01]   "boundary_cells": {
+[2026-09-13 12:29:01]     "candidate": {
+[2026-09-13 12:29:01]       "problem_id": "K01",
+[2026-09-13 12:29:01]       "arm": "original",
+[2026-09-13 12:29:01]       "direction": "shallow"
+[2026-09-13 12:29:01]     }
+[2026-09-13 12:29:01]   },
+[2026-09-13 12:29:01]   "max_calls": 40
+[2026-09-13 12:29:01] }
+[2026-09-13 12:29:01] Offline plan validation complete; no inference was performed.
+[2026-09-13 12:29:01] DONE: v061 plan preparation
+[2026-09-13 12:29:01] START: frozen plan validation
+[2026-09-13 12:29:01] COMMAND: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -B -m direction_choice_v061 show --plan D:\codex\AI논문\thought-graph-simulator\llm_experiments\v061\experiments\v061_direction_01.plan.json
+[2026-09-13 12:29:01] {
+[2026-09-13 12:29:01]   "contract": "direction-choice-v061-r1",
+[2026-09-13 12:29:01]   "plan_sha256": "0af48276d0ff65b3bbccc5d4f1967fe6738c430110b7e62cae98a8a6c36302bc",
+[2026-09-13 12:29:01]   "model_keys": [
+[2026-09-13 12:29:01]     "candidate"
+[2026-09-13 12:29:01]   ],
+[2026-09-13 12:29:01]   "modes": [
+[2026-09-13 12:29:01]     "choice"
+[2026-09-13 12:29:01]   ],
+[2026-09-13 12:29:01]   "variants": [
+[2026-09-13 12:29:01]     "shallow",
+[2026-09-13 12:29:01]     "deep"
+[2026-09-13 12:29:01]   ],
+[2026-09-13 12:29:01]   "schedule_seed": 6102026,
+[2026-09-13 12:29:01]   "boundary_cells": {
+[2026-09-13 12:29:01]     "candidate": {
+[2026-09-13 12:29:01]       "problem_id": "K01",
+[2026-09-13 12:29:01]       "arm": "original",
+[2026-09-13 12:29:01]       "direction": "shallow"
+[2026-09-13 12:29:01]     }
+[2026-09-13 12:29:01]   },
+[2026-09-13 12:29:01]   "max_calls": 40
+[2026-09-13 12:29:01] }
+[2026-09-13 12:29:01] Offline plan validation complete; no inference was performed.
+[2026-09-13 12:29:01] DONE: frozen plan validation
+[2026-09-13 12:29:01] Ollama server is available: http://127.0.0.1:11434
+[2026-09-13 12:29:01] START: v061 40-call inference run
+[2026-09-13 12:29:01] COMMAND: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -B -m direction_choice_v061 run --plan D:\codex\AI논문\thought-graph-simulator\llm_experiments\v061\experiments\v061_direction_01.plan.json --out D:\codex\AI논문\thought-graph-simulator\llm_experiments\v061\results_llm\v061_direction_01
+[2026-09-13 12:29:23] [1/40] b00_p0_shallow_r0
+[2026-09-13 12:29:29] [2/40] b00_p1_deep_r0
+[2026-09-13 12:29:29] [3/40] b00_p2_deep_r1
+[2026-09-13 12:29:29] [4/40] b00_p3_shallow_r1
+[2026-09-13 12:29:30] [5/40] b01_p0_shallow_r0
+[2026-09-13 12:29:30] [6/40] b01_p1_deep_r0
+[2026-09-13 12:29:31] [7/40] b01_p2_deep_r1
+[2026-09-13 12:29:31] [8/40] b01_p3_shallow_r1
+[2026-09-13 12:29:32] [9/40] b02_p0_deep_r0
+[2026-09-13 12:29:32] [10/40] b02_p1_shallow_r0
+[2026-09-13 12:29:32] [11/40] b02_p2_shallow_r1
+[2026-09-13 12:29:33] [12/40] b02_p3_deep_r1
+[2026-09-13 12:29:33] [13/40] b03_p0_deep_r0
+[2026-09-13 12:29:33] [14/40] b03_p1_shallow_r0
+[2026-09-13 12:29:34] [15/40] b03_p2_shallow_r1
+[2026-09-13 12:29:34] [16/40] b03_p3_deep_r1
+[2026-09-13 12:29:35] [17/40] b04_p0_deep_r0
+[2026-09-13 12:29:35] [18/40] b04_p1_shallow_r0
+[2026-09-13 12:29:35] [19/40] b04_p2_shallow_r1
+[2026-09-13 12:29:36] [20/40] b04_p3_deep_r1
+[2026-09-13 12:29:36] [21/40] b05_p0_shallow_r0
+[2026-09-13 12:29:37] [22/40] b05_p1_deep_r0
+[2026-09-13 12:29:37] [23/40] b05_p2_deep_r1
+[2026-09-13 12:29:37] [24/40] b05_p3_shallow_r1
+[2026-09-13 12:29:38] [25/40] b06_p0_shallow_r0
+[2026-09-13 12:29:38] [26/40] b06_p1_deep_r0
+[2026-09-13 12:29:39] [27/40] b06_p2_deep_r1
+[2026-09-13 12:29:39] [28/40] b06_p3_shallow_r1
+[2026-09-13 12:29:40] [29/40] b07_p0_deep_r0
+[2026-09-13 12:29:40] [30/40] b07_p1_shallow_r0
+[2026-09-13 12:29:40] [31/40] b07_p2_shallow_r1
+[2026-09-13 12:29:41] [32/40] b07_p3_deep_r1
+[2026-09-13 12:29:41] [33/40] b08_p0_shallow_r0
+[2026-09-13 12:29:42] [34/40] b08_p1_deep_r0
+[2026-09-13 12:29:42] [35/40] b08_p2_deep_r1
+[2026-09-13 12:29:42] [36/40] b08_p3_shallow_r1
+[2026-09-13 12:29:43] [37/40] b09_p0_deep_r0
+[2026-09-13 12:29:43] [38/40] b09_p1_shallow_r0
+[2026-09-13 12:29:44] [39/40] b09_p2_shallow_r1
+[2026-09-13 12:29:44] [40/40] b09_p3_deep_r1
+[2026-09-13 12:30:07] {
+[2026-09-13 12:30:07]   "data_integrity": true,
+[2026-09-13 12:30:07]   "data_complete": true,
+[2026-09-13 12:30:07]   "inference_calls": 40,
+[2026-09-13 12:30:07]   "max_inference_calls": 40,
+[2026-09-13 12:30:07]   "failure_stage": null,
+[2026-09-13 12:30:07]   "failure_kind": null,
+[2026-09-13 12:30:07]   "failure_slot_id": null,
+[2026-09-13 12:30:07]   "run_error": null
+[2026-09-13 12:30:07] }
+[2026-09-13 12:30:07] DONE: v061 40-call inference run
+[2026-09-13 12:30:07] START: run audit
+[2026-09-13 12:30:07] COMMAND: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -B -m direction_choice_v061 audit --plan D:\codex\AI논문\thought-graph-simulator\llm_experiments\v061\experiments\v061_direction_01.plan.json --run D:\codex\AI논문\thought-graph-simulator\llm_experiments\v061\results_llm\v061_direction_01
+[2026-09-13 12:30:29] {
+[2026-09-13 12:30:29]   "data_integrity": true,
+[2026-09-13 12:30:29]   "data_complete": true,
+[2026-09-13 12:30:29]   "inference_calls": 40,
+[2026-09-13 12:30:29]   "max_inference_calls": 40,
+[2026-09-13 12:30:29]   "failure_stage": null,
+[2026-09-13 12:30:29]   "failure_kind": null,
+[2026-09-13 12:30:29]   "failure_slot_id": null,
+[2026-09-13 12:30:29]   "run_error": null
+[2026-09-13 12:30:29] }
+[2026-09-13 12:30:29] DONE: run audit
+[2026-09-13 12:30:29] START: evidence ZIP creation
+[2026-09-13 12:30:29] COMMAND: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -B -m direction_choice_v061 bundle --plan D:\codex\AI논문\thought-graph-simulator\llm_experiments\v061\experiments\v061_direction_01.plan.json --run D:\codex\AI논문\thought-graph-simulator\llm_experiments\v061\results_llm\v061_direction_01 --out D:\codex\AI논문\thought-graph-simulator\llm_experiments\v061\results_llm\v061_direction_01_evidence.zip
+[2026-09-13 12:31:14] Evidence ZIP: D:\codex\AI논문\thought-graph-simulator\llm_experiments\v061\results_llm\v061_direction_01_evidence.zip
+[2026-09-13 12:31:14] {
+[2026-09-13 12:31:14]   "data_integrity": true,
+[2026-09-13 12:31:14]   "data_complete": true,
+[2026-09-13 12:31:14]   "inference_calls": 40,
+[2026-09-13 12:31:14]   "max_inference_calls": 40,
+[2026-09-13 12:31:14]   "failure_stage": null,
+[2026-09-13 12:31:14]   "failure_kind": null,
+[2026-09-13 12:31:14]   "failure_slot_id": null,
+[2026-09-13 12:31:14]   "run_error": null
+[2026-09-13 12:31:14] }
+[2026-09-13 12:31:14] DONE: evidence ZIP creation
+[2026-09-13 12:31:14] START: independent verification
+[2026-09-13 12:31:14] COMMAND: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -B tools\verify_v061.py D:\codex\AI논문\thought-graph-simulator\llm_experiments\v061\results_llm\v061_direction_01_evidence.zip --out D:\codex\AI논문\thought-graph-simulator\llm_experiments\v061\results_llm\v061_direction_01_independent.json
+[2026-09-13 12:31:16] {
+[2026-09-13 12:31:16]   "contract": "independent-v061-r1",
+[2026-09-13 12:31:16]   "bundle_sha256": "650c3f5296a37978255755e4f416b90c94184fc787bad8ae8405887d869fe4dc",
+[2026-09-13 12:31:16]   "complete": true,
+[2026-09-13 12:31:16]   "observed_calls": 40,
+[2026-09-13 12:31:16]   "metadata_records": 20,
+[2026-09-13 12:31:16]   "compared_fields": 882,
+[2026-09-13 12:31:16]   "differences": [],
+[2026-09-13 12:31:16]   "production_imports": false,
+[2026-09-13 12:31:16]   "baseline_compared_fields": 1649,
+[2026-09-13 12:31:16]   "limitation": "원문·계획·측정 일관성 검산이며 외부 실행 인증이나 규칙 위치·캐시·내부 기제의 인과 검증은 아니다."
+[2026-09-13 12:31:16] }
+[2026-09-13 12:31:16] 
+[2026-09-13 12:31:16] DONE: independent verification
+[2026-09-13 12:31:16] ALL COMPLETE: D:\codex\AI논문\thought-graph-simulator\llm_experiments\v061\results_llm\v061_direction_01_evidence.zip

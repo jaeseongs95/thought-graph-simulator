@@ -1,0 +1,38 @@
+test_balanced_full_schedule_and_history (tests.test_design_measure.DesignTests.test_balanced_full_schedule_and_history) ... ok
+test_duplicate_seed_rejected (tests.test_design_measure.DesignTests.test_duplicate_seed_rejected) ... ok
+test_frozen_hypothesis_patterns (tests.test_design_measure.DesignTests.test_frozen_hypothesis_patterns) ... ok
+test_generation_does_not_import_scoring (tests.test_design_measure.DesignTests.test_generation_does_not_import_scoring) ... ok
+test_missing_or_duplicated_directive_is_rejected (tests.test_design_measure.DesignTests.test_missing_or_duplicated_directive_is_rejected) ... ok
+test_nonfinite_duplicate_json_rejected (tests.test_design_measure.DesignTests.test_nonfinite_duplicate_json_rejected) ... ok
+test_only_one_directive_span_differs_between_variants (tests.test_design_measure.DesignTests.test_only_one_directive_span_differs_between_variants) ... ok
+test_rehashed_schedule_mutation_refused (tests.test_design_measure.DesignTests.test_rehashed_schedule_mutation_refused) ... ok
+test_v060_analysis_predictions_and_missing_stability (tests.test_design_measure.DesignTests.test_v060_analysis_predictions_and_missing_stability) ... ok
+test_choice_depth_is_not_proof_depth (tests.test_design_measure.MeasurementTests.test_choice_depth_is_not_proof_depth) ... ok
+test_four_frozen_joint_patterns_are_separate (tests.test_design_measure.MeasurementTests.test_four_frozen_joint_patterns_are_separate) ... ok
+test_missing_invalid_and_wrong_goal_stay_distinct (tests.test_design_measure.MeasurementTests.test_missing_invalid_and_wrong_goal_stay_distinct) ... ok
+test_overall_position_and_terminal_rank_are_distinct (tests.test_design_measure.MeasurementTests.test_overall_position_and_terminal_rank_are_distinct) ... ok
+test_partial_summary_has_null_rates (tests.test_design_measure.MeasurementTests.test_partial_summary_has_null_rates) ... ok
+test_within_instability_is_not_cross_condition_difference (tests.test_design_measure.MeasurementTests.test_within_instability_is_not_cross_condition_difference) ... ok
+test_failed_audit_does_not_follow_report_symlink (tests.test_execution_integrity.ExecutionIntegrityTests.test_failed_audit_does_not_follow_report_symlink) ... ok
+test_identity_drift_after_first_block_stops (tests.test_execution_integrity.ExecutionIntegrityTests.test_identity_drift_after_first_block_stops) ... ok
+test_invalid_payloads_are_recorded_without_host_repair (tests.test_execution_integrity.ExecutionIntegrityTests.test_invalid_payloads_are_recorded_without_host_repair) ... ok
+test_metadata_failure_before_inference (tests.test_execution_integrity.ExecutionIntegrityTests.test_metadata_failure_before_inference) ... ok
+test_metadata_parameter_line_order_is_stable_identity (tests.test_execution_integrity.ExecutionIntegrityTests.test_metadata_parameter_line_order_is_stable_identity) ... ok
+test_minimal_v058_bundle_reconstructs_reference_and_checks_opposite (tests.test_execution_integrity.ExecutionIntegrityTests.test_minimal_v058_bundle_reconstructs_reference_and_checks_opposite) ... ok
+test_response_identity_failure_stops_without_retry (tests.test_execution_integrity.ExecutionIntegrityTests.test_response_identity_failure_stops_without_retry) ... ok
+test_run_artifact_mutations_are_rejected (tests.test_execution_integrity.ExecutionIntegrityTests.test_run_artifact_mutations_are_rejected) ... ok
+test_syntax_errors_continue_but_remain_unmeasured (tests.test_execution_integrity.ExecutionIntegrityTests.test_syntax_errors_continue_but_remain_unmeasured) ... ok
+test_synthetic_40_call_run_and_offline_audit (tests.test_execution_integrity.ExecutionIntegrityTests.test_synthetic_40_call_run_and_offline_audit) ... ok
+test_transport_failure_stops_without_retry_and_keeps_partial (tests.test_execution_integrity.ExecutionIntegrityTests.test_transport_failure_stops_without_retry_and_keeps_partial) ... ok
+test_complete_fake_http_bundle_is_independently_verified (tests.test_independent.IndependentTests.test_complete_fake_http_bundle_is_independently_verified) ... ok
+test_failed_v058_verification_cannot_be_ignored (tests.test_independent.IndependentTests.test_failed_v058_verification_cannot_be_ignored) ... ok
+test_invalid_rule_is_preserved_as_format_valid_choice_failure (tests.test_independent.IndependentTests.test_invalid_rule_is_preserved_as_format_valid_choice_failure) ... ok
+test_opposite_v058_sequence_request_mismatch_is_rejected (tests.test_independent.IndependentTests.test_opposite_v058_sequence_request_mismatch_is_rejected) ... ok
+test_partial_fake_http_bundle_is_not_complete (tests.test_independent.IndependentTests.test_partial_fake_http_bundle_is_not_complete) ... ok
+test_rehashed_manifest_cannot_hide_semantic_or_file_mutations (tests.test_independent.IndependentTests.test_rehashed_manifest_cannot_hide_semantic_or_file_mutations) ... ok
+test_verifier_imports_only_standard_and_prior_independent_modules (tests.test_independent.IndependentTests.test_verifier_imports_only_standard_and_prior_independent_modules) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 86.510s
+
+OK

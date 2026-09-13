@@ -1,0 +1,15 @@
+{
+  "contract": "v061-direction-choice-report-r1",
+  "data_integrity": true,
+  "data_complete": true,
+  "comparative_analysis_ready": true,
+  "inference_calls": 40,
+  "max_inference_calls": 40,
+  "plan_sha256": "0af48276d0ff65b3bbccc5d4f1967fe6738c430110b7e62cae98a8a6c36302bc",
+  "event_tip": "5d9e5c0aecee016c4869de0a52ae876c2c270994cf0914ca601375ca41d25e08",
+  "run_state": "complete",
+  "failure_stage": null,
+  "failure_kind": null,
+  "failure_slot_id": null,
+  "run_error": null
+}

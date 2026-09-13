@@ -1,0 +1,11 @@
+{
+  "contract": "v062-real-request-isolation-r1",
+  "baseline_sha256": "d8fd5b2123d38023aaf7c7c0427f54ab6fe650d6b85a695790cb7a5b5b852761",
+  "source_seed_requests": 10,
+  "transformed_requests": 20,
+  "producer_independent_byte_equality": true,
+  "only_target_literal_differs_within_pair": true,
+  "non_prompt_schema_fields_preserved": true,
+  "problem_content_preserved_except_rule_array_order": true,
+  "new_model_inference": false
+}

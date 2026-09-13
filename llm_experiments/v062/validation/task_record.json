@@ -1,0 +1,19 @@
+{
+  "request": "Verify v061 evidence, judge the current research direction, create the next source and verify it.",
+  "scope": "new llm_experiments/v062 only; preserve all prior evidence and source",
+  "input_sha256": "650c3f5296a37978255755e4f416b90c94184fc787bad8ae8405887d869fe4dc",
+  "source_v061_sha256": "ee0e877ec0dd80b2210c0530e50f12aad0d55af8fd6b83a3086f32b48167e760",
+  "new_model_inference_authorized": false,
+  "panel": {
+    "risk": "MEDIUM",
+    "reviewers": ["v061_construct_review", "v061_direction_review"],
+    "requested_model": "gpt-5.6-terra",
+    "requested_reasoning": "xhigh",
+    "context": "fork_turns:none; independent neutral inputs",
+    "actual": "unverified",
+    "reason": "Creation tool returns task identifiers only.",
+    "delegation_benefit": "Independent construct-validity and research-strategy critiques while the coordinator recomputes integrity and raw measurements; no duplicated full test suites.",
+    "adaptive_review": "off",
+    "fresh_source_audit": "after general checks and immutable ZIP sealing"
+  }
+}

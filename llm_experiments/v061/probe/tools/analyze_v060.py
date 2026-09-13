@@ -61,7 +61,25 @@ def summarize(rows, variants, seeds, complete):
         stable = (all(value is False for value in changes)
                   if all(value is not None for value in changes) else None)
         seed_rows.append({'seed': seed, 'selected_ids_by_variant': joint, 'both_repeats_stable': stable})
-    return {'groups': groups, 'prediction_fits': fits, 'repeats': repeats, 'seed_rows': seed_rows}
+    strata = {}
+    for axis in ('sequence', 'period', 'previous_variant', 'repeat_distance',
+                 'prompt_eval_cached_count'):
+        values = sorted({str(r.get(axis)) for r in rows})
+        strata[axis] = {}
+        for value in values:
+            strata[axis][value] = {}
+            for variant in variants:
+                cells = [r for r in rows if str(r.get(axis)) == value and r['variant'] == variant]
+                if not cells:
+                    continue
+                seen = [r for r in cells if r['observed']]
+                strata[axis][value][variant] = {
+                    'assigned': len(cells), 'observed': len(seen),
+                    'selected_ids': dict(Counter(r['measurement']['selected_rule_id'] or 'unmeasured'
+                                                 for r in seen)),
+                    'shallow_success': sum(r['measurement']['shallow_success'] is True for r in seen)}
+    return {'groups': groups, 'prediction_fits': fits, 'repeats': repeats,
+            'seed_rows': seed_rows, 'strata': strata}
 
 
 def read_run(bundle, version):
@@ -91,7 +109,15 @@ def read_run(bundle, version):
         if problem['id'] != 'K01':
             raise ValueError('Only frozen K01 analysis is supported')
         m = independent_measure(problem, extract_payload(data[response_name], q['model']))
+        try:
+            response = load(data[response_name])
+            cache_count = response.get('prompt_eval_cached_count') if isinstance(response, dict) else None
+        except (ValueError, TypeError):
+            cache_count = None
+        if type(cache_count) is not int or cache_count < 0:
+            cache_count = None
         rows.append({**row, 'observed': True, 'rule_order': [r['id'] for r in problem['rules']],
+                     'prompt_eval_cached_count': cache_count,
                      'measurement': m, 'request_sha256': sha(data[request_name]),
                      'response_sha256': sha(data[response_name])})
     return {'version': version, 'bundle_sha256': digest, 'independent_receipt': receipt,

@@ -1,0 +1,12 @@
+{
+  "contract": "independent-v062-r1",
+  "bundle_sha256": "baea752ac1a55dc7a20b42b41ced69b3c8e126105f65deea8ebecc8dde3f09fd",
+  "complete": true,
+  "observed_calls": 40,
+  "metadata_records": 20,
+  "compared_fields": 842,
+  "differences": [],
+  "production_imports": false,
+  "baseline_compared_fields": 1649,
+  "limitation": "원문·계획·측정 일관성 검산이며 외부 실행 인증, 자유 선택, A/M 제어 또는 내부 기제의 인과 검증은 아니다."
+}

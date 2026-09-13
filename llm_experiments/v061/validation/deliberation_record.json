@@ -1,0 +1,59 @@
+{
+  "contract": "v061-deliberation-summary-r1",
+  "risk": "MEDIUM",
+  "coordinator_integration": true,
+  "blind_reviewers": 3,
+  "fresh_analysis_judge": false,
+  "fresh_source_audit_required": true,
+  "observed_redelegation": false,
+  "raw_transcripts_stored": false,
+  "shared_facts": {
+    "observed_calls": 40,
+    "metadata_records": 20,
+    "seed_blocks": 10,
+    "independent_problems": 1,
+    "deep_first_k17": 20,
+    "shallow_first_k03": 20,
+    "cross_condition_id_changes": 20,
+    "within_condition_id_changes": 0,
+    "independent_compared_fields": 882,
+    "baseline_compared_fields": 1649,
+    "actual_D": null
+  },
+  "cross_examination": [
+    {
+      "issue": "next intervention information value",
+      "initial_alternatives": ["four contemporaneous position arms", "two reachability arms"],
+      "coordinator_alternative": "fixed layout with smallest/largest directive reversal",
+      "decision": "Prioritize directive sensitivity under the narrowed single-layout question.",
+      "conditions": ["exact one-word request delta", "direction-specific scoring", "no general depth-control claim"],
+      "reviewer_agreement": ["measurement", "causal", "evidence"]
+    },
+    {
+      "issue": "v060 release audit artifact scope",
+      "r1_sha256": "4fed2f1cd053bc6679246a7ad94649b811e8b549ef930d8e033aa39a405567c5",
+      "r2_sha256": "f5bd130cbf4776ca0397a27a4ba167803c3d0edae0587333c2f77fe41cfa4c71",
+      "manifest_entries_each": 312,
+      "changed_files": ["llm_experiments/v060/probe/README.md"],
+      "python_fingerprint_entries_equal": 287,
+      "decision": "Retain r1 audit scope; do not infer ZIP edition from identical Python fingerprints or invalidate the reproduced 882-field calculation. Seal and freshly audit the completed v061 artifact."
+    },
+    {
+      "issue": "matching observational prediction versus internal mechanism",
+      "decision": "Report first-terminal compatibility separately in v059 and v060; do not pool causal effects, problem counts, or assert generated proof D."
+    }
+  ],
+  "manual_independent_preintegration_check": {
+    "source_requests": 10,
+    "only_directive_delta": "PASS",
+    "shallow_and_deep_scoring": "PASS",
+    "missing_instruction_null": "PASS",
+    "actual_D_null": "PASS",
+    "new_model_inference": false
+  },
+  "limits": [
+    "Creation tools exposed task names only; requested model and reasoning are not independently confirmed.",
+    "Reviewers share the local filesystem and trusted source utilities.",
+    "Internal evidence consistency is not external runtime attestation."
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "contract": "v062-source-audit-result-r1",
+  "audit_observation_id": "v062-source-audit-20260913T042732Z",
+  "audited_at_utc": "2026-09-13T04:27:32.2461069Z",
+  "audit_state": "completed",
+  "candidate_completion": "complete",
+  "profile": "cooperative-sealed",
+  "provider": "sealed-artifact-v1",
+  "auditor": {
+    "role": "fresh independent source auditor",
+    "participated_in_planning": false,
+    "participated_in_implementation": false,
+    "participated_in_integration": false,
+    "requested_model": "gpt-5.6-sol",
+    "requested_reasoning": "xhigh",
+    "actual_model_and_reasoning": "unverified"
+  },
+  "digests": {
+    "source_audit_input_sha256": "68cb9d0d67dfbdb3bf0c55805d55b57401b1a0bb677fba317cd0d010e5ab185b",
+    "candidate_sha256_at_start": "33830e414b93174b2fbc36ec46d4675ab8e15321abd5608db301a487d8561da4",
+    "candidate_sha256_at_end": "33830e414b93174b2fbc36ec46d4675ab8e15321abd5608db301a487d8561da4",
+    "baseline_source_sha256": "ee0e877ec0dd80b2210c0530e50f12aad0d55af8fd6b83a3086f32b48167e760",
+    "v061_evidence_sha256": "650c3f5296a37978255755e4f416b90c94184fc787bad8ae8405887d869fe4dc",
+    "v058_reference_evidence_sha256": "d8fd5b2123d38023aaf7c7c0427f54ab6fe650d6b85a695790cb7a5b5b852761",
+    "checkonly_plan_sha256": "ed9c10c2c991dba83ae42b894daa5817044b7c8e2627f694b1d785dff23c892a"
+  },
+  "sealing_evidence": {
+    "general_validation_completed_before_auditor": true,
+    "source_writers_stopped": true,
+    "candidate_was_modified_by_auditor": false,
+    "candidate_digest_stable_from_start_to_end": true,
+    "audit_input_bound_candidate_digest": true,
+    "fresh_extract_all_entries_byte_equal": true,
+    "note": "The first two facts are assertions bound in the sealed audit input; start/end digest equality and fresh-extract equality were directly recomputed by the auditor."
+  },
+  "criteria": [
+    {
+      "criterion": "C1 v061 raw evidence and limits support analysis claims",
+      "status": "pass",
+      "evidence": [
+        "v061 evidence ZIP manifest covers all 415 payload members with no hash mismatch; status is complete with 60 actions, 40 inference calls and 20 metadata events.",
+        "Direct raw-response extraction found k03 in all 40 responses: shallow 20/20 and deep 20/20; all response model fields are gemma3:4b.",
+        "A fresh analyzer invocation matched all 18 non-history fields in validation/v061_reanalysis.json; its independent receipt reports 882 compared fields and no differences.",
+        "The analysis preserves actual_D=null, independent_problem_count=1, pooled_effect_estimate=null and explicit limits on external attestation, causality and generalization."
+      ]
+    },
+    {
+      "criterion": "C2 research direction and competing perspectives are justified without claiming consensus falsely",
+      "status": "pass",
+      "evidence": [
+        "docs/V061_ANALYSIS.ko.md separates the shared limits from the disputed next-step priority, records three competing designs and their counterarguments, and calls the selected construction probe a coordinator's conditional decision rather than a vote or unanimity.",
+        "The chosen direction isolates conditional proof construction after the terminal rule is supplied and explicitly excludes free depth choice, A/M control, an internal mechanism and cross-problem generalization.",
+        "Direct checks of the protected v059 and v060 evidence support the historical first-terminal-compatible patterns while the document correctly refuses a pooled causal estimate."
+      ]
+    },
+    {
+      "criterion": "C3 A/B request differs only in target ID and freezes model/options/problem",
+      "status": "pass",
+      "evidence": [
+        "The real CheckOnly plan contains 10 unique seeds, 40 slots, 60 actions, 20 calls per arm and balanced ABBA/BAAB allocation.",
+        "Independent reconstruction of all requests matched every frozen request hash. Within each seed, repeats are byte-identical and k03-to-k17 replacement at the single target-rule instruction literal produces the opposite arm exactly.",
+        "Model, all options, facts, rule records and goal are unchanged across arms and from the selected v058 source; the common rule order is k03,k17,k10."
+      ]
+    },
+    {
+      "criterion": "C4 schema, actual parent D, strict ancestry and missingness implement protocol",
+      "status": "pass",
+      "evidence": [
+        "The production scorer validates the exact bounded graph schema, registered-rule premise multisets, facts, parent existence and uniqueness, acyclicity, final goal, target rule and full final ancestry.",
+        "D is computed from actual parent edges only after proof validity; extra unused nodes retain proof_valid=true and D while setting strict_valid=false; absent or unparsable payloads retain semantic nulls.",
+        "A seeded 5,000-case schema-valid randomized cross-check found no difference between production DFS measurement and the independent Kahn implementation."
+      ]
+    },
+    {
+      "criterion": "C5 runtime/evidence/independent verification preserve integrity and bounded no-retry execution",
+      "status": "pass_with_diagnostic",
+      "evidence": [
+        "The plan, baseline bytes, source fingerprint, ordered actions, raw request/response hashes, event chain, metadata identity, run state, exact evidence file set and independently recomputed measurements/summaries are bound and checked.",
+        "Runtime policy is 40 calls, 20 metadata records, zero warmup and no retry, repair, resume or download; transport and identity failures stop at the first fatal action.",
+        "The independent verifier does not import construction_probe_v062 or an evidence source snapshot."
+      ]
+    },
+    {
+      "criterion": "C6 tests cover complete/partial/invalid/tampered records with independent measurement",
+      "status": "pass",
+      "evidence": [
+        "Both the producer-tree and fresh-extraction selftests ran 27 tests and exited 0, covering complete synthetic execution, partial transport failure, schema and logical failures, frozen-input and rehashed-bundle tampering, request isolation and independent Kahn measurement.",
+        "A separate seven-case analyzer regression was independently reproduced: four response profiles, unobserved null, incomplete rates null and duplicate-trial rejection all passed.",
+        "The targeted randomized production/independent measurement comparison added 5,000 passing schema-valid DAG cases."
+      ]
+    },
+    {
+      "criterion": "C7 final source archive preserves prior source and passes fresh extraction tests",
+      "status": "pass",
+      "evidence": [
+        "The candidate contains 360 manifested payload files plus RELEASE_MANIFEST.json, with no duplicate, unsafe, encrypted, directory or symlink member and no CRC or manifest hash failure.",
+        "All 336 baseline payload files are present byte-for-byte and the only additions are the declared 24 v062 files.",
+        "fresh_source_r1 is byte-identical to all 361 ZIP entries, and all 360 payload files match the current workspace sources."
+      ]
+    },
+    {
+      "criterion": "C8 Windows entrypoint and documentation match behavior; actual v062 model inference not performed",
+      "status": "pass",
+      "evidence": [
+        "The real Windows CheckOnly log completed v061 reanalysis and v062 prepare/show without starting Ollama or creating inference results; its plan fingerprint matches the final source ZIP.",
+        "Run-v062.ps1 branches on CheckOnly before Ensure-LocalOllamaServer and documents/implements the actual-run path, collision-resistant run naming, no automatic retry and no model download.",
+        "README and protocol distinguish synthetic selftests, offline preparation, actual 40-call inference and later evidence verification; no actual v062 inference was performed during source construction or this audit."
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "V062-SA-D01",
+      "severity": "diagnostic",
+      "criterion": "C5 runtime/evidence/independent verification preserve integrity and bounded no-retry execution",
+      "evidence": [
+        "llm_experiments/v062/probe/tools/verify_v062.py:911 checks parse_error only for null-or-string, and line 915 compares it exactly only for valid_payload, transport_error and response_identity_error.",
+        "A targeted offline counterexample changed the first invalid_payload_schema trial's nonempty parse_error to FORGED_DIAGNOSTIC, recomputed BUNDLE_MANIFEST.json hashes, and the independent verifier still returned differences=[]."
+      ],
+      "impact": "The raw-derived status, format validity, logical measurements, aggregate rates and admission gate remain protected, so this does not change the experimental result. The human-readable per-trial parse diagnostic can nevertheless be replaced in a rehashed evidence bundle without detection, weakening later failure-cause forensics.",
+      "recommended_action": "In the next revision, independently reconstruct and compare parse_error for invalid_response and invalid_payload_schema, or store and compare a stable parse-error category; add a rehashed parse_error mutation regression.",
+      "confidence": "high; reproduced against the sealed source logic with a temporary synthetic fixture",
+      "unverified": []
+    }
+  ],
+  "validation_summary": {
+    "recorded_selftests": {
+      "producer_tree": "27 tests, exit 0",
+      "fresh_extract": "27 tests, exit 0"
+    },
+    "direct_checks": [
+      "All declared validation-file SHA-256 values in source_audit_input.json matched.",
+      "Candidate/baseline manifests, preserved-file bytes, fresh extraction and current source bytes matched.",
+      "v061 raw evidence, stored reanalysis, historical v059/v060 patterns and request isolation were recomputed.",
+      "The real plan yielded 20 unique transformed requests across 40 scheduled slots, with each same-condition repeat byte-identical.",
+      "5,000 randomized DAG measurements matched between production and independent algorithms.",
+      "Seven analyzer regressions passed.",
+      "One parse_error integrity counterexample reproduced the diagnostic finding."
+    ],
+    "actual_llm_or_ollama_activity": false,
+    "full_suite_repeated_by_auditor": false
+  },
+  "unverified": [
+    "The actual model and reasoning setting used for the earlier review panel are not returned by the creation tool; only gpt-5.6-terra/xhigh was requested in task_record.json.",
+    "The earlier panel's raw reviewer transcripts were not bound into source_audit_input.json, so this audit verifies the integrated competing arguments and evidence rather than reviewer transcript provenance.",
+    "v061 hashes and internal records do not externally attest that inference occurred on the claimed host or exclude same-principal fabrication.",
+    "cooperative-sealed/sealed-artifact-v1 does not defend against a malicious same-OS-user coordinator; no native-atomic-host or external attestation was requested.",
+    "Actual v062 LLM behavior remains unobserved by design because no v062 inference was authorized or run."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "contract": "v061-analyzer-regression-r1",
+  "cases": [
+    "directive_sensitive",
+    "fixed_shallow_or_first_terminal",
+    "fixed_deep",
+    "reverse_direction",
+    "unobserved_null",
+    "incomplete_rates_null",
+    "duplicate_trial_rejected"
+  ],
+  "passed": 7,
+  "synthetic_mutations": true,
+  "new_model_inference": false
+}

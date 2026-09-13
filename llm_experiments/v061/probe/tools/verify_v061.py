@@ -123,7 +123,8 @@ def schedule(reference):
                 distance = period - prior['period']
             slot = {**base,
                     'id': f'b{block:02d}_p{period}_{variant}_r{repeat}',
-                    'reference_slot_id': old['id'], 'task': 'direction', 'direction': variant,
+                    'reference_slot_id': old['id'], 'task': 'direction',
+                    'direction': variant, 'role_id': variant,
                     'stage': 'choice', 'position': len(result), 'block': block,
                     'period': period, 'seed_index': seeds.index(seed),
                     'variant': variant, 'repeat': repeat, 'sequence': sequence,
@@ -370,7 +371,9 @@ def independent_summary(plan, trials, calls, complete):
             'seed': seed, 'sequence': rows[0]['sequence'],
             'slot_ids': [row['id'] for row in rows],
             'selected_rule_ids_A0_A1_B0_B1': selected,
-            'shallow_A0_A1_B0_B1': matches,
+            'instruction_A0_A1_B0_B1': matches,
+            'shallow_A0_A1_B0_B1': [row['measurement']['shallow_success']
+                                   if row['measurement'] else None for row in rows],
             'mean_B_minus_A': ((sum(matches[2:]) - sum(matches[:2])) / 2
                                if all(value is not None for value in matches) else None),
             'stable_within_both': ((selected[0] == selected[1]
@@ -389,6 +392,9 @@ def independent_summary(plan, trials, calls, complete):
                 'measured_pairs': measured,
                 'selected_rule_comparable_pairs': comparable,
                 'selected_rule_changed_pairs': changes,
+                'both_success_and_changed_pairs': sum(
+                    row['outcome'] == 'both_success'
+                    and row['selected_rule_changed'] is True for row in rows),
                 'selected_rule_changed_rate': changes / count
                     if complete and comparable == count else None,
                 'outcomes': {key: counts[key] for key in
@@ -401,17 +407,21 @@ def independent_summary(plan, trials, calls, complete):
         seen = [row for row in rows if row['observed']]
         measured = sum(row['role_match'] is not None for row in seen)
         success = sum(row['role_match'] is True for row in seen)
+        shallow = sum(row['measurement']['shallow_success'] is True for row in seen)
+        shallow_measured = sum(row['measurement']['shallow_success'] is not None for row in seen)
         return {'assigned_calls': len(rows), 'observed_calls': len(seen),
                 'format_valid': sum(row['measurement']['format_valid'] for row in seen),
                 'choice_valid': sum(row['measurement']['choice_valid'] is True for row in seen),
                 'goal_reachable_choice': sum(row['measurement']['goal_reachable_choice'] is True for row in seen),
-                'shallow_success': success, 'unmeasured': len(seen) - measured,
+                'shallow_success': shallow, 'unmeasured': len(seen) - measured,
                 'instruction_fulfilled': sum(row['measurement']['instruction_fulfilled'] is True for row in seen),
                 'selected_rule_positions': dict(collections.Counter(
                     str(row['measurement']['selected_rule_position']) if row['measurement']['selected_rule_position'] is not None else 'unmeasured' for row in seen)),
                 'terminal_ranks': dict(collections.Counter(
                     str(row['measurement']['terminal_rank']) if row['measurement']['terminal_rank'] is not None else 'unmeasured' for row in seen)),
-                'shallow_rate': success / len(rows)
+                'shallow_rate': shallow / len(rows)
+                    if complete and shallow_measured == len(rows) else None,
+                'instruction_rate': success / len(rows)
                     if complete and measured == len(rows) else None,
                 'selected_rule_ids': dict(collections.Counter(
                     row['measurement']['selected_rule_id'] or 'unmeasured' for row in seen)),
@@ -454,17 +464,18 @@ def independent_summary(plan, trials, calls, complete):
 def independent_summary_ko(report):
     """Render the frozen human-readable contract from independently computed data."""
     lines = [
-        '# v061 K01 terminal 위치 진단', '',
+        '# v061 K01 지시 방향 민감도', '',
         f"무결성: {report['data_integrity']} / 완료: {report['data_complete']} / 호출: {report['inference_calls']}/40 / 출처: {report['evidence_kind']}", '',
         '10개 seed 블록에서 각 조건을 두 번 관측한다. 40호출은 독립 문제 40개가 아니다.',
-        '선택 규칙의 implied_depth는 실제 생성 증명의 D가 아니다. 선택 ID·전체 위치·terminal 순위·goal 도달성·shallow 지시 이행을 분리한다.',
-        '두 배열은 first-terminal과 absolute-second 가설에 반대 예측을 주지만 k10 후치, 캐시와 더 넓은 위치 기제는 식별하지 못한다.', '',
-        '|조건|관측|형식 유효|goal 도달 선택|지시 이행|미측정|',
-        '|---|---:|---:|---:|---:|---:|',
+        '선택 규칙의 implied_depth는 실제 생성 증명의 D가 아니다. 선택 ID·위치·terminal 순위·goal 도달성·shallow 선택·방향별 지시 이행을 분리한다.',
+        '두 조건의 rules는 모두 [k03,k17,k10]이다. shallow/deep 지시 한 단어만 바뀌므로 이 배열의 좁은 지시 민감도만 검사한다.',
+        '사전 판정은 k03/k17=direction-sensitive, k03/k03=first-terminal 또는 fixed-shallow, k17/k17=fixed-deep, k17/k03=역방향이며 기타·누락·반복 불일치는 별도 패턴이다.', '',
+        '|조건|관측|형식 유효|goal 도달 선택|shallow 선택|지시 이행|미측정|',
+        '|---|---:|---:|---:|---:|---:|---:|',
     ]
     for variant in VARIANTS:
         group = report['variants'][variant]
-        lines.append(f"|{variant}|{group['observed_calls']}/20|{group['format_valid']}|{group['goal_reachable_choice']}|{group['instruction_fulfilled']}|{group['unmeasured']}|")
+        lines.append(f"|{variant}|{group['observed_calls']}/20|{group['format_valid']}|{group['goal_reachable_choice']}|{group['shallow_success']}|{group['instruction_fulfilled']}|{group['unmeasured']}|")
     lines.append('')
     for variant in VARIANTS:
         group = report['variants'][variant]
@@ -473,6 +484,8 @@ def independent_summary_ko(report):
     lines.extend([
         f"seed별 평균 B−A: {report['seed_mean_B_minus_A']}",
         f"조건 간 선택 ID 변화: {report['cross_variant']['selected_rule_changed_pairs']}/20 대응 비교",
+        f"양쪽 지시 이행과 ID 변화 동시 충족: {report['cross_variant']['both_success_and_changed_pairs']}/20 대응 비교",
+        'B−A만으로 양쪽 이행과 양쪽 불이행을 구분할 수 없으므로 paired outcome과 ID 변화를 함께 본다.',
         '위 20개 비교는 seed 10개에 중첩된다. 조건별 반복 불일치와 sequence/period/직전 조건/반복 간격별 표는 summary.json에서 함께 확인한다.',
         '미완료이거나 해당 비교에 미측정이 있으면 전체 비율은 null이다. metadata는 캐시 초기화가 아니며 첫 호출도 과거 이력을 가질 수 있다.', '',
         f"계획 SHA-256: {report['plan_sha256']}", f"event tip: {report['event_tip']}",
@@ -504,7 +517,7 @@ def verify(bundle):
     need(set(status) == status_fields, 'status exact fields')
     need(plan == load(data['run/plan.snapshot.json']), 'plan snapshot')
     need(plan['contract'] == 'direction-choice-v061-r1'
-         and plan['software_version'] == '0.60.0'
+         and plan['software_version'] == '0.61.0'
          and type(plan['max_calls']) is int and plan['max_calls'] == MAX_CALLS,
          'design contract/version')
     need(type(manifest.get('data_complete')) is bool, 'manifest complete type')
@@ -569,7 +582,11 @@ def verify(bundle):
                       if slot['variant'] == 'shallow')
         changed = next(request_bytes[slot['id']] for slot in rows
                        if slot['variant'] == 'deep')
-        need(source != changed, 'variant request bytes equal')
+        shallow_span = SHALLOW_DIRECTIVE.encode('utf-8')
+        deep_span = DEEP_DIRECTIVE.encode('utf-8')
+        need(source.count(shallow_span) == 1
+             and source.replace(shallow_span, deep_span, 1) == changed,
+             'only the direction directive may differ between arms')
 
     fingerprint = plan['source_fingerprint']
     trusted = {}
@@ -698,7 +715,7 @@ def verify(bundle):
             failure, record_status, payload = call_status(
                 response_raw, plan['identities']['candidate']['model'],
                 event['http_status'], event['transport_error'])
-            measurement = independent_measure(problem, payload)
+            measurement = independent_measure(problem, payload, slot['direction'])
             trial = stored[slot_id]
             need(set(trial['measurement']) == measurement_fields,
                  'measurement exact fields')
@@ -721,7 +738,7 @@ def verify(bundle):
                 # checking every semantic field and the diagnostic value type.
                 measurement['errors'] = trial['measurement']['errors']
             eq(slot_id + '/role_match', trial['role_match'],
-               measurement['shallow_success'])
+               measurement['instruction_fulfilled'])
             eq(slot_id + '/observed', trial['observed'], True)
             eq(slot_id + '/status', trial['status'], record_status)
             need(trial['parse_error'] is None
@@ -731,7 +748,7 @@ def verify(bundle):
                 eq(slot_id + '/parse_error', trial['parse_error'], None)
             observed[slot_id] = {**slot, 'observed': True,
                                  'measurement': measurement,
-                                 'role_match': measurement['shallow_success'],
+                                 'role_match': measurement['instruction_fulfilled'],
                                  'status': record_status,
                                  'parse_error': trial['parse_error']}
             call_rows.append(slot_id)
