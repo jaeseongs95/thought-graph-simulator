@@ -1,0 +1,283 @@
+{
+  "model": "qwen3:4b-instruct",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "problems": [
+    {
+      "id": "T02",
+      "facts": [
+        "Lp",
+        "Ls"
+      ],
+      "rules": [
+        {
+          "id": "r83",
+          "premises": [
+            "Lp",
+            "Ls"
+          ],
+          "conclusion": "Lg"
+        },
+        {
+          "id": "r21",
+          "premises": [
+            "Lp"
+          ],
+          "conclusion": "Lq"
+        },
+        {
+          "id": "r57",
+          "premises": [
+            "Lq",
+            "Ls"
+          ],
+          "conclusion": "Lr"
+        },
+        {
+          "id": "r04",
+          "premises": [
+            "Lr"
+          ],
+          "conclusion": "Lt"
+        },
+        {
+          "id": "r69",
+          "premises": [
+            "Lt"
+          ],
+          "conclusion": "Lg"
+        }
+      ],
+      "goal": "Lg"
+    },
+    {
+      "id": "E01_shared_fork",
+      "facts": [
+        "Aa",
+        "Ab"
+      ],
+      "rules": [
+        {
+          "id": "n08",
+          "premises": [
+            "Aa"
+          ],
+          "conclusion": "Ax"
+        },
+        {
+          "id": "n52",
+          "premises": [
+            "Aa",
+            "Ab"
+          ],
+          "conclusion": "Ag"
+        },
+        {
+          "id": "n37",
+          "premises": [
+            "Ax",
+            "Ay",
+            "Ab"
+          ],
+          "conclusion": "Ag"
+        },
+        {
+          "id": "n91",
+          "premises": [
+            "Aa"
+          ],
+          "conclusion": "Ay"
+        },
+        {
+          "id": "n64",
+          "premises": [
+            "Ab"
+          ],
+          "conclusion": "Az"
+        }
+      ],
+      "goal": "Ag"
+    },
+    {
+      "id": "E02_two_vs_four",
+      "facts": [
+        "Pa",
+        "Pb",
+        "Pc"
+      ],
+      "rules": [
+        {
+          "id": "m33",
+          "premises": [
+            "Pa"
+          ],
+          "conclusion": "Pu"
+        },
+        {
+          "id": "m76",
+          "premises": [
+            "Ps",
+            "Pc"
+          ],
+          "conclusion": "Pg"
+        },
+        {
+          "id": "m18",
+          "premises": [
+            "Pa",
+            "Pb"
+          ],
+          "conclusion": "Ps"
+        },
+        {
+          "id": "m05",
+          "premises": [
+            "Pu",
+            "Pb"
+          ],
+          "conclusion": "Pv"
+        },
+        {
+          "id": "m41",
+          "premises": [
+            "Pw"
+          ],
+          "conclusion": "Pg"
+        },
+        {
+          "id": "m84",
+          "premises": [
+            "Pv",
+            "Pc"
+          ],
+          "conclusion": "Pw"
+        }
+      ],
+      "goal": "Pg"
+    }
+  ],
+  "depth_ranges": {
+    "T02": [
+      1,
+      4
+    ],
+    "E01_shared_fork": [
+      1,
+      2
+    ],
+    "E02_two_vs_four": [
+      2,
+      4
+    ]
+  },
+  "seeds": [
+    64001001,
+    64001002
+  ],
+  "num_predict": 4096,
+  "timeout_seconds": 300,
+  "historical_problem_roles": {
+    "T02": "v064_development",
+    "E01_shared_fork": "v064_evaluation_now_seen",
+    "E02_two_vs_four": "v064_evaluation_now_seen"
+  },
+  "contract": "v069-guided-append-positive-control-r1",
+  "baseline_sha256": "4206bfaacef17b811e232d05a458bbd9b90e8661d69dba3cd2feaf4f11790ad2",
+  "prior_verifier_source_sha256": "ee9734f552fc6405f3015922cc250f338bc9054447c57f09e22f4e21c6049d20",
+  "max_inference_calls": 54,
+  "metadata_records": 12,
+  "generation_token_upper_bound": 221184,
+  "request_utf8_byte_limit": 32768,
+  "reference_plans": {
+    "T02": {
+      "reference_short": [
+        "r83"
+      ],
+      "reference_long": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ]
+    },
+    "E01_shared_fork": {
+      "reference_short": [
+        "n52"
+      ],
+      "reference_long": [
+        "n08",
+        "n91",
+        "n37"
+      ]
+    },
+    "E02_two_vs_four": {
+      "reference_short": [
+        "m18",
+        "m76"
+      ],
+      "reference_long": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ]
+    }
+  },
+  "conditions": [
+    "reference_short",
+    "reference_long"
+  ],
+  "orders": [
+    [
+      "reference_short",
+      "reference_long"
+    ],
+    [
+      "reference_long",
+      "reference_short"
+    ],
+    [
+      "reference_short",
+      "reference_long"
+    ],
+    [
+      "reference_long",
+      "reference_short"
+    ],
+    [
+      "reference_short",
+      "reference_long"
+    ],
+    [
+      "reference_long",
+      "reference_short"
+    ]
+  ],
+  "no_warmup": true,
+  "automatic_retry": false,
+  "host_output_repair": false,
+  "no_result_based_gate": true,
+  "A": "not_measured",
+  "M": "not_measured",
+  "D_instruction_control": "not_measured",
+  "independent_holdout": false,
+  "original_v068_plan_sha256": "5a60829231d11c8bb06be661346dada4ff6aa20e38ee594c59c8ebcc12d0f8c4",
+  "assigned_trials": 12,
+  "fact_calls": 12,
+  "rule_calls": 30,
+  "final_calls": 12,
+  "input_provenance": "Experimenter supplies complete correct route AND a precommitted rule-by-rule schedule; not autonomous selection.",
+  "research_claim": "Feasibility of a guided append-only proof constructor on 12 known problem/seed/route trials. NOT D instruction control.",
+  "prior_architecture": "v068 direct 4/12 and staged 8/12 preserved; both 12/12 gates failed; nodes-to-final contrast CLOSED.",
+  "stopping": "One 54-call maximum batch. No retries, regeneration, new seed loops, or automatic follow-up. Logical/schema failures are carried unchanged.",
+  "decision_rule": "complete and 12 measured: 12/12 = scoped guided constructor; 0 = close; partial = preserve and close. Any unmeasured/incomplete = null.",
+  "comparison_limit": "Single-arm positive control, NOT a contemporaneous comparison with v068. Added per-step rule instruction, changed output schema and call count; no causal/budget/generalization claim.",
+  "history_input": "All earlier responses in the same trial as untouched content strings plus source slot and raw-envelope SHA. No parsed nodes/answers supplied by host.",
+  "graph_assembly": "Concatenate model facts.nodes then each model rule.node in scheduled order; copy model final.final_node_id. No addition, pruning, rename, parent repair or candidate extraction.",
+  "step_contract": "facts outputs initial fact nodes only; each rule call emits exactly one node using its requested rule and existing parent IDs; final references a model-produced goal node.",
+  "headers": {
+    "common": "이 실험은 실험자가 제공한 정상 참조 경로를 단계별로 실행하는 양성 대조다. 경로를 자율 선택하는 과제가 아니다.\n각 호출의 원응답은 수정 없이 다음 호출에 전달된다. 호스트는 정답 노드·부모·최종 ID를 대신 만들거나 실패를 교정하지 않는다.\nproblem의 facts, rules, goal은 고정이다. provided_route_plan의 규칙 순서와 이번 operation을 따른다.\nhistory의 content는 앞선 모델 응답의 원문이다. 그 안의 오류를 고치거나 이전 노드를 다시 쓰지 않는다.",
+    "facts": "초기 사실 노드들만 nodes 배열로 작성한다. problem.facts의 모든 원자를 한 번씩 포함한다. 각 id는 직접 정하고 서로 달라야 한다. rule은 null, parents는 []다. 규칙 적용 노드나 final_node_id를 만들지 않는다.",
+    "rule": "operation.requested_rule_id의 규칙을 적용한 새로운 노드 하나만 node에 작성한다.\n노드의 id, atom, rule, parents는 직접 작성한다. rule에는 실제 적용한 규칙 ID를, parents에는 history에 이미 나온 실제 전제 노드 ID들을 쓴다.\n새 id는 앞선 노드와 겹치지 않아야 한다. 규칙의 모든 전제를 빠짐없이 연결한다. 이전 노드·사실·다른 경로·추가 노드를 출력하지 않는다.\n앞선 응답이 틀려도 노드를 수정하거나 누락 사실을 보충하지 않는다. 가능한 응답을 그대로 내며 앞 단계 실패는 보존된다.",
+    "final": "history에서 만들어진 목표 증명의 마지막 노드의 실제 id를 final_node_id에 지정한다.\n노드·부모·규칙·사실을 추가하거나 수정하지 않는다. 원자 문자열이나 규칙 이름을 노드 ID로 추측하지 않는다.\n앞 단계가 틀렸다면 마지막 ID만 맞아도 전체 증명 성공이 아니다."
+  }
+}

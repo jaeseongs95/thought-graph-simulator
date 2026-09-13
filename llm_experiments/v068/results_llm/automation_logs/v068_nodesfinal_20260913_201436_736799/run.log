@@ -1,0 +1,96 @@
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_logic.py', '-v']
+test_bad_nodes_not_repaired_by_valid_final (test_logic.Logic.test_bad_nodes_not_repaired_by_valid_final) ... ok
+test_budget_overflow_unmeasured (test_logic.Logic.test_budget_overflow_unmeasured) ... ok
+test_direct_byte_identical_to_actual_v067_requests (test_logic.Logic.test_direct_byte_identical_to_actual_v067_requests) ... ok
+test_duplicate_json_key_rejected (test_logic.Logic.test_duplicate_json_key_rejected) ... ok
+test_endpoint_loopback_only (test_logic.Logic.test_endpoint_loopback_only) ... ok
+test_extra_nodes_not_pruned (test_logic.Logic.test_extra_nodes_not_pruned) ... ok
+test_frozen_36_calls (test_logic.Logic.test_frozen_36_calls) ... ok
+test_full_synthetic_summaries_independent (test_logic.Logic.test_full_synthetic_summaries_independent) ... ok
+test_independent_import_boundary (test_logic.Logic.test_independent_import_boundary) ... ok
+test_invalid_raw_transferred_exactly (test_logic.Logic.test_invalid_raw_transferred_exactly) ... ok
+test_missing_final_not_guessed (test_logic.Logic.test_missing_final_not_guessed) ... ok
+test_missing_results_null_not_zero_D (test_logic.Logic.test_missing_results_null_not_zero_D) ... ok
+test_nan_rejected (test_logic.Logic.test_nan_rejected) ... ok
+test_nodes_and_final_schemas (test_logic.Logic.test_nodes_and_final_schemas) ... ok
+test_reference_depths (test_logic.Logic.test_reference_depths) ... ok
+test_seed_and_arm_balance (test_logic.Logic.test_seed_and_arm_balance) ... ok
+test_semantics_independent_perturbations (test_logic.Logic.test_semantics_independent_perturbations) ... ok
+test_unsafe_archive_path_rejected (test_logic.Logic.test_unsafe_archive_path_rejected) ... ok
+test_upstream_extra_field_rejected (test_logic.Logic.test_upstream_extra_field_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 1.631s
+
+OK
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'run.py', 'prepare', '--baseline', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v067\\results_llm\\v067_reference_20260913_192953_571655_evidence.zip', '--run-name', 'v068_nodesfinal_20260913_201436_736799', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v068\\experiments\\v068_nodesfinal_20260913_201436_736799.plan.json']
+{
+  "prepared": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v068\\experiments\\v068_nodesfinal_20260913_201436_736799.plan.json",
+  "new_model_inference": false,
+  "max_inference_calls_when_executed": 12,
+  "plan_sha256": "5a60829231d11c8bb06be661346dada4ff6aa20e38ee594c59c8ebcc12d0f8c4"
+}
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'run.py', 'execute', '--plan', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v068\\experiments\\v068_nodesfinal_20260913_201436_736799.plan.json', '--baseline', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v067\\results_llm\\v067_reference_20260913_192953_571655_evidence.zip', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v068\\results_llm\\v068_nodesfinal_20260913_201436_736799', '--endpoint', 'http://127.0.0.1:11434']
+1/48: b00_before
+2/48: b00_p0_reference_short_direct
+3/48: b00_p0_reference_short_nodes
+4/48: b00_p0_reference_short_final
+5/48: b00_p0_reference_long_nodes
+6/48: b00_p0_reference_long_final
+7/48: b00_p0_reference_long_direct
+8/48: b00_after
+9/48: b01_before
+10/48: b01_p0_reference_long_direct
+11/48: b01_p0_reference_long_nodes
+12/48: b01_p0_reference_long_final
+13/48: b01_p0_reference_short_nodes
+14/48: b01_p0_reference_short_final
+15/48: b01_p0_reference_short_direct
+16/48: b01_after
+17/48: b02_before
+18/48: b02_p1_reference_short_nodes
+19/48: b02_p1_reference_short_final
+20/48: b02_p1_reference_short_direct
+21/48: b02_p1_reference_long_direct
+22/48: b02_p1_reference_long_nodes
+23/48: b02_p1_reference_long_final
+24/48: b02_after
+25/48: b03_before
+26/48: b03_p1_reference_long_nodes
+27/48: b03_p1_reference_long_final
+28/48: b03_p1_reference_long_direct
+29/48: b03_p1_reference_short_direct
+30/48: b03_p1_reference_short_nodes
+31/48: b03_p1_reference_short_final
+32/48: b03_after
+33/48: b04_before
+34/48: b04_p2_reference_short_direct
+35/48: b04_p2_reference_short_nodes
+36/48: b04_p2_reference_short_final
+37/48: b04_p2_reference_long_nodes
+38/48: b04_p2_reference_long_final
+39/48: b04_p2_reference_long_direct
+40/48: b04_after
+41/48: b05_before
+42/48: b05_p2_reference_long_direct
+43/48: b05_p2_reference_long_nodes
+44/48: b05_p2_reference_long_final
+45/48: b05_p2_reference_short_nodes
+46/48: b05_p2_reference_short_final
+47/48: b05_p2_reference_short_direct
+48/48: b05_after
+{
+  "state": "complete",
+  "evidence_zip": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v068\\results_llm\\v068_nodesfinal_20260913_201436_736799_evidence.zip",
+  "independent_verification": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v068\\results_llm\\v068_nodesfinal_20260913_201436_736799_independent.json",
+  "inference_calls": 36
+}
+
+EXIT 0

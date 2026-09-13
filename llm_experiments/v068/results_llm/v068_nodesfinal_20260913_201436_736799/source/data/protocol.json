@@ -1,0 +1,277 @@
+{
+  "model": "qwen3:4b-instruct",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "problems": [
+    {
+      "id": "T02",
+      "facts": [
+        "Lp",
+        "Ls"
+      ],
+      "rules": [
+        {
+          "id": "r83",
+          "premises": [
+            "Lp",
+            "Ls"
+          ],
+          "conclusion": "Lg"
+        },
+        {
+          "id": "r21",
+          "premises": [
+            "Lp"
+          ],
+          "conclusion": "Lq"
+        },
+        {
+          "id": "r57",
+          "premises": [
+            "Lq",
+            "Ls"
+          ],
+          "conclusion": "Lr"
+        },
+        {
+          "id": "r04",
+          "premises": [
+            "Lr"
+          ],
+          "conclusion": "Lt"
+        },
+        {
+          "id": "r69",
+          "premises": [
+            "Lt"
+          ],
+          "conclusion": "Lg"
+        }
+      ],
+      "goal": "Lg"
+    },
+    {
+      "id": "E01_shared_fork",
+      "facts": [
+        "Aa",
+        "Ab"
+      ],
+      "rules": [
+        {
+          "id": "n08",
+          "premises": [
+            "Aa"
+          ],
+          "conclusion": "Ax"
+        },
+        {
+          "id": "n52",
+          "premises": [
+            "Aa",
+            "Ab"
+          ],
+          "conclusion": "Ag"
+        },
+        {
+          "id": "n37",
+          "premises": [
+            "Ax",
+            "Ay",
+            "Ab"
+          ],
+          "conclusion": "Ag"
+        },
+        {
+          "id": "n91",
+          "premises": [
+            "Aa"
+          ],
+          "conclusion": "Ay"
+        },
+        {
+          "id": "n64",
+          "premises": [
+            "Ab"
+          ],
+          "conclusion": "Az"
+        }
+      ],
+      "goal": "Ag"
+    },
+    {
+      "id": "E02_two_vs_four",
+      "facts": [
+        "Pa",
+        "Pb",
+        "Pc"
+      ],
+      "rules": [
+        {
+          "id": "m33",
+          "premises": [
+            "Pa"
+          ],
+          "conclusion": "Pu"
+        },
+        {
+          "id": "m76",
+          "premises": [
+            "Ps",
+            "Pc"
+          ],
+          "conclusion": "Pg"
+        },
+        {
+          "id": "m18",
+          "premises": [
+            "Pa",
+            "Pb"
+          ],
+          "conclusion": "Ps"
+        },
+        {
+          "id": "m05",
+          "premises": [
+            "Pu",
+            "Pb"
+          ],
+          "conclusion": "Pv"
+        },
+        {
+          "id": "m41",
+          "premises": [
+            "Pw"
+          ],
+          "conclusion": "Pg"
+        },
+        {
+          "id": "m84",
+          "premises": [
+            "Pv",
+            "Pc"
+          ],
+          "conclusion": "Pw"
+        }
+      ],
+      "goal": "Pg"
+    }
+  ],
+  "depth_ranges": {
+    "T02": [
+      1,
+      4
+    ],
+    "E01_shared_fork": [
+      1,
+      2
+    ],
+    "E02_two_vs_four": [
+      2,
+      4
+    ]
+  },
+  "seeds": [
+    64001001,
+    64001002
+  ],
+  "num_predict": 4096,
+  "timeout_seconds": 300,
+  "historical_problem_roles": {
+    "T02": "v064_development",
+    "E01_shared_fork": "v064_evaluation_now_seen",
+    "E02_two_vs_four": "v064_evaluation_now_seen"
+  },
+  "contract": "v068-nodes-then-final-positive-control-r1",
+  "baseline_sha256": "68ab53158bdbcdbd1f079be1b1400950cd881d12191a0a8ac307d582444b205f",
+  "prior_verifier_source_sha256": "39844126a460298af87ca9b447f1110fee710aa36c65f3a443d2a3ad874f7b63",
+  "max_inference_calls": 36,
+  "metadata_records": 12,
+  "generation_token_upper_bound": 147456,
+  "request_utf8_byte_limit": 32768,
+  "reference_plans": {
+    "T02": {
+      "reference_short": [
+        "r83"
+      ],
+      "reference_long": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ]
+    },
+    "E01_shared_fork": {
+      "reference_short": [
+        "n52"
+      ],
+      "reference_long": [
+        "n08",
+        "n91",
+        "n37"
+      ]
+    },
+    "E02_two_vs_four": {
+      "reference_short": [
+        "m18",
+        "m76"
+      ],
+      "reference_long": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ]
+    }
+  },
+  "conditions": [
+    "reference_short",
+    "reference_long"
+  ],
+  "orders": [
+    [
+      "reference_short",
+      "reference_long"
+    ],
+    [
+      "reference_long",
+      "reference_short"
+    ],
+    [
+      "reference_short",
+      "reference_long"
+    ],
+    [
+      "reference_long",
+      "reference_short"
+    ],
+    [
+      "reference_short",
+      "reference_long"
+    ],
+    [
+      "reference_long",
+      "reference_short"
+    ]
+  ],
+  "input_provenance": "experimenter_verified_reference; correct ordered rule list supplied; not model_generated_plan",
+  "research_claim": "supplied-reference reconstruction: contemporaneous direct versus nodes-only then model-selected final ID. NOT autonomous D control",
+  "prior_architecture": "v067 partial 4/12 retained. One bounded interface contrast motivated by three isolated missing-final failures; no host correction of v067.",
+  "no_warmup": true,
+  "automatic_retry": false,
+  "host_output_repair": false,
+  "no_result_based_gate": true,
+  "A": "not_measured",
+  "M": "not_measured",
+  "D_instruction_control": "not_measured",
+  "independent_holdout": false,
+  "stopping": "one fixed 36-call batch; no automatic retries or new prompt/seed/model runs. End this limited diagnostic branch after this batch.",
+  "decision_rule": "all arm trials measured: 12/12 constructor available only in that arm; zero closes that interface; partial preserved. Any incomplete/unmeasured: overall null. No automatic follow-up.",
+  "comparison_limit": "two-stage arm uses two calls and different output schemas; not budget matched, not proof of JSON-order/internal-model cause, not new-problem generalization",
+  "original_v067_plan_sha256": "1d88337db00c2ede3fc26e72a359e62867e43f2ea17fed1b04d77afcf7327710",
+  "final_input": "exact previous envelope message.content plus source ID and SHA-256; no candidate extraction or correction",
+  "final_assembly": "nodes copied unchanged from first model payload; final_node_id copied unchanged from second payload; neither answer computed by host",
+  "headers": {
+    "nodes": "제공된 참조 계획의 모든 규칙을 주어진 순서대로 사용하여 goal을 지지하는 증명 하나의 nodes 배열만 작성한다.\n모든 노드는 하나의 목표 증명에 실제로 사용되어야 한다. 다른 대안 경로나 불필요 노드를 포함하지 않는다.\nnodes는 위상 순서의 id, atom, rule, parents 배열이다. 초기 사실의 rule은 null이고 parents는 []다.\n규칙 적용의 rule은 실제 규칙 id이며 parents에는 이미 작성한 모든 전제 노드의 실제 id를 쓴다.\n초기 사실 노드, 노드 id, 부모 연결 및 목표 도출 노드는 직접 작성한다.\n이 단계에서는 final_node_id를 출력하지 않는다. 다음 별도 모델 호출이 이 원문을 보고 최종 노드 id를 지정한다.",
+    "final": "nodes_response.content는 앞선 모델이 출력한 노드 배열의 원문이다. 호스트가 고치거나 정답 노드를 선택한 것이 아니다.\n그 배열에서 주어진 참조 경로의 goal을 지지하는 최종 노드의 실제 id를 final_node_id로 지정한다.\n원자 이름이나 규칙 이름을 추측해서 넣지 말고 출력된 노드의 실제 id를 사용한다.\n노드·규칙·부모를 추가·삭제·치환하거나 배열을 다시 작성하지 않는다. 이전 응답의 오류를 고치지 않는다.\n이 단계는 최종 id만 출력한다. 앞 단계가 틀렸다면 마지막 id가 맞아도 전체 증명 성공이 아니다.",
+    "reference": "아래 provided_route_plan은 실험자가 사전에 검증한 정답 규칙 경로다. 모델이 선택한 계획이 아니다. 규칙과 순서를 변경하지 않는다."
+  }
+}

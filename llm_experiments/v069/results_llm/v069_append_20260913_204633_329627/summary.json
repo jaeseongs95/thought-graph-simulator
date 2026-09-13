@@ -1,0 +1,2770 @@
+{
+  "contract": "v069-report-r1",
+  "run_name": "v069_append_20260913_204633_329627",
+  "provenance": "live",
+  "plan_sha256": "6d247f4a6a6ada3b927a83d9ba2e381458a32a252b855b50d47b924c5db5d35e",
+  "state": "complete",
+  "full_complete": true,
+  "assigned_calls": 54,
+  "observed_calls": 54,
+  "rows": [
+    {
+      "id": "b00_p0_reference_short_facts",
+      "trial_id": "b00_p0_reference_short",
+      "block": 0,
+      "period": 0,
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "stage": "facts",
+      "operation_index": 0,
+      "rule_position": null,
+      "requested_rule_id": null,
+      "history_ids": [],
+      "reference_rule_ids": [
+        "r83"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": null,
+      "previous_condition": null,
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 553,
+        "eval_count": 41,
+        "total_duration": 2972217300,
+        "prompt_eval_cached_count": 0
+      },
+      "response_sha256": "5131373a6ec2eef2add3ae10605c4712a4e69746922030a2828630a5d2d510d7",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b00_p0_reference_short_rule_00",
+      "trial_id": "b00_p0_reference_short",
+      "block": 0,
+      "period": 1,
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 1,
+      "rule_position": 0,
+      "requested_rule_id": "r83",
+      "history_ids": [
+        "b00_p0_reference_short_facts"
+      ],
+      "reference_rule_ids": [
+        "r83"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b00_p0_reference_short_facts",
+      "previous_condition": "reference_short",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 770,
+        "eval_count": 31,
+        "total_duration": 701163400,
+        "prompt_eval_cached_count": 155
+      },
+      "response_sha256": "91d6fc9c5cb2bee5b644b9a4d1a2d895b1b19f4dbe6497c75da99c2363b15191",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b00_p0_reference_short_final",
+      "trial_id": "b00_p0_reference_short",
+      "block": 0,
+      "period": 2,
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "stage": "final",
+      "operation_index": 2,
+      "rule_position": null,
+      "requested_rule_id": null,
+      "history_ids": [
+        "b00_p0_reference_short_facts",
+        "b00_p0_reference_short_rule_00"
+      ],
+      "reference_rule_ids": [
+        "r83"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b00_p0_reference_short_rule_00",
+      "previous_condition": "reference_short",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 711,
+        "eval_count": 10,
+        "total_duration": 366456300,
+        "prompt_eval_cached_count": 155
+      },
+      "response_sha256": "17bc17d09345e3d6367a62d5af5288bbdbc7c0893f31408587e03b9c8e5ef1ab",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b00_p0_reference_long_facts",
+      "trial_id": "b00_p0_reference_long",
+      "block": 0,
+      "period": 3,
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "facts",
+      "operation_index": 0,
+      "rule_position": null,
+      "requested_rule_id": null,
+      "history_ids": [],
+      "reference_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b00_p0_reference_short_final",
+      "previous_condition": "reference_short",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 565,
+        "eval_count": 43,
+        "total_duration": 711111300,
+        "prompt_eval_cached_count": 524
+      },
+      "response_sha256": "16a8d2f721f6e85b0114c01d9d922cbd671fbc5b513fa0dc42dae23d88a20349",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b00_p0_reference_long_rule_00",
+      "trial_id": "b00_p0_reference_long",
+      "block": 0,
+      "period": 4,
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 1,
+      "rule_position": 0,
+      "requested_rule_id": "r21",
+      "history_ids": [
+        "b00_p0_reference_long_facts"
+      ],
+      "reference_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b00_p0_reference_long_facts",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 782,
+        "eval_count": 29,
+        "total_duration": 544915600,
+        "prompt_eval_cached_count": 608
+      },
+      "response_sha256": "54773495ba2e9158ed109a2905050d29576896c837b29a638c72fc136d8d213a",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b00_p0_reference_long_rule_01",
+      "trial_id": "b00_p0_reference_long",
+      "block": 0,
+      "period": 5,
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 2,
+      "rule_position": 1,
+      "requested_rule_id": "r57",
+      "history_ids": [
+        "b00_p0_reference_long_facts",
+        "b00_p0_reference_long_rule_00"
+      ],
+      "reference_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b00_p0_reference_long_rule_00",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 902,
+        "eval_count": 58,
+        "total_duration": 879018800,
+        "prompt_eval_cached_count": 633
+      },
+      "response_sha256": "d122eed6c5b6544489ee0522b2328fb2b15d4d226916a59d8af938b33ea32de5",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b00_p0_reference_long_rule_02",
+      "trial_id": "b00_p0_reference_long",
+      "block": 0,
+      "period": 6,
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 3,
+      "rule_position": 2,
+      "requested_rule_id": "r04",
+      "history_ids": [
+        "b00_p0_reference_long_facts",
+        "b00_p0_reference_long_rule_00",
+        "b00_p0_reference_long_rule_01"
+      ],
+      "reference_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b00_p0_reference_long_rule_01",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 1053,
+        "eval_count": 50,
+        "total_duration": 822109700,
+        "prompt_eval_cached_count": 633
+      },
+      "response_sha256": "a78a1710c36fcbb5f037bcc506c3c698fd7bf8510bccf74f516e380b655963d6",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b00_p0_reference_long_rule_03",
+      "trial_id": "b00_p0_reference_long",
+      "block": 0,
+      "period": 7,
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 4,
+      "rule_position": 3,
+      "requested_rule_id": "r69",
+      "history_ids": [
+        "b00_p0_reference_long_facts",
+        "b00_p0_reference_long_rule_00",
+        "b00_p0_reference_long_rule_01",
+        "b00_p0_reference_long_rule_02"
+      ],
+      "reference_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b00_p0_reference_long_rule_02",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 1194,
+        "eval_count": 51,
+        "total_duration": 874360500,
+        "prompt_eval_cached_count": 633
+      },
+      "response_sha256": "f79ae0d7b0c7c50f2d3c67c23520ab7bc330032a83b5ba39cec495db9e4fe827",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b00_p0_reference_long_final",
+      "trial_id": "b00_p0_reference_long",
+      "block": 0,
+      "period": 8,
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "final",
+      "operation_index": 5,
+      "rule_position": null,
+      "requested_rule_id": null,
+      "history_ids": [
+        "b00_p0_reference_long_facts",
+        "b00_p0_reference_long_rule_00",
+        "b00_p0_reference_long_rule_01",
+        "b00_p0_reference_long_rule_02",
+        "b00_p0_reference_long_rule_03"
+      ],
+      "reference_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b00_p0_reference_long_rule_03",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 1159,
+        "eval_count": 11,
+        "total_duration": 460248700,
+        "prompt_eval_cached_count": 433
+      },
+      "response_sha256": "077c1b946979f4189447a67020f85d97fb4f4a3db7cccc8f77acdf87e5e8c2f9",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b01_p0_reference_long_facts",
+      "trial_id": "b01_p0_reference_long",
+      "block": 1,
+      "period": 0,
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "facts",
+      "operation_index": 0,
+      "rule_position": null,
+      "requested_rule_id": null,
+      "history_ids": [],
+      "reference_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b00_p0_reference_long_final",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 565,
+        "eval_count": 39,
+        "total_duration": 686351600,
+        "prompt_eval_cached_count": 564
+      },
+      "response_sha256": "0c694fd33c2216733e52642c3a5c4795da6f7532e0e1b79715748c06f3662895",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b01_p0_reference_long_rule_00",
+      "trial_id": "b01_p0_reference_long",
+      "block": 1,
+      "period": 1,
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 1,
+      "rule_position": 0,
+      "requested_rule_id": "r21",
+      "history_ids": [
+        "b01_p0_reference_long_facts"
+      ],
+      "reference_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b01_p0_reference_long_facts",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 783,
+        "eval_count": 25,
+        "total_duration": 552627200,
+        "prompt_eval_cached_count": 633
+      },
+      "response_sha256": "ce39e5a114540592600ec579e551cf9f077e0fa4dbceb97174f68b5e63ec95a7",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b01_p0_reference_long_rule_01",
+      "trial_id": "b01_p0_reference_long",
+      "block": 1,
+      "period": 2,
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 2,
+      "rule_position": 1,
+      "requested_rule_id": "r57",
+      "history_ids": [
+        "b01_p0_reference_long_facts",
+        "b01_p0_reference_long_rule_00"
+      ],
+      "reference_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b01_p0_reference_long_rule_00",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 894,
+        "eval_count": 52,
+        "total_duration": 862189800,
+        "prompt_eval_cached_count": 633
+      },
+      "response_sha256": "802f569233d4d6e743769a794ca8c7bab48d29a5f6a719567cde94d5ad8cad07",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b01_p0_reference_long_rule_02",
+      "trial_id": "b01_p0_reference_long",
+      "block": 1,
+      "period": 3,
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 3,
+      "rule_position": 2,
+      "requested_rule_id": "r04",
+      "history_ids": [
+        "b01_p0_reference_long_facts",
+        "b01_p0_reference_long_rule_00",
+        "b01_p0_reference_long_rule_01"
+      ],
+      "reference_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b01_p0_reference_long_rule_01",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 1039,
+        "eval_count": 46,
+        "total_duration": 861506800,
+        "prompt_eval_cached_count": 633
+      },
+      "response_sha256": "7df20071b19cb4cfee9a071d6142b137ab45cf4f761390e1318616312a2d6b0c",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b01_p0_reference_long_rule_03",
+      "trial_id": "b01_p0_reference_long",
+      "block": 1,
+      "period": 4,
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 4,
+      "rule_position": 3,
+      "requested_rule_id": "r69",
+      "history_ids": [
+        "b01_p0_reference_long_facts",
+        "b01_p0_reference_long_rule_00",
+        "b01_p0_reference_long_rule_01",
+        "b01_p0_reference_long_rule_02"
+      ],
+      "reference_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b01_p0_reference_long_rule_02",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 1178,
+        "eval_count": 47,
+        "total_duration": 874347100,
+        "prompt_eval_cached_count": 633
+      },
+      "response_sha256": "dc29a0632c6bde6661361263eeeb6a2ee07eb04bc46d65dc9607de1a67e73603",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b01_p0_reference_long_final",
+      "trial_id": "b01_p0_reference_long",
+      "block": 1,
+      "period": 5,
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "final",
+      "operation_index": 5,
+      "rule_position": null,
+      "requested_rule_id": null,
+      "history_ids": [
+        "b01_p0_reference_long_facts",
+        "b01_p0_reference_long_rule_00",
+        "b01_p0_reference_long_rule_01",
+        "b01_p0_reference_long_rule_02",
+        "b01_p0_reference_long_rule_03"
+      ],
+      "reference_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b01_p0_reference_long_rule_03",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 1138,
+        "eval_count": 9,
+        "total_duration": 437469500,
+        "prompt_eval_cached_count": 475
+      },
+      "response_sha256": "80b8aa0f2691ba250ed7062a8748b351820c32b33ed6146e408882324a790ac0",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b01_p0_reference_short_facts",
+      "trial_id": "b01_p0_reference_short",
+      "block": 1,
+      "period": 6,
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "stage": "facts",
+      "operation_index": 0,
+      "rule_position": null,
+      "requested_rule_id": null,
+      "history_ids": [],
+      "reference_rule_ids": [
+        "r83"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b01_p0_reference_long_final",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 553,
+        "eval_count": 39,
+        "total_duration": 666360800,
+        "prompt_eval_cached_count": 524
+      },
+      "response_sha256": "1307c9f432adbdeda9d92f7a799bd21df04f73f9ba70c28f9225422b7a492941",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b01_p0_reference_short_rule_00",
+      "trial_id": "b01_p0_reference_short",
+      "block": 1,
+      "period": 7,
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 1,
+      "rule_position": 0,
+      "requested_rule_id": "r83",
+      "history_ids": [
+        "b01_p0_reference_short_facts"
+      ],
+      "reference_rule_ids": [
+        "r83"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b01_p0_reference_short_facts",
+      "previous_condition": "reference_short",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 766,
+        "eval_count": 28,
+        "total_duration": 570238400,
+        "prompt_eval_cached_count": 608
+      },
+      "response_sha256": "fd9825f93972ce7c337dfd1bbe2841dab21fb0b69626d2e05d04fcdf83348300",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b01_p0_reference_short_final",
+      "trial_id": "b01_p0_reference_short",
+      "block": 1,
+      "period": 8,
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "stage": "final",
+      "operation_index": 2,
+      "rule_position": null,
+      "requested_rule_id": null,
+      "history_ids": [
+        "b01_p0_reference_short_facts",
+        "b01_p0_reference_short_rule_00"
+      ],
+      "reference_rule_ids": [
+        "r83"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b01_p0_reference_short_rule_00",
+      "previous_condition": "reference_short",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 701,
+        "eval_count": 9,
+        "total_duration": 331020600,
+        "prompt_eval_cached_count": 433
+      },
+      "response_sha256": "21217b06a409f69bb342d4284f45723d674df3cbf16bcf5e8f5f3489efe7a7ee",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b02_p1_reference_short_facts",
+      "trial_id": "b02_p1_reference_short",
+      "block": 2,
+      "period": 0,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "stage": "facts",
+      "operation_index": 0,
+      "rule_position": null,
+      "requested_rule_id": null,
+      "history_ids": [],
+      "reference_rule_ids": [
+        "n52"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b01_p0_reference_short_final",
+      "previous_condition": "reference_short",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 549,
+        "eval_count": 73,
+        "total_duration": 1178263600,
+        "prompt_eval_cached_count": 387
+      },
+      "response_sha256": "2310bde838acf95f3c0718ef2d225419cd8a75a3b2a76edba2e3c1be9842bce5",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b02_p1_reference_short_rule_00",
+      "trial_id": "b02_p1_reference_short",
+      "block": 2,
+      "period": 1,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 1,
+      "rule_position": 0,
+      "requested_rule_id": "n52",
+      "history_ids": [
+        "b02_p1_reference_short_facts"
+      ],
+      "reference_rule_ids": [
+        "n52"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b02_p1_reference_short_facts",
+      "previous_condition": "reference_short",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 804,
+        "eval_count": 54,
+        "total_duration": 1006501300,
+        "prompt_eval_cached_count": 471
+      },
+      "response_sha256": "d945d48d41afc7c5ec3a50a19e97d59a28c0f4bed6db5ea74641071037801752",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b02_p1_reference_short_final",
+      "trial_id": "b02_p1_reference_short",
+      "block": 2,
+      "period": 2,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "stage": "final",
+      "operation_index": 2,
+      "rule_position": null,
+      "requested_rule_id": null,
+      "history_ids": [
+        "b02_p1_reference_short_facts",
+        "b02_p1_reference_short_rule_00"
+      ],
+      "reference_rule_ids": [
+        "n52"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b02_p1_reference_short_rule_00",
+      "previous_condition": "reference_short",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 774,
+        "eval_count": 10,
+        "total_duration": 397798700,
+        "prompt_eval_cached_count": 296
+      },
+      "response_sha256": "85f3588afde8dcc0c60ceccf365231b9546fee1a59c10a41ed26abeda6d47a3b",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b02_p1_reference_long_facts",
+      "trial_id": "b02_p1_reference_long",
+      "block": 2,
+      "period": 3,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "facts",
+      "operation_index": 0,
+      "rule_position": null,
+      "requested_rule_id": null,
+      "history_ids": [],
+      "reference_rule_ids": [
+        "n08",
+        "n91",
+        "n37"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b02_p1_reference_short_final",
+      "previous_condition": "reference_short",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 557,
+        "eval_count": 75,
+        "total_duration": 1224742000,
+        "prompt_eval_cached_count": 520
+      },
+      "response_sha256": "cd003012c6980d91d1a70ba8467dd82a461ec9230a58c93b7bca7af613a2b954",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b02_p1_reference_long_rule_00",
+      "trial_id": "b02_p1_reference_long",
+      "block": 2,
+      "period": 4,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 1,
+      "rule_position": 0,
+      "requested_rule_id": "n08",
+      "history_ids": [
+        "b02_p1_reference_long_facts"
+      ],
+      "reference_rule_ids": [
+        "n08",
+        "n91",
+        "n37"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b02_p1_reference_long_facts",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 817,
+        "eval_count": 50,
+        "total_duration": 986917300,
+        "prompt_eval_cached_count": 604
+      },
+      "response_sha256": "9e1e161db88b1f59b80c56227a6c42e9064dc8180f803fa14a08ba93d25c25a1",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b02_p1_reference_long_rule_01",
+      "trial_id": "b02_p1_reference_long",
+      "block": 2,
+      "period": 5,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 2,
+      "rule_position": 1,
+      "requested_rule_id": "n91",
+      "history_ids": [
+        "b02_p1_reference_long_facts",
+        "b02_p1_reference_long_rule_00"
+      ],
+      "reference_rule_ids": [
+        "n08",
+        "n91",
+        "n37"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b02_p1_reference_long_rule_00",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 962,
+        "eval_count": 50,
+        "total_duration": 1112089900,
+        "prompt_eval_cached_count": 625
+      },
+      "response_sha256": "2bcc6875153df03b9828b918cf75da7510a9bca386201c318881d8c662fed293",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b02_p1_reference_long_rule_02",
+      "trial_id": "b02_p1_reference_long",
+      "block": 2,
+      "period": 6,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 3,
+      "rule_position": 2,
+      "requested_rule_id": "n37",
+      "history_ids": [
+        "b02_p1_reference_long_facts",
+        "b02_p1_reference_long_rule_00",
+        "b02_p1_reference_long_rule_01"
+      ],
+      "reference_rule_ids": [
+        "n08",
+        "n91",
+        "n37"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b02_p1_reference_long_rule_01",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 1103,
+        "eval_count": 64,
+        "total_duration": 1381554300,
+        "prompt_eval_cached_count": 625
+      },
+      "response_sha256": "af5d751b69188d98451f6d428b5220a68c5f8ebeb531c2b8aa1c244c12e926db",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b02_p1_reference_long_final",
+      "trial_id": "b02_p1_reference_long",
+      "block": 2,
+      "period": 7,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "final",
+      "operation_index": 4,
+      "rule_position": null,
+      "requested_rule_id": null,
+      "history_ids": [
+        "b02_p1_reference_long_facts",
+        "b02_p1_reference_long_rule_00",
+        "b02_p1_reference_long_rule_01",
+        "b02_p1_reference_long_rule_02"
+      ],
+      "reference_rule_ids": [
+        "n08",
+        "n91",
+        "n37"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b02_p1_reference_long_rule_02",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 1086,
+        "eval_count": 11,
+        "total_duration": 718908900,
+        "prompt_eval_cached_count": 429
+      },
+      "response_sha256": "c0c0415abf538ed87c5f7a362d42330ee1ccbf3947e62e2a8e682e6b679c44ee",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b03_p1_reference_long_facts",
+      "trial_id": "b03_p1_reference_long",
+      "block": 3,
+      "period": 0,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "facts",
+      "operation_index": 0,
+      "rule_position": null,
+      "requested_rule_id": null,
+      "history_ids": [],
+      "reference_rule_ids": [
+        "n08",
+        "n91",
+        "n37"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b02_p1_reference_long_final",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 557,
+        "eval_count": 75,
+        "total_duration": 1533764600,
+        "prompt_eval_cached_count": 556
+      },
+      "response_sha256": "491ca016d4bbe7d6788736ae092972a572910e255527f6f21f204870ce6be27c",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b03_p1_reference_long_rule_00",
+      "trial_id": "b03_p1_reference_long",
+      "block": 3,
+      "period": 1,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 1,
+      "rule_position": 0,
+      "requested_rule_id": "n08",
+      "history_ids": [
+        "b03_p1_reference_long_facts"
+      ],
+      "reference_rule_ids": [
+        "n08",
+        "n91",
+        "n37"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b03_p1_reference_long_facts",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 817,
+        "eval_count": 50,
+        "total_duration": 1204352300,
+        "prompt_eval_cached_count": 625
+      },
+      "response_sha256": "868b9a73d5f1c8ecfb945a45b8a7784adadb5dac2a3d81fad8ed9ccea71d237d",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b03_p1_reference_long_rule_01",
+      "trial_id": "b03_p1_reference_long",
+      "block": 3,
+      "period": 2,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 2,
+      "rule_position": 1,
+      "requested_rule_id": "n91",
+      "history_ids": [
+        "b03_p1_reference_long_facts",
+        "b03_p1_reference_long_rule_00"
+      ],
+      "reference_rule_ids": [
+        "n08",
+        "n91",
+        "n37"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b03_p1_reference_long_rule_00",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 954,
+        "eval_count": 50,
+        "total_duration": 1067967800,
+        "prompt_eval_cached_count": 625
+      },
+      "response_sha256": "b06bc0efe1121c06bbf8fa9c8b495ccfd650d2e3d315ac38942af9b5e4bb3a52",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b03_p1_reference_long_rule_02",
+      "trial_id": "b03_p1_reference_long",
+      "block": 3,
+      "period": 3,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 3,
+      "rule_position": 2,
+      "requested_rule_id": "n37",
+      "history_ids": [
+        "b03_p1_reference_long_facts",
+        "b03_p1_reference_long_rule_00",
+        "b03_p1_reference_long_rule_01"
+      ],
+      "reference_rule_ids": [
+        "n08",
+        "n91",
+        "n37"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b03_p1_reference_long_rule_01",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 1093,
+        "eval_count": 64,
+        "total_duration": 1226263600,
+        "prompt_eval_cached_count": 625
+      },
+      "response_sha256": "17a12058b0e445f39f33375de036c308f181772aa0a74aa903f62d0109b99d01",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b03_p1_reference_long_final",
+      "trial_id": "b03_p1_reference_long",
+      "block": 3,
+      "period": 4,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "final",
+      "operation_index": 4,
+      "rule_position": null,
+      "requested_rule_id": null,
+      "history_ids": [
+        "b03_p1_reference_long_facts",
+        "b03_p1_reference_long_rule_00",
+        "b03_p1_reference_long_rule_01",
+        "b03_p1_reference_long_rule_02"
+      ],
+      "reference_rule_ids": [
+        "n08",
+        "n91",
+        "n37"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b03_p1_reference_long_rule_02",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 1078,
+        "eval_count": 11,
+        "total_duration": 602760700,
+        "prompt_eval_cached_count": 467
+      },
+      "response_sha256": "e3a23085f48c7ab72d101fa11343490a00d9956414a9f0e3569f36d2b1334048",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b03_p1_reference_short_facts",
+      "trial_id": "b03_p1_reference_short",
+      "block": 3,
+      "period": 5,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "stage": "facts",
+      "operation_index": 0,
+      "rule_position": null,
+      "requested_rule_id": null,
+      "history_ids": [],
+      "reference_rule_ids": [
+        "n52"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b03_p1_reference_long_final",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 549,
+        "eval_count": 75,
+        "total_duration": 1368151400,
+        "prompt_eval_cached_count": 520
+      },
+      "response_sha256": "a77ef91ff8bd5a66aa24c6de48ee11c2836b759cb3ee5d6c99497c7dca34416a",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b03_p1_reference_short_rule_00",
+      "trial_id": "b03_p1_reference_short",
+      "block": 3,
+      "period": 6,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 1,
+      "rule_position": 0,
+      "requested_rule_id": "n52",
+      "history_ids": [
+        "b03_p1_reference_short_facts"
+      ],
+      "reference_rule_ids": [
+        "n52"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b03_p1_reference_short_facts",
+      "previous_condition": "reference_short",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 806,
+        "eval_count": 33,
+        "total_duration": 794460300,
+        "prompt_eval_cached_count": 604
+      },
+      "response_sha256": "6fa1c46f0123417e75d271af5be70235d7a0152812f8ed351c2491910ec85c1b",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b03_p1_reference_short_final",
+      "trial_id": "b03_p1_reference_short",
+      "block": 3,
+      "period": 7,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "stage": "final",
+      "operation_index": 2,
+      "rule_position": null,
+      "requested_rule_id": null,
+      "history_ids": [
+        "b03_p1_reference_short_facts",
+        "b03_p1_reference_short_rule_00"
+      ],
+      "reference_rule_ids": [
+        "n52"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b03_p1_reference_short_rule_00",
+      "previous_condition": "reference_short",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 751,
+        "eval_count": 11,
+        "total_duration": 433938400,
+        "prompt_eval_cached_count": 429
+      },
+      "response_sha256": "786512c5ac81c5042c08f55b91134359017443fee184cd6d22489745920ec268",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b04_p2_reference_short_facts",
+      "trial_id": "b04_p2_reference_short",
+      "block": 4,
+      "period": 0,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "stage": "facts",
+      "operation_index": 0,
+      "rule_position": null,
+      "requested_rule_id": null,
+      "history_ids": [],
+      "reference_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b03_p1_reference_short_final",
+      "previous_condition": "reference_short",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 580,
+        "eval_count": 111,
+        "total_duration": 1785406100,
+        "prompt_eval_cached_count": 389
+      },
+      "response_sha256": "51c4fa02d4db3dad3b3cda0e091752fd2f59ae6f13a76eb41c343eb2eb5e06c6",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b04_p2_reference_short_rule_00",
+      "trial_id": "b04_p2_reference_short",
+      "block": 4,
+      "period": 1,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 1,
+      "rule_position": 0,
+      "requested_rule_id": "m18",
+      "history_ids": [
+        "b04_p2_reference_short_facts"
+      ],
+      "reference_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b04_p2_reference_short_facts",
+      "previous_condition": "reference_short",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 879,
+        "eval_count": 60,
+        "total_duration": 1185124500,
+        "prompt_eval_cached_count": 473
+      },
+      "response_sha256": "be3c5aec4ea74db7ffd0276c9d7b07f7b605e5558abe27a2bc8948913b9f434a",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b04_p2_reference_short_rule_01",
+      "trial_id": "b04_p2_reference_short",
+      "block": 4,
+      "period": 2,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 2,
+      "rule_position": 1,
+      "requested_rule_id": "m76",
+      "history_ids": [
+        "b04_p2_reference_short_facts",
+        "b04_p2_reference_short_rule_00"
+      ],
+      "reference_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b04_p2_reference_short_rule_00",
+      "previous_condition": "reference_short",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 1029,
+        "eval_count": 36,
+        "total_duration": 731312900,
+        "prompt_eval_cached_count": 648
+      },
+      "response_sha256": "0b079cda3cd8d2df197641e0cc3ac48b6ed879c7cf69e00b4d85369e47aadcce",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b04_p2_reference_short_final",
+      "trial_id": "b04_p2_reference_short",
+      "block": 4,
+      "period": 3,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "stage": "final",
+      "operation_index": 3,
+      "rule_position": null,
+      "requested_rule_id": null,
+      "history_ids": [
+        "b04_p2_reference_short_facts",
+        "b04_p2_reference_short_rule_00",
+        "b04_p2_reference_short_rule_01"
+      ],
+      "reference_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b04_p2_reference_short_rule_01",
+      "previous_condition": "reference_short",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 972,
+        "eval_count": 12,
+        "total_duration": 529781600,
+        "prompt_eval_cached_count": 298
+      },
+      "response_sha256": "f74c1b25443288f3758b34caf59d27b71110b1d895df0afd773a0688a910a574",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b04_p2_reference_long_facts",
+      "trial_id": "b04_p2_reference_long",
+      "block": 4,
+      "period": 4,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "facts",
+      "operation_index": 0,
+      "rule_position": null,
+      "requested_rule_id": null,
+      "history_ids": [],
+      "reference_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b04_p2_reference_short_final",
+      "previous_condition": "reference_short",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 588,
+        "eval_count": 105,
+        "total_duration": 1653457800,
+        "prompt_eval_cached_count": 547
+      },
+      "response_sha256": "e7def8732ff57bfa5c58380346c78e9489755f0d4902fdda977bed0e7da5fde9",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b04_p2_reference_long_rule_00",
+      "trial_id": "b04_p2_reference_long",
+      "block": 4,
+      "period": 5,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 1,
+      "rule_position": 0,
+      "requested_rule_id": "m33",
+      "history_ids": [
+        "b04_p2_reference_long_facts"
+      ],
+      "reference_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b04_p2_reference_long_facts",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 881,
+        "eval_count": 48,
+        "total_duration": 920074100,
+        "prompt_eval_cached_count": 631
+      },
+      "response_sha256": "cd78da9eb961b901217de0a4f01a66dca9589645579bda08303d2312e5172e43",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b04_p2_reference_long_rule_01",
+      "trial_id": "b04_p2_reference_long",
+      "block": 4,
+      "period": 6,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 2,
+      "rule_position": 1,
+      "requested_rule_id": "m05",
+      "history_ids": [
+        "b04_p2_reference_long_facts",
+        "b04_p2_reference_long_rule_00"
+      ],
+      "reference_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b04_p2_reference_long_rule_00",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 1022,
+        "eval_count": 55,
+        "total_duration": 1013578400,
+        "prompt_eval_cached_count": 656
+      },
+      "response_sha256": "8fbef17e30d4267f6ccf3899d76a0434a70e39e5801692dfbe366d20a75478f8",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b04_p2_reference_long_rule_02",
+      "trial_id": "b04_p2_reference_long",
+      "block": 4,
+      "period": 7,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 3,
+      "rule_position": 2,
+      "requested_rule_id": "m84",
+      "history_ids": [
+        "b04_p2_reference_long_facts",
+        "b04_p2_reference_long_rule_00",
+        "b04_p2_reference_long_rule_01"
+      ],
+      "reference_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b04_p2_reference_long_rule_01",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 1172,
+        "eval_count": 55,
+        "total_duration": 1039169900,
+        "prompt_eval_cached_count": 656
+      },
+      "response_sha256": "6203402bf5f57fc02a8f6eafb00c3bb94747fb84b198bad2e7d304f99cc7226d",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b04_p2_reference_long_rule_03",
+      "trial_id": "b04_p2_reference_long",
+      "block": 4,
+      "period": 8,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 4,
+      "rule_position": 3,
+      "requested_rule_id": "m41",
+      "history_ids": [
+        "b04_p2_reference_long_facts",
+        "b04_p2_reference_long_rule_00",
+        "b04_p2_reference_long_rule_01",
+        "b04_p2_reference_long_rule_02"
+      ],
+      "reference_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b04_p2_reference_long_rule_02",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 1318,
+        "eval_count": 48,
+        "total_duration": 1021845600,
+        "prompt_eval_cached_count": 656
+      },
+      "response_sha256": "278e5b7821d708659e4bdb46c1ae457010e1a5fbf678effffcb13092398f4979",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b04_p2_reference_long_final",
+      "trial_id": "b04_p2_reference_long",
+      "block": 4,
+      "period": 9,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "final",
+      "operation_index": 5,
+      "rule_position": null,
+      "requested_rule_id": null,
+      "history_ids": [
+        "b04_p2_reference_long_facts",
+        "b04_p2_reference_long_rule_00",
+        "b04_p2_reference_long_rule_01",
+        "b04_p2_reference_long_rule_02",
+        "b04_p2_reference_long_rule_03"
+      ],
+      "reference_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b04_p2_reference_long_rule_03",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 1280,
+        "eval_count": 10,
+        "total_duration": 547309500,
+        "prompt_eval_cached_count": 456
+      },
+      "response_sha256": "2d99364a5c7ada57c0b5fb376be612228184435c9ea6d9ed3abb2099a904cbc3",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b05_p2_reference_long_facts",
+      "trial_id": "b05_p2_reference_long",
+      "block": 5,
+      "period": 0,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "facts",
+      "operation_index": 0,
+      "rule_position": null,
+      "requested_rule_id": null,
+      "history_ids": [],
+      "reference_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b04_p2_reference_long_final",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 588,
+        "eval_count": 105,
+        "total_duration": 1619934400,
+        "prompt_eval_cached_count": 587
+      },
+      "response_sha256": "e56263f8e85722f0e80306aee1fe7ea275124db1780104c4d76aa624a5ba7650",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b05_p2_reference_long_rule_00",
+      "trial_id": "b05_p2_reference_long",
+      "block": 5,
+      "period": 1,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 1,
+      "rule_position": 0,
+      "requested_rule_id": "m33",
+      "history_ids": [
+        "b05_p2_reference_long_facts"
+      ],
+      "reference_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b05_p2_reference_long_facts",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 885,
+        "eval_count": 48,
+        "total_duration": 902532400,
+        "prompt_eval_cached_count": 656
+      },
+      "response_sha256": "130dbb7b0a391b0635f43ef36ece74e8acbea310562c63ed9e894b0501acafef",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b05_p2_reference_long_rule_01",
+      "trial_id": "b05_p2_reference_long",
+      "block": 5,
+      "period": 2,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 2,
+      "rule_position": 1,
+      "requested_rule_id": "m05",
+      "history_ids": [
+        "b05_p2_reference_long_facts",
+        "b05_p2_reference_long_rule_00"
+      ],
+      "reference_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b05_p2_reference_long_rule_00",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 1022,
+        "eval_count": 55,
+        "total_duration": 969051600,
+        "prompt_eval_cached_count": 656
+      },
+      "response_sha256": "e13cc1537227650b7671c63d7dbec118cc81176fd77afe919155a8b2dff8d920",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b05_p2_reference_long_rule_02",
+      "trial_id": "b05_p2_reference_long",
+      "block": 5,
+      "period": 3,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 3,
+      "rule_position": 2,
+      "requested_rule_id": "m84",
+      "history_ids": [
+        "b05_p2_reference_long_facts",
+        "b05_p2_reference_long_rule_00",
+        "b05_p2_reference_long_rule_01"
+      ],
+      "reference_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b05_p2_reference_long_rule_01",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 1168,
+        "eval_count": 55,
+        "total_duration": 977859300,
+        "prompt_eval_cached_count": 656
+      },
+      "response_sha256": "3cc1c839928f93726a8893c84d8c59baffa2ea37af4411510280324ab1b26bc3",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b05_p2_reference_long_rule_03",
+      "trial_id": "b05_p2_reference_long",
+      "block": 5,
+      "period": 4,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 4,
+      "rule_position": 3,
+      "requested_rule_id": "m41",
+      "history_ids": [
+        "b05_p2_reference_long_facts",
+        "b05_p2_reference_long_rule_00",
+        "b05_p2_reference_long_rule_01",
+        "b05_p2_reference_long_rule_02"
+      ],
+      "reference_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b05_p2_reference_long_rule_02",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 1316,
+        "eval_count": 48,
+        "total_duration": 941551300,
+        "prompt_eval_cached_count": 656
+      },
+      "response_sha256": "9b9120cd69cb0aa606a34983386f4f752e531bd4d466ef44e4ec9faa36faef38",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b05_p2_reference_long_final",
+      "trial_id": "b05_p2_reference_long",
+      "block": 5,
+      "period": 5,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "stage": "final",
+      "operation_index": 5,
+      "rule_position": null,
+      "requested_rule_id": null,
+      "history_ids": [
+        "b05_p2_reference_long_facts",
+        "b05_p2_reference_long_rule_00",
+        "b05_p2_reference_long_rule_01",
+        "b05_p2_reference_long_rule_02",
+        "b05_p2_reference_long_rule_03"
+      ],
+      "reference_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b05_p2_reference_long_rule_03",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 1277,
+        "eval_count": 10,
+        "total_duration": 574363300,
+        "prompt_eval_cached_count": 498
+      },
+      "response_sha256": "29f0ee425b9894503e668bef1d127c7566de915f720ed4e7d4c57eebd5bc3fbe",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b05_p2_reference_short_facts",
+      "trial_id": "b05_p2_reference_short",
+      "block": 5,
+      "period": 6,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "stage": "facts",
+      "operation_index": 0,
+      "rule_position": null,
+      "requested_rule_id": null,
+      "history_ids": [],
+      "reference_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b05_p2_reference_long_final",
+      "previous_condition": "reference_long",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 580,
+        "eval_count": 105,
+        "total_duration": 1644666100,
+        "prompt_eval_cached_count": 547
+      },
+      "response_sha256": "ae5da700b40df0d4f3f5b0d4338a1d4ead316eb38236f454fb81d79a24b9677e",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b05_p2_reference_short_rule_00",
+      "trial_id": "b05_p2_reference_short",
+      "block": 5,
+      "period": 7,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 1,
+      "rule_position": 0,
+      "requested_rule_id": "m18",
+      "history_ids": [
+        "b05_p2_reference_short_facts"
+      ],
+      "reference_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b05_p2_reference_short_facts",
+      "previous_condition": "reference_short",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 876,
+        "eval_count": 54,
+        "total_duration": 1167869500,
+        "prompt_eval_cached_count": 631
+      },
+      "response_sha256": "1f883ef37e872c0aaa57b1dbb45418939434b6aedf17c8066498676f8a83768b",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b05_p2_reference_short_rule_01",
+      "trial_id": "b05_p2_reference_short",
+      "block": 5,
+      "period": 8,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "stage": "rule",
+      "operation_index": 2,
+      "rule_position": 1,
+      "requested_rule_id": "m76",
+      "history_ids": [
+        "b05_p2_reference_short_facts",
+        "b05_p2_reference_short_rule_00"
+      ],
+      "reference_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b05_p2_reference_short_rule_00",
+      "previous_condition": "reference_short",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 1024,
+        "eval_count": 54,
+        "total_duration": 1221830800,
+        "prompt_eval_cached_count": 648
+      },
+      "response_sha256": "717f613b436bfca4640d8cf01140e9b4d7911f5501d0fc6e8c43a8677f15eb4c",
+      "done_reason": "stop"
+    },
+    {
+      "id": "b05_p2_reference_short_final",
+      "trial_id": "b05_p2_reference_short",
+      "block": 5,
+      "period": 9,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "stage": "final",
+      "operation_index": 3,
+      "rule_position": null,
+      "requested_rule_id": null,
+      "history_ids": [
+        "b05_p2_reference_short_facts",
+        "b05_p2_reference_short_rule_00",
+        "b05_p2_reference_short_rule_01"
+      ],
+      "reference_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "reference_origin": "experimenter_verified_reference",
+      "previous_call_id": "b05_p2_reference_short_rule_01",
+      "previous_condition": "reference_short",
+      "status": "ok",
+      "format_valid": true,
+      "usage": {
+        "prompt_eval_count": 996,
+        "eval_count": 10,
+        "total_duration": 639299700,
+        "prompt_eval_cached_count": 456
+      },
+      "response_sha256": "ad5164f59418124c85a523f0a6aac7e13a3a273e57215fff6759cab503086de8",
+      "done_reason": "stop"
+    }
+  ],
+  "trials": [
+    {
+      "trial_id": "b00_p0_reference_short",
+      "problem_id": "T02",
+      "seed": 64001001,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "reference_rule_ids": [
+        "r83"
+      ],
+      "format_valid": true,
+      "proof_valid": true,
+      "strict_valid": true,
+      "actual_D": 1,
+      "final_rule_id": "r83",
+      "error_codes": [],
+      "reference_input_D": 1,
+      "emitted_rule_ids": [
+        "r83"
+      ],
+      "reference_order_followed": true,
+      "stage_checks": [
+        {
+          "id": "b00_p0_reference_short_facts",
+          "stage": "facts",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b00_p0_reference_short_rule_00",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b00_p0_reference_short_final",
+          "stage": "final",
+          "valid": true,
+          "error_codes": []
+        }
+      ],
+      "stage_contract_valid": true,
+      "reconstruction_success": true,
+      "D_instruction_control_success": null,
+      "assembled_graph_sha256": "011da809a50b0f8c608793ec34aafed7b838de1acccf9808bedff9b50aae8b99"
+    },
+    {
+      "trial_id": "b00_p0_reference_long",
+      "problem_id": "T02",
+      "seed": 64001001,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "reference_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "format_valid": true,
+      "proof_valid": true,
+      "strict_valid": true,
+      "actual_D": 4,
+      "final_rule_id": "r69",
+      "error_codes": [],
+      "reference_input_D": 4,
+      "emitted_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "reference_order_followed": true,
+      "stage_checks": [
+        {
+          "id": "b00_p0_reference_long_facts",
+          "stage": "facts",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b00_p0_reference_long_rule_00",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b00_p0_reference_long_rule_01",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b00_p0_reference_long_rule_02",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b00_p0_reference_long_rule_03",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b00_p0_reference_long_final",
+          "stage": "final",
+          "valid": true,
+          "error_codes": []
+        }
+      ],
+      "stage_contract_valid": true,
+      "reconstruction_success": true,
+      "D_instruction_control_success": null,
+      "assembled_graph_sha256": "c807c54e91d80702ab7767e4a6ba7f4cdfbb94236ebd551b2a456dad0ee0b854"
+    },
+    {
+      "trial_id": "b01_p0_reference_long",
+      "problem_id": "T02",
+      "seed": 64001002,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "reference_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "format_valid": true,
+      "proof_valid": true,
+      "strict_valid": true,
+      "actual_D": 4,
+      "final_rule_id": "r69",
+      "error_codes": [],
+      "reference_input_D": 4,
+      "emitted_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "reference_order_followed": true,
+      "stage_checks": [
+        {
+          "id": "b01_p0_reference_long_facts",
+          "stage": "facts",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b01_p0_reference_long_rule_00",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b01_p0_reference_long_rule_01",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b01_p0_reference_long_rule_02",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b01_p0_reference_long_rule_03",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b01_p0_reference_long_final",
+          "stage": "final",
+          "valid": true,
+          "error_codes": []
+        }
+      ],
+      "stage_contract_valid": true,
+      "reconstruction_success": true,
+      "D_instruction_control_success": null,
+      "assembled_graph_sha256": "9380d40b80c376236b8e1c347c5c3424342bd686755f705cce849870bc8089fa"
+    },
+    {
+      "trial_id": "b01_p0_reference_short",
+      "problem_id": "T02",
+      "seed": 64001002,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "reference_rule_ids": [
+        "r83"
+      ],
+      "format_valid": true,
+      "proof_valid": true,
+      "strict_valid": true,
+      "actual_D": 1,
+      "final_rule_id": "r83",
+      "error_codes": [],
+      "reference_input_D": 1,
+      "emitted_rule_ids": [
+        "r83"
+      ],
+      "reference_order_followed": true,
+      "stage_checks": [
+        {
+          "id": "b01_p0_reference_short_facts",
+          "stage": "facts",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b01_p0_reference_short_rule_00",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b01_p0_reference_short_final",
+          "stage": "final",
+          "valid": true,
+          "error_codes": []
+        }
+      ],
+      "stage_contract_valid": true,
+      "reconstruction_success": true,
+      "D_instruction_control_success": null,
+      "assembled_graph_sha256": "eb85967c6d6937242b3eb14cac1416271892a7e18066887de83bbc07dd1852a1"
+    },
+    {
+      "trial_id": "b02_p1_reference_short",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "reference_rule_ids": [
+        "n52"
+      ],
+      "format_valid": true,
+      "proof_valid": true,
+      "strict_valid": true,
+      "actual_D": 1,
+      "final_rule_id": "n52",
+      "error_codes": [],
+      "reference_input_D": 1,
+      "emitted_rule_ids": [
+        "n52"
+      ],
+      "reference_order_followed": true,
+      "stage_checks": [
+        {
+          "id": "b02_p1_reference_short_facts",
+          "stage": "facts",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b02_p1_reference_short_rule_00",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b02_p1_reference_short_final",
+          "stage": "final",
+          "valid": true,
+          "error_codes": []
+        }
+      ],
+      "stage_contract_valid": true,
+      "reconstruction_success": true,
+      "D_instruction_control_success": null,
+      "assembled_graph_sha256": "28cd74ef605cb70778f9c70cfe5ac034d04e47c27b944abda1e6d0b5e12826b4"
+    },
+    {
+      "trial_id": "b02_p1_reference_long",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "reference_rule_ids": [
+        "n08",
+        "n91",
+        "n37"
+      ],
+      "format_valid": true,
+      "proof_valid": true,
+      "strict_valid": true,
+      "actual_D": 2,
+      "final_rule_id": "n37",
+      "error_codes": [],
+      "reference_input_D": 2,
+      "emitted_rule_ids": [
+        "n08",
+        "n91",
+        "n37"
+      ],
+      "reference_order_followed": true,
+      "stage_checks": [
+        {
+          "id": "b02_p1_reference_long_facts",
+          "stage": "facts",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b02_p1_reference_long_rule_00",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b02_p1_reference_long_rule_01",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b02_p1_reference_long_rule_02",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b02_p1_reference_long_final",
+          "stage": "final",
+          "valid": true,
+          "error_codes": []
+        }
+      ],
+      "stage_contract_valid": true,
+      "reconstruction_success": true,
+      "D_instruction_control_success": null,
+      "assembled_graph_sha256": "d4046194402e59053858fc6713b2788f8148e768b83f1dec19aeab5b5a73bc18"
+    },
+    {
+      "trial_id": "b03_p1_reference_long",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "reference_rule_ids": [
+        "n08",
+        "n91",
+        "n37"
+      ],
+      "format_valid": true,
+      "proof_valid": true,
+      "strict_valid": true,
+      "actual_D": 2,
+      "final_rule_id": "n37",
+      "error_codes": [],
+      "reference_input_D": 2,
+      "emitted_rule_ids": [
+        "n08",
+        "n91",
+        "n37"
+      ],
+      "reference_order_followed": true,
+      "stage_checks": [
+        {
+          "id": "b03_p1_reference_long_facts",
+          "stage": "facts",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b03_p1_reference_long_rule_00",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b03_p1_reference_long_rule_01",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b03_p1_reference_long_rule_02",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b03_p1_reference_long_final",
+          "stage": "final",
+          "valid": true,
+          "error_codes": []
+        }
+      ],
+      "stage_contract_valid": true,
+      "reconstruction_success": true,
+      "D_instruction_control_success": null,
+      "assembled_graph_sha256": "d4046194402e59053858fc6713b2788f8148e768b83f1dec19aeab5b5a73bc18"
+    },
+    {
+      "trial_id": "b03_p1_reference_short",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "reference_rule_ids": [
+        "n52"
+      ],
+      "format_valid": true,
+      "proof_valid": true,
+      "strict_valid": true,
+      "actual_D": 1,
+      "final_rule_id": "n52",
+      "error_codes": [],
+      "reference_input_D": 1,
+      "emitted_rule_ids": [
+        "n52"
+      ],
+      "reference_order_followed": true,
+      "stage_checks": [
+        {
+          "id": "b03_p1_reference_short_facts",
+          "stage": "facts",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b03_p1_reference_short_rule_00",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b03_p1_reference_short_final",
+          "stage": "final",
+          "valid": true,
+          "error_codes": []
+        }
+      ],
+      "stage_contract_valid": true,
+      "reconstruction_success": true,
+      "D_instruction_control_success": null,
+      "assembled_graph_sha256": "a8e8f9293a2d6b727c1af3e93ff3872d7ff04dff68e9c72f21be3a55a00129f1"
+    },
+    {
+      "trial_id": "b04_p2_reference_short",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "reference_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "format_valid": true,
+      "proof_valid": true,
+      "strict_valid": true,
+      "actual_D": 2,
+      "final_rule_id": "m76",
+      "error_codes": [],
+      "reference_input_D": 2,
+      "emitted_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "reference_order_followed": true,
+      "stage_checks": [
+        {
+          "id": "b04_p2_reference_short_facts",
+          "stage": "facts",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b04_p2_reference_short_rule_00",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b04_p2_reference_short_rule_01",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b04_p2_reference_short_final",
+          "stage": "final",
+          "valid": true,
+          "error_codes": []
+        }
+      ],
+      "stage_contract_valid": true,
+      "reconstruction_success": true,
+      "D_instruction_control_success": null,
+      "assembled_graph_sha256": "5d8a79ba719d9082e4fb6b44110d5d559635d7032f735e1c6450e648b152a898"
+    },
+    {
+      "trial_id": "b04_p2_reference_long",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "reference_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "format_valid": true,
+      "proof_valid": true,
+      "strict_valid": true,
+      "actual_D": 4,
+      "final_rule_id": "m41",
+      "error_codes": [],
+      "reference_input_D": 4,
+      "emitted_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "reference_order_followed": true,
+      "stage_checks": [
+        {
+          "id": "b04_p2_reference_long_facts",
+          "stage": "facts",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b04_p2_reference_long_rule_00",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b04_p2_reference_long_rule_01",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b04_p2_reference_long_rule_02",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b04_p2_reference_long_rule_03",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b04_p2_reference_long_final",
+          "stage": "final",
+          "valid": true,
+          "error_codes": []
+        }
+      ],
+      "stage_contract_valid": true,
+      "reconstruction_success": true,
+      "D_instruction_control_success": null,
+      "assembled_graph_sha256": "3081dd130a7c6b5da845d7c4022ab1d758f6e7ae0eec97c97ac1cfb1209f2faf"
+    },
+    {
+      "trial_id": "b05_p2_reference_long",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "condition": "reference_long",
+      "arm": "append_only",
+      "reference_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "format_valid": true,
+      "proof_valid": true,
+      "strict_valid": true,
+      "actual_D": 4,
+      "final_rule_id": "m41",
+      "error_codes": [],
+      "reference_input_D": 4,
+      "emitted_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "reference_order_followed": true,
+      "stage_checks": [
+        {
+          "id": "b05_p2_reference_long_facts",
+          "stage": "facts",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b05_p2_reference_long_rule_00",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b05_p2_reference_long_rule_01",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b05_p2_reference_long_rule_02",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b05_p2_reference_long_rule_03",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b05_p2_reference_long_final",
+          "stage": "final",
+          "valid": true,
+          "error_codes": []
+        }
+      ],
+      "stage_contract_valid": true,
+      "reconstruction_success": true,
+      "D_instruction_control_success": null,
+      "assembled_graph_sha256": "3081dd130a7c6b5da845d7c4022ab1d758f6e7ae0eec97c97ac1cfb1209f2faf"
+    },
+    {
+      "trial_id": "b05_p2_reference_short",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "condition": "reference_short",
+      "arm": "append_only",
+      "reference_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "format_valid": true,
+      "proof_valid": true,
+      "strict_valid": true,
+      "actual_D": 2,
+      "final_rule_id": "m76",
+      "error_codes": [],
+      "reference_input_D": 2,
+      "emitted_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "reference_order_followed": true,
+      "stage_checks": [
+        {
+          "id": "b05_p2_reference_short_facts",
+          "stage": "facts",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b05_p2_reference_short_rule_00",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b05_p2_reference_short_rule_01",
+          "stage": "rule",
+          "valid": true,
+          "error_codes": []
+        },
+        {
+          "id": "b05_p2_reference_short_final",
+          "stage": "final",
+          "valid": true,
+          "error_codes": []
+        }
+      ],
+      "stage_contract_valid": true,
+      "reconstruction_success": true,
+      "D_instruction_control_success": null,
+      "assembled_graph_sha256": "856de4550dfe2d6df8173adfce1eb44eb7c23ca2285e6d9d75781c498e914cdc"
+    }
+  ],
+  "groups": [
+    {
+      "problem_id": "T02",
+      "condition": "reference_short",
+      "assigned": 2,
+      "measured": 2,
+      "strict_valid": 2,
+      "stage_contract_valid": 2,
+      "successes": 2
+    },
+    {
+      "problem_id": "T02",
+      "condition": "reference_long",
+      "assigned": 2,
+      "measured": 2,
+      "strict_valid": 2,
+      "stage_contract_valid": 2,
+      "successes": 2
+    },
+    {
+      "problem_id": "E01_shared_fork",
+      "condition": "reference_short",
+      "assigned": 2,
+      "measured": 2,
+      "strict_valid": 2,
+      "stage_contract_valid": 2,
+      "successes": 2
+    },
+    {
+      "problem_id": "E01_shared_fork",
+      "condition": "reference_long",
+      "assigned": 2,
+      "measured": 2,
+      "strict_valid": 2,
+      "stage_contract_valid": 2,
+      "successes": 2
+    },
+    {
+      "problem_id": "E02_two_vs_four",
+      "condition": "reference_short",
+      "assigned": 2,
+      "measured": 2,
+      "strict_valid": 2,
+      "stage_contract_valid": 2,
+      "successes": 2
+    },
+    {
+      "problem_id": "E02_two_vs_four",
+      "condition": "reference_long",
+      "assigned": 2,
+      "measured": 2,
+      "strict_valid": 2,
+      "stage_contract_valid": 2,
+      "successes": 2
+    }
+  ],
+  "overall": {
+    "assigned": 12,
+    "measured": 12,
+    "successes": 12,
+    "unmeasured": 0,
+    "positive_control_ready": true,
+    "rate": 1.0,
+    "next_decision": "append_reference_constructor_available_stop",
+    "D_instruction_control": null,
+    "A_or_M_gate": null,
+    "v068_direct_successes_unchanged": 4,
+    "v068_staged_successes_unchanged": 8
+  },
+  "usage_by_stage": {
+    "facts": {
+      "prompt_eval_count": 6784,
+      "eval_count": 886,
+      "total_duration": 17044427000,
+      "prompt_eval_cached_count": 5665
+    },
+    "rule": {
+      "prompt_eval_count": 29309,
+      "eval_count": 1448,
+      "total_duration": 28414384400,
+      "prompt_eval_cached_count": 18229
+    },
+    "final": {
+      "prompt_eval_count": 11923,
+      "eval_count": 124,
+      "total_duration": 6039355900,
+      "prompt_eval_cached_count": 4825
+    }
+  },
+  "limits": {
+    "solution_path_given": true,
+    "per_step_rule_given": true,
+    "host_repair": false,
+    "contemporaneous_comparison": false,
+    "budget_matched": false,
+    "internal_cause_identified": false,
+    "independent_holdout": false
+  }
+}

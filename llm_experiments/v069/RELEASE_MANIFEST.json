@@ -1,0 +1,32 @@
+{
+  "contract": "v069-source-release-r1",
+  "file_hashes": {
+    "llm_experiments/v069/probe/README.md": "5adfc932e71536e79939378d0cb90a7ac79bb42639000a17db25d868b7fd7487",
+    "llm_experiments/v069/probe/build_release.py": "1fb22e6ad8b72dbd842b931959e2198a06b380152c3687c26fa0be112ab44b8c",
+    "llm_experiments/v069/probe/common.py": "5addd0bae8d6a3b6f7020f2814c930162e3e09eb8b75f4ba8de0646aad360031",
+    "llm_experiments/v069/probe/data/protocol.json": "0307f06f012504555a140a0133eea97dcfe6ccdadfcd58c218a835f4b855b703",
+    "llm_experiments/v069/probe/design.py": "1e00aaa0bba7d2625ef6374b9fa586c8ab790e6987d6bc6b39c3c2634888bda4",
+    "llm_experiments/v069/probe/docs/PROTOCOL.ko.md": "8262a5fc2ce0b76b33e5d8fd8cb861feb254399f91a43d77cd0f25fad3f7c7d9",
+    "llm_experiments/v069/probe/docs/REVIEW_AND_CHANGES.ko.md": "db95693b46c98a4197de27daa0e3a99c4616ee2d319b1ee00a20cd171d48a8ba",
+    "llm_experiments/v069/probe/launch.py": "f756395a97bbd04ceae52117bfe6c2de11884c7f1d9e5b0327cc2cd967326c25",
+    "llm_experiments/v069/probe/measure.py": "47e6a93f5e96e8346ccb21c77034a5859ad8fbe9a326e77bff44acd58d610f71",
+    "llm_experiments/v069/probe/previous.py": "eccd9345bab1273a422559d059aa18051e9f79ea2d77afcfc5d8f5f434c11eda",
+    "llm_experiments/v069/probe/prior/v068_source.zip": "ee9734f552fc6405f3015922cc250f338bc9054447c57f09e22f4e21c6049d20",
+    "llm_experiments/v069/probe/reference.py": "a30fa90e90bb8acef8d96e8cd74c37537e8b16b7dac0631eddde021cb588ff24",
+    "llm_experiments/v069/probe/report.py": "e7f1aacc6184c8f0b562b2b5164403fce46fdf368aaf072cacaec2ceb88c8951",
+    "llm_experiments/v069/probe/run.py": "ab5a93c98ff9dc511c450fe0aefd7df6d92d223b936ceea40b277d503c95ca2e",
+    "llm_experiments/v069/probe/stages.py": "a07e85174501ce9e5242b69818adb8fae6a41e644f947122839e25fff23caf6c",
+    "llm_experiments/v069/probe/tests/fixtures.py": "841859fb7d43d9dad9174fd485657c01250fbedb041780d611b192d38bdb6bc4",
+    "llm_experiments/v069/probe/tests/test_integration.py": "5eea9898f49a12b16fc00fdc02ca8512980677bfad088944f507ba0d74ec1b9c",
+    "llm_experiments/v069/probe/tests/test_integrity.py": "ac05cf7b720ee03058a1d53fcb76b78b4b366a4beabc90e06cf70bbfd92b3543",
+    "llm_experiments/v069/probe/tests/test_launch.py": "30c30be710e79cac89269e97f526c73786eb9f3977d5964b1d8df85b02f9d410",
+    "llm_experiments/v069/probe/tests/test_logic.py": "48a19600588b6f37f17d2e48f11a619a3814bd02055d3c5ad8771c1677b0bd8e",
+    "llm_experiments/v069/probe/tests/test_native.py": "0f1e7bb28b3c15e4ffcda38b41b833a74b5dfaef13b0db2ac8cc118c21e07448",
+    "llm_experiments/v069/probe/verify.py": "5534022e42adff6a59230ffb61332158a8c91cf1f72a24d525924c2af24346ac",
+    "llm_experiments/v069/probe/windows/Run-v069.cmd": "e61e26eb705b9e1866270d1487f2bbc229d9ab45c07b58d4d6f58b4b8f484491",
+    "llm_experiments/v069/probe/windows/Run-v069.ps1": "4373171d3b968e9ec774b9c6057c31ff741e96c9d99f4a9abbe6988ddb505fd7",
+    "llm_experiments/v069/probe/windows/native.ps1": "b77cdfdc8033daa3594a936ba0d32e4e03aae500196bc83ccfc97a912770d063"
+  },
+  "external_input": "v068_nodesfinal_20260913_201436_736799_evidence.zip (not embedded)",
+  "actual_model_experiment_executed_during_development": false
+}
