@@ -1,0 +1,44 @@
+test_dangling_path_cannot_be_silently_pruned (tests.test_analysis.AnalysisTests.test_dangling_path_cannot_be_silently_pruned) ... ok
+test_depth_is_support_depth (tests.test_analysis.AnalysisTests.test_depth_is_support_depth) ... ok
+test_duplicate_ids_and_unknown_rules (tests.test_analysis.AnalysisTests.test_duplicate_ids_and_unknown_rules) ... ok
+test_duplicate_zip_member_rejected (tests.test_analysis.AnalysisTests.test_duplicate_zip_member_rejected) ... ok
+test_final_rule_does_not_substitute_for_support (tests.test_analysis.AnalysisTests.test_final_rule_does_not_substitute_for_support) ... ok
+test_missing_final_and_unsupported_fact (tests.test_analysis.AnalysisTests.test_missing_final_and_unsupported_fact) ... ok
+test_missing_response_rejected (tests.test_analysis.AnalysisTests.test_missing_response_rejected) ... ok
+test_parent_identity_and_order (tests.test_analysis.AnalysisTests.test_parent_identity_and_order) ... ok
+test_strict_json_input (tests.test_analysis.AnalysisTests.test_strict_json_input) ... ok
+test_choice_is_not_actual_proof (tests.test_design_measure.DesignMeasureTests.test_choice_is_not_actual_proof) ... ok
+test_each_source_request_reused_twice_without_transformation (tests.test_design_measure.DesignMeasureTests.test_each_source_request_reused_twice_without_transformation) ... ok
+test_format_failure_remains_unmeasured (tests.test_design_measure.DesignMeasureTests.test_format_failure_remains_unmeasured) ... ok
+test_graph_duplicate_parents_missing_fact_bad_final (tests.test_design_measure.DesignMeasureTests.test_graph_duplicate_parents_missing_fact_bad_final) ... ok
+test_invalid_choices_not_repaired (tests.test_design_measure.DesignMeasureTests.test_invalid_choices_not_repaired) ... ok
+test_missing_reference_request_rejected (tests.test_design_measure.DesignMeasureTests.test_missing_reference_request_rejected) ... ok
+test_omission_duplicate_and_schedule_tamper_rejected_even_rehashed (tests.test_design_measure.DesignMeasureTests.test_omission_duplicate_and_schedule_tamper_rejected_even_rehashed) ... ok
+test_request_module_has_no_scoring_imports (tests.test_design_measure.DesignMeasureTests.test_request_module_has_no_scoring_imports) ... ok
+test_same_seed_gets_both_sequences_and_history_is_explicit (tests.test_design_measure.DesignMeasureTests.test_same_seed_gets_both_sequences_and_history_is_explicit) ... ok
+test_schedule_80_calls_20_blocks_40_metadata (tests.test_design_measure.DesignMeasureTests.test_schedule_80_calls_20_blocks_40_metadata) ... ok
+test_http_failure_stops_after_one_attempt (tests.test_execution_integrity.ExecutionIntegrityTests.test_http_failure_stops_after_one_attempt) ... ok
+test_identity_drift_after_one_block_stops (tests.test_execution_integrity.ExecutionIntegrityTests.test_identity_drift_after_one_block_stops) ... ok
+test_local_fake_http_80_complete_and_offline_audit (tests.test_execution_integrity.ExecutionIntegrityTests.test_local_fake_http_80_complete_and_offline_audit) ... ok
+test_metadata_failure_before_inference (tests.test_execution_integrity.ExecutionIntegrityTests.test_metadata_failure_before_inference) ... ok
+test_run_artifact_mutations_rejected (tests.test_execution_integrity.ExecutionIntegrityTests.test_run_artifact_mutations_rejected) ... ok
+test_second_model_failure_does_not_erase_first_model (tests.test_execution_integrity.ExecutionIntegrityTests.test_second_model_failure_does_not_erase_first_model) ... ok
+test_syntax_error_continues_but_is_unmeasured (tests.test_execution_integrity.ExecutionIntegrityTests.test_syntax_error_continues_but_is_unmeasured) ... ok
+test_traversal_duplicate_and_wrong_hash_archives_rejected (tests.test_execution_integrity.ExecutionIntegrityTests.test_traversal_duplicate_and_wrong_hash_archives_rejected) ... ok
+test_wrong_response_model_stops_without_retry (tests.test_execution_integrity.ExecutionIntegrityTests.test_wrong_response_model_stops_without_retry) ... ok
+test_complete_fake_http_bundle_independently_verified (tests.test_independent.IndependentTests.test_complete_fake_http_bundle_independently_verified) ... ok
+test_failed_baseline_verification_cannot_be_ignored (tests.test_independent.IndependentTests.test_failed_baseline_verification_cannot_be_ignored) ... ok
+test_manifest_rehash_does_not_hide_semantic_or_integrity_mutations (tests.test_independent.IndependentTests.test_manifest_rehash_does_not_hide_semantic_or_integrity_mutations) ... ok
+test_partial_fake_http_bundle_is_not_complete (tests.test_independent.IndependentTests.test_partial_fake_http_bundle_is_not_complete) ... ok
+test_rehashed_control_records_require_exact_types_and_fields (tests.test_independent.IndependentTests.test_rehashed_control_records_require_exact_types_and_fields) ... ok
+test_rehashed_manifest_cannot_change_endpoint_host (tests.test_independent.IndependentTests.test_rehashed_manifest_cannot_change_endpoint_host) ... ok
+test_discordance_sign_uses_position_not_sequence_label (tests.test_reporting.ReportingTests.test_discordance_sign_uses_position_not_sequence_label) ... ok
+test_incomplete_comparison_rates_null (tests.test_reporting.ReportingTests.test_incomplete_comparison_rates_null) ... ok
+test_one_unmeasured_pair_cannot_be_zero_filled (tests.test_reporting.ReportingTests.test_one_unmeasured_pair_cannot_be_zero_filled) ... ok
+test_same_seed_order_pairs_not_new_problem_samples (tests.test_reporting.ReportingTests.test_same_seed_order_pairs_not_new_problem_samples) ... ok
+test_unobserved_not_neither_or_failure (tests.test_reporting.ReportingTests.test_unobserved_not_neither_or_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 39 tests in 86.850s
+
+OK

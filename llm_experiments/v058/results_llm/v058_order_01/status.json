@@ -1,0 +1,13 @@
+{
+  "state": "incomplete",
+  "complete": false,
+  "recorded_actions": 7,
+  "inference_calls": 4,
+  "event_tip": "2508d2e4c9be45a8693716a3aa6e561e85e59e6652d5fcf884edf53deba20351",
+  "active_action": 6,
+  "failure_stage": "metadata",
+  "failure_kind": "runtime_identity_error",
+  "failure_slot_id": "b01.before",
+  "error": "동결한 모델 digest/show/server/details와 다릅니다",
+  "finished_at": "2026-09-12T23:30:20.107+00:00"
+}

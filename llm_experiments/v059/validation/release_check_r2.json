@@ -1,0 +1,24 @@
+{
+  "command": [
+    "C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-m",
+    "rule_order_v059",
+    "selftest"
+  ],
+  "cwd": "C:\\Users\\sjs95\\AppData\\Local\\Temp\\v059_release_r2_verified_6d_bp5_j\\llm_experiments\\v059\\probe",
+  "exit_code": 0,
+  "elapsed_seconds": 67.922,
+  "new_model_inference": false,
+  "source_zip": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v059\\releases\\v059_rule_order_source_r2.zip",
+  "source_zip_sha256": "aa48d6b2376e707c8b407de568e02782cfa2c313176e007bd3630b6acbb1c6e4",
+  "candidate_digest": "207d6dff500f08a6703b36ecf4b8d95c3109b95fb82a6b8119b83ce51d7bfa5a",
+  "manifest_files": 288,
+  "extracted_root": "C:\\Users\\sjs95\\AppData\\Local\\Temp\\v059_release_r2_verified_6d_bp5_j",
+  "extracted_files_changed": [],
+  "existing_source_changes": [],
+  "user_input_changes": [],
+  "release_working_tree_mismatches": [],
+  "cache_files_in_release": false,
+  "plan_sha256": "20c411caea9e2cc1a2866970ca247447d8b67836832c0c0861b507fa6dffff99"
+}

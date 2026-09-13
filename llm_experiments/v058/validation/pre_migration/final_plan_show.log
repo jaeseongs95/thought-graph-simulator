@@ -1,0 +1,30 @@
+{
+  "contract": "order-replay-v058-r1",
+  "plan_sha256": "f3133d3b102a94490729478bef61867876ed3032cd7ad80d56400cef94111383",
+  "model_keys": [
+    "reference",
+    "candidate"
+  ],
+  "modes": [
+    "graph",
+    "choice"
+  ],
+  "boundary_cells": {
+    "reference": {
+      "problem_id": "T02",
+      "arm": "original",
+      "direction": "shallow"
+    },
+    "candidate": {
+      "problem_id": "K01",
+      "arm": "original",
+      "direction": "shallow"
+    }
+  },
+  "sequences": [
+    "graph_choice",
+    "choice_graph"
+  ],
+  "max_calls": 80
+}
+오프라인 계획 확인 완료. 추론 실행 없음. v057 관측 후 선정한 경계 조건의 탐색적 순서 진단.

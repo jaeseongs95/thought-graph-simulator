@@ -1,0 +1,18 @@
+{
+  "command": [
+    "powershell.exe",
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v059\\probe\\windows\\Run-v059.ps1",
+    "-CheckOnly",
+    "-NoPause",
+    "-RunName",
+    "v059_rules_validation_01"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 104.266,
+  "log": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v059\\validation\\checkonly.log",
+  "new_model_inference": false
+}

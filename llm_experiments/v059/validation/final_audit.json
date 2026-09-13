@@ -1,0 +1,104 @@
+{
+  "audit_state": "PASS",
+  "candidate_completion": true,
+  "candidate_digest": "207d6dff500f08a6703b36ecf4b8d95c3109b95fb82a6b8119b83ce51d7bfa5a",
+  "source_zip_sha256": "aa48d6b2376e707c8b407de568e02782cfa2c313176e007bd3630b6acbb1c6e4",
+  "assurance_profile": "cooperative-sealed",
+  "re_audit_scope": {
+    "prior_audit": "final_audit_round1.json",
+    "prior_state": "FAIL",
+    "trigger": "F-001 blocking finding remediation",
+    "changed_source_files": [
+      "llm_experiments/v059/probe/tools/verify_v059.py",
+      "llm_experiments/v059/probe/tests/test_independent.py",
+      "llm_experiments/v059/probe/docs/VALIDATION.ko.md"
+    ]
+  },
+  "dispositions": [
+    {
+      "finding_id": "F-001",
+      "prior_severity": "blocking",
+      "status": "resolved",
+      "evidence": "tools/verify_v059.py에 independent_summary_ko가 추가되어 독립 재구성한 summary 값으로 기대 UTF-8/LF 바이트를 만들고 run/summary.ko.md와 exact 비교한다. 별도 임시 폴더에서 정상 40-call synthetic evidence bundle은 complete=true, differences=[]로 통과했다. 같은 bundle의 한국어 요약을 허위 내용, CRLF, BOM으로 각각 바꾸고 BUNDLE_MANIFEST.json을 재해시한 세 변조본은 모두 ValueError: independent mismatch: Korean summary exact UTF-8/LF bytes로 거부됐다.",
+      "stale_effect": "1차 FAIL 판정은 r1 후보에만 유효하다. r2 봉인 대상에서 수정과 영향 범위 재감사를 완료했다."
+    },
+    {
+      "finding_id": "F-002",
+      "prior_severity": "diagnostic",
+      "status": "documented_accepted_limitation",
+      "evidence": "docs/VALIDATION.ko.md가 metadata identity 비교 필드와 show_sha256 전체 제외, 미추적 /api/show 필드 변화가 중단되지 않는 경계를 명시한다. 실행 코드는 바뀌지 않았다.",
+      "stale_effect": "모델 digest와 추적 핵심 필드 비교 및 원문 보존은 유지된다. 실제 모든 모델 상태의 동일성을 주장하지 않는 제한으로 수용한다."
+    },
+    {
+      "finding_id": "F-003",
+      "prior_severity": "diagnostic",
+      "status": "resolved",
+      "evidence": "validation/FINAL_REVIEW.ko.md가 실제 생성됐고 docs/VALIDATION.ko.md는 최종 감사·로그가 source ZIP 밖 저장소 검증 산출물임을 명시한다.",
+      "stale_effect": "저장소에서 링크 대상이 존재하며 source ZIP 단독 해제 환경의 경계도 설명한다."
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "F-002",
+      "severity": "diagnostic",
+      "criterion": "metadata identity 비교의 관측 범위가 문서와 해석에 정확히 제한되어야 한다.",
+      "evidence": "metadata identity는 model, digest, server, details, template, 정렬한 parameter lines, model_info를 비교하고 show_sha256 전체는 제외한다. 이 경계가 수정된 VALIDATION.ko.md에 명시됐다.",
+      "impact": "미추적 /api/show 필드 변화는 identity drift로 중단되지 않는다. 현재 결과는 모든 모델 상태의 동일성까지 보증하지 않는다.",
+      "recommended_action": "향후 미추적 show 필드가 연구 질문에 영향을 줄 가능성이 확인되면 parameter 줄만 정규화한 show 전체 digest를 별도 계약으로 추가한다.",
+      "unverified": "동일 model digest와 추적 핵심 필드를 유지한 미추적 show 필드 변화가 실제 추론을 바꾸는지는 확인하지 않았다."
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "R2-C001-source-seal",
+      "result": "PASS",
+      "evidence": "r2 source ZIP SHA-256을 직접 재계산해 aa48d6b2376e707c8b407de568e02782cfa2c313176e007bd3630b6acbb1c6e4와 일치했다. ZIP은 RELEASE_MANIFEST.json 포함 289 members, file_hashes 288개이며 member 집합과 모든 SHA-256이 일치했다. candidate_manifest_r2.json은 ZIP manifest와 바이트 단위로 같고 file_hashes canonical digest는 207d6dff500f08a6703b36ecf4b8d95c3109b95fb82a6b8119b83ce51d7bfa5a이다."
+    },
+    {
+      "check_id": "R2-C002-extracted-release",
+      "result": "PASS",
+      "evidence": "새 해제 위치의 manifest 대상 288개 파일에서 누락·해시 불일치·symlink가 없었다. 추가 파일은 의도된 RELEASE_MANIFEST.json 하나뿐이다. release_check_r2.json의 extracted_files_changed=[], cache_files_in_release=false와 일치한다."
+    },
+    {
+      "check_id": "R2-C003-change-scope",
+      "result": "PASS",
+      "evidence": "r1과 r2 manifest를 직접 비교해 변경된 source 파일은 verify_v059.py, test_independent.py, VALIDATION.ko.md 세 개뿐이었다. v057/v058 보존 파일 262개와 다른 v059 파일은 r1에서 검증한 바이트를 유지한다. release_check_r2.json은 existing_source_changes=[], user_input_changes=[], release_working_tree_mismatches=[]를 기록한다."
+    },
+    {
+      "check_id": "R2-C004-f001-code-fix",
+      "result": "PASS",
+      "evidence": "새 independent_summary_ko는 생산 reporting 모듈을 import하지 않고 independent_summary의 재계산 값, raw에서 검증한 상태·출처·plan hash·event tip으로 한국어 보고서를 재생성한다. verifier는 저장된 summary.ko.md와 exact bytes를 비교하므로 내용, 인코딩 BOM, 줄바꿈 변조를 모두 거부한다."
+    },
+    {
+      "check_id": "R2-C005-targeted-counterexamples",
+      "result": "PASS",
+      "evidence": "별도 임시 폴더에서 한 번 생성한 정상 synthetic 40-call evidence bundle은 complete=true, differences=[], observed_calls=40, metadata_records=20으로 승인됐다. 한국어 요약을 (1) 허위 결론, (2) CRLF, (3) UTF-8 BOM으로 각각 변조하고 manifest를 재해시한 세 bundle은 모두 exact UTF-8/LF mismatch로 거부됐다."
+    },
+    {
+      "check_id": "R2-C006-release-selftest-evidence",
+      "result": "PASS",
+      "evidence": "새 해제 위치의 release_selftest_r2.log와 release_selftest_r2.json을 대조했다. 전체 28 test methods, skip 0, OK, exit_code=0이며 기존 rehashed-manifest 테스트의 subtests에 허위 한국어 요약·CRLF·BOM 반례가 포함된다. 이 재감사에서는 전체 suite를 반복하지 않고 영향받은 세 반례와 정상 bundle을 직접 실행했다."
+    },
+    {
+      "check_id": "R2-C007-plan-regeneration",
+      "result": "PASS",
+      "evidence": "실제 v058 baseline으로 생성한 v059_rules_validation_02.plan.json의 canonical SHA-256을 독립 계산해 20c411caea9e2cc1a2866970ca247447d8b67836832c0c0861b507fa6dffff99와 일치했다. baseline SHA-256은 d8fd5b2123d38023aaf7c7c0427f54ab6fe650d6b85a695790cb7a5b5b852761이며 reference와 같다. r1 plan과 비교하면 created_at, source_fingerprint, plan_sha256만 바뀌었고 reference, slots, actions, request_hashes와 모든 설계 축은 동일하다."
+    },
+    {
+      "check_id": "R2-C008-documentation-dispositions",
+      "result": "PASS",
+      "evidence": "수정된 VALIDATION.ko.md는 F-001의 실패와 재검증 방식, F-002의 metadata 관측 경계, 수정 전 28시험·plan hash와 r2 증거의 구분을 명시한다. FINAL_REVIEW.ko.md가 source ZIP 밖 validation 산출물로 존재한다."
+    },
+    {
+      "check_id": "R2-C009-offline-scope",
+      "result": "PASS",
+      "evidence": "prepare_r2.json, show_r2.json, release_selftest_r2.json, release_check_r2.json은 모두 new_model_inference=false다. 이 재감사도 합성 fixture와 파일·ZIP·코드 검사만 수행했고 Ollama 추론을 실행하지 않았다."
+    }
+  ],
+  "limitations": [
+    "이 판정은 r2 source 후보에 대한 pre-execution 재감사다. 실제 v059 LLM 40-call 결과, 실행 당시 모델 상태, 캐시의 인과 역할은 관측하지 않았다.",
+    "해시와 로그는 저장 자료의 일관성을 보이지만 외부 실행 전자서명이나 플랫폼 수준 실행 인증은 아니다.",
+    "생산 계산기와 독립 계산기는 구현을 분리했지만 K01 문제 명세와 보존된 이전 independent 도구를 공유하므로 구성타당성의 공통 오류 가능성은 남는다.",
+    "F-002의 미추적 /api/show 필드 변화는 문서화된 관측 한계로 남는다."
+  ]
+}

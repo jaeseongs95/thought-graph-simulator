@@ -1,0 +1,17 @@
+{
+  "command": [
+    "C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-m",
+    "rule_order_v059",
+    "prepare",
+    "--baseline-bundle",
+    "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v058\\results_llm\\v058_order_02_evidence.zip",
+    "--out",
+    "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v059\\experiments\\v059_rules_validation_02.plan.json"
+  ],
+  "cwd": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v059\\probe",
+  "exit_code": 0,
+  "elapsed_seconds": 26.969,
+  "new_model_inference": false
+}

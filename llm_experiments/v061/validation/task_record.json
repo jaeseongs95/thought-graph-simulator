@@ -1,0 +1,27 @@
+{
+  "scope": "new llm_experiments/v061 only",
+  "request": "Analyze v060 using independent perspectives and cross-examination, create next experiment source, and independently verify the source.",
+  "initial_tracked_git_status_lines": 24581,
+  "initial_hashes": {
+    "AGENTS.md": "f4c881041ec8bc6def412e5d32df1288aa89e85cc515c3a5c32a310483c7b752",
+    "llm_experiments/v060/results_llm/v060_position_01_evidence.zip": "5a2aeeaf28e9b445b61f3cf78ce87c11aeea1b57cc36ba74bd772fecc15c2c68",
+    "llm_experiments/v060/results_llm/v060_position_01_independent.json": "99d9794bc683a0d5fc48282a8c7a63362b7de6ed167d1247d0c2c1a29018a508"
+  },
+  "panel": {
+    "risk": "MEDIUM",
+    "reviewers": ["v060_measurement", "v060_causal", "v060_evidence"],
+    "requested_model": "gpt-5.6-sol",
+    "requested_reasoning": "high",
+    "context": "fork_turns:none; separate neutral inputs",
+    "actual_settings": "unverified",
+    "reason": "Creation tool returns task identifiers only.",
+    "redelegation": false
+  },
+  "constraints": [
+    "Preserve prior evidence and existing user changes.",
+    "No real LLM inference, model downloads, or external publication.",
+    "Keep choice implied_depth separate from actual proof D.",
+    "Do not count historical calls or same-seed repetitions as new independent problems.",
+    "Offline tests and a fresh sealed source audit are required before completion."
+  ]
+}

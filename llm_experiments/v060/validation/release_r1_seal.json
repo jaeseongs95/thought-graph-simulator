@@ -1,0 +1,53 @@
+{
+  "artifact": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v060\\releases\\v060_terminal_position_source_r1.zip",
+  "sha256": "4fed2f1cd053bc6679246a7ad94649b811e8b549ef930d8e033aa39a405567c5",
+  "extracted": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v060\\validation\\extracted_r1",
+  "verification": [
+    {
+      "command": [
+        "C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "tools/build_release.py",
+        "--out",
+        "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v060\\releases\\v060_terminal_position_source_r1.zip"
+      ],
+      "cwd": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v060\\probe",
+      "exit_code": 0,
+      "seconds": 0.219,
+      "log": "release_build.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "tools/build_release.py",
+        "--check",
+        "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v060\\releases\\v060_terminal_position_source_r1.zip"
+      ],
+      "cwd": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v060\\probe",
+      "exit_code": 0,
+      "seconds": 0.109,
+      "log": "release_check.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "terminal_position_v060",
+        "selftest"
+      ],
+      "cwd": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v060\\validation\\extracted_r1\\llm_experiments\\v060\\probe",
+      "exit_code": 0,
+      "seconds": 75.125,
+      "log": "extracted_r1_selftest.log"
+    }
+  ],
+  "new_model_inference": false
+}

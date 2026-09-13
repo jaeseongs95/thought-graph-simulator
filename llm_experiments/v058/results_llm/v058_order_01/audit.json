@@ -1,0 +1,15 @@
+{
+  "contract": "v058-order-replay-report-r1",
+  "data_integrity": true,
+  "data_complete": false,
+  "comparative_analysis_ready": false,
+  "inference_calls": 4,
+  "max_inference_calls": 80,
+  "plan_sha256": "2ee6ef8c3addc6c767424f713791c69361b85f904bf0b2ebf47e3d956978c170",
+  "event_tip": "2508d2e4c9be45a8693716a3aa6e561e85e59e6652d5fcf884edf53deba20351",
+  "run_state": "incomplete",
+  "failure_stage": "metadata",
+  "failure_kind": "runtime_identity_error",
+  "failure_slot_id": "b01.before",
+  "run_error": "동결한 모델 digest/show/server/details와 다릅니다"
+}

@@ -1,0 +1,213 @@
+[2026-09-13 08:38:11] Repository: D:\codex\AI논문\thought-graph-simulator
+[2026-09-13 08:38:11] Python: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe
+[2026-09-13 08:38:11] Log: D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\results_llm\automation_logs\v058_20260913_083811_368\run.log
+[2026-09-13 08:38:11] Self-test skipped because -SkipSelfTest was specified.
+[2026-09-13 08:38:11] START: v057 input validation
+[2026-09-13 08:38:11] COMMAND: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -B tools\validate_inputs.py --directory D:\codex\AI논문\thought-graph-simulator\llm_experiments\v057\results_llm --out D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\results_llm\automation_logs\v058_20260913_083811_368\v057_input_validation.json
+[2026-09-13 08:38:35] 5 inputs, production audit, independent audit: PASS
+[2026-09-13 08:38:35] DONE: v057 input validation
+[2026-09-13 08:38:35] Run name: v058_order_02
+[2026-09-13 08:38:35] v057 reference evidence: D:\codex\AI논문\thought-graph-simulator\llm_experiments\v057\results_llm\v057_selection_01_evidence.zip
+[2026-09-13 08:38:35] Contract: 80 inference calls, no automatic retry, no overwrite of existing results.
+[2026-09-13 08:38:35] START: v058 plan preparation
+[2026-09-13 08:38:35] COMMAND: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -B -m order_replay_v058 prepare --baseline-bundle D:\codex\AI논문\thought-graph-simulator\llm_experiments\v057\results_llm\v057_selection_01_evidence.zip --out D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\experiments\v058_order_02.plan.json
+[2026-09-13 08:38:54] {
+[2026-09-13 08:38:54]   "contract": "order-replay-v058-r1",
+[2026-09-13 08:38:54]   "plan_sha256": "ff4c80c82fd2f5676e73485eb19ab730d6669fea1dfe0c0f81cdc6a06859a473",
+[2026-09-13 08:38:54]   "model_keys": [
+[2026-09-13 08:38:54]     "reference",
+[2026-09-13 08:38:54]     "candidate"
+[2026-09-13 08:38:54]   ],
+[2026-09-13 08:38:54]   "modes": [
+[2026-09-13 08:38:54]     "graph",
+[2026-09-13 08:38:54]     "choice"
+[2026-09-13 08:38:54]   ],
+[2026-09-13 08:38:54]   "boundary_cells": {
+[2026-09-13 08:38:54]     "reference": {
+[2026-09-13 08:38:54]       "problem_id": "T02",
+[2026-09-13 08:38:54]       "arm": "original",
+[2026-09-13 08:38:54]       "direction": "shallow"
+[2026-09-13 08:38:54]     },
+[2026-09-13 08:38:54]     "candidate": {
+[2026-09-13 08:38:54]       "problem_id": "K01",
+[2026-09-13 08:38:54]       "arm": "original",
+[2026-09-13 08:38:54]       "direction": "shallow"
+[2026-09-13 08:38:54]     }
+[2026-09-13 08:38:54]   },
+[2026-09-13 08:38:54]   "sequences": [
+[2026-09-13 08:38:54]     "graph_choice",
+[2026-09-13 08:38:54]     "choice_graph"
+[2026-09-13 08:38:54]   ],
+[2026-09-13 08:38:54]   "max_calls": 80
+[2026-09-13 08:38:54] }
+[2026-09-13 08:38:54] 오프라인 계획 확인 완료. 추론 실행 없음. v057 관측 후 선정한 경계 조건의 탐색적 순서 진단.
+[2026-09-13 08:38:54] DONE: v058 plan preparation
+[2026-09-13 08:38:54] START: frozen plan validation
+[2026-09-13 08:38:54] COMMAND: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -B -m order_replay_v058 show --plan D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\experiments\v058_order_02.plan.json
+[2026-09-13 08:38:54] {
+[2026-09-13 08:38:54]   "contract": "order-replay-v058-r1",
+[2026-09-13 08:38:54]   "plan_sha256": "ff4c80c82fd2f5676e73485eb19ab730d6669fea1dfe0c0f81cdc6a06859a473",
+[2026-09-13 08:38:54]   "model_keys": [
+[2026-09-13 08:38:54]     "reference",
+[2026-09-13 08:38:54]     "candidate"
+[2026-09-13 08:38:54]   ],
+[2026-09-13 08:38:54]   "modes": [
+[2026-09-13 08:38:54]     "graph",
+[2026-09-13 08:38:54]     "choice"
+[2026-09-13 08:38:54]   ],
+[2026-09-13 08:38:54]   "boundary_cells": {
+[2026-09-13 08:38:54]     "reference": {
+[2026-09-13 08:38:54]       "problem_id": "T02",
+[2026-09-13 08:38:54]       "arm": "original",
+[2026-09-13 08:38:54]       "direction": "shallow"
+[2026-09-13 08:38:54]     },
+[2026-09-13 08:38:54]     "candidate": {
+[2026-09-13 08:38:54]       "problem_id": "K01",
+[2026-09-13 08:38:54]       "arm": "original",
+[2026-09-13 08:38:54]       "direction": "shallow"
+[2026-09-13 08:38:54]     }
+[2026-09-13 08:38:54]   },
+[2026-09-13 08:38:54]   "sequences": [
+[2026-09-13 08:38:54]     "graph_choice",
+[2026-09-13 08:38:54]     "choice_graph"
+[2026-09-13 08:38:54]   ],
+[2026-09-13 08:38:54]   "max_calls": 80
+[2026-09-13 08:38:54] }
+[2026-09-13 08:38:54] 오프라인 계획 확인 완료. 추론 실행 없음. v057 관측 후 선정한 경계 조건의 탐색적 순서 진단.
+[2026-09-13 08:38:54] DONE: frozen plan validation
+[2026-09-13 08:38:54] Ollama server is available: http://127.0.0.1:11434
+[2026-09-13 08:38:54] START: v058 80-call inference run
+[2026-09-13 08:38:54] COMMAND: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -B -m order_replay_v058 run --plan D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\experiments\v058_order_02.plan.json --out D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\results_llm\v058_order_02
+[2026-09-13 08:39:15] [1/80] graph_choice__graph__merged__reference__s00_T02_original_shallow
+[2026-09-13 08:39:18] [2/80] graph_choice__choice__merged__reference__s00_T02_original_shallow
+[2026-09-13 08:39:18] [3/80] choice_graph__choice__merged__reference__s00_T02_original_shallow
+[2026-09-13 08:39:18] [4/80] choice_graph__graph__merged__reference__s00_T02_original_shallow
+[2026-09-13 08:39:20] [5/80] graph_choice__graph__merged__candidate__s00_K01_original_shallow
+[2026-09-13 08:39:28] [6/80] graph_choice__choice__merged__candidate__s00_K01_original_shallow
+[2026-09-13 08:39:29] [7/80] choice_graph__choice__merged__candidate__s00_K01_original_shallow
+[2026-09-13 08:39:29] [8/80] choice_graph__graph__merged__candidate__s00_K01_original_shallow
+[2026-09-13 08:39:31] [9/80] choice_graph__choice__merged__candidate__s01_K01_original_shallow
+[2026-09-13 08:39:31] [10/80] choice_graph__graph__merged__candidate__s01_K01_original_shallow
+[2026-09-13 08:39:37] [11/80] graph_choice__graph__merged__candidate__s01_K01_original_shallow
+[2026-09-13 08:39:42] [12/80] graph_choice__choice__merged__candidate__s01_K01_original_shallow
+[2026-09-13 08:39:42] [13/80] choice_graph__choice__merged__reference__s01_T02_original_shallow
+[2026-09-13 08:39:46] [14/80] choice_graph__graph__merged__reference__s01_T02_original_shallow
+[2026-09-13 08:39:48] [15/80] graph_choice__graph__merged__reference__s01_T02_original_shallow
+[2026-09-13 08:39:50] [16/80] graph_choice__choice__merged__reference__s01_T02_original_shallow
+[2026-09-13 08:39:50] [17/80] graph_choice__graph__merged__reference__s02_T02_original_shallow
+[2026-09-13 08:39:52] [18/80] graph_choice__choice__merged__reference__s02_T02_original_shallow
+[2026-09-13 08:39:53] [19/80] choice_graph__choice__merged__reference__s02_T02_original_shallow
+[2026-09-13 08:39:53] [20/80] choice_graph__graph__merged__reference__s02_T02_original_shallow
+[2026-09-13 08:39:55] [21/80] graph_choice__graph__merged__candidate__s02_K01_original_shallow
+[2026-09-13 08:40:01] [22/80] graph_choice__choice__merged__candidate__s02_K01_original_shallow
+[2026-09-13 08:40:02] [23/80] choice_graph__choice__merged__candidate__s02_K01_original_shallow
+[2026-09-13 08:40:02] [24/80] choice_graph__graph__merged__candidate__s02_K01_original_shallow
+[2026-09-13 08:40:04] [25/80] choice_graph__choice__merged__candidate__s03_K01_original_shallow
+[2026-09-13 08:40:05] [26/80] choice_graph__graph__merged__candidate__s03_K01_original_shallow
+[2026-09-13 08:40:06] [27/80] graph_choice__graph__merged__candidate__s03_K01_original_shallow
+[2026-09-13 08:40:08] [28/80] graph_choice__choice__merged__candidate__s03_K01_original_shallow
+[2026-09-13 08:40:08] [29/80] choice_graph__choice__merged__reference__s03_T02_original_shallow
+[2026-09-13 08:40:11] [30/80] choice_graph__graph__merged__reference__s03_T02_original_shallow
+[2026-09-13 08:40:14] [31/80] graph_choice__graph__merged__reference__s03_T02_original_shallow
+[2026-09-13 08:40:16] [32/80] graph_choice__choice__merged__reference__s03_T02_original_shallow
+[2026-09-13 08:40:16] [33/80] graph_choice__graph__merged__reference__s04_T02_original_shallow
+[2026-09-13 08:40:18] [34/80] graph_choice__choice__merged__reference__s04_T02_original_shallow
+[2026-09-13 08:40:18] [35/80] choice_graph__choice__merged__reference__s04_T02_original_shallow
+[2026-09-13 08:40:18] [36/80] choice_graph__graph__merged__reference__s04_T02_original_shallow
+[2026-09-13 08:40:20] [37/80] graph_choice__graph__merged__candidate__s04_K01_original_shallow
+[2026-09-13 08:40:26] [38/80] graph_choice__choice__merged__candidate__s04_K01_original_shallow
+[2026-09-13 08:40:26] [39/80] choice_graph__choice__merged__candidate__s04_K01_original_shallow
+[2026-09-13 08:40:27] [40/80] choice_graph__graph__merged__candidate__s04_K01_original_shallow
+[2026-09-13 08:40:28] [41/80] choice_graph__choice__merged__candidate__s05_K01_original_shallow
+[2026-09-13 08:40:29] [42/80] choice_graph__graph__merged__candidate__s05_K01_original_shallow
+[2026-09-13 08:40:35] [43/80] graph_choice__graph__merged__candidate__s05_K01_original_shallow
+[2026-09-13 08:40:41] [44/80] graph_choice__choice__merged__candidate__s05_K01_original_shallow
+[2026-09-13 08:40:42] [45/80] choice_graph__choice__merged__reference__s05_T02_original_shallow
+[2026-09-13 08:40:45] [46/80] choice_graph__graph__merged__reference__s05_T02_original_shallow
+[2026-09-13 08:40:47] [47/80] graph_choice__graph__merged__reference__s05_T02_original_shallow
+[2026-09-13 08:40:49] [48/80] graph_choice__choice__merged__reference__s05_T02_original_shallow
+[2026-09-13 08:40:50] [49/80] graph_choice__graph__merged__reference__s06_T02_original_shallow
+[2026-09-13 08:40:51] [50/80] graph_choice__choice__merged__reference__s06_T02_original_shallow
+[2026-09-13 08:40:52] [51/80] choice_graph__choice__merged__reference__s06_T02_original_shallow
+[2026-09-13 08:40:52] [52/80] choice_graph__graph__merged__reference__s06_T02_original_shallow
+[2026-09-13 08:40:54] [53/80] graph_choice__graph__merged__candidate__s06_K01_original_shallow
+[2026-09-13 08:41:01] [54/80] graph_choice__choice__merged__candidate__s06_K01_original_shallow
+[2026-09-13 08:41:02] [55/80] choice_graph__choice__merged__candidate__s06_K01_original_shallow
+[2026-09-13 08:41:02] [56/80] choice_graph__graph__merged__candidate__s06_K01_original_shallow
+[2026-09-13 08:41:06] [57/80] choice_graph__choice__merged__candidate__s07_K01_original_shallow
+[2026-09-13 08:41:06] [58/80] choice_graph__graph__merged__candidate__s07_K01_original_shallow
+[2026-09-13 08:41:09] [59/80] graph_choice__graph__merged__candidate__s07_K01_original_shallow
+[2026-09-13 08:41:13] [60/80] graph_choice__choice__merged__candidate__s07_K01_original_shallow
+[2026-09-13 08:41:13] [61/80] choice_graph__choice__merged__reference__s07_T02_original_shallow
+[2026-09-13 08:41:17] [62/80] choice_graph__graph__merged__reference__s07_T02_original_shallow
+[2026-09-13 08:41:19] [63/80] graph_choice__graph__merged__reference__s07_T02_original_shallow
+[2026-09-13 08:41:21] [64/80] graph_choice__choice__merged__reference__s07_T02_original_shallow
+[2026-09-13 08:41:21] [65/80] graph_choice__graph__merged__reference__s08_T02_original_shallow
+[2026-09-13 08:41:23] [66/80] graph_choice__choice__merged__reference__s08_T02_original_shallow
+[2026-09-13 08:41:23] [67/80] choice_graph__choice__merged__reference__s08_T02_original_shallow
+[2026-09-13 08:41:24] [68/80] choice_graph__graph__merged__reference__s08_T02_original_shallow
+[2026-09-13 08:41:26] [69/80] graph_choice__graph__merged__candidate__s08_K01_original_shallow
+[2026-09-13 08:41:32] [70/80] graph_choice__choice__merged__candidate__s08_K01_original_shallow
+[2026-09-13 08:41:32] [71/80] choice_graph__choice__merged__candidate__s08_K01_original_shallow
+[2026-09-13 08:41:32] [72/80] choice_graph__graph__merged__candidate__s08_K01_original_shallow
+[2026-09-13 08:41:34] [73/80] choice_graph__choice__merged__candidate__s09_K01_original_shallow
+[2026-09-13 08:41:35] [74/80] choice_graph__graph__merged__candidate__s09_K01_original_shallow
+[2026-09-13 08:41:39] [75/80] graph_choice__graph__merged__candidate__s09_K01_original_shallow
+[2026-09-13 08:41:43] [76/80] graph_choice__choice__merged__candidate__s09_K01_original_shallow
+[2026-09-13 08:41:44] [77/80] choice_graph__choice__merged__reference__s09_T02_original_shallow
+[2026-09-13 08:41:47] [78/80] choice_graph__graph__merged__reference__s09_T02_original_shallow
+[2026-09-13 08:41:49] [79/80] graph_choice__graph__merged__reference__s09_T02_original_shallow
+[2026-09-13 08:41:51] [80/80] graph_choice__choice__merged__reference__s09_T02_original_shallow
+[2026-09-13 08:42:13] {
+[2026-09-13 08:42:13]   "data_integrity": true,
+[2026-09-13 08:42:13]   "data_complete": true,
+[2026-09-13 08:42:13]   "inference_calls": 80,
+[2026-09-13 08:42:13]   "max_inference_calls": 80,
+[2026-09-13 08:42:13]   "failure_stage": null,
+[2026-09-13 08:42:13]   "failure_kind": null,
+[2026-09-13 08:42:13]   "failure_slot_id": null,
+[2026-09-13 08:42:13]   "run_error": null
+[2026-09-13 08:42:13] }
+[2026-09-13 08:42:13] DONE: v058 80-call inference run
+[2026-09-13 08:42:13] START: run audit
+[2026-09-13 08:42:13] COMMAND: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -B -m order_replay_v058 audit --plan D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\experiments\v058_order_02.plan.json --run D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\results_llm\v058_order_02
+[2026-09-13 08:42:36] {
+[2026-09-13 08:42:36]   "data_integrity": true,
+[2026-09-13 08:42:36]   "data_complete": true,
+[2026-09-13 08:42:36]   "inference_calls": 80,
+[2026-09-13 08:42:36]   "max_inference_calls": 80,
+[2026-09-13 08:42:36]   "failure_stage": null,
+[2026-09-13 08:42:36]   "failure_kind": null,
+[2026-09-13 08:42:36]   "failure_slot_id": null,
+[2026-09-13 08:42:36]   "run_error": null
+[2026-09-13 08:42:36] }
+[2026-09-13 08:42:36] DONE: run audit
+[2026-09-13 08:42:36] START: evidence ZIP creation
+[2026-09-13 08:42:36] COMMAND: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -B -m order_replay_v058 bundle --plan D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\experiments\v058_order_02.plan.json --run D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\results_llm\v058_order_02 --out D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\results_llm\v058_order_02_evidence.zip
+[2026-09-13 08:43:18] 증거 ZIP: D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\results_llm\v058_order_02_evidence.zip
+[2026-09-13 08:43:18] {
+[2026-09-13 08:43:18]   "data_integrity": true,
+[2026-09-13 08:43:18]   "data_complete": true,
+[2026-09-13 08:43:18]   "inference_calls": 80,
+[2026-09-13 08:43:18]   "max_inference_calls": 80,
+[2026-09-13 08:43:18]   "failure_stage": null,
+[2026-09-13 08:43:18]   "failure_kind": null,
+[2026-09-13 08:43:18]   "failure_slot_id": null,
+[2026-09-13 08:43:18]   "run_error": null
+[2026-09-13 08:43:18] }
+[2026-09-13 08:43:18] DONE: evidence ZIP creation
+[2026-09-13 08:43:18] START: independent verification
+[2026-09-13 08:43:18] COMMAND: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -B tools\verify_v058.py D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\results_llm\v058_order_02_evidence.zip --out D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\results_llm\v058_order_02_independent.json
+[2026-09-13 08:43:20] {
+[2026-09-13 08:43:20]   "contract": "independent-v058-r1",
+[2026-09-13 08:43:20]   "bundle_sha256": "d8fd5b2123d38023aaf7c7c0427f54ab6fe650d6b85a695790cb7a5b5b852761",
+[2026-09-13 08:43:20]   "complete": true,
+[2026-09-13 08:43:20]   "observed_calls": 80,
+[2026-09-13 08:43:20]   "metadata_records": 40,
+[2026-09-13 08:43:20]   "compared_fields": 1649,
+[2026-09-13 08:43:20]   "differences": [],
+[2026-09-13 08:43:20]   "production_imports": false,
+[2026-09-13 08:43:20]   "baseline_compared_fields": 4361,
+[2026-09-13 08:43:20]   "limitation": "원문·계획·측정 일관성 검산이며 외부 실행 인증이나 캐시 인과 검증은 아니다."
+[2026-09-13 08:43:20] }
+[2026-09-13 08:43:20] FAILED: Cannot bind argument to parameter 'Message' because it is an empty string.

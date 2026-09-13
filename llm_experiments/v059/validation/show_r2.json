@@ -1,0 +1,15 @@
+{
+  "command": [
+    "C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-m",
+    "rule_order_v059",
+    "show",
+    "--plan",
+    "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v059\\experiments\\v059_rules_validation_02.plan.json"
+  ],
+  "cwd": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v059\\probe",
+  "exit_code": 0,
+  "elapsed_seconds": 0.203,
+  "new_model_inference": false
+}

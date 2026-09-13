@@ -1,0 +1,75 @@
+[2026-09-13 08:25:42] Repository: D:\codex\AI논문\thought-graph-simulator
+[2026-09-13 08:25:42] Python: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe
+[2026-09-13 08:25:42] Log: D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\results_llm\automation_logs\v058_20260913_082542_626\run.log
+[2026-09-13 08:25:42] Self-test skipped because -SkipSelfTest was specified.
+[2026-09-13 08:25:42] START: v057 input validation
+[2026-09-13 08:25:42] COMMAND: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -B tools\validate_inputs.py --directory D:\codex\AI논문\thought-graph-simulator\llm_experiments\v057\results_llm --out D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\results_llm\automation_logs\v058_20260913_082542_626\v057_input_validation.json
+[2026-09-13 08:26:04] 5 inputs, production audit, independent audit: PASS
+[2026-09-13 08:26:04] DONE: v057 input validation
+[2026-09-13 08:26:04] START: current-source check plan preparation
+[2026-09-13 08:26:04] COMMAND: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -B -m order_replay_v058 prepare --baseline-bundle D:\codex\AI논문\thought-graph-simulator\llm_experiments\v057\results_llm\v057_selection_01_evidence.zip --out D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\results_llm\automation_logs\v058_20260913_082542_626\v058_check.plan.json
+[2026-09-13 08:26:25] {
+[2026-09-13 08:26:25]   "contract": "order-replay-v058-r1",
+[2026-09-13 08:26:25]   "plan_sha256": "68f030fa64a5ac14ba8cf9961607de4abcd9777eb5babb7e5dd1a4b3ae90e6a3",
+[2026-09-13 08:26:25]   "model_keys": [
+[2026-09-13 08:26:25]     "reference",
+[2026-09-13 08:26:25]     "candidate"
+[2026-09-13 08:26:25]   ],
+[2026-09-13 08:26:25]   "modes": [
+[2026-09-13 08:26:25]     "graph",
+[2026-09-13 08:26:25]     "choice"
+[2026-09-13 08:26:25]   ],
+[2026-09-13 08:26:25]   "boundary_cells": {
+[2026-09-13 08:26:25]     "reference": {
+[2026-09-13 08:26:25]       "problem_id": "T02",
+[2026-09-13 08:26:25]       "arm": "original",
+[2026-09-13 08:26:25]       "direction": "shallow"
+[2026-09-13 08:26:25]     },
+[2026-09-13 08:26:25]     "candidate": {
+[2026-09-13 08:26:25]       "problem_id": "K01",
+[2026-09-13 08:26:25]       "arm": "original",
+[2026-09-13 08:26:25]       "direction": "shallow"
+[2026-09-13 08:26:25]     }
+[2026-09-13 08:26:25]   },
+[2026-09-13 08:26:25]   "sequences": [
+[2026-09-13 08:26:25]     "graph_choice",
+[2026-09-13 08:26:25]     "choice_graph"
+[2026-09-13 08:26:25]   ],
+[2026-09-13 08:26:25]   "max_calls": 80
+[2026-09-13 08:26:25] }
+[2026-09-13 08:26:25] 오프라인 계획 확인 완료. 추론 실행 없음. v057 관측 후 선정한 경계 조건의 탐색적 순서 진단.
+[2026-09-13 08:26:25] DONE: current-source check plan preparation
+[2026-09-13 08:26:25] START: current-source check plan validation
+[2026-09-13 08:26:25] COMMAND: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -B -m order_replay_v058 show --plan D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\results_llm\automation_logs\v058_20260913_082542_626\v058_check.plan.json
+[2026-09-13 08:26:25] {
+[2026-09-13 08:26:25]   "contract": "order-replay-v058-r1",
+[2026-09-13 08:26:25]   "plan_sha256": "68f030fa64a5ac14ba8cf9961607de4abcd9777eb5babb7e5dd1a4b3ae90e6a3",
+[2026-09-13 08:26:25]   "model_keys": [
+[2026-09-13 08:26:25]     "reference",
+[2026-09-13 08:26:25]     "candidate"
+[2026-09-13 08:26:25]   ],
+[2026-09-13 08:26:25]   "modes": [
+[2026-09-13 08:26:25]     "graph",
+[2026-09-13 08:26:25]     "choice"
+[2026-09-13 08:26:25]   ],
+[2026-09-13 08:26:25]   "boundary_cells": {
+[2026-09-13 08:26:25]     "reference": {
+[2026-09-13 08:26:25]       "problem_id": "T02",
+[2026-09-13 08:26:25]       "arm": "original",
+[2026-09-13 08:26:25]       "direction": "shallow"
+[2026-09-13 08:26:25]     },
+[2026-09-13 08:26:25]     "candidate": {
+[2026-09-13 08:26:25]       "problem_id": "K01",
+[2026-09-13 08:26:25]       "arm": "original",
+[2026-09-13 08:26:25]       "direction": "shallow"
+[2026-09-13 08:26:25]     }
+[2026-09-13 08:26:25]   },
+[2026-09-13 08:26:25]   "sequences": [
+[2026-09-13 08:26:25]     "graph_choice",
+[2026-09-13 08:26:25]     "choice_graph"
+[2026-09-13 08:26:25]   ],
+[2026-09-13 08:26:25]   "max_calls": 80
+[2026-09-13 08:26:25] }
+[2026-09-13 08:26:25] 오프라인 계획 확인 완료. 추론 실행 없음. v057 관측 후 선정한 경계 조건의 탐색적 순서 진단.
+[2026-09-13 08:26:25] DONE: current-source check plan validation
+[2026-09-13 08:26:25] Check complete. No model call, Ollama start, or inference-result creation was performed.

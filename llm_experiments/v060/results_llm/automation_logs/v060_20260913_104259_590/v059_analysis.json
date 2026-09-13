@@ -1,0 +1,1506 @@
+{
+  "contract": "v059-multiperspective-reanalysis-r1",
+  "bundle_sha256": "3f9b1e1462fa48f8b88f3ec71b69020adc7257c826e84d4b893b1d24eba685c5",
+  "independent_receipt": {
+    "contract": "independent-v059-r1",
+    "bundle_sha256": "3f9b1e1462fa48f8b88f3ec71b69020adc7257c826e84d4b893b1d24eba685c5",
+    "complete": true,
+    "observed_calls": 40,
+    "metadata_records": 20,
+    "compared_fields": 802,
+    "differences": [],
+    "production_imports": false,
+    "baseline_compared_fields": 1649,
+    "limitation": "원문·계획·측정 일관성 검산이며 외부 실행 인증이나 규칙 위치·캐시·내부 기제의 인과 검증은 아니다."
+  },
+  "groups": {
+    "original": {
+      "assigned": 20,
+      "observed": 20,
+      "selected_ids": {
+        "k17": 20
+      },
+      "format_valid": 20,
+      "choice_valid": 20,
+      "shallow_success": 0
+    },
+    "terminal_swap": {
+      "assigned": 20,
+      "observed": 20,
+      "selected_ids": {
+        "k03": 20
+      },
+      "format_valid": 20,
+      "choice_valid": 20,
+      "shallow_success": 20
+    }
+  },
+  "rows": [
+    {
+      "id": "b00_p0_original_r0",
+      "seed": 68285180,
+      "variant": "original",
+      "repeat": 0,
+      "period": 0,
+      "sequence": "ABBA",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k17",
+        "implied_depth": 2,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k17",
+        "k03"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": true,
+        "shortest_reachable": false
+      },
+      "request_sha256": "78d25d5da2410af367cb65cfc30451856a8092e1567764d2cb1145e163200108",
+      "response_sha256": "de0264ecd3d792af7f6f7ddd9a5369268774cdd7d99694d18a184442067f4b49"
+    },
+    {
+      "id": "b00_p1_terminal_swap_r0",
+      "seed": 68285180,
+      "variant": "terminal_swap",
+      "repeat": 0,
+      "period": 1,
+      "sequence": "ABBA",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k03",
+        "k17"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": false,
+        "shortest_reachable": true
+      },
+      "request_sha256": "9a370ef952425ec7fc09913d98b6832043d20c847d26e4317ee1755c731ae6f4",
+      "response_sha256": "eee193f9ae37123292e6e435339f0805f1955f69af78900bf5d25fac6dc1a87a"
+    },
+    {
+      "id": "b00_p2_terminal_swap_r1",
+      "seed": 68285180,
+      "variant": "terminal_swap",
+      "repeat": 1,
+      "period": 2,
+      "sequence": "ABBA",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k03",
+        "k17"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": false,
+        "shortest_reachable": true
+      },
+      "request_sha256": "9a370ef952425ec7fc09913d98b6832043d20c847d26e4317ee1755c731ae6f4",
+      "response_sha256": "84b12f67e0cf5660c8230a3b1f02b6fe902a610389c5454cb204a771111fe271"
+    },
+    {
+      "id": "b00_p3_original_r1",
+      "seed": 68285180,
+      "variant": "original",
+      "repeat": 1,
+      "period": 3,
+      "sequence": "ABBA",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k17",
+        "implied_depth": 2,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k17",
+        "k03"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": true,
+        "shortest_reachable": false
+      },
+      "request_sha256": "78d25d5da2410af367cb65cfc30451856a8092e1567764d2cb1145e163200108",
+      "response_sha256": "9f063a04c75cdcf6d61797491adb5e02bf99c5c1794f546815c46f1d820d7e31"
+    },
+    {
+      "id": "b01_p0_terminal_swap_r0",
+      "seed": 860724506,
+      "variant": "terminal_swap",
+      "repeat": 0,
+      "period": 0,
+      "sequence": "BAAB",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k03",
+        "k17"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": false,
+        "shortest_reachable": true
+      },
+      "request_sha256": "96c6e6817e9229ac3a41066a8b661adb46f146b1a05f9bced04de90fc9652b9c",
+      "response_sha256": "440d12ed48bd0267a38e9a5a9acfb04afc9de6dfd4ffda186673b2d40d9e673c"
+    },
+    {
+      "id": "b01_p1_original_r0",
+      "seed": 860724506,
+      "variant": "original",
+      "repeat": 0,
+      "period": 1,
+      "sequence": "BAAB",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k17",
+        "implied_depth": 2,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k17",
+        "k03"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": true,
+        "shortest_reachable": false
+      },
+      "request_sha256": "72b37ec64d220c595b6104a6117e62ae19f3d573345655174ca2ccc2f42d762c",
+      "response_sha256": "2bcb1a133e8b409c4c9206b6156b40e619532a639f997208711b8a3cd57a1083"
+    },
+    {
+      "id": "b01_p2_original_r1",
+      "seed": 860724506,
+      "variant": "original",
+      "repeat": 1,
+      "period": 2,
+      "sequence": "BAAB",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k17",
+        "implied_depth": 2,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k17",
+        "k03"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": true,
+        "shortest_reachable": false
+      },
+      "request_sha256": "72b37ec64d220c595b6104a6117e62ae19f3d573345655174ca2ccc2f42d762c",
+      "response_sha256": "163781f1cc9ffa69fcabec0b13a59a91bea51abcc4695e2b2ba1c5dc00edc364"
+    },
+    {
+      "id": "b01_p3_terminal_swap_r1",
+      "seed": 860724506,
+      "variant": "terminal_swap",
+      "repeat": 1,
+      "period": 3,
+      "sequence": "BAAB",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k03",
+        "k17"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": false,
+        "shortest_reachable": true
+      },
+      "request_sha256": "96c6e6817e9229ac3a41066a8b661adb46f146b1a05f9bced04de90fc9652b9c",
+      "response_sha256": "54c308c9cbf80fbeb2345c5478ec68f9b6c20cc4209b34c61824fe67622b71dc"
+    },
+    {
+      "id": "b02_p0_terminal_swap_r0",
+      "seed": 267101868,
+      "variant": "terminal_swap",
+      "repeat": 0,
+      "period": 0,
+      "sequence": "BAAB",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k03",
+        "k17"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": false,
+        "shortest_reachable": true
+      },
+      "request_sha256": "69e0b4c22fa9ab5d158dfa295a10a00a670501f7593cb8ab4697a90bcb313f9d",
+      "response_sha256": "e5f180d827dbbdc85d029df2be8c55eb4fcd4b713fb711ab4b86d1ac4c62c897"
+    },
+    {
+      "id": "b02_p1_original_r0",
+      "seed": 267101868,
+      "variant": "original",
+      "repeat": 0,
+      "period": 1,
+      "sequence": "BAAB",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k17",
+        "implied_depth": 2,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k17",
+        "k03"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": true,
+        "shortest_reachable": false
+      },
+      "request_sha256": "77edf4f4c12deb0fa49be3b957b8a96080f63acadb1a428934d7a3cbe37cfcf8",
+      "response_sha256": "7dfd7374c3f4c0bc1621fee4cf22258735d68e3d4dec21ce97e60eec4d168d7c"
+    },
+    {
+      "id": "b02_p2_original_r1",
+      "seed": 267101868,
+      "variant": "original",
+      "repeat": 1,
+      "period": 2,
+      "sequence": "BAAB",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k17",
+        "implied_depth": 2,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k17",
+        "k03"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": true,
+        "shortest_reachable": false
+      },
+      "request_sha256": "77edf4f4c12deb0fa49be3b957b8a96080f63acadb1a428934d7a3cbe37cfcf8",
+      "response_sha256": "b90305a67fd8a8119c7f6488059de29df410f95fd867b1c5210d74fb11da6f74"
+    },
+    {
+      "id": "b02_p3_terminal_swap_r1",
+      "seed": 267101868,
+      "variant": "terminal_swap",
+      "repeat": 1,
+      "period": 3,
+      "sequence": "BAAB",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k03",
+        "k17"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": false,
+        "shortest_reachable": true
+      },
+      "request_sha256": "69e0b4c22fa9ab5d158dfa295a10a00a670501f7593cb8ab4697a90bcb313f9d",
+      "response_sha256": "61a28cd70ec332056dd745023827fb7b9ea6abf63c7e6275ea14fe844f01b324"
+    },
+    {
+      "id": "b03_p0_original_r0",
+      "seed": 1292559482,
+      "variant": "original",
+      "repeat": 0,
+      "period": 0,
+      "sequence": "ABBA",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k17",
+        "implied_depth": 2,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k17",
+        "k03"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": true,
+        "shortest_reachable": false
+      },
+      "request_sha256": "a2504b8dc9a27535be5e3d1336ffd2645e7c45f5bedbe587f09260e2462d82b8",
+      "response_sha256": "371b0f160746bf045390eddf61d74287d5a77fcf9ac826a89c84245b5cd37172"
+    },
+    {
+      "id": "b03_p1_terminal_swap_r0",
+      "seed": 1292559482,
+      "variant": "terminal_swap",
+      "repeat": 0,
+      "period": 1,
+      "sequence": "ABBA",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k03",
+        "k17"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": false,
+        "shortest_reachable": true
+      },
+      "request_sha256": "21d17af4c6477f55a0c7429cc6c9ccbf04e78b77a34ca5281d73de9452a26467",
+      "response_sha256": "d7b073622fc362ad0b60e214e5f0eb5135504065e55347c2ba09c1040f9921ae"
+    },
+    {
+      "id": "b03_p2_terminal_swap_r1",
+      "seed": 1292559482,
+      "variant": "terminal_swap",
+      "repeat": 1,
+      "period": 2,
+      "sequence": "ABBA",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k03",
+        "k17"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": false,
+        "shortest_reachable": true
+      },
+      "request_sha256": "21d17af4c6477f55a0c7429cc6c9ccbf04e78b77a34ca5281d73de9452a26467",
+      "response_sha256": "38c45d608f316a6afe7369ea49d2a40a69056d367eb7a37b9efceac75bf5fab9"
+    },
+    {
+      "id": "b03_p3_original_r1",
+      "seed": 1292559482,
+      "variant": "original",
+      "repeat": 1,
+      "period": 3,
+      "sequence": "ABBA",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k17",
+        "implied_depth": 2,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k17",
+        "k03"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": true,
+        "shortest_reachable": false
+      },
+      "request_sha256": "a2504b8dc9a27535be5e3d1336ffd2645e7c45f5bedbe587f09260e2462d82b8",
+      "response_sha256": "d911b3f63315ea888c8568a991bcc909a0c6bab16346666272a6d31b3b45ae7c"
+    },
+    {
+      "id": "b04_p0_terminal_swap_r0",
+      "seed": 580410664,
+      "variant": "terminal_swap",
+      "repeat": 0,
+      "period": 0,
+      "sequence": "BAAB",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k03",
+        "k17"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": false,
+        "shortest_reachable": true
+      },
+      "request_sha256": "76d043e3ad4ffe38e0d217527934934d8000ce7a30a9dbe475b1bfa7c57c6902",
+      "response_sha256": "f4b989ad76daedcd0ac015a80371df0e832514436d6384fab600763e099edefb"
+    },
+    {
+      "id": "b04_p1_original_r0",
+      "seed": 580410664,
+      "variant": "original",
+      "repeat": 0,
+      "period": 1,
+      "sequence": "BAAB",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k17",
+        "implied_depth": 2,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k17",
+        "k03"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": true,
+        "shortest_reachable": false
+      },
+      "request_sha256": "a6f935d9cb3d4b663c74f2c9a36cbe3ef63dafccaea3da62aef2826eb8944786",
+      "response_sha256": "e8cc12689334a7a02dba9de943970f8f5ba172e8c90c7a553b321c0416c150c0"
+    },
+    {
+      "id": "b04_p2_original_r1",
+      "seed": 580410664,
+      "variant": "original",
+      "repeat": 1,
+      "period": 2,
+      "sequence": "BAAB",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k17",
+        "implied_depth": 2,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k17",
+        "k03"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": true,
+        "shortest_reachable": false
+      },
+      "request_sha256": "a6f935d9cb3d4b663c74f2c9a36cbe3ef63dafccaea3da62aef2826eb8944786",
+      "response_sha256": "f3f8ce7d950a169c60b1fa204bf8f46cf8d3422ec5da14681b4b1d082b6debcb"
+    },
+    {
+      "id": "b04_p3_terminal_swap_r1",
+      "seed": 580410664,
+      "variant": "terminal_swap",
+      "repeat": 1,
+      "period": 3,
+      "sequence": "BAAB",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k03",
+        "k17"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": false,
+        "shortest_reachable": true
+      },
+      "request_sha256": "76d043e3ad4ffe38e0d217527934934d8000ce7a30a9dbe475b1bfa7c57c6902",
+      "response_sha256": "71fdb7f974bcd7e6432b754ae2fba200d74221c0f56c2930720b5102e4aea2c6"
+    },
+    {
+      "id": "b05_p0_terminal_swap_r0",
+      "seed": 1790124989,
+      "variant": "terminal_swap",
+      "repeat": 0,
+      "period": 0,
+      "sequence": "BAAB",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k03",
+        "k17"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": false,
+        "shortest_reachable": true
+      },
+      "request_sha256": "3454062144f647fad1e2c834669615c57ea48fbcbfe6d06dce80f339223565b6",
+      "response_sha256": "182613d203caf203c66021c9fe6711dc1308e430e2e2c20f0dc63f278a80e6a6"
+    },
+    {
+      "id": "b05_p1_original_r0",
+      "seed": 1790124989,
+      "variant": "original",
+      "repeat": 0,
+      "period": 1,
+      "sequence": "BAAB",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k17",
+        "implied_depth": 2,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k17",
+        "k03"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": true,
+        "shortest_reachable": false
+      },
+      "request_sha256": "eac72adc4342f3195ad532efec8dd207c1180b1ba61feb586a85ac3c2c0822ff",
+      "response_sha256": "891d9b4e1321321ea5a9dc1325fcc50ce6a74a78075589164d8be54fb6f6ba4e"
+    },
+    {
+      "id": "b05_p2_original_r1",
+      "seed": 1790124989,
+      "variant": "original",
+      "repeat": 1,
+      "period": 2,
+      "sequence": "BAAB",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k17",
+        "implied_depth": 2,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k17",
+        "k03"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": true,
+        "shortest_reachable": false
+      },
+      "request_sha256": "eac72adc4342f3195ad532efec8dd207c1180b1ba61feb586a85ac3c2c0822ff",
+      "response_sha256": "afcd64300b992aae67c5c5c3eb7ca7a20c7e77811590a2108cad910b714ae2e8"
+    },
+    {
+      "id": "b05_p3_terminal_swap_r1",
+      "seed": 1790124989,
+      "variant": "terminal_swap",
+      "repeat": 1,
+      "period": 3,
+      "sequence": "BAAB",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k03",
+        "k17"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": false,
+        "shortest_reachable": true
+      },
+      "request_sha256": "3454062144f647fad1e2c834669615c57ea48fbcbfe6d06dce80f339223565b6",
+      "response_sha256": "1d02c1987a978556c2f51b1a4634b608a2a9428a079c371af9db9e22fdbe7360"
+    },
+    {
+      "id": "b06_p0_original_r0",
+      "seed": 223674688,
+      "variant": "original",
+      "repeat": 0,
+      "period": 0,
+      "sequence": "ABBA",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k17",
+        "implied_depth": 2,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k17",
+        "k03"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": true,
+        "shortest_reachable": false
+      },
+      "request_sha256": "25d21753d86bfb5ad1b1ac8dc22b841b84d386cb545a3a1a1d8a886c81a32e09",
+      "response_sha256": "08d7564d04d62bc8cdf2b554319fcc0a1068ba9bebcee31195c43dec32ef7826"
+    },
+    {
+      "id": "b06_p1_terminal_swap_r0",
+      "seed": 223674688,
+      "variant": "terminal_swap",
+      "repeat": 0,
+      "period": 1,
+      "sequence": "ABBA",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k03",
+        "k17"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": false,
+        "shortest_reachable": true
+      },
+      "request_sha256": "52f925cba0cf062011dcccbd80d38549431fdd8e4a58c5c15868a3d0f917a03b",
+      "response_sha256": "768ba3e382ef2978f27c4444ae322afbc088aea442e22d7dc508da2562359344"
+    },
+    {
+      "id": "b06_p2_terminal_swap_r1",
+      "seed": 223674688,
+      "variant": "terminal_swap",
+      "repeat": 1,
+      "period": 2,
+      "sequence": "ABBA",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k03",
+        "k17"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": false,
+        "shortest_reachable": true
+      },
+      "request_sha256": "52f925cba0cf062011dcccbd80d38549431fdd8e4a58c5c15868a3d0f917a03b",
+      "response_sha256": "189b28fa8dfca844b49f5005683f1fd14e5218f99466426d5717081961fdcad3"
+    },
+    {
+      "id": "b06_p3_original_r1",
+      "seed": 223674688,
+      "variant": "original",
+      "repeat": 1,
+      "period": 3,
+      "sequence": "ABBA",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k17",
+        "implied_depth": 2,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k17",
+        "k03"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": true,
+        "shortest_reachable": false
+      },
+      "request_sha256": "25d21753d86bfb5ad1b1ac8dc22b841b84d386cb545a3a1a1d8a886c81a32e09",
+      "response_sha256": "82f75d81b56e8024f61f67394674d23ff92989122b055c8d0daa6ec40d309c11"
+    },
+    {
+      "id": "b07_p0_original_r0",
+      "seed": 661935755,
+      "variant": "original",
+      "repeat": 0,
+      "period": 0,
+      "sequence": "ABBA",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k17",
+        "implied_depth": 2,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k17",
+        "k03"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": true,
+        "shortest_reachable": false
+      },
+      "request_sha256": "cb275235311cf8bc191ed80fa6742d0a49a0de370b715b69d36b2e8df4979d27",
+      "response_sha256": "8b5615b0469fde7fd899f44986f4ae39b5ce79b97858d2aaa3fc6d205c78d67e"
+    },
+    {
+      "id": "b07_p1_terminal_swap_r0",
+      "seed": 661935755,
+      "variant": "terminal_swap",
+      "repeat": 0,
+      "period": 1,
+      "sequence": "ABBA",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k03",
+        "k17"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": false,
+        "shortest_reachable": true
+      },
+      "request_sha256": "79b88454d8204ec753d279bc49936b9e2d914f83355cb58546a0c92dbe312a06",
+      "response_sha256": "5504bbcb13f207de75f68fd0ed2bf8bd7d0151f4828e70d0e888c92da18c6daa"
+    },
+    {
+      "id": "b07_p2_terminal_swap_r1",
+      "seed": 661935755,
+      "variant": "terminal_swap",
+      "repeat": 1,
+      "period": 2,
+      "sequence": "ABBA",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k03",
+        "k17"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": false,
+        "shortest_reachable": true
+      },
+      "request_sha256": "79b88454d8204ec753d279bc49936b9e2d914f83355cb58546a0c92dbe312a06",
+      "response_sha256": "b5f8abc1a789781380f7446a9c488c746c7f8b81e2c17a6ba7b7d6c0041e411c"
+    },
+    {
+      "id": "b07_p3_original_r1",
+      "seed": 661935755,
+      "variant": "original",
+      "repeat": 1,
+      "period": 3,
+      "sequence": "ABBA",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k17",
+        "implied_depth": 2,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k17",
+        "k03"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": true,
+        "shortest_reachable": false
+      },
+      "request_sha256": "cb275235311cf8bc191ed80fa6742d0a49a0de370b715b69d36b2e8df4979d27",
+      "response_sha256": "1e1ee9618fc7e7de7dde730e7069a22f0daad6003e4ae5b794bfa4b9014ed830"
+    },
+    {
+      "id": "b08_p0_original_r0",
+      "seed": 209422594,
+      "variant": "original",
+      "repeat": 0,
+      "period": 0,
+      "sequence": "ABBA",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k17",
+        "implied_depth": 2,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k17",
+        "k03"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": true,
+        "shortest_reachable": false
+      },
+      "request_sha256": "fd2d72c0dffb3bedb9795e331df73f18febf78588a5dc3f384188ef40d6df146",
+      "response_sha256": "364088a52a8035e903f78566a6fd4be7be482df47709e8d315b13164d100d5b5"
+    },
+    {
+      "id": "b08_p1_terminal_swap_r0",
+      "seed": 209422594,
+      "variant": "terminal_swap",
+      "repeat": 0,
+      "period": 1,
+      "sequence": "ABBA",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k03",
+        "k17"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": false,
+        "shortest_reachable": true
+      },
+      "request_sha256": "8b2ae82f3e75f4ce403a49e892405a227918ac9514422f29936557a3fa36ab48",
+      "response_sha256": "be6f497d2f1795ef5bff906f1a8f5573de2989db1f0ce54482129f951871cf7e"
+    },
+    {
+      "id": "b08_p2_terminal_swap_r1",
+      "seed": 209422594,
+      "variant": "terminal_swap",
+      "repeat": 1,
+      "period": 2,
+      "sequence": "ABBA",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k03",
+        "k17"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": false,
+        "shortest_reachable": true
+      },
+      "request_sha256": "8b2ae82f3e75f4ce403a49e892405a227918ac9514422f29936557a3fa36ab48",
+      "response_sha256": "79661c6a6eff5f46245570602a3d3eb8cced87a87a694f4d6dc37969b1e83edb"
+    },
+    {
+      "id": "b08_p3_original_r1",
+      "seed": 209422594,
+      "variant": "original",
+      "repeat": 1,
+      "period": 3,
+      "sequence": "ABBA",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k17",
+        "implied_depth": 2,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k17",
+        "k03"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": true,
+        "shortest_reachable": false
+      },
+      "request_sha256": "fd2d72c0dffb3bedb9795e331df73f18febf78588a5dc3f384188ef40d6df146",
+      "response_sha256": "990f86af44d5da7658d6e27dab8b0171db0f983ca2bcb226a339c8307e2293d2"
+    },
+    {
+      "id": "b09_p0_terminal_swap_r0",
+      "seed": 752235971,
+      "variant": "terminal_swap",
+      "repeat": 0,
+      "period": 0,
+      "sequence": "BAAB",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k03",
+        "k17"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": false,
+        "shortest_reachable": true
+      },
+      "request_sha256": "1909d2e7db7e07e2c4333d4d061820bf616b238753dbc10ecf4606e3265a5c91",
+      "response_sha256": "a21b7329a9cb554860ba98efbe9cf1a762f43ce2e019d096e8a4cc5778a271f2"
+    },
+    {
+      "id": "b09_p1_original_r0",
+      "seed": 752235971,
+      "variant": "original",
+      "repeat": 0,
+      "period": 1,
+      "sequence": "BAAB",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k17",
+        "implied_depth": 2,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k17",
+        "k03"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": true,
+        "shortest_reachable": false
+      },
+      "request_sha256": "a64256771f8b9c2f2e05587cb898c033e0d14d52331299bbaba923966ad32d2d",
+      "response_sha256": "f99e460c932623b9e00fcd0e6d88de5117f3f2eec4a2a8d3227ed9c915ba0386"
+    },
+    {
+      "id": "b09_p2_original_r1",
+      "seed": 752235971,
+      "variant": "original",
+      "repeat": 1,
+      "period": 2,
+      "sequence": "BAAB",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k17",
+        "implied_depth": 2,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k17",
+        "k03"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": true,
+        "shortest_reachable": false
+      },
+      "request_sha256": "a64256771f8b9c2f2e05587cb898c033e0d14d52331299bbaba923966ad32d2d",
+      "response_sha256": "f9f2ae666ee00071ece25f20a947cc46922f57bb3f959fa17e91f9eeac59d973"
+    },
+    {
+      "id": "b09_p3_terminal_swap_r1",
+      "seed": 752235971,
+      "variant": "terminal_swap",
+      "repeat": 1,
+      "period": 3,
+      "sequence": "BAAB",
+      "observed": true,
+      "measurement": {
+        "format_valid": true,
+        "choice_valid": true,
+        "selected_rule_id": "k03",
+        "implied_depth": 1,
+        "proof_valid": null,
+        "strict_valid": null,
+        "D": null
+      },
+      "rule_order": [
+        "k10",
+        "k03",
+        "k17"
+      ],
+      "selected_position_zero_based": 1,
+      "prediction_matches": {
+        "first_terminal": true,
+        "absolute_second": true,
+        "fixed_deep": false,
+        "shortest_reachable": true
+      },
+      "request_sha256": "1909d2e7db7e07e2c4333d4d061820bf616b238753dbc10ecf4606e3265a5c91",
+      "response_sha256": "8cdeca5b7d4ac4c2ec30bb552bd3a8d186c07ba064d91fb352f686a61bbfcba5"
+    }
+  ],
+  "repeats": [
+    {
+      "seed": 580410664,
+      "variant": "original",
+      "changed": false
+    },
+    {
+      "seed": 580410664,
+      "variant": "terminal_swap",
+      "changed": false
+    },
+    {
+      "seed": 661935755,
+      "variant": "original",
+      "changed": false
+    },
+    {
+      "seed": 661935755,
+      "variant": "terminal_swap",
+      "changed": false
+    },
+    {
+      "seed": 209422594,
+      "variant": "original",
+      "changed": false
+    },
+    {
+      "seed": 209422594,
+      "variant": "terminal_swap",
+      "changed": false
+    },
+    {
+      "seed": 1790124989,
+      "variant": "original",
+      "changed": false
+    },
+    {
+      "seed": 1790124989,
+      "variant": "terminal_swap",
+      "changed": false
+    },
+    {
+      "seed": 267101868,
+      "variant": "original",
+      "changed": false
+    },
+    {
+      "seed": 267101868,
+      "variant": "terminal_swap",
+      "changed": false
+    },
+    {
+      "seed": 752235971,
+      "variant": "original",
+      "changed": false
+    },
+    {
+      "seed": 752235971,
+      "variant": "terminal_swap",
+      "changed": false
+    },
+    {
+      "seed": 1292559482,
+      "variant": "original",
+      "changed": false
+    },
+    {
+      "seed": 1292559482,
+      "variant": "terminal_swap",
+      "changed": false
+    },
+    {
+      "seed": 223674688,
+      "variant": "original",
+      "changed": false
+    },
+    {
+      "seed": 223674688,
+      "variant": "terminal_swap",
+      "changed": false
+    },
+    {
+      "seed": 860724506,
+      "variant": "original",
+      "changed": false
+    },
+    {
+      "seed": 860724506,
+      "variant": "terminal_swap",
+      "changed": false
+    },
+    {
+      "seed": 68285180,
+      "variant": "original",
+      "changed": false
+    },
+    {
+      "seed": 68285180,
+      "variant": "terminal_swap",
+      "changed": false
+    }
+  ],
+  "observationally_equivalent_predictions": [
+    [
+      "first_terminal",
+      "absolute_second"
+    ]
+  ],
+  "hypothetical_permutation_predictions": [
+    {
+      "order": [
+        "k10",
+        "k17",
+        "k03"
+      ],
+      "first_terminal": "k17",
+      "absolute_second": "k17",
+      "fixed_deep": "k17",
+      "shortest_reachable": "k03"
+    },
+    {
+      "order": [
+        "k10",
+        "k03",
+        "k17"
+      ],
+      "first_terminal": "k03",
+      "absolute_second": "k03",
+      "fixed_deep": "k17",
+      "shortest_reachable": "k03"
+    },
+    {
+      "order": [
+        "k17",
+        "k10",
+        "k03"
+      ],
+      "first_terminal": "k17",
+      "absolute_second": "k10",
+      "fixed_deep": "k17",
+      "shortest_reachable": "k03"
+    },
+    {
+      "order": [
+        "k17",
+        "k03",
+        "k10"
+      ],
+      "first_terminal": "k17",
+      "absolute_second": "k03",
+      "fixed_deep": "k17",
+      "shortest_reachable": "k03"
+    },
+    {
+      "order": [
+        "k03",
+        "k10",
+        "k17"
+      ],
+      "first_terminal": "k03",
+      "absolute_second": "k10",
+      "fixed_deep": "k17",
+      "shortest_reachable": "k03"
+    },
+    {
+      "order": [
+        "k03",
+        "k17",
+        "k10"
+      ],
+      "first_terminal": "k03",
+      "absolute_second": "k17",
+      "fixed_deep": "k17",
+      "shortest_reachable": "k03"
+    }
+  ],
+  "independent_problem_count": 1,
+  "unique_seed_blocks": 10,
+  "new_model_inference": false,
+  "actual_D": null,
+  "limits": [
+    "Predictions describe observable patterns, not verified internal mechanisms.",
+    "Historical and repeated calls are not new independent problem samples.",
+    "Artifact consistency is not external execution attestation.",
+    "Unmeasured and unobserved values remain distinct from task failure."
+  ]
+}

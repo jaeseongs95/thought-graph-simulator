@@ -1,0 +1,24 @@
+{
+  "contract": "rule-order-v059-r1",
+  "plan_sha256": "20c411caea9e2cc1a2866970ca247447d8b67836832c0c0861b507fa6dffff99",
+  "model_keys": [
+    "candidate"
+  ],
+  "modes": [
+    "choice"
+  ],
+  "variants": [
+    "original",
+    "terminal_swap"
+  ],
+  "schedule_seed": 5902026,
+  "boundary_cells": {
+    "candidate": {
+      "problem_id": "K01",
+      "arm": "original",
+      "direction": "shallow"
+    }
+  },
+  "max_calls": 40
+}
+Offline plan validation complete; no inference was performed.

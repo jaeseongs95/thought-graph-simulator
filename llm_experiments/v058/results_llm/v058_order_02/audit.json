@@ -1,0 +1,15 @@
+{
+  "contract": "v058-order-replay-report-r1",
+  "data_integrity": true,
+  "data_complete": true,
+  "comparative_analysis_ready": true,
+  "inference_calls": 80,
+  "max_inference_calls": 80,
+  "plan_sha256": "ff4c80c82fd2f5676e73485eb19ab730d6669fea1dfe0c0f81cdc6a06859a473",
+  "event_tip": "3cba2a0459cb7642bf8c6a604fd89efe85be4310d56c582c90fd1ef6f5e3ead6",
+  "run_state": "complete",
+  "failure_stage": null,
+  "failure_kind": null,
+  "failure_slot_id": null,
+  "run_error": null
+}

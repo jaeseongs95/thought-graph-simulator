@@ -1,0 +1,68 @@
+[2026-09-13 10:22:51] Repository: D:\codex\AI논문\thought-graph-simulator
+[2026-09-13 10:22:51] Python: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe
+[2026-09-13 10:22:51] Log: D:\codex\AI논문\thought-graph-simulator\llm_experiments\v060\results_llm\automation_logs\v060_20260913_102251_707\run.log
+[2026-09-13 10:22:51] v058 reference evidence: D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\results_llm\v058_order_02_evidence.zip
+[2026-09-13 10:22:51] v059 diagnostic evidence: D:\codex\AI논문\thought-graph-simulator\llm_experiments\v059\results_llm\v059_rules_01_evidence.zip
+[2026-09-13 10:22:51] Self-test skipped because -SkipSelfTest was specified.
+[2026-09-13 10:22:51] START: v059 evidence reanalysis
+[2026-09-13 10:22:51] COMMAND: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -B tools\analyze_v059.py D:\codex\AI논문\thought-graph-simulator\llm_experiments\v059\results_llm\v059_rules_01_evidence.zip --out D:\codex\AI논문\thought-graph-simulator\llm_experiments\v060\results_llm\automation_logs\v060_20260913_102251_707\v059_analysis.json
+[2026-09-13 10:22:53] {"groups": {"original": {"assigned": 20, "observed": 20, "selected_ids": {"k17": 20}, "format_valid": 20, "choice_valid": 20, "shallow_success": 0}, "terminal_swap": {"assigned": 20, "observed": 20, "selected_ids": {"k03": 20}, "format_valid": 20, "choice_valid": 20, "shallow_success": 20}}, "equivalent": [["first_terminal", "absolute_second"]], "receipt": {"contract": "independent-v059-r1", "bundle_sha256": "3f9b1e1462fa48f8b88f3ec71b69020adc7257c826e84d4b893b1d24eba685c5", "complete": true, "observed_calls": 40, "metadata_records": 20, "compared_fields": 802, "differences": [], "production_imports": false, "baseline_compared_fields": 1649, "limitation": "원문·계획·측정 일관성 검산이며 외부 실행 인증이나 규칙 위치·캐시·내부 기제의 인과 검증은 아니다."}}
+[2026-09-13 10:22:53] DONE: v059 evidence reanalysis
+[2026-09-13 10:22:53] START: current-source check plan preparation
+[2026-09-13 10:22:53] COMMAND: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -B -m terminal_position_v060 prepare --baseline-bundle D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\results_llm\v058_order_02_evidence.zip --out D:\codex\AI논문\thought-graph-simulator\llm_experiments\v060\results_llm\automation_logs\v060_20260913_102251_707\v060_check.plan.json
+[2026-09-13 10:23:23] {
+[2026-09-13 10:23:23]   "contract": "rule-order-v060-r1",
+[2026-09-13 10:23:23]   "plan_sha256": "35817caeda87191622e265167dc2bcf33a605dbef7638e1f81ed059b39020751",
+[2026-09-13 10:23:23]   "model_keys": [
+[2026-09-13 10:23:23]     "candidate"
+[2026-09-13 10:23:23]   ],
+[2026-09-13 10:23:23]   "modes": [
+[2026-09-13 10:23:23]     "choice"
+[2026-09-13 10:23:23]   ],
+[2026-09-13 10:23:23]   "variants": [
+[2026-09-13 10:23:23]     "deep_first",
+[2026-09-13 10:23:23]     "shallow_first"
+[2026-09-13 10:23:23]   ],
+[2026-09-13 10:23:23]   "schedule_seed": 6002026,
+[2026-09-13 10:23:23]   "boundary_cells": {
+[2026-09-13 10:23:23]     "candidate": {
+[2026-09-13 10:23:23]       "problem_id": "K01",
+[2026-09-13 10:23:23]       "arm": "original",
+[2026-09-13 10:23:23]       "direction": "shallow"
+[2026-09-13 10:23:23]     }
+[2026-09-13 10:23:23]   },
+[2026-09-13 10:23:23]   "max_calls": 40
+[2026-09-13 10:23:23] }
+[2026-09-13 10:23:23] Offline plan validation complete; no inference was performed.
+[2026-09-13 10:23:23] DONE: current-source check plan preparation
+[2026-09-13 10:23:23] START: current-source check plan validation
+[2026-09-13 10:23:23] COMMAND: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -B -m terminal_position_v060 show --plan D:\codex\AI논문\thought-graph-simulator\llm_experiments\v060\results_llm\automation_logs\v060_20260913_102251_707\v060_check.plan.json
+[2026-09-13 10:23:23] {
+[2026-09-13 10:23:23]   "contract": "rule-order-v060-r1",
+[2026-09-13 10:23:23]   "plan_sha256": "35817caeda87191622e265167dc2bcf33a605dbef7638e1f81ed059b39020751",
+[2026-09-13 10:23:23]   "model_keys": [
+[2026-09-13 10:23:23]     "candidate"
+[2026-09-13 10:23:23]   ],
+[2026-09-13 10:23:23]   "modes": [
+[2026-09-13 10:23:23]     "choice"
+[2026-09-13 10:23:23]   ],
+[2026-09-13 10:23:23]   "variants": [
+[2026-09-13 10:23:23]     "deep_first",
+[2026-09-13 10:23:23]     "shallow_first"
+[2026-09-13 10:23:23]   ],
+[2026-09-13 10:23:23]   "schedule_seed": 6002026,
+[2026-09-13 10:23:23]   "boundary_cells": {
+[2026-09-13 10:23:23]     "candidate": {
+[2026-09-13 10:23:23]       "problem_id": "K01",
+[2026-09-13 10:23:23]       "arm": "original",
+[2026-09-13 10:23:23]       "direction": "shallow"
+[2026-09-13 10:23:23]     }
+[2026-09-13 10:23:23]   },
+[2026-09-13 10:23:23]   "max_calls": 40
+[2026-09-13 10:23:23] }
+[2026-09-13 10:23:23] Offline plan validation complete; no inference was performed.
+[2026-09-13 10:23:23] DONE: current-source check plan validation
+[2026-09-13 10:23:23] Check complete. No model call, Ollama start, or inference-result creation was performed.
+
+Check completed successfully.
+Log: D:\codex\AI논문\thought-graph-simulator\llm_experiments\v060\results_llm\automation_logs\v060_20260913_102251_707\run.log

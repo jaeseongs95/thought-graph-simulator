@@ -1,0 +1,13 @@
+{
+  "command": [
+    "C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-m",
+    "rule_order_v059",
+    "selftest"
+  ],
+  "cwd": "C:\\Users\\sjs95\\AppData\\Local\\Temp\\v059_release_r2_verified_6d_bp5_j\\llm_experiments\\v059\\probe",
+  "exit_code": 0,
+  "elapsed_seconds": 67.922,
+  "new_model_inference": false
+}

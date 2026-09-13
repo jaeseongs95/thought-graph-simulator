@@ -1,0 +1,12 @@
+{
+    "contract":  "v059-one-click-completion-r1",
+    "state":  "complete",
+    "run_name":  "v059_rules_01",
+    "plan_path":  "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v059\\experiments\\v059_rules_01.plan.json",
+    "results_path":  "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v059\\results_llm\\v059_rules_01",
+    "evidence_path":  "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v059\\results_llm\\v059_rules_01_evidence.zip",
+    "evidence_sha256":  "3f9b1e1462fa48f8b88f3ec71b69020adc7257c826e84d4b893b1d24eba685c5",
+    "independent_path":  "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v059\\results_llm\\v059_rules_01_independent.json",
+    "log_path":  "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v059\\results_llm\\automation_logs\\v059_20260913_095430_468\\run.log",
+    "completed_at":  "2026-09-13T09:58:31.6308707+09:00"
+}

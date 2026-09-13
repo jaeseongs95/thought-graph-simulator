@@ -1,0 +1,74 @@
+{
+  "contract": "v059-perspective-review-summary-r1",
+  "analysis_method": "three context-isolated initial reviewers, conditional cross-examination and coordinator integration; no fresh research Judge",
+  "assurance": "partially_independent",
+  "requested_models": {
+    "initial_reviewers": "gpt-5.6-terra/xhigh",
+    "implementers": "gpt-5.6-sol/xhigh",
+    "fresh_source_auditor": "gpt-5.6-sol/xhigh"
+  },
+  "actual_model_application": "unverified: spawn returned task identifiers only",
+  "perspectives": [
+    {
+      "id": "measurement_review",
+      "blocking_findings": 0,
+      "diagnostics": [
+        {
+          "issue": "trial-level selected_rule_position must be preserved",
+          "disposition": "confirmed in producer audit and independent verifier; 28-test suite passes"
+        },
+        {
+          "issue": "stable_within_both describes ID consistency, not choice validity",
+          "disposition": "explicitly documented in frozen protocol"
+        }
+      ]
+    },
+    {
+      "id": "causal_review",
+      "blocking_findings": 0,
+      "diagnostics": [
+        {
+          "issue": "block balance does not imply global carryover symmetry",
+          "disposition": "verified global counts A predecessors null1/A7/B12, B predecessors A13/B7; documented"
+        },
+        {
+          "issue": "pairs align occurrence number rather than same period",
+          "disposition": "documented with strata interpretation requirement"
+        }
+      ]
+    },
+    {
+      "id": "integrity_review",
+      "blocking_findings": 0,
+      "diagnostics": [
+        {
+          "issue": "run source fingerprints cover Python only",
+          "disposition": "final source ZIP seals all 288 source/document/dependency file hashes"
+        },
+        {
+          "issue": "mock tests patch the prior v058 verifier",
+          "disposition": "actual v058 production/independent import verified separately; full live v059 evidence verification remains part of a later explicitly requested model run"
+        }
+      ]
+    }
+  ],
+  "cross_examination": [
+    {
+      "id": "C1",
+      "issue": "history-control experiment versus rule-permutation diagnostic",
+      "resolution": "single Gemma K01 permutation diagnostic with explicit history limits"
+    },
+    {
+      "id": "C2",
+      "issue": "pure position/cache causality claim and evidence boundaries",
+      "resolution": "single-cause attribution rejected; raw evidence reconstruction required"
+    },
+    {
+      "id": "C3",
+      "issue": "ABAB versus ABBA and Qwen failure denominator",
+      "resolution": "ABBA/BAAB adopted; Qwen five failed calls across three seeds"
+    }
+  ],
+  "candidate_digest": "8e06ee69864b6aac01b3550db91f263294f0b91a4e85e3092f49741fc97ee348",
+  "new_model_inference": false
+}

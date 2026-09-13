@@ -1,0 +1,15 @@
+{
+  "contract": "v060-terminal-position-report-r1",
+  "data_integrity": true,
+  "data_complete": true,
+  "comparative_analysis_ready": true,
+  "inference_calls": 40,
+  "max_inference_calls": 40,
+  "plan_sha256": "2174a90657dd37cc2574fd56484e65119e5b353f9831888c699554f7aea81259",
+  "event_tip": "9308c64e80b97247b17fe9ff420ff9a02b5e03c85b97d72765bb5dcb08a92fad",
+  "run_state": "complete",
+  "failure_stage": null,
+  "failure_kind": null,
+  "failure_slot_id": null,
+  "run_error": null
+}

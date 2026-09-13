@@ -1,0 +1,15 @@
+{
+  "contract": "v059-rule-order-report-r1",
+  "data_integrity": true,
+  "data_complete": true,
+  "comparative_analysis_ready": true,
+  "inference_calls": 40,
+  "max_inference_calls": 40,
+  "plan_sha256": "fa86076a6890735b9160f4576b0749054857cdcd1ad4b3d886cdef55a8469972",
+  "event_tip": "4c071a575f0748ee729c3fb2c24087bd7eec6e68f3fd9b63719f732092d205a5",
+  "run_state": "complete",
+  "failure_stage": null,
+  "failure_kind": null,
+  "failure_slot_id": null,
+  "run_error": null
+}

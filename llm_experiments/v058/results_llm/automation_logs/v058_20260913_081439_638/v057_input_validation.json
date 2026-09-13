@@ -1,0 +1,71 @@
+{
+  "contract": "v058-input-review-r1",
+  "input_sha256": {
+    "v057_selection_01.plan.json": "c2f6bbc4262da5d257b15994e22f458673571f2660ef41d1d9fe7edae51a5074",
+    "v057_selection_01.plan.baseline.zip": "426f49a62aa8687bed8a678277f866a85369b6621effa2b25a776b81bf7998db",
+    "v057_selection_01.preflight.json": "988f422c98a6f18275ee2fb7962379e5756093389f2987dc657ef34290a158e9",
+    "v057_selection_01_evidence.zip": "1949d10375a1848982c427a79f3b2cd5c751e44cdc7045945d2b2ff7be3a083e",
+    "v057_selection_01_independent.json": "427056fb975f9f3564a463bb01d706a1041b81e4ee63c60551899597a841fcc8"
+  },
+  "external_plan_bytes_equal": true,
+  "baseline_bytes_equal": true,
+  "preflight_identity_valid": true,
+  "production_summary_equal": true,
+  "independent_report_equal": true,
+  "independent": {
+    "contract": "independent-v057-r1",
+    "bundle_sha256": "1949d10375a1848982c427a79f3b2cd5c751e44cdc7045945d2b2ff7be3a083e",
+    "manifest_files": 1124,
+    "observed_calls": 480,
+    "metadata_records": 40,
+    "complete": true,
+    "compared_fields": 4361,
+    "differences": [],
+    "results": {
+      "reference": {
+        "graph": {
+          "observed_calls": 120,
+          "format_valid": 120,
+          "task_valid": 82,
+          "observed_pairs": 40,
+          "selective_success": 0,
+          "selective_rate": 0.0,
+          "full_proof_D_control_success": 0
+        },
+        "choice": {
+          "observed_calls": 120,
+          "format_valid": 120,
+          "task_valid": 120,
+          "observed_pairs": 40,
+          "selective_success": 33,
+          "selective_rate": 0.825,
+          "full_proof_D_control_success": null
+        }
+      },
+      "candidate": {
+        "graph": {
+          "observed_calls": 120,
+          "format_valid": 120,
+          "task_valid": 5,
+          "observed_pairs": 40,
+          "selective_success": 0,
+          "selective_rate": 0.0,
+          "full_proof_D_control_success": 0
+        },
+        "choice": {
+          "observed_calls": 120,
+          "format_valid": 120,
+          "task_valid": 120,
+          "observed_pairs": 40,
+          "selective_success": 7,
+          "selective_rate": 0.175,
+          "full_proof_D_control_success": null
+        }
+      }
+    },
+    "production_imports": false,
+    "baseline_independent_compared_fields": 3738
+  },
+  "new_model_inference": false,
+  "limitation": "해시·원문 일관성 검사이며 외부 실행을 인증하는 전자서명은 아니다."
+}

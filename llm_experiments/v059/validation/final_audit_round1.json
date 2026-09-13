@@ -1,0 +1,99 @@
+{
+  "audit_state": "FAIL",
+  "candidate_completion": false,
+  "candidate_digest": "8e06ee69864b6aac01b3550db91f263294f0b91a4e85e3092f49741fc97ee348",
+  "source_zip_sha256": "1761ae487610c208cfb451d213f92dee095707ec5c4996d5a60da70a2b1cc155",
+  "assurance_profile": "cooperative-sealed",
+  "findings": [
+    {
+      "finding_id": "F-001",
+      "severity": "blocking",
+      "criterion": "evidence bundle의 사람이 읽는 한국어 결과를 raw·plan·measurement와 함께 독립 재검산해야 한다.",
+      "evidence": "봉인 후보의 tools/verify_v059.py는 run/summary.ko.md를 expected_files에 포함하지만 내용을 재생성하거나 summary.json과 비교하지 않는다. 별도 임시 폴더에서 정상 40-call synthetic evidence ZIP의 run/summary.ko.md를 계산과 반대되는 문구로 교체하고 BUNDLE_MANIFEST.json의 file_hashes를 다시 계산한 반례를 실행했다. verify_v059는 이 변조본을 complete=true, differences=[], observed_calls=40, metadata_records=20, compared_fields=802로 승인했다.",
+      "impact": "manifest를 함께 재해시한 한국어 결과 위조가 독립 검산을 통과한다. 사용자가 README 안내에 따라 summary.ko.md를 읽으면 raw evidence와 반대되는 결론을 정상 검산 결과로 오인할 수 있으므로 bundle 의미 무결성과 한국어 결과 계약을 충족하지 못한다.",
+      "recommended_action": "독립 verifier 안에서 summary.ko.md의 기대 바이트를 raw와 독립 재구성한 report로 생성해 exact byte 비교하고, summary.ko.md 변조 후 manifest를 재해시한 ZIP이 거부되는 반례 시험을 추가한다. 수정 뒤 새 source ZIP과 새 candidate digest를 만들고 재감사한다.",
+      "unverified": false
+    },
+    {
+      "finding_id": "F-002",
+      "severity": "diagnostic",
+      "criterion": "metadata identity 비교가 문서화한 허용 차이만 수용해야 한다.",
+      "evidence": "rule_order_v059/runner.py의 comparable_identity는 parameter 줄을 정렬하면서 show_sha256 전체를 비교 대상에서 제거한다. 실제 v058 candidate metadata의 show 응답에 추적되지 않는 system 필드를 추가하고 response_b64를 재계산한 오프라인 반례에서 metadata_failure는 (None, None)을 반환했다. digest, server, details, template, parameters, model_info는 계속 비교된다.",
+      "impact": "코드 주석의 'parameter line ordering만 무시'보다 실제 허용 범위가 넓다. 현재 알려진 추론 관련 핵심 필드와 모델 digest는 고정되므로 이 사실만으로 현재 후보를 추가 차단하지는 않지만, show 응답의 미추적 필드 변화는 identity drift로 분류되지 않는다.",
+      "recommended_action": "허용할 show 필드를 계약에 명시하거나, parameter 문자열만 정규화한 show 전체의 canonical digest를 계획에 저장해 비교한다.",
+      "unverified": "동일 모델 digest와 핵심 필드를 유지한 미추적 show 필드 변화가 실제 추론을 바꾸는지는 확인하지 않았다."
+    },
+    {
+      "finding_id": "F-003",
+      "severity": "diagnostic",
+      "criterion": "소스 패키지의 한국어 검증 안내가 실제 감사 산출물을 가리켜야 한다.",
+      "evidence": "docs/VALIDATION.ko.md는 ../../validation/FINAL_REVIEW.ko.md를 최종 검증 보고로 링크하지만 해당 파일은 현재 validation에 없고, 이번 감사의 지정 산출물은 validation/final_audit.json이다.",
+      "impact": "소스 사용자가 최종 독립 감사 근거를 문서 링크로 열 수 없다.",
+      "recommended_action": "재봉인 시 실제 최종 감사 산출물 이름과 경로로 링크를 맞추거나, 링크 대상 보고서를 생성한다.",
+      "unverified": false
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "C-001-source-seal",
+      "result": "PASS",
+      "evidence": "source ZIP SHA-256을 직접 재계산해 1761ae487610c208cfb451d213f92dee095707ec5c4996d5a60da70a2b1cc155와 일치했다. ZIP은 RELEASE_MANIFEST.json 포함 289 members이며 file_hashes 288개와 member 집합 및 모든 SHA-256이 일치했다. file_hashes canonical digest는 8e06ee69864b6aac01b3550db91f263294f0b91a4e85e3092f49741fc97ee348이다."
+    },
+    {
+      "check_id": "C-002-extracted-release",
+      "result": "PASS",
+      "evidence": "새 해제 위치에서 manifest 대상 288개 파일의 누락·추가·해시 불일치와 symlink가 없음을 직접 확인했다. 추가 파일은 의도된 RELEASE_MANIFEST.json 하나뿐이다. release_check.json은 같은 ZIP·digest, manifest_files=288, 새 위치 selftest exit_code=0, extracted_files_changed=[]를 기록한다."
+    },
+    {
+      "check_id": "C-003-preserved-prior-sources",
+      "result": "PASS",
+      "evidence": "작업본과 release manifest를 독립 대조해 v057/v058 보존 파일 262개의 불일치가 없고, 세 소스 루트의 배포 대상 288개 전체도 누락·추가·불일치가 없었다. scope_check.json의 existing_source_changes=[], user_input_changes=[], release_working_tree_mismatches=[]와 일치한다."
+    },
+    {
+      "check_id": "C-004-v058-raw-evidence",
+      "result": "PASS",
+      "evidence": "원자료 v058_order_02_evidence.zip의 SHA-256 d8fd5b2123d38023aaf7c7c0427f54ab6fe650d6b85a695790cb7a5b5b852761, 459 members, manifest-bound 458 files의 집합과 모든 해시를 직접 확인했다. 원 plan SHA-256은 ff4c80c82fd2f5676e73485eb19ab730d6669fea1dfe0c0f81cdc6a06859a473이고 80 calls·40 metadata로 완료 상태다. raw 응답에서 Gemma K01 choice는 k17 20/20, Qwen T02 choice는 r83 15회·r69 5회였으며, 같은 seed의 두 sequence K01 choice 요청 바이트는 모두 동일했다."
+    },
+    {
+      "check_id": "C-005-frozen-design",
+      "result": "PASS",
+      "evidence": "검증용 plan SHA-256 be66923af2960097020cfd3c8833fe0bc615122ea3d3d8dd5c7c5abdd487f094를 독립 canonical 계산으로 확인했다. model_keys=[candidate], model=gemma3:4b, modes=[choice], K01/original/shallow, 기존 고유 seed 10개, 40 slots·60 actions, ABBA/BAAB 각 5블록, 각 seed·variant·repeat 40개 고유 cell이 schedule_seed=5902026 독립 재구성과 일치했다."
+    },
+    {
+      "check_id": "C-006-request-intervention",
+      "result": "PASS",
+      "evidence": "10개 seed에서 original 반복 요청은 원 v058 graph_choice 요청 바이트와 같고, terminal_swap 반복 요청은 [k10,k17,k03]을 [k10,k03,k17]로 바꾼 exact span 결과와 일치했다. 같은 조건 반복 바이트, 계획 request_hashes, 모델·seed·options·facts·goal·prompt·schema 및 규칙 객체 집합을 독립 비교해 모두 일치했다."
+    },
+    {
+      "check_id": "C-007-measurement-and-reporting",
+      "result": "PASS",
+      "evidence": "choice measurement는 selected_rule_id·0-based selected_rule_position·implied_depth·choice_valid·shallow_success를 분리하고 actual_D, D, proof_valid, strict_valid를 null로 둔다. reporting은 조건 간 20 comparisons와 조건별 반복 20 comparisons를 별도 생성하고 seed 10개를 주 분석 단위로 사용한다. 미완료 또는 미측정 분모가 있으면 전체 rate와 seed mean을 null로 두는 코드와 시험을 확인했다."
+    },
+    {
+      "check_id": "C-008-failure-and-provenance",
+      "result": "PASS_WITH_DIAGNOSTIC",
+      "evidence": "runner는 HTTP/transport 오류, 명시적 response model mismatch, metadata/identity drift에서 마지막 사건 뒤 중단하고 retry·resume·download·warmup을 하지 않는다. 잘못된 JSON/schema/rule ID는 호스트 교정 없이 기록한다. response model 누락·비문자열은 invalid response로 계속되지만 payload가 측정되지 않아 partial-null 계약과 충돌하지 않는 경계로 판단했다. metadata show 비교 범위는 F-002에 별도 기록했다."
+    },
+    {
+      "check_id": "C-009-independent-calculator-boundary",
+      "result": "PASS",
+      "evidence": "tools/verify_v059.py의 정적 import와 실행 경로를 확인했다. v059 생산 요청·측정·집계 모듈을 import하지 않고 표준 라이브러리와 보존된 v057/v058 independent 도구만 사용한다. run/source_snapshot은 파일 집합과 해시 데이터로만 읽으며 import·exec·eval하지 않는다. 다만 한국어 summary 검산 누락은 F-001로 차단한다."
+    },
+    {
+      "check_id": "C-010-existing-validation",
+      "result": "PASS",
+      "evidence": "checkonly.json exit_code=0 및 release_check.json exit_code=0을 원시 로그와 대조했다. checkonly.log와 release_selftest.log는 각각 28 tests, skip 0, OK를 기록하며 설계·측정, synthetic 40-call 실행, transport·identity·부분 실행, 원자료 import, 독립 bundle 변조 반례를 포함한다. v058_import_check.json은 80 recorded calls, 10 selected calls, 40 prepared requests, source_sequences_equal=true를 기록한다. 최종 감사에서는 기존 28-test suite를 반복 실행하지 않고 F-001의 새 반례를 실제 실행했다."
+    },
+    {
+      "check_id": "C-011-offline-scope",
+      "result": "PASS",
+      "evidence": "후보 manifest, checkonly, release_check, scope_check, v058 재분석·import 기록은 new_model_inference=false다. 이 감사도 파일·ZIP·코드·합성 fixture만 사용했고 Ollama 추론을 실행하지 않았다."
+    }
+  ],
+  "limitations": [
+    "이 판정은 source 후보에 대한 pre-execution 감사다. 실제 v059 LLM 40-call 결과, 실행 당시 모델 상태, 캐시의 인과 역할은 관측하지 않았다.",
+    "해시와 로그는 저장 자료의 일관성을 보이지만 외부 실행 전자서명이나 플랫폼 수준 실행 인증은 아니다.",
+    "다각도 초기 검토와 교차검토는 review_summary.json 및 V058_ANALYSIS.ko.md의 통합 기록으로 확인했다. review_summary.json 자체가 actual_model_application을 unverified로 표시하므로 요청한 reviewer 모델·reasoning 설정의 실제 적용은 보증하지 않는다.",
+    "생산 계산기와 독립 계산기는 구현을 분리했지만 K01 문제 명세와 보존된 이전 independent 도구를 공유하므로 구성타당성의 공통 오류 가능성은 남는다."
+  ]
+}

@@ -1,0 +1,42 @@
+[2026-09-13 08:21:04] Repository: D:\codex\AI논문\thought-graph-simulator
+[2026-09-13 08:21:04] Python: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe
+[2026-09-13 08:21:04] Log: D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\results_llm\automation_logs\v058_20260913_082104_108\run.log
+[2026-09-13 08:21:04] Self-test skipped because -SkipSelfTest was specified.
+[2026-09-13 08:21:04] START: v057 input validation
+[2026-09-13 08:21:04] COMMAND: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -B tools\validate_inputs.py --directory D:\codex\AI논문\thought-graph-simulator\llm_experiments\v057\results_llm --out D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\results_llm\automation_logs\v058_20260913_082104_108\v057_input_validation.json
+[2026-09-13 08:21:27] 5 inputs, production audit, independent audit: PASS
+[2026-09-13 08:21:27] DONE: v057 input validation
+[2026-09-13 08:21:27] START: reference plan validation
+[2026-09-13 08:21:27] COMMAND: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -B -m order_replay_v058 show --plan D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\experiments\v058_order_layout.plan.json
+[2026-09-13 08:21:27] {
+[2026-09-13 08:21:27]   "contract": "order-replay-v058-r1",
+[2026-09-13 08:21:27]   "plan_sha256": "3f36e4871f3a2de5d1b03c78e28669051154e498e3d40d36b97956eca97bd28c",
+[2026-09-13 08:21:27]   "model_keys": [
+[2026-09-13 08:21:27]     "reference",
+[2026-09-13 08:21:27]     "candidate"
+[2026-09-13 08:21:27]   ],
+[2026-09-13 08:21:27]   "modes": [
+[2026-09-13 08:21:27]     "graph",
+[2026-09-13 08:21:27]     "choice"
+[2026-09-13 08:21:27]   ],
+[2026-09-13 08:21:27]   "boundary_cells": {
+[2026-09-13 08:21:27]     "reference": {
+[2026-09-13 08:21:27]       "problem_id": "T02",
+[2026-09-13 08:21:27]       "arm": "original",
+[2026-09-13 08:21:27]       "direction": "shallow"
+[2026-09-13 08:21:27]     },
+[2026-09-13 08:21:27]     "candidate": {
+[2026-09-13 08:21:27]       "problem_id": "K01",
+[2026-09-13 08:21:27]       "arm": "original",
+[2026-09-13 08:21:27]       "direction": "shallow"
+[2026-09-13 08:21:27]     }
+[2026-09-13 08:21:27]   },
+[2026-09-13 08:21:27]   "sequences": [
+[2026-09-13 08:21:27]     "graph_choice",
+[2026-09-13 08:21:27]     "choice_graph"
+[2026-09-13 08:21:27]   ],
+[2026-09-13 08:21:27]   "max_calls": 80
+[2026-09-13 08:21:27] }
+[2026-09-13 08:21:27] 오프라인 계획 확인 완료. 추론 실행 없음. v057 관측 후 선정한 경계 조건의 탐색적 순서 진단.
+[2026-09-13 08:21:27] DONE: reference plan validation
+[2026-09-13 08:21:27] Check complete. No model call, Ollama start, or run-result creation was performed.

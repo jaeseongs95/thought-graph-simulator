@@ -1,0 +1,13 @@
+{
+  "input_files_unchanged": {
+    "v057_selection_01.plan.json": true,
+    "v057_selection_01.plan.baseline.zip": true,
+    "v057_selection_01.preflight.json": true,
+    "v057_selection_01_evidence.zip": true,
+    "v057_selection_01_independent.json": true
+  },
+  "tracked_file_diff": [],
+  "new_python_files_ast_utf8_lf": 22,
+  "final_plan_show_exit_code": 0,
+  "actual_model_inference": false
+}

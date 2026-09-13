@@ -1,0 +1,179 @@
+{
+  "contract": "v060-independent-source-audit-r1",
+  "audited_at": "2026-09-13T10:33:03.7831242+09:00",
+  "phase": "pre-execution",
+  "gate": "PASS",
+  "gate_reason": "The sealed source artifact matches its manifest and fresh extraction, the v059 claims match raw requests and responses, the frozen v060 design and request-byte intervention satisfy the protocol, and no open blocking finding was found.",
+  "risk_classification": {
+    "gate_reason": "user_explicit_independent_audit",
+    "external_state_change": false,
+    "actual_v060_inference_in_scope": false,
+    "rationale": "This is an offline source-release audit before the separately authorized 40-call model experiment."
+  },
+  "audit_target": {
+    "kind": "artifact",
+    "path": "llm_experiments/v060/releases/v060_terminal_position_source_r1.zip",
+    "scope": "sealed v060 source release and extracted probe; read-only comparison against v058/v059 evidence and validation records"
+  },
+  "candidate_digest": {
+    "algorithm": "sha256",
+    "value": "4fed2f1cd053bc6679246a7ad94649b811e8b549ef930d8e033aa39a405567c5",
+    "verified_before_and_after_audit": true
+  },
+  "independence": {
+    "auditor": "final_source_audit",
+    "implementer_separated": true,
+    "fresh_context": true,
+    "delegated": false,
+    "participated_in_analysis_design_implementation_or_integration": false
+  },
+  "findings": [],
+  "axis_decisions": [
+    {
+      "axis": "측정정의",
+      "decision": "PASS",
+      "evidence": [
+        "terminal_position_v060/measure.py keeps actual_D null and inherits null D/proof_valid/strict_valid for choice-only output",
+        "independent 16-case truth-table check passed for format, reachability, instruction fulfillment, positions, terminal ranks, implied depth, and null proof fields",
+        "tests.test_design_measure.MeasurementTests passed from the fresh extraction"
+      ],
+      "limitation": "implied_depth describes the path associated with a selected terminal rule; it is not an observed generated-proof depth."
+    },
+    {
+      "axis": "과제이행",
+      "decision": "PASS",
+      "evidence": [
+        "format_valid, goal_reachable_choice, instruction_fulfilled, and shallow_success are separate stored fields",
+        "k03 is reachable and fulfills shallow; k17 is reachable but violates shallow; k10 and unknown IDs are format-valid choice failures; malformed payloads remain unmeasured",
+        "invalid, syntax-error, and measurement tests passed"
+      ],
+      "limitation": "success counts are accompanied by unmeasured counts, and full rates remain null unless the measured denominator is complete."
+    },
+    {
+      "axis": "경쟁설명",
+      "decision": "PASS",
+      "evidence": [
+        "raw v059 requests show first-terminal and absolute-second predictions coincide in both historical arrays",
+        "v060 freezes deep_first=[k17,k03,k10] and shallow_first=[k03,k17,k10], where those two predictions are opposite",
+        "README and protocol restrict interpretation to observable patterns and preserve remaining equivalent explanations"
+      ],
+      "limitation": "a matching v060 pattern would not establish an internal mechanism."
+    },
+    {
+      "axis": "인과이력",
+      "decision": "PASS",
+      "evidence": [
+        "schedule_seed 6002026 independently reconstructs five ABBA and five BAAB seed blocks",
+        "the 40 slots record period, previous_variant, previous_call_id, same-variant predecessor, and repeat_distance",
+        "reporting stratifies sequence, period, previous variant, and repeat distance and declares causal_effect_identified=false"
+      ],
+      "limitation": "cache, pre-run state, sequence interactions, and higher-order history remain uncontrolled."
+    },
+    {
+      "axis": "표본일반화",
+      "decision": "PASS",
+      "evidence": [
+        "plan contains 10 unique historical seeds and 40 dependent calls, two repeats per condition per seed",
+        "reports freeze unique_seed_blocks=10 and independent_problem_count=1",
+        "analysis and protocol do not generalize to other problems, models, or A/D/M control"
+      ],
+      "limitation": "the experiment concerns one K01 choice task and does not provide independent problem samples."
+    },
+    {
+      "axis": "증거재현성",
+      "decision": "PASS",
+      "evidence": [
+        "the release manifest validates 312 files and all 312 hashes match both the archive and current workspace",
+        "the fresh extraction has no missing, extra, or byte-different member and its recorded plus repeated 31-test suite passed",
+        "v059 raw archive digest, 377-file byte manifest, 60-event complete run, 40 raw calls, and selections were checked directly",
+        "production and independent evidence paths reject missing, altered, duplicate, extra, rehashed-semantic, and wrong-reference cases"
+      ],
+      "limitation": "hash consistency is cooperative sealing, not external execution attestation; Python, Ollama, hardware, backend, and cache are not fully sealed."
+    },
+    {
+      "axis": "설계구현계약",
+      "decision": "PASS",
+      "evidence": [
+        "all 40 transformed request hashes were independently reconstructed from the audited v058 request bank",
+        "within-seed same-condition repeats are byte-identical, and only the unique compact rules span changes",
+        "request generation imports no scoring module; verify_v060 imports no v060 production scoring/request/audit/reporting modules",
+        "transport and identity failures stop without retry; partial evidence stays incomplete; retry, repair, resume, download, and warmup are disabled",
+        "Windows CheckOnly log reaches prepare and show without starting Ollama or creating a v060 inference run"
+      ],
+      "limitation": "actual model execution and post-execution evidence verification require a separate authorized run and audit."
+    }
+  ],
+  "evidence_checked": [
+    {
+      "item": "AGENTS.md and independent-audit protocol",
+      "result": "applicable constraints and PASS/FAIL/BLOCKED gate rules applied"
+    },
+    {
+      "item": "README.md, docs/V059_ANALYSIS.ko.md, docs/V060_PROTOCOL.ko.md",
+      "result": "claims, frozen predictions, execution boundary, and limitations agree with source behavior"
+    },
+    {
+      "item": "v059_rules_01_evidence.zip raw manifest, plan, status, requests, and responses",
+      "result": "SHA-256 3f9b1e1462fa48f8b88f3ec71b69020adc7257c826e84d4b893b1d24eba685c5; 40/40 observed; original k17 at position 1 in 20/20; terminal_swap k03 at position 1 in 20/20; 0/20 within-condition repeat disagreements"
+    },
+    {
+      "item": "v058_order_02_evidence.zip raw source requests",
+      "result": "SHA-256 d8fd5b2123d38023aaf7c7c0427f54ab6fe650d6b85a695790cb7a5b5b852761; 10 seeds; graph_choice and choice_graph request bytes match per seed; full request options preserved"
+    },
+    {
+      "item": "v059_reanalysis.json and original independent receipt",
+      "result": "802 v059 fields and 1649 baseline fields compared with zero differences; production_imports=false"
+    },
+    {
+      "item": "release_r1_seal.json, release build/check logs, scope_and_candidate_check.json",
+      "result": "sealed digest and current 312-file workspace match confirmed"
+    },
+    {
+      "item": "extracted_r1_selftest.log and direct fresh-extraction unittest run",
+      "result": "31 tests passed in recorded 74.545 seconds and auditor-run 80.451 seconds"
+    },
+    {
+      "item": "independent schedule and request reconstruction",
+      "result": "40 slots, 60 actions, 20 calls per variant, five ABBA/five BAAB blocks, 40 request hashes, and unique rules-span-only transformation passed"
+    },
+    {
+      "item": "independent 16-case measurement truth table",
+      "result": "all expected semantic and null fields matched production measurement"
+    },
+    {
+      "item": "windows_checkonly.json and windows_checkonly.log",
+      "result": "exit code 0; v059 analysis and v058-backed plan prepare/show completed; no Ollama start or v060 inference run observed"
+    },
+    {
+      "item": "terminal_position_v060 source, tests, tools/analyze_v059.py, tools/verify_v060.py, tools/build_release.py, and Windows launcher",
+      "result": "implementation matches the documented contracts and tested rejection boundaries"
+    }
+  ],
+  "tests_executed_by_auditor": [
+    {
+      "command": "python -X utf8 -B -m unittest tests.test_design_measure tests.test_execution_integrity tests.test_independent -v",
+      "cwd": "llm_experiments/v060/validation/extracted_r1/llm_experiments/v060/probe",
+      "result": "PASS; 31 tests; 80.451 seconds"
+    },
+    {
+      "command": "python -X utf8 -B tools/build_release.py --check <sealed-candidate>",
+      "cwd": "fresh extracted v060 probe",
+      "result": "PASS; 312 manifest files"
+    },
+    {
+      "command": "independent inline raw-evidence, schedule, request-byte, and 16-case measurement checks",
+      "result": "PASS"
+    }
+  ],
+  "remediation_or_reaudit": {
+    "required": false,
+    "audit_stale": false,
+    "condition": "Any later change to the ZIP bytes, included source, tests, protocol, validation expectations, or candidate digest requires re-audit."
+  },
+  "limitations": [
+    "No actual v060 model inference was run or audited in this source phase.",
+    "The recorded third-party reviewer model and reasoning settings are unverified by the orchestration response; this does not change the observable source and evidence checks.",
+    "The v059 archive is internally consistent but lacks an external execution signature.",
+    "The independent verifier intentionally reuses prior independent v057/v058 utilities, so shared specification errors remain possible."
+  ]
+}

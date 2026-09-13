@@ -1,0 +1,9 @@
+{
+  "candidate_sha256": "4fed2f1cd053bc6679246a7ad94649b811e8b549ef930d8e033aa39a405567c5",
+  "audit_sha256": "5d1393518873715975b8ef62e6741cd9a417470adcea25defb9c5b12bc86577b",
+  "source_manifest_files": 312,
+  "source_matches_sealed_candidate": true,
+  "gate": "PASS",
+  "findings": [],
+  "real_v060_inference": false
+}

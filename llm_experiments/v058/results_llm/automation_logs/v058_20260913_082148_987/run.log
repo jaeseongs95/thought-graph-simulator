@@ -1,0 +1,66 @@
+[2026-09-13 08:21:49] Repository: D:\codex\AI논문\thought-graph-simulator
+[2026-09-13 08:21:49] Python: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe
+[2026-09-13 08:21:49] Log: D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\results_llm\automation_logs\v058_20260913_082148_987\run.log
+[2026-09-13 08:21:49] START: v058 self-test
+[2026-09-13 08:21:49] COMMAND: C:\Users\sjs95\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -B -m order_replay_v058 selftest
+[2026-09-13 08:21:49] test_dangling_path_cannot_be_silently_pruned (tests.test_analysis.AnalysisTests.test_dangling_path_cannot_be_silently_pruned) ... ok
+[2026-09-13 08:21:49] test_depth_is_support_depth (tests.test_analysis.AnalysisTests.test_depth_is_support_depth) ... ok
+[2026-09-13 08:21:49] test_duplicate_ids_and_unknown_rules (tests.test_analysis.AnalysisTests.test_duplicate_ids_and_unknown_rules) ... ok
+[2026-09-13 08:21:49] test_duplicate_zip_member_rejected (tests.test_analysis.AnalysisTests.test_duplicate_zip_member_rejected) ... ok
+[2026-09-13 08:21:49] test_final_rule_does_not_substitute_for_support (tests.test_analysis.AnalysisTests.test_final_rule_does_not_substitute_for_support) ... ok
+[2026-09-13 08:21:49] test_missing_final_and_unsupported_fact (tests.test_analysis.AnalysisTests.test_missing_final_and_unsupported_fact) ... ok
+[2026-09-13 08:21:49] test_missing_response_rejected (tests.test_analysis.AnalysisTests.test_missing_response_rejected) ... ok
+[2026-09-13 08:21:49] test_parent_identity_and_order (tests.test_analysis.AnalysisTests.test_parent_identity_and_order) ... ok
+[2026-09-13 08:21:49] test_strict_json_input (tests.test_analysis.AnalysisTests.test_strict_json_input) ... ok
+[2026-09-13 08:21:49] test_choice_is_not_actual_proof (tests.test_design_measure.DesignMeasureTests.test_choice_is_not_actual_proof) ... ok
+[2026-09-13 08:21:49] test_each_source_request_reused_twice_without_transformation (tests.test_design_measure.DesignMeasureTests.test_each_source_request_reused_twice_without_transformation) ... ok
+[2026-09-13 08:21:49] test_format_failure_remains_unmeasured (tests.test_design_measure.DesignMeasureTests.test_format_failure_remains_unmeasured) ... ok
+[2026-09-13 08:21:49] test_graph_duplicate_parents_missing_fact_bad_final (tests.test_design_measure.DesignMeasureTests.test_graph_duplicate_parents_missing_fact_bad_final) ... ok
+[2026-09-13 08:21:49] test_invalid_choices_not_repaired (tests.test_design_measure.DesignMeasureTests.test_invalid_choices_not_repaired) ... ok
+[2026-09-13 08:21:49] test_missing_reference_request_rejected (tests.test_design_measure.DesignMeasureTests.test_missing_reference_request_rejected) ... ok
+[2026-09-13 08:21:49] test_omission_duplicate_and_schedule_tamper_rejected_even_rehashed (tests.test_design_measure.DesignMeasureTests.test_omission_duplicate_and_schedule_tamper_rejected_even_rehashed) ... ok
+[2026-09-13 08:21:49] test_request_module_has_no_scoring_imports (tests.test_design_measure.DesignMeasureTests.test_request_module_has_no_scoring_imports) ... ok
+[2026-09-13 08:21:49] test_same_seed_gets_both_sequences_and_history_is_explicit (tests.test_design_measure.DesignMeasureTests.test_same_seed_gets_both_sequences_and_history_is_explicit) ... ok
+[2026-09-13 08:21:49] test_schedule_80_calls_20_blocks_40_metadata (tests.test_design_measure.DesignMeasureTests.test_schedule_80_calls_20_blocks_40_metadata) ... ok
+[2026-09-13 08:21:51] test_http_failure_stops_after_one_attempt (tests.test_execution_integrity.ExecutionIntegrityTests.test_http_failure_stops_after_one_attempt) ... ok
+[2026-09-13 08:21:53] test_identity_drift_after_one_block_stops (tests.test_execution_integrity.ExecutionIntegrityTests.test_identity_drift_after_one_block_stops) ... ok
+[2026-09-13 08:21:59] test_local_fake_http_80_complete_and_offline_audit (tests.test_execution_integrity.ExecutionIntegrityTests.test_local_fake_http_80_complete_and_offline_audit) ... ok
+[2026-09-13 08:22:01] test_metadata_failure_before_inference (tests.test_execution_integrity.ExecutionIntegrityTests.test_metadata_failure_before_inference) ... ok
+[2026-09-13 08:22:11] test_run_artifact_mutations_rejected (tests.test_execution_integrity.ExecutionIntegrityTests.test_run_artifact_mutations_rejected) ... ok
+[2026-09-13 08:22:13] test_second_model_failure_does_not_erase_first_model (tests.test_execution_integrity.ExecutionIntegrityTests.test_second_model_failure_does_not_erase_first_model) ... ok
+[2026-09-13 08:22:20] test_syntax_error_continues_but_is_unmeasured (tests.test_execution_integrity.ExecutionIntegrityTests.test_syntax_error_continues_but_is_unmeasured) ... ok
+[2026-09-13 08:22:20] test_traversal_duplicate_and_wrong_hash_archives_rejected (tests.test_execution_integrity.ExecutionIntegrityTests.test_traversal_duplicate_and_wrong_hash_archives_rejected) ... ok
+[2026-09-13 08:22:21] test_wrong_response_model_stops_without_retry (tests.test_execution_integrity.ExecutionIntegrityTests.test_wrong_response_model_stops_without_retry) ... ok
+[2026-09-13 08:22:30] test_complete_fake_http_bundle_independently_verified (tests.test_independent.IndependentTests.test_complete_fake_http_bundle_independently_verified) ... ok
+[2026-09-13 08:22:38] test_failed_baseline_verification_cannot_be_ignored (tests.test_independent.IndependentTests.test_failed_baseline_verification_cannot_be_ignored) ... ok
+[2026-09-13 08:22:48] test_manifest_rehash_does_not_hide_semantic_or_integrity_mutations (tests.test_independent.IndependentTests.test_manifest_rehash_does_not_hide_semantic_or_integrity_mutations) ... ok
+[2026-09-13 08:22:51] test_partial_fake_http_bundle_is_not_complete (tests.test_independent.IndependentTests.test_partial_fake_http_bundle_is_not_complete) ... ok
+[2026-09-13 08:23:00] test_rehashed_control_records_require_exact_types_and_fields (tests.test_independent.IndependentTests.test_rehashed_control_records_require_exact_types_and_fields) ... ok
+[2026-09-13 08:23:08] test_rehashed_manifest_cannot_change_endpoint_host (tests.test_independent.IndependentTests.test_rehashed_manifest_cannot_change_endpoint_host) ... ok
+[2026-09-13 08:23:08] test_physical_roots_and_logical_fingerprint_names (tests.test_layout.LayoutTests.test_physical_roots_and_logical_fingerprint_names) ... ok
+[2026-09-13 08:23:08] test_release_rejects_missing_dependency_and_bad_manifest_path (tests.test_layout.LayoutTests.test_release_rejects_missing_dependency_and_bad_manifest_path) ... ok
+[2026-09-13 08:23:08] test_release_uses_version_centered_archive_paths (tests.test_layout.LayoutTests.test_release_uses_version_centered_archive_paths) ... ERROR
+[2026-09-13 08:23:08] test_source_path_rejects_physical_and_unsafe_names (tests.test_layout.LayoutTests.test_source_path_rejects_physical_and_unsafe_names) ... ok
+[2026-09-13 08:23:08] test_split_v057_input_layout_is_resolved (tests.test_layout.LayoutTests.test_split_v057_input_layout_is_resolved) ... ok
+[2026-09-13 08:23:08] test_discordance_sign_uses_position_not_sequence_label (tests.test_reporting.ReportingTests.test_discordance_sign_uses_position_not_sequence_label) ... ok
+[2026-09-13 08:23:08] test_incomplete_comparison_rates_null (tests.test_reporting.ReportingTests.test_incomplete_comparison_rates_null) ... ok
+[2026-09-13 08:23:08] test_one_unmeasured_pair_cannot_be_zero_filled (tests.test_reporting.ReportingTests.test_one_unmeasured_pair_cannot_be_zero_filled) ... ok
+[2026-09-13 08:23:08] test_same_seed_order_pairs_not_new_problem_samples (tests.test_reporting.ReportingTests.test_same_seed_order_pairs_not_new_problem_samples) ... ok
+[2026-09-13 08:23:08] test_unobserved_not_neither_or_failure (tests.test_reporting.ReportingTests.test_unobserved_not_neither_or_failure) ... ok
+[2026-09-13 08:23:08] System.Management.Automation.RemoteException
+[2026-09-13 08:23:08] ======================================================================
+[2026-09-13 08:23:08] ERROR: test_release_uses_version_centered_archive_paths (tests.test_layout.LayoutTests.test_release_uses_version_centered_archive_paths)
+[2026-09-13 08:23:08] ----------------------------------------------------------------------
+[2026-09-13 08:23:08] Traceback (most recent call last):
+[2026-09-13 08:23:08]   File "D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\probe\tests\test_layout.py", line 72, in test_release_uses_version_centered_archive_paths
+[2026-09-13 08:23:08]     result = release.build(out)
+[2026-09-13 08:23:08]              ^^^^^^^^^^^^^^^^^^
+[2026-09-13 08:23:08]   File "D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\probe\tools\build_release.py", line 36, in build
+[2026-09-13 08:23:08]     raise ValueError('배포 대상 외 파일: '+str(path))
+[2026-09-13 08:23:08] ValueError: 배포 대상 외 파일: D:\codex\AI논문\thought-graph-simulator\llm_experiments\v058\probe\windows\Run-v058.cmd
+[2026-09-13 08:23:08] System.Management.Automation.RemoteException
+[2026-09-13 08:23:08] ----------------------------------------------------------------------
+[2026-09-13 08:23:08] Ran 44 tests in 79.495s
+[2026-09-13 08:23:08] System.Management.Automation.RemoteException
+[2026-09-13 08:23:08] FAILED (errors=1)
+[2026-09-13 08:23:08] FAILED: 'v058 self-test' failed with exit code 1. No automatic retry was attempted.

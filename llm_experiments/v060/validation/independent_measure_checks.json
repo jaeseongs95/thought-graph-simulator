@@ -1,0 +1,6 @@
+{
+  "check": "independent v060 measurement truth table",
+  "cases": 16,
+  "passed": true,
+  "new_model_inference": false
+}

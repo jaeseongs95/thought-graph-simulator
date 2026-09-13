@@ -1,0 +1,17 @@
+{
+  "command": [
+    "powershell.exe",
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v060\\probe\\windows\\Run-v060.ps1",
+    "-CheckOnly",
+    "-SkipSelfTest",
+    "-NoPause",
+    "-NoOpen"
+  ],
+  "exit_code": 0,
+  "new_model_inference": false,
+  "log": "windows_checkonly.log"
+}

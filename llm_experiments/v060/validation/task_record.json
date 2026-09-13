@@ -1,0 +1,160 @@
+{
+  "scope": "new llm_experiments/v060 only",
+  "existing_status_records": 11186,
+  "initial_files": {
+    "thought-graph-simulator\\AGENTS.md": "f4c881041ec8bc6def412e5d32df1288aa89e85cc515c3a5c32a310483c7b752",
+    "thought-graph-simulator\\llm_experiments\\v059\\results_llm\\v059_rules_01_evidence.zip": "3f9b1e1462fa48f8b88f3ec71b69020adc7257c826e84d4b893b1d24eba685c5",
+    "thought-graph-simulator\\llm_experiments\\v059\\results_llm\\v059_rules_01_independent.json": "040c4c1c37998440a3f93185006b3bddf1e18585184b776a24aa7e65a9200eff"
+  },
+  "delegation": {
+    "reviewers": [
+      "measurement_review",
+      "causal_review",
+      "evidence_review"
+    ],
+    "requested_model": "gpt-5.6-sol",
+    "requested_reasoning": "high",
+    "fork_turns": "none",
+    "actual": "unverified",
+    "reason": "Spawn returned task identifiers only. Separate bounded blind review of measurement, causal design, provenance.",
+    "redelegation_allowed": false
+  },
+  "mode": "offline; no real inference",
+  "panel_risk": "MEDIUM",
+  "assurance_goal": "separate blind reviews and claim cross-examination; source audit after implementation",
+  "cross_examination": {
+    "C1": {
+      "origin": "coordinator_design",
+      "reviewer": "causal_review",
+      "resolution": "Two new permutations separate specified joint predictions; postposed k10 limits transport to v059; no internal mechanism claim."
+    },
+    "C2": {
+      "origin": "causal_review_observations",
+      "reviewer": "measurement_review",
+      "resolution": "ID and implied_depth separated from actual D; single-axis history strata do not exclude interactions; rename task validity."
+    },
+    "C3": {
+      "origin": "coordinator_receipt",
+      "reviewer": "evidence_review",
+      "resolution": "Artifact integrity confirmed; external execution attestation and runtime reproducibility not established. Shared independent dependencies and specification remain explicit limitations."
+    }
+  },
+  "analysis_claims": {
+    "v059_bundle_sha256": "3f9b1e1462fa48f8b88f3ec71b69020adc7257c826e84d4b893b1d24eba685c5",
+    "original_shallow": "0/20",
+    "terminal_swap_shallow": "20/20",
+    "all_selected_position_zero_based": 1,
+    "repeat_disagreements": "0/20",
+    "independent_fields": 802,
+    "baseline_fields": 1649,
+    "actual_D": null
+  },
+  "implementation_ownership": {
+    "measurement_review": [
+      "terminal_position_v060",
+      "tests",
+      "tools/build_release.py",
+      "windows"
+    ],
+    "coordinator": [
+      "tools/analyze_v059.py",
+      "tools/verify_v060.py",
+      "README.md",
+      "docs",
+      "validation"
+    ]
+  },
+  "completed_blind_reviews": [
+    "measurement_review",
+    "causal_review",
+    "evidence_review"
+  ],
+  "evidence_audit": {
+    "blocking_findings": 0,
+    "zip_manifest_files": 377,
+    "disk_run_files": 376,
+    "event_count": 60,
+    "python_source_fingerprint_files": 268,
+    "manual_K01_depths": {
+      "k03": 1,
+      "k17": 2
+    }
+  },
+  "acceptance_criteria": [
+    {
+      "id": "A1",
+      "criterion": "Recompute v059 from raw evidence and compare production/independent summaries."
+    },
+    {
+      "id": "A2",
+      "criterion": "Derive multiple failure-based perspectives and record independent views plus cross-examination."
+    },
+    {
+      "id": "A3",
+      "criterion": "Bound claims to one K01 choice task; distinguish implied depth, actual D, formatting, reachability, instruction success, repeated seeds."
+    },
+    {
+      "id": "S1",
+      "criterion": "Create runnable v060 next-experiment source only in new version; no real inference during development."
+    },
+    {
+      "id": "S2",
+      "criterion": "Freeze 10-seed 40-call two-array schedule and preserve request bytes outside rule-array intervention; no retries/repair/download."
+    },
+    {
+      "id": "S3",
+      "criterion": "Recompute evidence independently without production scoring imports; reject missing, tampered, duplicated or invalid input and preserve partial runs."
+    },
+    {
+      "id": "S4",
+      "criterion": "Verify release manifest and fresh extraction selftest, then independently audit the same sealed source artifact."
+    }
+  ],
+  "final_source_audit": {
+    "worker": "final_source_audit",
+    "prior_participation": "none",
+    "requested_model": "gpt-5.6-sol",
+    "requested_reasoning": "high",
+    "fork_turns": "none",
+    "actual": "unverified",
+    "reason": "Creation returned task identifier only.",
+    "assurance_profile": "cooperative-sealed",
+    "candidate_sha256": "4fed2f1cd053bc6679246a7ad94649b811e8b549ef930d8e033aa39a405567c5",
+    "writers_stopped": true,
+    "state": "completed",
+    "gate": "PASS",
+    "findings": [],
+    "all_seven_axes": "PASS",
+    "audit_sha256": "5d1393518873715975b8ef62e6741cd9a417470adcea25defb9c5b12bc86577b",
+    "final_candidate_digest": "4fed2f1cd053bc6679246a7ad94649b811e8b549ef930d8e033aa39a405567c5"
+  },
+  "verification": {
+    "source_selftest": {
+      "tests": 31,
+      "passed": true,
+      "source": "implementation worker report"
+    },
+    "extracted_selftest": {
+      "tests": 31,
+      "passed": true,
+      "source": "extracted_r1_selftest.log"
+    },
+    "windows_checkonly": {
+      "exit_code": 0,
+      "selftest_skipped_in_launcher": true,
+      "real_model_calls": 0
+    },
+    "independent_truth_table": {
+      "cases": 16,
+      "passed": true
+    },
+    "release_files": 312
+  },
+  "completion": {
+    "analysis": "complete",
+    "source": "complete",
+    "offline_verification": "complete",
+    "real_v060_inference": "not_run",
+    "source_unchanged_after_audit": true
+  }
+}

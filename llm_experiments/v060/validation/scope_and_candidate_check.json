@@ -1,0 +1,11 @@
+{
+  "initial_input_hashes_unchanged": {
+    "thought-graph-simulator\\AGENTS.md": true,
+    "thought-graph-simulator\\llm_experiments\\v059\\results_llm\\v059_rules_01_evidence.zip": true,
+    "thought-graph-simulator\\llm_experiments\\v059\\results_llm\\v059_rules_01_independent.json": true
+  },
+  "git_added_records": [],
+  "git_removed_records": [],
+  "source_zip_matches_current_workspace": true,
+  "source_mismatches": []
+}

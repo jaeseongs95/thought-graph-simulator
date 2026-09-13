@@ -1,0 +1,9 @@
+{
+  "contract": "v059-real-baseline-import-check-r1",
+  "bundle_sha256": "d8fd5b2123d38023aaf7c7c0427f54ab6fe650d6b85a695790cb7a5b5b852761",
+  "recorded_calls": 80,
+  "selected_calls": 10,
+  "source_sequences_equal": true,
+  "prepared_requests_checked": 40,
+  "new_model_inference": false
+}
