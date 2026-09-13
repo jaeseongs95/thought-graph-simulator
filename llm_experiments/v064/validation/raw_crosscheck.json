@@ -1,0 +1,86 @@
+{
+  "v058": {
+    "sha256": "d8fd5b2123d38023aaf7c7c0427f54ab6fe650d6b85a695790cb7a5b5b852761",
+    "bytes": 12674642,
+    "groups": {
+      "qwen3:4b-instruct/graph/shallow": {
+        "calls": 20,
+        "full_invalid": 20
+      },
+      "qwen3:4b-instruct/choice/shallow": {
+        "calls": 20,
+        "selected_r83": 15,
+        "selected_r69": 5
+      },
+      "gemma3:4b/graph/shallow": {
+        "calls": 20,
+        "full_invalid": 20
+      },
+      "gemma3:4b/choice/shallow": {
+        "calls": 20,
+        "selected_k17": 20
+      }
+    },
+    "plan_sha256": "ff4c80c82fd2f5676e73485eb19ab730d6669fea1dfe0c0f81cdc6a06859a473"
+  },
+  "v059": {
+    "sha256": "3f9b1e1462fa48f8b88f3ec71b69020adc7257c826e84d4b893b1d24eba685c5",
+    "bytes": 13456975,
+    "groups": {
+      "gemma3:4b/choice/original": {
+        "calls": 20,
+        "selected_k17": 20
+      },
+      "gemma3:4b/choice/terminal_swap": {
+        "calls": 20,
+        "selected_k03": 20
+      }
+    },
+    "plan_sha256": "fa86076a6890735b9160f4576b0749054857cdcd1ad4b3d886cdef55a8469972"
+  },
+  "v060": {
+    "sha256": "5a2aeeaf28e9b445b61f3cf78ce87c11aeea1b57cc36ba74bd772fecc15c2c68",
+    "bytes": 13512785,
+    "groups": {
+      "gemma3:4b/choice/deep_first": {
+        "calls": 20,
+        "selected_k17": 20
+      },
+      "gemma3:4b/choice/shallow_first": {
+        "calls": 20,
+        "selected_k03": 20
+      }
+    },
+    "plan_sha256": "2174a90657dd37cc2574fd56484e65119e5b353f9831888c699554f7aea81259"
+  },
+  "v061": {
+    "sha256": "650c3f5296a37978255755e4f416b90c94184fc787bad8ae8405887d869fe4dc",
+    "bytes": 13569877,
+    "groups": {
+      "gemma3:4b/choice/shallow": {
+        "calls": 20,
+        "selected_k03": 20
+      },
+      "gemma3:4b/choice/deep": {
+        "calls": 20,
+        "selected_k03": 20
+      }
+    },
+    "plan_sha256": "0af48276d0ff65b3bbccc5d4f1967fe6738c430110b7e62cae98a8a6c36302bc"
+  },
+  "v062": {
+    "sha256": "baea752ac1a55dc7a20b42b41ced69b3c8e126105f65deea8ebecc8dde3f09fd",
+    "bytes": 13643455,
+    "groups": {
+      "gemma3:4b/graph/target_k17": {
+        "calls": 20,
+        "full_invalid": 20
+      },
+      "gemma3:4b/graph/target_k03": {
+        "calls": 20,
+        "full_invalid": 20
+      }
+    },
+    "plan_sha256": "071b17338d23e067297bbec0f60bc527a41100d0a1f274789b752767a3bbcbf3"
+  }
+}

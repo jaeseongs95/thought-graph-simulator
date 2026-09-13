@@ -1,0 +1,2334 @@
+
+PAGE 1
+Thought Trajectory Space:
+A Measurement Specification and Reference Routing Rule
+Linking Reasoning Observations to Executable Contracts
+Jaeseong Song
+Independent Researcher
+September 10, 2026
+Theoretical and methodological proposal | v1.0
+Abstract
+This paper proposes a measurement specification and reference routing rule linking Thought
+Trajectory Space (TTS) to Cognitive Transition Architecture (CTA). TTS records abstraction,
+inferential dependency depth, and metacognitive review while retaining semantic content,
+evidence, goals, and history outside the three observation coordinates. The specification fixes
+abstraction boundaries, proposition and dependency units, multi-conclusion summaries, and
+distinct notions of content control. Categorical transitions are the default; geometric analysis
+and activation steering require additional measurement assumptions. The reference router
+combines goal-related utility and cost with Jensen-Shannon divergence between operator-
+conditioned realized transition distributions and an expert transition prior. Unsupported
+observations trigger exact fallback to the same baseline, without modifying contract permissions.
+A conditional bound limits changes in the router’s surrogate utility, not in true task performance.
+Constructed numerical cases illustrate changed choices, fallback, and failure under a misspecified
+prior. A small reference selector and its numerical and branching unit tests were executed.
+No LLM-integrated CTA, annotation reliability study, activation intervention, or model
+performance and learning-efficiency experiment was conducted. The evaluation separates
+native operator contribution from the incremental value of TTS, holds the TTS signal path
+fixed across a factorial comparison, and includes budget-matched alternative representations.
+The resulting specification supports falsifiable tests of the separate contributions of observation,
+routing, and contract enforcement; their empirical utility remains to be evaluated.
+Keywords: thought trajectory space, cognitive transition architecture, construct validity, operator
+selection, executable contracts, categorical transitions, learning efficiency
+1. Introduction
+Some problem-solving processes begin with concrete observations, derive a general structure, and
+return to testable cases. Others repeat the same representations without checking their premises,
+or perform valid intermediate steps yet arrive at a result that does not address the original goal.
+Describing these differences requires specifying what changes and what remains invariant during
+reasoning, rather than considering only the correctness of the final answer. This study takes the
+expression “direction of thought” as a starting point and formulates it as a measurable research
+question.
+Representing cognitive content in geometric spaces, distinguishing abstract from concrete repre-
+sentations, and analyzing neural population activity as dynamics each have established research
+backgrounds [1–3]. In large language models (LLMs), researchers have also investigated output
+control using activation directions and the analysis of reasoning trajectories [6,7,14–17]. Con-
+sequently, this study does not claim that representing reasoning with vectors and trajectories is
+itself a new discovery.
+1
+
+PAGE 2
+Thought Trajectory Space v1.0
+The paper considers four questions. First, can the structural properties of reasoning steps be
+consistently encoded in human-interpretable coordinates? Second, do changes in those coordinates
+provide information beyond content similarity or simple step indices? Third, can using valid
+transition patterns for control reduce the number of training examples or the execution cost
+required for the same performance? Fourth, can incorporating valid operational relations into an
+architecture reduce part of the burden of repeatedly learning desired procedures? These questions
+require different levels of evidence: measurement, prediction, intervention, and execution structure.
+Thought Trajectory Space (TTS) is proposed as a conceptual framework for addressing these
+questions together. Its central design separates the coordinates of a state from the relations
+between states. Abstraction, dependency depth, and metacognitive review are properties observed
+at an individual step; continuity, changes of direction, and evidence links are evaluated between
+steps. Intuitive and analytical processing are not placed on an axis opposed to concreteness and
+abstraction. Nor are the three coordinates assumed to contain all semantic information or fully
+determine the next state.
+The contributions are limited to four design artifacts.C1 is a measurement specification covering
+A/D/M coding procedures, content controls, and conditions for using the scales. C2 is an
+observation-control interface distinguishing text, activations, and categorical transitions.C3
+consists of CTA contracts for operator selection, execution, and result acceptance, together with
+an explicit reference routing rule that uses TTS information within those contracts.C4 is an
+evaluation protocol that decomposes the standalone and combined effects of the components and
+their data, computation, and construction costs. Numerical and branching tests of the reference
+selector are a limited implementation check of C3, not evidence of the empirical utility of these
+four contributions.
+The motivation for connecting TTS and CTA is to address both the induction of particular
+reasoning behaviors and the definition of the computational relations required for those behaviors
+as components. Discovering interpretable coordinates does not, however, by itself construct
+corresponding semantic operators. Sections 3-5 therefore address observation and guidance,
+Section 6 addresses execution structure, and the conditional propositions in Section 7 and the
+hypotheses and evaluation design in Sections 9-10 examine their connection.
+2. Theoretical Background and Related Work
+2.1. Conceptual spaces, abstraction, and dynamics
+Gärdenfors’s conceptual spaces describe conceptual representations as geometric structures with
+multiplequalitydimensions[1]. TTSdrawsontheperspectiveofassigninginterpretablecoordinates
+to cognitive representations. It nevertheless distinguishes a space describing what a concept is
+from a space describing the form of reasoning applied to that concept. For the same “network
+error,” for example, a step may examine a particular log, describe a general failure structure, or
+review the criteria used to make a judgment.
+The concrete-abstract distinction in construal-level theory provides a conceptual background for
+A [2]. The A proposed here codes how strongly a task representation is tied to an instance or
+generalized beyond it; it is not a measure that transfers the full psychological-distance effects of
+construal-level theory to LLMs. Empirical support for the existing cognitive theory therefore does
+not establish the validity of the TTS coordinate.
+Research on neural population dynamics concerns the temporal structure of high-dimensional
+neural activity and its relation to computation [3]. This perspective motivates analyzing transitions
+as well as individual states. State spaces derived from neural activity, LLM activation spaces,
+and human-annotated reasoning spaces are nevertheless different observation spaces. Their
+correspondence requires separate data.
+2
+
+PAGE 3
+Thought Trajectory Space v1.0
+2.2. Processing modes and metacognitive review
+The distinction between autonomous and controlled processing in dual-process research is not
+the same as the distinction between abstractness and concreteness [4]. TTS does not identify
+an intuitive transition merely from a high A label or a large jump. The absence of recorded
+intermediate steps is likewise not interpreted as showing that an internal process was omitted.
+Processing mode is recorded as an additional attribute only when there is separate observational
+evidence.
+Research on measuring metacognition distinguishes confidence, performance accuracy, and the
+correspondence between accuracy and confidence [5]. M does not measure this entire metacognitive
+ability. Instead, M denotes the level of the object under review: whether the current utterance
+or action concerns the problem itself, the grounds for reasoning, or the appropriateness of the
+evaluation criteria. The magnitude of M and the success of the review are evaluated separately.
+2.3. Interpretable representations and activation steering
+Activation Addition intervenes on model outputs using activation differences between contrasting
+inputs [6]. Representation Engineering organizes approaches to observing and manipulating
+population-level representations rather than only individual neurons [7]. These studies provide
+methodological grounds for exploring meaningful representation directions; they do not show that
+each TTS coordinate A/D/M exists as a stable, single linear direction.
+Concept Bottleneck Models use human-specified concepts as intermediate representations in
+prediction [8]. Their connection to TTS is the explicit assignment of meaning to interpretable
+variables and the question of whether those variables can be intervened on. The present proposal
+does not, however, make a bottleneck that computes the final answer exclusively from the three
+coordinates its default architecture. Content and context remain in high-dimensional states or
+external records, while A/D/M serve as auxiliary observation and control variables.
+High predictive performance by a probe must be distinguished from the original model’s actual
+use of that information in computation. Hewitt and Liang proposed control tasks for isolating task
+learning and memorization by probes [10]. TTS likewise requires controls for random labels, surface
+form, and step position, together with intervention experiments. Model-generated explanations
+may also fail to faithfully expose the original computation; text annotations are therefore not
+equated directly with observations of internal thought [9].
+2.4. Reasoning trajectories, latent reasoning, and adaptive control
+Coconut proposes continuous latent reasoning that reuses the final hidden state as the next
+input representation [11]. Bias-Only Adaptation steers reasoning by learning a limited number of
+additional parameters [12]. Unlike these two approaches, Thinking Intervention insertstextual
+intervention informationat specified positions during reasoning [13, Section 4]. Reference [13]
+is thus cited as prior work on textual intervention in reasoning, not as evidence of direct hidden-
+activation manipulation. None of these studies is used as validation of A/D/M or of the efficiency
+of the present combination.
+Sun and colleagues analyze stepwise representation-space structure, differences between correct and
+incorrect paths, and trajectory-based intervention [14]. CTRLS addresses reasoning search using
+latent-state transitions [15], and RISER uses a router to select and combine reusable reasoning
+vectors for intervention [16]. RISER also addresses interpretable cognitive functions and control;
+it would therefore be inappropriate to contrast TTS with a claim that all existing methods use
+only uninterpretable coordinates.
+A*-Thought-V2, released in September 2026, analyzes local transitions and alignment with
+the question-to-solution direction in a three-dimensional PCA space and combines explicit and
+3
+
+PAGE 4
+Thought Trajectory Space v1.0
+latent reasoning [17]. It directly overlaps with this proposal in connecting three-dimensional
+representations, transition directions, and efficiency. Neither the number of dimensions nor the use
+of vectors and angles is therefore claimed as novel. Whether the present method is distinguishable
+should be assessed through the measurement validity of A/D/M, the incremental explanatory
+value of context-conditioned transitions, and control effects including their costs.
+Table 1 summarizes closely related work examined and the additional questions considered
+here. This comparison does not replace a systematic literature review or an exhaustive novelty
+assessment.
+Table 1. Closely related approaches and additional TTS validation questions
+Prior approach Elements already addressed Additional question for TTS
+Conceptual spaces [1],
+Concept Bottleneck [8]
+Intermediate representations
+with assigned meanings
+Can structural coordinates of reasoning
+processes also be measured reproducibly?
+ActAdd and RepE [6,7] Observation and control of
+activation directions
+How do directions that measure A/D/M
+correspond to effective intervention directions?
+Coconut and
+CTRLS [11,15]
+Continuous processing or
+transitions of latent states
+Can latent transitions be linked to
+interpretable observation variables?
+Reasoning-trajectory
+analysis [14]
+Stepwise geometry, correctness
+prediction, and trajectory
+intervention
+Does A/D/M add information after
+controlling for step index, length, and content?
+RISER [16] Selection and combination of
+reasoning vectors for control
+Do explicit annotation criteria and expert
+transition distributions add value?
+A*-Thought-V2 [17] Three-dimensional projection,
+directional alignment, and
+latent compression
+Are semantic coordinates cost-effective
+relative to data-driven coordinates?
+Soar, NPI, and modular
+neural networks [19–21]
+States, goals, operators, and
+functional computation
+composition
+Does combining TTS observations with
+operator contracts provide an independent
+benefit?
+Constraint layers and
+shielding [22,23]
+Computational constraints and
+restrictions on allowed actions
+Can procedural compliance and semantic goal
+fulfillment be evaluated separately?
+2.5. Cognitive architectures, modular computation, and execution constraints
+Organizing problem solving around states, operators, and goals already occurs in cognitive
+architectures. Soar distinguishes operator selection and application to states, working memory,
+goals, and the construction of subproblems in response to impasses [19]. The broad idea of
+designing a graph of reasoning operators is therefore not claimed as originating in this study.
+Neural Programmer-Interpreters combine a trainable execution core, program memory, and
+domain-specific encoders; Neural Module Networks compose learned modules according to input
+structure [20,21]. These are prior examples showing that functional composition and neural learning
+can coexist. The additional question for CTA concerns the effects of specifying input-output
+relations, acceptance conditions, and links to TTS observations, rather than merely assigning
+names to modules.
+Differentiable Convex Optimization Layers incorporate a well-defined optimization problem
+as a layer of a neural network [22]. This is a direct example of defining a layer as a particular
+computational problem rather than only a generic weighted transformation. Abstract interpretation
+also addresses correspondences between concrete and abstract states and sound approximation [25].
+Section 6 uses these principles in restricted formal-domain examples. It does not claim that every
+abstraction or verification operation in natural language reduces to convex optimization or static
+analysis.
+Shielding research, which blocks specification-violating actions proposed by a learned policy,
+separates execution constraints from performance optimization [23]. Its guarantees depend on
+4
+
+PAGE 5
+Thought Trajectory Space v1.0
+the specified requirements and system model. CTA similarly distinguishes calling a verifier,
+satisfying a defined relation, and solving the user’s actual problem. Recent SAE-based reasoning
+steering intervenes on reasoning strategies through disentangled representation features [24], but
+an intervention effect is not itself a guarantee that a given contract is satisfied on every execution.
+The candidate distinction of this design thus lies not in cognitive architectures, modularity, or hard
+constraints individually, but in combining the TTS observation language with operator contracts
+and separately evaluating the incremental value of that combination. Literature comparison alone
+does not establish that the combination is novel or effective.
+2.6. Direct comparison with integrated language-agent structures
+CoALA organizes language agents around modular memory, internal and external action spaces,
+and a generalized decision-making procedure [26]. CTA’s working-memory, operator, and controller
+outline is therefore insufficient by itself to constitute an architecture newer than CoALA. The
+additional specification here fixes what is observed within such a structure, which numerical
+rule changes operator priorities, and which permissions those observations cannot affect. These
+components could also be added to a CoALA-style implementation; the proposal is therefore a
+testable component design rather than a mutually exclusive replacement.
+Formal-LLM represents requirements as automata and generates natural-language plans under
+those constraints [27]. Section 4.1 of that paper distinguishes plan validity and executability
+from performance and optimality. CTA retains this distinction. The additional candidates
+specified here are version binding between accepted states and checked objects, final-output
+obligations, and selection among admissible operators using categorical transition distributions.
+Their specification does not imply that an extended Formal-LLM implementation could not provide
+the same functions.
+Tree of Thoughts generates and evaluates intermediate thoughts and organizes search and back-
+tracking [28]. Graph of Thoughts includes thought-dependency graphs, transformations, evaluation,
+ranking, and a controller, distinguishing a graph of operations from dynamically maintained rea-
+soning states [29, Sections 3-4]. Using graphs, transformations, and evaluators is therefore not
+a novelty claim either. The discriminating question is the incremental information A/D/M
+transitions provide for selection when content, operator state, and budget are held constant.
+Agent Workflow Memory induces reusable workflows from experience and selectively supplies them
+to subsequent actions [30]. The reuse-efficiency hypothesis H8 must also be compared with such
+external procedural memory. Benefits of reuse alone are not attributed to the internal operator
+structure or to TTS.
+Table 2. Specific additional elements to compare with nearby methods
+Comparator Existing core structure
+Additional element to test in this reference
+specification
+CoALA [26] Integrated memory, action, and
+decision-making framework
+Difference from adding or removing the TTS
+selection term within the same controller
+framework
+Formal-LLM [27] Automata-based plan constraints Separate effects of execution-result and
+output-binding contracts and the transition
+signal
+ToT / GoT [28,29] Thought search, transformation,
+evaluation, and operation graphs
+Generic states and scores versus A/D/M
+transition-based selection
+RISER [16] Reusable steering vectors and a
+router
+Roles of operator-outcome distributions and
+acceptance contracts, separate from activation
+steering
+AWM [30] Reuse of procedures induced from
+experience
+Native operators and adaptation costs relative
+to external workflow reuse
+5
+
+PAGE 6
+Thought Trajectory Space v1.0
+The candidate distinction is not merely that interpretable coordinates exist. It is the joint provision
+of a fixed codebook, a sample space of realized transitions, a distribution-comparison selection
+term, exact baseline fallback, and an ablation that removes that term. Jensen-Shannon divergence,
+weighted objectives, and hard masking are not claimed as new mathematics. A narrative literature
+comparison does not establish the absence of an identical or equivalent prior specification; the
+comparisons in Section 10 must assess whether the combination is needed.
+3. Defining Thought Trajectory Space
+3.1. Observation units and context
+A reasoning record is represented as semantically segmented stepsi = 1,...,n. A step is not
+necessarily a sentence or a token. Initial annotation places boundaries where the dominant
+function changes, for example from presenting an observation to making an inference, generating a
+hypothesis, evaluating evidence, or reviewing a decision criterion. A sentence containing multiple
+functions may be segmented or assigned multiple labels.
+Let o≤i denote the text, actions, and tool results through stepi, x the task,g the goal, andE≤i
+the evidence available by that point. TTS observation coordinates and context are defined as
+follows.
+zi =ϕ(o≤i,x,g,E ≤i) = (Ai,Di,Mi), (1)
+ci = (qi,x,g,E ≤i,H<i). (2)
+Here qi records reasoning content, andH<i is the history of prior reasoning and actions. The
+reference content representation is a structured set of propositions linked to offsets in the original
+record. Each proposition preserves its objects, relations, negation, quantifier scope, conditions,
+uncertainty expressions, and provenance. Text and embeddings may be retained alongside it,
+but embedding similarity alone does not establish content identity.qi is not a fourth numerical
+coordinate.
+The zi in Eq. (1) contains selected observational properties, not an entire mental state or the
+model’s complete computational state. Two records with identicalzi can differ in content and
+evidence. No Markov assumption in whichzi alone determines the next state is made; control and
+transition prediction also use the context in Eq. (2).
+3.1.1. Content identity and factual-base controls
+Content is recorded as follows, while the versions of the goal and available evidence remain in the
+separate context.
+qi = (Pi,Ui,Bi), (3)
+Pi contains propositions and their condition, polarity, and quantifier annotations;Ui maps
+propositions to source spans and referents; andBi links propositions to evidence and assumption
+IDs. Strict identity is restricted to cases preserving the truth conditions, uncertainty, and
+provenance status of propositions relevant to the comparison. In restricted formal tasks it is
+assessed through normalized formulas and provenance mappings; in natural-language tasks it is
+assessed by comparing the structured records of two independent annotators. Ambiguous cases
+remain undetermined rather than being treated as identical.
+6
+
+PAGE 7
+Thought Trajectory Space v1.0
+Table 3. Distinct content-control conditions
+Condition Held fixed Permitted changes and interpretation
+Q-exact Truth conditions, polarity,
+quantification, and provenance
+status of relevant propositions
+Expression length, style, and synonymous
+wording; used for meaning-preserving controls
+Base-fixed Original facts, assumptions,
+evidence set, and goal
+Active propositions, generalization, and review
+utterances may change; changed propositions
+are recorded
+Topic-matched Prespecified covariates such as
+topic, domain, and difficulty
+Does not guarantee proposition identity;
+reported only as a topic-matched comparison
+Generalizing from a particular instance to a universal proposition usually changes quantifier scope
+and is therefore Base-fixed, not Q-exact. An M contrast that adds a review of the grounds may
+also add content. Consequently, the paper does not broadly claim that only A/D/M changes while
+Q remains identical. Different proofs used in a D contrast may have the same target conclusion
+without sharing all explicit intermediate propositions. Contrast records storecontent_control,
+added and deleted propositions, changes in scope and uncertainty, and independent judgments.
+Content control alone does not establish the causal independence of A, D, and M.
+3.2. A: Abstraction level
+A is an ordinal label indicating whether the currently active representation is tied to a particular
+instance, states a rule about a class of instances, or parameterizes a relational structure itself as a
+principle. Vocabulary difficulty, length, and vagueness are not coding criteria. The stated scope
+and explicit parameterization in the original record provide the evidence.
+Table 4. Criteria and constructed anchors for A0-A4
+Level Coding criterion Illustrative anchor
+A0 A single observation or value for a
+particular object and time
+“The status code of this request is 500.”
+A1 A relation within one bounded instance “This request was retried after the connection closed.”
+A2 A category or rule for a named class of
+instances, directly using properties of
+that class
+“Requests with expired sessions in this service require
+reauthentication.”
+A3 Objects replaced by role variables, with
+a schema and conditions for
+relation-preserving substitutions
+“If R is transitive, R(x,y) and R(y,z) imply R(x,z).
+The rule applies under this condition even when object
+names change.”
+A4 Explicit cross-domain correspondence or
+a domain-general decision schema, with
+corresponding cases in different domains
+“Compare premise-conclusion relations in programs
+with evidence-judgment relations in evidential
+assessment while preserving support relations and
+applicability conditions.”
+The A2/A3 boundary concernsa rule about category properties versus a substitutable
+relational schema, not the number of instances. Merely adding the words “all services” does
+not make a sentence A3. Conversely, a schema may be coded A3 even when illustrated by one
+concrete application, provided that its roles, relations, and conditions are separately explicit. For
+A4, distinct applicable domains and the preserved relations must also be identifiable. Simply
+declaring a statement “universal” does not meet this condition.
+Coding first identifies the active proposition in the original record, records its scope, and then
+assigns the highest level whose conditions in Table 4 are satisfied. Annotators do not supply
+missing higher-level conditions. Instances and principles within a sentence are coded separately
+when they can be separated. If segmentation changes meaning, the sentence remains a compound
+7
+
+PAGE 8
+Thought Trajectory Space v1.0
+unit with a primary label, alternative labels, and their grounds preserved. Cases that remain
+undecidable even with context receive missing values.
+These anchors define a coding convention, not a scale whose reliability has already been established.
+A3 and A4 capture the explicit relational abstraction specified by this convention; they do not
+measure unrecorded internal abstraction ability. Equal spacing between categories is not assumed.
+3.3. D: Inferential dependency depth
+D records how many layers of support dependencies connect the active conclusion to premises
+explicitly stated in the record. It is distinguished from the number of reasoning steps, elapsed
+time, number of hypotheses, and general reasoning ability. Rules for constructing the graph from
+the record are fixed before depth is computed.
+Node unit. A node is a proposition whose truth or acceptance can be assessed independently.
+Independent conjuncts are separated, but a sentence is retained intact when splitting it would
+change its conditions or quantifier scope. A restatement with the same meaning and provenance
+status is recorded as an alias of an existing node. Claims updated with new evidence receive
+separate versions; repetition alone does not create additional depth.
+Edge unit. One explicit act of deriving a conclusion from a premise set is stored as an inference
+record. Multiplepremisesusedjointlysharean inference_idand parent_set; depthcomputation
+uses edges from all parents to the conclusion. A rule object is linked as a justification for the
+inference, but applying a rule does not create an artificial intermediate conclusion that increases
+depth again. Annotators do not supply unrecorded intermediate proofs. If several omitted steps
+are compressed into one sentence, the record retains one derivation relation and separately marks
+the possibility of omission.
+In the graphGi = (Vi,Ei), letV0 be the root nodes consisting of explicit observations, supplied
+premises, and assumptions. Their provenance types are distinguished andd(u) = 0 is assigned.
+For the remaining nodes in an acyclic graph, define:
+d(u) = 1 + max
+v∈Pa(u)
+d(v), u / ∈V0. (4)
+The active conclusion for the primary analysis is the conclusion newly derived or explicitly
+reviewed by the functional unit. For multiple conclusions, meaning-preserving segmentation is
+attempted first. If the unit cannot be segmented, all conclusion depths are retained and the
+primary coordinate is fixed as their maximum.
+Draw
+i = max
+u∈U active
+i
+d(u). (5)
+Mean and median summaries are used only in prespecified sensitivity analyses. D is missing when
+there is no active conclusion or the parent relations cannot be identified. Cyclic components and
+nodes whose depths cannot be determined because they depend on those components are labeled
+cyclic or undetermined, rather than assigned arbitrary zero or infinite depths. Computation is
+retained for acyclic portions unaffected by the cycle.
+This definition concerns the depth of therecorded argument. A more detailed account of the
+same internal reasoning may reveal more layers, requiring sensitivity tests that cross compressed
+and detailed records. A verbose description of the same graph should retain the same D, whereas
+adding actual intermediate conclusions may change the graph itself. High depth does not preclude
+invalid edges or false premises, and D can decrease when the active conclusion changes.
+8
+
+PAGE 9
+Thought Trajectory Space v1.0
+3.4. M: Metacognitive review level
+M denotes the current object of review. M0 concerns the object-level problem, M1 the grounds,
+assumptions, or uncertainty of the current reasoning, and M2 the appropriateness of goals,
+evaluation criteria, or verification procedures. If the distinction between M1 and M2 is not
+reproducible, reliability and confusion patterns are reported and a merged codebook is evaluated
+separately. Results from a modified codebook are not retroactively counted as success of this
+three-level specification.
+The phrase “I will check again” alone does not raise M. The assumption or ground being checked,
+and the reason for checking it, must be identifiable. Announcing a check, performing it, and
+incorporating its result into a revised conclusion receive separate action labels. M describes the
+level of review; whether that review was accurate or timely is a separate quality variable.
+M is assigned according to the review target. “Does evidence E1 actually support this conclusion?”
+is M1, whereas “Is the current evidential criterion sufficient to assess this goal?” is M2. The mere
+presence of a goal in the task input does not warrant M2: a statement evaluating the adequacy of
+the criterion is required. A concerns representational generalization and M the review target; a
+criterion review confined to one case can therefore be A1 and M2 simultaneously. M2 does not
+automatically imply A4.
+Table 5. Measurement targets and distinctions for the basic coordinates
+Coordinate Measurement target Raw record Not equated with
+A Concreteness and
+generalization of a
+representation
+A0-A4 ordinal labels and
+their grounds
+Sentence length, vagueness, or difficult
+terminology
+D Support-dependency
+structure of the
+current conclusion
+Graph depth and
+provenance labels
+Step index, repetition count, or
+correctness
+M Level of the review
+target
+M0-M2 labels and review
+grounds
+Confidence, disclaimers, or successful
+verification
+Conceptually distinguishing the coordinates does not imply statistical independence or orthogonal-
+ity in activation space. Correlation and redundant information are measured, and two-coordinate,
+three-coordinate, and extended models are compared to determine the number of dimensions
+needed.
+3.5. From ordinal codes to geometric coordinates
+Assigning numbers to A0-A4 and M0-M2 does not define distances between their categories. Initial
+experiments prioritize categorical transitions, increases/decreases/no change, and rank-based
+comparisons. Distance- and angle-based analyses are undertaken only after assessing whether
+appropriate numerical coding can be established using anchor examples and contrast ratings.
+A geometric representation fixes both a transformationκand a positive-definite matrixW.
+˜zi =κ(zi), ∥v∥W =
+√
+vTWv. (6)
+κmaps annotations to analysis coordinates, andW specifies the units and relative weights of
+the coordinates. Both are determined on training and calibration data, without refitting to test
+data. A coordinate system must not be selected merely because it gives the best observed test
+performance. Choosing W does not resolve the spacing of the ordinal scale; conclusions must also
+be checked under alternative numerical codings and nongeometric analyses.
+9
+
+PAGE 10
+Thought Trajectory Space v1.0
+3.6. Categorical reference representation and segmentation versions
+The reference selector uses A0-A4, six bins for raw D (0, 1, 2, 3, 4, and 5 or greater), and M0-M2.
+No numerical distance is assigned to these 90 combinations. The D bins are a convention for
+controlling variance and sparsity in this reference method, and raw graph depth must also be
+preserved. Results using other bins are reported as different configurations.
+When operator execution records are available, a step boundary is the return of one completed
+operation. With text-only records, it is the smallest meaning unit with one dominant function
+and active conclusion. Compound or ambiguous units are not forcibly split, and source offsets
+and segmentation versions are fixed. Data with different execution and textual boundaries are
+analyzed in separate strata. Earlier boundaries are not retrospectively redefined after reading
+future outcomes.
+4. Transition Vectors and Relational Continuity
+4.1. Direction, magnitude, and changes of direction
+Under the conditions in Eq. (6), the transition vector between adjacent reasoning steps is defined
+as follows.
+vi = ˜zi+1−˜zi, ˇvi = vi
+∥vi∥W
+. (7)
+ˇvi is used only when∥vi∥W > ϵ. The threshold ϵis calibrated as a lower bound on changes
+identifiable relative to measurement error. An arbitrary direction is not assigned when there is
+almost no change.
+The angle between two transition vectors is computed in the same coordinate system and metric.
+θi = arccos
+(
+vT
+i Wvi+1
+∥vi∥W∥vi+1∥W
+)
+. (8)
+For example, an increase in A is interpreted as movement toward a more general representation,
+and an increase in M as movement toward reviewing reasoning or decision criteria. An angle close
+to 180 degrees does not, however, imply negation of a conclusion. A proposition can change from
+affirmative to negative while A/D/M remains unchanged. Conversely, a logically warranted return
+to verification may produce a large angle.
+The total trajectory length and coordinate-wise ranges are defined as follows.
+L =
+n−1∑
+i=1
+∥vi∥W, R k = max
+i
+˜zi,k−min
+i
+˜zi,k. (9)
+Length and range describe the form of reasoning, not intelligence or performance scores. If the
+same problem can be solved more briefly, a long trajectory may contain unnecessary search. Neither
+trajectory length nor increases along each coordinate are therefore independent optimization
+targets.
+4.2. Semantic connection and inferential warrant
+Semantic connectednessCs(i) describes the relatedness of the content at stepsi and i + 1. When
+embedding similarity is used, the embedding’s suitability for the domain and language is assessed
+separately. Similarity is one measure of content relations, not a logical-entailment checker.
+10
+
+PAGE 11
+Thought Trajectory Space v1.0
+Inferential warrantCi(i) assesses how well the next step is supported given the transition type,
+explicit premises, and available evidence. Deduction, inductive generalization, causal-hypothesis
+proposal, and evidence-gathering actions have different requirements and are not reduced to a single
+entailment judgment. Initial coding uses “supported,” “conditionally supported,” “insufficient
+grounds,” “contradiction,” and “not applicable.”
+Analogical correspondenceCa(i) is recorded separately. Software verification and judicial evidence
+assessment may share structural similarities, but a conclusion in one domain is not thereby true
+in the other. Analogy can support hypothesis generation or comparison; justification in the target
+domain is evaluated using that domain’s evidence. This distinction prevents treating analogy as
+erroneous merely because semantic distance is large, or treating a conclusion as established merely
+because the structures resemble one another.
+4.3. Processing mode, speed, and measurement uncertainty
+Intuitive, analytical, and mixed processing are optional auxiliary values ofµi. For humans, these
+labels require separate evidence such as self-reports, response times, or task manipulations. For
+LLMs, output length or a single jump does not establish a process equivalent to human intuition.
+The core TTS analysis is designed to remain possible without observingµi.
+Discrete steps are the basic units of transition analysis in this specification. Speed obtained
+by dividing by wall-clock time ∆ti depends on the execution environment, tool delays, and
+recording frequency; execution time and conceptual transition rate are therefore reported separately.
+Continuous derivatives, acceleration, and curvature may be explored only with sufficient samples
+and assumptions supporting smooth interpolation. Continuous-dynamical properties are not
+presumed to exist in a few ordinal labels.
+Let coordinate-estimation error satisfy∥ˆzi−˜zi∥W≤ei, and define the estimated difference as
+ˆvi = ˆzi+1−ˆzi. The triangle inequality bounds the difference error as follows. The unit direction
+ˇvi in Eq. (7) is distinct from the estimated differenceˆvi.
+∥ˆvi−vi∥W≤ei +ei+1. (10)
+Directional interpretation is therefore unstable when the true change is smaller than this error
+scale. The effects of inter-annotator disagreement and changes in segmentation on trajectories
+must be reported together.
+5. Measurement and Control in LLMs
+5.1. Text observations and internal activation observations
+Let ht,ℓ∈Rd denote the hidden vector extracted at token positiont and layerℓof an LLM. The
+paper distinguishesϕtext, which annotates textual records, from activation-based measurementϕℓ,
+which predicts annotation properties from activations.
+ztext
+i =ϕtext(o≤i,ci), z act
+i = decode(ψℓ(hi,ℓ,ci)). (11)
+Text labels contain categorical values, integers, and missing entries. The activation probe first
+computes a differentiable outputψℓ; decode then produces A/M argmax labels and an integer D
+prediction. Missing-value handling is fixed separately.
+ψℓ(h,c ) = (pA(h,c ), ˆD(h,c ),pM(h,c ))∈∆ 4×R≥0×∆ 2. (12)
+11
+
+PAGE 12
+Thought Trajectory Space v1.0
+∆ k is the probability simplex overk + 1 categories. For example, softmax category heads and a
+softplus depth head may be used. These continuous outputs do not imply equal spacing of the
+raw ordinal scales. Continuous probe scores, decoded labels, and calibrated geometric coordinates
+are recorded as distinct outputs.
+hi,ℓis the vector at a prespecified step boundary or a pooled representation of the step. The final
+token immediately after step completion is the default anchor; pooling alternatives may be treated
+in separate sensitivity analyses. Activations from future steps or the final answer are not included
+in current-step prediction.
+Agreement between the two measurements provides evidence that activations can predict properties
+exhibited in the text. It does not establish that the text fully describes internal reasoning or that
+the coordinates are causal variables [9,10]. Results of text-based analysis, activation prediction,
+and intervention effects are consequently reported separately.
+The vectorht,ℓat one position is also not assumed to represent the entire computational state
+of an autoregressive model. Prior context, caches, and representations at other positions can
+participate in computation. TTS uses selected activations as an observation window. Differences
+along token positions and across layers are separated, and vectors from different models are not
+directly subtracted or compared without alignment.
+5.2. Estimating coordinates from contrast data
+The initial linear baseline uses activation differences from contrast data labeled with the content-
+control grades in Section 3.1.1. A candidate direction for coordinatek∈{A,D,M}can be
+estimated as follows.
+uk,ℓ= E[h
+(+)
+ℓ−h
+(−)
+ℓ ]. (13)
+Superscripts (+) and (−) indicate different levels of the target coordinate, not correct and incorrect
+answers. Generalization contrasts for A and review contrasts for M are constructed as Base-fixed
+in principle, with changes in active propositions recorded. D contrasts preserve the goal and
+available premises while making changes in the recorded derivation structure explicit. Separate
+Q-exact contrasts that change only length and style distinguish surface-expression effects. Different
+target-coordinate labels therefore do not by themselves establish complete content control.
+If topic, length, expressions of confidence, words such as “verification,” or correctness change
+together in a contrast, Eq. (13) may learn their combined effects. The design therefore uses
+crossed versions of these variables and random-label controls. Linear probes are compared with
+capacity-limited nonlinear probes, and evaluated on unseen task families and expression formats.
+Orthogonalizing coordinates may change their interpretation; orthogonalization alone is not taken
+as discovering independent cognitive variables.
+5.3. Readable directions versus controllable directions
+A probe that predicts M well does not establish that adding its weights will induce appropriate
+metacognitive verification. A measurement direction may read correlated features, whereas an
+intervention changes subsequent computation. In particular, an intervention may increase a
+coordinate score without causing actual verification.
+A candidate TTS controller separately maps a desired changev∗
+i in interpretable coordinates to
+an intervention in activation space.
+δhi,ℓ=Bℓaψ(zi,ci,v∗
+i ), h ′
+i,ℓ=hi,ℓ+δhi,ℓ. (14)
+12
+
+PAGE 13
+Thought Trajectory Space v1.0
+Bℓ∈Rd×r is a basis of intervention directions andaψ∈Rr contains control coefficients. A
+three-dimensional desired change is not directly added to ad-dimensional vector. Nor is a simple
+inverse of the observation projection assumed. Local linear approximation is not applied to
+the categorical decode output or raw A/M integers. For fixed context, it is applied instead to
+the differentiable continuous headψℓ, under differentiability and sufficiently small-intervention
+assumptions.
+∆ψℓ≈Jψℓ(h,c )Bℓaψ. (15)
+The left side of Eq. (15) is a change in continuous scores or probabilities, not in actual A/D/M
+categories or reasoning functions. Calibrating a desired geometric changev∗
+i to targets for the
+continuous head requires separate data. If the matrix has insufficient rank, not all desired
+directions are controllable. Moreover, shifting a current probe score is different from changing the
+function of the next reasoning step. Generated actions and evidence use after intervention must
+be independently assessed, and performance and side effects checked on held-out test data not
+used to fit the intervention.
+5.4. Expert transition priors
+The geometric variant assumes the numerical-coding and metric conditions of Section 3.5 and
+represents valid expert reasoning directions as a distribution conditioned on state, task, evidence,
+and history. The categorical reference method instead uses the distribution in Section 6.4.1, so
+the geometric variant is not a prerequisite.
+v∗
+i∼πE(v|zi,ci), F E(zi,ci) = EπE[v|zi,ci]. (16)
+πE preserves multiple valid paths, whileFE summarizes their average tendency. Averaging two
+valid but opposing directions may produce a direction that no one would actually choose, so
+the policy is not replaced by a mean field alone. Stopping, maintaining the current plan, and
+gathering evidence are also included as separate choices.
+When human expert records are used, the basis for expertise, task experience, collection method,
+and annotation procedure must be specified. Collecting only successful final answers may omit error
+correction and the grounds for branch choices, so correction paths are included. Model-generated
+records are identified as a “validated teacher-model transition prior,” not a “human expert prior.”
+No human expert data were collected or such a distribution learned in preparing this paper.
+A baseline policy and expert distribution can be mixed as follows.
+πλ(v|zi,ci) = (1−λi)π0(v|zi,ci) +λiπE(v|zi,ci), 0≤λi≤1. (17)
+λi reflects the reliability and applicability of the prior in the current context. Its influence may,
+for example, be weakened on out-of-distribution tasks or states with high annotation uncertainty.
+The rule and thresholds are determined using validation data.
+A residual model summarizing the preceding discussion can be written as follows.
+˜zi+1 = ˜zi +ηiFE(zi,ci) +Rθ(zi,ci) +ξi. (18)
+Equation (18) summarizes transitions in observation coordinates. Hereηi controls the magnitude
+of prior application,Rθis a learned residual transition, andξi is unexplained variation. This
+equation alone does not define a complete natural-language generation model. An implementation
+also needs content-state updates and the control connection in Eq. (14), and learning a residual
+does not by itself reduce total training cost.
+13
+
+PAGE 14
+Thought Trajectory Space v1.0
+Simultaneously estimatingηiFE and unrestrictedRθin Eq. (18) admits multiple decompositions
+with the same sum. The paper does not interpret this as a uniquely identified causal mechanism.
+To test this continuous variant,FE is first fitted using only expert data and frozen, the rule forηi
+is fixed on the calibration split, and only a fixed-capacityRθis trained with a residual-prediction
+loss. The assumptionE[ξi|zi,ci] = 0 belongs to a conditional-mean prediction model and requires
+testing. This sequence does not identify the causal contribution of each term. The primary
+integration experiment does not use this residual decomposition; it uses the categorical outcome
+model in Section 6.4.
+5.5. Training objectives and prevention of reward contamination
+Directional agreement may be used as an auxiliary training objective. Vectors with near-zero
+magnitude are excluded, and comparison is made with a valid direction setVE(ci) drawn from
+corresponding contexts.
+Ldir = Ei
+[
+min
+u∈VE (ci)
+(1−cosW (vi,u ))
+]
+. (19)
+The valid-direction set is constructed from training data without advance access to correct paths
+for test problems. Corresponding steps are aligned by task, history, and semantic function,
+rather than sentence index alone. Learning a full distribution through conditional likelihood or
+distributional differences can preserve multimodality.
+A candidate overall objective is:
+L =Ltask +αLdir +βLcost +γLreg. (20)
+Ltask measures an independently defined task goal. Cost and regularization terms are applied
+within a regime that preserves task performance. Rewards that merely increase A/D/M scores are
+not used. The evaluator assigning coordinates is separated from the evaluator of final performance;
+actual tests, evidence use, and task-specific correctness judgments take priority. Process supervision
+is already an established research approach [18], so the contribution of directional supervision is
+evaluated at an equal supervision budget.
+5.6. Conditions for connecting guidance to execution structure
+The intervention in Eq. (14) changes an existing model’s computation to induce particular
+behavior. CTA, described next, goes further by specifying which operations are admissible and
+which outputs can be accepted. The two approaches are alternatives that can also be combined.
+TTS supplies observation and control signals suggesting which operation to consider next; CTA
+governs execution and acceptance of the chosen operation’s result.
+This connection is not assumed to be an automatic equivalence. The same A/D/M change
+can arise from different operations, and one operation can change the coordinates differently in
+different contexts. Operator-specific transition distributions must therefore be observed to assess
+correspondence between predictions and actual execution. A device that checks only increases in
+coordinates is not a layer implementing a semantic operation.
+14
+
+PAGE 15
+Thought Trajectory Space v1.0
+6. Cognitive Transition Architecture: From Observation Coordi-
+nates to Execution Structure
+6.1. Separating computational states from interpretable coordinates
+CTA is a design proposal comprising an input encoder, a set of operators, structured working
+memory, a transition controller, and an output component. “Cognitive” denotes the functional
+roles of operations, not a claim to replicate human neural mechanisms. The execution state is
+defined as follows.
+si = (χi,ωi,σi,bi), z i =ϕ(si,ci). (21)
+χi is the internal computational state, including required caches and context;ωi is structured
+working memory for claims, assumptions, evidence, goals, and check results;σi is the current
+control state; andbi is the remaining execution budget. The single hidden vector in Section 5
+is not equated withχi. Working memory preserves currently known content and versions and
+distinguishes unchecked candidates from verified facts.
+TTS remains an observation window on this execution state. CTA does not reason by directly
+increasing zi. Conversely, CTA’s procedural compliance does not establish that the three TTS
+coordinates are useful measurement variables. The combination requires separate evaluation.
+6.2. Defining operational relations rather than functional names
+The specification of operatoro separates its preconditionPo, execution functionTo,θo, result
+checkerCo, and permitted write scopeWo.
+Oo = (Po,To,θo,Co,Wo), (˜si+1,eo) =To,θo(si,ci). (22)
+eo is an execution record or artifact needed for checking, not automatically a proof.Co distinguishes
+acceptance, rejection, and an undetermined result. A “pass” string produced by a learned module
+is not directly trusted as the contract verdict. Modules are designed not to overwrite evidence,
+goals, or acceptance labels outside their permitted write scope.
+The selection unito is fixed as(operator_id,implementation_version,argument_binding),
+rather than a functional name alone. The reference code’soperator_id field receives a unique
+key for this bound execution choice. Candidates with the same role but different arguments
+or versions have distinct keys; a role tag does not replace the tie-breaking key. Even within a
+“verification” role, different objects, tools, or versions define separate execution choices. Role tags
+may be multiple, but the effect model conditions on the actual execution choice. A composite
+operation either has a new contract specifying its components, write scope, and check order, or
+is decomposed into a sequence of atomic operations. An annotation’s functional class and an
+execution module ID having the same name does not establish identical computation.
+Table 6. Examples of operator roles and contracts
+Operation Inputs and outputs Explicit checks
+Abstraction Instance representations to
+higher-level categories or relations
+and a correspondence map
+Scope, correspondence to source data, and
+relations declared to be preserved
+Hypothesis
+generation
+Observations and goals to candidates
+and assumptions
+No promotion of a candidate to fact;
+identification of required evidence
+Derivation Premises and rules to a conclusion
+and dependency structure
+Premise references and rule application;
+proof checking in formal domains
+15
+
+PAGE 16
+Thought Trajectory Space v1.0
+Operation Inputs and outputs Explicit checks
+Verification Candidate, evidence, and criteria to
+check results
+Actual checked object, version, result, and
+scope of the check
+Metacognitive
+review
+Goals, criteria, and history to an
+adequacy judgment or revision
+proposal
+Identification of reviewed items and separate
+authorization of criterion changes
+Evidence binding Conclusion to supporting-evidence
+mappings and an output candidate
+Preservation of provenance, conditions, and
+unresolved items; no unsupported finalization
+The final column of Table 6 gives examples of contracts to check; it does not describe an already
+implemented checker that completely judges natural-language meaning. Structural and reference
+checks may be mechanical, while judgments such as whether an open-ended causal explanation
+is sufficient require additional semantic evaluation. Each contract declares both its supported
+domain and its level of checking.
+Operations and coordinate changes are not fixed in a one-to-one correspondence. Applying
+abstraction to an already sufficiently general representation may not increase A; returning to
+concrete calculation after verification may reduce M. Thus∆A> 0 and ∆M >0 are not universal
+definitions of operator success.
+6.3. Restricted examples of directly defined native layers
+A finite-state example gives abstraction an actual operation rather than only a role name. Given
+a finite set of concrete statesΩ and a partitionP, a candidate-state setX⊆Ω can be abstracted
+as follows.
+αP(X) ={B∈P:B∩X̸= ∅}, γ P(Y ) =
+⋃
+B∈Y
+B. (23)
+X⊆γP(αP(X)). (24)
+Equation (23) is a concrete computation mapping instances to categories containing them. A
+membership table and set operations implement it as a deterministic layer. Equation (24) is
+an overapproximation that omits no possible concrete state, connecting to the concrete-abstract
+correspondence in abstract interpretation [25]. Concretization is not an inverse that exactly
+recoversX. Which partition is useful for the task is a separate design or learning problem, and
+this example is not identified with all human abstract thought.
+Another candidate native layer transforms a learned proposal into an explicitly defined constraint
+set.
+u∗= argmin
+u∈K(ωi,g)
+1
+2∥u−fo,θo(χi,ωi,g )∥2
+H. (25)
+If H is positive definite andK is nonempty, closed, and convex, the solution is uniquely defined.
+Including this operation in the forward pass differs from rewarding outputs that happen to satisfy
+constraints. Backpropagation requires additional conditions on differentiability of the solution and
+the solver [22]. Numerical implementations check constraint residuals and tolerances and return
+an undetermined result if the set is empty or the solver fails.
+Equation (25) guarantees only the constraints of the specified set. Calling that set “all correct
+answers” does not implement correct natural-language reasoning. The proposed implementation
+path begins with native layers for components whose computational relations can be defined,
+such as formal rule application, permitted memory updates, and known numerical constraints,
+16
+
+PAGE 17
+Thought Trajectory Space v1.0
+and combines them with components requiring learning, such as representation extraction and
+hypothesis proposal.
+6.4. Admissible operator selection and result acceptance
+The controller chooses only from a finite setA(si) of operators satisfying the current preconditions
+and permissions. A baseline selection policyρψmay be restricted as follows.
+ρadm
+ψ (o|si) = 1[o∈A(si)]ρψ(o|si)∑
+a∈A(si)ρψ(a|si) . (26)
+If the denominator is zero, the formula is not used; execution follows separately defined recovery,
+evidence-request, or undetermined-termination rules. The implementation must actually prevent
+selection of inadmissible items, rather than merely assign a large negative penalty and expect a
+small violation probability. TTS and expert transition priors may determine which operator to
+prioritize within the admissible set.
+Sections 6.4.1-6.4.4 define a reference routing rule for this connection. It uses categorical TTS
+observations as an auxiliary operator-selection signal without requiring an inverse transformation
+from activation space. Other routers are possible subsequent variants, but their results are not
+pooled with those of this reference method.
+Permission to select an operator is also distinct from acceptability of its generated result. The
+executor updates accepted working-memory state only after checking the candidate result.
+si+1 =
+{
+Accept(si, ˜si+1,eo), C o = pass,
+RecoverOrStop(si,eo), C o̸= pass. (27)
+This design does not force every internal computation of a candidate to be correct; it restricts the
+path by which a candidate that has not passed its contract is promoted to an accepted result.
+Alternative candidates, rechecking, and rollback remain possible, without arbitrarily weakening
+the original goal. A natural-language metacognitive reviewer may propose criterion changes, but
+may not change the criteria and then authorize its own result.
+The same sequence of abstraction, hypothesis, verification, and metacognitive review is not imposed
+on every task. Direct derivation is allowed when formal operations suffice; additional review
+obligations are activated when goals or evidence are uncertain. The execution budget includes a
+nonnegative integer iteration limit, reduced by at least one on every iteration, including execution,
+failure, and recovery. Tool, checker, and output calls have finite timeouts. Before execution,
+the budget reserves the costs of the current step and required final checks. If the remaining
+budget cannot cover checking as well, the process terminates as undetermined rather than skipping
+verification. These conditions support finite execution, not completeness of problem solving.
+6.4.1. Predicting realized transitions rather than candidate changes
+One observation window begins at the accepted state immediately before an operation is proposed
+and includes execution, contract checking, and the permitted state update. The common sample
+space of categorical outcomeτi is:
+Zcat ={0,..., 4}×{0, 1, 2, 3, 4,5+}×{0, 1, 2},
+T = ({pass}×Zcat)∪{reject, unknown, stop}. (28)
+A pass event includes the coordinates of the next state actually accepted. Because current
+coordinates are fixed as conditioning variables, the categorical distribution over next coordinates
+17
+
+PAGE 18
+Thought Trajectory Space v1.0
+represents transitions from that starting point. If coordinates of an accepted state are missing,
+the observed event isunknown, with detailed fields distinguishing this from an unknown contract
+verdict. reject denotes rejection, unknown an undetermined check or measurement, andstop
+termination without a verified correct answer. The reference distribution has 93 categories. A
+high M value in a rejected candidate is not counted as realized review. Recovery is a separate
+subsequent operation, and each retry’s event and cost are retained.
+Pν,o(τ|si) = Prν(τi =τ|si,o ), Q E,i(τ) =πcat
+E (τ|zi,ci). (29)
+QE,i is the conditional distribution of expert or teacher transitions annotated in the same sample
+spaceandcodebook. Anexpertpaththatrecognizesinsufficientevidenceandterminatesmayassign
+mass tostop; the distribution is not constructed solely from verified-correct paths. No comparison
+is made whenPν,oandQE,i use different categories, observation windows, or segmentation versions.
+High-dimensional conditioning on full statesi is implemented through a prespecified state encoder
+whose inputs and version are recorded. Semantic content is not replaced by A/D/M.
+6.4.2. Combining goal utility with distributional fit
+Goal-related baseline utilityUi(o) is computed by an independent model without the TTS selection
+term.
+Ui(o) = ˆGi(o)−λC ˆci(o)−λF ˆfi(o). (30)
+ˆGi(o) predicts theprobability of passing an independent goal evaluationafter the operation
+under a prespecified continuation policy and remaining budget. It does not target a category
+score or a phrase such as “verified.”ˆci is expected execution and checking cost normalized in a
+fixed cost unit, andˆfi predicts contract rejection or an undetermined check. Missing observations
+alone are not automatically included inˆfi. Cost units, normalization constants, weights, and the
+continuation policy are fixed during training and calibration and shared by B2 and B3. Variants
+replacing this goal probability with short-term progress are reported separately.
+Two distributions on the same categories are compared with base-2 Jensen-Shannon divergence.
+J(P,Q ) = 1
+2
+∑
+t:P (t)>0
+P (t) log2
+P (t)
+V (t) + 1
+2
+∑
+t:Q(t)>0
+Q(t) log2
+Q(t)
+V (t),
+V (t) = 1
+2(P (t) +Q(t)).
+(31)
+Zero-probability terms contribute zero. The divergence satisfies0≤J≤1 and remains finite
+even for different supports. This is an existing distributional comparison measure, not a cognitive
+distance between A/M categories. Because JS favors closeness to the expert’s entire frequency
+distribution, it can penalize a deterministic operator that realizes only one valid mode of a
+multimodal distribution. The term is therefore not interpreted as a membership test for the set of
+valid paths. When every admissible operator has the same divergence, relative rankings remain
+those of baseline utility; whether distributional matching benefits the goal is evaluated by H7b.
+The reference score and selection are:
+Si(o) =Ui(o)−λTwiJ(Pν,o,QE,i), (32)
+o∗
+i = argmax
+o∈A(si)
+Si(o). (33)
+18
+
+PAGE 19
+Thought Trajectory Space v1.0
+Here λT≥0 and wi∈{0, 1}. Ties are broken by the lexicographic order of prespecified operator
+IDs. If no operator is admissible, the formula is bypassed in favor of the existing recovery or
+stopping rule. The distributional term is an observational prior for comparable contexts, nota
+check proving which transition is correct. TTS changes only the score; it cannot change
+preconditions, write permissions, check results, or completion obligations.
+6.4.3. Applicability, exact fallback, and failure handling
+wi = 1 is used only when the current observation is complete, lies in the prespecified task and
+content-control domain, and all admissible operators have sufficient data support and calibration
+quality. The support thresholdnmin, out-of-distribution rule, and calibration-error limitϵcal are
+determined on calibration data and frozen before testing. Runs without these settings do not
+count as active-TTS experiments. If even one operator lacks support, it is not arbitrarily removed;
+instead wi = 0 applies to the entire decision point. Fallback rates and reasons are reported with
+the results.
+When wi = 0 or λT = 0, distributions are not evaluated; selection uses exactlyUi and the same
+tie rule. Malformed distributions are neither filled with zeros nor silently renormalized. In active
+mode, the reference code raises an exception for malformed input; the calling executor logs the
+error and follows a predeclared baseline fallback or undetermined termination. This is not counted
+as a normal TTS decision.
+The design permits a clear difference: among operators with similar baseline utility, it can prioritize
+the operator whose predicted transition better matches the expert distribution. Conversely, a
+sufficiently large utility gap cannot be overturned. If the distribution is wrong, that priority may
+harm the actual goal. This is a concrete method whose effects and failures can be tested, not a
+rule guaranteeing a benefit.
+6.4.4. Collecting effect data and specifying the estimand
+Records separately retain the pre-execution state, admissible set, actual operator ID and assignment
+probability, candidate state, contract verdict, post-acceptance coordinates, checking and recovery
+costs, and independent goal judgment under the continuation policy. The effect model learns from
+executions including rejection, undetermined outcomes, and stopping, rather than only successful
+candidates. Conditional categorical likelihood is the training objective, with a fixed-capacity
+multinomial classifier as the primary baseline. Task-family frequency estimation is a simple
+comparator in formal tasks with sufficient data.
+The primary design for causal interpretation of operator effects clones the same pre-execution
+state within the supported domain and randomly assigns admissible operators. It requires positive
+assignment probability for each state-operator pair, the same continuation policy, and consistent
+outcome recording. Tasks with irreversible external effects are excluded unless evaluated in a
+sandbox or under separate experimental consent and design. The effect is restricted to supported
+states and the specified continuation policy.
+Exploratory analyses using only observational logs of an existing policy report selection bias and
+support gaps and do not callPν,oa causal effect. Unless the experiment manipulates A/D/M
+labels themselves, the effect of an operator intervention is not the independent causal effect of
+A/D/M. The expert distribution and utility/effect models are frozen without access to test results,
+and future correct paths of test problems are not used as prior information.
+19
+
+PAGE 20
+Thought Trajectory Space v1.0
+6.5. Completion conditions and evidence binding
+Finalizing output candidatey uses the set of checking obligationsR(g,ωi) required for the current
+goal. Check results are bound to candidate, evidence, goal, and evaluator versions; changing an
+object after checking invalidates the relevant results.
+CanCommit(y,si) = Bind(y,ωi,g ) ∧
+⋀
+k∈R(g,ωi)
+[Ck = pass]. (34)
+Bind verifies that the content about to be output has the same version as the object actually
+checked. Content or an immutable snapshot must also be bound, preventing acceptance when
+an object ID matches but its content has changed. The rule selecting the obligation set itself
+remains within the trust boundary so that the system cannot declare an empty set of mandatory
+obligations and pass vacuously.
+A record that a verification module read the input is different from a judgment that its conclusion
+is valid. An empty report, another candidate’s passing result, or a statement that something
+was “checked” does not establish Eq. (34). Preserving an external tool’s output also does not
+guarantee that the tool’s input is a true real-world fact.
+The final language renderer is included in the verification boundary. If it can freely restate verified
+propositions while changing conditions or negation, internal proof alone cannot guarantee the
+sentence shown to the user. Formal tasks use restricted rendering of verified results or recheck the
+actual output candidate. If rechecking depends on a learned semantic judge, its reliability level is
+reported separately.
+6.6. Distinguishing determinism, probability, and correctness
+The target of restriction is the part of execution in which whether a desired procedure occurs is left
+solely to the learned policy. Deterministic computation with fixed weights and inputs, sampling
+the next output, uncertainty in knowledge or evidence, and prohibition of a transition are distinct
+issues. Computing a probability distribution does not necessarily require random sampling, and a
+deterministic output can still be wrong.
+Table 7. Objects of guarantees and their conditions
+Level Possible claim What the claim does not include
+Procedure and
+permissions
+The executor blocks inadmissible
+acceptance and output paths.
+Correct semantic judgments by the invoked
+verifier
+Formal relations A specified relation holds under sound
+rules and checkers.
+Preservation of the original intent when
+natural-language input is formalized
+Task goal Actual goal fulfillment improves under
+independent evaluation.
+Error-free performance or completeness for
+every input
+A hard gate requiring a learned judge’s pass verdict can enforce nonacceptance without that
+verdict. It does not remove false positives by the judge. Conversely, implementing sound inference
+rules as actual operations in a restricted formal language can support relational guarantees stronger
+than procedural compliance. Section 7 formalizes this distinction conditionally.
+6.7. Implementation levels: External control versus native architecture
+The first level keeps the existing LLM unchanged and uses an external state machine, tools, and
+checkers to control calls and results. It is a baseline for testing execution contracts, not a model
+with newly defined hidden layers. The second level steers existing internal activations or adds
+20
+
+PAGE 21
+Thought Trajectory Space v1.0
+adapters or routers, connecting to Section 5. Whether base weights are unchanged and whether
+additional modules are trained are reported separately.
+The third level is a native architecture in which semantic operations and permitted memory
+updates are components of the forward pass or iterative latent computation. It may combine
+directly defined operations such as Eq. (23) or Eq. (25), learned proposal modules, and structured
+working-memory updates. Assigning role names to generic Transformer blocks or invoking external
+prompts repeatedly does not qualify as this level.
+The substantive contribution of a native module is assessed by whether removing or replacing it
+selectively changes the target operational ability and whether subsequent computation actually uses
+its output. Results obtained through external control alone are not reported as results of a native
+architecture. Even if native structure is attempted, whether it outperforms an external-control
+baseline remains an open empirical question.
+6.8. Reduced fine-tuning and redistribution of learning responsibilities
+In CTA, the designer can define some procedural admissibility, explicit rule application, and
+protected state updates. Learning may still determine how input is parsed into semantic structure,
+which hypothesis is promising, which abstraction suits the goal, and how modules are composed.
+An operation’s specification is distinct from the knowledge needed to apply it.
+The question “Does fine-tuning become meaningless?” thus becomes testable in a more specific
+form. When predefined operations are reused, can a new task reach target performance by adapting
+representation interfaces, operator selection, or particular modules, without retuning the full
+model? Alternatively, can the same contracts be maintained without learning repeated examples
+of procedural compliance? Both are possible research hypotheses; neither requires eliminating all
+learning of knowledge, representations, or operations in every domain.
+If additional operators or routers are optimized while base weights remain frozen, their training
+costs are still included. If all modules are frozen and only graph configuration changes, human
+configuration effort and search costs are recorded separately. Comparisons between a native
+architecture trained from scratch and a pretrained-model-based approach also separate the
+asymmetry in pretraining costs.
+7. Conditional Propositions of the Design
+The propositions in this section are elementary mathematical properties derived from definitions
+and assumptions. They do not report the observation of a new cognitive phenomenon or empirical
+evidence of TTS performance. Detailed derivations are provided in Appendix A.
+7.1. Proposition 1: Interpreting coordinate geometry requires a metric
+Under an invertible linear coordinate transformation˜z′=T ˜z, transforming the original metric
+W jointly asW′=T−TWT−1 preserves the lengths and angles in Eqs. (6) and (8). In contrast,
+changing the units of the axes while retaining the Euclidean metric generally changes the results.
+Consequently, a value such as a “90-degree turn” has little reproducible meaning unless the
+coordinate encoding and metric are reported. This proposition does not select a cognitively valid
+W. That choice is a measurement-research question.
+21
+
+PAGE 22
+Thought Trajectory Space v1.0
+7.2. Proposition 2: Content-insensitive structural coordinates are not sufficient
+for correctness
+If A/D/M coding retains only structural levels of reasoning while maintaining the truth or falsity
+of specific factual content separately, true and false statements with the same coordinates can
+be constructed. For example, only one of two observational claims with identical structure and
+abstraction level may agree with the source data.
+Therefore,zi or its trajectory alone cannot generally be guaranteed to determine correctness across
+all tasks. TTS must preserve evidence, content, and goals, and trajectory-based predictions must
+be evaluated as additional signals. In particular, “all intermediate steps are warranted” and “the
+user’s goal is satisfied” are separate judgments: a valid procedure may solve a different goal.
+7.3. Proposition 3: A prior that increases the probability of valid transitions
+can reduce local search
+For a fixed context, letV+ be the set of valid candidate transitions, and letp0 and pE be the
+probability masses assigned to this set by the baseline and expert policies, respectively. Under the
+simplifying assumptions of independent candidate proposals and exact judgments, the mixture in
+Eq. (17) has the following success probability:
+pλ= (1−λ)p0 +λpE. (35)
+If pE >p 0 and λ>0, thenpλ>p 0. Afterm independent candidate proposals, the probability of
+obtaining at least one valid candidate is1−(1−pλ)m. Whenpλ> 0, the expected number of
+proposals until the first success is1/pλ.
+This proposition identifies conditions under which valid prior information can help. Actual
+multistep reasoning involves changing states, dependent candidates, and imperfect judgments, so
+the result is not directly extended to the complexity of entire reasoning processes or the rate of
+reduction in training data. Whether a locally valid transition advances the overall goal is also a
+separate question. Moreover, if the unit cost of candidate generation and checking or the cost of
+constructing the prior increases, fewer proposals may still entail a higher total cost.
+7.4. Proposition 4: Complete mediation excludes forbidden accepted transitions
+LetRC be the admissible relation for execution. Assume a valid initial state, mediation of every
+state acceptance, tool execution, and output by the same executor, and the model’s inability to
+bypass or modify contracts, mandatory obligations, or checking results. If the executor accepts
+only results belonging toRC and performs recovery and stopping within that relation, then
+Pr
+[
+(si,oi,si+1) /∈RC
+]
+= 0. (36)
+This is a property of the execution model even when candidate selection is stochastic. Inductively
+applying admissibility to finitely many steps establishes it for every finite execution history.
+Whether a real implementation mediates every path as assumed requires separate verification.
+In particular, ifRC is defined as “a learned checker returns pass,” the guarantee concerns that
+condition and cannot be extended to correctness of the answer.
+22
+
+PAGE 23
+Thought Trajectory Space v1.0
+7.5. Proposition 5: Formal soundness and goal correspondence are separate
+obligations
+Consider a set of formal premisesΓ, a formalized goalgF, and a candidate proofπ. Assume
+a sound checker that accepts only proofs representing valid derivations in the specified formal
+system. Then
+CheckF (Γ,π,gF ) = pass =⇒Γ⊢F gF. (37)
+If the formal system is also semantically sound,Γ|=F gF follows under that semantics. This
+result is separate from the probability that a language model proposes a correct proof. Incorrect
+proposals can be rejected, so restricting acceptance to valid results does not ensure that a proof
+will be found.
+Applying this result to the user’s actual goal additionally requires a faithful conversion of the input
+into premises, formalization of the goal, reliable external facts, and meaning preservation in the
+final output. Ensuring that each module’s postcondition satisfies the next module’s precondition
+does not by itself prove the original goal. The final result must be connected to that specific goal.
+This retains the distinction between locally valid steps and overall goal satisfaction from Section
+7.2 within the execution architecture.
+7.6. Proposition 6: The influence of the TTS selection term is bounded on the
+surrogate-utility scale
+For a fixed state with a finite, nonempty admissible set, leto0 maximize Ui and letoT maximize
+Eq. (32). If 0≤J≤1, then
+0≤Ui(o0)−Ui(oT )≤λTwi. (38)
+Rearranging Si(oT ) ≥Si(o0) bounds the utility difference above by λTwi[J(Pν,o0,QE)−
+J(Pν,oT,QE)]. The range of the two divergences yields the stated bound. Thus, if the utility gap
+between the best baseline operator and every other operator exceedsλTwi, the best choice is
+preserved. Whenwi = 0, selection falls back exactly to the baseline, including its tie-breaking
+rule.
+This proposition is an algebraic property ofpredicted surrogate utility. If ˆG, cost estimates,
+or the prior are inaccurate, a decrease in actual goal performance is not bounded by this number.
+It is not a theorem of real-world safety or performance noninferiority, nor does it establish the
+validity of TTS labels. As with the general principles in Propositions 1-5, it is presented as a
+testable design property of the selection rule.
+8. Illustrative Examples and Counterexamples
+Sections 8.1-8.3 contain constructed examples for explaining the definitions and selections, not
+observationsofhumansorLLMs. ThedecimalvaluesinSection8.3specifyconstructeddistributions
+and utilities rather than measured coordinates. Section 8.4 separately reports the limited software
+checks actually executed on those numerical and branching rules.
+8.1. Describing a path with observation coordinates
+Consider a problem with the rulesp⇒q and q⇒r, in which the reliability of observationp
+requires separate checking. A possible path is shown in Table 8.
+23
+
+PAGE 24
+Thought Trajectory Space v1.0
+Table 8. Steps and TTS interpretations in a constructed example
+Step Recorded content Coordinate and relational interpretation
+1 An observational record presents p. Presentation of an observation; active-node depth 0.
+Source reliability is separate.
+2 Using p and the first rule givesq. Claimed dependency depth 1. Validity of the rule
+application is checked separately.
+3 Using q and the second rule givesr. Claimed dependency depth 2; object-level reasoning.
+4 Given uncertainty about the source
+of p, mayr be asserted conclusively?
+M1 review. The preceding formal depth is not
+automatically increased.
+5 Does the task require confirmation of
+an actual event rather than formal
+derivation?
+M2 review of the goal and judgment criteria.
+6 Check the required evidence or state
+the conclusion conditionally.
+A goal-appropriate action transition. Actual checking is
+distinguished from a plan to check.
+The point is not that all coordinates must keep increasing. M may decrease when the process
+returns to object-level computation, and this can be an appropriate return. If the goal is a purely
+formal logic problem with given premises, Steps 4-6 may be unnecessary. The same trajectory is
+therefore not imposed as an ideal path for every task.
+Two counterexamples are included. First, changing “r” to “notr” can leave the levels of A/D/M
+unchanged; proposition reversal must be identified in the content representation. Second, a valid
+analogy arising during a causal investigation may involve a large movement in semantic space
+without constituting a break in the argument. The purpose and grounds of the transition must be
+evaluated together.
+8.2. Expressing the same problem through execution contracts
+Suppose the goal in Section 8.1 is explicitly to deriver formally from the given premises. Working
+memory preservesp, p⇒q, q⇒r, and their provenance. A learned module proposes which
+premises and rule to use; the derivation operator checks those references and constructs proof
+objects forq and thenr. The completion checker verifies that the goal is indeedr and that its
+proof is linked to the current premises.
+Here, TTS depth D describes the derivation structure, whereas CTA applies rules and accepts
+results. A checker can reject an incorrect rule reference. Conversely, no unnecessary real-world
+confirmation is added to a task solved from already given premises. Even with the same record,
+formal derivation alone cannot complete a task whose goal is to “determine whetherp actually
+occurred.”
+Counterexamples can also be constructed by weakening the contract. A derivation layer that
+generates an incorrect conclusion and the phrase “verification complete,” which later stages accept
+without further checking, has a procedural label but no rule soundness. Provingr correctly and
+then rendering “notr,” or presenting a proof ofr when the goal isu, likewise fails despite locally
+valid internal derivations. These examples show why the checker, goal binding, and final output
+boundary are each necessary; they do not report measured failure frequencies in an actual model.
+8.3. A constructed case in which TTS changes the choice
+Suppose “continue derivation” and “review the grounds” are both contractually admissible in a state
+where source reliability needs attention. Construct the current coordinates as(A1,D 1,M 0). Use
+a 93-category distribution with positive probability on only three events:tD = (pass,A 1,D 2,M 0)
+for a deeper object-level derivation,tR = (pass,A 1,D 1,M 1) for an explicit judgment reviewing
+24
+
+PAGE 25
+Thought Trajectory Space v1.0
+the grounds, and tF = reject for contract rejection. The remaining 90 categories have zero
+mass. The three probabilities below follow this order; omitting zero-mass categories does not
+change JS. The functional descriptions in this construction are not generalized into a one-to-one
+coordinate-to-operator mapping across tasks.
+Set the expert distribution to(0.10, 0.80, 0.10), λT = 0.20, andwi = 1. The baseline utilities are
+constructed values that already combine goal prediction, cost, and failure terms.
+Table 9. Constructed inputs and calculated outputs of the reference selector
+Operator
+Baseline utility
+U Predicted distribution JS divergence Final score S
+Continue derivation 0.600000 (0.80, 0.10, 0.10) 0.447067 0.510587
+Review the grounds 0.560000 (0.10, 0.80, 0.10) 0.000000 0.560000
+The selector without the TTS term chooses derivation, whereas the reference selector chooses
+review. The priority among admissible operators changes, not the contract. An “unauthorized
+final commit” assigned an arbitrarily high utility is outside the admissible set and is selected
+by neither method. When uncertain observations causewi = 0, the same inputs lead back to
+derivation.
+In the opposite context, using the expert distribution(0.80, 0.10, 0.10) gives a derivation score of
+0.600000 and a review score of 0.470587, preserving derivation. This calculation illustrates that
+M is not forced upward in every situation. However, incorrectly applying the first distribution
+to a task requiring only formal derivation can select unnecessary review. A hard gate does not
+automatically correct this inefficiency when the contract allows the action. The first change of
+selection is therefore not evidence of an improvement in success rate.
+8.4. Executed reference-code checks and their scope
+The supplementary reference_router.py implements only distribution-input validation, JS
+divergence, admissible-set filtering, a shared tie-breaking rule, and TTS activation/baseline
+fallback. All 40 unit tests intest_reference_router.py were executed and passed.One
+test checks the surrogate-utility bound of Proposition 6 and the divergence range across 2,000
+distribution-and-utility cases generated with fixed random seed 20260910. This is a numerical
+regression check rather than exhaustive verification; Proposition 6 is justified by the derivation in
+Section 7.6.
+Checks include identical and disjoint distributions, symmetry, zero probabilities, nega-
+tive/unnormalized/NaN inputs, category-length errors, empty admissible sets, exclusion
+of unauthorized items, exact fallback at zero weight, non-use of distributions when untrusted,
+tie-breaking and input-order invariance, changed selections, and preserved selections at large
+utility gaps. They also cover Boolean and numeric input types, nonfinite values, intermediate
+calculations with extremely small probabilities, score overflow, and numerical equivalence between
+the full 93-category representation and a representation omitting zero-mass categories. Actual
+test output and constructed input/output JSON are supplied as supplementary material.
+The code receives trusted admissibility flags rather than computing permissions from the state. It
+does not implement content annotation, expert learning, the effect model, an LLM, a proof checker,
+write protection, or final output binding. Passing these 40 tests therefore does not validate H1-H8,
+complete mediation by CTA, or the performance of a new model.
+25
+
+PAGE 26
+Thought Trajectory Space v1.0
+9. Falsifiable Research Hypotheses
+TTS validation is not reduced to a single overall success criterion. Reproducible coordinate
+annotation, decoding coordinates from activations, and improving performance by controlling
+coordinates support different hypotheses.
+H1. Measurability of coordinates.A and M ratings and D dependency-structure annotations
+are reproducible across independent evaluators and cannot be explained solely by changes in topic,
+length, or particular expressions. If distinctions between axes are not reproducible or provide no
+additional information over a two-axis model, the three-axis specification is revised.
+H2. Additional information in activations. A fixed-capacity probe predicts A/D/M
+annotations in unseen task families and provides information beyond controls using only token
+count, step position, keywords, and content representations. If its effect is indistinguishable from
+random-label or surface-form controls, the activation interpretation is not supported.
+H3. Predictive value of trajectories.At a fixed observation point before the final answer is
+seen, TTS transition features improve prediction of error or goal deviation beyond current content,
+step count, cost, and existing activation features. A state-coordinate-only model is compared with
+one adding transition features to identify the distinct contribution of differences and directional
+analysis.
+H4. Effectiveness of context-conditioned intervention.Under the same execution budget,
+TTS control improves task performance or reduces total execution cost while maintaining accuracy
+relative to no intervention, a simple verification prompt, random directions, static steering, and
+context-unconditioned steering. If only coordinate scores or verification-related expressions increase
+without improved actual outcomes, the control hypothesis is not supported.
+H5. Efficiency contribution of expert prior information.With the same starting model and
+supervision budget, expert transition priors reduce the number of training examples or amount of
+training computation needed to reach target performance relative to a method without directional
+information. Economic efficiency including construction, annotation, and search costs is evaluated
+separately. A reduction in output tokens alone is interpreted as a partial result on inference cost,
+not as support for H5.
+H6. Implementation conformance of execution contracts.Within a defined threat and
+fault model, a CTA implementation blocks contract bypasses, reuse of stale evidence, replacement
+of the checked target, treatment of indeterminate judgments as passes, and direct output bypasses.
+A single reproducible acceptance bypass within the declared supported model refutes the imple-
+mentation’s guarantee. An absence of observed bypasses in testing is not reported as a proof of
+Proposition 4 across all implementation states.
+H7a. Functional contribution of native operators.Under the same tasks, supervision,
+and execution budgets, native CTA operators produce target-operation effects distinct from mere
+role labels, generic blocks, and external control, and downstream computation actually uses their
+results. Removal, replacement, and interventions on intermediate results test this hypothesis.
+H7b. Conditional incremental value of combining TTS with CTA.With the same
+CTA, baseline-utility model, and continuation policy, adding the TTS selection term of Section
+6.4 provides a prespecified minimum benefit in goal performance or cost relative to removing it.
+Comparisons also include alternative representations and direct operator-state labels matched in
+supervision, capacity, and cost. B3 minus B2 is the primary comparison; B3 minus B1 separately
+asks whether the combination exceeds TTS alone. Both comparisons must succeed to claim
+superiority over both individual components. Positive superadditive interaction is treated only as
+a separate hypothesis. Benefits attributable solely to internal constraints are not credited to TTS.
+H8. Adaptation efficiency through operator reuse. Given the same initial assets and
+data access, a CTA that reuses an operator library reduces the additional training examples or
+computation needed to reach target performance on new tasks relative to baselines that readjust
+26
+
+PAGE 27
+Thought Trajectory Space v1.0
+the entire model or its modules. Adaptation using only frozen modules is distinguished from
+additional training of routers or operators. This is an efficiency hypothesis for prespecified
+transfer-task families, not a universal claim that fine-tuning is unnecessary in all domains.
+The scope of failure is also separated. Even without support for H4, the observation language
+in H1 may remain useful. H1 holding only in some tasks does not imply that cognition in its
+entirety cannot be represented by coordinates. Conversely, success in one task is not generalized
+to a universal structure of humans or all models. Procedural conformance under H6 may hold
+without the semantic effects of H7 or the efficiency gains of H8. If the combination effect in H7 is
+absent, the practical basis for combining TTS and CTA weakens accordingly.
+10. Staged Evaluation Design
+This section specifies planned evaluations of LLMs, annotation, and architecture. No data
+collection, LLM execution or training experiment, confirmatory statistical test, or activation
+intervention has been conducted. These plans are distinct from the reference-selector unit tests in
+Section 8.4.
+10.1. Stage I: Annotatability and construct validity
+Three domains are used: logic tasks with explicit rules, code and debugging tasks with checkable
+test results, and evidence-assessment tasks restricted to supplied materials. An illustrative initial
+pilot comprises 100 original problems per domain, two open-weight models, and three generations
+per problem, for a total of 1,800 traces. This is an example of study scale, not a sample size
+with guaranteed statistical power. Confirmatory sample size is determined using pilot variance,
+within-cluster correlation, and a predefined smallest effect of interest.
+Where possible, annotators assess step boundaries, A/M categories, D dependency edges, transition
+types, and grounds without seeing final-answer correctness or model identity. At least part of
+the material receives independent duplicate annotation, with pre-consensus agreement reported
+separately. Reporting only final consensus labels must not conceal disagreement.
+Label distributions, confusion matrices, ordinal agreement, and dependency-edge agreement are
+reported for each axis. Contrastive material evaluates how well A is distinguished from character
+count, M from the word “verification,” and D from sentence index. Q-exact and Base-fixed cases
+are reported in separate strata, along with A2/A3 and A3/A4 confusion and missing-label rates
+in compound units. For D, parent-set/edge F1 and depth agreement are evaluated separately
+on aligned nodes. Robustness to changes in transition boundaries is also checked. When human
+ratings do not reproducibly distinguish the categories, activation interpretation is not used to
+claim success at the next stage.
+10.2. Stage II: Representation correspondence and prediction
+Training, validation, and test splits are organized by original problem and generation-template
+lineage, not individual sentences. Three generations of the same problem, translations, and
+paraphrases must not enter different splits. Coordinate transformations, probes, metrics, and
+intervention layers are selected entirely within training and validation splits. Final testing is
+performed once on separate task families or a held-out external domain.
+Categorical coordinates are evaluated with class-imbalance-aware performance and calibration
+measures; D is evaluated with both rank correlation and prediction error. A strong text baseline
+that reads content is included to test whether activations provide an advantage. Probe capacity and
+training budgets are matched to controls, and label-shuffled control tasks assess memorization [10].
+27
+
+PAGE 28
+Thought Trajectory Space v1.0
+Final-error prediction uses only prefix traces available at an operationally known fixed token budget
+or a predetermined number of steps. Observation points such as “half of the final length,” which
+require knowledge of the future total length, are designated retrospective analyses. The treatment
+and inclusion rate of early-terminated traces are reported to avoid selecting only surviving long
+paths. AUROC, AUPRC, calibration error, and usefulness at actionable intervention points are
+compared before and after adding TTS.
+10.3. Stage III: Causal evaluation of interventions
+Intervention conditions are randomly assigned under the same problem, initial context, sampling
+settings, and execution budget. Baseline controls include no intervention, an equally long general
+verification instruction, a random activation direction, a static direction matched in magnitude to
+TTS, and a content-only controller. Where implementation and resources permit, comparisons
+also include existing trajectory control and adaptive vector-combination methods [14,16]. Direct
+performance comparisons with methods that have not actually been implemented are not claimed.
+Ablations remove one of A, D, or M; use only current coordinates without transition directions; or
+shuffle expert labels across contexts. They distinguish effects of the axis definitions from those of
+additional supervision or computation introduced by an extra controller.
+Post-intervention evaluation uses correctness, test passage, actual use of evidence, and goal
+satisfaction rather than an increase in the original probe’s scores. The rate at which intervention
+damages an already correct path is also reported, together with unnecessary repeated verification,
+increased tool calls, premature termination, and reduced diversity of valid paths.
+10.4. Stage IV: Separating training requirements from inference cost
+Training-data efficiency is compared on nested subsets sharing the same initial checkpoint, data
+pool, and annotation source. The number of examples needed by a method to reach target
+accuracy a can be defined as
+N∗(a) = inf{N : Acc(N)≥a}. (39)
+If the target is not reached within the observed range, this is reported without arbitrary extrap-
+olation. Equal example counts need not imply equal amounts of repeated training, so learning
+curves are also reported for training tokens, optimization steps, computation, or GPU time.
+Inference efficiency is compared at equal accuracy or within a predefined noninferiority margin
+using input/output tokens, latent steps, tool calls, retries, and latency.
+Table 10. Efficiency measures that must be distinguished
+Component Main measurements Why another component cannot substitute for it
+Training data Unique problems; amount of
+expert annotation
+The same problems may have been trained on for
+longer.
+Training
+computation
+Training tokens, steps, FLOPs,
+or GPU time
+Few parameters can still require extensive search
+or rollouts.
+Inference
+computation
+Generation/latent steps, retries,
+actual latency
+Shorter output can coexist with greater internal
+computation.
+Control overhead Probe, router, and
+tool-execution costs
+Auxiliary systems can offset savings in the main
+model.
+Construction cost Data creation, annotation,
+direction search, tuning
+Runtime savings may not recover the initial cost.
+Construction and execution costs are summed only when they can be expressed in a common unit.
+For example, with a fixed monetary or computational unit,
+28
+
+PAGE 29
+Thought Trajectory Space v1.0
+Ctotal(K) =Cbuild +Ctrain +KC run, (40)
+Here,K is the number of operational runs. Times measured on different hardware are not directly
+added, nor are human annotation hours and model tokens combined without conversion. Reporting
+costs by stage and the break-even number of runs distinguishes gains at a particular deployment
+scale from general efficiency claims.
+10.5. Statistical analysis and preregistration
+For each primary hypothesis, the primary metric, smallest effect of interest, comparison groups,
+stopping criteria, exclusions, and multiple-comparison procedure are specified before confirmatory
+testing. Thresholds are not changed after observing test results. Multiple traces from the
+same original problem are not counted as independent samples; uncertainty is estimated using a
+problem-level cluster bootstrap or an appropriate hierarchical model.
+Effect sizes and confidence intervals are reported, not only p-values. Claims of “lower cost at the
+same accuracy” require both an accuracy-noninferiority criterion and uncertainty estimates for
+cost reduction. Low inter-annotator agreement or insufficient samples are reported as limitations
+rather than converted into definitive success or failure.
+Appendix C lists the required preregistration items and hypothesis-specific decision conditions.
+This evaluation plan has not been externally preregistered.
+10.6. Stage V: Decomposing architecture, observation, and learning contribu-
+tions
+Initial CTA tests are restricted to small formal-logic tasks with precisely specified premises
+and goals, finite-state categorization, and problems with known numerical constraints. These
+domains allow independent judgments of the relations native operators are required to satisfy.
+Natural-language formalization and open-ended tasks are evaluated separately at a later stage.
+Table 11. Basic experimental groups for separating combination effects
+Group
+TTS categorical
+selection term
+Operator/transition
+contracts Effect being isolated
+B0 Absent Absent General-model or generic iterative-computation
+baseline
+B1 Present Absent TTS categorical selection signal alone
+B2 Absent Present CTA structure alone
+B3 Present Present Combination of observation and structure
+In the primary 2-by-2 comparison of Table 11, “TTS present” meansthe same categorical
+selection term from Section 6.4 in both B1 and B3. Activation steering is not added only
+to B1. All four groups use the same operator-proposal library, baseline utility, continuation policy,
+and available tools. B0 and B1 retain syntax parsing and sandbox protections, but the semantic
+acceptance contracts under study are checked only for retrospective observation and do not reject
+transitions. Dangerous external effects are not permitted in this experiment. TTS outcomes
+are labeled by the same observation rules at operator return in every group; in groups without
+CTA, “pass” is explicitly recorded as a retrospective contract judgment, not an executor decision.
+Contract verdict and actual state adoption are separate fields. Even if a contract-disabled group
+adopts a candidate that fails retrospective checking, the transition event is recorded as reject
+and the adopted state is preserved in a separate snapshot. Effect and utility estimators share
+architecture and frozen parameters across groups and receive the CTA-enforcement flag as a state
+29
+
+PAGE 30
+Thought Trajectory Space v1.0
+input. Their training data include both enforcement conditions, avoiding extrapolation from
+contract-enabled data alone to the disabled condition. Additional retrospective-audit costs are
+accounted for identically across groups. Changes in realized transitions caused by enforcement are
+part of the CTA factor.
+Module count, available tools, internal iterative computation, and supervision data are matched
+where possible. Structurally unavoidable cost differences are reported as actual values. External-
+execution-control and native-operator versions are distinguished within both B2 and B3. Compar-
+isons sharing a base model and encoder are preferred; comparisons with an entirely different model
+trained from scratch are reported separately because they do not remove pretraining differences.
+For H6, fault injection includes empty checking results, changes to goal/candidate/evidence
+versions, direct writes to accepted state, skipped verification after budget exhaustion, abnormal
+tool responses, and altered final paraphrases. Review targets the execution kernel and all output
+paths, not merely model self-reports. Even when a finite reduced-state model is exhaustively
+checked, its scope and correspondence to the actual implementation are stated separately.
+H7’s native-operator evaluation includes replacement by a generic block with the same role name,
+interventions on intermediate results and their downstream effects, and replacement with a module
+from another task. Benefits from more controller calls or additional checkers are not attributed
+to native semantic operations. Independent rule-application accuracy and goal satisfaction take
+priority over coordinate-score increases.
+Because terminating every case as indeterminate can lower the violation rate alone, accuracy is
+reported together with answer coverage, cost per solved problem, false-rejection rate for appropriate
+valid results, error rate among accepted results, and valid-completion rate across all assigned
+problems. Semantic errors, procedural violations, and incompletion are not collapsed into a single
+failure measure. Reductions in answer coverage caused by stricter criteria are disclosed.
+H8 compares cost curves for full adaptation, partial-module adaptation, router-only learning,
+complete module freezing, and graph reconfiguration on new tasks. Expert-library construction,
+specification work, module pretraining, and composition search are not excluded from costs.
+Training and execution costs retain the definitions in Section 10.4. Analyses also distinguish
+increased reusability of directional priors through CTA from gains attributable to ordinary
+external-tool use.
+10.7. Comparison conditions and decision criteria for identifying contributions
+The primary implementation level is fixed to external reference selection and acceptance. Native
+CTA and activation interventions are separate subsequent experimental blocks and are not mixed
+into the primary factorial effect. All four groups use the same base checkpoint, tokenizer, initial
+context, operator versions, and total computational budget per problem. Comparisons that clone
+pre-execution states are paired within the same original problem. Independent evaluators do not
+see group names or TTS labels.
+The primary domain is finite propositional logic with explicit premises and goals; transfer to
+code and evidence-assessment domains is secondary. The logic generator records the number
+of root propositions and rules, maximum dependency depth, branching, irrelevant premises,
+and inconsistency rates in the manifest. Goal reachability in this evaluation is defined under
+the forward-derivation rules declared by the generator and determined by a finite rule-closure
+checker independent of the LLM. This is not used as a complete entailment procedure for
+arbitrary propositional formulas. Rules for inconsistent premises and the correct answer format for
+unreachable goals are fixed before data generation. Correct answers and generation lineage are used
+only for split management, not supplied as inputs to prefix-state predictors. The actual generator
+and model assets have not yet been implemented or selected; these data are not represented as
+existing.
+30
+
+PAGE 31
+Thought Trajectory Space v1.0
+Table 12. Additional controls for identifying the specific contribution of TTS
+Control Conditions held equal Explanation being distinguished
+Current coordinates only /
+transition model
+Annotation, encoder, data,
+capacity
+Is change information needed beyond
+current state?
+Content plus existing
+activations
+Content access; training and
+execution budgets
+Do existing representations replace TTS
+information?
+Non-semantic
+low-dimensional
+representation
+Dimension, training data,
+selector capacity and cost
+Is an additional compressed state
+sufficient?
+Direct operator-state labels Missing evidence, unmet
+obligations, remaining budget
+Are task-related state labels sufficient
+without A/D/M?
+Prior shuffled across
+contexts
+Label counts, distributions,
+supervision
+Does appropriate context matching
+matter?
+General verification
+instruction
+Execution budget and accessible
+data
+Does additional verification alone explain
+the effect?
+The non-semantic low-dimensional baseline applies PCA to fixed features from the training split and
+uses the same dimensionality, data, and parameter limits for its prediction head and router as the
+semantic-coordinate method. The PCA input encoder and its pretraining assets/costs are shared.
+Random labels are a negative control for learnability, not a substitute for a strong alternative
+representation. Equal-supervision-budget comparisons and comparisons of each method’s best
+efficiency are reported separately.
+Primary outcome and estimands.Y = 1 denotes valid completion of an originally assigned
+problem, independently passing the binding of the current goal, premises, and final output.
+Nonresponse and indeterminate outcomes remain in the denominator withY = 0. Let ¯Ytc be the
+valid-completion rate in each of the four groups. The conditional TTS effect under CTA and the
+interaction are separated as follows:
+∆ T|C = ¯Y11−¯Y01, ∆ int = ( ¯Y11−¯Y01)−( ¯Y10−¯Y00). (41)
+∆ T|C > 0 does not imply∆ int> 0. The primary outcome for H7b is∆ T|C; native operators belong
+to the separate H7a. Cost, false acceptance, false rejection, answer coverage, and the TTS fallback
+rate are also reported.
+Quantitative decision criteria.The values below are proposed minimum practical-utility and
+reproducibility criteria for this evaluation plan, not observed effects or universal academic standards.
+Changes following an exploratory pilot require a documented revision and new confirmatory data.
+Table 13. Proposed decision criteria for confirmatory experiments
+Target Primary prespecified criterion Interpretation boundary
+H1 A/M Lower 95% bound for pre-consensus ordinal
+reliability at least 0.70
+An operational codebook criterion,
+not evidence of a natural entity
+H1 D Lower 95% bound for edge F1 at least 0.80;
+also report exact depth agreement
+Report node alignment, missingness,
+and cycles separately
+H7b valid
+completion
+Smallest effect of interest for B3 minus B2:
+2 percentage points
+Assess whether the effect interval
+exceeds that minimum
+H7b versus both
+components
+Separately compare B3 minus B1 with
+multiple-comparison control
+Success in one comparison does not
+establish both
+Cost-efficiency
+variant
+Accuracy noninferiority margin: minus 1
+percentage point; minimum cost reduction:
+10%
+Choose the primary success-rate or
+cost pathway before testing
+H6 contracts One acceptance bypass within the declared
+scope refutes the implementation guarantee
+No bypass in finite tests is not a
+complete implementation proof
+31
+
+PAGE 32
+Thought Trajectory Space v1.0
+Ordinal reliability is fixed to Krippendorff-type ordinal alpha, with label frequencies, missing-data
+handling, and implementation version disclosed. Edge F1 is compared after aligning the same
+propositions; disagreements over the nodes created by annotators are also reported separately.
+Choosing these statistics does not establish the validity of the coding criteria.
+Power and splitting.Original problems and generation-template lineages are clustered into
+60/20/20 training/calibration/test splits, with external-domain testing held out separately. Re-
+peated traces across annotators and models are not counted as independent samples. Pilot
+variance in problem-level paired differencesdj is estimated, and power calculations distinguish the
+prespecified alternative effect from the decision boundary. For example, to design a test for an
+improvement exceeding 2 percentage points, the alternative effect is not itself set to 2 percentage
+points. A provisional alternative of 4 percentage points is used, with power sensitivity reported for
+3, 4, and 5 percentage points and a range of within-cluster correlations. These are not observed
+effect sizes.
+Confirmatory sample size is determined by pilot-based cluster simulations targeting power of 0.80
+after multiple-comparison adjustment. Execution readiness is not declared before sample size,
+model revisions, generator digest, and support thresholds have been fixed. These simulations
+and sample-size determination have not been performed for the present manuscript. The default
+analysis is a paired problem-level cluster bootstrap with 95% intervals; the primary B3-minus-B2
+and B3-minus-B1 comparisons prespecify Holm control of familywise error at 0.05. Analysis code
+must fix interval and decision procedures compatible with tests against the minimum-effect and
+noninferiority boundaries.
+Failure decisions.If the upper effect bound is below the minimum benefit, the specified practical-
+benefit hypothesis is not supported. A wide interval containing zero does not establish equivalence.
+If alternative representations replace the gains of semantic axes, the A/D/M-specific contribution
+is not supported. Analyses that change the codebook, split, or evaluation criteria in response to
+test results are separated as exploratory results of a new version.
+11. Discussion
+11.1. The meaning of human-like reasoning directions
+In this framework, “human-like reasoning directions” refers to transition structures in observable
+problem-solving strategies. Examples include structuring conditions, seeking evidence that
+distinguishes hypotheses, reviewing judgment criteria, and returning to concrete checks. It
+does not assert equivalence between LLM computation and human experience, consciousness, or
+internal neural computation.
+Even if useful coordinates are found in LLMs, whether they have the same meaning and measure-
+ment units in human data requires separate validation. Future analyses of human records should
+collect actions, evidence use, and revision histories for the same tasks and evaluate correspondence
+between self-report and actual performance. No human-participant study was conducted for this
+paper.
+11.2. Task appropriateness rather than a universal ideal trajectory
+Treating high A, D, and M as a universal objective can induce repeated generalization and
+rechecking even for simple tasks. Conversely, repeated concrete operations may be the essential
+process in a computationally difficult task. A good direction should be defined by whether the
+next step is valid relative to the current goal, evidence, and cost, not by absolute coordinate
+values.
+32
+
+PAGE 33
+Thought Trajectory Space v1.0
+Local transition validity and overall goal satisfaction are also separate. A controller must therefore
+maintain the goal to be solved and its completion conditions in addition to a signal that “the next
+step looks plausible.” This is particularly important when connecting TTS to agent execution.
+Trajectory information can be an auxiliary observation for planning, execution, and verification,
+but it does not replace actual artifacts or evidence of completion.
+11.3. Scope and remaining technical problems
+Key technical issues include reproducible segmentation, numerical calibration of ordinal ratings,
+distinguishing D from M, aligning axes across models and languages, and relating observation
+directions to causal intervention directions. If these are unstable, categorical transition models or
+task-specific coordinates may be more appropriate than retaining a complete three-dimensional
+geometry.
+The paper distinguishes control information observable only in external materials or output traces
+from information obtained through internal activations. For models without internal access,
+text/action-based external control can be tested, but its effects cannot be reported as activation-
+steering effects. Likewise, the design possibility of integration with latent reasoning models is
+distinct from a demonstrated reduction in training cost.
+11.4. Changing the model definition and the scope of that change
+The strongest interpretation of CTA includes operator relations and composition rules in the
+model definition, rather than merely encouraging the behavior of trained layers after the fact.
+This perspective combines learned input-reading functions with functions that execute actual rules
+and constraints in a single computational structure. The central issue is a shift in the boundary
+between learning and design, not the elimination of either.
+Whether this structure is more efficient depends on implementation cost and task properties. In
+domains that are difficult to specify, additional structure can lock in an inappropriate abstraction.
+In domains that repeatedly use explicit rules, executing those rules rather than relearning them
+may be advantageous. Goal performance and transfer cost under equal resources determine which
+case applies, not the names of layers or the human-likeness of their descriptions.
+If an external executor already provides sufficient contract conformance and goal performance,
+the need for a new native architecture remains a separate issue. Conversely, benefits from native
+modularity do not establish an additional contribution of observation coordinates unless they
+exceed those of a modular structure without TTS. Maintaining this comparison prevents an
+observation theory from being used to justify a new model without the necessary evidence.
+11.5. Responsible interpretation and data handling
+Using unvalidated TTS scores to assess human intelligence, personality, or mental state is outside
+the scope of this research. Human records require separate procedures addressing collection
+purpose, consent, anonymization, and exclusion of confidential workplace information. The present
+examples are constructed for explanation; real company logs or sensitive personal reasoning records
+are not released as data.
+Making control outcomes appear more explainable is different from improving actual evidence
+use. Public results should therefore include failures and adverse intervention effects and, where
+possible, records that reproduce control choices and the evidence used.
+33
+
+PAGE 34
+Thought Trajectory Space v1.0
+12. Conclusion
+This paper proposes a TTS-CTA specification connecting structural observations of reasoning
+to execution contracts. TTS defines an A/D/M codebook and procedures for propositions,
+dependencies, and content control while preserving content, evidence, and goals separately. CTA
+does not substitute these observations for complete computational state; it distinguishes operator
+selection, execution, result acceptance, and final output conditions.
+The reference routing rule combines goal-related surrogate utility with the fit of operator-
+conditioned categorical transition distributions to an expert distribution. When applicability
+cannot be established, it falls back to the same baseline utility and tie-breaking rule; the selection
+term cannot change permissions or contracts. Under explicit conditions, the range of surrogate
+utility that this term can alter is derived. This is a mathematical property of the selector, not
+noninferiority of actual performance.
+Directly defining operator relations in restricted formal domains permits some procedural con-
+formance and rule execution to be specified structurally. Representation extraction, operator
+selection, domain knowledge, and adaptation remain possible learning targets. Whether this
+allocation benefits goal performance or training and execution costs must be evaluated separately
+through native-operator functionality, the incremental value of the TTS selection term, and
+efficiency from operator reuse.
+The results provided are measurement and execution specifications, conditional propositions,
+constructed examples, and checks of a limited reference selector. A/D/M construct validity,
+activation correspondence, intervention effects, and whole-system efficiency remain subjects for
+empirical evaluation. The proposed comparisons separate the effects of TTS and CTA and test
+whether alternative representations with the same information, supervision, and computational
+budgets can replace those effects.
+Research Transparency
+Data and execution status.No human data collection, annotation-reliability evaluation, LLM
+training or inference experiment, activation steering, or LLM-integrated CTA implementation
+was conducted. Sections 8.1-8.3 contain constructed examples. The Python reference selector,
+its 40 unit tests, and the 2,000 fixed-seed numerical cases within one test in Section 8.4 were
+actually executed. Their scope is selection scoring, input validation, admissibility-flag filtering,
+and fallback, not implementation verification of actual permission computation, checkers, write
+protection, or final output contracts. There are no empirical results for H1-H8.
+Status of the mathematics.The paper presents propositions derived under explicit assumptions
+concerning scales, metrics, complete mediation, and sound checkers, together with a conditional
+surrogate-utility bound. General principles in Propositions 1-5 are not used as evidence for the
+novelty of A/D/M, and Proposition 6 is not interpreted as actual performance noninferiority. The
+residual-model decomposition is not claimed to be causally identified.
+Literature scope.Related work is a narrative comparison of accessible academic sources through
+September 10, 2026. It compares the methods and guarantee scopes of the cited versions and does
+not claim a systematic review or confirmation that the entire combination is the first of its kind.
+Author contributions and generative AI assistance.Jaeseong Song formulated the problem
+in terms of axes and transitions of reasoning, its application to LLMs and learning-efficiency
+hypotheses, and the conceptual direction of incorporating semantic operations into layer definitions
+to redistribute responsibilities between learning and design. The specific separation of A/D/M and
+the reformulation of expert transition priors developed through dialogue with AI. ChatGPT was
+used as an assisting tool for the detailed codebook, content controls, JS-based reference routing
+34
+
+PAGE 35
+Thought Trajectory Space v1.0
+rule, mathematical formalization, evaluation design, reference code and tests, and manuscript
+writing. Code checks and constructed examples are not reported as human-participant or LLM-
+performance experiments. ChatGPT also assisted in preparing the English translation of this
+manuscript.
+Data and code availability.The reference selector, unit tests, constructed numerical examples,
+category order, and evaluation-configuration template are supplied with the paper as supplementary
+material. Files in this distribution identify the code, manuscript, and typesetting materials by
+individual hashes. No LLM experimental data or trained checkpoints were generated, and no
+external preregistration was performed. Unresolved settings for future evaluations, including
+model revisions, sample size, and support thresholds, are distinguished in the supplementary
+template.
+References
+[1] Gärdenfors, P. (2000).Conceptual Spaces: The Geometry of Thought. MIT Press. ISBN 9780262071994.
+https://mitpress.mit.edu/9780262572194/conceptual-spaces/ (2000 hardcover and 2004
+paperback information).
+[2] Trope, Y., & Liberman, N. (2010). Construal-level theory of psychological distance.Psychological
+Review, 117(2), 440–463. DOI:https://doi.org/10.1037/a0018963. PMCID: PMC3152826.
+[3] Vyas, S., Golub, M. D., Sussillo, D., & Shenoy, K. V. (2020). Computation Through Neural Population
+Dynamics. Annual Review of Neuroscience, 43, 249–275. DOI:https://doi.org/10.1146/annure
+v-neuro-092619-094115.
+[4] Evans, J. St. B. T., & Stanovich, K. E. (2013). Dual-Process Theories of Higher Cognition: Advancing
+the Debate.Perspectives on Psychological Science, 8(3), 223–241. DOI:https://doi.org/10.1177/
+1745691612460685. PubMed: https://pubmed.ncbi.nlm.nih.gov/26172965/.
+[5] Fleming, S. M., & Lau, H. C. (2014). How to measure metacognition.Frontiers in Human Neuroscience,
+8, 443. DOI:https://doi.org/10.3389/fnhum.2014.00443.
+[6] Turner, A. M., Thiergart, L., Leech, G., Udell, D., Vazquez, J. J., Mini, U., & MacDiarmid, M.
+(2024). Steering Language Models With Activation Engineering.arXiv:2308.10248v5. First version
+2023. https://arxiv.org/abs/2308.10248v5.
+[7] Zou, A., Phan, L., Chen, S., et al. (2025). Representation Engineering: A Top-Down Approach to AI
+Transparency.arXiv:2310.01405v4. First version 2023.https://arxiv.org/abs/2310.01405v4.
+[8] Koh, P. W., Nguyen, T., Tang, Y. S., Mussmann, S., Pierson, E., Kim, B., & Liang, P. (2020). Concept
+Bottleneck Models.Proceedings of the 37th International Conference on Machine Learning, PMLR
+119, 5338–5348.https://proceedings.mlr.press/v119/koh20a.html.
+[9] Turpin, M., Michael, J., Perez, E., & Bowman, S. R. (2023). Language Models Don’t Always Say
+What They Think: Unfaithful Explanations in Chain-of-Thought Prompting. arXiv:2305.04388.
+https://arxiv.org/abs/2305.04388.
+[10] Hewitt, J., & Liang, P. (2019). Designing and Interpreting Probes with Control Tasks.Proceedings
+of EMNLP-IJCNLP 2019, 2733–2743. DOI:https://doi.org/10.18653/v1/D19-1275 . https:
+//aclanthology.org/D19-1275/.
+[11] Hao, S., Sukhbaatar, S., Su, D., Li, X., Hu, Z., Weston, J., & Tian, Y. (2025). Training Large
+Language Models to Reason in a Continuous Latent Space.arXiv:2412.06769v3. First version 2024.
+https://arxiv.org/abs/2412.06769v3.
+[12] Sinii, V., Gorbatovski, A., Cherepanov, A., Shaposhnikov, B., Balagansky, N., & Gavrilov, D. (2025).
+Steering LLM Reasoning Through Bias-Only Adaptation.Proceedings of EMNLP 2025, 9202–9211.
+DOI: https://doi.org/10.18653/v1/2025.emnlp-main.467 . https://aclanthology.org/2025.
+emnlp-main.467/.
+35
+
+PAGE 36
+Thought Trajectory Space v1.0
+[13] Zhang, X., Xing, L., Zhang, C., Liu, Y., Deng, Y., Li, Y., Hu, Y., & Niu, C. (2025). Can We
+Steer Reasoning Direction by Thinking Intervention?Findings of the Association for Computational
+Linguistics: EMNLP 2025, 3888–3913. DOI:https://doi.org/10.18653/v1/2025.findings-emn
+lp.209. https://aclanthology.org/2025.findings-emnlp.209/.
+[14] Sun, L., Dong, H., Qiao, B., Lin, Q., Zhang, D., & Rajmohan, S. (2026). LLM Reasoning as
+Trajectories: Step-Specific Representation Geometry and Correctness Signals.Proceedings of ACL 2026,
+Volume 1: Long Papers, 26872–26887. DOI:https://doi.org/10.18653/v1/2026.acl-long.1237.
+https://aclanthology.org/2026.acl-long.1237/.
+[15] Wu, J., Xiong, Y., Li, X., Yu, S., Hu, Z., Yu, T., Wang, R., Chen, X., Shang, J., & McAuley, J.
+(2026). CTRLS: Chain-of-Thought Reasoning via Latent State Transition.Proceedings of the 29th
+International Conference on Artificial Intelligence and Statistics, PMLR 300, 2728–2736.https:
+//proceedings.mlr.press/v300/wu26a.html.
+[16] Ye, W., Yuan, X., Bin, Y., Jin, H., Peng, L., Zeng, P., & Shen, H. T. (2026). RISER: Orchestrating
+Latent Reasoning Skills for Adaptive Activation Steering.Findings of the Association for Computational
+Linguistics: ACL 2026, 4627–4644. DOI:https://doi.org/10.18653/v1/2026.findings-acl.226.
+https://aclanthology.org/2026.findings-acl.226/.
+[17] Xu, X., Liu, S., Wang, S., et al. (2026). A*-Thought-V2: Efficient Latent Reasoning via Geometric
+Dynamics of LLM.arXiv:2609.07821v1. Preprint released September 7, 2026.https://arxiv.org/
+abs/2609.07821v1.
+[18] Lightman, H., Kosaraju, V., Burda, Y., Edwards, H., Baker, B., Lee, T., Leike, J., Schulman, J.,
+Sutskever, I., & Cobbe, K. (2023). Let’s Verify Step by Step.arXiv:2305.20050. https://arxiv.org/
+abs/2305.20050.
+[19] SoarGroup.(n.d.).TheSoarArchitecture. Soar Manual, Chapter2.Officialarchitecturedocumentation.
+Accessed: 2026-09-10. https://soar.eecs.umich.edu/soar_manual/02_TheSoarArchitecture/.
+[20] Reed, S., & de Freitas, N. (2016). Neural Programmer-Interpreters.arXiv:1511.06279v4. First version
+2015. https://arxiv.org/abs/1511.06279v4.
+[21] Andreas, J., Rohrbach, M., Darrell, T., & Klein, D. (2017). Neural Module Networks.
+arXiv:1511.02799v4. First version 2015.https://arxiv.org/abs/1511.02799v4.
+[22] Agrawal, A., Amos, B., Barratt, S., Boyd, S., Diamond, S., & Kolter, J. Z. (2019). Differentiable
+Convex Optimization Layers.arXiv:1910.12430. https://arxiv.org/abs/1910.12430.
+[23] Alshiekh, M., Bloem, R., Ehlers, R., Könighofer, B., Niekum, S., & Topcu, U. (2017). Safe Reinforce-
+ment Learning via Shielding.arXiv:1708.08611v2. https://arxiv.org/abs/1708.08611v2.
+[24] Fang, Y., Wang, W., Xue, M., Deng, B., Xu, F., Liu, D., & Feng, F. (2026). Controllable LLM
+Reasoning via Sparse Autoencoder-Based Steering.Proceedings of ACL 2026, Volume 1: Long Papers,
+21290–21305. DOI:https://doi.org/10.18653/v1/2026.acl-long.974. https://aclanthology
+.org/2026.acl-long.974/.
+[25] Cousot, P., & Cousot, R. (1977). Abstract interpretation: a unified lattice model for static analysis of
+programs by construction or approximation of fixpoints.Proceedings of the 4th ACM Symposium on
+Principles of Programming Languages, 238–252. Author-provided bibliography:https://www.di.ens
+.fr/~cousot/COUSOTpapers/POPL77.shtml.
+[26] Sumers, T. R., Yao, S., Narasimhan, K., & Griffiths, T. L. (2024).Cognitive Architectures for Language
+Agents. Transactions on Machine Learning Research. Version consulted: arXiv:2309.02427v3, First
+version 2023. https://arxiv.org/abs/2309.02427v3.
+[27] Li, Z., Hua, W., Wang, H., Zhu, H., & Zhang, Y. (2024).Formal-LLM: Integrating Formal Language
+and Natural Language for Controllable LLM-based Agents. arXiv:2402.00798v3. Comparison refers to
+Sections 4.1-4.3 of that version.https://arxiv.org/abs/2402.00798v3.
+[28] Yao, S., Yu, D., Zhao, J., Shafran, I., Griffiths, T. L., Cao, Y., & Narasimhan, K. (2023).Tree
+of Thoughts: Deliberate Problem Solving with Large Language Models. arXiv:2305.10601. https:
+//arxiv.org/abs/2305.10601.
+36
+
+PAGE 37
+Thought Trajectory Space v1.0
+[29] Besta, M., Blach, N., Kubicek, A., Gerstenberger, R., Podstawski, M., Gianinazzi, L., Gajda, J.,
+Lehmann, T., Niewiadomski, H., Nyczyk, P., & Hoefler, T. (2024).Graph of Thoughts: Solving
+Elaborate Problems with Large Language Models. Version consulted: arXiv:2308.09687v4, First version
+2023. https://arxiv.org/abs/2308.09687v4.
+[30] Wang, Z. Z., Mao, J., Fried, D., & Neubig, G. (2024).Agent Workflow Memory. arXiv:2409.07429.
+https://arxiv.org/abs/2409.07429.
+Appendix A. Derivations of the Conditional Propositions
+A.1. Coordinate transformations and metrics
+If T is invertible andv′=Tv, w′=Tw, andW′=T−TWT−1, then
+(v′)TW′w′=vTT TT−TWT−1Tw =vTWw. (A1)
+Thus, the inner product, the norm induced by that inner product, and the cosine angle are
+preserved. In contrast, retainingW′=I gives (v′)Tw′=vTT TTw, which generally differs from
+the original Euclidean inner product. Preserving both lengths and angles requiresT TT =I. A
+positive scalar multiple of an orthogonal transformation preserves angles but changes absolute
+lengths.
+This does not mean that all monotone transformations of ordinal ratings are geometrically
+equivalent. Encoding A0-A4 as 0, 1, 2, 3, 4 or as 0, 1, 2, 3, 20 preserves the same order
+but produces different distances. Mathematical consistency of a coordinate transformation and
+empirical validity of a scale are therefore separate questions.
+A.2. An example in which structural coordinates do not identify truth
+Suppose the coding functionϕuses only specificity, dependency depth, and review level. “The
+measurement in the source data is 3” and “The measurement in the source data is 4” can be
+coded as single observational claims of the same form. If the source has one value, the statements
+can sharez while differing in truth value.
+This differs from an argument based only on dimensionality that three real numbers cannot, in
+principle, encode all information. The point concerns A/D/M coding with the meanings specified
+in this paper, not the general possibility of mathematical encoding. Because that coding groups
+different content states into the same observation coordinates, content and evidence must be
+preserved.
+A.3. Mixture priors and independent candidate search
+The probability mass of a valid-transition set in Eq. (17) is linear, yielding Eq. (35). IfpE >p 0,
+then pλ−p0 =λ(pE−p0)> 0. The probability that allm independent attempts fail is(1−pλ)m;
+the probability of at least one success is its complement,1−(1−pλ)m.
+If the number of attemptsT until the first valid candidate follows a geometric distribution with
+success probabilitypλ> 0, then
+E[T] =
+∞∑
+k=0
+Pr(T >k) =
+∞∑
+k=0
+(1−pλ)k = 1
+pλ
+. (A2)
+Let c0 and cλbe the per-candidate costs of the baseline and prior-informed methods. Lower
+expected execution cost additionally requirescλ/pλ<c 0/p0. Including construction costs further
+37
+
+PAGE 38
+Thought Trajectory Space v1.0
+requires enough operational runs for cumulative gains to exceed those costs. This calculation
+is internal to a model of independent candidate proposals, not a proof of efficiency in actual
+multistep LLM learning.
+A.4. Induction over admissible transitions and the implementation boundary
+Under the initial conditions of Proposition 4, an execution prefix of length zero begins in an
+admissible state. Suppose a prefix of lengthi is admissible. The executor checks the next candidate
+and accepts only results within the admissible relation. Recovery and termination after rejection
+or an indeterminate verdict are also defined within that relation, so the prefix of lengthi + 1 is
+admissible. Mathematical induction establishes the property for all finite prefixes.
+This proof does not show that the meaning ofRC is identical to task correctness. Nor does it
+prove that actual code mediates every execution path. Acceptance authority must belong to an
+executor, not a prompt; target substitution, output bypasses, and checker errors require separate
+tests of whether they break the assumptions. Consuming a budget rather than allowing unlimited
+retries can ensure termination, but does not provide completeness in finding valid answers.
+A.5. Formal derivation, composition, and output preservation
+Checker soundness in Proposition 5 assumes that an acceptedπis a valid derivation ofgF from
+Γ. Acceptance therefore impliesΓ⊢F gF. With semantic soundness, formal derivation implies
+semantic entailment. This proposition makes no assumption about the success rate of proof search.
+When operators are composed, the preceding postcondition must satisfy the next precondition.
+Overall goal satisfaction additionally requires that the final postcondition imply the goal. Con-
+version of the original natural-language goal into a formal goal and conversion of the formal
+conclusion into the final sentence are part of this connection. A correct formal proof ofr does not
+satisfy the final obligation when the original request concernsu.
+A.6. Inclusion for the restricted abstraction operator
+Choose anyx∈X. The partitionP contains a blockB containingx. Sincex∈X∩B, we have
+B∈αP(X) and hencex∈γP(αP(X)). The argument holds for everyx∈X, giving Eq. (24).
+Inclusion also holds whenX is empty.
+The property ensures that concrete possibilities are not omitted. Precision can be lost because
+abstraction adds states it does not distinguish; the result does not guarantee that the partition is
+useful for deciding the goal of interest. It therefore illustrates the separation between a formally
+guaranteed relation and task appropriateness that may have to be learned.
+A.7. JS divergence range and the selection bound
+Excluding zero-probability terms,P (t)/V (t)≤2 andQ(t)/V (t)≤2. Both KL terms are therefore
+at most 1; together with nonnegativity of KL, this gives0≤J(P,Q )≤1. Identical distributions
+give 0 and distributions with disjoint supports give 1. Combining this fact with the definition of
+the maximum yields the bound in Section 7.6.
+Exact baseline fallback at λT = 0 requires the same candidates, baseline utilities, and tie-
+breaking order. Turning off TTS while also changing the candidate library, hidden cost model, or
+continuation policy breaks this equivalence. The reference code and primary ablation maintain
+these conditions.
+38
+
+PAGE 39
+Thought Trajectory Space v1.0
+Appendix B. Annotation Rules and Record Structure
+B.1. Step segmentation rules
+Boundaries are primarily placed where the main claim, evidence under consideration, or function
+changes, not merely at conjunctions or punctuation. If splitting a compound sentence changes
+its meaning, the original span is retained with multiple functional labels. Source offsets and the
+segmentation-rule version are preserved for reanalysis under other boundaries.
+Annotators do not insert unrecorded reasoning on the assumption that it “probably occurred.”
+Reused evidence is linked to its original evidence ID. Planning to verify receives a planning label;
+running a tool receives an execution label; reading its result and incorporating it into a judgment
+receives an incorporation label.
+B.2. Core record fields
+Table B1. Minimum record structure for measurement and execution
+Field Content
+problem_id / family_id Identifiers for the original problem and
+related-problem lineage
+trace_id / step_id Execution-trace and step identifiers
+text_span / boundary_version Source offsets and segmentation-rule version
+available_evidence_ids Evidence already available at the observation point
+claim_ids / parent_ids Active claims and supporting dependencies
+A_label / D_raw / M_label Raw coordinate annotations; missing values permitted
+operation_type Observation, derivation, hypothesis proposal, analogy,
+checking, criterion review, etc.
+transition_warrant Supported, conditionally supported, insufficient
+grounds, contradiction, or not applicable
+action_status Planned, executed, result inspected, or incorporated
+into judgment
+annotation_uncertainty Annotation rationale, disagreement, or confidence
+model_revision / layer / token_anchor Exact execution settings for activation correspondence
+split / evaluator_version Data split and evaluation-rule version
+operator_id / implementation_level Actual operator and external/steering/native
+implementation level
+contract_version / candidate_snapshot Applied contract and immutable snapshot of the
+actual checked target
+verdict / proof_or_report_id Acceptance/rejection/indeterminate verdict and
+supporting artifact reference
+goal_version / obligations / budget Goal, mandatory checks, and execution budget
+final_output_binding Content/version binding between final output and
+checked target
+content_control / proposition_delta Q-exact, Base-fixed, or Topic-matched condition and
+changes in content
+inference_id / parent_set / active_claims Premise grouping, active conclusions, and basis for the
+primary depth summary
+candidate_labels / realized_labels Separation of rejected-candidate observations from
+accepted-state observations
+event / event_reason pass, reject, unknown, or stop and
+checking/measurement reason
+assignment_probability / support_version Operator-assignment probability and
+support/calibration rules
+39
+
+PAGE 40
+Thought Trajectory Space v1.0
+Field Content
+base_utility / transition_distribution Frozen utility-model values and transition
+categories/probabilities
+expert_distribution / tts_weight /
+fallback_reason
+Applied prior, weight, and fallback rationale
+policy_version / score_terms / tie_order Reproducible selection rule, score components, and
+tie-breaking order
+Final answers and total execution costs are stored in separate outcome records. Interfaces prevent
+outcome fields from leaking into prefix annotation or prediction. Data metadata also identify
+whether the expert source is human or a teacher model.
+B.3. Annotation quality checks
+Quality checks for A cross Q-exact length/style changes with Base-fixed changes in generalization
+level as separate factors. Cases whose quantifier scope changes through generalization are not
+labeled semantically identical. Checks for D include long and short descriptions of the same
+dependency graph and equal-length descriptions with different dependency depths. Checks for
+M distinguish empty declarations containing verification language, review identifying an actual
+assumption, execution of a checking tool, and incorporation of its result.
+The three axes are not aggregated into a single “reasoning score.” Missingness is not replaced
+with a low score, and annotators do not supply absent content to award a high score. Annotation
+disagreements are retained as evidence for improving the coordinate definitions.
+Appendix C. Hypothesis-Specific Preregistration and Decisions
+Table C1. Items to fix before confirmatory experiments
+Hypothesis Primary comparison Required fixed items
+Example of a nonsupporting
+result
+H1 measurement Reproducibility of
+independent
+annotation
+Boundaries, anchors,
+agreement criteria
+Axis distinctions vary across
+evaluators
+H2
+representation
+With/without
+activations
+Layer, probe capacity, splitEffect disappears after
+length/keyword control
+H3 prediction State only / state plus
+transition
+Observation point,
+prediction target, primary
+metric
+No additional effect after
+removing future information
+H4 intervention Conditional control /
+controls
+Budget, randomization,
+independent evaluation
+Only coordinates change; actual
+goal performance does not
+improve
+H5 efficiency Equal data/supervision
+budgets
+Data scale, compute
+budget, target performance
+No evidence of reaching the same
+performance with less
+data/computation
+H6 contracts Execution paths versus
+specification
+Threat model, trust
+boundary, bypass/fault
+types
+Reproducible unauthorized
+acceptance within the supported
+scope
+H7a native
+operators
+Generic block / native
+operator
+Assets, computation,
+module replacement,
+intermediate-result
+intervention
+Target function or downstream
+dependence is not distinguished
+40
+
+PAGE 41
+Thought Trajectory Space v1.0
+Hypothesis Primary comparison Required fixed items
+Example of a nonsupporting
+result
+H7b combination B3 / B2; separately B3
+/ B1
+Same TTS path, utility,
+control representations,
+minimum effect
+Sufficiently precise results
+exclude the minimum additional
+benefit
+H8 reuse Full adaptation /
+module-router
+adaptation
+Initial assets,
+module-construction cost,
+target performance
+No savings after including
+construction and additional
+training costs
+Insufficient effect-size precision and confidence intervals are reported as limited discrimination,
+not definitive “no difference.” Pilots without adequate samples remain exploratory and are
+distinguished from confirmatory results.
+External preregistration should include all stages of data generation, annotation, expert selection,
+transition-prior learning, and controller tuning. If ideal directions were defined after viewing
+successful examples, that stage is exploratory and requires reevaluation on new test data.
+Appendix D. Claims and Evidence Levels
+Table D1. Claims and the scope of current evidence
+Statement Current status Next evidence required
+Prior work represents cognitive
+content in spaces.
+Content of cited literature Retain the precise scope of that
+literature
+A/D/M can be defined as
+observation coordinates.
+Conceptual and measurement
+proposal
+H1 annotation reproducibility and
+construct validity
+Coordinate differences can be
+computed as transition vectors.
+Conditional definition with
+fixed scale and metric
+Scale calibration and sensitivity
+analysis
+Coordinates/transitions are
+predictable from LLM internal
+states.
+Untested H2 Independent test data and probe
+controls
+TTS improves error prediction
+beyond existing features.
+Untested H3 Leakage-free incremental prediction
+evaluation
+Expert priors improve control and
+efficiency.
+Untested H4/H5 Intervention experiments and
+data/compute curves
+Forbidden accepted transitions
+are excluded.
+Model property under the
+explicit assumptions of
+Proposition 4
+Complete mediation in the
+implementation and H6 fault/bypass
+review
+A specified formal relation holds. Result under the
+sound-checker assumption of
+Proposition 5
+Verification of formalization, checker,
+and output preservation
+Native operators and the TTS
+combination are more useful.
+Untested H7 External and structure-only baselines
+Module reuse reduces additional
+training requirements.
+Untested H8 Transfer-cost curves with equal initial
+assets
+Fine-tuning becomes meaningless
+for every task.
+Not claimed Evaluate adaptation efficiency within a
+supported scope instead
+All human reasoning consists of
+three axes.
+Not claimed Separate research beyond this study’s
+scope
+No prior work contains this
+combination.
+Not established Broader novelty review and expert
+assessment
+A JS selector and fallback
+branches have been implemented.
+Limited reference code and 40
+executed tests
+Integration with actual
+annotation/effect data and a CTA
+executor
+41
+
+PAGE 42
+Thought Trajectory Space v1.0
+Statement Current status Next evidence required
+The TTS term has a bounded
+influence on surrogate utility.
+Conditional algebraic result
+in Proposition 6
+Correspondence to actual task
+performance requires separate
+evaluation
+Appendix E. Pseudocode for Reference Selection and Acceptance
+Contracts
+The following pseudocode describes the combined design. The supplementary Python code
+implements only scoring and selection, not the entire executor.
+Input: problem, fixed goal/contracts, operator library,
+cost budget, integer iteration limit
+State <- initialize with source, evidence, goal, and versions
+While iterations remain:
+iteration limit <- iteration limit - 1
+admissible set <- trusted executor 's precondition/permission checks
+If the set is empty:
+perform admissible recovery within budget; continue
+if recovery is impossible, return indeterminate
+U <- frozen shared baseline utility for all admissible operators
+If weight is zero or observation/support/calibration is insufficient:
+scores <- U; record the fallback reason
+Else:
+P, Q <- effect/expert distributions with the same category order
+validate distributions; handle errors by predefined fallback/stop
+for valid inputs, scores <- U - lambda_T * JS(P,Q)
+operator <- highest score; ties use the unique bound-execution key
+reserve costs for execution, checking, and necessary output checking
+If the budget is insufficient, return indeterminate
+candidate/artifacts <- execute in temporary state under finite timeout
+verdict <- check input/candidate/artifact/contract/version bindings
+account for actual selection, execution, and checking costs
+If verdict is not pass:
+retain accepted state; record event, reason, and cost
+perform admissible recovery or return indeterminate
+continue
+State <- trusted executor applies only permitted writes
+record realized and candidate coordinates separately
+If a completion candidate exists:
+output candidate <- construct from current accepted results
+final verdict <- check goal obligations and output/version binding
+account for cost; if pass, return exactly the checked output
+otherwise perform admissible recovery or stop as indeterminate
+Return incomplete/indeterminate when the iteration limit is exhausted
+Distribution-format errors are recorded as numerical exceptions and separate failure reasons. A
+service predetermines whether to fall back or stop. Contracts are not relaxed after an error to
+reclassify it as success. A native-architecture version must actually include operator execution and
+working-memory updates in forward or iterative latent computation, and is distinguished from a
+version consisting only of external calls.
+42
+
+PAGE 43
+Thought Trajectory Space v1.0
+Appendix F. Reproducibility Materials and Evaluation Execution
+Conditions
+Supplementary material includes reference_router.py , test_reference_router.py , nume
+rical_example.json , and unit_tests.txt . The following commands use only the Python
+standard library:
+python reference_router.py
+python -m unittest -v test_reference_router
+Numerical results are reproducible with the same inputs and random seed, although runtime
+depends on the environment. SHA-256 hashes of code and data files are recorded inMANIFEST.s
+ha256 in the distribution. This is a record of file consistency at distribution time, not a signature
+from a trusted external institution or a proof of CTA execution guarantees.
+Before actual H1-H8 experiments begin, the codebook and boundary version, data generator and
+lineage splits, model/tokenizer revisions, independent checker, operator library and write permis-
+sions, utility/effect/expert models, support and calibration thresholds, computation/supervision
+budgets, primary metrics, sample size, power, and multiple-comparison procedures must be fixed.
+The supplied experiment_manifest.json exposes these fields as an execution-preparation
+template, leaving unresolved values as null and their status as not executed. The existence of a
+template does not establish execution readiness.
+F.1. Input and numerical contracts of the reference code
+reference_router.py is an arithmetic selector for arbitrary equal-length categorical distributions.
+The paper’s default experiment uses the 93-category order intransition_alphabet.json: 90
+pass combinations in nested A0-A4, D0-D4/D5+, M0-M2 order, followed by reject, unknown, and
+stop. A compressed representation must preserve the same correspondence for all positive-mass
+categories in both distributions.
+admissible and trusted accept only Booleans; strings are not interpreted as permission or
+trust judgments. Weights, utilities, and probabilities must be finite real numbers other than
+Booleans. Distribution sums must be 1 within floating-point tolerance10−10, without automatic
+renormalization. Zero-probability terms contribute 0, intermediate-mean underflow is avoided for
+extremely small probabilities, and a nonfinite calculated score returns an error.
+Proposition 6 in real arithmetic is distinct from checks of the floating-point implementation.
+Random numerical checks use comparison tolerance10−12. Passing unit tests is not exhaustive
+verification of every numerical input or of executor safety.operator_id is a unique selection key
+whose version and arguments are bound externally; the module does not verify that binding or
+actual write permissions.
+43

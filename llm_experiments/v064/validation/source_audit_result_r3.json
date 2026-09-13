@@ -1,0 +1,98 @@
+{
+  "audit_observation_id": "v064-source-audit-r3",
+  "completed_at_utc": "2026-09-13T08:09:58.312381Z",
+  "recheck_of": [
+    "v064-source-audit-r1",
+    "v064-source-audit-r2"
+  ],
+  "audit_state": "completed",
+  "candidate_completion": "complete",
+  "assurance_profile": "cooperative-sealed",
+  "provider": "sealed-artifact-v1",
+  "candidate": {
+    "path": "llm_experiments/v064/releases/v064_direct_D_source_r3.zip",
+    "sha256_before": "238b4997ceaa4191fb79498cc12647010bd02056cf7ac96a0ca0752712ff4553",
+    "sha256_after": "238b4997ceaa4191fb79498cc12647010bd02056cf7ac96a0ca0752712ff4553",
+    "size_bytes": 55628,
+    "manifest_source_files": 16,
+    "manifest_and_member_hashes_match": true,
+    "fresh_source_bytes_match": true,
+    "deterministic_rebuild_equal": true
+  },
+  "audit_input": {
+    "path": "llm_experiments/v064/validation/audit_input_r3.json",
+    "sha256_before": "1de12447fbdd8396a47eb2c9433914256b25fcecd318046d808973472c2ed74d",
+    "sha256_after": "1de12447fbdd8396a47eb2c9433914256b25fcecd318046d808973472c2ed74d",
+    "evidence_references_verified": "10/10",
+    "source_hashes_verified": "16/16"
+  },
+  "prior_audit_immutability": {
+    "r1_source_audit_result_sha256": "48f1880786baef39b3a355c62c60f5e2178644fa3315e74a7c78d5785750a1f0",
+    "r1_source_audit_markdown_sha256": "4e7d435f317b288dd11f58cfe7525fbd0d574faa19efb173b8c5c5c2858c4c94",
+    "r2_source_audit_result_sha256": "08a5f61f8508c8171fe2943c35f10e2c8ad1b7d1a42231fadd655fd27eac6968",
+    "r2_source_audit_markdown_sha256": "7649f3b44f60494647ee519cb6421f71d6b8582c8194da73ef6ad797aa4b224c",
+    "unchanged": true
+  },
+  "rechecks": [
+    {
+      "audit_observation_id": "v064-source-audit-r1",
+      "finding_id": "V064-SA-R1-F003",
+      "disposition": "accepted",
+      "resolution_status": "resolved",
+      "candidate_digest": "238b4997ceaa4191fb79498cc12647010bd02056cf7ac96a0ca0752712ff4553",
+      "resolution_evidence": "fresh_source_r3 verifier로 완전한 call request/response pair 뒤 opaque pending record를 직접 재서명해 승인, observed_calls=0, semantic_measurement=not_measured를 확인했다(SHA256 49966fb45b4d38ec063c36357941b867620f08d8fa227dce4284e87aa8e37988). 봉인된 정상 pending evidence SHA256 a309d981b2baa023fc41646ee501e3f006378cfd94ab8e78eba4adad2a545ba3도 verified=true, state=crashed, observed_calls=0, record_committed=false, not_measured였다. 따라서 완료되지 않은 action의 원문은 부분 보존되되 연구 성과에는 산입되지 않는다.",
+      "unverified": [
+        "실제 제공자 호출 중 파일 시스템 중단은 재현하지 않았고 합성·재서명 반례로 검사했다."
+      ]
+    },
+    {
+      "audit_observation_id": "v064-source-audit-r2",
+      "finding_id": "V064-SA-R2-F001",
+      "disposition": "accepted",
+      "resolution_status": "resolved",
+      "candidate_digest": "238b4997ceaa4191fb79498cc12647010bd02056cf7ac96a0ca0752712ff4553",
+      "resolution_evidence": "verify.py:820-821은 pending record에 최소 한 쌍과 짝수 wire prefix를 요구한다. 직접 재서명한 call request-only+record(SHA256 6ee9c88428f22f55cb51bc37f83f6e3a6834807c62a9528e6c5c07a862adf142), call partial-request+record(SHA256 b7566ccf9aae22b3ce9ab575a994651c55e9fc3a7681dc84e2c2760f4ce51eeb), metadata 홀수 prefix+record(SHA256 a8505cc9bfa2398b7724ab7253346035ca5d98266e4c8999dda91586464f100a)를 모두 VerificationError로 거부했다. metadata 완전 pair+opaque record(SHA256 9e560986be744217167392d3f5bddf419e02cbbf41e8d204bc23342809d1d472)는 승인하면서 observed_calls=0, not_measured를 유지했다.",
+      "unverified": [
+        "모든 가능한 중단 바이트 위치를 열거하지 않았다."
+      ]
+    }
+  ],
+  "findings": [],
+  "checks": [
+    {
+      "check_id": "R3-C001-seal-and-scope",
+      "result": "passed",
+      "evidence": "candidate와 audit_input digest를 직접 계산했고 candidate manifest 16개 source, ZIP member, fresh_source_r3 및 deterministic rebuild가 일치했다. r2 대비 source 변경은 verify.py, 해당 contract test, README 전달판본뿐이다."
+    },
+    {
+      "check_id": "R3-C002-targeted-counterexamples",
+      "result": "passed",
+      "evidence": "call 요청 전용·부분 요청 및 metadata 홀수 prefix 뒤 record는 거부됐고, call과 metadata의 완전 wire pair 뒤 opaque record는 승인되면서 0 observed/not_measured로 보존됐다."
+    },
+    {
+      "check_id": "R3-C003-prior-resolutions-and-research-contract",
+      "result": "reused",
+      "evidence": "r1 F001/F002는 r2 감사에서 resolved였고 해당 verify 영역과 run.py는 r3에서 바뀌지 않았다. protocol.json, design.py, measure.py와 연구 반환 문서의 source hash도 r2와 같아 기존 독립 검토를 재사용했다."
+    },
+    {
+      "check_id": "R3-C004-bound-validation-logs",
+      "result": "passed",
+      "evidence": "audit_input_r3가 열거한 evidence 10개와 source 16개 SHA-256을 직접 재계산해 모두 일치했다. 결속 로그는 통합 19검사와 새 빈 폴더 Windows CheckOnly 19검사 exit 0을 기록하며 actual_model_calls=0이다. 시험 개수는 연구 성과 근거로 사용하지 않았다."
+    }
+  ],
+  "verification_commands": [
+    "C:/Users/sjs95/AppData/Local/Programs/Python/Python312/python.exe -X utf8 -B (digest, ZIP manifest/member, deterministic rebuild, targeted re-signing harness)",
+    "C:/Users/sjs95/AppData/Local/Programs/Python/Python312/python.exe -X utf8 -B verify.py <targeted synthetic bundle>"
+  ],
+  "unverified_scope": [
+    "실제 Ollama 추론, 모델 다운로드, 서버 시작은 수행하지 않았다.",
+    "실제 v064 모델 성과와 A/M 성과는 아직 관측되지 않았다.",
+    "19-test 전체 suite와 Windows CheckOnly는 해시 결속 로그를 대조했고 감사자가 반복 실행하지 않았다.",
+    "합성 evidence와 hash는 내부 일관성 근거이며 외부 실행 사실의 attestation이 아니다.",
+    "같은 사용자 권한의 악의적 writer를 막는 외부 attestation은 cooperative-sealed 범위가 아니다."
+  ],
+  "audit_mutations": [
+    "llm_experiments/v064/validation/source_audit_result_r3.json",
+    "llm_experiments/v064/validation/SOURCE_AUDIT_R3.ko.md"
+  ]
+}

@@ -1,0 +1,6 @@
+test_stderr_is_preserved_and_exit_code_controls_outcome (test_native.NativeBoundaryTests.test_stderr_is_preserved_and_exit_code_controls_outcome) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.932s
+
+OK

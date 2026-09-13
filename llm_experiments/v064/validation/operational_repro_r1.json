@@ -1,0 +1,18 @@
+[
+  {
+    "case": "pending_wire",
+    "synthetic_chats": 1,
+    "execute_result": null,
+    "error": "bundle layout extras=['wire/b00_p0_shallow/request.wire.json', 'wire/b00_p0_shallow/response.raw.json'] missing=[]",
+    "bundle_exists": true,
+    "independent_exists": false
+  },
+  {
+    "case": "provider_over_budget",
+    "synthetic_chats": 1,
+    "execute_result": null,
+    "error": "generation budget per call",
+    "bundle_exists": true,
+    "independent_exists": false
+  }
+]

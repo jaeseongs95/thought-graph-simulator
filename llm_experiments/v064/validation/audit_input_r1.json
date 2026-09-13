@@ -1,0 +1,60 @@
+{
+  "audit_observation_id": "v064-source-audit-r1",
+  "sealed_at_utc": "2026-09-13T07:33:47.905083+00:00",
+  "profile": "cooperative-sealed",
+  "provider": "sealed-artifact-v1",
+  "source_zip": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v064\\releases\\v064_direct_D_source_r1.zip",
+  "candidate_digest": "5cd7a8d755dc60bf90afe90ff26fca451944deb72480d074acff2499114c84e6",
+  "request": {
+    "path": "C:\\Users\\sjs95\\.codex\\attachments\\510c8761-039c-448d-aca6-5354f079da3b\\pasted-text.txt",
+    "sha256": "39807eb1da34877d262b18da13cc7eab155376743a6b603cd71135871ea68d53"
+  },
+  "instructions": {
+    "path": "D:\\codex\\AI논문\\thought-graph-simulator\\AGENTS.md",
+    "sha256": "67a6973db5708b2d7daff01451fb0d2b80b96f1ca39e5cdb7b2382a313b55f58"
+  },
+  "baseline_git_status": "?? llm_experiments/v063/\n",
+  "current_git_status": "?? llm_experiments/v063/\n?? llm_experiments/v064/\n",
+  "original_diff": "new llm_experiments/v064/probe files, full additions represented by source_zip RELEASE_MANIFEST; no tracked modifications",
+  "source_hashes": {
+    "build_release.py": "6c5c2e863d06e1004bf287c4113b06743b598d3e945dc4af0f07c8e55c917fa7",
+    "common.py": "16d2335aa259250dddc21a2e140334b50efc27819a5e511975162a4bb13be69c",
+    "data/protocol.json": "02fef06cd09e131b994de65549a2f2856a99d44e69b944fb86b7ad59f3ddefed",
+    "design.py": "625a853473ae96e142b680c7eab32f15a79a94902550d5102e8762d951a8b66b",
+    "docs/PROTOCOL.ko.md": "fbf6fd238b540f4e617c450486cf3e0144d39086f50aa7ce626d7858195acb11",
+    "docs/RESEARCH_RETURN.ko.md": "bd18cdb560466d0f8b7e17559f6f992bbd0d09422fa38b390200f036eae0dcb7",
+    "measure.py": "47e6a93f5e96e8346ccb21c77034a5859ad8fbe9a326e77bff44acd58d610f71",
+    "README.md": "9c5f2db41b805c2e07b77388209346a3fbf9ab04400cc65bdffea50e7f4d935d",
+    "report.py": "fb6c2679987e5f9bec044f4a13a4e725358ac76444d1cb7c50ff3143ef792080",
+    "run.py": "345cb2b329ab033fd2dca3dcd152eed655c74f4f898f3afdfdab19d9d0ca30a1",
+    "tests/test_contract.py": "6f07d59614646b8bb6e3472045ccc347561e3c14ed31ab342b13db96321950b6",
+    "tests/test_native.py": "5234fd9a7f4ede5298b12353cccb5b709017f2563eadfe87631e660fa256c476",
+    "verify.py": "fd267a21a8604b54372960839a235ea572b954ca74d7047023a25b348e57dbaa",
+    "windows/native.ps1": "5042e9b2579f6be4fcb09e3267a565214091a8e0e940dcee2b4090c51e13df37",
+    "windows/Run-v064.cmd": "89218802846bbfbb3f5e9728f6e369cadfafefa73069c354ca25ff101f617d3c",
+    "windows/Run-v064.ps1": "23326a5dcb672eadd91fc3279d10a3aac28bb40034c400c0de1fbe2bc57de56a"
+  },
+  "evidence": {
+    "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v064\\validation\\baseline.json": "df72265c55d761c924e41ce933160c010672deb314a0534522f3801ef206a8ad",
+    "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v064\\validation\\work_contract.json": "a1c938cbaa546d00754fb702b9d85a35961c467ec81803bb2769179b8547e5be",
+    "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v064\\validation\\design_decision.json": "3f5e5130de8b488e29b4514dd639031f0d403b2e9d9acc696a067f3b1ccfd99d",
+    "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v064\\validation\\protocol_serialization_correction.json": "2e9f23fb7c1129cde50d3ff64c9dff998fefe221ea36f3bc3cf0e118bd18b167",
+    "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v064\\validation\\EVIDENCE_MAP.ko.md": "176ff2bfbe04b9bce78f14fc9c101072bea5224544336b4734afac225202720d",
+    "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v064\\validation\\raw_crosscheck_corrected.json": "57dd3f0b3a8c780960cdb6e8be1a12d338b5d35c5272a16382d882741a10d8ad",
+    "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v064\\validation\\staged_adversarial.json": "7c94e63c96c43483b3b3c6da7488494d9887642ec6bcae78a49bb8f63b8e2a3e",
+    "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v064\\validation\\cross_issues.json": "de7f91e87618aba25415c13678f24bb21af741e2f264e9c48554fb12d8a03611",
+    "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v064\\validation\\CORRECTIONS.ko.md": "84856fc91f7e41ef31bdd7d4ad6dd8979198d355c1c0956d41c2a6d9d08bebbb",
+    "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v064\\validation\\general_validation_r1.json": "b6089572e479e60485ff5c21313096f8ec5de228010cb43d91cfc9e00703428b",
+    "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v064\\validation\\windows_checkonly_r2.log": "5c2fb7964e97e21ca428454bde126238f8d8a3a170363a7a1d0da56239f43f1e",
+    "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v064\\validation\\fresh_source_r1.log": "b3069d4e9ec088c31cf62bbcaccbd714c7cd72500586848f467e2c828d35c3b9",
+    "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v064\\validation\\synthetic_final_r1.log": "7e4177485deb5c4cec934dd72a2f4182e56007741f56e280759cf513ad35e486",
+    "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v064\\results_llm\\v064_synthetic_final_r1_evidence.zip": "e56ba73116f9dd45cc54b6f705fbaac7fe18ef1d529173670a4fe9c4cde1d38e",
+    "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v064\\results_llm\\v064_synthetic_final_r1_independent.json": "a1beebc7d5fbf866d1339beb3574bf857bb64c0b0940c08c07a8afa122838611"
+  },
+  "writers_stopped": true,
+  "actual_model_calls_during_development": 0,
+  "fresh_test_exit_code": 0,
+  "fresh_test_cases": 16,
+  "allowed_audit_mutation": "validation/source_audit_result.json and validation/SOURCE_AUDIT.ko.md only, temporary scratch outside candidate permitted",
+  "prohibited": "no edits to probe, sealed ZIP, or historical sources/evidence; no actual Ollama/model run/download/start"
+}

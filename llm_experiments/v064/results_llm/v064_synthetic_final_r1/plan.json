@@ -1,0 +1,719 @@
+{
+  "contract": "v064-plan-r1",
+  "run_name": "v064_synthetic_final_r1",
+  "provenance": "synthetic",
+  "protocol": {
+    "contract": "v064-direct-D-r1",
+    "baseline_sha256": "d8fd5b2123d38023aaf7c7c0427f54ab6fe650d6b85a695790cb7a5b5b852761",
+    "baseline_request_id": "graph_choice__graph__merged__reference__s00_T02_original_shallow",
+    "model": "qwen3:4b-instruct",
+    "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "problems": [
+      {
+        "id": "T02",
+        "facts": [
+          "Lp",
+          "Ls"
+        ],
+        "rules": [
+          {
+            "id": "r83",
+            "premises": [
+              "Lp",
+              "Ls"
+            ],
+            "conclusion": "Lg"
+          },
+          {
+            "id": "r21",
+            "premises": [
+              "Lp"
+            ],
+            "conclusion": "Lq"
+          },
+          {
+            "id": "r57",
+            "premises": [
+              "Lq",
+              "Ls"
+            ],
+            "conclusion": "Lr"
+          },
+          {
+            "id": "r04",
+            "premises": [
+              "Lr"
+            ],
+            "conclusion": "Lt"
+          },
+          {
+            "id": "r69",
+            "premises": [
+              "Lt"
+            ],
+            "conclusion": "Lg"
+          }
+        ],
+        "goal": "Lg"
+      },
+      {
+        "id": "E01_shared_fork",
+        "facts": [
+          "Aa",
+          "Ab"
+        ],
+        "rules": [
+          {
+            "id": "n08",
+            "premises": [
+              "Aa"
+            ],
+            "conclusion": "Ax"
+          },
+          {
+            "id": "n52",
+            "premises": [
+              "Aa",
+              "Ab"
+            ],
+            "conclusion": "Ag"
+          },
+          {
+            "id": "n37",
+            "premises": [
+              "Ax",
+              "Ay",
+              "Ab"
+            ],
+            "conclusion": "Ag"
+          },
+          {
+            "id": "n91",
+            "premises": [
+              "Aa"
+            ],
+            "conclusion": "Ay"
+          },
+          {
+            "id": "n64",
+            "premises": [
+              "Ab"
+            ],
+            "conclusion": "Az"
+          }
+        ],
+        "goal": "Ag"
+      },
+      {
+        "id": "E02_two_vs_four",
+        "facts": [
+          "Pa",
+          "Pb",
+          "Pc"
+        ],
+        "rules": [
+          {
+            "id": "m33",
+            "premises": [
+              "Pa"
+            ],
+            "conclusion": "Pu"
+          },
+          {
+            "id": "m76",
+            "premises": [
+              "Ps",
+              "Pc"
+            ],
+            "conclusion": "Pg"
+          },
+          {
+            "id": "m18",
+            "premises": [
+              "Pa",
+              "Pb"
+            ],
+            "conclusion": "Ps"
+          },
+          {
+            "id": "m05",
+            "premises": [
+              "Pu",
+              "Pb"
+            ],
+            "conclusion": "Pv"
+          },
+          {
+            "id": "m41",
+            "premises": [
+              "Pw"
+            ],
+            "conclusion": "Pg"
+          },
+          {
+            "id": "m84",
+            "premises": [
+              "Pv",
+              "Pc"
+            ],
+            "conclusion": "Pw"
+          }
+        ],
+        "goal": "Pg"
+      }
+    ],
+    "depth_ranges": {
+      "T02": [
+        1,
+        4
+      ],
+      "E01_shared_fork": [
+        1,
+        2
+      ],
+      "E02_two_vs_four": [
+        2,
+        4
+      ]
+    },
+    "development_problem": "T02",
+    "evaluation_problems": [
+      "E01_shared_fork",
+      "E02_two_vs_four"
+    ],
+    "seeds": [
+      64001001,
+      64001002
+    ],
+    "orders": [
+      [
+        "shallow",
+        "neutral",
+        "deep"
+      ],
+      [
+        "deep",
+        "neutral",
+        "shallow"
+      ],
+      [
+        "neutral",
+        "deep",
+        "shallow"
+      ],
+      [
+        "shallow",
+        "deep",
+        "neutral"
+      ],
+      [
+        "deep",
+        "shallow",
+        "neutral"
+      ],
+      [
+        "neutral",
+        "shallow",
+        "deep"
+      ]
+    ],
+    "max_inference_calls": 18,
+    "metadata_records": 12,
+    "generation_token_upper_bound": 73728,
+    "request_utf8_byte_limit": 16000,
+    "num_predict": 4096,
+    "timeout_seconds": 300,
+    "no_warmup": true,
+    "automatic_retry": false,
+    "no_result_based_gate": true,
+    "content_control": "Base-fixed",
+    "A": "not_measured",
+    "M": "not_measured",
+    "evaluation_scope": "prospective_model_unobserved_designer_selected_structures",
+    "decision_rule": "all_six_directed_pairs_strict_min_max_for_bounded_A_or_M_pilot; neutral_diagnostic_only",
+    "frozen_before_real_model_output": true
+  },
+  "protocol_sha256": "02fef06cd09e131b994de65549a2f2856a99d44e69b944fb86b7ad59f3ddefed",
+  "source_hashes": {
+    "build_release.py": "6c5c2e863d06e1004bf287c4113b06743b598d3e945dc4af0f07c8e55c917fa7",
+    "common.py": "16d2335aa259250dddc21a2e140334b50efc27819a5e511975162a4bb13be69c",
+    "data/protocol.json": "02fef06cd09e131b994de65549a2f2856a99d44e69b944fb86b7ad59f3ddefed",
+    "design.py": "625a853473ae96e142b680c7eab32f15a79a94902550d5102e8762d951a8b66b",
+    "docs/PROTOCOL.ko.md": "fbf6fd238b540f4e617c450486cf3e0144d39086f50aa7ce626d7858195acb11",
+    "docs/RESEARCH_RETURN.ko.md": "bd18cdb560466d0f8b7e17559f6f992bbd0d09422fa38b390200f036eae0dcb7",
+    "measure.py": "47e6a93f5e96e8346ccb21c77034a5859ad8fbe9a326e77bff44acd58d610f71",
+    "README.md": "9c5f2db41b805c2e07b77388209346a3fbf9ab04400cc65bdffea50e7f4d935d",
+    "report.py": "fb6c2679987e5f9bec044f4a13a4e725358ac76444d1cb7c50ff3143ef792080",
+    "run.py": "345cb2b329ab033fd2dca3dcd152eed655c74f4f898f3afdfdab19d9d0ca30a1",
+    "tests/test_contract.py": "6f07d59614646b8bb6e3472045ccc347561e3c14ed31ab342b13db96321950b6",
+    "tests/test_native.py": "5234fd9a7f4ede5298b12353cccb5b709017f2563eadfe87631e660fa256c476",
+    "verify.py": "fd267a21a8604b54372960839a235ea572b954ca74d7047023a25b348e57dbaa",
+    "windows/native.ps1": "5042e9b2579f6be4fcb09e3267a565214091a8e0e940dcee2b4090c51e13df37",
+    "windows/Run-v064.cmd": "89218802846bbfbb3f5e9728f6e369cadfafefa73069c354ca25ff101f617d3c",
+    "windows/Run-v064.ps1": "23326a5dcb672eadd91fc3279d10a3aac28bb40034c400c0de1fbe2bc57de56a"
+  },
+  "baseline_sha256": "d8fd5b2123d38023aaf7c7c0427f54ab6fe650d6b85a695790cb7a5b5b852761",
+  "baseline_request": {
+    "model": "qwen3:4b-instruct",
+    "messages": [
+      {
+        "role": "user",
+        "content": "facts와 rules만 사용하여 goal을 지지하는 증명 DAG 하나를 작성한다.\n한 증명만 선택한다. 서로 대안인 두 경로를 모두 나열하면 안 된다. 모든 노드는 선택한 목표 노드의 조상이어야 한다.\nnodes는 위상 순서의 id, atom, rule, parents 배열이다. 초기 사실의 rule은 null이고 parents는 []다.\n규칙 적용의 rule은 실제 규칙 id이며 parents에는 모든 전제 노드 id를 쓴다.\nfinal_node_id는 선택한 목표 노드의 id이다. 원자 이름(goal 문자열)을 쓰는 필드가 아니다.\n최종 노드는 nodes 안에 있어야 한다. 목표 문자열이 같아도 근거 없는 단독 주장은 유효한 증명이 아니다.\n\n경로 지시:\n허용된 유효한 증명 중 최종 지지 깊이가 가장 작은 경로를 선택한다.\nJSON 객체 하나만 출력한다. 출력 형식(JSON Schema):\n{\"type\":\"object\",\"properties\":{\"nodes\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":128},\"atom\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":128},\"rule\":{\"anyOf\":[{\"type\":\"string\",\"minLength\":1,\"maxLength\":128},{\"type\":\"null\"}]},\"parents\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":128},\"minItems\":0,\"maxItems\":16}},\"required\":[\"id\",\"atom\",\"rule\",\"parents\"],\"additionalProperties\":false},\"minItems\":1,\"maxItems\":16},\"final_node_id\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":128}},\"required\":[\"nodes\",\"final_node_id\"],\"additionalProperties\":false}\n\nproblem: {\"id\":\"T02\",\"facts\":[\"Lp\",\"Ls\"],\"rules\":[{\"id\":\"r83\",\"premises\":[\"Lp\",\"Ls\"],\"conclusion\":\"Lg\"},{\"id\":\"r21\",\"premises\":[\"Lp\"],\"conclusion\":\"Lq\"},{\"id\":\"r57\",\"premises\":[\"Lq\",\"Ls\"],\"conclusion\":\"Lr\"},{\"id\":\"r04\",\"premises\":[\"Lr\"],\"conclusion\":\"Lt\"},{\"id\":\"r69\",\"premises\":[\"Lt\"],\"conclusion\":\"Lg\"}],\"goal\":\"Lg\"}"
+      }
+    ],
+    "stream": false,
+    "keep_alive": "10m",
+    "options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repeat_penalty": 1.0,
+      "num_ctx": 8192,
+      "num_predict": 4096,
+      "num_thread": 6,
+      "num_batch": 256,
+      "seed": 580410664
+    },
+    "format": {
+      "type": "object",
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "atom": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "rule": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 128
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "parents": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 128
+                },
+                "minItems": 0,
+                "maxItems": 16
+              }
+            },
+            "required": [
+              "id",
+              "atom",
+              "rule",
+              "parents"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 16
+        },
+        "final_node_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        }
+      },
+      "required": [
+        "nodes",
+        "final_node_id"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "identity": {
+    "model": "qwen3:4b-instruct",
+    "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "show_sha256": "d223770b6393471210267ea75d0870b0770c0ebf3b1f5ae539758f7500816948",
+    "server": {
+      "version": "0.34.0"
+    },
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "4.0B",
+      "quantization_level": "Q4_K_M"
+    },
+    "template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0].role == 'system' %}\n        {{- messages[0].content + '\\n\\n' }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0].content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" and message.content is string and not(message.content.startswith('<tool_response>') and message.content.endswith('</tool_response>')) %}\n        {%- set ns.multi_step_tool = false %}\n        {%- set ns.last_query_index = index %}\n    {%- endif %}\n{%- endfor %}\n{%- for message in messages %}\n    {%- if message.content is string %}\n        {%- set content = message.content %}\n    {%- else %}\n        {%- set content = '' %}\n    {%- endif %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {%- if loop.last or (not loop.last and reasoning_content) %}\n                {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content.strip('\\n') + '\\n</think>\\n\\n' + content.lstrip('\\n') }}\n            {%- else %}\n                {{- '<|im_start|>' + message.role + '\\n' + content }}\n            {%- endif %}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if (loop.first and content) or (not loop.first) %}\n                    {{- '\\n' }}\n                {%- endif %}\n                {%- if tool_call.function %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {{- '<tool_call>\\n{\"name\": \"' }}\n                {{- tool_call.name }}\n                {{- '\", \"arguments\": ' }}\n                {%- if tool_call.arguments is string %}\n                    {{- tool_call.arguments }}\n                {%- else %}\n                    {{- tool_call.arguments | tojson }}\n                {%- endif %}\n                {{- '}\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.first or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}",
+    "parameters": "repeat_penalty                 1\nstop                           \"<|im_start|>\"\nstop                           \"<|im_end|>\"\ntemperature                    0.7\ntop_k                          20\ntop_p                          0.8",
+    "model_info": {
+      "general.architecture": "qwen3",
+      "general.basename": "Qwen3",
+      "general.file_type": 15,
+      "general.finetune": "Instruct",
+      "general.license": "apache-2.0",
+      "general.license.link": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507/blob/main/LICENSE",
+      "general.parameter_count": 4022468096,
+      "general.quantization_version": 2,
+      "general.size_label": "4B",
+      "general.tags": null,
+      "general.type": "model",
+      "general.version": "2507",
+      "qwen3.attention.head_count": 32,
+      "qwen3.attention.head_count_kv": 8,
+      "qwen3.attention.key_length": 128,
+      "qwen3.attention.layer_norm_rms_epsilon": 1e-06,
+      "qwen3.attention.value_length": 128,
+      "qwen3.block_count": 36,
+      "qwen3.context_length": 262144,
+      "qwen3.embedding_length": 2560,
+      "qwen3.feed_forward_length": 9728,
+      "qwen3.rope.freq_base": 5000000,
+      "tokenizer.ggml.add_bos_token": false,
+      "tokenizer.ggml.bos_token_id": 151643,
+      "tokenizer.ggml.eos_token_id": 151645,
+      "tokenizer.ggml.merges": null,
+      "tokenizer.ggml.model": "gpt2",
+      "tokenizer.ggml.padding_token_id": 151643,
+      "tokenizer.ggml.pre": "qwen2",
+      "tokenizer.ggml.token_type": null,
+      "tokenizer.ggml.tokens": null
+    }
+  },
+  "slots": [
+    {
+      "id": "b00_p0_shallow",
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "block": 0,
+      "period": 0,
+      "direction": "shallow",
+      "previous_call_id": null,
+      "previous_direction": null
+    },
+    {
+      "id": "b00_p0_neutral",
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "block": 0,
+      "period": 1,
+      "direction": "neutral",
+      "previous_call_id": "b00_p0_shallow",
+      "previous_direction": "shallow"
+    },
+    {
+      "id": "b00_p0_deep",
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "block": 0,
+      "period": 2,
+      "direction": "deep",
+      "previous_call_id": "b00_p0_neutral",
+      "previous_direction": "neutral"
+    },
+    {
+      "id": "b01_p0_deep",
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "block": 1,
+      "period": 0,
+      "direction": "deep",
+      "previous_call_id": "b00_p0_deep",
+      "previous_direction": "deep"
+    },
+    {
+      "id": "b01_p0_neutral",
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "block": 1,
+      "period": 1,
+      "direction": "neutral",
+      "previous_call_id": "b01_p0_deep",
+      "previous_direction": "deep"
+    },
+    {
+      "id": "b01_p0_shallow",
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "block": 1,
+      "period": 2,
+      "direction": "shallow",
+      "previous_call_id": "b01_p0_neutral",
+      "previous_direction": "neutral"
+    },
+    {
+      "id": "b02_p1_neutral",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "seed_index": 0,
+      "block": 2,
+      "period": 0,
+      "direction": "neutral",
+      "previous_call_id": "b01_p0_shallow",
+      "previous_direction": "shallow"
+    },
+    {
+      "id": "b02_p1_deep",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "seed_index": 0,
+      "block": 2,
+      "period": 1,
+      "direction": "deep",
+      "previous_call_id": "b02_p1_neutral",
+      "previous_direction": "neutral"
+    },
+    {
+      "id": "b02_p1_shallow",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "seed_index": 0,
+      "block": 2,
+      "period": 2,
+      "direction": "shallow",
+      "previous_call_id": "b02_p1_deep",
+      "previous_direction": "deep"
+    },
+    {
+      "id": "b03_p1_shallow",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "seed_index": 1,
+      "block": 3,
+      "period": 0,
+      "direction": "shallow",
+      "previous_call_id": "b02_p1_shallow",
+      "previous_direction": "shallow"
+    },
+    {
+      "id": "b03_p1_deep",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "seed_index": 1,
+      "block": 3,
+      "period": 1,
+      "direction": "deep",
+      "previous_call_id": "b03_p1_shallow",
+      "previous_direction": "shallow"
+    },
+    {
+      "id": "b03_p1_neutral",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "seed_index": 1,
+      "block": 3,
+      "period": 2,
+      "direction": "neutral",
+      "previous_call_id": "b03_p1_deep",
+      "previous_direction": "deep"
+    },
+    {
+      "id": "b04_p2_deep",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "block": 4,
+      "period": 0,
+      "direction": "deep",
+      "previous_call_id": "b03_p1_neutral",
+      "previous_direction": "neutral"
+    },
+    {
+      "id": "b04_p2_shallow",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "block": 4,
+      "period": 1,
+      "direction": "shallow",
+      "previous_call_id": "b04_p2_deep",
+      "previous_direction": "deep"
+    },
+    {
+      "id": "b04_p2_neutral",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "block": 4,
+      "period": 2,
+      "direction": "neutral",
+      "previous_call_id": "b04_p2_shallow",
+      "previous_direction": "shallow"
+    },
+    {
+      "id": "b05_p2_neutral",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "block": 5,
+      "period": 0,
+      "direction": "neutral",
+      "previous_call_id": "b04_p2_neutral",
+      "previous_direction": "neutral"
+    },
+    {
+      "id": "b05_p2_shallow",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "block": 5,
+      "period": 1,
+      "direction": "shallow",
+      "previous_call_id": "b05_p2_neutral",
+      "previous_direction": "neutral"
+    },
+    {
+      "id": "b05_p2_deep",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "block": 5,
+      "period": 2,
+      "direction": "deep",
+      "previous_call_id": "b05_p2_shallow",
+      "previous_direction": "shallow"
+    }
+  ],
+  "actions": [
+    {
+      "kind": "metadata",
+      "id": "b00_before"
+    },
+    {
+      "kind": "call",
+      "id": "b00_p0_shallow"
+    },
+    {
+      "kind": "call",
+      "id": "b00_p0_neutral"
+    },
+    {
+      "kind": "call",
+      "id": "b00_p0_deep"
+    },
+    {
+      "kind": "metadata",
+      "id": "b00_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b01_before"
+    },
+    {
+      "kind": "call",
+      "id": "b01_p0_deep"
+    },
+    {
+      "kind": "call",
+      "id": "b01_p0_neutral"
+    },
+    {
+      "kind": "call",
+      "id": "b01_p0_shallow"
+    },
+    {
+      "kind": "metadata",
+      "id": "b01_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b02_before"
+    },
+    {
+      "kind": "call",
+      "id": "b02_p1_neutral"
+    },
+    {
+      "kind": "call",
+      "id": "b02_p1_deep"
+    },
+    {
+      "kind": "call",
+      "id": "b02_p1_shallow"
+    },
+    {
+      "kind": "metadata",
+      "id": "b02_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b03_before"
+    },
+    {
+      "kind": "call",
+      "id": "b03_p1_shallow"
+    },
+    {
+      "kind": "call",
+      "id": "b03_p1_deep"
+    },
+    {
+      "kind": "call",
+      "id": "b03_p1_neutral"
+    },
+    {
+      "kind": "metadata",
+      "id": "b03_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b04_before"
+    },
+    {
+      "kind": "call",
+      "id": "b04_p2_deep"
+    },
+    {
+      "kind": "call",
+      "id": "b04_p2_shallow"
+    },
+    {
+      "kind": "call",
+      "id": "b04_p2_neutral"
+    },
+    {
+      "kind": "metadata",
+      "id": "b04_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b05_before"
+    },
+    {
+      "kind": "call",
+      "id": "b05_p2_neutral"
+    },
+    {
+      "kind": "call",
+      "id": "b05_p2_shallow"
+    },
+    {
+      "kind": "call",
+      "id": "b05_p2_deep"
+    },
+    {
+      "kind": "metadata",
+      "id": "b05_after"
+    }
+  ],
+  "plan_sha256": "8ff45587bfb1923c324c65b704e5a9b7ab3b6607c68e86df9efb2baaf8864c50"
+}

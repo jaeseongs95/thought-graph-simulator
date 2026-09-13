@@ -1,0 +1,6349 @@
+{
+  "contract": "v062-failure-forensics-r1",
+  "bundle_sha256": "baea752ac1a55dc7a20b42b41ced69b3c8e126105f65deea8ebecc8dde3f09fd",
+  "independent_receipt": {
+    "contract": "independent-v062-r1",
+    "bundle_sha256": "baea752ac1a55dc7a20b42b41ced69b3c8e126105f65deea8ebecc8dde3f09fd",
+    "complete": true,
+    "observed_calls": 40,
+    "metadata_records": 20,
+    "compared_fields": 842,
+    "differences": [],
+    "production_imports": false,
+    "baseline_compared_fields": 1649,
+    "limitation": "원문·계획·측정 일관성 검산이며 외부 실행 인증, 자유 선택, A/M 제어 또는 내부 기제의 인과 검증은 아니다."
+  },
+  "plan_sha256": "071b17338d23e067297bbec0f60bc527a41100d0a1f274789b752767a3bbcbf3",
+  "event_tip": "6a4f1aa93788b07d8068094a6b6fba777342cd80b8b4c4d2b75a2d9e0a50a457",
+  "model": "gemma3:4b",
+  "model_digest": "a2af6cc3eb7fa8be8504abaf9b04e88f17a119ec3f04a3addf55f92841195f5a",
+  "official_admission_gate_passed": false,
+  "official_admission_gate": {
+    "required_calls": 40,
+    "strict_target_depth_calls": 0,
+    "stable_seed_blocks": 0,
+    "expected_actual_D": {
+      "target_k03": 1,
+      "target_k17": 2
+    }
+  },
+  "groups": {
+    "target_k03": {
+      "assigned": 20,
+      "observed": 20,
+      "semantic_measured": 20,
+      "format_valid": 20,
+      "proof_valid": 0,
+      "strict_valid": 0,
+      "instruction_fulfilled": 0,
+      "instruction_rate": 0.0,
+      "final_rule_label_matches_target": 20,
+      "errors_only_outside_final_ancestry": 16,
+      "selected_rule_ids": {
+        "k03": 20
+      },
+      "call_error_counts": {
+        "premise_counter_mismatch": 20,
+        "unreachable_fact": 4,
+        "wrong_atom": 20
+      },
+      "actual_depths": {
+        "unmeasured": 20
+      }
+    },
+    "target_k17": {
+      "assigned": 20,
+      "observed": 20,
+      "semantic_measured": 20,
+      "format_valid": 20,
+      "proof_valid": 0,
+      "strict_valid": 0,
+      "instruction_fulfilled": 0,
+      "instruction_rate": 0.0,
+      "final_rule_label_matches_target": 19,
+      "errors_only_outside_final_ancestry": 1,
+      "selected_rule_ids": {
+        "k03": 1,
+        "k17": 19
+      },
+      "call_error_counts": {
+        "premise_counter_mismatch": 20,
+        "wrong_atom": 20,
+        "unreachable_fact": 19
+      },
+      "actual_depths": {
+        "unmeasured": 20
+      }
+    }
+  },
+  "seed_rows": [
+    {
+      "seed": 580410664,
+      "ids_A0_A1_B0_B1": [
+        "k03",
+        "k03",
+        "k03",
+        "k17"
+      ],
+      "label_repeat_stable": false
+    },
+    {
+      "seed": 661935755,
+      "ids_A0_A1_B0_B1": [
+        "k03",
+        "k03",
+        "k17",
+        "k17"
+      ],
+      "label_repeat_stable": true
+    },
+    {
+      "seed": 209422594,
+      "ids_A0_A1_B0_B1": [
+        "k03",
+        "k03",
+        "k17",
+        "k17"
+      ],
+      "label_repeat_stable": true
+    },
+    {
+      "seed": 1790124989,
+      "ids_A0_A1_B0_B1": [
+        "k03",
+        "k03",
+        "k17",
+        "k17"
+      ],
+      "label_repeat_stable": true
+    },
+    {
+      "seed": 267101868,
+      "ids_A0_A1_B0_B1": [
+        "k03",
+        "k03",
+        "k17",
+        "k17"
+      ],
+      "label_repeat_stable": true
+    },
+    {
+      "seed": 752235971,
+      "ids_A0_A1_B0_B1": [
+        "k03",
+        "k03",
+        "k17",
+        "k17"
+      ],
+      "label_repeat_stable": true
+    },
+    {
+      "seed": 1292559482,
+      "ids_A0_A1_B0_B1": [
+        "k03",
+        "k03",
+        "k17",
+        "k17"
+      ],
+      "label_repeat_stable": true
+    },
+    {
+      "seed": 223674688,
+      "ids_A0_A1_B0_B1": [
+        "k03",
+        "k03",
+        "k17",
+        "k17"
+      ],
+      "label_repeat_stable": true
+    },
+    {
+      "seed": 860724506,
+      "ids_A0_A1_B0_B1": [
+        "k03",
+        "k03",
+        "k17",
+        "k17"
+      ],
+      "label_repeat_stable": true
+    },
+    {
+      "seed": 68285180,
+      "ids_A0_A1_B0_B1": [
+        "k03",
+        "k03",
+        "k17",
+        "k17"
+      ],
+      "label_repeat_stable": true
+    }
+  ],
+  "strata": {
+    "sequence": {
+      "ABBA": {
+        "target_k03": {
+          "assigned": 10,
+          "observed": 10,
+          "semantic_measured": 10,
+          "format_valid": 10,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 10,
+          "errors_only_outside_final_ancestry": 10,
+          "selected_rule_ids": {
+            "k03": 10
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 10,
+            "wrong_atom": 10
+          },
+          "actual_depths": {
+            "unmeasured": 10
+          }
+        },
+        "target_k17": {
+          "assigned": 10,
+          "observed": 10,
+          "semantic_measured": 10,
+          "format_valid": 10,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 10,
+          "errors_only_outside_final_ancestry": 0,
+          "selected_rule_ids": {
+            "k17": 10
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 10,
+            "unreachable_fact": 10,
+            "wrong_atom": 10
+          },
+          "actual_depths": {
+            "unmeasured": 10
+          }
+        }
+      },
+      "BAAB": {
+        "target_k03": {
+          "assigned": 10,
+          "observed": 10,
+          "semantic_measured": 10,
+          "format_valid": 10,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 10,
+          "errors_only_outside_final_ancestry": 6,
+          "selected_rule_ids": {
+            "k03": 10
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 10,
+            "unreachable_fact": 4,
+            "wrong_atom": 10
+          },
+          "actual_depths": {
+            "unmeasured": 10
+          }
+        },
+        "target_k17": {
+          "assigned": 10,
+          "observed": 10,
+          "semantic_measured": 10,
+          "format_valid": 10,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 9,
+          "errors_only_outside_final_ancestry": 1,
+          "selected_rule_ids": {
+            "k03": 1,
+            "k17": 9
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 10,
+            "wrong_atom": 10,
+            "unreachable_fact": 9
+          },
+          "actual_depths": {
+            "unmeasured": 10
+          }
+        }
+      }
+    },
+    "period": {
+      "0": {
+        "target_k03": {
+          "assigned": 5,
+          "observed": 5,
+          "semantic_measured": 5,
+          "format_valid": 5,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 5,
+          "errors_only_outside_final_ancestry": 5,
+          "selected_rule_ids": {
+            "k03": 5
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 5,
+            "wrong_atom": 5
+          },
+          "actual_depths": {
+            "unmeasured": 5
+          }
+        },
+        "target_k17": {
+          "assigned": 5,
+          "observed": 5,
+          "semantic_measured": 5,
+          "format_valid": 5,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 4,
+          "errors_only_outside_final_ancestry": 1,
+          "selected_rule_ids": {
+            "k03": 1,
+            "k17": 4
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 5,
+            "wrong_atom": 5,
+            "unreachable_fact": 4
+          },
+          "actual_depths": {
+            "unmeasured": 5
+          }
+        }
+      },
+      "1": {
+        "target_k03": {
+          "assigned": 5,
+          "observed": 5,
+          "semantic_measured": 5,
+          "format_valid": 5,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 5,
+          "errors_only_outside_final_ancestry": 3,
+          "selected_rule_ids": {
+            "k03": 5
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 5,
+            "unreachable_fact": 2,
+            "wrong_atom": 5
+          },
+          "actual_depths": {
+            "unmeasured": 5
+          }
+        },
+        "target_k17": {
+          "assigned": 5,
+          "observed": 5,
+          "semantic_measured": 5,
+          "format_valid": 5,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 5,
+          "errors_only_outside_final_ancestry": 0,
+          "selected_rule_ids": {
+            "k17": 5
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 5,
+            "unreachable_fact": 5,
+            "wrong_atom": 5
+          },
+          "actual_depths": {
+            "unmeasured": 5
+          }
+        }
+      },
+      "2": {
+        "target_k03": {
+          "assigned": 5,
+          "observed": 5,
+          "semantic_measured": 5,
+          "format_valid": 5,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 5,
+          "errors_only_outside_final_ancestry": 3,
+          "selected_rule_ids": {
+            "k03": 5
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 5,
+            "unreachable_fact": 2,
+            "wrong_atom": 5
+          },
+          "actual_depths": {
+            "unmeasured": 5
+          }
+        },
+        "target_k17": {
+          "assigned": 5,
+          "observed": 5,
+          "semantic_measured": 5,
+          "format_valid": 5,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 5,
+          "errors_only_outside_final_ancestry": 0,
+          "selected_rule_ids": {
+            "k17": 5
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 5,
+            "unreachable_fact": 5,
+            "wrong_atom": 5
+          },
+          "actual_depths": {
+            "unmeasured": 5
+          }
+        }
+      },
+      "3": {
+        "target_k03": {
+          "assigned": 5,
+          "observed": 5,
+          "semantic_measured": 5,
+          "format_valid": 5,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 5,
+          "errors_only_outside_final_ancestry": 5,
+          "selected_rule_ids": {
+            "k03": 5
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 5,
+            "wrong_atom": 5
+          },
+          "actual_depths": {
+            "unmeasured": 5
+          }
+        },
+        "target_k17": {
+          "assigned": 5,
+          "observed": 5,
+          "semantic_measured": 5,
+          "format_valid": 5,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 5,
+          "errors_only_outside_final_ancestry": 0,
+          "selected_rule_ids": {
+            "k17": 5
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 5,
+            "unreachable_fact": 5,
+            "wrong_atom": 5
+          },
+          "actual_depths": {
+            "unmeasured": 5
+          }
+        }
+      }
+    },
+    "previous_variant": {
+      "None": {
+        "target_k17": {
+          "assigned": 1,
+          "observed": 1,
+          "semantic_measured": 1,
+          "format_valid": 1,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 0,
+          "errors_only_outside_final_ancestry": 1,
+          "selected_rule_ids": {
+            "k03": 1
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 1,
+            "wrong_atom": 1
+          },
+          "actual_depths": {
+            "unmeasured": 1
+          }
+        }
+      },
+      "target_k03": {
+        "target_k03": {
+          "assigned": 7,
+          "observed": 7,
+          "semantic_measured": 7,
+          "format_valid": 7,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 7,
+          "errors_only_outside_final_ancestry": 5,
+          "selected_rule_ids": {
+            "k03": 7
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 7,
+            "unreachable_fact": 2,
+            "wrong_atom": 7
+          },
+          "actual_depths": {
+            "unmeasured": 7
+          }
+        },
+        "target_k17": {
+          "assigned": 12,
+          "observed": 12,
+          "semantic_measured": 12,
+          "format_valid": 12,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 12,
+          "errors_only_outside_final_ancestry": 0,
+          "selected_rule_ids": {
+            "k17": 12
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 12,
+            "unreachable_fact": 12,
+            "wrong_atom": 12
+          },
+          "actual_depths": {
+            "unmeasured": 12
+          }
+        }
+      },
+      "target_k17": {
+        "target_k03": {
+          "assigned": 13,
+          "observed": 13,
+          "semantic_measured": 13,
+          "format_valid": 13,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 13,
+          "errors_only_outside_final_ancestry": 11,
+          "selected_rule_ids": {
+            "k03": 13
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 13,
+            "unreachable_fact": 2,
+            "wrong_atom": 13
+          },
+          "actual_depths": {
+            "unmeasured": 13
+          }
+        },
+        "target_k17": {
+          "assigned": 7,
+          "observed": 7,
+          "semantic_measured": 7,
+          "format_valid": 7,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 7,
+          "errors_only_outside_final_ancestry": 0,
+          "selected_rule_ids": {
+            "k17": 7
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 7,
+            "unreachable_fact": 7,
+            "wrong_atom": 7
+          },
+          "actual_depths": {
+            "unmeasured": 7
+          }
+        }
+      }
+    },
+    "repeat_distance": {
+      "1": {
+        "target_k03": {
+          "assigned": 5,
+          "observed": 5,
+          "semantic_measured": 5,
+          "format_valid": 5,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 5,
+          "errors_only_outside_final_ancestry": 3,
+          "selected_rule_ids": {
+            "k03": 5
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 5,
+            "unreachable_fact": 2,
+            "wrong_atom": 5
+          },
+          "actual_depths": {
+            "unmeasured": 5
+          }
+        },
+        "target_k17": {
+          "assigned": 5,
+          "observed": 5,
+          "semantic_measured": 5,
+          "format_valid": 5,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 5,
+          "errors_only_outside_final_ancestry": 0,
+          "selected_rule_ids": {
+            "k17": 5
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 5,
+            "unreachable_fact": 5,
+            "wrong_atom": 5
+          },
+          "actual_depths": {
+            "unmeasured": 5
+          }
+        }
+      },
+      "3": {
+        "target_k03": {
+          "assigned": 5,
+          "observed": 5,
+          "semantic_measured": 5,
+          "format_valid": 5,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 5,
+          "errors_only_outside_final_ancestry": 5,
+          "selected_rule_ids": {
+            "k03": 5
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 5,
+            "wrong_atom": 5
+          },
+          "actual_depths": {
+            "unmeasured": 5
+          }
+        },
+        "target_k17": {
+          "assigned": 5,
+          "observed": 5,
+          "semantic_measured": 5,
+          "format_valid": 5,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 5,
+          "errors_only_outside_final_ancestry": 0,
+          "selected_rule_ids": {
+            "k17": 5
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 5,
+            "unreachable_fact": 5,
+            "wrong_atom": 5
+          },
+          "actual_depths": {
+            "unmeasured": 5
+          }
+        }
+      },
+      "None": {
+        "target_k03": {
+          "assigned": 10,
+          "observed": 10,
+          "semantic_measured": 10,
+          "format_valid": 10,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 10,
+          "errors_only_outside_final_ancestry": 8,
+          "selected_rule_ids": {
+            "k03": 10
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 10,
+            "unreachable_fact": 2,
+            "wrong_atom": 10
+          },
+          "actual_depths": {
+            "unmeasured": 10
+          }
+        },
+        "target_k17": {
+          "assigned": 10,
+          "observed": 10,
+          "semantic_measured": 10,
+          "format_valid": 10,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 9,
+          "errors_only_outside_final_ancestry": 1,
+          "selected_rule_ids": {
+            "k03": 1,
+            "k17": 9
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 10,
+            "wrong_atom": 10,
+            "unreachable_fact": 9
+          },
+          "actual_depths": {
+            "unmeasured": 10
+          }
+        }
+      }
+    },
+    "prompt_eval_cached_count": {
+      "0": {
+        "target_k03": {
+          "assigned": 1,
+          "observed": 1,
+          "semantic_measured": 1,
+          "format_valid": 1,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 1,
+          "errors_only_outside_final_ancestry": 0,
+          "selected_rule_ids": {
+            "k03": 1
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 1,
+            "unreachable_fact": 1,
+            "wrong_atom": 1
+          },
+          "actual_depths": {
+            "unmeasured": 1
+          }
+        },
+        "target_k17": {
+          "assigned": 1,
+          "observed": 1,
+          "semantic_measured": 1,
+          "format_valid": 1,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 0,
+          "errors_only_outside_final_ancestry": 1,
+          "selected_rule_ids": {
+            "k03": 1
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 1,
+            "wrong_atom": 1
+          },
+          "actual_depths": {
+            "unmeasured": 1
+          }
+        }
+      },
+      "402": {
+        "target_k03": {
+          "assigned": 19,
+          "observed": 19,
+          "semantic_measured": 19,
+          "format_valid": 19,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 19,
+          "errors_only_outside_final_ancestry": 16,
+          "selected_rule_ids": {
+            "k03": 19
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 19,
+            "unreachable_fact": 3,
+            "wrong_atom": 19
+          },
+          "actual_depths": {
+            "unmeasured": 19
+          }
+        },
+        "target_k17": {
+          "assigned": 19,
+          "observed": 19,
+          "semantic_measured": 19,
+          "format_valid": 19,
+          "proof_valid": 0,
+          "strict_valid": 0,
+          "instruction_fulfilled": 0,
+          "instruction_rate": 0.0,
+          "final_rule_label_matches_target": 19,
+          "errors_only_outside_final_ancestry": 0,
+          "selected_rule_ids": {
+            "k17": 19
+          },
+          "call_error_counts": {
+            "premise_counter_mismatch": 19,
+            "unreachable_fact": 19,
+            "wrong_atom": 19
+          },
+          "actual_depths": {
+            "unmeasured": 19
+          }
+        }
+      }
+    }
+  },
+  "rows": [
+    {
+      "id": "b00_p0_target_k17_r0",
+      "seed": 580410664,
+      "variant": "target_k17",
+      "repeat": 0,
+      "sequence": "BAAB",
+      "period": 0,
+      "previous_variant": null,
+      "repeat_distance": null,
+      "target_rule_id": "k17",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k03",
+        "selected_rule_position": 0,
+        "terminal_rank": 0,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 4,
+        "errors": [
+          "premise_counter_mismatch",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": false,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "N001"
+            ],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 3,
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N001",
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N003",
+          "N004"
+        ],
+        "error_nodes_inside": 0,
+        "error_nodes_outside": 2,
+        "errors_only_outside_final_ancestry": true
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "d5fcc4b9e91c89b505702a25e405b7fb88ba033aae594c8a59bebc8ea9d2793a",
+      "response_sha256": "1e71a44cdfeb509c6521cdc8959e49db7790ee21a0b5931747afd86a5e8a138c",
+      "prompt_eval_cached_count": 0
+    },
+    {
+      "id": "b00_p1_target_k03_r0",
+      "seed": 580410664,
+      "variant": "target_k03",
+      "repeat": 0,
+      "sequence": "BAAB",
+      "period": 1,
+      "previous_variant": "target_k17",
+      "repeat_distance": null,
+      "target_rule_id": "k03",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k03",
+        "selected_rule_position": 0,
+        "terminal_rank": 0,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 6,
+        "errors": [
+          "premise_counter_mismatch",
+          "unreachable_fact",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "n1",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 1,
+            "id": "n2",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 2,
+            "id": "n3",
+            "atom": "Cc",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 3,
+            "id": "n4",
+            "atom": "Ca",
+            "rule_id": "k03",
+            "parents": [
+              "n1"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 4,
+            "id": "n5",
+            "atom": "Cb",
+            "rule_id": "k03",
+            "parents": [
+              "n2"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 5,
+            "id": "n6",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "n3"
+            ],
+            "errors": [
+              "premise_counter_mismatch"
+            ],
+            "in_final_ancestry": true
+          }
+        ],
+        "final_ancestor_ids": [
+          "n3",
+          "n6"
+        ],
+        "outside_final_ancestry_ids": [
+          "n1",
+          "n2",
+          "n4",
+          "n5"
+        ],
+        "error_nodes_inside": 2,
+        "error_nodes_outside": 3,
+        "errors_only_outside_final_ancestry": false
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "n1",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "n2",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "n3",
+            "atom": "Cc",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "n4",
+            "atom": "Ca",
+            "rule_id": "k03",
+            "parents": [
+              "n1"
+            ]
+          },
+          {
+            "id": "n5",
+            "atom": "Cb",
+            "rule_id": "k03",
+            "parents": [
+              "n2"
+            ]
+          },
+          {
+            "id": "n6",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "n3"
+            ]
+          }
+        ],
+        "final_node_id": "n6"
+      },
+      "request_sha256": "a1039d35aa116342e87c042fc0dbb66daaaf12b159fe89e0ea4a66ecb2e355ef",
+      "response_sha256": "b5fd3c93b41a335db1de73c2d6308b4a6f088bf6b72dec7c72e836fbb19165d8",
+      "prompt_eval_cached_count": 0
+    },
+    {
+      "id": "b00_p2_target_k03_r1",
+      "seed": 580410664,
+      "variant": "target_k03",
+      "repeat": 1,
+      "sequence": "BAAB",
+      "period": 2,
+      "previous_variant": "target_k03",
+      "repeat_distance": 1,
+      "target_rule_id": "k03",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k03",
+        "selected_rule_position": 0,
+        "terminal_rank": 0,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 6,
+        "errors": [
+          "premise_counter_mismatch",
+          "unreachable_fact",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "n1",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 1,
+            "id": "n2",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 2,
+            "id": "n3",
+            "atom": "Cc",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 3,
+            "id": "n4",
+            "atom": "Ca",
+            "rule_id": "k03",
+            "parents": [
+              "n1"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 4,
+            "id": "n5",
+            "atom": "Cb",
+            "rule_id": "k03",
+            "parents": [
+              "n2"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 5,
+            "id": "n6",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "n3"
+            ],
+            "errors": [
+              "premise_counter_mismatch"
+            ],
+            "in_final_ancestry": true
+          }
+        ],
+        "final_ancestor_ids": [
+          "n3",
+          "n6"
+        ],
+        "outside_final_ancestry_ids": [
+          "n1",
+          "n2",
+          "n4",
+          "n5"
+        ],
+        "error_nodes_inside": 2,
+        "error_nodes_outside": 3,
+        "errors_only_outside_final_ancestry": false
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "n1",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "n2",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "n3",
+            "atom": "Cc",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "n4",
+            "atom": "Ca",
+            "rule_id": "k03",
+            "parents": [
+              "n1"
+            ]
+          },
+          {
+            "id": "n5",
+            "atom": "Cb",
+            "rule_id": "k03",
+            "parents": [
+              "n2"
+            ]
+          },
+          {
+            "id": "n6",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "n3"
+            ]
+          }
+        ],
+        "final_node_id": "n6"
+      },
+      "request_sha256": "a1039d35aa116342e87c042fc0dbb66daaaf12b159fe89e0ea4a66ecb2e355ef",
+      "response_sha256": "2dd324a346a36338e3792f9586243f7ed4fe381e77ca57a421c6b9641406e36d",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b00_p3_target_k17_r1",
+      "seed": 580410664,
+      "variant": "target_k17",
+      "repeat": 1,
+      "sequence": "BAAB",
+      "period": 3,
+      "previous_variant": "target_k03",
+      "repeat_distance": 3,
+      "target_rule_id": "k17",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k17",
+        "selected_rule_position": 1,
+        "terminal_rank": 1,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 6,
+        "errors": [
+          "premise_counter_mismatch",
+          "unreachable_fact",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": [],
+            "errors": [
+              "premise_counter_mismatch"
+            ],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 3,
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 4,
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k03",
+            "parents": [
+              "N003"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 5,
+            "id": "N006",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": [
+              "N002"
+            ],
+            "errors": [
+              "premise_counter_mismatch"
+            ],
+            "in_final_ancestry": true
+          }
+        ],
+        "final_ancestor_ids": [
+          "N002",
+          "N006"
+        ],
+        "outside_final_ancestry_ids": [
+          "N001",
+          "N003",
+          "N004",
+          "N005"
+        ],
+        "error_nodes_inside": 2,
+        "error_nodes_outside": 3,
+        "errors_only_outside_final_ancestry": false
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": []
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k03",
+            "parents": [
+              "N003"
+            ]
+          },
+          {
+            "id": "N006",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": [
+              "N002"
+            ]
+          }
+        ],
+        "final_node_id": "N006"
+      },
+      "request_sha256": "d5fcc4b9e91c89b505702a25e405b7fb88ba033aae594c8a59bebc8ea9d2793a",
+      "response_sha256": "de03277067c07edd0e33b5353ad854b362e5880791ac03b98b0721e9a637b2ad",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b01_p0_target_k03_r0",
+      "seed": 752235971,
+      "variant": "target_k03",
+      "repeat": 0,
+      "sequence": "ABBA",
+      "period": 0,
+      "previous_variant": "target_k17",
+      "repeat_distance": null,
+      "target_rule_id": "k03",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k03",
+        "selected_rule_position": 0,
+        "terminal_rank": 0,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 3,
+        "errors": [
+          "premise_counter_mismatch",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "n001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 1,
+            "id": "n002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "n001"
+            ],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "n003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "n001"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "n001",
+          "n002"
+        ],
+        "outside_final_ancestry_ids": [
+          "n003"
+        ],
+        "error_nodes_inside": 0,
+        "error_nodes_outside": 1,
+        "errors_only_outside_final_ancestry": true
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "n001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "n002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "n001"
+            ]
+          },
+          {
+            "id": "n003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "n001"
+            ]
+          }
+        ],
+        "final_node_id": "n002"
+      },
+      "request_sha256": "0092bf20cc7a6e270b4077ce291f73952e730b8e368e38ea982241e32109bee7",
+      "response_sha256": "07156cfdeda8327e03b6bddd2eb4d11e20b3a85ef4808f73cac13fff1f819089",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b01_p1_target_k17_r0",
+      "seed": 752235971,
+      "variant": "target_k17",
+      "repeat": 0,
+      "sequence": "ABBA",
+      "period": 1,
+      "previous_variant": "target_k03",
+      "repeat_distance": null,
+      "target_rule_id": "k17",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k17",
+        "selected_rule_position": 1,
+        "terminal_rank": 1,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 5,
+        "errors": [
+          "premise_counter_mismatch",
+          "unreachable_fact",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": [],
+            "errors": [
+              "premise_counter_mismatch"
+            ],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 3,
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 4,
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N003"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N001",
+          "N003",
+          "N004",
+          "N005"
+        ],
+        "error_nodes_inside": 1,
+        "error_nodes_outside": 3,
+        "errors_only_outside_final_ancestry": false
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": []
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N003"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "8f02149d5c2ebe3002ecf91ea54a4e956c06a86fb09b6f12415ff96fe37be368",
+      "response_sha256": "3fa1a878b72302b1a3ec368d3006fedb98a482dad745598acc5fa318e555d7e9",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b01_p2_target_k17_r1",
+      "seed": 752235971,
+      "variant": "target_k17",
+      "repeat": 1,
+      "sequence": "ABBA",
+      "period": 2,
+      "previous_variant": "target_k17",
+      "repeat_distance": 1,
+      "target_rule_id": "k17",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k17",
+        "selected_rule_position": 1,
+        "terminal_rank": 1,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 5,
+        "errors": [
+          "premise_counter_mismatch",
+          "unreachable_fact",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": [],
+            "errors": [
+              "premise_counter_mismatch"
+            ],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 3,
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 4,
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N003"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N001",
+          "N003",
+          "N004",
+          "N005"
+        ],
+        "error_nodes_inside": 1,
+        "error_nodes_outside": 3,
+        "errors_only_outside_final_ancestry": false
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": []
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N003"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "8f02149d5c2ebe3002ecf91ea54a4e956c06a86fb09b6f12415ff96fe37be368",
+      "response_sha256": "4eb260154c8bd1d169539544360a4225705b681fcc3b15b40f3e4249758e7aa8",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b01_p3_target_k03_r1",
+      "seed": 752235971,
+      "variant": "target_k03",
+      "repeat": 1,
+      "sequence": "ABBA",
+      "period": 3,
+      "previous_variant": "target_k17",
+      "repeat_distance": 3,
+      "target_rule_id": "k03",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k03",
+        "selected_rule_position": 0,
+        "terminal_rank": 0,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 3,
+        "errors": [
+          "premise_counter_mismatch",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "n001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 1,
+            "id": "n002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "n001"
+            ],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "n003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "n001"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "n001",
+          "n002"
+        ],
+        "outside_final_ancestry_ids": [
+          "n003"
+        ],
+        "error_nodes_inside": 0,
+        "error_nodes_outside": 1,
+        "errors_only_outside_final_ancestry": true
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "n001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "n002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "n001"
+            ]
+          },
+          {
+            "id": "n003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "n001"
+            ]
+          }
+        ],
+        "final_node_id": "n002"
+      },
+      "request_sha256": "0092bf20cc7a6e270b4077ce291f73952e730b8e368e38ea982241e32109bee7",
+      "response_sha256": "00b3b023f82b1ec5ec11a5ef1bf3aff75532783bbd9f0d7bf57359e8bf92d972",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b02_p0_target_k17_r0",
+      "seed": 661935755,
+      "variant": "target_k17",
+      "repeat": 0,
+      "sequence": "BAAB",
+      "period": 0,
+      "previous_variant": "target_k03",
+      "repeat_distance": null,
+      "target_rule_id": "k17",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k17",
+        "selected_rule_position": 1,
+        "terminal_rank": 1,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 5,
+        "errors": [
+          "premise_counter_mismatch",
+          "unreachable_fact",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": [],
+            "errors": [
+              "premise_counter_mismatch"
+            ],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 3,
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 4,
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N003"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N001",
+          "N003",
+          "N004",
+          "N005"
+        ],
+        "error_nodes_inside": 1,
+        "error_nodes_outside": 3,
+        "errors_only_outside_final_ancestry": false
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": []
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N003"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "90b93a1f4a462017583bf72b40e01072d9abbc7644e9fc2e3f228660f1df8f84",
+      "response_sha256": "695e5f7a1c4bb80437ca3b9907df91827fe50a21b18eb03830be604bf2814f9c",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b02_p1_target_k03_r0",
+      "seed": 661935755,
+      "variant": "target_k03",
+      "repeat": 0,
+      "sequence": "BAAB",
+      "period": 1,
+      "previous_variant": "target_k17",
+      "repeat_distance": null,
+      "target_rule_id": "k03",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k03",
+        "selected_rule_position": 0,
+        "terminal_rank": 0,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 3,
+        "errors": [
+          "premise_counter_mismatch",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "n001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 1,
+            "id": "n002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "n001"
+            ],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "n003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "n001"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "n001",
+          "n002"
+        ],
+        "outside_final_ancestry_ids": [
+          "n003"
+        ],
+        "error_nodes_inside": 0,
+        "error_nodes_outside": 1,
+        "errors_only_outside_final_ancestry": true
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "n001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "n002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "n001"
+            ]
+          },
+          {
+            "id": "n003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "n001"
+            ]
+          }
+        ],
+        "final_node_id": "n002"
+      },
+      "request_sha256": "077990aab4344df428fdc27c9cfee05cce1c9f94d0bcee384daab4f15c6787bd",
+      "response_sha256": "0cc038755a17c639c149693d059c4c9359d77fc180922350c60d6ece1046a494",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b02_p2_target_k03_r1",
+      "seed": 661935755,
+      "variant": "target_k03",
+      "repeat": 1,
+      "sequence": "BAAB",
+      "period": 2,
+      "previous_variant": "target_k03",
+      "repeat_distance": 1,
+      "target_rule_id": "k03",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k03",
+        "selected_rule_position": 0,
+        "terminal_rank": 0,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 3,
+        "errors": [
+          "premise_counter_mismatch",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "n001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 1,
+            "id": "n002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "n001"
+            ],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "n003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "n001"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "n001",
+          "n002"
+        ],
+        "outside_final_ancestry_ids": [
+          "n003"
+        ],
+        "error_nodes_inside": 0,
+        "error_nodes_outside": 1,
+        "errors_only_outside_final_ancestry": true
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "n001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "n002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "n001"
+            ]
+          },
+          {
+            "id": "n003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "n001"
+            ]
+          }
+        ],
+        "final_node_id": "n002"
+      },
+      "request_sha256": "077990aab4344df428fdc27c9cfee05cce1c9f94d0bcee384daab4f15c6787bd",
+      "response_sha256": "91b0a6aa8140c486731b1cf8d45eb17fcbbdc306a6319fda642dbc72693cd323",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b02_p3_target_k17_r1",
+      "seed": 661935755,
+      "variant": "target_k17",
+      "repeat": 1,
+      "sequence": "BAAB",
+      "period": 3,
+      "previous_variant": "target_k03",
+      "repeat_distance": 3,
+      "target_rule_id": "k17",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k17",
+        "selected_rule_position": 1,
+        "terminal_rank": 1,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 5,
+        "errors": [
+          "premise_counter_mismatch",
+          "unreachable_fact",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": [],
+            "errors": [
+              "premise_counter_mismatch"
+            ],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 3,
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 4,
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N003"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N001",
+          "N003",
+          "N004",
+          "N005"
+        ],
+        "error_nodes_inside": 1,
+        "error_nodes_outside": 3,
+        "errors_only_outside_final_ancestry": false
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": []
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N003"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "90b93a1f4a462017583bf72b40e01072d9abbc7644e9fc2e3f228660f1df8f84",
+      "response_sha256": "63379ae41f3c55a2f0adaf9d7ea9a464d014413deeb1ed22fc7cc8b59aedfe9d",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b03_p0_target_k03_r0",
+      "seed": 223674688,
+      "variant": "target_k03",
+      "repeat": 0,
+      "sequence": "ABBA",
+      "period": 0,
+      "previous_variant": "target_k17",
+      "repeat_distance": null,
+      "target_rule_id": "k03",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k03",
+        "selected_rule_position": 0,
+        "terminal_rank": 0,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 3,
+        "errors": [
+          "premise_counter_mismatch",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "N001"
+            ],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N001",
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N003"
+        ],
+        "error_nodes_inside": 0,
+        "error_nodes_outside": 1,
+        "errors_only_outside_final_ancestry": true
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N001"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "ec621dcf712b221e1d343a4041d2dcefae6f994690ebdb7e08c0441c90c87e38",
+      "response_sha256": "046ad0ab3cdd3cb4091ea824f75a3193ab405d725c54e9a042954224376ec160",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b03_p1_target_k17_r0",
+      "seed": 223674688,
+      "variant": "target_k17",
+      "repeat": 0,
+      "sequence": "ABBA",
+      "period": 1,
+      "previous_variant": "target_k03",
+      "repeat_distance": null,
+      "target_rule_id": "k17",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k17",
+        "selected_rule_position": 1,
+        "terminal_rank": 1,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 5,
+        "errors": [
+          "premise_counter_mismatch",
+          "unreachable_fact",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": [],
+            "errors": [
+              "premise_counter_mismatch"
+            ],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 3,
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 4,
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N003"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N001",
+          "N003",
+          "N004",
+          "N005"
+        ],
+        "error_nodes_inside": 1,
+        "error_nodes_outside": 3,
+        "errors_only_outside_final_ancestry": false
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": []
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N003"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "6f85afc9998ecda641921081f3af236a20140cdb329d806bc4d616ef35c929a8",
+      "response_sha256": "30f2c4b25ee8af1bf66e83e6b81ba72044422a35833ef96665de1609b1993f58",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b03_p2_target_k17_r1",
+      "seed": 223674688,
+      "variant": "target_k17",
+      "repeat": 1,
+      "sequence": "ABBA",
+      "period": 2,
+      "previous_variant": "target_k17",
+      "repeat_distance": 1,
+      "target_rule_id": "k17",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k17",
+        "selected_rule_position": 1,
+        "terminal_rank": 1,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 5,
+        "errors": [
+          "premise_counter_mismatch",
+          "unreachable_fact",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": [],
+            "errors": [
+              "premise_counter_mismatch"
+            ],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 3,
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 4,
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N003"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N001",
+          "N003",
+          "N004",
+          "N005"
+        ],
+        "error_nodes_inside": 1,
+        "error_nodes_outside": 3,
+        "errors_only_outside_final_ancestry": false
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": []
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N003"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "6f85afc9998ecda641921081f3af236a20140cdb329d806bc4d616ef35c929a8",
+      "response_sha256": "efa15a9fbc577f71e030e4178433e58738836037f0e73888db542912cd3e0053",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b03_p3_target_k03_r1",
+      "seed": 223674688,
+      "variant": "target_k03",
+      "repeat": 1,
+      "sequence": "ABBA",
+      "period": 3,
+      "previous_variant": "target_k17",
+      "repeat_distance": 3,
+      "target_rule_id": "k03",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k03",
+        "selected_rule_position": 0,
+        "terminal_rank": 0,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 3,
+        "errors": [
+          "premise_counter_mismatch",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "N001"
+            ],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N001",
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N003"
+        ],
+        "error_nodes_inside": 0,
+        "error_nodes_outside": 1,
+        "errors_only_outside_final_ancestry": true
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N001"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "ec621dcf712b221e1d343a4041d2dcefae6f994690ebdb7e08c0441c90c87e38",
+      "response_sha256": "98795299d6c9f0ac88e37ae7d0ebf3dbfbf19a66fe0b8e6de0497cfacd735b9c",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b04_p0_target_k17_r0",
+      "seed": 209422594,
+      "variant": "target_k17",
+      "repeat": 0,
+      "sequence": "BAAB",
+      "period": 0,
+      "previous_variant": "target_k03",
+      "repeat_distance": null,
+      "target_rule_id": "k17",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k17",
+        "selected_rule_position": 1,
+        "terminal_rank": 1,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 5,
+        "errors": [
+          "premise_counter_mismatch",
+          "unreachable_fact",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": [],
+            "errors": [
+              "premise_counter_mismatch"
+            ],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 3,
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 4,
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k03",
+            "parents": [
+              "N003"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N001",
+          "N003",
+          "N004",
+          "N005"
+        ],
+        "error_nodes_inside": 1,
+        "error_nodes_outside": 3,
+        "errors_only_outside_final_ancestry": false
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": []
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k03",
+            "parents": [
+              "N003"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "f2ad38fda52fc28e5547ee9f47b6dbaed6643b722e27f3f378a2651bc08d760d",
+      "response_sha256": "4309f601963d719f428584ffd722eba2ce9ce13868dd994e9255467d166a3248",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b04_p1_target_k03_r0",
+      "seed": 209422594,
+      "variant": "target_k03",
+      "repeat": 0,
+      "sequence": "BAAB",
+      "period": 1,
+      "previous_variant": "target_k17",
+      "repeat_distance": null,
+      "target_rule_id": "k03",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k03",
+        "selected_rule_position": 0,
+        "terminal_rank": 0,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 6,
+        "errors": [
+          "premise_counter_mismatch",
+          "unreachable_fact",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cc",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 3,
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k03",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 4,
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k03",
+            "parents": [
+              "N002"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 5,
+            "id": "N006",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "N003"
+            ],
+            "errors": [
+              "premise_counter_mismatch"
+            ],
+            "in_final_ancestry": true
+          }
+        ],
+        "final_ancestor_ids": [
+          "N003",
+          "N006"
+        ],
+        "outside_final_ancestry_ids": [
+          "N001",
+          "N002",
+          "N004",
+          "N005"
+        ],
+        "error_nodes_inside": 2,
+        "error_nodes_outside": 3,
+        "errors_only_outside_final_ancestry": false
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N003",
+            "atom": "Cc",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k03",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k03",
+            "parents": [
+              "N002"
+            ]
+          },
+          {
+            "id": "N006",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "N003"
+            ]
+          }
+        ],
+        "final_node_id": "N006"
+      },
+      "request_sha256": "41e7790b10f398ec96775762da843099f9222b24882218dfe8b17ed47b645060",
+      "response_sha256": "886ccf506a68a93ee0c92f79f4252e12262cd08782f80e577d3e1fc5cddc2abd",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b04_p2_target_k03_r1",
+      "seed": 209422594,
+      "variant": "target_k03",
+      "repeat": 1,
+      "sequence": "BAAB",
+      "period": 2,
+      "previous_variant": "target_k03",
+      "repeat_distance": 1,
+      "target_rule_id": "k03",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k03",
+        "selected_rule_position": 0,
+        "terminal_rank": 0,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 6,
+        "errors": [
+          "premise_counter_mismatch",
+          "unreachable_fact",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cc",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 3,
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k03",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 4,
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k03",
+            "parents": [
+              "N002"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 5,
+            "id": "N006",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "N003"
+            ],
+            "errors": [
+              "premise_counter_mismatch"
+            ],
+            "in_final_ancestry": true
+          }
+        ],
+        "final_ancestor_ids": [
+          "N003",
+          "N006"
+        ],
+        "outside_final_ancestry_ids": [
+          "N001",
+          "N002",
+          "N004",
+          "N005"
+        ],
+        "error_nodes_inside": 2,
+        "error_nodes_outside": 3,
+        "errors_only_outside_final_ancestry": false
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N003",
+            "atom": "Cc",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k03",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k03",
+            "parents": [
+              "N002"
+            ]
+          },
+          {
+            "id": "N006",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "N003"
+            ]
+          }
+        ],
+        "final_node_id": "N006"
+      },
+      "request_sha256": "41e7790b10f398ec96775762da843099f9222b24882218dfe8b17ed47b645060",
+      "response_sha256": "920a044a9f19ba7929358a8035320f84bb9761fe0ab1b1ed9d94f002075b63fb",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b04_p3_target_k17_r1",
+      "seed": 209422594,
+      "variant": "target_k17",
+      "repeat": 1,
+      "sequence": "BAAB",
+      "period": 3,
+      "previous_variant": "target_k03",
+      "repeat_distance": 3,
+      "target_rule_id": "k17",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k17",
+        "selected_rule_position": 1,
+        "terminal_rank": 1,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 5,
+        "errors": [
+          "premise_counter_mismatch",
+          "unreachable_fact",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": [],
+            "errors": [
+              "premise_counter_mismatch"
+            ],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 3,
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 4,
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k03",
+            "parents": [
+              "N003"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N001",
+          "N003",
+          "N004",
+          "N005"
+        ],
+        "error_nodes_inside": 1,
+        "error_nodes_outside": 3,
+        "errors_only_outside_final_ancestry": false
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": []
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k03",
+            "parents": [
+              "N003"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "f2ad38fda52fc28e5547ee9f47b6dbaed6643b722e27f3f378a2651bc08d760d",
+      "response_sha256": "2fada8c9802a7b4b7fa367fc74ebbc501c0e63958605b6e73c48ca72188a9652",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b05_p0_target_k17_r0",
+      "seed": 1292559482,
+      "variant": "target_k17",
+      "repeat": 0,
+      "sequence": "BAAB",
+      "period": 0,
+      "previous_variant": "target_k17",
+      "repeat_distance": null,
+      "target_rule_id": "k17",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k17",
+        "selected_rule_position": 1,
+        "terminal_rank": 1,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 5,
+        "errors": [
+          "premise_counter_mismatch",
+          "unreachable_fact",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": [],
+            "errors": [
+              "premise_counter_mismatch"
+            ],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 3,
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 4,
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k03",
+            "parents": [
+              "N003"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N001",
+          "N003",
+          "N004",
+          "N005"
+        ],
+        "error_nodes_inside": 1,
+        "error_nodes_outside": 3,
+        "errors_only_outside_final_ancestry": false
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": []
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k03",
+            "parents": [
+              "N003"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "a1eca0a383e1c55f043482176d0d8dadc86ab791e2ee5528ba4ae8118eb4c5b5",
+      "response_sha256": "9a1f80d41cc167f48df3d31ee1da54c8fff91ffd43a1df23d3498d335789f63c",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b05_p1_target_k03_r0",
+      "seed": 1292559482,
+      "variant": "target_k03",
+      "repeat": 0,
+      "sequence": "BAAB",
+      "period": 1,
+      "previous_variant": "target_k17",
+      "repeat_distance": null,
+      "target_rule_id": "k03",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k03",
+        "selected_rule_position": 0,
+        "terminal_rank": 0,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 3,
+        "errors": [
+          "premise_counter_mismatch",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "n001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 1,
+            "id": "n002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "n001"
+            ],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "n003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "n001"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "n001",
+          "n002"
+        ],
+        "outside_final_ancestry_ids": [
+          "n003"
+        ],
+        "error_nodes_inside": 0,
+        "error_nodes_outside": 1,
+        "errors_only_outside_final_ancestry": true
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "n001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "n002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "n001"
+            ]
+          },
+          {
+            "id": "n003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "n001"
+            ]
+          }
+        ],
+        "final_node_id": "n002"
+      },
+      "request_sha256": "543ef904c16d09250f40ce21751f53ea9b50b7888834219ef082f63a13cc2436",
+      "response_sha256": "bf8ab7f37ead464dc6cba98344a6cf935daa2604a35dce1ecb2d0c6818c507f2",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b05_p2_target_k03_r1",
+      "seed": 1292559482,
+      "variant": "target_k03",
+      "repeat": 1,
+      "sequence": "BAAB",
+      "period": 2,
+      "previous_variant": "target_k03",
+      "repeat_distance": 1,
+      "target_rule_id": "k03",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k03",
+        "selected_rule_position": 0,
+        "terminal_rank": 0,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 3,
+        "errors": [
+          "premise_counter_mismatch",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "n001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 1,
+            "id": "n002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "n001"
+            ],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "n003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "n001"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "n001",
+          "n002"
+        ],
+        "outside_final_ancestry_ids": [
+          "n003"
+        ],
+        "error_nodes_inside": 0,
+        "error_nodes_outside": 1,
+        "errors_only_outside_final_ancestry": true
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "n001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "n002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "n001"
+            ]
+          },
+          {
+            "id": "n003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "n001"
+            ]
+          }
+        ],
+        "final_node_id": "n002"
+      },
+      "request_sha256": "543ef904c16d09250f40ce21751f53ea9b50b7888834219ef082f63a13cc2436",
+      "response_sha256": "dad8fb31a92a086498cd1c1f6951c74f9aa3d42d56f879c589135e4ffde490ef",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b05_p3_target_k17_r1",
+      "seed": 1292559482,
+      "variant": "target_k17",
+      "repeat": 1,
+      "sequence": "BAAB",
+      "period": 3,
+      "previous_variant": "target_k03",
+      "repeat_distance": 3,
+      "target_rule_id": "k17",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k17",
+        "selected_rule_position": 1,
+        "terminal_rank": 1,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 5,
+        "errors": [
+          "premise_counter_mismatch",
+          "unreachable_fact",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": [],
+            "errors": [
+              "premise_counter_mismatch"
+            ],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 3,
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 4,
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k03",
+            "parents": [
+              "N003"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N001",
+          "N003",
+          "N004",
+          "N005"
+        ],
+        "error_nodes_inside": 1,
+        "error_nodes_outside": 3,
+        "errors_only_outside_final_ancestry": false
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": []
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k03",
+            "parents": [
+              "N003"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "a1eca0a383e1c55f043482176d0d8dadc86ab791e2ee5528ba4ae8118eb4c5b5",
+      "response_sha256": "127c8dde2ae4f3c03b7996f439e7ff6ed8df90b7f6cf8c9b789bae2f7aedd97e",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b06_p0_target_k17_r0",
+      "seed": 1790124989,
+      "variant": "target_k17",
+      "repeat": 0,
+      "sequence": "BAAB",
+      "period": 0,
+      "previous_variant": "target_k17",
+      "repeat_distance": null,
+      "target_rule_id": "k17",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k17",
+        "selected_rule_position": 1,
+        "terminal_rank": 1,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 5,
+        "errors": [
+          "premise_counter_mismatch",
+          "unreachable_fact",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": [],
+            "errors": [
+              "premise_counter_mismatch"
+            ],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 3,
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 4,
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N003"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N001",
+          "N003",
+          "N004",
+          "N005"
+        ],
+        "error_nodes_inside": 1,
+        "error_nodes_outside": 3,
+        "errors_only_outside_final_ancestry": false
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": []
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N003"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "094f3803800d921080c14f53ad17f3c02c61576490cca7ff04f0efe39fecc9ba",
+      "response_sha256": "e8c46e76ca8b7ce11e8e392f8265de7006ff20359dafe0e1f472a1bfc240eba7",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b06_p1_target_k03_r0",
+      "seed": 1790124989,
+      "variant": "target_k03",
+      "repeat": 0,
+      "sequence": "BAAB",
+      "period": 1,
+      "previous_variant": "target_k17",
+      "repeat_distance": null,
+      "target_rule_id": "k03",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k03",
+        "selected_rule_position": 0,
+        "terminal_rank": 0,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 3,
+        "errors": [
+          "premise_counter_mismatch",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "N001"
+            ],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N001",
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N003"
+        ],
+        "error_nodes_inside": 0,
+        "error_nodes_outside": 1,
+        "errors_only_outside_final_ancestry": true
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N001"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "82b0617706aa72f8ebf4c75400b99848402a7f2cce3b4c6c43b9c9a8fbca5413",
+      "response_sha256": "0e2e467700801301fbf6e6ade8741bd6c2b08596f8356dc80213a0a02f4e8f09",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b06_p2_target_k03_r1",
+      "seed": 1790124989,
+      "variant": "target_k03",
+      "repeat": 1,
+      "sequence": "BAAB",
+      "period": 2,
+      "previous_variant": "target_k03",
+      "repeat_distance": 1,
+      "target_rule_id": "k03",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k03",
+        "selected_rule_position": 0,
+        "terminal_rank": 0,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 3,
+        "errors": [
+          "premise_counter_mismatch",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "N001"
+            ],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N001",
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N003"
+        ],
+        "error_nodes_inside": 0,
+        "error_nodes_outside": 1,
+        "errors_only_outside_final_ancestry": true
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N001"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "82b0617706aa72f8ebf4c75400b99848402a7f2cce3b4c6c43b9c9a8fbca5413",
+      "response_sha256": "02cc932c5e7b3ccc9e9e4c1d7ac5299bad295dd644c8a1454a3ec662b1b240ce",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b06_p3_target_k17_r1",
+      "seed": 1790124989,
+      "variant": "target_k17",
+      "repeat": 1,
+      "sequence": "BAAB",
+      "period": 3,
+      "previous_variant": "target_k03",
+      "repeat_distance": 3,
+      "target_rule_id": "k17",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k17",
+        "selected_rule_position": 1,
+        "terminal_rank": 1,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 5,
+        "errors": [
+          "premise_counter_mismatch",
+          "unreachable_fact",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": [],
+            "errors": [
+              "premise_counter_mismatch"
+            ],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 3,
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 4,
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N003"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N001",
+          "N003",
+          "N004",
+          "N005"
+        ],
+        "error_nodes_inside": 1,
+        "error_nodes_outside": 3,
+        "errors_only_outside_final_ancestry": false
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": []
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N003"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "094f3803800d921080c14f53ad17f3c02c61576490cca7ff04f0efe39fecc9ba",
+      "response_sha256": "bd3ab0a45c94d5cdbbc13a39e2881a8da09a827cc7c44cbbfd1df7b3cb6cf27b",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b07_p0_target_k03_r0",
+      "seed": 860724506,
+      "variant": "target_k03",
+      "repeat": 0,
+      "sequence": "ABBA",
+      "period": 0,
+      "previous_variant": "target_k17",
+      "repeat_distance": null,
+      "target_rule_id": "k03",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k03",
+        "selected_rule_position": 0,
+        "terminal_rank": 0,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 3,
+        "errors": [
+          "premise_counter_mismatch",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "n001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 1,
+            "id": "n002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "n001"
+            ],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "n003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "n001"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "n001",
+          "n002"
+        ],
+        "outside_final_ancestry_ids": [
+          "n003"
+        ],
+        "error_nodes_inside": 0,
+        "error_nodes_outside": 1,
+        "errors_only_outside_final_ancestry": true
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "n001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "n002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "n001"
+            ]
+          },
+          {
+            "id": "n003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "n001"
+            ]
+          }
+        ],
+        "final_node_id": "n002"
+      },
+      "request_sha256": "de0cca8b34710de28b722a50fa5cf8ad5e3378b20751a929bcb40cf230073442",
+      "response_sha256": "660c9ba5c5a25c64254e6106480e820323899375c969f57d525caf45d2d76e48",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b07_p1_target_k17_r0",
+      "seed": 860724506,
+      "variant": "target_k17",
+      "repeat": 0,
+      "sequence": "ABBA",
+      "period": 1,
+      "previous_variant": "target_k03",
+      "repeat_distance": null,
+      "target_rule_id": "k17",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k17",
+        "selected_rule_position": 1,
+        "terminal_rank": 1,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 5,
+        "errors": [
+          "premise_counter_mismatch",
+          "unreachable_fact",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": [],
+            "errors": [
+              "premise_counter_mismatch"
+            ],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 3,
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 4,
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k03",
+            "parents": [
+              "N003"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N001",
+          "N003",
+          "N004",
+          "N005"
+        ],
+        "error_nodes_inside": 1,
+        "error_nodes_outside": 3,
+        "errors_only_outside_final_ancestry": false
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": []
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k03",
+            "parents": [
+              "N003"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "0e3b98fb52f205738dc7114e2a29b4c17145fac47dbe2f547198857017097307",
+      "response_sha256": "615ee7ff2a9c658a537f559efa26195516e439f669673138b79dd30b702a6939",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b07_p2_target_k17_r1",
+      "seed": 860724506,
+      "variant": "target_k17",
+      "repeat": 1,
+      "sequence": "ABBA",
+      "period": 2,
+      "previous_variant": "target_k17",
+      "repeat_distance": 1,
+      "target_rule_id": "k17",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k17",
+        "selected_rule_position": 1,
+        "terminal_rank": 1,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 5,
+        "errors": [
+          "premise_counter_mismatch",
+          "unreachable_fact",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": [],
+            "errors": [
+              "premise_counter_mismatch"
+            ],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 3,
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 4,
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k03",
+            "parents": [
+              "N003"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N001",
+          "N003",
+          "N004",
+          "N005"
+        ],
+        "error_nodes_inside": 1,
+        "error_nodes_outside": 3,
+        "errors_only_outside_final_ancestry": false
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": []
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k03",
+            "parents": [
+              "N003"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "0e3b98fb52f205738dc7114e2a29b4c17145fac47dbe2f547198857017097307",
+      "response_sha256": "3cd29170180aef6538b1f20bc848524d362a42b0ba6785feeedebfc3c149ba1c",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b07_p3_target_k03_r1",
+      "seed": 860724506,
+      "variant": "target_k03",
+      "repeat": 1,
+      "sequence": "ABBA",
+      "period": 3,
+      "previous_variant": "target_k17",
+      "repeat_distance": 3,
+      "target_rule_id": "k03",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k03",
+        "selected_rule_position": 0,
+        "terminal_rank": 0,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 3,
+        "errors": [
+          "premise_counter_mismatch",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "n001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 1,
+            "id": "n002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "n001"
+            ],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "n003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "n001"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "n001",
+          "n002"
+        ],
+        "outside_final_ancestry_ids": [
+          "n003"
+        ],
+        "error_nodes_inside": 0,
+        "error_nodes_outside": 1,
+        "errors_only_outside_final_ancestry": true
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "n001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "n002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "n001"
+            ]
+          },
+          {
+            "id": "n003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "n001"
+            ]
+          }
+        ],
+        "final_node_id": "n002"
+      },
+      "request_sha256": "de0cca8b34710de28b722a50fa5cf8ad5e3378b20751a929bcb40cf230073442",
+      "response_sha256": "ef578ab583759285209b692d63c4654c83ea9fc99f564369799e7fdbd0bb315a",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b08_p0_target_k03_r0",
+      "seed": 267101868,
+      "variant": "target_k03",
+      "repeat": 0,
+      "sequence": "ABBA",
+      "period": 0,
+      "previous_variant": "target_k03",
+      "repeat_distance": null,
+      "target_rule_id": "k03",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k03",
+        "selected_rule_position": 0,
+        "terminal_rank": 0,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 3,
+        "errors": [
+          "premise_counter_mismatch",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "N001"
+            ],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N001",
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N003"
+        ],
+        "error_nodes_inside": 0,
+        "error_nodes_outside": 1,
+        "errors_only_outside_final_ancestry": true
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N001"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "8587825b4c58f9112f11dae97d3ff2fd19a84e2a0dc42571a7ccadac0e9af71f",
+      "response_sha256": "1ff858d8dfab6e368d276f3090f1d47c347c159561ce468daf513e0b4ec6e258",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b08_p1_target_k17_r0",
+      "seed": 267101868,
+      "variant": "target_k17",
+      "repeat": 0,
+      "sequence": "ABBA",
+      "period": 1,
+      "previous_variant": "target_k03",
+      "repeat_distance": null,
+      "target_rule_id": "k17",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k17",
+        "selected_rule_position": 1,
+        "terminal_rank": 1,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 5,
+        "errors": [
+          "premise_counter_mismatch",
+          "unreachable_fact",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": [],
+            "errors": [
+              "premise_counter_mismatch"
+            ],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 3,
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 4,
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N003"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N001",
+          "N003",
+          "N004",
+          "N005"
+        ],
+        "error_nodes_inside": 1,
+        "error_nodes_outside": 3,
+        "errors_only_outside_final_ancestry": false
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": []
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N003"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "ec8b075e2f5cb6dc0cc844b26179fd122b84226f9f535e2b730f020c96fd2d14",
+      "response_sha256": "e3a39cb071b34a3afe263e2998b5d3b3b754997edfd3954f1bfbb42e315c6000",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b08_p2_target_k17_r1",
+      "seed": 267101868,
+      "variant": "target_k17",
+      "repeat": 1,
+      "sequence": "ABBA",
+      "period": 2,
+      "previous_variant": "target_k17",
+      "repeat_distance": 1,
+      "target_rule_id": "k17",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k17",
+        "selected_rule_position": 1,
+        "terminal_rank": 1,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 5,
+        "errors": [
+          "premise_counter_mismatch",
+          "unreachable_fact",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": [],
+            "errors": [
+              "premise_counter_mismatch"
+            ],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 3,
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 4,
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N003"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N001",
+          "N003",
+          "N004",
+          "N005"
+        ],
+        "error_nodes_inside": 1,
+        "error_nodes_outside": 3,
+        "errors_only_outside_final_ancestry": false
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": []
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N003"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "ec8b075e2f5cb6dc0cc844b26179fd122b84226f9f535e2b730f020c96fd2d14",
+      "response_sha256": "85e88abf0da632745e46784e4d4b7c51e645204b4698c2747dec09aae4a9f278",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b08_p3_target_k03_r1",
+      "seed": 267101868,
+      "variant": "target_k03",
+      "repeat": 1,
+      "sequence": "ABBA",
+      "period": 3,
+      "previous_variant": "target_k17",
+      "repeat_distance": 3,
+      "target_rule_id": "k03",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k03",
+        "selected_rule_position": 0,
+        "terminal_rank": 0,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 3,
+        "errors": [
+          "premise_counter_mismatch",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "N001"
+            ],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N001",
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N003"
+        ],
+        "error_nodes_inside": 0,
+        "error_nodes_outside": 1,
+        "errors_only_outside_final_ancestry": true
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N001"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "8587825b4c58f9112f11dae97d3ff2fd19a84e2a0dc42571a7ccadac0e9af71f",
+      "response_sha256": "bb192d2b52499ce0953f6382eabf8facae28451402bc602eac29b5694d07d5d5",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b09_p0_target_k03_r0",
+      "seed": 68285180,
+      "variant": "target_k03",
+      "repeat": 0,
+      "sequence": "ABBA",
+      "period": 0,
+      "previous_variant": "target_k03",
+      "repeat_distance": null,
+      "target_rule_id": "k03",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k03",
+        "selected_rule_position": 0,
+        "terminal_rank": 0,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 3,
+        "errors": [
+          "premise_counter_mismatch",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "n001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 1,
+            "id": "n002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "n001"
+            ],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "n003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "n001"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "n001",
+          "n002"
+        ],
+        "outside_final_ancestry_ids": [
+          "n003"
+        ],
+        "error_nodes_inside": 0,
+        "error_nodes_outside": 1,
+        "errors_only_outside_final_ancestry": true
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "n001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "n002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "n001"
+            ]
+          },
+          {
+            "id": "n003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "n001"
+            ]
+          }
+        ],
+        "final_node_id": "n002"
+      },
+      "request_sha256": "d2962559f2d3ebcb612d6f6a86e88419867bc78f0caa4ece117c8f5112ee3207",
+      "response_sha256": "46073fd97c8e111a6a9f85febfe94a9f2db2a7aeba0c44efcebd1912fd6a0278",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b09_p1_target_k17_r0",
+      "seed": 68285180,
+      "variant": "target_k17",
+      "repeat": 0,
+      "sequence": "ABBA",
+      "period": 1,
+      "previous_variant": "target_k03",
+      "repeat_distance": null,
+      "target_rule_id": "k17",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k17",
+        "selected_rule_position": 1,
+        "terminal_rank": 1,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 5,
+        "errors": [
+          "premise_counter_mismatch",
+          "unreachable_fact",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": [],
+            "errors": [
+              "premise_counter_mismatch"
+            ],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 3,
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 4,
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N003"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N001",
+          "N003",
+          "N004",
+          "N005"
+        ],
+        "error_nodes_inside": 1,
+        "error_nodes_outside": 3,
+        "errors_only_outside_final_ancestry": false
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": []
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N003"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "c9e7fea164fd93fbe49b16b477825d3879203329b9194faa7702bfb16a113078",
+      "response_sha256": "a0f6ffa0a566cd6ee397415bddbc9498463f7b1ebe666cd95ebd4be708367a6c",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b09_p2_target_k17_r1",
+      "seed": 68285180,
+      "variant": "target_k17",
+      "repeat": 1,
+      "sequence": "ABBA",
+      "period": 2,
+      "previous_variant": "target_k17",
+      "repeat_distance": 1,
+      "target_rule_id": "k17",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k17",
+        "selected_rule_position": 1,
+        "terminal_rank": 1,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 5,
+        "errors": [
+          "premise_counter_mismatch",
+          "unreachable_fact",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 1,
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": [],
+            "errors": [
+              "premise_counter_mismatch"
+            ],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": [],
+            "errors": [
+              "unreachable_fact"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 3,
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          },
+          {
+            "index": 4,
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N003"
+            ],
+            "errors": [
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "N002"
+        ],
+        "outside_final_ancestry_ids": [
+          "N001",
+          "N003",
+          "N004",
+          "N005"
+        ],
+        "error_nodes_inside": 1,
+        "error_nodes_outside": 3,
+        "errors_only_outside_final_ancestry": false
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "N001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N002",
+            "atom": "Cc",
+            "rule_id": "k17",
+            "parents": []
+          },
+          {
+            "id": "N003",
+            "atom": "Cb",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "N004",
+            "atom": "Ca",
+            "rule_id": "k10",
+            "parents": [
+              "N001"
+            ]
+          },
+          {
+            "id": "N005",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "N003"
+            ]
+          }
+        ],
+        "final_node_id": "N002"
+      },
+      "request_sha256": "c9e7fea164fd93fbe49b16b477825d3879203329b9194faa7702bfb16a113078",
+      "response_sha256": "f68635598d1cb3a4e34e90e2e33f48cc8f53976360afc377f9e7f5bdb3133504",
+      "prompt_eval_cached_count": 402
+    },
+    {
+      "id": "b09_p3_target_k03_r1",
+      "seed": 68285180,
+      "variant": "target_k03",
+      "repeat": 1,
+      "sequence": "ABBA",
+      "period": 3,
+      "previous_variant": "target_k17",
+      "repeat_distance": 3,
+      "target_rule_id": "k03",
+      "observed": true,
+      "official_measurement": {
+        "kind": "conditional_proof_dag",
+        "format_valid": true,
+        "proof_valid": false,
+        "strict_valid": false,
+        "D": null,
+        "actual_D": null,
+        "selected_rule_id": "k03",
+        "selected_rule_position": 0,
+        "terminal_rank": 0,
+        "goal_reached": false,
+        "target_rule_match": false,
+        "instruction_fulfilled": false,
+        "node_count": 3,
+        "errors": [
+          "premise_counter_mismatch",
+          "wrong_atom"
+        ]
+      },
+      "diagnostics": {
+        "final_rule_label_matches_target": true,
+        "final_atom_matches_goal": true,
+        "node_diagnostics": [
+          {
+            "index": 0,
+            "id": "n001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": [],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 1,
+            "id": "n002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "n001"
+            ],
+            "errors": [],
+            "in_final_ancestry": true
+          },
+          {
+            "index": 2,
+            "id": "n003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "n001"
+            ],
+            "errors": [
+              "premise_counter_mismatch",
+              "wrong_atom"
+            ],
+            "in_final_ancestry": false
+          }
+        ],
+        "final_ancestor_ids": [
+          "n001",
+          "n002"
+        ],
+        "outside_final_ancestry_ids": [
+          "n003"
+        ],
+        "error_nodes_inside": 0,
+        "error_nodes_outside": 1,
+        "errors_only_outside_final_ancestry": true
+      },
+      "raw_parse_category": "valid_payload",
+      "payload": {
+        "nodes": [
+          {
+            "id": "n001",
+            "atom": "Ca",
+            "rule_id": null,
+            "parents": []
+          },
+          {
+            "id": "n002",
+            "atom": "Cc",
+            "rule_id": "k03",
+            "parents": [
+              "n001"
+            ]
+          },
+          {
+            "id": "n003",
+            "atom": "Cb",
+            "rule_id": "k17",
+            "parents": [
+              "n001"
+            ]
+          }
+        ],
+        "final_node_id": "n002"
+      },
+      "request_sha256": "d2962559f2d3ebcb612d6f6a86e88419867bc78f0caa4ece117c8f5112ee3207",
+      "response_sha256": "256d27eef82d53669f92f4885062a0735c1c1836d9a9ad4ab7543db33c731c70",
+      "prompt_eval_cached_count": 402
+    }
+  ],
+  "independent_problem_count": 1,
+  "new_model_inference": false,
+  "posthoc_diagnostics": true,
+  "repaired_scores_generated": false,
+  "legacy_parse_error_text_is_not_trusted": true,
+  "limits": [
+    "Node error locations are post-hoc diagnostics, not repaired proof scores.",
+    "A matching final-rule label does not imply a valid target proof.",
+    "Raw-derived parse category replaces unverified legacy diagnostic text in this report.",
+    "One problem and repeated seeds do not support model-wide or internal causal claims."
+  ]
+}

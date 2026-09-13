@@ -1,0 +1,107 @@
+[
+  {
+    "id": "E01_shared_fork",
+    "facts": [
+      "Aa",
+      "Ab"
+    ],
+    "rules": [
+      {
+        "id": "n08",
+        "premises": [
+          "Aa"
+        ],
+        "conclusion": "Ax"
+      },
+      {
+        "id": "n52",
+        "premises": [
+          "Aa",
+          "Ab"
+        ],
+        "conclusion": "Ag"
+      },
+      {
+        "id": "n37",
+        "premises": [
+          "Ax",
+          "Ay",
+          "Ab"
+        ],
+        "conclusion": "Ag"
+      },
+      {
+        "id": "n91",
+        "premises": [
+          "Aa"
+        ],
+        "conclusion": "Ay"
+      },
+      {
+        "id": "n64",
+        "premises": [
+          "Ab"
+        ],
+        "conclusion": "Az"
+      }
+    ],
+    "goal": "Ag"
+  },
+  {
+    "id": "E02_two_vs_four",
+    "facts": [
+      "Pa",
+      "Pb",
+      "Pc"
+    ],
+    "rules": [
+      {
+        "id": "m33",
+        "premises": [
+          "Pa"
+        ],
+        "conclusion": "Pu"
+      },
+      {
+        "id": "m76",
+        "premises": [
+          "Ps",
+          "Pc"
+        ],
+        "conclusion": "Pg"
+      },
+      {
+        "id": "m18",
+        "premises": [
+          "Pa",
+          "Pb"
+        ],
+        "conclusion": "Ps"
+      },
+      {
+        "id": "m05",
+        "premises": [
+          "Pu",
+          "Pb"
+        ],
+        "conclusion": "Pv"
+      },
+      {
+        "id": "m41",
+        "premises": [
+          "Pw"
+        ],
+        "conclusion": "Pg"
+      },
+      {
+        "id": "m84",
+        "premises": [
+          "Pv",
+          "Pc"
+        ],
+        "conclusion": "Pw"
+      }
+    ],
+    "goal": "Pg"
+  }
+]

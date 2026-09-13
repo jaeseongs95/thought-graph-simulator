@@ -1,0 +1,8 @@
+{
+  "state": "crashed",
+  "reason": "interrupted_action",
+  "completed_actions": 1,
+  "started_actions": 2,
+  "inference_calls": 1,
+  "plan_sha256": "cca154486b81732bf42abe838f7eb1407dbf4bf967bd9089faf631c89881124d"
+}

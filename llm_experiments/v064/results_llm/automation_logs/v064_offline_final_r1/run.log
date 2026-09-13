@@ -1,0 +1,31 @@
+test_existing_output_and_plan_lock_never_overwritten (test_contract.RuntimeTests.test_existing_output_and_plan_lock_never_overwritten) ... ok
+test_fixed_valid_path_is_not_selective_control (test_contract.RuntimeTests.test_fixed_valid_path_is_not_selective_control) ... ok
+test_http_and_identity_stop_and_preserve_partial (test_contract.RuntimeTests.test_http_and_identity_stop_and_preserve_partial) ... ok
+test_later_failure_preserves_prior_success_and_pending_crash (test_contract.RuntimeTests.test_later_failure_preserves_prior_success_and_pending_crash) ... Execution interrupted: KeyboardInterrupt
+ok
+test_positive_selectivity_real_sized_baseline_and_provenance (test_contract.RuntimeTests.test_positive_selectivity_real_sized_baseline_and_provenance) ... ok
+test_rehashed_report_plan_request_model_and_source_tampering_rejected (test_contract.RuntimeTests.test_rehashed_report_plan_request_model_and_source_tampering_rejected) ... ok
+test_request_content_tamper_with_rebuilt_record_and_event_hashes (test_contract.RuntimeTests.test_request_content_tamper_with_rebuilt_record_and_event_hashes) ... ok
+test_reversed_direction_and_non_topological_order_not_approved (test_contract.RuntimeTests.test_reversed_direction_and_non_topological_order_not_approved) ... ok
+test_semantic_and_parsing_failures_continue_without_retry (test_contract.RuntimeTests.test_semantic_and_parsing_failures_continue_without_retry) ... ok
+test_strict_json_and_archive_boundaries (test_contract.RuntimeTests.test_strict_json_and_archive_boundaries) ... ok
+test_manual_paths_and_actual_depths (test_contract.SemanticTests.test_manual_paths_and_actual_depths) ... ok
+test_missing_and_parse_failures_do_not_become_logical_errors (test_contract.SemanticTests.test_missing_and_parse_failures_do_not_become_logical_errors) ... ok
+test_prepare_offline_budget_and_only_allowed_request_changes (test_contract.SemanticTests.test_prepare_offline_budget_and_only_allowed_request_changes) ... ok
+test_rule_labels_parents_cycles_and_unused_nodes (test_contract.SemanticTests.test_rule_labels_parents_cycles_and_unused_nodes) ... ok
+test_topological_order_and_invalid_usage (test_contract.SemanticTests.test_topological_order_and_invalid_usage) ... ok
+test_stderr_is_preserved_and_exit_code_controls_outcome (test_native.NativeBoundaryTests.test_stderr_is_preserved_and_exit_code_controls_outcome) ... ERROR
+
+======================================================================
+ERROR: test_stderr_is_preserved_and_exit_code_controls_outcome (test_native.NativeBoundaryTests.test_stderr_is_preserved_and_exit_code_controls_outcome)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\codex\AI논문\thought-graph-simulator\llm_experiments\v064\probe\tests\test_native.py", line 32, in test_stderr_is_preserved_and_exit_code_controls_outcome
+    self.assertIn('native stderr', result.stderr.decode('utf-8'))
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc0 in position 273: invalid start byte
+
+----------------------------------------------------------------------
+Ran 16 tests in 29.365s
+
+FAILED (errors=1)

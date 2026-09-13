@@ -1,0 +1,7 @@
+{
+  "contract": "v063-protected-inputs-r1",
+  "prior_source_sha256": "33830e414b93174b2fbc36ec46d4675ab8e15321abd5608db301a487d8561da4",
+  "prior_source_files": 360,
+  "evidence_sha256": "baea752ac1a55dc7a20b42b41ced69b3c8e126105f65deea8ebecc8dde3f09fd",
+  "all_prior_files_unchanged": true
+}

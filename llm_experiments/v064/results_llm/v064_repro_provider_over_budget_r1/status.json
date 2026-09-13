@@ -1,0 +1,8 @@
+{
+  "state": "stopped",
+  "reason": "generation_budget_exceeded",
+  "completed_actions": 2,
+  "started_actions": 2,
+  "inference_calls": 1,
+  "plan_sha256": "8a84b2be20cd8d4c5c3f43b9b5c3d72431987d25843317310e8bfb03bfcba41b"
+}

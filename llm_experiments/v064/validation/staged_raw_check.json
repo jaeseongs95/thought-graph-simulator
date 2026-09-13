@@ -1,0 +1,42 @@
+[
+  {
+    "input": [
+      false,
+      false
+    ],
+    "not_correct": true,
+    "and_local": true,
+    "end_to_end": true,
+    "commuted": true
+  },
+  {
+    "input": [
+      false,
+      true
+    ],
+    "not_correct": true,
+    "and_local": true,
+    "end_to_end": true,
+    "commuted": true
+  },
+  {
+    "input": [
+      true,
+      false
+    ],
+    "not_correct": true,
+    "and_local": true,
+    "end_to_end": true,
+    "commuted": true
+  },
+  {
+    "input": [
+      true,
+      true
+    ],
+    "not_correct": true,
+    "and_local": true,
+    "end_to_end": true,
+    "commuted": true
+  }
+]

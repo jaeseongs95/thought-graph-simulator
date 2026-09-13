@@ -1,0 +1,97 @@
+{
+  "contract": "v063-source-audit-r1",
+  "audit_observation_id": "v063-source-audit-20260913-r1",
+  "auditor_task": "/root/v063_sealed_source_audit",
+  "auditor_role": "fresh auditor; candidate planning, implementation, and integration not performed",
+  "audit_state": "completed",
+  "candidate_completion": "complete",
+  "verdict": "pass_with_diagnostic",
+  "assurance": {
+    "profile": "cooperative-sealed",
+    "provider": "sealed-artifact-v1",
+    "source_writers_stopped_before_audit": true,
+    "candidate_not_modified_by_auditor": true
+  },
+  "audit_inputs": {
+    "audit_input_path": "llm_experiments/v063/validation/audit_input.json",
+    "audit_input_sha256": "327e2211807ad1cac05a7086067340252dae9083d59820dbc8f82999d7ed4842",
+    "final_scope_sha256": "10147f7d2667b877371ac74d6e3512911878b4b827182cd1ac7634e6cb364a8e",
+    "candidate_path": "llm_experiments/v063/releases/v063_forensics_source_r1.zip",
+    "candidate_sha256_before": "4493217731fd0cf40c5deac91921b93b090109664cc697f7cf33901bf2b834ac",
+    "prior_source_sha256": "33830e414b93174b2fbc36ec46d4675ab8e15321abd5608db301a487d8561da4",
+    "evidence_sha256": "baea752ac1a55dc7a20b42b41ced69b3c8e126105f65deea8ebecc8dde3f09fd"
+  },
+  "criteria": {
+    "raw_source_analysis": "pass",
+    "official_scores_and_missingness_preserved": "pass",
+    "inside_outside_parent_diagnostics": "pass",
+    "independent_full_field_comparison": "pass",
+    "normal_and_tampered_counterexamples": "pass",
+    "original_and_prior_versions_preserved": "pass",
+    "three_party_claims_rebuttals_and_evidence": "pass",
+    "research_direction_and_limits": "pass",
+    "reproducible_source_zip": "pass_with_diagnostic"
+  },
+  "direct_checks": [
+    {
+      "command": "Get-FileHash SHA256 on candidate, prior source ZIP, and v062 evidence ZIP",
+      "result": "all three digests matched the frozen audit input"
+    },
+    {
+      "command": "read-only ZipArchive per-entry SHA256 comparison of prior and candidate",
+      "result": "360 prior source files unchanged; RELEASE_MANIFEST.json updated; 9 v063 files added; 0 prior source files removed"
+    },
+    {
+      "command": "fresh auditor Python standard-library raw cross-check over all non-source-snapshot v062 plan/event/request/response/summary members",
+      "result": "40 slots, 40 request hashes, 40 response hashes, 40 payloads, 40 stored official measurements, and 40 independently recomputed diagnostic rows checked; differences=[]; source_snapshot_members_read=0"
+    },
+    {
+      "command": "analysis aggregate recomputation",
+      "result": "proof/strict/instruction false 40/40; actual_D null 40/40; final-rule label match 39/40; final atom match 40/40; outside-ancestry nodes 40/40; inside-error 23/40; outside-only error 17/40"
+    },
+    {
+      "command": "inspect independent.json and completion.json and rehash analysis.json, independent.json, summary.ko.md",
+      "result": "independent verifier compared 5294 fields with differences=[]; all three completion artifact hashes matched"
+    },
+    {
+      "command": "inspect selftest.log, fresh_selftest.log, windows_launcher.log",
+      "result": "original 10 tests pass, fresh extraction 10 tests pass, Windows offline launcher pass; tests cover valid, partial, malformed, semantic tampering, missingness, path/output, and node-error boundaries"
+    },
+    {
+      "command": "read-only candidate manifest/path/hash and fresh extraction comparison",
+      "result": "369 manifest source files; 370 ZIP entries including manifest; 0 duplicate or unsafe paths; 0 manifest hash mismatches; 0 fresh-tree mismatches or extras"
+    },
+    {
+      "command": "static search of v063 source for network, model, and process launch paths",
+      "result": "no network or LLM inference path found; launcher invokes only Python selftest and offline forensic tools"
+    },
+    {
+      "command": "inspect V062_ANALYSIS.ko.md and task_record.json",
+      "result": "three distinct review mandates, initial claims, X1-X3 cross-examination, a withdrawn proposal, evidence, research direction, and limitations are recorded"
+    },
+    {
+      "command": "build_release.py --out from validation/fresh_source_r1 and per-entry compare",
+      "result": "rebuilt archive had 370/370 identical entry contents and length 855030, but archive SHA differed because all 370 ZIP timestamps used rebuild time"
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "D001",
+      "severity": "diagnostic",
+      "criterion": "reproducible source ZIP",
+      "evidence": "A fresh-source rebuild produced SHA256 3c217a73e3fa296af41cb6d07fd848dc3a509865a3f71052b5d9b6a6a94983d rather than the sealed 4493217731fd0cf40c5deac91921b93b090109664cc697f7cf33901bf2b834ac. All 370 entry names, lengths, and content hashes were identical; all 370 ZIP timestamps differed. build_release.py uses current timestamps through ZipFile.writestr.",
+      "impact": "The extracted source and manifest are reproducible and the frozen candidate remains verifiable, but rebuilding cannot regenerate the same sealed archive byte stream or SHA256.",
+      "recommended_action": "In a future source release, construct ZipInfo entries with a fixed timestamp and normalized metadata, then seal the newly built artifact. Do not rewrite this audited candidate.",
+      "unverified": []
+    }
+  ],
+  "blocking_findings": 0,
+  "diagnostic_findings": 1,
+  "remaining_limits": [
+    "cooperative-sealed does not defend against an intentional same-user writer; no native-atomic-host or external attestation was claimed",
+    "the evidence ZIP source snapshot was not executed or imported; external execution authenticity is outside this audit",
+    "the result covers one model digest, one problem, and repeated seeds; model-wide ability, causal mechanism, A/M control, and free-D control remain unverified",
+    "the requested panel model and reasoning settings were not returned by the creation tool and remain unverified"
+  ],
+  "final_candidate_sha256": "4493217731fd0cf40c5deac91921b93b090109664cc697f7cf33901bf2b834ac"
+}

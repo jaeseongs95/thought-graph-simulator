@@ -1,0 +1,28 @@
+test_existing_output_and_plan_lock_never_overwritten (test_contract.RuntimeTests.test_existing_output_and_plan_lock_never_overwritten) ... ok
+test_first_stop_cannot_be_hidden_by_rebinding_all_hashes (test_contract.RuntimeTests.test_first_stop_cannot_be_hidden_by_rebinding_all_hashes) ... ok
+test_fixed_valid_path_is_not_selective_control (test_contract.RuntimeTests.test_fixed_valid_path_is_not_selective_control) ... ok
+test_http_and_identity_stop_and_preserve_partial (test_contract.RuntimeTests.test_http_and_identity_stop_and_preserve_partial) ... ok
+test_later_failure_preserves_prior_success_and_pending_crash (test_contract.RuntimeTests.test_later_failure_preserves_prior_success_and_pending_crash) ... Execution interrupted: KeyboardInterrupt
+ok
+test_positive_selectivity_real_sized_baseline_and_provenance (test_contract.RuntimeTests.test_positive_selectivity_real_sized_baseline_and_provenance) ... ok
+test_rehashed_report_plan_request_model_and_source_tampering_rejected (test_contract.RuntimeTests.test_rehashed_report_plan_request_model_and_source_tampering_rejected) ... ok
+test_reported_generation_excess_is_preserved_as_stopped (test_contract.RuntimeTests.test_reported_generation_excess_is_preserved_as_stopped) ... ok
+test_request_content_tamper_with_rebuilt_record_and_event_hashes (test_contract.RuntimeTests.test_request_content_tamper_with_rebuilt_record_and_event_hashes) ... ok
+test_reversed_direction_and_non_topological_order_not_approved (test_contract.RuntimeTests.test_reversed_direction_and_non_topological_order_not_approved) ... ok
+test_semantic_and_parsing_failures_continue_without_retry (test_contract.RuntimeTests.test_semantic_and_parsing_failures_continue_without_retry) ... ok
+test_strict_json_and_archive_boundaries (test_contract.RuntimeTests.test_strict_json_and_archive_boundaries) ... ok
+test_uncommitted_wire_preserved_without_scoring_or_future_actions (test_contract.RuntimeTests.test_uncommitted_wire_preserved_without_scoring_or_future_actions) ... Execution interrupted: KeyboardInterrupt
+Execution interrupted: KeyboardInterrupt
+Execution interrupted: KeyboardInterrupt
+ok
+test_manual_paths_and_actual_depths (test_contract.SemanticTests.test_manual_paths_and_actual_depths) ... ok
+test_missing_and_parse_failures_do_not_become_logical_errors (test_contract.SemanticTests.test_missing_and_parse_failures_do_not_become_logical_errors) ... ok
+test_prepare_offline_budget_and_only_allowed_request_changes (test_contract.SemanticTests.test_prepare_offline_budget_and_only_allowed_request_changes) ... ok
+test_rule_labels_parents_cycles_and_unused_nodes (test_contract.SemanticTests.test_rule_labels_parents_cycles_and_unused_nodes) ... ok
+test_topological_order_and_invalid_usage (test_contract.SemanticTests.test_topological_order_and_invalid_usage) ... ok
+test_stderr_is_preserved_and_exit_code_controls_outcome (test_native.NativeBoundaryTests.test_stderr_is_preserved_and_exit_code_controls_outcome) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 36.607s
+
+OK

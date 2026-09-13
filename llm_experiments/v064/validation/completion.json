@@ -1,0 +1,88 @@
+{
+  "completed_at_utc": "2026-09-13T08:14:16.876149+00:00",
+  "candidate_completion": "complete",
+  "audit_state": "completed",
+  "profile": "cooperative-sealed",
+  "provider": "sealed-artifact-v1",
+  "source_zip": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v064\\releases\\v064_direct_D_source_r3.zip",
+  "candidate_digest": "238b4997ceaa4191fb79498cc12647010bd02056cf7ac96a0ca0752712ff4553",
+  "zip_current_fresh_sources_equal": true,
+  "source_files": 16,
+  "protected_inputs_unchanged": 153,
+  "actual_model_calls": 0,
+  "next_run_max_calls": 18,
+  "generation_setting_upper_bound": 73728,
+  "general_tests": {
+    "cases": 19,
+    "exit": 0,
+    "log_sha256": "46408ec93f1c5e4da984adff54482732b8615da86b7ff21c61255a0bd95137ea"
+  },
+  "fresh_windows_check": {
+    "cases": 19,
+    "exit": 0,
+    "log_sha256": "d313d2755fe0026422a17a1d86029d90fc875cc9b8591ede4750f559c94d453f"
+  },
+  "audit_result_sha256": "b0b39e590aa4ad995273dcc2e569b3d150885dcce2429c43f04ae10926b3e118",
+  "audit_input_sha256": "1de12447fbdd8396a47eb2c9433914256b25fcecd318046d808973472c2ed74d",
+  "final_review_sha256": "336562b1b568199e2a878487bb22c0ced83449a1e3eea23d95e377bf26e43872",
+  "findings_dispositions": [
+    {
+      "audit_observation_id": "v064-source-audit-r1",
+      "finding_id": "V064-SA-R1-F001",
+      "disposition": "accepted",
+      "disposition_evidence": "source audit direct counterexamples and preserved correction records",
+      "resolution_status": "resolved",
+      "resolution_evidence": "validation/source_audit_result_r2.json and validation/source_audit_result_r3.json",
+      "rechecks": [
+        "validation/source_audit_result_r2.json#V064-SA-R1-F001",
+        "validation/source_audit_result_r3.json#R3-C003-prior-resolutions-and-research-contract"
+      ],
+      "candidate_digest": "238b4997ceaa4191fb79498cc12647010bd02056cf7ac96a0ca0752712ff4553"
+    },
+    {
+      "audit_observation_id": "v064-source-audit-r1",
+      "finding_id": "V064-SA-R1-F002",
+      "disposition": "accepted",
+      "disposition_evidence": "source audit direct counterexamples and preserved correction records",
+      "resolution_status": "resolved",
+      "resolution_evidence": "validation/source_audit_result_r2.json and validation/source_audit_result_r3.json",
+      "rechecks": [
+        "validation/source_audit_result_r2.json#V064-SA-R1-F002",
+        "validation/source_audit_result_r3.json#R3-C003-prior-resolutions-and-research-contract"
+      ],
+      "candidate_digest": "238b4997ceaa4191fb79498cc12647010bd02056cf7ac96a0ca0752712ff4553"
+    },
+    {
+      "audit_observation_id": "v064-source-audit-r1",
+      "finding_id": "V064-SA-R1-F003",
+      "disposition": "accepted",
+      "disposition_evidence": "source audit direct counterexamples and preserved correction records",
+      "resolution_status": "resolved",
+      "resolution_evidence": "validation/source_audit_result_r2.json and validation/source_audit_result_r3.json",
+      "rechecks": [
+        "validation/source_audit_result_r3.json#V064-SA-R1-F003"
+      ],
+      "candidate_digest": "238b4997ceaa4191fb79498cc12647010bd02056cf7ac96a0ca0752712ff4553"
+    },
+    {
+      "audit_observation_id": "v064-source-audit-r2",
+      "finding_id": "V064-SA-R2-F001",
+      "disposition": "accepted",
+      "disposition_evidence": "source audit direct counterexamples and preserved correction records",
+      "resolution_status": "resolved",
+      "resolution_evidence": "validation/source_audit_result_r2.json and validation/source_audit_result_r3.json",
+      "rechecks": [
+        "validation/source_audit_result_r3.json#V064-SA-R2-F001"
+      ],
+      "candidate_digest": "238b4997ceaa4191fb79498cc12647010bd02056cf7ac96a0ca0752712ff4553"
+    }
+  ],
+  "auditor": {
+    "task_name": "/root/v064_source_audit",
+    "fresh_nonparticipant": true,
+    "requested_model": "gpt-5.6-sol",
+    "requested_reasoning_effort": "high",
+    "model_application": "unverified"
+  },
+  "research_claims": "source ready only; actual D selective control/A/M/generalization/cost superiority not established by this development"
+}

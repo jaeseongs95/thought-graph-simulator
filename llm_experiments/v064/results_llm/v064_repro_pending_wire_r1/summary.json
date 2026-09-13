@@ -1,0 +1,933 @@
+{
+  "contract": "v064-report-r1",
+  "run_name": "v064_repro_pending_wire_r1",
+  "provenance": "synthetic",
+  "plan_sha256": "afde7ac0d188960246f57b80251475bda6f896bcc7f5bf3f55c2ba143a1196c8",
+  "state": "crashed",
+  "assigned_calls": 18,
+  "observed_calls": 0,
+  "full_complete": false,
+  "rows": [
+    {
+      "id": "b00_p0_shallow",
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "block": 0,
+      "period": 0,
+      "direction": "shallow",
+      "previous_call_id": null,
+      "previous_direction": null,
+      "status": "not_observed",
+      "http_status": null,
+      "error": null,
+      "elapsed_ns": null,
+      "request_sha256": null,
+      "response_sha256": null,
+      "response_b64": null,
+      "format_valid": null,
+      "proof_valid": null,
+      "strict_valid": null,
+      "actual_D": null,
+      "final_rule_id": null,
+      "error_codes": null,
+      "usage": {
+        "prompt_eval_count": null,
+        "eval_count": null,
+        "total_duration": null,
+        "prompt_eval_cached_count": null
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Lp",
+          "Ls"
+        ],
+        "fixed_goal": "Lg",
+        "emitted_node_atoms": [],
+        "added_propositions": []
+      }
+    },
+    {
+      "id": "b00_p0_neutral",
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "block": 0,
+      "period": 1,
+      "direction": "neutral",
+      "previous_call_id": "b00_p0_shallow",
+      "previous_direction": "shallow",
+      "status": "not_observed",
+      "http_status": null,
+      "error": null,
+      "elapsed_ns": null,
+      "request_sha256": null,
+      "response_sha256": null,
+      "response_b64": null,
+      "format_valid": null,
+      "proof_valid": null,
+      "strict_valid": null,
+      "actual_D": null,
+      "final_rule_id": null,
+      "error_codes": null,
+      "usage": {
+        "prompt_eval_count": null,
+        "eval_count": null,
+        "total_duration": null,
+        "prompt_eval_cached_count": null
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Lp",
+          "Ls"
+        ],
+        "fixed_goal": "Lg",
+        "emitted_node_atoms": [],
+        "added_propositions": []
+      }
+    },
+    {
+      "id": "b00_p0_deep",
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "block": 0,
+      "period": 2,
+      "direction": "deep",
+      "previous_call_id": "b00_p0_neutral",
+      "previous_direction": "neutral",
+      "status": "not_observed",
+      "http_status": null,
+      "error": null,
+      "elapsed_ns": null,
+      "request_sha256": null,
+      "response_sha256": null,
+      "response_b64": null,
+      "format_valid": null,
+      "proof_valid": null,
+      "strict_valid": null,
+      "actual_D": null,
+      "final_rule_id": null,
+      "error_codes": null,
+      "usage": {
+        "prompt_eval_count": null,
+        "eval_count": null,
+        "total_duration": null,
+        "prompt_eval_cached_count": null
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Lp",
+          "Ls"
+        ],
+        "fixed_goal": "Lg",
+        "emitted_node_atoms": [],
+        "added_propositions": []
+      }
+    },
+    {
+      "id": "b01_p0_deep",
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "block": 1,
+      "period": 0,
+      "direction": "deep",
+      "previous_call_id": "b00_p0_deep",
+      "previous_direction": "deep",
+      "status": "not_observed",
+      "http_status": null,
+      "error": null,
+      "elapsed_ns": null,
+      "request_sha256": null,
+      "response_sha256": null,
+      "response_b64": null,
+      "format_valid": null,
+      "proof_valid": null,
+      "strict_valid": null,
+      "actual_D": null,
+      "final_rule_id": null,
+      "error_codes": null,
+      "usage": {
+        "prompt_eval_count": null,
+        "eval_count": null,
+        "total_duration": null,
+        "prompt_eval_cached_count": null
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Lp",
+          "Ls"
+        ],
+        "fixed_goal": "Lg",
+        "emitted_node_atoms": [],
+        "added_propositions": []
+      }
+    },
+    {
+      "id": "b01_p0_neutral",
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "block": 1,
+      "period": 1,
+      "direction": "neutral",
+      "previous_call_id": "b01_p0_deep",
+      "previous_direction": "deep",
+      "status": "not_observed",
+      "http_status": null,
+      "error": null,
+      "elapsed_ns": null,
+      "request_sha256": null,
+      "response_sha256": null,
+      "response_b64": null,
+      "format_valid": null,
+      "proof_valid": null,
+      "strict_valid": null,
+      "actual_D": null,
+      "final_rule_id": null,
+      "error_codes": null,
+      "usage": {
+        "prompt_eval_count": null,
+        "eval_count": null,
+        "total_duration": null,
+        "prompt_eval_cached_count": null
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Lp",
+          "Ls"
+        ],
+        "fixed_goal": "Lg",
+        "emitted_node_atoms": [],
+        "added_propositions": []
+      }
+    },
+    {
+      "id": "b01_p0_shallow",
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "block": 1,
+      "period": 2,
+      "direction": "shallow",
+      "previous_call_id": "b01_p0_neutral",
+      "previous_direction": "neutral",
+      "status": "not_observed",
+      "http_status": null,
+      "error": null,
+      "elapsed_ns": null,
+      "request_sha256": null,
+      "response_sha256": null,
+      "response_b64": null,
+      "format_valid": null,
+      "proof_valid": null,
+      "strict_valid": null,
+      "actual_D": null,
+      "final_rule_id": null,
+      "error_codes": null,
+      "usage": {
+        "prompt_eval_count": null,
+        "eval_count": null,
+        "total_duration": null,
+        "prompt_eval_cached_count": null
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Lp",
+          "Ls"
+        ],
+        "fixed_goal": "Lg",
+        "emitted_node_atoms": [],
+        "added_propositions": []
+      }
+    },
+    {
+      "id": "b02_p1_neutral",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "seed_index": 0,
+      "block": 2,
+      "period": 0,
+      "direction": "neutral",
+      "previous_call_id": "b01_p0_shallow",
+      "previous_direction": "shallow",
+      "status": "not_observed",
+      "http_status": null,
+      "error": null,
+      "elapsed_ns": null,
+      "request_sha256": null,
+      "response_sha256": null,
+      "response_b64": null,
+      "format_valid": null,
+      "proof_valid": null,
+      "strict_valid": null,
+      "actual_D": null,
+      "final_rule_id": null,
+      "error_codes": null,
+      "usage": {
+        "prompt_eval_count": null,
+        "eval_count": null,
+        "total_duration": null,
+        "prompt_eval_cached_count": null
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Aa",
+          "Ab"
+        ],
+        "fixed_goal": "Ag",
+        "emitted_node_atoms": [],
+        "added_propositions": []
+      }
+    },
+    {
+      "id": "b02_p1_deep",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "seed_index": 0,
+      "block": 2,
+      "period": 1,
+      "direction": "deep",
+      "previous_call_id": "b02_p1_neutral",
+      "previous_direction": "neutral",
+      "status": "not_observed",
+      "http_status": null,
+      "error": null,
+      "elapsed_ns": null,
+      "request_sha256": null,
+      "response_sha256": null,
+      "response_b64": null,
+      "format_valid": null,
+      "proof_valid": null,
+      "strict_valid": null,
+      "actual_D": null,
+      "final_rule_id": null,
+      "error_codes": null,
+      "usage": {
+        "prompt_eval_count": null,
+        "eval_count": null,
+        "total_duration": null,
+        "prompt_eval_cached_count": null
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Aa",
+          "Ab"
+        ],
+        "fixed_goal": "Ag",
+        "emitted_node_atoms": [],
+        "added_propositions": []
+      }
+    },
+    {
+      "id": "b02_p1_shallow",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "seed_index": 0,
+      "block": 2,
+      "period": 2,
+      "direction": "shallow",
+      "previous_call_id": "b02_p1_deep",
+      "previous_direction": "deep",
+      "status": "not_observed",
+      "http_status": null,
+      "error": null,
+      "elapsed_ns": null,
+      "request_sha256": null,
+      "response_sha256": null,
+      "response_b64": null,
+      "format_valid": null,
+      "proof_valid": null,
+      "strict_valid": null,
+      "actual_D": null,
+      "final_rule_id": null,
+      "error_codes": null,
+      "usage": {
+        "prompt_eval_count": null,
+        "eval_count": null,
+        "total_duration": null,
+        "prompt_eval_cached_count": null
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Aa",
+          "Ab"
+        ],
+        "fixed_goal": "Ag",
+        "emitted_node_atoms": [],
+        "added_propositions": []
+      }
+    },
+    {
+      "id": "b03_p1_shallow",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "seed_index": 1,
+      "block": 3,
+      "period": 0,
+      "direction": "shallow",
+      "previous_call_id": "b02_p1_shallow",
+      "previous_direction": "shallow",
+      "status": "not_observed",
+      "http_status": null,
+      "error": null,
+      "elapsed_ns": null,
+      "request_sha256": null,
+      "response_sha256": null,
+      "response_b64": null,
+      "format_valid": null,
+      "proof_valid": null,
+      "strict_valid": null,
+      "actual_D": null,
+      "final_rule_id": null,
+      "error_codes": null,
+      "usage": {
+        "prompt_eval_count": null,
+        "eval_count": null,
+        "total_duration": null,
+        "prompt_eval_cached_count": null
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Aa",
+          "Ab"
+        ],
+        "fixed_goal": "Ag",
+        "emitted_node_atoms": [],
+        "added_propositions": []
+      }
+    },
+    {
+      "id": "b03_p1_deep",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "seed_index": 1,
+      "block": 3,
+      "period": 1,
+      "direction": "deep",
+      "previous_call_id": "b03_p1_shallow",
+      "previous_direction": "shallow",
+      "status": "not_observed",
+      "http_status": null,
+      "error": null,
+      "elapsed_ns": null,
+      "request_sha256": null,
+      "response_sha256": null,
+      "response_b64": null,
+      "format_valid": null,
+      "proof_valid": null,
+      "strict_valid": null,
+      "actual_D": null,
+      "final_rule_id": null,
+      "error_codes": null,
+      "usage": {
+        "prompt_eval_count": null,
+        "eval_count": null,
+        "total_duration": null,
+        "prompt_eval_cached_count": null
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Aa",
+          "Ab"
+        ],
+        "fixed_goal": "Ag",
+        "emitted_node_atoms": [],
+        "added_propositions": []
+      }
+    },
+    {
+      "id": "b03_p1_neutral",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "seed_index": 1,
+      "block": 3,
+      "period": 2,
+      "direction": "neutral",
+      "previous_call_id": "b03_p1_deep",
+      "previous_direction": "deep",
+      "status": "not_observed",
+      "http_status": null,
+      "error": null,
+      "elapsed_ns": null,
+      "request_sha256": null,
+      "response_sha256": null,
+      "response_b64": null,
+      "format_valid": null,
+      "proof_valid": null,
+      "strict_valid": null,
+      "actual_D": null,
+      "final_rule_id": null,
+      "error_codes": null,
+      "usage": {
+        "prompt_eval_count": null,
+        "eval_count": null,
+        "total_duration": null,
+        "prompt_eval_cached_count": null
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Aa",
+          "Ab"
+        ],
+        "fixed_goal": "Ag",
+        "emitted_node_atoms": [],
+        "added_propositions": []
+      }
+    },
+    {
+      "id": "b04_p2_deep",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "block": 4,
+      "period": 0,
+      "direction": "deep",
+      "previous_call_id": "b03_p1_neutral",
+      "previous_direction": "neutral",
+      "status": "not_observed",
+      "http_status": null,
+      "error": null,
+      "elapsed_ns": null,
+      "request_sha256": null,
+      "response_sha256": null,
+      "response_b64": null,
+      "format_valid": null,
+      "proof_valid": null,
+      "strict_valid": null,
+      "actual_D": null,
+      "final_rule_id": null,
+      "error_codes": null,
+      "usage": {
+        "prompt_eval_count": null,
+        "eval_count": null,
+        "total_duration": null,
+        "prompt_eval_cached_count": null
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Pa",
+          "Pb",
+          "Pc"
+        ],
+        "fixed_goal": "Pg",
+        "emitted_node_atoms": [],
+        "added_propositions": []
+      }
+    },
+    {
+      "id": "b04_p2_shallow",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "block": 4,
+      "period": 1,
+      "direction": "shallow",
+      "previous_call_id": "b04_p2_deep",
+      "previous_direction": "deep",
+      "status": "not_observed",
+      "http_status": null,
+      "error": null,
+      "elapsed_ns": null,
+      "request_sha256": null,
+      "response_sha256": null,
+      "response_b64": null,
+      "format_valid": null,
+      "proof_valid": null,
+      "strict_valid": null,
+      "actual_D": null,
+      "final_rule_id": null,
+      "error_codes": null,
+      "usage": {
+        "prompt_eval_count": null,
+        "eval_count": null,
+        "total_duration": null,
+        "prompt_eval_cached_count": null
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Pa",
+          "Pb",
+          "Pc"
+        ],
+        "fixed_goal": "Pg",
+        "emitted_node_atoms": [],
+        "added_propositions": []
+      }
+    },
+    {
+      "id": "b04_p2_neutral",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "block": 4,
+      "period": 2,
+      "direction": "neutral",
+      "previous_call_id": "b04_p2_shallow",
+      "previous_direction": "shallow",
+      "status": "not_observed",
+      "http_status": null,
+      "error": null,
+      "elapsed_ns": null,
+      "request_sha256": null,
+      "response_sha256": null,
+      "response_b64": null,
+      "format_valid": null,
+      "proof_valid": null,
+      "strict_valid": null,
+      "actual_D": null,
+      "final_rule_id": null,
+      "error_codes": null,
+      "usage": {
+        "prompt_eval_count": null,
+        "eval_count": null,
+        "total_duration": null,
+        "prompt_eval_cached_count": null
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Pa",
+          "Pb",
+          "Pc"
+        ],
+        "fixed_goal": "Pg",
+        "emitted_node_atoms": [],
+        "added_propositions": []
+      }
+    },
+    {
+      "id": "b05_p2_neutral",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "block": 5,
+      "period": 0,
+      "direction": "neutral",
+      "previous_call_id": "b04_p2_neutral",
+      "previous_direction": "neutral",
+      "status": "not_observed",
+      "http_status": null,
+      "error": null,
+      "elapsed_ns": null,
+      "request_sha256": null,
+      "response_sha256": null,
+      "response_b64": null,
+      "format_valid": null,
+      "proof_valid": null,
+      "strict_valid": null,
+      "actual_D": null,
+      "final_rule_id": null,
+      "error_codes": null,
+      "usage": {
+        "prompt_eval_count": null,
+        "eval_count": null,
+        "total_duration": null,
+        "prompt_eval_cached_count": null
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Pa",
+          "Pb",
+          "Pc"
+        ],
+        "fixed_goal": "Pg",
+        "emitted_node_atoms": [],
+        "added_propositions": []
+      }
+    },
+    {
+      "id": "b05_p2_shallow",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "block": 5,
+      "period": 1,
+      "direction": "shallow",
+      "previous_call_id": "b05_p2_neutral",
+      "previous_direction": "neutral",
+      "status": "not_observed",
+      "http_status": null,
+      "error": null,
+      "elapsed_ns": null,
+      "request_sha256": null,
+      "response_sha256": null,
+      "response_b64": null,
+      "format_valid": null,
+      "proof_valid": null,
+      "strict_valid": null,
+      "actual_D": null,
+      "final_rule_id": null,
+      "error_codes": null,
+      "usage": {
+        "prompt_eval_count": null,
+        "eval_count": null,
+        "total_duration": null,
+        "prompt_eval_cached_count": null
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Pa",
+          "Pb",
+          "Pc"
+        ],
+        "fixed_goal": "Pg",
+        "emitted_node_atoms": [],
+        "added_propositions": []
+      }
+    },
+    {
+      "id": "b05_p2_deep",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "block": 5,
+      "period": 2,
+      "direction": "deep",
+      "previous_call_id": "b05_p2_shallow",
+      "previous_direction": "shallow",
+      "status": "not_observed",
+      "http_status": null,
+      "error": null,
+      "elapsed_ns": null,
+      "request_sha256": null,
+      "response_sha256": null,
+      "response_b64": null,
+      "format_valid": null,
+      "proof_valid": null,
+      "strict_valid": null,
+      "actual_D": null,
+      "final_rule_id": null,
+      "error_codes": null,
+      "usage": {
+        "prompt_eval_count": null,
+        "eval_count": null,
+        "total_duration": null,
+        "prompt_eval_cached_count": null
+      },
+      "base_fixed": {
+        "fixed_facts": [
+          "Pa",
+          "Pb",
+          "Pc"
+        ],
+        "fixed_goal": "Pg",
+        "emitted_node_atoms": [],
+        "added_propositions": []
+      }
+    }
+  ],
+  "problem_summaries": [
+    {
+      "problem_id": "T02",
+      "assigned_directed_pairs": 2,
+      "measurable_directed_pairs": null,
+      "strict_min_max_pairs": null,
+      "strict_min_max_rate": null,
+      "all_directed_same_strict_proof_path": null
+    },
+    {
+      "problem_id": "E01_shared_fork",
+      "assigned_directed_pairs": 2,
+      "measurable_directed_pairs": null,
+      "strict_min_max_pairs": null,
+      "strict_min_max_rate": null,
+      "all_directed_same_strict_proof_path": null
+    },
+    {
+      "problem_id": "E02_two_vs_four",
+      "assigned_directed_pairs": 2,
+      "measurable_directed_pairs": null,
+      "strict_min_max_pairs": null,
+      "strict_min_max_rate": null,
+      "all_directed_same_strict_proof_path": null
+    }
+  ],
+  "directed_pairs": [
+    {
+      "problem_id": "T02",
+      "seed": 64001001,
+      "shallow_id": "b00_p0_shallow",
+      "deep_id": "b00_p0_deep",
+      "expected_min_D": 1,
+      "expected_max_D": 4,
+      "shallow_status": "not_observed",
+      "deep_status": "not_observed",
+      "shallow_strict_valid": null,
+      "deep_strict_valid": null,
+      "shallow_actual_D": null,
+      "deep_actual_D": null,
+      "measurement_available": false,
+      "strict_min_max": null
+    },
+    {
+      "problem_id": "T02",
+      "seed": 64001002,
+      "shallow_id": "b01_p0_shallow",
+      "deep_id": "b01_p0_deep",
+      "expected_min_D": 1,
+      "expected_max_D": 4,
+      "shallow_status": "not_observed",
+      "deep_status": "not_observed",
+      "shallow_strict_valid": null,
+      "deep_strict_valid": null,
+      "shallow_actual_D": null,
+      "deep_actual_D": null,
+      "measurement_available": false,
+      "strict_min_max": null
+    },
+    {
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "shallow_id": "b02_p1_shallow",
+      "deep_id": "b02_p1_deep",
+      "expected_min_D": 1,
+      "expected_max_D": 2,
+      "shallow_status": "not_observed",
+      "deep_status": "not_observed",
+      "shallow_strict_valid": null,
+      "deep_strict_valid": null,
+      "shallow_actual_D": null,
+      "deep_actual_D": null,
+      "measurement_available": false,
+      "strict_min_max": null
+    },
+    {
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "shallow_id": "b03_p1_shallow",
+      "deep_id": "b03_p1_deep",
+      "expected_min_D": 1,
+      "expected_max_D": 2,
+      "shallow_status": "not_observed",
+      "deep_status": "not_observed",
+      "shallow_strict_valid": null,
+      "deep_strict_valid": null,
+      "shallow_actual_D": null,
+      "deep_actual_D": null,
+      "measurement_available": false,
+      "strict_min_max": null
+    },
+    {
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "shallow_id": "b04_p2_shallow",
+      "deep_id": "b04_p2_deep",
+      "expected_min_D": 2,
+      "expected_max_D": 4,
+      "shallow_status": "not_observed",
+      "deep_status": "not_observed",
+      "shallow_strict_valid": null,
+      "deep_strict_valid": null,
+      "shallow_actual_D": null,
+      "deep_actual_D": null,
+      "measurement_available": false,
+      "strict_min_max": null
+    },
+    {
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "shallow_id": "b05_p2_shallow",
+      "deep_id": "b05_p2_deep",
+      "expected_min_D": 2,
+      "expected_max_D": 4,
+      "shallow_status": "not_observed",
+      "deep_status": "not_observed",
+      "shallow_strict_valid": null,
+      "deep_strict_valid": null,
+      "shallow_actual_D": null,
+      "deep_actual_D": null,
+      "measurement_available": false,
+      "strict_min_max": null
+    }
+  ],
+  "neutral_diagnostics": [
+    {
+      "problem_id": "T02",
+      "seed": 64001001,
+      "id": "b00_p0_neutral",
+      "status": "not_observed",
+      "strict_valid": null,
+      "actual_D": null,
+      "final_rule_id": null,
+      "diagnostic_only": true
+    },
+    {
+      "problem_id": "T02",
+      "seed": 64001002,
+      "id": "b01_p0_neutral",
+      "status": "not_observed",
+      "strict_valid": null,
+      "actual_D": null,
+      "final_rule_id": null,
+      "diagnostic_only": true
+    },
+    {
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "id": "b02_p1_neutral",
+      "status": "not_observed",
+      "strict_valid": null,
+      "actual_D": null,
+      "final_rule_id": null,
+      "diagnostic_only": true
+    },
+    {
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "id": "b03_p1_neutral",
+      "status": "not_observed",
+      "strict_valid": null,
+      "actual_D": null,
+      "final_rule_id": null,
+      "diagnostic_only": true
+    },
+    {
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "id": "b04_p2_neutral",
+      "status": "not_observed",
+      "strict_valid": null,
+      "actual_D": null,
+      "final_rule_id": null,
+      "diagnostic_only": true
+    },
+    {
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "id": "b05_p2_neutral",
+      "status": "not_observed",
+      "strict_valid": null,
+      "actual_D": null,
+      "final_rule_id": null,
+      "diagnostic_only": true
+    }
+  ],
+  "overall": {
+    "directed_pair_denominator": null,
+    "strict_min_max_pairs": null,
+    "strict_min_max_rate": null,
+    "development_pairs": null,
+    "development_strict_min_max_pairs": null,
+    "evaluation_pairs": null,
+    "evaluation_strict_min_max_pairs": null,
+    "bounded_A_or_M_pilot": null,
+    "same_strict_proof_path_observed": null
+  },
+  "usage": {
+    "prompt_eval_count": null,
+    "eval_count": null,
+    "total_duration": null,
+    "prompt_eval_cached_count": null
+  },
+  "limits": {
+    "A": "not_measured",
+    "M": "not_measured",
+    "neutral": "diagnostic_only",
+    "evaluation_scope": "prospective_model_unobserved_designer_selected_structures",
+    "repeated_seeds_are_independent_problems": false,
+    "metadata_is_not_cache_reset": true,
+    "parse_or_envelope_failures": 0,
+    "logical_failures": 0
+  }
+}

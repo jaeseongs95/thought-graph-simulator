@@ -1,0 +1,23 @@
+{
+  "correction": "초기 임시 재집계가 v058 rule을 v062 rule_id로 읽어 KeyError를 논리 실패에 섞었다. 원자료/과거채점 결함 아님. 판본별 필드로 교정, 원자료 불변. choice 집계는 영향 없음.",
+  "graph_counts": {
+    "58": {
+      "qwen3:4b-instruct": {
+        "observed": 20,
+        "valid": 20,
+        "D_1": 20
+      },
+      "gemma3:4b": {
+        "observed": 20,
+        "invalid": 20
+      }
+    },
+    "62": {
+      "gemma3:4b": {
+        "observed": 40,
+        "invalid": 40
+      }
+    }
+  },
+  "choice_counts_source": "raw_crosscheck.json"
+}

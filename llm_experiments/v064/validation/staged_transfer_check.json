@@ -1,0 +1,26 @@
+[
+  {
+    "case": "963e0e50f50089e8fbf88a50",
+    "parent_returned": true,
+    "wire_b": true,
+    "matches": true
+  },
+  {
+    "case": "2d488c8d707b13ad7b5f1c5b",
+    "parent_returned": false,
+    "wire_b": false,
+    "matches": true
+  },
+  {
+    "case": "6502b35caef6083e165ed327",
+    "parent_returned": true,
+    "wire_b": true,
+    "matches": true
+  },
+  {
+    "case": "9f9bdd107a5f481786e887fc",
+    "parent_returned": false,
+    "wire_b": false,
+    "matches": true
+  }
+]

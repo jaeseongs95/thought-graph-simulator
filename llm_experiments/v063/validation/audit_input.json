@@ -1,0 +1,29 @@
+{
+  "user_request": "v062 결과 분석, 소스 생성, 작업에 대한 3자토론",
+  "scope": "v063 오프라인 원자료 진단 도구; 실제 LLM 호출 없음",
+  "candidate": {
+    "contract": "v063-seal-r1",
+    "candidate_sha256": "4493217731fd0cf40c5deac91921b93b090109664cc697f7cf33901bf2b834ac",
+    "candidate_path": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v063\\releases\\v063_forensics_source_r1.zip",
+    "prior_files_unchanged": 360,
+    "tests_original": 10,
+    "tests_fresh": 10,
+    "windows_offline_launcher": "passed",
+    "artifact_files": 369,
+    "profile": "cooperative-sealed",
+    "provider": "sealed-artifact-v1"
+  },
+  "validation_hashes": {
+    "selftest.log": "9ac820619207bff2eb8376f7158fc5fce07ad434ce17081405f3444d5aeb888f",
+    "fresh_selftest.log": "60e02e45cbd9ed37bfdab112ab7c8404f1a3b4f58608eb4530f010df0200ef6e",
+    "windows_launcher.log": "7d7e2165746dbc260f9734b791a5158dddbdfb4bfbd423786d6457a763059895",
+    "seal.json": "465ffe7f3481b2480109dfade5343b7dac17eab47f648aa620744d27940b9c7a"
+  },
+  "source_writers_stopped_before_audit": true,
+  "auditor_task": "/root/v063_sealed_source_audit",
+  "requested_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "xhigh",
+  "actual_model_settings": "unverified",
+  "assurance": "cooperative-sealed",
+  "provider": "sealed-artifact-v1"
+}

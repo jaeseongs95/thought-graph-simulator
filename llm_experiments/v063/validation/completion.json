@@ -1,0 +1,28 @@
+{
+  "contract": "v063-final-completion-r1",
+  "candidate_completion": "complete",
+  "audit_state": "completed",
+  "candidate_sha256": "4493217731fd0cf40c5deac91921b93b090109664cc697f7cf33901bf2b834ac",
+  "new_model_inference": false,
+  "findings": [
+    {
+      "audit_observation_id": "v063-source-audit-20260913-r1",
+      "finding_id": "D001",
+      "disposition": "accepted",
+      "disposition_evidence": "Auditor fresh rebuild: all 370 entry contents identical; timestamps differ.",
+      "resolution_status": "unresolved",
+      "resolution_evidence": "Nonblocking diagnostic retained; frozen candidate unchanged; archive-byte deterministic rebuild not promised.",
+      "rechecks": [],
+      "candidate_digest": "4493217731fd0cf40c5deac91921b93b090109664cc697f7cf33901bf2b834ac"
+    }
+  ],
+  "artifact_hashes": {
+    "source_audit_result.json": "d2b36a092fa7aa5b4065f6d0836f00ba22012d17090913bef3f10a89404f3519",
+    "SOURCE_AUDIT.ko.md": "e885d3c70513598ebe17220b4d79c7b261027d4f4054839c42cdebc765ae10eb",
+    "FINAL_REVIEW.ko.md": "2fdcfb8cd3b1a5506f0e9e4ed325c5e96a51847d743fcb833a1474677e3f9050",
+    "audit_input.json": "327e2211807ad1cac05a7086067340252dae9083d59820dbc8f82999d7ed4842",
+    "seal.json": "465ffe7f3481b2480109dfade5343b7dac17eab47f648aa620744d27940b9c7a"
+  },
+  "post_audit_source_match": true,
+  "post_audit_zip_hash_match": true
+}

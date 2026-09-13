@@ -1,0 +1,662 @@
+{
+  "contract": "v065-plan-r1",
+  "run_name": "v065_construct_20260913_181003_418911",
+  "provenance": "live",
+  "protocol": {
+    "contract": "v065-prescribed-construction-r1",
+    "baseline_sha256": "7a20b2b6bfc3a9d185b9049e2a67bb4ee344b7a8353312f90e202c752d02126e",
+    "baseline_request_id": "b00_p0_shallow",
+    "model": "qwen3:4b-instruct",
+    "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "problems": [
+      {
+        "id": "T02",
+        "facts": [
+          "Lp",
+          "Ls"
+        ],
+        "rules": [
+          {
+            "id": "r83",
+            "premises": [
+              "Lp",
+              "Ls"
+            ],
+            "conclusion": "Lg"
+          },
+          {
+            "id": "r21",
+            "premises": [
+              "Lp"
+            ],
+            "conclusion": "Lq"
+          },
+          {
+            "id": "r57",
+            "premises": [
+              "Lq",
+              "Ls"
+            ],
+            "conclusion": "Lr"
+          },
+          {
+            "id": "r04",
+            "premises": [
+              "Lr"
+            ],
+            "conclusion": "Lt"
+          },
+          {
+            "id": "r69",
+            "premises": [
+              "Lt"
+            ],
+            "conclusion": "Lg"
+          }
+        ],
+        "goal": "Lg"
+      },
+      {
+        "id": "E01_shared_fork",
+        "facts": [
+          "Aa",
+          "Ab"
+        ],
+        "rules": [
+          {
+            "id": "n08",
+            "premises": [
+              "Aa"
+            ],
+            "conclusion": "Ax"
+          },
+          {
+            "id": "n52",
+            "premises": [
+              "Aa",
+              "Ab"
+            ],
+            "conclusion": "Ag"
+          },
+          {
+            "id": "n37",
+            "premises": [
+              "Ax",
+              "Ay",
+              "Ab"
+            ],
+            "conclusion": "Ag"
+          },
+          {
+            "id": "n91",
+            "premises": [
+              "Aa"
+            ],
+            "conclusion": "Ay"
+          },
+          {
+            "id": "n64",
+            "premises": [
+              "Ab"
+            ],
+            "conclusion": "Az"
+          }
+        ],
+        "goal": "Ag"
+      },
+      {
+        "id": "E02_two_vs_four",
+        "facts": [
+          "Pa",
+          "Pb",
+          "Pc"
+        ],
+        "rules": [
+          {
+            "id": "m33",
+            "premises": [
+              "Pa"
+            ],
+            "conclusion": "Pu"
+          },
+          {
+            "id": "m76",
+            "premises": [
+              "Ps",
+              "Pc"
+            ],
+            "conclusion": "Pg"
+          },
+          {
+            "id": "m18",
+            "premises": [
+              "Pa",
+              "Pb"
+            ],
+            "conclusion": "Ps"
+          },
+          {
+            "id": "m05",
+            "premises": [
+              "Pu",
+              "Pb"
+            ],
+            "conclusion": "Pv"
+          },
+          {
+            "id": "m41",
+            "premises": [
+              "Pw"
+            ],
+            "conclusion": "Pg"
+          },
+          {
+            "id": "m84",
+            "premises": [
+              "Pv",
+              "Pc"
+            ],
+            "conclusion": "Pw"
+          }
+        ],
+        "goal": "Pg"
+      }
+    ],
+    "depth_ranges": {
+      "T02": [
+        1,
+        4
+      ],
+      "E01_shared_fork": [
+        1,
+        2
+      ],
+      "E02_two_vs_four": [
+        2,
+        4
+      ]
+    },
+    "seeds": [
+      64001001,
+      64001002
+    ],
+    "orders": [
+      [
+        "prescribed_short",
+        "prescribed_long"
+      ],
+      [
+        "prescribed_long",
+        "prescribed_short"
+      ],
+      [
+        "prescribed_short",
+        "prescribed_long"
+      ],
+      [
+        "prescribed_long",
+        "prescribed_short"
+      ],
+      [
+        "prescribed_short",
+        "prescribed_long"
+      ],
+      [
+        "prescribed_long",
+        "prescribed_short"
+      ]
+    ],
+    "max_inference_calls": 12,
+    "metadata_records": 12,
+    "generation_token_upper_bound": 49152,
+    "request_utf8_byte_limit": 16000,
+    "num_predict": 4096,
+    "timeout_seconds": 300,
+    "no_warmup": true,
+    "automatic_retry": false,
+    "no_result_based_gate": true,
+    "content_control": "Base-fixed",
+    "A": "not_measured",
+    "M": "not_measured",
+    "evaluation_scope": "v064_used_structures_diagnostic_not_holdout",
+    "decision_rule": "one_bounded_construction_batch; never_relabel_prior_failures; fixed_route_success_not_D_control",
+    "frozen_before_real_model_output": true,
+    "required_terminal_rules": {
+      "T02": {
+        "prescribed_short": "r83",
+        "prescribed_long": "r69"
+      },
+      "E01_shared_fork": {
+        "prescribed_short": "n52",
+        "prescribed_long": "n37"
+      },
+      "E02_two_vs_four": {
+        "prescribed_short": "m76",
+        "prescribed_long": "m41"
+      }
+    },
+    "original_v064_plan_sha256": "ebffd36a06e385f090ec8874f392d6fdfef95f219bc43a89c9b1399abfd79cad",
+    "prior_verifier_source_sha256": "238b4997ceaa4191fb79498cc12647010bd02056cf7ac96a0ca0752712ff4553",
+    "research_claim": "prescribed_terminal_rule_construction_only; D_instruction_control_not_measured",
+    "neutral": "not_repeated: this_is_construction_test_not_D_instruction_intervention",
+    "hypothesis": "When a final rule is specified, does the model construct a strict proof ending in that rule?",
+    "staged_implementation": "not_in_this_batch; require_separate_direct_vs_staged_contract",
+    "historical_problem_roles": {
+      "T02": "v064_development",
+      "E01_shared_fork": "v064_evaluation_now_seen",
+      "E02_two_vs_four": "v064_evaluation_now_seen"
+    }
+  },
+  "protocol_sha256": "8eda856a48e7c3f246e9acb09567d10f3340179264ce72f5af51ca0818ed6589",
+  "source_hashes": {
+    "README.md": "39a527037c424f6a19b7eae9d748377ab4549268b60bd41330ca710345699879",
+    "build_release.py": "70edbff78c20dc519246a78b7263737753f18954871e01bfced370ccaec34e90",
+    "common.py": "ea7ab10ec5e1999ea40e856786d2aee882c56e88d2d946e26bdc07402af06351",
+    "data/protocol.json": "8eda856a48e7c3f246e9acb09567d10f3340179264ce72f5af51ca0818ed6589",
+    "design.py": "497579b3e09bea82e36f72f91474d618e41f9fba9c1309ca741bdb35b29c6e47",
+    "docs/PROTOCOL.ko.md": "42418fdf08ab205f5b613aa256a20f4c8864dd3afa038e12abadf10f351888c9",
+    "docs/REVIEW_AND_CHANGES.ko.md": "d175e2f8164bf898426ff0747b3a85191600e396dbce7e2554dd7b976c969d5d",
+    "launch.py": "6c15857c3fd94833af591a1bd6164eb6905246a443656f44bb0a464ef8665d53",
+    "measure.py": "47e6a93f5e96e8346ccb21c77034a5859ad8fbe9a326e77bff44acd58d610f71",
+    "previous.py": "88769940c0f98091d8c271bb3faf72f770b23db4fc451f3cf80e2413d8a90315",
+    "prior/v064_source_r3.zip": "238b4997ceaa4191fb79498cc12647010bd02056cf7ac96a0ca0752712ff4553",
+    "report.py": "29db4c414d23038292482378ec5c239260deeb96c3f181e060867955031b9a64",
+    "run.py": "ceb471635417ba9a60c284e0a857d2ac6cf79ef8dbf832667302a67b7e9a7f51",
+    "tests/fixtures.py": "468196e2e72684e1b3a7f0a9a4cfbb3419796e756144ea521412bb1cfc5992b3",
+    "tests/test_integration.py": "9ebd59842448ea93acd8eff33b0b684b3107eb6b2aa00dcb09e9ba6a7d905ae6",
+    "tests/test_integrity.py": "291e6c366b95c42957fc09f895f8e7bf3e52b461c16505ff2c64173cddad9950",
+    "tests/test_launch.py": "e470f486bd7fbf60c8211ccdb763001941515019fdb950179ade885a4b5c2c32",
+    "tests/test_logic.py": "158a5a6f8ba29ecb3e2644cd797f7556019565337ecbacf167ed1a5833e4e817",
+    "tests/test_native.py": "5234fd9a7f4ede5298b12353cccb5b709017f2563eadfe87631e660fa256c476",
+    "verify.py": "ec5ea68e6cb73b5d5e7c5566e25930deaba3549ad0ed54ff7fa619afdbdef0d8",
+    "windows/Run-v065.cmd": "10c54068131712bbfb0ad0f6d454a34def22a3bb9f46409adbe6fc6ad1d6c925",
+    "windows/Run-v065.ps1": "4373171d3b968e9ec774b9c6057c31ff741e96c9d99f4a9abbe6988ddb505fd7",
+    "windows/native.ps1": "5042e9b2579f6be4fcb09e3267a565214091a8e0e940dcee2b4090c51e13df37"
+  },
+  "baseline_sha256": "7a20b2b6bfc3a9d185b9049e2a67bb4ee344b7a8353312f90e202c752d02126e",
+  "baseline_request": {
+    "model": "qwen3:4b-instruct",
+    "messages": [
+      {
+        "role": "user",
+        "content": "facts와 rules만 사용하여 goal을 지지하는 증명 DAG 하나를 작성한다.\n한 증명만 선택한다. 서로 대안인 두 경로를 모두 나열하면 안 된다. 모든 노드는 선택한 목표 노드의 조상이어야 한다.\nnodes는 위상 순서의 id, atom, rule, parents 배열이다. 초기 사실의 rule은 null이고 parents는 []다.\n규칙 적용의 rule은 실제 규칙 id이며 parents에는 모든 전제 노드 id를 쓴다.\nfinal_node_id는 선택한 목표 노드의 id이다. 원자 이름(goal 문자열)을 쓰는 필드가 아니다.\n최종 노드는 nodes 안에 있어야 한다. 목표 문자열이 같아도 근거 없는 단독 주장은 유효한 증명이 아니다.\n\n경로 지시:\n허용된 유효한 증명 중 최종 지지 깊이가 가장 작은 경로를 선택한다.\nJSON 객체 하나만 출력한다. 출력 형식(JSON Schema):\n{\"type\":\"object\",\"properties\":{\"nodes\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":128},\"atom\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":128},\"rule\":{\"anyOf\":[{\"type\":\"string\",\"minLength\":1,\"maxLength\":128},{\"type\":\"null\"}]},\"parents\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":128},\"minItems\":0,\"maxItems\":16}},\"required\":[\"id\",\"atom\",\"rule\",\"parents\"],\"additionalProperties\":false},\"minItems\":1,\"maxItems\":16},\"final_node_id\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":128}},\"required\":[\"nodes\",\"final_node_id\"],\"additionalProperties\":false}\n\nproblem: {\"id\":\"T02\",\"facts\":[\"Lp\",\"Ls\"],\"rules\":[{\"id\":\"r83\",\"premises\":[\"Lp\",\"Ls\"],\"conclusion\":\"Lg\"},{\"id\":\"r21\",\"premises\":[\"Lp\"],\"conclusion\":\"Lq\"},{\"id\":\"r57\",\"premises\":[\"Lq\",\"Ls\"],\"conclusion\":\"Lr\"},{\"id\":\"r04\",\"premises\":[\"Lr\"],\"conclusion\":\"Lt\"},{\"id\":\"r69\",\"premises\":[\"Lt\"],\"conclusion\":\"Lg\"}],\"goal\":\"Lg\"}"
+      }
+    ],
+    "stream": false,
+    "keep_alive": "10m",
+    "options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repeat_penalty": 1.0,
+      "num_ctx": 8192,
+      "num_predict": 4096,
+      "num_thread": 6,
+      "num_batch": 256,
+      "seed": 64001001
+    },
+    "format": {
+      "type": "object",
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "atom": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "rule": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 128
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "parents": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 128
+                },
+                "minItems": 0,
+                "maxItems": 16
+              }
+            },
+            "required": [
+              "id",
+              "atom",
+              "rule",
+              "parents"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 16
+        },
+        "final_node_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        }
+      },
+      "required": [
+        "nodes",
+        "final_node_id"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "identity": {
+    "model": "qwen3:4b-instruct",
+    "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "show_sha256": "d223770b6393471210267ea75d0870b0770c0ebf3b1f5ae539758f7500816948",
+    "server": {
+      "version": "0.34.0"
+    },
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "4.0B",
+      "quantization_level": "Q4_K_M"
+    },
+    "template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0].role == 'system' %}\n        {{- messages[0].content + '\\n\\n' }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0].content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" and message.content is string and not(message.content.startswith('<tool_response>') and message.content.endswith('</tool_response>')) %}\n        {%- set ns.multi_step_tool = false %}\n        {%- set ns.last_query_index = index %}\n    {%- endif %}\n{%- endfor %}\n{%- for message in messages %}\n    {%- if message.content is string %}\n        {%- set content = message.content %}\n    {%- else %}\n        {%- set content = '' %}\n    {%- endif %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {%- if loop.last or (not loop.last and reasoning_content) %}\n                {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content.strip('\\n') + '\\n</think>\\n\\n' + content.lstrip('\\n') }}\n            {%- else %}\n                {{- '<|im_start|>' + message.role + '\\n' + content }}\n            {%- endif %}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if (loop.first and content) or (not loop.first) %}\n                    {{- '\\n' }}\n                {%- endif %}\n                {%- if tool_call.function %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {{- '<tool_call>\\n{\"name\": \"' }}\n                {{- tool_call.name }}\n                {{- '\", \"arguments\": ' }}\n                {%- if tool_call.arguments is string %}\n                    {{- tool_call.arguments }}\n                {%- else %}\n                    {{- tool_call.arguments | tojson }}\n                {%- endif %}\n                {{- '}\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.first or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}",
+    "parameters": "repeat_penalty                 1\nstop                           \"<|im_start|>\"\nstop                           \"<|im_end|>\"\ntemperature                    0.7\ntop_k                          20\ntop_p                          0.8",
+    "model_info": {
+      "general.architecture": "qwen3",
+      "general.basename": "Qwen3",
+      "general.file_type": 15,
+      "general.finetune": "Instruct",
+      "general.license": "apache-2.0",
+      "general.license.link": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507/blob/main/LICENSE",
+      "general.parameter_count": 4022468096,
+      "general.quantization_version": 2,
+      "general.size_label": "4B",
+      "general.tags": null,
+      "general.type": "model",
+      "general.version": "2507",
+      "qwen3.attention.head_count": 32,
+      "qwen3.attention.head_count_kv": 8,
+      "qwen3.attention.key_length": 128,
+      "qwen3.attention.layer_norm_rms_epsilon": 1e-06,
+      "qwen3.attention.value_length": 128,
+      "qwen3.block_count": 36,
+      "qwen3.context_length": 262144,
+      "qwen3.embedding_length": 2560,
+      "qwen3.feed_forward_length": 9728,
+      "qwen3.rope.freq_base": 5000000,
+      "tokenizer.ggml.add_bos_token": false,
+      "tokenizer.ggml.bos_token_id": 151643,
+      "tokenizer.ggml.eos_token_id": 151645,
+      "tokenizer.ggml.merges": null,
+      "tokenizer.ggml.model": "gpt2",
+      "tokenizer.ggml.padding_token_id": 151643,
+      "tokenizer.ggml.pre": "qwen2",
+      "tokenizer.ggml.token_type": null,
+      "tokenizer.ggml.tokens": null
+    }
+  },
+  "slots": [
+    {
+      "id": "b00_p0_prescribed_short",
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "block": 0,
+      "period": 0,
+      "condition": "prescribed_short",
+      "required_terminal_rule": "r83",
+      "previous_call_id": null,
+      "previous_condition": null
+    },
+    {
+      "id": "b00_p0_prescribed_long",
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "block": 0,
+      "period": 1,
+      "condition": "prescribed_long",
+      "required_terminal_rule": "r69",
+      "previous_call_id": "b00_p0_prescribed_short",
+      "previous_condition": "prescribed_short"
+    },
+    {
+      "id": "b01_p0_prescribed_long",
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "block": 1,
+      "period": 0,
+      "condition": "prescribed_long",
+      "required_terminal_rule": "r69",
+      "previous_call_id": "b00_p0_prescribed_long",
+      "previous_condition": "prescribed_long"
+    },
+    {
+      "id": "b01_p0_prescribed_short",
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "block": 1,
+      "period": 1,
+      "condition": "prescribed_short",
+      "required_terminal_rule": "r83",
+      "previous_call_id": "b01_p0_prescribed_long",
+      "previous_condition": "prescribed_long"
+    },
+    {
+      "id": "b02_p1_prescribed_short",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "seed_index": 0,
+      "block": 2,
+      "period": 0,
+      "condition": "prescribed_short",
+      "required_terminal_rule": "n52",
+      "previous_call_id": "b01_p0_prescribed_short",
+      "previous_condition": "prescribed_short"
+    },
+    {
+      "id": "b02_p1_prescribed_long",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "seed_index": 0,
+      "block": 2,
+      "period": 1,
+      "condition": "prescribed_long",
+      "required_terminal_rule": "n37",
+      "previous_call_id": "b02_p1_prescribed_short",
+      "previous_condition": "prescribed_short"
+    },
+    {
+      "id": "b03_p1_prescribed_long",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "seed_index": 1,
+      "block": 3,
+      "period": 0,
+      "condition": "prescribed_long",
+      "required_terminal_rule": "n37",
+      "previous_call_id": "b02_p1_prescribed_long",
+      "previous_condition": "prescribed_long"
+    },
+    {
+      "id": "b03_p1_prescribed_short",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "seed_index": 1,
+      "block": 3,
+      "period": 1,
+      "condition": "prescribed_short",
+      "required_terminal_rule": "n52",
+      "previous_call_id": "b03_p1_prescribed_long",
+      "previous_condition": "prescribed_long"
+    },
+    {
+      "id": "b04_p2_prescribed_short",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "block": 4,
+      "period": 0,
+      "condition": "prescribed_short",
+      "required_terminal_rule": "m76",
+      "previous_call_id": "b03_p1_prescribed_short",
+      "previous_condition": "prescribed_short"
+    },
+    {
+      "id": "b04_p2_prescribed_long",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "block": 4,
+      "period": 1,
+      "condition": "prescribed_long",
+      "required_terminal_rule": "m41",
+      "previous_call_id": "b04_p2_prescribed_short",
+      "previous_condition": "prescribed_short"
+    },
+    {
+      "id": "b05_p2_prescribed_long",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "block": 5,
+      "period": 0,
+      "condition": "prescribed_long",
+      "required_terminal_rule": "m41",
+      "previous_call_id": "b04_p2_prescribed_long",
+      "previous_condition": "prescribed_long"
+    },
+    {
+      "id": "b05_p2_prescribed_short",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "block": 5,
+      "period": 1,
+      "condition": "prescribed_short",
+      "required_terminal_rule": "m76",
+      "previous_call_id": "b05_p2_prescribed_long",
+      "previous_condition": "prescribed_long"
+    }
+  ],
+  "actions": [
+    {
+      "kind": "metadata",
+      "id": "b00_before"
+    },
+    {
+      "kind": "call",
+      "id": "b00_p0_prescribed_short"
+    },
+    {
+      "kind": "call",
+      "id": "b00_p0_prescribed_long"
+    },
+    {
+      "kind": "metadata",
+      "id": "b00_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b01_before"
+    },
+    {
+      "kind": "call",
+      "id": "b01_p0_prescribed_long"
+    },
+    {
+      "kind": "call",
+      "id": "b01_p0_prescribed_short"
+    },
+    {
+      "kind": "metadata",
+      "id": "b01_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b02_before"
+    },
+    {
+      "kind": "call",
+      "id": "b02_p1_prescribed_short"
+    },
+    {
+      "kind": "call",
+      "id": "b02_p1_prescribed_long"
+    },
+    {
+      "kind": "metadata",
+      "id": "b02_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b03_before"
+    },
+    {
+      "kind": "call",
+      "id": "b03_p1_prescribed_long"
+    },
+    {
+      "kind": "call",
+      "id": "b03_p1_prescribed_short"
+    },
+    {
+      "kind": "metadata",
+      "id": "b03_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b04_before"
+    },
+    {
+      "kind": "call",
+      "id": "b04_p2_prescribed_short"
+    },
+    {
+      "kind": "call",
+      "id": "b04_p2_prescribed_long"
+    },
+    {
+      "kind": "metadata",
+      "id": "b04_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b05_before"
+    },
+    {
+      "kind": "call",
+      "id": "b05_p2_prescribed_long"
+    },
+    {
+      "kind": "call",
+      "id": "b05_p2_prescribed_short"
+    },
+    {
+      "kind": "metadata",
+      "id": "b05_after"
+    }
+  ],
+  "plan_sha256": "5242fca99402ed5c65075b2a1e5dbdaf11223fdf3468962316b17e4ca4a58902"
+}

@@ -1,0 +1,24 @@
+{
+  "X1": {
+    "issue": "지정구성 완전 게이트가 직접 D 대조의 필수 선행인가",
+    "initial": {
+      "measurement": "direct first",
+      "causal": "12/12 construction gate first"
+    },
+    "cross": {
+      "measurement": "gate first로 변경;12/12는공학적기준",
+      "causal": "direct18 first로 변경;gate는대리과제이며원질문관측차단"
+    },
+    "evidence_boundary": "T02 지정구성 성공도 새로운 문제의 구성 가능성을 보장하지 않음. 직접 실패에서 구성/선택 원인을 미분리로 남길 수 있음.",
+    "status": "material_disagreement_retained"
+  },
+  "X2": {
+    "issue": "실패 관측의 다음결정 가치",
+    "cross_causal": "valid sameD와invalid graph를분리하고후자에만최소구성후속검토"
+  },
+  "X3": {
+    "issue": "neutral 추가호출의정보가치",
+    "cross_measurement": "진단으로허용하되추가반복/구조평가보다약함;문제×순서잔여교락",
+    "coordinator_question": "neutral에서deep유효증명이관측되면해당문제깊은구성가능성은관측되므로후속구성검사의필요가달라짐. neutral성공을directed성공으로재채점하지않음."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "contract": "independent-v063-forensics-r1",
+  "bundle_sha256": "baea752ac1a55dc7a20b42b41ced69b3c8e126105f65deea8ebecc8dde3f09fd",
+  "report_sha256": "33bf9f0e309a03c9c383ec2299e53eafa4611c5344519ffcc6eda640f62b0a3d",
+  "complete": true,
+  "observed_calls": 40,
+  "compared_fields": 5294,
+  "differences": [],
+  "legacy_receipt": {
+    "contract": "independent-v062-r1",
+    "bundle_sha256": "baea752ac1a55dc7a20b42b41ced69b3c8e126105f65deea8ebecc8dde3f09fd",
+    "complete": true,
+    "observed_calls": 40,
+    "metadata_records": 20,
+    "compared_fields": 842,
+    "differences": [],
+    "production_imports": false,
+    "baseline_compared_fields": 1649,
+    "limitation": "원문·계획·측정 일관성 검산이며 외부 실행 인증, 자유 선택, A/M 제어 또는 내부 기제의 인과 검증은 아니다."
+  },
+  "production_imports": false,
+  "limitation": "원문 기반 forensic report의 필드 일관성 검산이다. v062의 기존 사람이 읽는 parse_error 문구는 독립 재생성하지 않으며, raw_parse_category만 신뢰한다. 보정 증명·보정 D·새 성공 지표·외부 실행 인증은 제공하지 않는다."
+}

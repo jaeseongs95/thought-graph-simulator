@@ -1,0 +1,26 @@
+{
+  "observed": 0,
+  "first_pair": {
+    "problem_id": "T02",
+    "seed": 64001001,
+    "shallow_id": "b00_p0_shallow",
+    "deep_id": "b00_p0_deep",
+    "expected_min_D": 1,
+    "expected_max_D": 4,
+    "shallow_status": "not_observed",
+    "deep_status": "not_observed",
+    "shallow_strict_valid": null,
+    "deep_strict_valid": null,
+    "shallow_actual_D": null,
+    "deep_actual_D": null,
+    "strict_min_max": false
+  },
+  "first_problem": {
+    "problem_id": "T02",
+    "assigned_directed_pairs": 2,
+    "strict_min_max_pairs": 0,
+    "strict_min_max_rate": 0.0,
+    "directed_actual_D_values": [],
+    "always_fixed_path": false
+  }
+}

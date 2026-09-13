@@ -1,0 +1,33 @@
+{
+  "contract": "v064-topological-regression-r1",
+  "baseline_sha256": "d8fd5b2123d38023aaf7c7c0427f54ab6fe650d6b85a695790cb7a5b5b852761",
+  "baseline_request_id": "graph_choice__graph__merged__reference__s00_T02_original_shallow",
+  "prompt_constraint": "nodes are in topological order",
+  "reproduction": {
+    "source_response": "run/calls/graph_choice__graph__merged__reference__s00_T02_original_shallow/response.raw.json",
+    "mutation": "reverse nodes array only",
+    "emitted_node_ids": [
+      "r83",
+      "f2",
+      "f1"
+    ]
+  },
+  "measure_before_fix": {
+    "format_valid": true,
+    "proof_valid": true,
+    "strict_valid": true,
+    "actual_D": 1,
+    "final_rule_id": "r83",
+    "error_codes": []
+  },
+  "required_after_fix": {
+    "format_valid": true,
+    "proof_valid": true,
+    "strict_valid": false,
+    "actual_D": null,
+    "final_rule_id": "r83",
+    "error_codes": [
+      "non_topological_order"
+    ]
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "audit_observation_id": "v064-source-audit-r1",
+  "completed_at_utc": "2026-09-13T07:43:58.1027186Z",
+  "audit_state": "completed",
+  "candidate_completion": "incomplete",
+  "assurance_profile": "cooperative-sealed",
+  "provider": "sealed-artifact-v1",
+  "auditor_independence": {
+    "implementation_participation": false,
+    "design_participation": false,
+    "integration_participation": false,
+    "role": "fresh source auditor"
+  },
+  "candidate": {
+    "path": "llm_experiments/v064/releases/v064_direct_D_source_r1.zip",
+    "sha256_before": "5cd7a8d755dc60bf90afe90ff26fca451944deb72480d074acff2499114c84e6",
+    "sha256_after": "5cd7a8d755dc60bf90afe90ff26fca451944deb72480d074acff2499114c84e6",
+    "size_bytes": 52789,
+    "manifest_source_files": 16,
+    "manifest_and_member_hashes_match": true,
+    "fresh_source_bytes_match": true,
+    "deterministic_rebuild_sha256": "5cd7a8d755dc60bf90afe90ff26fca451944deb72480d074acff2499114c84e6"
+  },
+  "audit_input": {
+    "path": "llm_experiments/v064/validation/audit_input_r1.json",
+    "sha256_before": "e9ae5bd08c2604f73963e7aa681f397132c88a4b0bd73c30d4ebac19150ff018",
+    "sha256_after": "e9ae5bd08c2604f73963e7aa681f397132c88a4b0bd73c30d4ebac19150ff018",
+    "request_sha256_verified": "39807eb1da34877d262b18da13cc7eab155376743a6b603cd71135871ea68d53",
+    "instructions_sha256_verified": "67a6973db5708b2d7daff01451fb0d2b80b96f1ca39e5cdb7b2382a313b55f58",
+    "evidence_references_verified": "15/15",
+    "source_hashes_verified": "16/16"
+  },
+  "verdict": "r1 후보는 실행·측정·보고의 정상 합성 경로와 봉인 무결성은 통과했지만, 필수 변조 거부 및 부분 실행 독립 검산 계약의 차단 결함 3개 때문에 사용자 실행 후보로 완료할 수 없다. 수정, 관련 회귀, 새 ZIP 봉인 및 동일 감사자의 재확인이 필요하다.",
+  "findings": [
+    {
+      "finding_id": "V064-SA-R1-F001",
+      "severity": "blocking",
+      "criterion": "모델 식별자와 실행 순서가 변조된 뒤 hash, event chain, summary, 한국어 보고서, manifest를 다시 계산해도 독립 검산기가 거부해야 하며 identity 오류 뒤에는 즉시 중단되어야 한다.",
+      "evidence": "봉인 소스 run.py:187 및 run.py:201-203은 call_stop_reason을 받은 첫 action에서 stopped로 종료한다. 그러나 verify.py:823-831은 terminal action의 stop reason만 검사한다. 별도 임시 반례 C:/Users/sjs95/AppData/Local/Temp/v064_audit_early_wrong_model_resigned.zip(SHA256 115c58a3569246ecb8576de4c7079bda9b679e015da6d2bb9e5ea585238d6120)에서 첫 call b00_p0_shallow의 response model을 different:4b로 바꾸고 response_sha256, record, 이후 전체 event hash chain, summary.json, summary.ko.md, MANIFEST.json을 다시 계산했다. fresh_source_r1의 verify.verify_bundle은 첫 row를 identity_error로 재계산하면서도 state=complete, observed_calls=18, verified=true로 승인했다.",
+      "impact": "재서명된 번들이 실제 runner로는 불가능한 '조기 identity 오류 뒤 계속 실행된 complete run'을 유효한 독립 검산 결과로 통과시킨다. 따라서 모델 식별자 변조 거부, 즉시 중단, event 순서 결속 주장을 충족하지 못한다.",
+      "recommended_action": "verify_bundle에서 각 완료 action을 순서대로 판정하고 stop reason이 생긴 첫 action이 반드시 마지막 완료 action이며 status.state=stopped 및 status.reason과 일치하도록 검사한다. complete는 모든 call/metadata action의 stop reason이 없어야 한다. 조기 response model 변조와 조기 metadata identity/HTTP 오류를 record, event chain, report, manifest까지 다시 계산한 반례를 추가해 모두 거부되는지 확인한다.",
+      "unverified": [
+        "모든 stop reason 조합을 개별 변조하지는 않았다.",
+        "같은 OS 사용자 권한의 악의적 작성자를 막는 외부 인증은 cooperative-sealed 범위가 아니며 주장하지 않는다."
+      ]
+    },
+    {
+      "finding_id": "V064-SA-R1-F002",
+      "severity": "blocking",
+      "criterion": "제공자가 num_predict를 초과한 eval_count를 반환하면 runner가 generation_budget_exceeded로 즉시 중단하고 관측된 부분 자료를 evidence ZIP과 독립 검산 결과로 보존해야 한다.",
+      "evidence": "run.py:111-114는 eval_count>num_predict를 generation_budget_exceeded로 분류하고 run.py:187,201-203에서 stopped로 종료한다. verify.py:33도 이 값을 합법적인 stopped reason으로 열거하지만 verify.py:834-840은 같은 terminal response를 무조건 generation budget per call 오류로 거부한다. 봉인 뒤 메인이 별도로 만든 operational_repro_r1.json(SHA256 95840304d66035e4f8a011a46a518910d4611909b9243d986a14f6d63ebf9e73)의 provider_over_budget 사례와 v064_repro_provider_over_budget_r1_evidence.zip(SHA256 6be0fbb0f0adcbbab02e053bf7a94b6d18d1db6edf52f6d250e527d52ed5192d)을 감사자가 직접 읽고 fresh_source_r1/verify.py로 재실행했다. status는 stopped/generation_budget_exceeded, completed_actions=2, inference_calls=1이지만 verifier exit 2, independent receipt 미생성이다.",
+      "impact": "예산 위반을 탐지하고 중단한 정상 부분 실행이 독립 검산 단계에서 실패하므로 사용자 요구의 운영 오류 보존과 audit→bundle→independent 연결이 끊긴다.",
+      "recommended_action": "초과 eval_count를 complete 또는 후속 action이 있는 번들에서는 거부하되, 해당 call이 마지막 완료 action이고 status가 stopped/generation_budget_exceeded로 정확히 결속된 경우에는 위반 관측을 보존한 유효한 partial evidence로 승인한다. eval_count=4097 합성 종료 사례의 receipt 생성과 뒤 action 부재를 회귀 검사한다.",
+      "unverified": [
+        "실제 Ollama 제공자가 설정값보다 큰 eval_count를 반환하는지는 확인하지 않았다.",
+        "합성 호출 1회는 연구 성과가 아니라 운영 경계 재현으로만 사용했다."
+      ]
+    },
+    {
+      "finding_id": "V064-SA-R1-F003",
+      "severity": "blocking",
+      "criterion": "응답 원문 저장 뒤 event 기록 전에 프로세스가 중단되어도 이미 보존된 request/response와 started marker를 훼손하지 않고 부분 evidence ZIP을 독립 검산할 수 있어야 한다.",
+      "evidence": "run.py:92-97은 request와 response wire를 record 반환 전에 쓴다. run.py:179-180은 started marker를 먼저 쓰고, record/event는 run.py:191-198에서 나중에 쓴다. 중단 시 run.py:204-209가 finalize를 호출하며 finalize는 run.py:138-147에서 남은 wire 파일까지 모두 ZIP에 넣는다. 그러나 verify.py:805-822는 완료 event에 연결된 wire만 expected_names에 넣어 시작됐지만 미완료인 action의 wire를 extras로 거부한다. 봉인 뒤 메인이 별도로 만든 pending_wire 사례 v064_repro_pending_wire_r1_evidence.zip(SHA256 a09b3131e1906c868e22c22f065cd9dae0f2d8ab3ae0862fd1059e7b77ee7dc9)을 감사자가 직접 재검산했다. status는 crashed/interrupted_action, completed_actions=1, started_actions=2, inference_calls=1이지만 request/response wire 두 파일을 extras로 거부해 exit 2이고 independent receipt가 없다.",
+      "impact": "요청이 전송되고 응답까지 저장된 가장 중요한 불확실 실행 경계에서 원자료는 ZIP에 남지만 독립 검산이 실패한다. 부분 실행 보존과 모델 수신 불확실성의 검증 가능한 보고 계약이 완결되지 않는다.",
+      "recommended_action": "crashed 상태에서 started_actions=completed_actions+1인 정확히 한 pending action의 허용 가능한 partial wire 집합을 명세하고, request는 동결 재구성과 exact 비교하며 response는 크기·바이트 경계를 검사해 pending 관측으로 결속한다. record/event 부재를 성과 관측으로 승격하지 말고 inference_calls의 '시작 표지 기준, 모델 수신 미인증' 한계를 유지한다. 응답 저장 전·후 각 중단점을 회귀 검사한다.",
+      "unverified": [
+        "capture_call 내부의 모든 바이트 단위 중단 지점을 열거하지는 않았다.",
+        "합성 호출 1회는 연구 성과가 아니라 운영 경계 재현으로만 사용했다."
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "C001-seal-and-scope",
+      "result": "passed",
+      "evidence": "후보 ZIP과 audit_input SHA-256을 감사 시작·종료에 직접 재계산했고 각각 5cd7a8d...c84e6, e9ae5bd0...f018로 불변이다. 후보 manifest의 16개 source member 집합·해시, 작업 트리 probe, fresh_source_r1 바이트가 모두 일치했다. rebuild_r1.zip도 후보와 동일 SHA-256이었다."
+    },
+    {
+      "check_id": "C002-original-request-and-research-contract",
+      "result": "passed_with_documented_limits",
+      "evidence": "원 요청, AGENTS.md, STRUCTURE.md, EVIDENCE_MAP, RESEARCH_RETURN, PROTOCOL 및 protocol.json을 직접 읽었다. A/M은 not_measured, D는 strict proof의 실제 parents 깊이, T02는 개발 문제, E01/E02는 설계자 선정 사전 미관측 구조이며 외부 holdout이 아님을 일관되게 제한한다. 독립 고정점 계산으로 목표 도달 깊이는 T02 [1,4], E01 [1,2], E02 [2,4]였고 protocol과 일치했다. 여섯 order는 서로 다른 6개 순열이었다."
+    },
+    {
+      "check_id": "C003-source-semantics",
+      "result": "passed_except_findings",
+      "evidence": "design.py의 baseline/request 조작, measure.py의 rule/parent premise multiset/goal/cycle/ancestor closure/topological order/D 계산, report.py의 미관측·파싱·논리 실패 분리와 directed/neutral 분모, run.py의 호출·중단·보존, verify.py의 별도 재계산, Windows launcher와 native subprocess를 코드 수준에서 대조했다. 정상 의미 계약은 일치했으며 차단 예외는 F001-F003이다."
+    },
+    {
+      "check_id": "C004-fresh-offline-tests",
+      "result": "passed",
+      "evidence": "fresh_source_r1에서 지정 Python 3.12 -X utf8 -B와 실제 12,674,642-byte baseline을 사용해 unittest 16개를 독립 실행했고 exit 0/OK였다. build_release.py --check 후보 ZIP과 verify.py synthetic evidence 검산도 exit 0이었다. 이 결과는 소프트웨어 경계 검증이며 연구 가설 증거로 사용하지 않았다."
+    },
+    {
+      "check_id": "C005-adversarial-sequence",
+      "result": "failed",
+      "evidence": "조기 model identity 변조를 모든 내부 hash/report/manifest까지 다시 계산한 반례가 verified=true로 승인됐다. F001 참조."
+    },
+    {
+      "check_id": "C006-partial-operational-boundaries",
+      "result": "failed",
+      "evidence": "봉인 후 별도 관측인 pending_wire와 provider_over_budget ZIP을 직접 verify해 각각 bundle layout extras, generation budget per call로 exit 2를 확인했다. F002-F003 참조."
+    }
+  ],
+  "unverified_scope": [
+    "실제 Ollama 추론, 모델 다운로드, 서버 시작은 금지되어 실행하지 않았다.",
+    "실제 v064 모델 성과와 A/M 성과는 아직 관측되지 않았다.",
+    "패널 참가자의 실제 모델·추론 설정은 원자료에도 unverified로 기록되어 있으며 감사자가 외부 인증하지 않았다.",
+    "합성 evidence와 hash는 저장 자료의 내부 일관성 근거이며 외부 실행 사실의 attestation이 아니다.",
+    "생산 계산기와 별도 검산기가 공유하는 protocol 명세 위험은 현재 세 문제의 깊이와 수동 경로를 별도 계산해 제한했지만 일반 문제군 전체로 검증하지 않았다."
+  ],
+  "audit_mutations": [
+    "llm_experiments/v064/validation/source_audit_result.json",
+    "llm_experiments/v064/validation/SOURCE_AUDIT.ko.md"
+  ],
+  "temporary_scratch": {
+    "path": "C:/Users/sjs95/AppData/Local/Temp/v064_audit_early_wrong_model_resigned.zip",
+    "sha256": "115c58a3569246ecb8576de4c7079bda9b679e015da6d2bb9e5ea585238d6120",
+    "outside_candidate": true
+  }
+}

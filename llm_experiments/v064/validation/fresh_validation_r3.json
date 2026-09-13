@@ -1,0 +1,12 @@
+{
+  "exit_code": 0,
+  "test_cases": 19,
+  "actual_model_calls": 0,
+  "pending_synthetic_result": {
+    "state": "crashed",
+    "evidence_zip": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v064\\results_llm\\v064_synthetic_pending_wire_r3_evidence.zip",
+    "independent_verification": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v064\\results_llm\\v064_synthetic_pending_wire_r3_independent.json",
+    "inference_calls": 1
+  },
+  "synthetic_chats": 1
+}

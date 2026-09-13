@@ -1,0 +1,109 @@
+{
+  "parent_wrong_value": false,
+  "wire_transferred_b": false,
+  "equal_exact_type": true,
+  "assessment": {
+    "valid_completion": false,
+    "role_adherent": null,
+    "calibration_task": "composition_gate/and_after_not",
+    "task_checks": {
+      "source.observed": true,
+      "source.primitives": true,
+      "original_input": true,
+      "parent.not_value": false,
+      "parent.status": true,
+      "gate.value": true,
+      "formula.value": true
+    },
+    "task_comparisons": [
+      {
+        "field": "source.observed",
+        "actual": {
+          "facts": [
+            "Ca"
+          ],
+          "goal_atom": "Cc",
+          "probe_atom": "Cz"
+        },
+        "expected": {
+          "probe_atom": "Cz",
+          "goal_atom": "Cc",
+          "facts": [
+            "Ca"
+          ]
+        },
+        "matches": true
+      },
+      {
+        "field": "source.primitives",
+        "actual": {
+          "in_facts": false,
+          "same_as_goal": false
+        },
+        "expected": {
+          "same_as_goal": false,
+          "in_facts": false
+        },
+        "matches": true
+      },
+      {
+        "field": "original_input",
+        "actual": {
+          "a": false,
+          "b": false
+        },
+        "expected": {
+          "a": false,
+          "b": false
+        },
+        "matches": true
+      },
+      {
+        "field": "parent.not_value",
+        "actual": false,
+        "expected": true,
+        "matches": false
+      },
+      {
+        "field": "parent.status",
+        "actual": "accepted",
+        "expected": "accepted",
+        "matches": true
+      },
+      {
+        "field": "gate.value",
+        "actual": false,
+        "expected": false,
+        "matches": true
+      },
+      {
+        "field": "formula.value",
+        "actual": false,
+        "expected": false,
+        "matches": true
+      }
+    ],
+    "details": {
+      "arm": "and_after_not",
+      "original_input": {
+        "a": false,
+        "b": false
+      },
+      "actual": false,
+      "expected": false,
+      "parent_returned_value": false,
+      "bound_input_literals": {
+        "a": false,
+        "b": false
+      },
+      "gate_consistent_with_supplied_values": true,
+      "final_formula_correct": true,
+      "source_and_parents_correct": false,
+      "output_modified": false,
+      "ADM_success": false
+    },
+    "negative_controls": [],
+    "negative_controls_ok": null,
+    "interpretation": "이전 입력을 재사용한 새 게이트 호출. 호스트가 연결 그래프를 제공하며 종단 간 ADM 성공이 아니다."
+  }
+}

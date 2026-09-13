@@ -1,0 +1,6 @@
+{
+  "before_sha256": "4ab5fe481a730e57ab0e3b686c485e2d4cf72716c502330d581f0245fb9640f5",
+  "after_sha256": "02fef06cd09e131b994de65549a2f2856a99d44e69b944fb86b7ad59f3ddefed",
+  "parsed_content_unchanged": true,
+  "reason": "new source uses LF; Windows default write_text introduced CRLF; corrected before runtime tests and model execution"
+}

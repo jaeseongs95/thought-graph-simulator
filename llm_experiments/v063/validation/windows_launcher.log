@@ -1,0 +1,28 @@
+[2026-09-13 14:30:32] OFFLINE DIAGNOSTICS ONLY. No new model inference or model-facing prompt.
+[2026-09-13 14:30:32] Evidence: D:\codex\AI논문\thought-graph-simulator\llm_experiments\v062\results_llm\v062_construction_01_evidence.zip
+[2026-09-13 14:30:32] START: raw analysis and independent verification
+[2026-09-13 14:30:35] {
+[2026-09-13 14:30:35]   "contract": "v063-offline-diagnostic-completion-r1",
+[2026-09-13 14:30:35]   "completed_at_utc": "2026-09-13T05:30:35.419021+00:00",
+[2026-09-13 14:30:35]   "input_bundle": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v062\\results_llm\\v062_construction_01_evidence.zip",
+[2026-09-13 14:30:35]   "input_sha256": "baea752ac1a55dc7a20b42b41ced69b3c8e126105f65deea8ebecc8dde3f09fd",
+[2026-09-13 14:30:35]   "new_model_inference": false,
+[2026-09-13 14:30:35]   "official_scores_changed": false,
+[2026-09-13 14:30:35]   "artifact_hashes": {
+[2026-09-13 14:30:35]     "analysis.json": "33bf9f0e309a03c9c383ec2299e53eafa4611c5344519ffcc6eda640f62b0a3d",
+[2026-09-13 14:30:35]     "independent.json": "66ec2152dcbbc5b9f80a142a8c3d41b8406b442c5b77a716954618212099d0c6",
+[2026-09-13 14:30:35]     "summary.ko.md": "211b768c04f0b20ca3672cea554aee5390944c9a461749db86fdcbd8a423f70f"
+[2026-09-13 14:30:35]   },
+[2026-09-13 14:30:35]   "diagnostic_python_sources": {
+[2026-09-13 14:30:35]     "tests/test_forensics.py": "7eede8f7cdd788d4f059eed37aa6eb83bdfbcf45f65dd87ee57027d6c987c507",
+[2026-09-13 14:30:35]     "tools/analyze_v062.py": "b59e8dad898e3252c5ea8c7af8b87e61aca8d20600bcdbf384c025d032c23ae7",
+[2026-09-13 14:30:35]     "tools/build_release.py": "e89f1a1a0fd1e41a3aa651fec0848beb67574e2d085feda6f7f52d879ec2bb34",
+[2026-09-13 14:30:35]     "tools/run_forensics.py": "01f397307b5fd620b27568398986e29c295fa1c58393533ede1d41348674b60f",
+[2026-09-13 14:30:35]     "tools/verify_forensics.py": "b87e39a6070f55ec06d951f669bc4f7c62cd7dc0c36e55954c65d7462a499f35"
+[2026-09-13 14:30:35]   }
+[2026-09-13 14:30:35] }
+[2026-09-13 14:30:35] DONE: raw analysis and independent verification
+[2026-09-13 14:30:35] ALL COMPLETE: D:\codex\AI논문\thought-graph-simulator\llm_experiments\v063\results_llm\v063_forensics_01
+
+Offline analysis completed. Results: D:\codex\AI논문\thought-graph-simulator\llm_experiments\v063\results_llm\v063_forensics_01
+Log: D:\codex\AI논문\thought-graph-simulator\llm_experiments\v063\results_llm\automation_logs\v063_20260913_143032_479\run.log

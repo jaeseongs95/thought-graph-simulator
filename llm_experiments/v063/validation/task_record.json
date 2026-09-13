@@ -1,0 +1,22 @@
+{
+  "request": "v062 결과 분석, 후속 소스 생성, 작업에 대한 3자 토론",
+  "scope": "새 v063만 변경; 모든 이전 소스·증거 보존; 실제 새 모델 추론 없음",
+  "input_sha256": "baea752ac1a55dc7a20b42b41ced69b3c8e126105f65deea8ebecc8dde3f09fd",
+  "baseline_source_sha256": "33830e414b93174b2fbc36ec46d4675ab8e15321abd5608db301a487d8561da4",
+  "initial_tracked_changes": [
+    "llm_experiments/v061/probe/tools/analyze_v060.py",
+    "llm_experiments/v061/probe/tools/verify_v061.py"
+  ],
+  "panel": {
+    "risk": "MEDIUM",
+    "reviewers": ["v062_measure_panel", "v062_causal_panel", "v062_engineering_panel"],
+    "mandates": ["측정·구성타당성", "인과·통계·연구방향", "구현계약·재현성·범위"],
+    "requested_model": "gpt-5.6-terra",
+    "requested_reasoning": "xhigh",
+    "actual_settings": "unverified",
+    "context": "fork_turns:none; neutral complete briefing; no redelegation",
+    "adaptive_review": "off",
+    "cross_examination": "one conditional round after blind reviews",
+    "integration": "coordinator; separate fresh source auditor after general checks"
+  }
+}

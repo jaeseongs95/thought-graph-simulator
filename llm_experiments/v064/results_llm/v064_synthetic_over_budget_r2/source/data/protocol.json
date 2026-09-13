@@ -1,0 +1,231 @@
+{
+  "contract": "v064-direct-D-r1",
+  "baseline_sha256": "d8fd5b2123d38023aaf7c7c0427f54ab6fe650d6b85a695790cb7a5b5b852761",
+  "baseline_request_id": "graph_choice__graph__merged__reference__s00_T02_original_shallow",
+  "model": "qwen3:4b-instruct",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "problems": [
+    {
+      "id": "T02",
+      "facts": [
+        "Lp",
+        "Ls"
+      ],
+      "rules": [
+        {
+          "id": "r83",
+          "premises": [
+            "Lp",
+            "Ls"
+          ],
+          "conclusion": "Lg"
+        },
+        {
+          "id": "r21",
+          "premises": [
+            "Lp"
+          ],
+          "conclusion": "Lq"
+        },
+        {
+          "id": "r57",
+          "premises": [
+            "Lq",
+            "Ls"
+          ],
+          "conclusion": "Lr"
+        },
+        {
+          "id": "r04",
+          "premises": [
+            "Lr"
+          ],
+          "conclusion": "Lt"
+        },
+        {
+          "id": "r69",
+          "premises": [
+            "Lt"
+          ],
+          "conclusion": "Lg"
+        }
+      ],
+      "goal": "Lg"
+    },
+    {
+      "id": "E01_shared_fork",
+      "facts": [
+        "Aa",
+        "Ab"
+      ],
+      "rules": [
+        {
+          "id": "n08",
+          "premises": [
+            "Aa"
+          ],
+          "conclusion": "Ax"
+        },
+        {
+          "id": "n52",
+          "premises": [
+            "Aa",
+            "Ab"
+          ],
+          "conclusion": "Ag"
+        },
+        {
+          "id": "n37",
+          "premises": [
+            "Ax",
+            "Ay",
+            "Ab"
+          ],
+          "conclusion": "Ag"
+        },
+        {
+          "id": "n91",
+          "premises": [
+            "Aa"
+          ],
+          "conclusion": "Ay"
+        },
+        {
+          "id": "n64",
+          "premises": [
+            "Ab"
+          ],
+          "conclusion": "Az"
+        }
+      ],
+      "goal": "Ag"
+    },
+    {
+      "id": "E02_two_vs_four",
+      "facts": [
+        "Pa",
+        "Pb",
+        "Pc"
+      ],
+      "rules": [
+        {
+          "id": "m33",
+          "premises": [
+            "Pa"
+          ],
+          "conclusion": "Pu"
+        },
+        {
+          "id": "m76",
+          "premises": [
+            "Ps",
+            "Pc"
+          ],
+          "conclusion": "Pg"
+        },
+        {
+          "id": "m18",
+          "premises": [
+            "Pa",
+            "Pb"
+          ],
+          "conclusion": "Ps"
+        },
+        {
+          "id": "m05",
+          "premises": [
+            "Pu",
+            "Pb"
+          ],
+          "conclusion": "Pv"
+        },
+        {
+          "id": "m41",
+          "premises": [
+            "Pw"
+          ],
+          "conclusion": "Pg"
+        },
+        {
+          "id": "m84",
+          "premises": [
+            "Pv",
+            "Pc"
+          ],
+          "conclusion": "Pw"
+        }
+      ],
+      "goal": "Pg"
+    }
+  ],
+  "depth_ranges": {
+    "T02": [
+      1,
+      4
+    ],
+    "E01_shared_fork": [
+      1,
+      2
+    ],
+    "E02_two_vs_four": [
+      2,
+      4
+    ]
+  },
+  "development_problem": "T02",
+  "evaluation_problems": [
+    "E01_shared_fork",
+    "E02_two_vs_four"
+  ],
+  "seeds": [
+    64001001,
+    64001002
+  ],
+  "orders": [
+    [
+      "shallow",
+      "neutral",
+      "deep"
+    ],
+    [
+      "deep",
+      "neutral",
+      "shallow"
+    ],
+    [
+      "neutral",
+      "deep",
+      "shallow"
+    ],
+    [
+      "shallow",
+      "deep",
+      "neutral"
+    ],
+    [
+      "deep",
+      "shallow",
+      "neutral"
+    ],
+    [
+      "neutral",
+      "shallow",
+      "deep"
+    ]
+  ],
+  "max_inference_calls": 18,
+  "metadata_records": 12,
+  "generation_token_upper_bound": 73728,
+  "request_utf8_byte_limit": 16000,
+  "num_predict": 4096,
+  "timeout_seconds": 300,
+  "no_warmup": true,
+  "automatic_retry": false,
+  "no_result_based_gate": true,
+  "content_control": "Base-fixed",
+  "A": "not_measured",
+  "M": "not_measured",
+  "evaluation_scope": "prospective_model_unobserved_designer_selected_structures",
+  "decision_rule": "all_six_directed_pairs_strict_min_max_for_bounded_A_or_M_pilot; neutral_diagnostic_only",
+  "frozen_before_real_model_output": true
+}

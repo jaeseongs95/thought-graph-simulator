@@ -1,0 +1,245 @@
+{
+  "contract": "v065-prescribed-construction-r1",
+  "baseline_sha256": "7a20b2b6bfc3a9d185b9049e2a67bb4ee344b7a8353312f90e202c752d02126e",
+  "baseline_request_id": "b00_p0_shallow",
+  "model": "qwen3:4b-instruct",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "problems": [
+    {
+      "id": "T02",
+      "facts": [
+        "Lp",
+        "Ls"
+      ],
+      "rules": [
+        {
+          "id": "r83",
+          "premises": [
+            "Lp",
+            "Ls"
+          ],
+          "conclusion": "Lg"
+        },
+        {
+          "id": "r21",
+          "premises": [
+            "Lp"
+          ],
+          "conclusion": "Lq"
+        },
+        {
+          "id": "r57",
+          "premises": [
+            "Lq",
+            "Ls"
+          ],
+          "conclusion": "Lr"
+        },
+        {
+          "id": "r04",
+          "premises": [
+            "Lr"
+          ],
+          "conclusion": "Lt"
+        },
+        {
+          "id": "r69",
+          "premises": [
+            "Lt"
+          ],
+          "conclusion": "Lg"
+        }
+      ],
+      "goal": "Lg"
+    },
+    {
+      "id": "E01_shared_fork",
+      "facts": [
+        "Aa",
+        "Ab"
+      ],
+      "rules": [
+        {
+          "id": "n08",
+          "premises": [
+            "Aa"
+          ],
+          "conclusion": "Ax"
+        },
+        {
+          "id": "n52",
+          "premises": [
+            "Aa",
+            "Ab"
+          ],
+          "conclusion": "Ag"
+        },
+        {
+          "id": "n37",
+          "premises": [
+            "Ax",
+            "Ay",
+            "Ab"
+          ],
+          "conclusion": "Ag"
+        },
+        {
+          "id": "n91",
+          "premises": [
+            "Aa"
+          ],
+          "conclusion": "Ay"
+        },
+        {
+          "id": "n64",
+          "premises": [
+            "Ab"
+          ],
+          "conclusion": "Az"
+        }
+      ],
+      "goal": "Ag"
+    },
+    {
+      "id": "E02_two_vs_four",
+      "facts": [
+        "Pa",
+        "Pb",
+        "Pc"
+      ],
+      "rules": [
+        {
+          "id": "m33",
+          "premises": [
+            "Pa"
+          ],
+          "conclusion": "Pu"
+        },
+        {
+          "id": "m76",
+          "premises": [
+            "Ps",
+            "Pc"
+          ],
+          "conclusion": "Pg"
+        },
+        {
+          "id": "m18",
+          "premises": [
+            "Pa",
+            "Pb"
+          ],
+          "conclusion": "Ps"
+        },
+        {
+          "id": "m05",
+          "premises": [
+            "Pu",
+            "Pb"
+          ],
+          "conclusion": "Pv"
+        },
+        {
+          "id": "m41",
+          "premises": [
+            "Pw"
+          ],
+          "conclusion": "Pg"
+        },
+        {
+          "id": "m84",
+          "premises": [
+            "Pv",
+            "Pc"
+          ],
+          "conclusion": "Pw"
+        }
+      ],
+      "goal": "Pg"
+    }
+  ],
+  "depth_ranges": {
+    "T02": [
+      1,
+      4
+    ],
+    "E01_shared_fork": [
+      1,
+      2
+    ],
+    "E02_two_vs_four": [
+      2,
+      4
+    ]
+  },
+  "seeds": [
+    64001001,
+    64001002
+  ],
+  "orders": [
+    [
+      "prescribed_short",
+      "prescribed_long"
+    ],
+    [
+      "prescribed_long",
+      "prescribed_short"
+    ],
+    [
+      "prescribed_short",
+      "prescribed_long"
+    ],
+    [
+      "prescribed_long",
+      "prescribed_short"
+    ],
+    [
+      "prescribed_short",
+      "prescribed_long"
+    ],
+    [
+      "prescribed_long",
+      "prescribed_short"
+    ]
+  ],
+  "max_inference_calls": 12,
+  "metadata_records": 12,
+  "generation_token_upper_bound": 49152,
+  "request_utf8_byte_limit": 16000,
+  "num_predict": 4096,
+  "timeout_seconds": 300,
+  "no_warmup": true,
+  "automatic_retry": false,
+  "no_result_based_gate": true,
+  "content_control": "Base-fixed",
+  "A": "not_measured",
+  "M": "not_measured",
+  "evaluation_scope": "v064_used_structures_diagnostic_not_holdout",
+  "decision_rule": "one_bounded_construction_batch; never_relabel_prior_failures; fixed_route_success_not_D_control",
+  "frozen_before_real_model_output": true,
+  "required_terminal_rules": {
+    "T02": {
+      "prescribed_short": "r83",
+      "prescribed_long": "r69"
+    },
+    "E01_shared_fork": {
+      "prescribed_short": "n52",
+      "prescribed_long": "n37"
+    },
+    "E02_two_vs_four": {
+      "prescribed_short": "m76",
+      "prescribed_long": "m41"
+    }
+  },
+  "original_v064_plan_sha256": "ebffd36a06e385f090ec8874f392d6fdfef95f219bc43a89c9b1399abfd79cad",
+  "prior_verifier_source_sha256": "238b4997ceaa4191fb79498cc12647010bd02056cf7ac96a0ca0752712ff4553",
+  "research_claim": "prescribed_terminal_rule_construction_only; D_instruction_control_not_measured",
+  "neutral": "not_repeated: this_is_construction_test_not_D_instruction_intervention",
+  "hypothesis": "When a final rule is specified, does the model construct a strict proof ending in that rule?",
+  "staged_implementation": "not_in_this_batch; require_separate_direct_vs_staged_contract",
+  "historical_problem_roles": {
+    "T02": "v064_development",
+    "E01_shared_fork": "v064_evaluation_now_seen",
+    "E02_two_vs_four": "v064_evaluation_now_seen"
+  }
+}

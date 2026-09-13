@@ -1,0 +1,15 @@
+test_analyzer_preserves_complete_partial_and_failure_layers (test_forensics.EndToEndTests.test_analyzer_preserves_complete_partial_and_failure_layers) ... ok
+test_rehashed_request_is_rejected_before_forensics_report (test_forensics.EndToEndTests.test_rehashed_request_is_rejected_before_forensics_report) ... ok
+test_independent_verifier_accepts_report_and_rejects_semantic_tampering (test_forensics.IndependentReportTests.test_independent_verifier_accepts_report_and_rejects_semantic_tampering) ... ok
+test_independent_verifier_preserves_partial_missingness (test_forensics.IndependentReportTests.test_independent_verifier_preserves_partial_missingness) ... ok
+test_strict_report_boundaries_and_existing_receipt_are_rejected (test_forensics.IndependentReportTests.test_strict_report_boundaries_and_existing_receipt_are_rejected) ... ok
+test_final_missing_none_and_schema_failure_stay_unmeasured (test_forensics.NodeDiagnosticTests.test_final_missing_none_and_schema_failure_stay_unmeasured) ... ok
+test_node_error_boundaries_remain_official_failures (test_forensics.NodeDiagnosticTests.test_node_error_boundaries_remain_official_failures) ... ok
+test_rename_and_reorder_do_not_change_a_valid_k17_dag (test_forensics.NodeDiagnosticTests.test_rename_and_reorder_do_not_change_a_valid_k17_dag) ... ok
+test_unused_nodes_never_become_repaired_successes (test_forensics.NodeDiagnosticTests.test_unused_nodes_never_become_repaired_successes) ... ok
+test_wrapper_binds_the_synthetic_input_hash_before_writing (test_forensics.RunWrapperTests.test_wrapper_binds_the_synthetic_input_hash_before_writing) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 51.684s
+
+OK

@@ -1,0 +1,11 @@
+{
+  "protected_input_count": 153,
+  "differences": [],
+  "git_status": "?? llm_experiments/v063/\n?? llm_experiments/v064/\n",
+  "git_diff_check_exit": 0,
+  "prior_source_zip_hashes": {
+    "r1": "5cd7a8d755dc60bf90afe90ff26fca451944deb72480d074acff2499114c84e6",
+    "r2": "8a033eba7b6d31392b20a0d78fd52b5fcbd136753dc4e3fc05e8d336da6360ac"
+  },
+  "user_v063_untracked_preserved": true
+}

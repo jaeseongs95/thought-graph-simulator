@@ -1,0 +1,10 @@
+{
+  "decision": "direct_D_18",
+  "decided_at_utc": "2026-09-13T06:56:44.476382+00:00",
+  "protocol_sha256": "4ab5fe481a730e57ab0e3b686c485e2d4cf72716c502330d581f0245fb9640f5",
+  "implementation_started_after_design_review": true,
+  "panel": "three blind initial reviews and one cross round each",
+  "consensus": "conditional_consensus with unresolved measurement dissent on construction-first gate",
+  "disposition": "Main chooses direct test: T02 construction gate cannot guarantee new problem capacity; direct success answers narrow D question; failure remains possibly unseparated and can justify a new bounded construction question.",
+  "source_authorization": "implement/run offline synthetic only; actual model run by user later"
+}

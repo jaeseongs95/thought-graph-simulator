@@ -1,0 +1,36 @@
+{
+  "contract": "v064-independent-verify-r1",
+  "bundle_sha256": "a309d981b2baa023fc41646ee501e3f006378cfd94ab8e78eba4adad2a545ba3",
+  "plan_sha256": "69ee62cce9c941dffa4893735f7b34a955d064aff209350c0d61a9436dbe6eb0",
+  "provenance": "synthetic",
+  "state": "crashed",
+  "completed_actions": 1,
+  "started_actions": 2,
+  "inference_calls": 1,
+  "observed_calls": 0,
+  "pending_action": {
+    "id": "b00_p0_shallow",
+    "kind": "call",
+    "artifact_names": [
+      "wire/b00_p0_shallow/request.wire.json",
+      "wire/b00_p0_shallow/response.raw.json"
+    ],
+    "record_committed": false,
+    "semantic_measurement": "not_measured"
+  },
+  "compared_groups": [
+    "manifest_and_layout",
+    "plan_baseline_source",
+    "runtime_and_action_schedule",
+    "start_markers_events_records",
+    "metadata_and_identity",
+    "call_requests_and_responses",
+    "stop_budget_and_status",
+    "independent_semantics",
+    "summary_and_korean_report"
+  ],
+  "differences": [],
+  "production_imports": false,
+  "limitation": "번들 내부 일관성 검산이며 외부 실행 사실을 인증하지 않는다. 중단 실행의 inference_calls는 시작 표지 기준이며 모델 수신은 별도 인증되지 않는다.",
+  "verified": true
+}
