@@ -1,0 +1,284 @@
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_logic.py', '-v']
+test_absent_usage_not_fabricated (test_logic.Logic.test_absent_usage_not_fabricated) ... ok
+test_all_correct_is_186_not_214 (test_logic.Logic.test_all_correct_is_186_not_214) ... ok
+test_all_request_bytes_independent (test_logic.Logic.test_all_request_bytes_independent) ... ok
+test_bad_parent_not_repaired (test_logic.Logic.test_bad_parent_not_repaired) ... ok
+test_candidates_are_unchanged_rule_records (test_logic.Logic.test_candidates_are_unchanged_rule_records) ... ok
+test_control_balance (test_logic.Logic.test_control_balance) ... ok
+test_control_failure_keeps_actual_model_success (test_logic.Logic.test_control_failure_keeps_actual_model_success) ... ok
+test_correct_graph_cannot_erase_wrong_stage (test_logic.Logic.test_correct_graph_cannot_erase_wrong_stage) ... ok
+test_depth_is_dependency_not_count (test_logic.Logic.test_depth_is_dependency_not_count) ... ok
+test_duplicate_json_keys_and_nonfinite_rejected (test_logic.Logic.test_duplicate_json_keys_and_nonfinite_rejected) ... ok
+test_dynamic_budget_extremes (test_logic.Logic.test_dynamic_budget_extremes) ... ok
+test_factor_crossing (test_logic.Logic.test_factor_crossing) ... ok
+test_generator_blind_to_requested_D (test_logic.Logic.test_generator_blind_to_requested_D) ... ok
+test_graph_differential_180_cases (test_logic.Logic.test_graph_differential_180_cases) ... ok
+test_independent_modules_do_not_import_production (test_logic.Logic.test_independent_modules_do_not_import_production) ... ok
+test_independent_schedule (test_logic.Logic.test_independent_schedule) ... ok
+test_invalid_fact_content_transferred_unchanged (test_logic.Logic.test_invalid_fact_content_transferred_unchanged) ... ok
+test_invalid_selection_blocks_without_zero_depth (test_logic.Logic.test_invalid_selection_blocks_without_zero_depth) ... ok
+test_length_selector_not_promoted_by_successful_graph (test_logic.Logic.test_length_selector_not_promoted_by_successful_graph) ... ok
+test_no_numeric_stage (test_logic.Logic.test_no_numeric_stage) ... ok
+test_only_D_requirement_changes_in_selector_pair (test_logic.Logic.test_only_D_requirement_changes_in_selector_pair) ... ok
+test_original_measure_and_stage_bytes_preserved (test_logic.Logic.test_original_measure_and_stage_bytes_preserved) ... ok
+test_partial_gate_null (test_logic.Logic.test_partial_gate_null) ... ok
+test_reference_not_counted_as_model (test_logic.Logic.test_reference_not_counted_as_model) ... ok
+test_schedule_counts (test_logic.Logic.test_schedule_counts) ... ok
+test_selector_whitespace_preserved (test_logic.Logic.test_selector_whitespace_preserved) ... ok
+test_summary_and_report_differential_patterns (test_logic.Logic.test_summary_and_report_differential_patterns) ... ok
+test_wrong_selection_still_runs_selected_route (test_logic.Logic.test_wrong_selection_still_runs_selected_route) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 2.252s
+
+OK
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'run.py', 'prepare', '--baseline', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v073\\results_llm\\v073_interface_20260914_060416_993148_evidence.zip', '--run-name', 'v074_endtoend_20260914_070558_230235', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v074\\experiments\\v074_endtoend_20260914_070558_230235.plan.json']
+{
+  "prepared": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v074\\experiments\\v074_endtoend_20260914_070558_230235.plan.json",
+  "actual_model_inference": false,
+  "max_inference_calls": 214,
+  "plan_sha256": "23b0ced508439e809abc3692db0422a412bb1d566a18c5dbc2a71ad8cccaf985"
+}
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'run.py', 'execute', '--plan', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v074\\experiments\\v074_endtoend_20260914_070558_230235.plan.json', '--baseline', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v073\\results_llm\\v073_interface_20260914_060416_993148_evidence.zip', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v074\\results_llm\\v074_endtoend_20260914_070558_230235', '--endpoint', 'http://127.0.0.1:11434']
+1/226 b00_before: metadata / 추론 0
+2/226 t000_facts: call / 추론 1
+3/226 t000_rule_00: call / 추론 2
+4/226 t000_final: call / 추론 3
+5/226 t001_facts: call / 추론 4
+6/226 t001_rule_00: call / 추론 5
+7/226 t001_rule_01: call / 추론 6
+8/226 t001_rule_02: call / 추론 7
+9/226 t001_rule_03: call / 추론 8
+10/226 t001_final: call / 추론 9
+11/226 t002_select: call / 추론 10
+12/226 t002_facts: call / 추론 11
+13/226 t002_rule_00: call / 추론 12
+14/226 t002_rule_01: skip / 추론 12
+15/226 t002_rule_02: skip / 추론 12
+16/226 t002_rule_03: skip / 추론 12
+17/226 t002_final: call / 추론 13
+18/226 t003_select: call / 추론 14
+19/226 t003_facts: call / 추론 15
+20/226 t003_rule_00: call / 추론 16
+21/226 t003_rule_01: call / 추론 17
+22/226 t003_rule_02: call / 추론 18
+23/226 t003_rule_03: call / 추론 19
+24/226 t003_final: call / 추론 20
+25/226 t004_select: call / 추론 21
+26/226 t004_facts: call / 추론 22
+27/226 t004_rule_00: call / 추론 23
+28/226 t004_rule_01: call / 추론 24
+29/226 t004_rule_02: call / 추론 25
+30/226 t004_rule_03: call / 추론 26
+31/226 t004_final: call / 추론 27
+32/226 t005_select: call / 추론 28
+33/226 t005_facts: call / 추론 29
+34/226 t005_rule_00: call / 추론 30
+35/226 t005_rule_01: skip / 추론 30
+36/226 t005_rule_02: skip / 추론 30
+37/226 t005_rule_03: skip / 추론 30
+38/226 t005_final: call / 추론 31
+39/226 b00_after: metadata / 추론 31
+40/226 b01_before: metadata / 추론 31
+41/226 t006_select: call / 추론 32
+42/226 t006_facts: call / 추론 33
+43/226 t006_rule_00: call / 추론 34
+44/226 t006_rule_01: skip / 추론 34
+45/226 t006_rule_02: skip / 추론 34
+46/226 t006_rule_03: skip / 추론 34
+47/226 t006_final: call / 추론 35
+48/226 t007_select: call / 추론 36
+49/226 t007_facts: call / 추론 37
+50/226 t007_rule_00: call / 추론 38
+51/226 t007_rule_01: call / 추론 39
+52/226 t007_rule_02: call / 추론 40
+53/226 t007_rule_03: call / 추론 41
+54/226 t007_final: call / 추론 42
+55/226 t008_select: call / 추론 43
+56/226 t008_facts: call / 추론 44
+57/226 t008_rule_00: call / 추론 45
+58/226 t008_rule_01: call / 추론 46
+59/226 t008_rule_02: call / 추론 47
+60/226 t008_rule_03: call / 추론 48
+61/226 t008_final: call / 추론 49
+62/226 t009_select: call / 추론 50
+63/226 t009_facts: call / 추론 51
+64/226 t009_rule_00: call / 추론 52
+65/226 t009_rule_01: skip / 추론 52
+66/226 t009_rule_02: skip / 추론 52
+67/226 t009_rule_03: skip / 추론 52
+68/226 t009_final: call / 추론 53
+69/226 t010_facts: call / 추론 54
+70/226 t010_rule_00: call / 추론 55
+71/226 t010_rule_01: call / 추론 56
+72/226 t010_rule_02: call / 추론 57
+73/226 t010_rule_03: call / 추론 58
+74/226 t010_final: call / 추론 59
+75/226 t011_facts: call / 추론 60
+76/226 t011_rule_00: call / 추론 61
+77/226 t011_final: call / 추론 62
+78/226 b01_after: metadata / 추론 62
+79/226 b02_before: metadata / 추론 62
+80/226 t012_facts: call / 추론 63
+81/226 t012_rule_00: call / 추론 64
+82/226 t012_final: call / 추론 65
+83/226 t013_facts: call / 추론 66
+84/226 t013_rule_00: call / 추론 67
+85/226 t013_rule_01: call / 추론 68
+86/226 t013_rule_02: call / 추론 69
+87/226 t013_final: call / 추론 70
+88/226 t014_select: call / 추론 71
+89/226 t014_facts: call / 추론 72
+90/226 t014_rule_00: call / 추론 73
+91/226 t014_rule_01: skip / 추론 73
+92/226 t014_rule_02: skip / 추론 73
+93/226 t014_final: call / 추론 74
+94/226 t015_select: call / 추론 75
+95/226 t015_facts: call / 추론 76
+96/226 t015_rule_00: call / 추론 77
+97/226 t015_rule_01: call / 추론 78
+98/226 t015_rule_02: call / 추론 79
+99/226 t015_final: call / 추론 80
+100/226 t016_select: call / 추론 81
+101/226 t016_facts: call / 추론 82
+102/226 t016_rule_00: call / 추론 83
+103/226 t016_rule_01: call / 추론 84
+104/226 t016_rule_02: call / 추론 85
+105/226 t016_final: call / 추론 86
+106/226 t017_select: call / 추론 87
+107/226 t017_facts: call / 추론 88
+108/226 t017_rule_00: call / 추론 89
+109/226 t017_rule_01: skip / 추론 89
+110/226 t017_rule_02: skip / 추론 89
+111/226 t017_final: call / 추론 90
+112/226 b02_after: metadata / 추론 90
+113/226 b03_before: metadata / 추론 90
+114/226 t018_select: call / 추론 91
+115/226 t018_facts: call / 추론 92
+116/226 t018_rule_00: call / 추론 93
+117/226 t018_rule_01: skip / 추론 93
+118/226 t018_rule_02: skip / 추론 93
+119/226 t018_final: call / 추론 94
+120/226 t019_select: call / 추론 95
+121/226 t019_facts: call / 추론 96
+122/226 t019_rule_00: call / 추론 97
+123/226 t019_rule_01: call / 추론 98
+124/226 t019_rule_02: call / 추론 99
+125/226 t019_final: call / 추론 100
+126/226 t020_select: call / 추론 101
+127/226 t020_facts: call / 추론 102
+128/226 t020_rule_00: call / 추론 103
+129/226 t020_rule_01: call / 추론 104
+130/226 t020_rule_02: call / 추론 105
+131/226 t020_final: call / 추론 106
+132/226 t021_select: call / 추론 107
+133/226 t021_facts: call / 추론 108
+134/226 t021_rule_00: call / 추론 109
+135/226 t021_rule_01: skip / 추론 109
+136/226 t021_rule_02: skip / 추론 109
+137/226 t021_final: call / 추론 110
+138/226 t022_facts: call / 추론 111
+139/226 t022_rule_00: call / 추론 112
+140/226 t022_rule_01: call / 추론 113
+141/226 t022_rule_02: call / 추론 114
+142/226 t022_final: call / 추론 115
+143/226 t023_facts: call / 추론 116
+144/226 t023_rule_00: call / 추론 117
+145/226 t023_final: call / 추론 118
+146/226 b03_after: metadata / 추론 118
+147/226 b04_before: metadata / 추론 118
+148/226 t024_facts: call / 추론 119
+149/226 t024_rule_00: call / 추론 120
+150/226 t024_rule_01: call / 추론 121
+151/226 t024_final: call / 추론 122
+152/226 t025_facts: call / 추론 123
+153/226 t025_rule_00: call / 추론 124
+154/226 t025_rule_01: call / 추론 125
+155/226 t025_rule_02: call / 추론 126
+156/226 t025_rule_03: call / 추론 127
+157/226 t025_final: call / 추론 128
+158/226 t026_select: call / 추론 129
+159/226 t026_facts: call / 추론 130
+160/226 t026_rule_00: call / 추론 131
+161/226 t026_rule_01: call / 추론 132
+162/226 t026_rule_02: skip / 추론 132
+163/226 t026_rule_03: skip / 추론 132
+164/226 t026_final: call / 추론 133
+165/226 t027_select: call / 추론 134
+166/226 t027_facts: call / 추론 135
+167/226 t027_rule_00: call / 추론 136
+168/226 t027_rule_01: call / 추론 137
+169/226 t027_rule_02: skip / 추론 137
+170/226 t027_rule_03: skip / 추론 137
+171/226 t027_final: call / 추론 138
+172/226 t028_select: call / 추론 139
+173/226 t028_facts: call / 추론 140
+174/226 t028_rule_00: call / 추론 141
+175/226 t028_rule_01: call / 추론 142
+176/226 t028_rule_02: skip / 추론 142
+177/226 t028_rule_03: skip / 추론 142
+178/226 t028_final: call / 추론 143
+179/226 t029_select: call / 추론 144
+180/226 t029_facts: call / 추론 145
+181/226 t029_rule_00: call / 추론 146
+182/226 t029_rule_01: call / 추론 147
+183/226 t029_rule_02: skip / 추론 147
+184/226 t029_rule_03: skip / 추론 147
+185/226 t029_final: call / 추론 148
+186/226 b04_after: metadata / 추론 148
+187/226 b05_before: metadata / 추론 148
+188/226 t030_select: call / 추론 149
+189/226 t030_facts: call / 추론 150
+190/226 t030_rule_00: call / 추론 151
+191/226 t030_rule_01: call / 추론 152
+192/226 t030_rule_02: skip / 추론 152
+193/226 t030_rule_03: skip / 추론 152
+194/226 t030_final: call / 추론 153
+195/226 t031_select: call / 추론 154
+196/226 t031_facts: call / 추론 155
+197/226 t031_rule_00: call / 추론 156
+198/226 t031_rule_01: call / 추론 157
+199/226 t031_rule_02: skip / 추론 157
+200/226 t031_rule_03: skip / 추론 157
+201/226 t031_final: call / 추론 158
+202/226 t032_select: call / 추론 159
+203/226 t032_facts: call / 추론 160
+204/226 t032_rule_00: call / 추론 161
+205/226 t032_rule_01: call / 추론 162
+206/226 t032_rule_02: skip / 추론 162
+207/226 t032_rule_03: skip / 추론 162
+208/226 t032_final: call / 추론 163
+209/226 t033_select: call / 추론 164
+210/226 t033_facts: call / 추론 165
+211/226 t033_rule_00: call / 추론 166
+212/226 t033_rule_01: call / 추론 167
+213/226 t033_rule_02: skip / 추론 167
+214/226 t033_rule_03: skip / 추론 167
+215/226 t033_final: call / 추론 168
+216/226 t034_facts: call / 추론 169
+217/226 t034_rule_00: call / 추론 170
+218/226 t034_rule_01: call / 추론 171
+219/226 t034_rule_02: call / 추론 172
+220/226 t034_rule_03: call / 추론 173
+221/226 t034_final: call / 추론 174
+222/226 t035_facts: call / 추론 175
+223/226 t035_rule_00: call / 추론 176
+224/226 t035_rule_01: call / 추론 177
+225/226 t035_final: call / 추론 178
+226/226 b05_after: metadata / 추론 178
+{
+  "state": "complete",
+  "evidence_zip": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v074\\results_llm\\v074_endtoend_20260914_070558_230235_evidence.zip",
+  "independent_json": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v074\\results_llm\\v074_endtoend_20260914_070558_230235_independent.json",
+  "inference_calls": 178,
+  "observed_calls": 178
+}
+
+EXIT 0

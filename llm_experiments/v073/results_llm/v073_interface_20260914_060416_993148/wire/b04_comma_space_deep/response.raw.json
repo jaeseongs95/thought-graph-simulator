@@ -1,0 +1,1 @@
+{"model":"gemma3:4b","created_at":"2026-09-13T21:04:43.3338879Z","message":{"role":"assistant","content":"{\"candidate_index\": 1}"},"done":true,"done_reason":"stop","total_duration":291508500,"load_duration":15891000,"prompt_eval_count":231,"prompt_eval_cached_count":0,"prompt_eval_duration":113742000,"eval_count":9,"eval_duration":112170000}

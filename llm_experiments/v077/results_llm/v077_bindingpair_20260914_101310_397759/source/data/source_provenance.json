@@ -1,0 +1,8 @@
+{
+  "measure.py": "47e6a93f5e96e8346ccb21c77034a5859ad8fbe9a326e77bff44acd58d610f71",
+  "stages.py": "a07e85174501ce9e5242b69818adb8fae6a41e644f947122839e25fff23caf6c",
+  "origin": "v069 source, byte-identical; standalone graph audit ported from v069 independent checker with no production imports",
+  "prior_source_sha256": "745c9a13759d248af4a9e4777cf2cb3898edd4d739e0958d76b3c4f31be2e932",
+  "baseline_version": "v076",
+  "prior_graph_scoring_unchanged": true
+}

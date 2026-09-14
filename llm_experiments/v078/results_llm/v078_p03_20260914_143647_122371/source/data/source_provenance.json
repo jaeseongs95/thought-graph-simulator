@@ -1,0 +1,18 @@
+{
+  "contract": "v078-source-provenance-r1",
+  "basis_evidence_sha256": "4964228484c1f49870c17f5cf1602352d80355365a91298d3c895277de175b12",
+  "basis_plan_sha256": "91180359d095e51d4df4817b604b4ae6ed8fac88133c76f2a2f19bd1cf810558",
+  "reused_unchanged": {
+    "measure.py": "47e6a93f5e96e8346ccb21c77034a5859ad8fbe9a326e77bff44acd58d610f71",
+    "stages.py": "a07e85174501ce9e5242b69818adb8fae6a41e644f947122839e25fff23caf6c",
+    "audit_graph.py": "83d12ee330eb6a3065f49268b14115945a44599c8b0e5827ca517e62e6e1c0b3",
+    "audit_io.py": "6ecd2c3c699a1125eef2dbcda40a6c36acf81b381f6a41a37e24b951a693bec4"
+  },
+  "newly_authored": [
+    "P03 새 구조4개",
+    "base 전용 결과 집계",
+    "P03 구조 preflight와 반례",
+    "오프라인 상태 inspect"
+  ],
+  "actual_new_problem_model_calls_during_development": 0
+}

@@ -1,0 +1,484 @@
+{
+  "contract": "v075-paired-fact-schema-end-to-end-r1",
+  "baseline_sha256": "7fae8cd27f9c1791be1f179f8144d9908b92e68d931a50d308ca278d202a89d6",
+  "baseline_plan_sha256": "23b0ced508439e809abc3692db0422a412bb1d566a18c5dbc2a71ad8cccaf985",
+  "prior_verifier_source_sha256": "dac313e641f6bb3cb83ce66b6355dce4e6f09e5201e310142c266d635fed70b0",
+  "identity": {
+    "model": "qwen3:4b-instruct",
+    "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "server": {
+      "version": "0.34.0"
+    },
+    "tag_details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "4.0B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 262144,
+      "embedding_length": 2560
+    },
+    "native": {
+      "template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0].role == 'system' %}\n        {{- messages[0].content + '\\n\\n' }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0].content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" and message.content is string and not(message.content.startswith('<tool_response>') and message.content.endswith('</tool_response>')) %}\n        {%- set ns.multi_step_tool = false %}\n        {%- set ns.last_query_index = index %}\n    {%- endif %}\n{%- endfor %}\n{%- for message in messages %}\n    {%- if message.content is string %}\n        {%- set content = message.content %}\n    {%- else %}\n        {%- set content = '' %}\n    {%- endif %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {%- if loop.last or (not loop.last and reasoning_content) %}\n                {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content.strip('\\n') + '\\n</think>\\n\\n' + content.lstrip('\\n') }}\n            {%- else %}\n                {{- '<|im_start|>' + message.role + '\\n' + content }}\n            {%- endif %}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if (loop.first and content) or (not loop.first) %}\n                    {{- '\\n' }}\n                {%- endif %}\n                {%- if tool_call.function %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {{- '<tool_call>\\n{\"name\": \"' }}\n                {{- tool_call.name }}\n                {{- '\", \"arguments\": ' }}\n                {%- if tool_call.arguments is string %}\n                    {{- tool_call.arguments }}\n                {%- else %}\n                    {{- tool_call.arguments | tojson }}\n                {%- endif %}\n                {{- '}\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.first or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}",
+      "system": null,
+      "parameters": [
+        "repeat_penalty                 1",
+        "stop                           \"<|im_end|>\"",
+        "stop                           \"<|im_start|>\"",
+        "temperature                    0.7",
+        "top_k                          20",
+        "top_p                          0.8"
+      ],
+      "model_info": {
+        "general.architecture": "qwen3",
+        "general.basename": "Qwen3",
+        "general.file_type": 15,
+        "general.finetune": "Instruct",
+        "general.license": "apache-2.0",
+        "general.license.link": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507/blob/main/LICENSE",
+        "general.parameter_count": 4022468096,
+        "general.quantization_version": 2,
+        "general.size_label": "4B",
+        "general.tags": null,
+        "general.type": "model",
+        "general.version": "2507",
+        "qwen3.attention.head_count": 32,
+        "qwen3.attention.head_count_kv": 8,
+        "qwen3.attention.key_length": 128,
+        "qwen3.attention.layer_norm_rms_epsilon": 1e-06,
+        "qwen3.attention.value_length": 128,
+        "qwen3.block_count": 36,
+        "qwen3.context_length": 262144,
+        "qwen3.embedding_length": 2560,
+        "qwen3.feed_forward_length": 9728,
+        "qwen3.rope.freq_base": 5000000,
+        "tokenizer.ggml.add_bos_token": false,
+        "tokenizer.ggml.bos_token_id": 151643,
+        "tokenizer.ggml.eos_token_id": 151645,
+        "tokenizer.ggml.merges": null,
+        "tokenizer.ggml.model": "gpt2",
+        "tokenizer.ggml.padding_token_id": 151643,
+        "tokenizer.ggml.pre": "qwen2",
+        "tokenizer.ggml.token_type": null,
+        "tokenizer.ggml.tokens": null
+      },
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen3",
+        "families": [
+          "qwen3"
+        ],
+        "parameter_size": "4.0B",
+        "quantization_level": "Q4_K_M"
+      },
+      "capabilities": [
+        "tools",
+        "thinking",
+        "completion"
+      ],
+      "projector_info": null
+    }
+  },
+  "model": "qwen3:4b-instruct",
+  "problems": [
+    {
+      "id": "T02",
+      "facts": [
+        "Lp",
+        "Ls"
+      ],
+      "rules": [
+        {
+          "id": "r83",
+          "premises": [
+            "Lp",
+            "Ls"
+          ],
+          "conclusion": "Lg"
+        },
+        {
+          "id": "r21",
+          "premises": [
+            "Lp"
+          ],
+          "conclusion": "Lq"
+        },
+        {
+          "id": "r57",
+          "premises": [
+            "Lq",
+            "Ls"
+          ],
+          "conclusion": "Lr"
+        },
+        {
+          "id": "r04",
+          "premises": [
+            "Lr"
+          ],
+          "conclusion": "Lt"
+        },
+        {
+          "id": "r69",
+          "premises": [
+            "Lt"
+          ],
+          "conclusion": "Lg"
+        }
+      ],
+      "goal": "Lg"
+    },
+    {
+      "id": "E01_shared_fork",
+      "facts": [
+        "Aa",
+        "Ab"
+      ],
+      "rules": [
+        {
+          "id": "n08",
+          "premises": [
+            "Aa"
+          ],
+          "conclusion": "Ax"
+        },
+        {
+          "id": "n52",
+          "premises": [
+            "Aa",
+            "Ab"
+          ],
+          "conclusion": "Ag"
+        },
+        {
+          "id": "n37",
+          "premises": [
+            "Ax",
+            "Ay",
+            "Ab"
+          ],
+          "conclusion": "Ag"
+        },
+        {
+          "id": "n91",
+          "premises": [
+            "Aa"
+          ],
+          "conclusion": "Ay"
+        },
+        {
+          "id": "n64",
+          "premises": [
+            "Ab"
+          ],
+          "conclusion": "Az"
+        }
+      ],
+      "goal": "Ag"
+    },
+    {
+      "id": "E02_two_vs_four",
+      "facts": [
+        "Pa",
+        "Pb",
+        "Pc"
+      ],
+      "rules": [
+        {
+          "id": "m33",
+          "premises": [
+            "Pa"
+          ],
+          "conclusion": "Pu"
+        },
+        {
+          "id": "m76",
+          "premises": [
+            "Ps",
+            "Pc"
+          ],
+          "conclusion": "Pg"
+        },
+        {
+          "id": "m18",
+          "premises": [
+            "Pa",
+            "Pb"
+          ],
+          "conclusion": "Ps"
+        },
+        {
+          "id": "m05",
+          "premises": [
+            "Pu",
+            "Pb"
+          ],
+          "conclusion": "Pv"
+        },
+        {
+          "id": "m41",
+          "premises": [
+            "Pw"
+          ],
+          "conclusion": "Pg"
+        },
+        {
+          "id": "m84",
+          "premises": [
+            "Pv",
+            "Pc"
+          ],
+          "conclusion": "Pw"
+        }
+      ],
+      "goal": "Pg"
+    }
+  ],
+  "reference_plans": {
+    "T02": {
+      "reference_short": [
+        "r83"
+      ],
+      "reference_long": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ]
+    },
+    "E01_shared_fork": {
+      "reference_short": [
+        "n52"
+      ],
+      "reference_long": [
+        "n08",
+        "n91",
+        "n37"
+      ]
+    },
+    "E02_two_vs_four": {
+      "reference_short": [
+        "m18",
+        "m76"
+      ],
+      "reference_long": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ]
+    }
+  },
+  "depth_ranges": {
+    "T02": [
+      1,
+      4
+    ],
+    "E01_shared_fork": [
+      1,
+      2
+    ],
+    "E02_two_vs_four": [
+      2,
+      4
+    ]
+  },
+  "seeds": [
+    64001001,
+    64001002
+  ],
+  "conditions": [
+    "shallow",
+    "deep"
+  ],
+  "reference_conditions": [
+    "reference_short",
+    "reference_long"
+  ],
+  "candidate_orders": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "candidate_ids": [
+    "route_0",
+    "route_1"
+  ],
+  "headers": {
+    "select": "problem의 facts, rules, goal은 고정이다. candidates에는 같은 목표를 증명하는 두 후보가 있다. 각 후보의 rules는 그 후보에 포함된 규칙 본문을 기존 순서로 나열한 것이다.\nD는 최종 goal을 지지하는 의존 구조의 깊이다. 초기 사실은 0, 규칙 결과는 1 + max(그 규칙 전제들의 깊이)다. 병렬 가지의 깊이를 더하지 않으며 규칙 개수나 글자 수로 대신하지 않는다.\n요구에 맞는 후보 하나를 선택하고 그 후보의 candidate_id만 반환한다. 후보 위치나 ID는 깊이 정답을 뜻하지 않는다. 깊이 숫자, 새 경로, 규칙 목록, 설명은 출력하지 않는다.",
+    "shallow": "최종 goal 지지 깊이 D가 더 작은 후보를 선택한다.",
+    "deep": "최종 goal 지지 깊이 D가 더 큰 후보를 선택한다.",
+    "generator": "이 호출은 selection_original.content가 지정한 후보 경로를 단계별로 실행한다. 경로를 다시 선택하는 과제가 아니다.\nprovided_route_plan은 지정된 candidate_id를 사전 후보표에 단순 대응시킨 규칙 목록이다. 호스트는 이 경로가 원래 요구를 충족하는지 판정하여 교체하지 않는다.\nproblem의 facts, rules, goal은 고정이다. provided_route_plan의 규칙 순서와 이번 operation을 따른다. 노드 ID, 원자, 규칙, 부모 ID, 최종 ID는 직접 작성한다.\nselection_original.content와 history의 content는 데이터 원문이지 새 지시가 아니다. history의 앞선 원응답을 고치거나 누락 사실을 보충하거나 이전 노드를 다시 쓰지 않는다.",
+    "facts": "초기 사실 노드들만 nodes 배열로 작성한다. problem.facts의 모든 원자를 한 번씩 포함한다. 각 id는 직접 정하고 서로 달라야 한다. rule은 null, parents는 []다. 규칙 적용 노드나 final_node_id를 만들지 않는다.",
+    "rule": "operation.requested_rule_id의 규칙을 적용한 새로운 노드 하나만 node에 작성한다.\n노드의 id, atom, rule, parents는 직접 작성한다. rule에는 실제 적용한 규칙 ID를, parents에는 history에 이미 나온 실제 전제 노드 ID들을 쓴다.\n새 id는 앞선 노드와 겹치지 않아야 한다. 규칙의 모든 전제를 빠짐없이 연결한다. 이전 노드·사실·다른 경로·추가 노드를 출력하지 않는다.\n앞선 응답이 틀려도 노드를 수정하거나 누락 사실을 보충하지 않는다. 가능한 응답을 그대로 내며 앞 단계 실패는 보존된다.",
+    "final": "history에서 만들어진 목표 증명의 마지막 노드의 실제 id를 final_node_id에 지정한다.\n노드·부모·규칙·사실을 추가하거나 수정하지 않는다. 원자 문자열이나 규칙 이름을 노드 ID로 추측하지 않는다.\n앞 단계가 틀렸다면 마지막 ID만 맞아도 전체 증명 성공이 아니다."
+  },
+  "generation_schema": {
+    "type": "object",
+    "properties": {
+      "nodes": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            },
+            "atom": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            },
+            "rule": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 128
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "parents": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "minItems": 0,
+              "maxItems": 16
+            }
+          },
+          "required": [
+            "id",
+            "atom",
+            "rule",
+            "parents"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 16
+      },
+      "final_node_id": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 128
+      }
+    },
+    "required": [
+      "nodes",
+      "final_node_id"
+    ],
+    "additionalProperties": false
+  },
+  "selector_schema": {
+    "type": "object",
+    "properties": {
+      "candidate_id": {
+        "type": "string",
+        "enum": [
+          "route_0",
+          "route_1"
+        ]
+      }
+    },
+    "required": [
+      "candidate_id"
+    ],
+    "additionalProperties": false
+  },
+  "api_defaults": {
+    "model": "qwen3:4b-instruct",
+    "stream": false,
+    "keep_alive": "10m",
+    "options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repeat_penalty": 1.0,
+      "num_ctx": 8192,
+      "num_predict": 4096,
+      "num_thread": 6,
+      "num_batch": 256,
+      "seed": 64001001
+    }
+  },
+  "assigned_model_trials": 48,
+  "assigned_control_trials": 24,
+  "assigned_model_pairs": 24,
+  "selector_calls": 24,
+  "reference_generator_calls": 108,
+  "max_model_generator_calls": 272,
+  "max_inference_calls": 404,
+  "expected_inference_calls_if_all_target_routes_selected": 348,
+  "max_action_slots": 416,
+  "metadata_slots": 12,
+  "num_predict": 4096,
+  "generation_token_upper_bound": 1654784,
+  "request_utf8_byte_limit": 262144,
+  "timeout_seconds": 180,
+  "previous_model_construction_evidence_sha256": "346a2096dd24476f0bda8f1244c14cf9a1670843b2dbe7068da6405507432cb4",
+  "automatic_retry": false,
+  "automatic_download": false,
+  "automatic_server_start": false,
+  "holdout": false,
+  "A_measured": false,
+  "M_measured": false,
+  "numeric_report_required": false,
+  "claim": "같은 선택 원응답을 공유하는 두 종단 생성 경로에서 초기 사실 전용 출력 스키마 제약의 효과를 짝비교. 호스트 보정·원문 정규화 없음. 24 선택 호출은 48 독립 선택으로 계산하지 않음.",
+  "control_boundary": "각 variant의 참조 구성은 12건이며 실험자가 경로를 지정한다. 본실험 24 선택과 합산하지 않는다. 두 생성기는 한 선택을 공유하므로 생성 성과만 짝비교한다.",
+  "stop_rule": "단 한 배치, 최대404회. variant별 본실험24/24·양방향12/12·참조12/12가 공학적 종단 기준. 생성 충실성24/24·참조12/12 기준은 별도. 부분성공 보존, 미측정 gate null. 추가 사실/부모/선택 진단·자동 재시도 없음. 원래 v074 결과 소급 변경 없음.",
+  "generator_variants": [
+    "legacy",
+    "fact_only"
+  ],
+  "assigned_model_trials_per_variant": 24,
+  "assigned_control_trials_per_variant": 12,
+  "assigned_model_pairs_per_variant": 12,
+  "prior_observed_calls": 178,
+  "fact_only_schema_contract": {
+    "scope": "facts_only",
+    "rule": "null",
+    "parents_maxItems": 0,
+    "nodes_minItems": "len(problem.facts)",
+    "nodes_maxItems": "len(problem.facts)",
+    "atom_id_answer_not_supplied": true,
+    "scientific_scorer_unchanged": true
+  },
+  "changes_from_v074": [
+    "선택 요청과 후속 규칙·최종 단계 계약 유지",
+    "같은 선택 원응답을 legacy/fact_only 두 생성기로 전달",
+    "fact_only 첫 단계의 노드 수·rule:null·빈 parents를 스키마로 제한",
+    "36 조건 각각 짝지은 생성으로 효과 측정; 숫자 하위진단 없음"
+  ],
+  "v074_frozen": {
+    "selection": 20,
+    "selection_denominator": 24,
+    "selection_pairs": 8,
+    "model_trace": 8,
+    "model_trace_denominator": 24,
+    "model_trace_pairs": 3,
+    "reference_construction": 3,
+    "reference_denominator": 12,
+    "initial_fact_failures": 22,
+    "failed_generators": 25,
+    "observed_calls": 178,
+    "gate": false
+  }
+}

@@ -1,0 +1,5239 @@
+{
+  "assigned_calls": 100,
+  "contract": "v071-report-r1",
+  "full_complete": true,
+  "groups": [
+    {
+      "estimates": {
+        "assigned": 4,
+        "measured": 4,
+        "successes": 0
+      },
+      "model_pipeline": {
+        "assigned": 8,
+        "measured": 8,
+        "successes": 0
+      },
+      "model_selection": {
+        "assigned": 8,
+        "measured": 8,
+        "successes": 6
+      },
+      "oracle_selection": {
+        "assigned": 8,
+        "measured": 8,
+        "successes": 4
+      },
+      "problem_id": "T02"
+    },
+    {
+      "estimates": {
+        "assigned": 4,
+        "measured": 4,
+        "successes": 2
+      },
+      "model_pipeline": {
+        "assigned": 8,
+        "measured": 8,
+        "successes": 2
+      },
+      "model_selection": {
+        "assigned": 8,
+        "measured": 8,
+        "successes": 6
+      },
+      "oracle_selection": {
+        "assigned": 8,
+        "measured": 8,
+        "successes": 6
+      },
+      "problem_id": "E01_shared_fork"
+    },
+    {
+      "estimates": {
+        "assigned": 4,
+        "measured": 4,
+        "successes": 0
+      },
+      "model_pipeline": {
+        "assigned": 8,
+        "measured": 8,
+        "successes": 0
+      },
+      "model_selection": {
+        "assigned": 8,
+        "measured": 8,
+        "successes": 4
+      },
+      "oracle_selection": {
+        "assigned": 8,
+        "measured": 8,
+        "successes": 6
+      },
+      "problem_id": "E02_two_vs_four"
+    },
+    {
+      "estimates": {
+        "assigned": 4,
+        "measured": 4,
+        "successes": 0
+      },
+      "model_pipeline": {
+        "assigned": 8,
+        "measured": 8,
+        "successes": 0
+      },
+      "model_selection": {
+        "assigned": 8,
+        "measured": 8,
+        "successes": 4
+      },
+      "oracle_selection": {
+        "assigned": 8,
+        "measured": 8,
+        "successes": 6
+      },
+      "problem_id": "C01_equal_count"
+    },
+    {
+      "estimates": {
+        "assigned": 4,
+        "measured": 4,
+        "successes": 0
+      },
+      "model_pipeline": {
+        "assigned": 8,
+        "measured": 8,
+        "successes": 0
+      },
+      "model_selection": {
+        "assigned": 8,
+        "measured": 8,
+        "successes": 4
+      },
+      "oracle_selection": {
+        "assigned": 8,
+        "measured": 8,
+        "successes": 6
+      },
+      "problem_id": "C02_count_reversal"
+    }
+  ],
+  "limits": {
+    "choices_per_shared_estimate": 2,
+    "constructor_executed": false,
+    "independent_holdout": false,
+    "internal_cause_identified": false,
+    "model_depths_repaired": false,
+    "oracle_depths_given": true,
+    "shared_estimates": 20,
+    "v070_concurrent_comparison": false
+  },
+  "observed_calls": 100,
+  "overall": {
+    "A_or_M_gate": null,
+    "depth_estimator_ready": false,
+    "depth_reports": {
+      "assigned": 20,
+      "measured": 20,
+      "successes": 2
+    },
+    "end_to_end_graph_D_control": null,
+    "model_pipeline": {
+      "assigned": 40,
+      "measured": 40,
+      "successes": 2
+    },
+    "model_pipeline_pair_successes": 0,
+    "model_selection": {
+      "assigned": 40,
+      "measured": 40,
+      "successes": 24
+    },
+    "model_selection_pair_successes": 10,
+    "next_decision": "numeric_positive_control_failed_close_contract",
+    "oracle_pair_successes": 10,
+    "oracle_ready": false,
+    "oracle_selection": {
+      "assigned": 40,
+      "measured": 40,
+      "successes": 28
+    },
+    "pairs_per_arm": 20,
+    "pipeline_ready": false,
+    "unmeasured_calls": 0,
+    "v069_constructor_successes_unchanged": 12,
+    "v070_paired_successes_unchanged": 0,
+    "v070_selection_successes_unchanged": 20
+  },
+  "pairs": [
+    {
+      "arm": "oracle_depth",
+      "candidate_order_index": 0,
+      "deep_D": 4,
+      "pair_id": "b00_oracle_depth",
+      "pipeline_pair_success": null,
+      "problem_id": "T02",
+      "same_selected_route": false,
+      "seed": 64001001,
+      "selective_pair_success": true,
+      "shallow_D": 1,
+      "unit_id": "b00"
+    },
+    {
+      "arm": "model_depth",
+      "candidate_order_index": 0,
+      "deep_D": 4,
+      "pair_id": "b00_model_depth",
+      "pipeline_pair_success": false,
+      "problem_id": "T02",
+      "same_selected_route": false,
+      "seed": 64001001,
+      "selective_pair_success": true,
+      "shallow_D": 1,
+      "unit_id": "b00"
+    },
+    {
+      "arm": "model_depth",
+      "candidate_order_index": 1,
+      "deep_D": 1,
+      "pair_id": "b01_model_depth",
+      "pipeline_pair_success": false,
+      "problem_id": "T02",
+      "same_selected_route": true,
+      "seed": 64001001,
+      "selective_pair_success": false,
+      "shallow_D": 1,
+      "unit_id": "b01"
+    },
+    {
+      "arm": "oracle_depth",
+      "candidate_order_index": 1,
+      "deep_D": 1,
+      "pair_id": "b01_oracle_depth",
+      "pipeline_pair_success": null,
+      "problem_id": "T02",
+      "same_selected_route": false,
+      "seed": 64001001,
+      "selective_pair_success": false,
+      "shallow_D": 4,
+      "unit_id": "b01"
+    },
+    {
+      "arm": "model_depth",
+      "candidate_order_index": 0,
+      "deep_D": 4,
+      "pair_id": "b02_model_depth",
+      "pipeline_pair_success": false,
+      "problem_id": "T02",
+      "same_selected_route": false,
+      "seed": 64001002,
+      "selective_pair_success": true,
+      "shallow_D": 1,
+      "unit_id": "b02"
+    },
+    {
+      "arm": "oracle_depth",
+      "candidate_order_index": 0,
+      "deep_D": 4,
+      "pair_id": "b02_oracle_depth",
+      "pipeline_pair_success": null,
+      "problem_id": "T02",
+      "same_selected_route": false,
+      "seed": 64001002,
+      "selective_pair_success": true,
+      "shallow_D": 1,
+      "unit_id": "b02"
+    },
+    {
+      "arm": "oracle_depth",
+      "candidate_order_index": 1,
+      "deep_D": 1,
+      "pair_id": "b03_oracle_depth",
+      "pipeline_pair_success": null,
+      "problem_id": "T02",
+      "same_selected_route": false,
+      "seed": 64001002,
+      "selective_pair_success": false,
+      "shallow_D": 4,
+      "unit_id": "b03"
+    },
+    {
+      "arm": "model_depth",
+      "candidate_order_index": 1,
+      "deep_D": 1,
+      "pair_id": "b03_model_depth",
+      "pipeline_pair_success": false,
+      "problem_id": "T02",
+      "same_selected_route": true,
+      "seed": 64001002,
+      "selective_pair_success": false,
+      "shallow_D": 1,
+      "unit_id": "b03"
+    },
+    {
+      "arm": "oracle_depth",
+      "candidate_order_index": 0,
+      "deep_D": 2,
+      "pair_id": "b04_oracle_depth",
+      "pipeline_pair_success": null,
+      "problem_id": "E01_shared_fork",
+      "same_selected_route": false,
+      "seed": 64001001,
+      "selective_pair_success": true,
+      "shallow_D": 1,
+      "unit_id": "b04"
+    },
+    {
+      "arm": "model_depth",
+      "candidate_order_index": 0,
+      "deep_D": 2,
+      "pair_id": "b04_model_depth",
+      "pipeline_pair_success": false,
+      "problem_id": "E01_shared_fork",
+      "same_selected_route": false,
+      "seed": 64001001,
+      "selective_pair_success": true,
+      "shallow_D": 1,
+      "unit_id": "b04"
+    },
+    {
+      "arm": "model_depth",
+      "candidate_order_index": 1,
+      "deep_D": 1,
+      "pair_id": "b05_model_depth",
+      "pipeline_pair_success": false,
+      "problem_id": "E01_shared_fork",
+      "same_selected_route": true,
+      "seed": 64001001,
+      "selective_pair_success": false,
+      "shallow_D": 1,
+      "unit_id": "b05"
+    },
+    {
+      "arm": "oracle_depth",
+      "candidate_order_index": 1,
+      "deep_D": 1,
+      "pair_id": "b05_oracle_depth",
+      "pipeline_pair_success": null,
+      "problem_id": "E01_shared_fork",
+      "same_selected_route": true,
+      "seed": 64001001,
+      "selective_pair_success": false,
+      "shallow_D": 1,
+      "unit_id": "b05"
+    },
+    {
+      "arm": "model_depth",
+      "candidate_order_index": 0,
+      "deep_D": 2,
+      "pair_id": "b06_model_depth",
+      "pipeline_pair_success": false,
+      "problem_id": "E01_shared_fork",
+      "same_selected_route": false,
+      "seed": 64001002,
+      "selective_pair_success": true,
+      "shallow_D": 1,
+      "unit_id": "b06"
+    },
+    {
+      "arm": "oracle_depth",
+      "candidate_order_index": 0,
+      "deep_D": 2,
+      "pair_id": "b06_oracle_depth",
+      "pipeline_pair_success": null,
+      "problem_id": "E01_shared_fork",
+      "same_selected_route": false,
+      "seed": 64001002,
+      "selective_pair_success": true,
+      "shallow_D": 1,
+      "unit_id": "b06"
+    },
+    {
+      "arm": "oracle_depth",
+      "candidate_order_index": 1,
+      "deep_D": 1,
+      "pair_id": "b07_oracle_depth",
+      "pipeline_pair_success": null,
+      "problem_id": "E01_shared_fork",
+      "same_selected_route": true,
+      "seed": 64001002,
+      "selective_pair_success": false,
+      "shallow_D": 1,
+      "unit_id": "b07"
+    },
+    {
+      "arm": "model_depth",
+      "candidate_order_index": 1,
+      "deep_D": 1,
+      "pair_id": "b07_model_depth",
+      "pipeline_pair_success": false,
+      "problem_id": "E01_shared_fork",
+      "same_selected_route": true,
+      "seed": 64001002,
+      "selective_pair_success": false,
+      "shallow_D": 1,
+      "unit_id": "b07"
+    },
+    {
+      "arm": "oracle_depth",
+      "candidate_order_index": 0,
+      "deep_D": 4,
+      "pair_id": "b08_oracle_depth",
+      "pipeline_pair_success": null,
+      "problem_id": "E02_two_vs_four",
+      "same_selected_route": false,
+      "seed": 64001001,
+      "selective_pair_success": true,
+      "shallow_D": 2,
+      "unit_id": "b08"
+    },
+    {
+      "arm": "model_depth",
+      "candidate_order_index": 0,
+      "deep_D": 4,
+      "pair_id": "b08_model_depth",
+      "pipeline_pair_success": false,
+      "problem_id": "E02_two_vs_four",
+      "same_selected_route": false,
+      "seed": 64001001,
+      "selective_pair_success": true,
+      "shallow_D": 2,
+      "unit_id": "b08"
+    },
+    {
+      "arm": "model_depth",
+      "candidate_order_index": 1,
+      "deep_D": 2,
+      "pair_id": "b09_model_depth",
+      "pipeline_pair_success": false,
+      "problem_id": "E02_two_vs_four",
+      "same_selected_route": false,
+      "seed": 64001001,
+      "selective_pair_success": false,
+      "shallow_D": 4,
+      "unit_id": "b09"
+    },
+    {
+      "arm": "oracle_depth",
+      "candidate_order_index": 1,
+      "deep_D": 2,
+      "pair_id": "b09_oracle_depth",
+      "pipeline_pair_success": null,
+      "problem_id": "E02_two_vs_four",
+      "same_selected_route": true,
+      "seed": 64001001,
+      "selective_pair_success": false,
+      "shallow_D": 2,
+      "unit_id": "b09"
+    },
+    {
+      "arm": "model_depth",
+      "candidate_order_index": 0,
+      "deep_D": 4,
+      "pair_id": "b10_model_depth",
+      "pipeline_pair_success": false,
+      "problem_id": "E02_two_vs_four",
+      "same_selected_route": false,
+      "seed": 64001002,
+      "selective_pair_success": true,
+      "shallow_D": 2,
+      "unit_id": "b10"
+    },
+    {
+      "arm": "oracle_depth",
+      "candidate_order_index": 0,
+      "deep_D": 4,
+      "pair_id": "b10_oracle_depth",
+      "pipeline_pair_success": null,
+      "problem_id": "E02_two_vs_four",
+      "same_selected_route": false,
+      "seed": 64001002,
+      "selective_pair_success": true,
+      "shallow_D": 2,
+      "unit_id": "b10"
+    },
+    {
+      "arm": "oracle_depth",
+      "candidate_order_index": 1,
+      "deep_D": 2,
+      "pair_id": "b11_oracle_depth",
+      "pipeline_pair_success": null,
+      "problem_id": "E02_two_vs_four",
+      "same_selected_route": true,
+      "seed": 64001002,
+      "selective_pair_success": false,
+      "shallow_D": 2,
+      "unit_id": "b11"
+    },
+    {
+      "arm": "model_depth",
+      "candidate_order_index": 1,
+      "deep_D": 2,
+      "pair_id": "b11_model_depth",
+      "pipeline_pair_success": false,
+      "problem_id": "E02_two_vs_four",
+      "same_selected_route": false,
+      "seed": 64001002,
+      "selective_pair_success": false,
+      "shallow_D": 4,
+      "unit_id": "b11"
+    },
+    {
+      "arm": "oracle_depth",
+      "candidate_order_index": 0,
+      "deep_D": 3,
+      "pair_id": "b12_oracle_depth",
+      "pipeline_pair_success": null,
+      "problem_id": "C01_equal_count",
+      "same_selected_route": false,
+      "seed": 64001001,
+      "selective_pair_success": true,
+      "shallow_D": 2,
+      "unit_id": "b12"
+    },
+    {
+      "arm": "model_depth",
+      "candidate_order_index": 0,
+      "deep_D": 3,
+      "pair_id": "b12_model_depth",
+      "pipeline_pair_success": false,
+      "problem_id": "C01_equal_count",
+      "same_selected_route": false,
+      "seed": 64001001,
+      "selective_pair_success": true,
+      "shallow_D": 2,
+      "unit_id": "b12"
+    },
+    {
+      "arm": "model_depth",
+      "candidate_order_index": 1,
+      "deep_D": 2,
+      "pair_id": "b13_model_depth",
+      "pipeline_pair_success": false,
+      "problem_id": "C01_equal_count",
+      "same_selected_route": false,
+      "seed": 64001001,
+      "selective_pair_success": false,
+      "shallow_D": 3,
+      "unit_id": "b13"
+    },
+    {
+      "arm": "oracle_depth",
+      "candidate_order_index": 1,
+      "deep_D": 2,
+      "pair_id": "b13_oracle_depth",
+      "pipeline_pair_success": null,
+      "problem_id": "C01_equal_count",
+      "same_selected_route": true,
+      "seed": 64001001,
+      "selective_pair_success": false,
+      "shallow_D": 2,
+      "unit_id": "b13"
+    },
+    {
+      "arm": "model_depth",
+      "candidate_order_index": 0,
+      "deep_D": 3,
+      "pair_id": "b14_model_depth",
+      "pipeline_pair_success": false,
+      "problem_id": "C01_equal_count",
+      "same_selected_route": false,
+      "seed": 64001002,
+      "selective_pair_success": true,
+      "shallow_D": 2,
+      "unit_id": "b14"
+    },
+    {
+      "arm": "oracle_depth",
+      "candidate_order_index": 0,
+      "deep_D": 3,
+      "pair_id": "b14_oracle_depth",
+      "pipeline_pair_success": null,
+      "problem_id": "C01_equal_count",
+      "same_selected_route": false,
+      "seed": 64001002,
+      "selective_pair_success": true,
+      "shallow_D": 2,
+      "unit_id": "b14"
+    },
+    {
+      "arm": "oracle_depth",
+      "candidate_order_index": 1,
+      "deep_D": 2,
+      "pair_id": "b15_oracle_depth",
+      "pipeline_pair_success": null,
+      "problem_id": "C01_equal_count",
+      "same_selected_route": true,
+      "seed": 64001002,
+      "selective_pair_success": false,
+      "shallow_D": 2,
+      "unit_id": "b15"
+    },
+    {
+      "arm": "model_depth",
+      "candidate_order_index": 1,
+      "deep_D": 2,
+      "pair_id": "b15_model_depth",
+      "pipeline_pair_success": false,
+      "problem_id": "C01_equal_count",
+      "same_selected_route": false,
+      "seed": 64001002,
+      "selective_pair_success": false,
+      "shallow_D": 3,
+      "unit_id": "b15"
+    },
+    {
+      "arm": "oracle_depth",
+      "candidate_order_index": 0,
+      "deep_D": 3,
+      "pair_id": "b16_oracle_depth",
+      "pipeline_pair_success": null,
+      "problem_id": "C02_count_reversal",
+      "same_selected_route": false,
+      "seed": 64001001,
+      "selective_pair_success": true,
+      "shallow_D": 2,
+      "unit_id": "b16"
+    },
+    {
+      "arm": "model_depth",
+      "candidate_order_index": 0,
+      "deep_D": 3,
+      "pair_id": "b16_model_depth",
+      "pipeline_pair_success": false,
+      "problem_id": "C02_count_reversal",
+      "same_selected_route": false,
+      "seed": 64001001,
+      "selective_pair_success": true,
+      "shallow_D": 2,
+      "unit_id": "b16"
+    },
+    {
+      "arm": "model_depth",
+      "candidate_order_index": 1,
+      "deep_D": 2,
+      "pair_id": "b17_model_depth",
+      "pipeline_pair_success": false,
+      "problem_id": "C02_count_reversal",
+      "same_selected_route": false,
+      "seed": 64001001,
+      "selective_pair_success": false,
+      "shallow_D": 3,
+      "unit_id": "b17"
+    },
+    {
+      "arm": "oracle_depth",
+      "candidate_order_index": 1,
+      "deep_D": 2,
+      "pair_id": "b17_oracle_depth",
+      "pipeline_pair_success": null,
+      "problem_id": "C02_count_reversal",
+      "same_selected_route": true,
+      "seed": 64001001,
+      "selective_pair_success": false,
+      "shallow_D": 2,
+      "unit_id": "b17"
+    },
+    {
+      "arm": "model_depth",
+      "candidate_order_index": 0,
+      "deep_D": 3,
+      "pair_id": "b18_model_depth",
+      "pipeline_pair_success": false,
+      "problem_id": "C02_count_reversal",
+      "same_selected_route": false,
+      "seed": 64001002,
+      "selective_pair_success": true,
+      "shallow_D": 2,
+      "unit_id": "b18"
+    },
+    {
+      "arm": "oracle_depth",
+      "candidate_order_index": 0,
+      "deep_D": 3,
+      "pair_id": "b18_oracle_depth",
+      "pipeline_pair_success": null,
+      "problem_id": "C02_count_reversal",
+      "same_selected_route": false,
+      "seed": 64001002,
+      "selective_pair_success": true,
+      "shallow_D": 2,
+      "unit_id": "b18"
+    },
+    {
+      "arm": "oracle_depth",
+      "candidate_order_index": 1,
+      "deep_D": 2,
+      "pair_id": "b19_oracle_depth",
+      "pipeline_pair_success": null,
+      "problem_id": "C02_count_reversal",
+      "same_selected_route": true,
+      "seed": 64001002,
+      "selective_pair_success": false,
+      "shallow_D": 2,
+      "unit_id": "b19"
+    },
+    {
+      "arm": "model_depth",
+      "candidate_order_index": 1,
+      "deep_D": 2,
+      "pair_id": "b19_model_depth",
+      "pipeline_pair_success": false,
+      "problem_id": "C02_count_reversal",
+      "same_selected_route": false,
+      "seed": 64001002,
+      "selective_pair_success": false,
+      "shallow_D": 3,
+      "unit_id": "b19"
+    }
+  ],
+  "plan_sha256": "48af69589294363cf187187f8192e6fa0fe2b5fc7fe237bb1aa5b42dc4a0cf59",
+  "provenance": "live",
+  "rows": [
+    {
+      "arm": "oracle_depth",
+      "block": 0,
+      "candidate_index": 0,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        1,
+        4
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b00_oracle_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b00_oracle_depth",
+      "period": 0,
+      "pipeline_success": null,
+      "problem_id": "T02",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "6f6cc84b5b99cf05ca0427d9aa2978bf77cd9914e4cd32d07d517ba0c0d2ee78",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 1,
+      "selected_rule_ids": [
+        "r83"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 1,
+      "unit_id": "b00",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_count": 246,
+        "total_duration": 2328070600
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 0,
+      "candidate_index": 1,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        1,
+        4
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b00_oracle_depth_deep",
+      "numeric_choice_success": true,
+      "pair_id": "b00_oracle_depth",
+      "period": 1,
+      "pipeline_success": null,
+      "problem_id": "T02",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "3db638d3b943e0ec07984d8a75d9ab706a5a2de6837b843c4a0ee35dd08b8d07",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 4,
+      "selected_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 4,
+      "unit_id": "b00",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 233,
+        "prompt_eval_count": 246,
+        "total_duration": 159867600
+      }
+    },
+    {
+      "arm": "estimate",
+      "block": 0,
+      "candidate_index": null,
+      "candidate_order_index": 0,
+      "condition": null,
+      "depth_report_success": false,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_candidate_depths"
+      ],
+      "expected_depths": [
+        1,
+        4
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b00_estimate",
+      "numeric_choice_success": null,
+      "pair_id": null,
+      "period": 2,
+      "pipeline_success": null,
+      "problem_id": "T02",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": [
+        2,
+        3
+      ],
+      "response_sha256": "4d118c1bce9ed6bd2970371828fafc353dcd5a45db2da040a0f561002f21d8c4",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": null,
+      "selected_rule_ids": null,
+      "selection_success": null,
+      "stage": "estimate",
+      "status": "ok",
+      "target_D": null,
+      "unit_id": "b00",
+      "usage": {
+        "eval_count": 14,
+        "prompt_eval_cached_count": 3,
+        "prompt_eval_count": 365,
+        "total_duration": 352748100
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 0,
+      "candidate_index": 1,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        1,
+        4
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b00_estimate"
+      ],
+      "id": "b00_model_depth_deep",
+      "numeric_choice_success": true,
+      "pair_id": "b00_model_depth",
+      "period": 3,
+      "pipeline_success": false,
+      "problem_id": "T02",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "fae45b59ac397f7bdd0d44491dcb4cc0bfc14da71527ab240ab2e4fc2ae4be68",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 4,
+      "selected_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 4,
+      "unit_id": "b00",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 252,
+        "total_duration": 198904300
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 0,
+      "candidate_index": 0,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        1,
+        4
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b00_estimate"
+      ],
+      "id": "b00_model_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b00_model_depth",
+      "period": 4,
+      "pipeline_success": false,
+      "problem_id": "T02",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "758f001d8f55a2a65443043d34838b4ec59b5d738f539961c2bfb31e344d954e",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 1,
+      "selected_rule_ids": [
+        "r83"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 1,
+      "unit_id": "b00",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 239,
+        "prompt_eval_count": 252,
+        "total_duration": 176529400
+      }
+    },
+    {
+      "arm": "estimate",
+      "block": 1,
+      "candidate_index": null,
+      "candidate_order_index": 1,
+      "condition": null,
+      "depth_report_success": false,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_candidate_depths"
+      ],
+      "expected_depths": [
+        4,
+        1
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b01_estimate",
+      "numeric_choice_success": null,
+      "pair_id": null,
+      "period": 0,
+      "pipeline_success": null,
+      "problem_id": "T02",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": [
+        2,
+        1
+      ],
+      "response_sha256": "78a84541e0a6cf5fccc0ab78ffcb4f19d11985db6da20dfa0a30b8fd6c913ad3",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": null,
+      "selected_rule_ids": null,
+      "selection_success": null,
+      "stage": "estimate",
+      "status": "ok",
+      "target_D": null,
+      "unit_id": "b01",
+      "usage": {
+        "eval_count": 14,
+        "prompt_eval_cached_count": 340,
+        "prompt_eval_count": 365,
+        "total_duration": 278690000
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 1,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        4,
+        1
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b01_estimate"
+      ],
+      "id": "b01_model_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b01_model_depth",
+      "period": 1,
+      "pipeline_success": false,
+      "problem_id": "T02",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "8e2380dd24b1deaa5b3d5a9d7d8a9534f018b95f959e9bbf6465bf27d5ba06f1",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 1,
+      "selected_rule_ids": [
+        "r83"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 1,
+      "unit_id": "b01",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 227,
+        "prompt_eval_count": 252,
+        "total_duration": 193379100
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 1,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction",
+        "wrong_numeric_direction"
+      ],
+      "expected_depths": [
+        4,
+        1
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b01_estimate"
+      ],
+      "id": "b01_model_depth_deep",
+      "numeric_choice_success": false,
+      "pair_id": "b01_model_depth",
+      "period": 2,
+      "pipeline_success": false,
+      "problem_id": "T02",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "b705e2f155eefaba07d8f99cad86fd3f82b5a44076c8f811fdb6b8fbf762936f",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 1,
+      "selected_rule_ids": [
+        "r83"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 4,
+      "unit_id": "b01",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 239,
+        "prompt_eval_count": 252,
+        "total_duration": 179339400
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 1,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction",
+        "wrong_numeric_direction"
+      ],
+      "expected_depths": [
+        4,
+        1
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b01_oracle_depth_deep",
+      "numeric_choice_success": false,
+      "pair_id": "b01_oracle_depth",
+      "period": 3,
+      "pipeline_success": null,
+      "problem_id": "T02",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "8a5fd92d2fbabbbf2c37aa7568b6f13b87d27406adff7d2082b2afb88d9a1c99",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 1,
+      "selected_rule_ids": [
+        "r83"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 4,
+      "unit_id": "b01",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 246,
+        "total_duration": 176917100
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 1,
+      "candidate_index": 0,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction",
+        "wrong_numeric_direction"
+      ],
+      "expected_depths": [
+        4,
+        1
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b01_oracle_depth_shallow",
+      "numeric_choice_success": false,
+      "pair_id": "b01_oracle_depth",
+      "period": 4,
+      "pipeline_success": null,
+      "problem_id": "T02",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "37c467b30c1dc75436b58563ac469c51838c700c5b70f9d73a0697b3dd617cf6",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 4,
+      "selected_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 1,
+      "unit_id": "b01",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 233,
+        "prompt_eval_count": 246,
+        "total_duration": 243061900
+      }
+    },
+    {
+      "arm": "estimate",
+      "block": 2,
+      "candidate_index": null,
+      "candidate_order_index": 0,
+      "condition": null,
+      "depth_report_success": false,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_candidate_depths"
+      ],
+      "expected_depths": [
+        1,
+        4
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b02_estimate",
+      "numeric_choice_success": null,
+      "pair_id": null,
+      "period": 0,
+      "pipeline_success": null,
+      "problem_id": "T02",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": [
+        2,
+        3
+      ],
+      "response_sha256": "957df2d6cc81427b718517ea2ae09ad333687b2708f970bf2feb0acd42782e91",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": null,
+      "selected_rule_ids": null,
+      "selection_success": null,
+      "stage": "estimate",
+      "status": "ok",
+      "target_D": null,
+      "unit_id": "b02",
+      "usage": {
+        "eval_count": 14,
+        "prompt_eval_cached_count": 340,
+        "prompt_eval_count": 365,
+        "total_duration": 283252100
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 2,
+      "candidate_index": 0,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        1,
+        4
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b02_estimate"
+      ],
+      "id": "b02_model_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b02_model_depth",
+      "period": 1,
+      "pipeline_success": false,
+      "problem_id": "T02",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "a20fa5c2dbf98dd17b3f1416e8abef0ad36383667359f4001944c5fe53410646",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 1,
+      "selected_rule_ids": [
+        "r83"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 1,
+      "unit_id": "b02",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 252,
+        "total_duration": 194230100
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 2,
+      "candidate_index": 1,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        1,
+        4
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b02_estimate"
+      ],
+      "id": "b02_model_depth_deep",
+      "numeric_choice_success": true,
+      "pair_id": "b02_model_depth",
+      "period": 2,
+      "pipeline_success": false,
+      "problem_id": "T02",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "f7ad8a783f1594724d6ed4493d6ef2c85911486feeaf937c4d7a3e1d84d778de",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 4,
+      "selected_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 4,
+      "unit_id": "b02",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 239,
+        "prompt_eval_count": 252,
+        "total_duration": 165705700
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 2,
+      "candidate_index": 1,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        1,
+        4
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b02_oracle_depth_deep",
+      "numeric_choice_success": true,
+      "pair_id": "b02_oracle_depth",
+      "period": 3,
+      "pipeline_success": null,
+      "problem_id": "T02",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "6c59262683b5736c1348972079db52f80e21f846f29c72b7d9610fae27457c43",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 4,
+      "selected_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 4,
+      "unit_id": "b02",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 246,
+        "total_duration": 160018600
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 2,
+      "candidate_index": 0,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        1,
+        4
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b02_oracle_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b02_oracle_depth",
+      "period": 4,
+      "pipeline_success": null,
+      "problem_id": "T02",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "e10fea635a0a630f9ef0e898037af3ec8a93d66290350c30df01e6e66c6b4aa0",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 1,
+      "selected_rule_ids": [
+        "r83"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 1,
+      "unit_id": "b02",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 233,
+        "prompt_eval_count": 246,
+        "total_duration": 156768900
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 3,
+      "candidate_index": 0,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction",
+        "wrong_numeric_direction"
+      ],
+      "expected_depths": [
+        4,
+        1
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b03_oracle_depth_shallow",
+      "numeric_choice_success": false,
+      "pair_id": "b03_oracle_depth",
+      "period": 0,
+      "pipeline_success": null,
+      "problem_id": "T02",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "8b914f2b5bc09866db92cf245ad5740b9d2092eee79f71b8b6d87234d07e8ba1",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 4,
+      "selected_rule_ids": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 1,
+      "unit_id": "b03",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 221,
+        "prompt_eval_count": 246,
+        "total_duration": 171267000
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 3,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction",
+        "wrong_numeric_direction"
+      ],
+      "expected_depths": [
+        4,
+        1
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b03_oracle_depth_deep",
+      "numeric_choice_success": false,
+      "pair_id": "b03_oracle_depth",
+      "period": 1,
+      "pipeline_success": null,
+      "problem_id": "T02",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "e77d82f7415448723286668ec33c26176c6f4b556bfb8932e2cfe1931ab7ab8c",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 1,
+      "selected_rule_ids": [
+        "r83"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 4,
+      "unit_id": "b03",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 233,
+        "prompt_eval_count": 246,
+        "total_duration": 177595800
+      }
+    },
+    {
+      "arm": "estimate",
+      "block": 3,
+      "candidate_index": null,
+      "candidate_order_index": 1,
+      "condition": null,
+      "depth_report_success": false,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_candidate_depths"
+      ],
+      "expected_depths": [
+        4,
+        1
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b03_estimate",
+      "numeric_choice_success": null,
+      "pair_id": null,
+      "period": 2,
+      "pipeline_success": null,
+      "problem_id": "T02",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": [
+        2,
+        1
+      ],
+      "response_sha256": "804038a08db3b862fc1a1beea51a2703e606f8bf8f3dde4d74f477a473a2eed2",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": null,
+      "selected_rule_ids": null,
+      "selection_success": null,
+      "stage": "estimate",
+      "status": "ok",
+      "target_D": null,
+      "unit_id": "b03",
+      "usage": {
+        "eval_count": 14,
+        "prompt_eval_cached_count": 340,
+        "prompt_eval_count": 365,
+        "total_duration": 282380900
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 3,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction",
+        "wrong_numeric_direction"
+      ],
+      "expected_depths": [
+        4,
+        1
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b03_estimate"
+      ],
+      "id": "b03_model_depth_deep",
+      "numeric_choice_success": false,
+      "pair_id": "b03_model_depth",
+      "period": 3,
+      "pipeline_success": false,
+      "problem_id": "T02",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "da7b9ff388114e9124e3e70989b8535702170fed31fb958da6b9cab601ef2dc5",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 1,
+      "selected_rule_ids": [
+        "r83"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 4,
+      "unit_id": "b03",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 252,
+        "total_duration": 205825000
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 3,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        4,
+        1
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b03_estimate"
+      ],
+      "id": "b03_model_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b03_model_depth",
+      "period": 4,
+      "pipeline_success": false,
+      "problem_id": "T02",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "200890cf294efedb1f2dba6090dc7733f4078edd05ca47b976790e0276a9fac6",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 1,
+      "selected_rule_ids": [
+        "r83"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 1,
+      "unit_id": "b03",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 239,
+        "prompt_eval_count": 252,
+        "total_duration": 171131000
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 4,
+      "candidate_index": 0,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        1,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b04_oracle_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b04_oracle_depth",
+      "period": 0,
+      "pipeline_success": null,
+      "problem_id": "E01_shared_fork",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "5d08f5a17fdc6b1686e53cffd4ae12a7b00c1ef8a4c7eb9a49e9c21c88b55213",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 1,
+      "selected_rule_ids": [
+        "n52"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 1,
+      "unit_id": "b04",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 246,
+        "total_duration": 178360200
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 4,
+      "candidate_index": 1,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        1,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b04_oracle_depth_deep",
+      "numeric_choice_success": true,
+      "pair_id": "b04_oracle_depth",
+      "period": 1,
+      "pipeline_success": null,
+      "problem_id": "E01_shared_fork",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "a83f9181adf25511fb94efa483949a05dc0f4ebda7ec9042498deab2d7fed5ac",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "n08",
+        "n91",
+        "n37"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b04",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 233,
+        "prompt_eval_count": 246,
+        "total_duration": 188689900
+      }
+    },
+    {
+      "arm": "estimate",
+      "block": 4,
+      "candidate_index": null,
+      "candidate_order_index": 0,
+      "condition": null,
+      "depth_report_success": false,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_candidate_depths"
+      ],
+      "expected_depths": [
+        1,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b04_estimate",
+      "numeric_choice_success": null,
+      "pair_id": null,
+      "period": 2,
+      "pipeline_success": null,
+      "problem_id": "E01_shared_fork",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": [
+        2,
+        3
+      ],
+      "response_sha256": "26b58a04e79347d49c54ce4916df60418e112ab8192e373985708e61ac0e2ba1",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": null,
+      "selected_rule_ids": null,
+      "selection_success": null,
+      "stage": "estimate",
+      "status": "ok",
+      "target_D": null,
+      "unit_id": "b04",
+      "usage": {
+        "eval_count": 14,
+        "prompt_eval_cached_count": 221,
+        "prompt_eval_count": 354,
+        "total_duration": 333896800
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 4,
+      "candidate_index": 1,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        1,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b04_estimate"
+      ],
+      "id": "b04_model_depth_deep",
+      "numeric_choice_success": true,
+      "pair_id": "b04_model_depth",
+      "period": 3,
+      "pipeline_success": false,
+      "problem_id": "E01_shared_fork",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "39ff4d735dfa299eaa7e01c549c0e78238cd1ab5c1160ee4d40c3086c3d8cb11",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "n08",
+        "n91",
+        "n37"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b04",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 252,
+        "total_duration": 200704100
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 4,
+      "candidate_index": 0,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        1,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b04_estimate"
+      ],
+      "id": "b04_model_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b04_model_depth",
+      "period": 4,
+      "pipeline_success": false,
+      "problem_id": "E01_shared_fork",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "97dbdfceb8107a1be0e195b9926fd79a7eff4d45bfdd0e784d5ac6dd7eb8da75",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 1,
+      "selected_rule_ids": [
+        "n52"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 1,
+      "unit_id": "b04",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 239,
+        "prompt_eval_count": 252,
+        "total_duration": 166144100
+      }
+    },
+    {
+      "arm": "estimate",
+      "block": 5,
+      "candidate_index": null,
+      "candidate_order_index": 1,
+      "condition": null,
+      "depth_report_success": true,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        1
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b05_estimate",
+      "numeric_choice_success": null,
+      "pair_id": null,
+      "period": 0,
+      "pipeline_success": null,
+      "problem_id": "E01_shared_fork",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": [
+        2,
+        1
+      ],
+      "response_sha256": "a71bd45bc6cf19e5fcb9ab380d574f2aaa3e55837298c2143c26e2146956fdc7",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": null,
+      "selected_rule_ids": null,
+      "selection_success": null,
+      "stage": "estimate",
+      "status": "ok",
+      "target_D": null,
+      "unit_id": "b05",
+      "usage": {
+        "eval_count": 14,
+        "prompt_eval_cached_count": 333,
+        "prompt_eval_count": 354,
+        "total_duration": 278213300
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 5,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        1
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b05_estimate"
+      ],
+      "id": "b05_model_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b05_model_depth",
+      "period": 1,
+      "pipeline_success": true,
+      "problem_id": "E01_shared_fork",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "aa390681e3f277febf9a193fb56a1108c0c7b14f044094cb9a6a5dc1296086a2",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 1,
+      "selected_rule_ids": [
+        "n52"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 1,
+      "unit_id": "b05",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 227,
+        "prompt_eval_count": 252,
+        "total_duration": 196665500
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 5,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction",
+        "wrong_numeric_direction"
+      ],
+      "expected_depths": [
+        2,
+        1
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b05_estimate"
+      ],
+      "id": "b05_model_depth_deep",
+      "numeric_choice_success": false,
+      "pair_id": "b05_model_depth",
+      "period": 2,
+      "pipeline_success": false,
+      "problem_id": "E01_shared_fork",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "f7f9aa5e846cab777a07aebffce9cfcc25d0abecdb7b8deb689e1ba5f12b0e97",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 1,
+      "selected_rule_ids": [
+        "n52"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b05",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 239,
+        "prompt_eval_count": 252,
+        "total_duration": 172228200
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 5,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction",
+        "wrong_numeric_direction"
+      ],
+      "expected_depths": [
+        2,
+        1
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b05_oracle_depth_deep",
+      "numeric_choice_success": false,
+      "pair_id": "b05_oracle_depth",
+      "period": 3,
+      "pipeline_success": null,
+      "problem_id": "E01_shared_fork",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "911e930630c68bc609058a41c04975d50ed6c22068349769228e8962c898b9a1",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 1,
+      "selected_rule_ids": [
+        "n52"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b05",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 246,
+        "total_duration": 158024000
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 5,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        1
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b05_oracle_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b05_oracle_depth",
+      "period": 4,
+      "pipeline_success": null,
+      "problem_id": "E01_shared_fork",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "e4b620d18c4de4bc394f8d6c172d4966a95f0308dda54c58438297e798126e65",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 1,
+      "selected_rule_ids": [
+        "n52"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 1,
+      "unit_id": "b05",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 233,
+        "prompt_eval_count": 246,
+        "total_duration": 157623500
+      }
+    },
+    {
+      "arm": "estimate",
+      "block": 6,
+      "candidate_index": null,
+      "candidate_order_index": 0,
+      "condition": null,
+      "depth_report_success": false,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_candidate_depths"
+      ],
+      "expected_depths": [
+        1,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b06_estimate",
+      "numeric_choice_success": null,
+      "pair_id": null,
+      "period": 0,
+      "pipeline_success": null,
+      "problem_id": "E01_shared_fork",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": [
+        2,
+        3
+      ],
+      "response_sha256": "987fa48443f0445197634602b30bdc57c50ba67e4d6e9dc099da11941281ec39",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": null,
+      "selected_rule_ids": null,
+      "selection_success": null,
+      "stage": "estimate",
+      "status": "ok",
+      "target_D": null,
+      "unit_id": "b06",
+      "usage": {
+        "eval_count": 14,
+        "prompt_eval_cached_count": 333,
+        "prompt_eval_count": 354,
+        "total_duration": 271530200
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 6,
+      "candidate_index": 0,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        1,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b06_estimate"
+      ],
+      "id": "b06_model_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b06_model_depth",
+      "period": 1,
+      "pipeline_success": false,
+      "problem_id": "E01_shared_fork",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "960e16eb842bde673f49d01a0cfd292fd734c44b2d9e1782c80c5232654ff662",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 1,
+      "selected_rule_ids": [
+        "n52"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 1,
+      "unit_id": "b06",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 252,
+        "total_duration": 190806600
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 6,
+      "candidate_index": 1,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        1,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b06_estimate"
+      ],
+      "id": "b06_model_depth_deep",
+      "numeric_choice_success": true,
+      "pair_id": "b06_model_depth",
+      "period": 2,
+      "pipeline_success": false,
+      "problem_id": "E01_shared_fork",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "20ba9db88c4421fe834813f490ebdb332226bf12343e404138e39d4d5207a940",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "n08",
+        "n91",
+        "n37"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b06",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 239,
+        "prompt_eval_count": 252,
+        "total_duration": 163164800
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 6,
+      "candidate_index": 1,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        1,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b06_oracle_depth_deep",
+      "numeric_choice_success": true,
+      "pair_id": "b06_oracle_depth",
+      "period": 3,
+      "pipeline_success": null,
+      "problem_id": "E01_shared_fork",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "fcccf78a0fa23e46da1aef3292cd38e7fffd3b13d57df7746f3b56c9072e4f2d",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "n08",
+        "n91",
+        "n37"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b06",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 246,
+        "total_duration": 159105300
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 6,
+      "candidate_index": 0,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        1,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b06_oracle_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b06_oracle_depth",
+      "period": 4,
+      "pipeline_success": null,
+      "problem_id": "E01_shared_fork",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "9e9d055ec65ca0e29c6418ce5e746c04d2956e2a3c7f55f2c58a23f544c35c96",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 1,
+      "selected_rule_ids": [
+        "n52"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 1,
+      "unit_id": "b06",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 233,
+        "prompt_eval_count": 246,
+        "total_duration": 158860100
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 7,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        1
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b07_oracle_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b07_oracle_depth",
+      "period": 0,
+      "pipeline_success": null,
+      "problem_id": "E01_shared_fork",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "06b48e326c8194813a4cba26154ea03af7c7387e7c728cae933425286359e3e2",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 1,
+      "selected_rule_ids": [
+        "n52"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 1,
+      "unit_id": "b07",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 221,
+        "prompt_eval_count": 246,
+        "total_duration": 160173300
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 7,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction",
+        "wrong_numeric_direction"
+      ],
+      "expected_depths": [
+        2,
+        1
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b07_oracle_depth_deep",
+      "numeric_choice_success": false,
+      "pair_id": "b07_oracle_depth",
+      "period": 1,
+      "pipeline_success": null,
+      "problem_id": "E01_shared_fork",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "c534e801ee7acd74030238a5c8108a034a5b97b5a988dfa78f02ae8c9b17bb8e",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 1,
+      "selected_rule_ids": [
+        "n52"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b07",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 233,
+        "prompt_eval_count": 246,
+        "total_duration": 178127000
+      }
+    },
+    {
+      "arm": "estimate",
+      "block": 7,
+      "candidate_index": null,
+      "candidate_order_index": 1,
+      "condition": null,
+      "depth_report_success": true,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        1
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b07_estimate",
+      "numeric_choice_success": null,
+      "pair_id": null,
+      "period": 2,
+      "pipeline_success": null,
+      "problem_id": "E01_shared_fork",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": [
+        2,
+        1
+      ],
+      "response_sha256": "c63f4feb3253f1d3a56f7ed73235c860b1e66a69cfe4798ed1356d348fb208c6",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": null,
+      "selected_rule_ids": null,
+      "selection_success": null,
+      "stage": "estimate",
+      "status": "ok",
+      "target_D": null,
+      "unit_id": "b07",
+      "usage": {
+        "eval_count": 14,
+        "prompt_eval_cached_count": 333,
+        "prompt_eval_count": 354,
+        "total_duration": 287573400
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 7,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction",
+        "wrong_numeric_direction"
+      ],
+      "expected_depths": [
+        2,
+        1
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b07_estimate"
+      ],
+      "id": "b07_model_depth_deep",
+      "numeric_choice_success": false,
+      "pair_id": "b07_model_depth",
+      "period": 3,
+      "pipeline_success": false,
+      "problem_id": "E01_shared_fork",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "9e99a761017d03c892eb293954e349d84db6e089df49edbcc7bb854f0d32b6b4",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 1,
+      "selected_rule_ids": [
+        "n52"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b07",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 252,
+        "total_duration": 202922700
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 7,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        1
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b07_estimate"
+      ],
+      "id": "b07_model_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b07_model_depth",
+      "period": 4,
+      "pipeline_success": true,
+      "problem_id": "E01_shared_fork",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "ce898b61b8ff841f439cbefcd3b0630ad1d04c1f91745597380c29e71c4edcaa",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 1,
+      "selected_rule_ids": [
+        "n52"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 1,
+      "unit_id": "b07",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 239,
+        "prompt_eval_count": 252,
+        "total_duration": 181435200
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 8,
+      "candidate_index": 0,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        4
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b08_oracle_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b08_oracle_depth",
+      "period": 0,
+      "pipeline_success": null,
+      "problem_id": "E02_two_vs_four",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "e3f6c8899a4b2b673cf675b9329ca54c0ee6afa8b2f57867b3d168724cc04e54",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b08",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 246,
+        "total_duration": 175532400
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 8,
+      "candidate_index": 1,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        4
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b08_oracle_depth_deep",
+      "numeric_choice_success": true,
+      "pair_id": "b08_oracle_depth",
+      "period": 1,
+      "pipeline_success": null,
+      "problem_id": "E02_two_vs_four",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "07a7d832fa393032821ae78bd091e6a3009c052675fb7620c3d9ed7887cb0f6c",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 4,
+      "selected_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 4,
+      "unit_id": "b08",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 233,
+        "prompt_eval_count": 246,
+        "total_duration": 172430100
+      }
+    },
+    {
+      "arm": "estimate",
+      "block": 8,
+      "candidate_index": null,
+      "candidate_order_index": 0,
+      "condition": null,
+      "depth_report_success": false,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_candidate_depths"
+      ],
+      "expected_depths": [
+        2,
+        4
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b08_estimate",
+      "numeric_choice_success": null,
+      "pair_id": null,
+      "period": 2,
+      "pipeline_success": null,
+      "problem_id": "E02_two_vs_four",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": [
+        2,
+        3
+      ],
+      "response_sha256": "d7c422119dbada9855d6a7061604c1df574b4631ca2d36d33b20bfdd3333c21f",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": null,
+      "selected_rule_ids": null,
+      "selection_success": null,
+      "stage": "estimate",
+      "status": "ok",
+      "target_D": null,
+      "unit_id": "b08",
+      "usage": {
+        "eval_count": 14,
+        "prompt_eval_cached_count": 221,
+        "prompt_eval_count": 389,
+        "total_duration": 323349600
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 8,
+      "candidate_index": 1,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        4
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b08_estimate"
+      ],
+      "id": "b08_model_depth_deep",
+      "numeric_choice_success": true,
+      "pair_id": "b08_model_depth",
+      "period": 3,
+      "pipeline_success": false,
+      "problem_id": "E02_two_vs_four",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "1466ee370b3df214eec83eb0b064da9f22a07beb16e7632476047fcb2eee34bc",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 4,
+      "selected_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 4,
+      "unit_id": "b08",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 252,
+        "total_duration": 203780600
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 8,
+      "candidate_index": 0,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        4
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b08_estimate"
+      ],
+      "id": "b08_model_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b08_model_depth",
+      "period": 4,
+      "pipeline_success": false,
+      "problem_id": "E02_two_vs_four",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "37cc0993abecc5a5e227f24bc3ed5090c9c4822885f36b8bbc67a6829fd4a622",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b08",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 239,
+        "prompt_eval_count": 252,
+        "total_duration": 175508100
+      }
+    },
+    {
+      "arm": "estimate",
+      "block": 9,
+      "candidate_index": null,
+      "candidate_order_index": 1,
+      "condition": null,
+      "depth_report_success": false,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_candidate_depths"
+      ],
+      "expected_depths": [
+        4,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b09_estimate",
+      "numeric_choice_success": null,
+      "pair_id": null,
+      "period": 0,
+      "pipeline_success": null,
+      "problem_id": "E02_two_vs_four",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": [
+        2,
+        3
+      ],
+      "response_sha256": "af3b7e18712ff897ffe1203d3896e97db8eb0e830cb00b03d88d92dc364b450d",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": null,
+      "selected_rule_ids": null,
+      "selection_success": null,
+      "stage": "estimate",
+      "status": "ok",
+      "target_D": null,
+      "unit_id": "b09",
+      "usage": {
+        "eval_count": 14,
+        "prompt_eval_cached_count": 360,
+        "prompt_eval_count": 389,
+        "total_duration": 278662700
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 9,
+      "candidate_index": 0,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction"
+      ],
+      "expected_depths": [
+        4,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b09_estimate"
+      ],
+      "id": "b09_model_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b09_model_depth",
+      "period": 1,
+      "pipeline_success": false,
+      "problem_id": "E02_two_vs_four",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "7cafce699ee8b5fc8cdf1b19104ea8057eba147c36b024109c5f812728e9dbb4",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 4,
+      "selected_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b09",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 251,
+        "prompt_eval_count": 252,
+        "total_duration": 183692300
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 9,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction"
+      ],
+      "expected_depths": [
+        4,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b09_estimate"
+      ],
+      "id": "b09_model_depth_deep",
+      "numeric_choice_success": true,
+      "pair_id": "b09_model_depth",
+      "period": 2,
+      "pipeline_success": false,
+      "problem_id": "E02_two_vs_four",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "72212c5bd4f0d96cba6e7f128bef17b09d9cdfa5d39b81967fc06a451d66c26d",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 4,
+      "unit_id": "b09",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 239,
+        "prompt_eval_count": 252,
+        "total_duration": 171968500
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 9,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction",
+        "wrong_numeric_direction"
+      ],
+      "expected_depths": [
+        4,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b09_oracle_depth_deep",
+      "numeric_choice_success": false,
+      "pair_id": "b09_oracle_depth",
+      "period": 3,
+      "pipeline_success": null,
+      "problem_id": "E02_two_vs_four",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "a5942afcce1a3cf8e49aa7e472b65d9d2171bd1fafe04282da88bfb4c1e2cdf8",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 4,
+      "unit_id": "b09",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 246,
+        "total_duration": 162196100
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 9,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        4,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b09_oracle_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b09_oracle_depth",
+      "period": 4,
+      "pipeline_success": null,
+      "problem_id": "E02_two_vs_four",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "64dcf6f3330c2ab74125e7dbf0ff8578e4e79bdf5a9d0009cda63dbcb0cf5424",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b09",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 233,
+        "prompt_eval_count": 246,
+        "total_duration": 168404800
+      }
+    },
+    {
+      "arm": "estimate",
+      "block": 10,
+      "candidate_index": null,
+      "candidate_order_index": 0,
+      "condition": null,
+      "depth_report_success": false,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_candidate_depths"
+      ],
+      "expected_depths": [
+        2,
+        4
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b10_estimate",
+      "numeric_choice_success": null,
+      "pair_id": null,
+      "period": 0,
+      "pipeline_success": null,
+      "problem_id": "E02_two_vs_four",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": [
+        2,
+        3
+      ],
+      "response_sha256": "1cf08b7b3216780b722f615d12c39de1bc752230024cd6cd106c812901872756",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": null,
+      "selected_rule_ids": null,
+      "selection_success": null,
+      "stage": "estimate",
+      "status": "ok",
+      "target_D": null,
+      "unit_id": "b10",
+      "usage": {
+        "eval_count": 14,
+        "prompt_eval_cached_count": 360,
+        "prompt_eval_count": 389,
+        "total_duration": 283458000
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 10,
+      "candidate_index": 0,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        4
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b10_estimate"
+      ],
+      "id": "b10_model_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b10_model_depth",
+      "period": 1,
+      "pipeline_success": false,
+      "problem_id": "E02_two_vs_four",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "4a4853220dec4355b4c186a70f5706502180def69b6c88c5b0e504df856842f0",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b10",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 252,
+        "total_duration": 260445400
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 10,
+      "candidate_index": 1,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        4
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b10_estimate"
+      ],
+      "id": "b10_model_depth_deep",
+      "numeric_choice_success": true,
+      "pair_id": "b10_model_depth",
+      "period": 2,
+      "pipeline_success": false,
+      "problem_id": "E02_two_vs_four",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "4ad2fb6d2b13aad0205509a9744470f6271119a6148931484420df3f448427fc",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 4,
+      "selected_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 4,
+      "unit_id": "b10",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 239,
+        "prompt_eval_count": 252,
+        "total_duration": 175050200
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 10,
+      "candidate_index": 1,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        4
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b10_oracle_depth_deep",
+      "numeric_choice_success": true,
+      "pair_id": "b10_oracle_depth",
+      "period": 3,
+      "pipeline_success": null,
+      "problem_id": "E02_two_vs_four",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "d9d6a02aa9a2924a34429db40707567bd70419412ef15e622954c7fd9cb5b27d",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 4,
+      "selected_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 4,
+      "unit_id": "b10",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 246,
+        "total_duration": 182850600
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 10,
+      "candidate_index": 0,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        4
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b10_oracle_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b10_oracle_depth",
+      "period": 4,
+      "pipeline_success": null,
+      "problem_id": "E02_two_vs_four",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "8ba9a37278c0eff361e30d18862366f63ac890c714193a89cc27db7abd1e8b95",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b10",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 233,
+        "prompt_eval_count": 246,
+        "total_duration": 178980800
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 11,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        4,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b11_oracle_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b11_oracle_depth",
+      "period": 0,
+      "pipeline_success": null,
+      "problem_id": "E02_two_vs_four",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "81fcb22caa364a3e4d8cfe5d70eac8ffa2a6ac417b4e532bc07ff6aa159eafd0",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b11",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 221,
+        "prompt_eval_count": 246,
+        "total_duration": 187763600
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 11,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction",
+        "wrong_numeric_direction"
+      ],
+      "expected_depths": [
+        4,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b11_oracle_depth_deep",
+      "numeric_choice_success": false,
+      "pair_id": "b11_oracle_depth",
+      "period": 1,
+      "pipeline_success": null,
+      "problem_id": "E02_two_vs_four",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "dc532c57bb4fc16f6acefe62afb65c0ce44b8d7997c3d7b5325faeb3a057a173",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 4,
+      "unit_id": "b11",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 233,
+        "prompt_eval_count": 246,
+        "total_duration": 158496000
+      }
+    },
+    {
+      "arm": "estimate",
+      "block": 11,
+      "candidate_index": null,
+      "candidate_order_index": 1,
+      "condition": null,
+      "depth_report_success": false,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_candidate_depths"
+      ],
+      "expected_depths": [
+        4,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b11_estimate",
+      "numeric_choice_success": null,
+      "pair_id": null,
+      "period": 2,
+      "pipeline_success": null,
+      "problem_id": "E02_two_vs_four",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": [
+        2,
+        3
+      ],
+      "response_sha256": "23c9346c6fd02dd11ff675132cc2aea13b945986a70d30f68889ef165fcf61ee",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": null,
+      "selected_rule_ids": null,
+      "selection_success": null,
+      "stage": "estimate",
+      "status": "ok",
+      "target_D": null,
+      "unit_id": "b11",
+      "usage": {
+        "eval_count": 14,
+        "prompt_eval_cached_count": 360,
+        "prompt_eval_count": 389,
+        "total_duration": 302788400
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 11,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction"
+      ],
+      "expected_depths": [
+        4,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b11_estimate"
+      ],
+      "id": "b11_model_depth_deep",
+      "numeric_choice_success": true,
+      "pair_id": "b11_model_depth",
+      "period": 3,
+      "pipeline_success": false,
+      "problem_id": "E02_two_vs_four",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "1659d8d74066bd5c7e5cfb3ec9d2805d8e302d1fbd5880c4d5c48930f6d3a539",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "m18",
+        "m76"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 4,
+      "unit_id": "b11",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 252,
+        "total_duration": 214363500
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 11,
+      "candidate_index": 0,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction"
+      ],
+      "expected_depths": [
+        4,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b11_estimate"
+      ],
+      "id": "b11_model_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b11_model_depth",
+      "period": 4,
+      "pipeline_success": false,
+      "problem_id": "E02_two_vs_four",
+      "problem_role": "seen_constructor_task",
+      "reported_depths": null,
+      "response_sha256": "35d8a8a1a5451b9d84c1220c2d1d50da87b703628da28bc8e08b8d455af8ba22",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 4,
+      "selected_rule_ids": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b11",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 239,
+        "prompt_eval_count": 252,
+        "total_duration": 168688200
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 12,
+      "candidate_index": 0,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        3
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b12_oracle_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b12_oracle_depth",
+      "period": 0,
+      "pipeline_success": null,
+      "problem_id": "C01_equal_count",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "8862a94fac8940c3895a780ae0da68a974c4b27c9692ca773215b20b6a8254ca",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "c19",
+        "c61",
+        "c83"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b12",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 246,
+        "total_duration": 166787800
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 12,
+      "candidate_index": 1,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        3
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b12_oracle_depth_deep",
+      "numeric_choice_success": true,
+      "pair_id": "b12_oracle_depth",
+      "period": 1,
+      "pipeline_success": null,
+      "problem_id": "C01_equal_count",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "1e4d1ae0ac808a505300b675b680beb8cbe9333f958fbc5d2d4d323f2e54717b",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 3,
+      "selected_rule_ids": [
+        "c46",
+        "c28",
+        "c74"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 3,
+      "unit_id": "b12",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 233,
+        "prompt_eval_count": 246,
+        "total_duration": 168884600
+      }
+    },
+    {
+      "arm": "estimate",
+      "block": 12,
+      "candidate_index": null,
+      "candidate_order_index": 0,
+      "condition": null,
+      "depth_report_success": false,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_candidate_depths"
+      ],
+      "expected_depths": [
+        2,
+        3
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b12_estimate",
+      "numeric_choice_success": null,
+      "pair_id": null,
+      "period": 2,
+      "pipeline_success": null,
+      "problem_id": "C01_equal_count",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": [
+        3,
+        4
+      ],
+      "response_sha256": "81607ac568015ace9e92cdf617287b12c1aa7830d3453c5d41a26b1e73238336",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": null,
+      "selected_rule_ids": null,
+      "selection_success": null,
+      "stage": "estimate",
+      "status": "ok",
+      "target_D": null,
+      "unit_id": "b12",
+      "usage": {
+        "eval_count": 14,
+        "prompt_eval_cached_count": 221,
+        "prompt_eval_count": 378,
+        "total_duration": 317949200
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 12,
+      "candidate_index": 1,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        3
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b12_estimate"
+      ],
+      "id": "b12_model_depth_deep",
+      "numeric_choice_success": true,
+      "pair_id": "b12_model_depth",
+      "period": 3,
+      "pipeline_success": false,
+      "problem_id": "C01_equal_count",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "a13f5e3cd8cc147370942b925ec2df2ae4a6221becbb06a962ab0a5972c89c1d",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 3,
+      "selected_rule_ids": [
+        "c46",
+        "c28",
+        "c74"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 3,
+      "unit_id": "b12",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 252,
+        "total_duration": 198134000
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 12,
+      "candidate_index": 0,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        3
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b12_estimate"
+      ],
+      "id": "b12_model_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b12_model_depth",
+      "period": 4,
+      "pipeline_success": false,
+      "problem_id": "C01_equal_count",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "84cb8d3f1cf944b8b49e40e3f73a77f7e00eb5cce68846e960cd7eed2dacfdbc",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "c19",
+        "c61",
+        "c83"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b12",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 239,
+        "prompt_eval_count": 252,
+        "total_duration": 180415100
+      }
+    },
+    {
+      "arm": "estimate",
+      "block": 13,
+      "candidate_index": null,
+      "candidate_order_index": 1,
+      "condition": null,
+      "depth_report_success": false,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_candidate_depths"
+      ],
+      "expected_depths": [
+        3,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b13_estimate",
+      "numeric_choice_success": null,
+      "pair_id": null,
+      "period": 0,
+      "pipeline_success": null,
+      "problem_id": "C01_equal_count",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": [
+        3,
+        4
+      ],
+      "response_sha256": "8d1f01490935a9027f224aba79f8f52241c451beaf5438e25a6385446c535457",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": null,
+      "selected_rule_ids": null,
+      "selection_success": null,
+      "stage": "estimate",
+      "status": "ok",
+      "target_D": null,
+      "unit_id": "b13",
+      "usage": {
+        "eval_count": 14,
+        "prompt_eval_cached_count": 349,
+        "prompt_eval_count": 378,
+        "total_duration": 289631500
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 13,
+      "candidate_index": 0,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction"
+      ],
+      "expected_depths": [
+        3,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b13_estimate"
+      ],
+      "id": "b13_model_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b13_model_depth",
+      "period": 1,
+      "pipeline_success": false,
+      "problem_id": "C01_equal_count",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "90cc504ac0882f41ef3c4cca177ad9244731bf8d9fece2ffd52bf96586dce9ec",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 3,
+      "selected_rule_ids": [
+        "c46",
+        "c28",
+        "c74"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b13",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 251,
+        "prompt_eval_count": 252,
+        "total_duration": 202423200
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 13,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction"
+      ],
+      "expected_depths": [
+        3,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b13_estimate"
+      ],
+      "id": "b13_model_depth_deep",
+      "numeric_choice_success": true,
+      "pair_id": "b13_model_depth",
+      "period": 2,
+      "pipeline_success": false,
+      "problem_id": "C01_equal_count",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "aaf0811190b51190fd56b8004f4e0d5f253ff7e6992b66a5d6eba2ceaf9b15b7",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "c19",
+        "c61",
+        "c83"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 3,
+      "unit_id": "b13",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 239,
+        "prompt_eval_count": 252,
+        "total_duration": 178147100
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 13,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction",
+        "wrong_numeric_direction"
+      ],
+      "expected_depths": [
+        3,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b13_oracle_depth_deep",
+      "numeric_choice_success": false,
+      "pair_id": "b13_oracle_depth",
+      "period": 3,
+      "pipeline_success": null,
+      "problem_id": "C01_equal_count",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "73dea3148b7f2829c436ae3ecb51d9667f9af9c8ad27059ce38602d31189bb8a",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "c19",
+        "c61",
+        "c83"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 3,
+      "unit_id": "b13",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 246,
+        "total_duration": 158909100
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 13,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        3,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b13_oracle_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b13_oracle_depth",
+      "period": 4,
+      "pipeline_success": null,
+      "problem_id": "C01_equal_count",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "4cc59e5242af80dbea0a7c609359dd5a2795a1773fda2e0a4e1573f058ced829",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "c19",
+        "c61",
+        "c83"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b13",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 233,
+        "prompt_eval_count": 246,
+        "total_duration": 157555200
+      }
+    },
+    {
+      "arm": "estimate",
+      "block": 14,
+      "candidate_index": null,
+      "candidate_order_index": 0,
+      "condition": null,
+      "depth_report_success": false,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_candidate_depths"
+      ],
+      "expected_depths": [
+        2,
+        3
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b14_estimate",
+      "numeric_choice_success": null,
+      "pair_id": null,
+      "period": 0,
+      "pipeline_success": null,
+      "problem_id": "C01_equal_count",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": [
+        3,
+        4
+      ],
+      "response_sha256": "dba051d6e76f4960a4de2c50208fa076888717e150294c2d4eef445c58226f1f",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": null,
+      "selected_rule_ids": null,
+      "selection_success": null,
+      "stage": "estimate",
+      "status": "ok",
+      "target_D": null,
+      "unit_id": "b14",
+      "usage": {
+        "eval_count": 14,
+        "prompt_eval_cached_count": 349,
+        "prompt_eval_count": 378,
+        "total_duration": 271496300
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 14,
+      "candidate_index": 0,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        3
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b14_estimate"
+      ],
+      "id": "b14_model_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b14_model_depth",
+      "period": 1,
+      "pipeline_success": false,
+      "problem_id": "C01_equal_count",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "55891f5e9e2e68b3f2606cc5544122186629ef759155594074d282e524182e32",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "c19",
+        "c61",
+        "c83"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b14",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 252,
+        "total_duration": 195835300
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 14,
+      "candidate_index": 1,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        3
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b14_estimate"
+      ],
+      "id": "b14_model_depth_deep",
+      "numeric_choice_success": true,
+      "pair_id": "b14_model_depth",
+      "period": 2,
+      "pipeline_success": false,
+      "problem_id": "C01_equal_count",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "751fed5e031855688940d3c7c5dd1cfc4c992ec37bee4f19bf1f5becf625c07a",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 3,
+      "selected_rule_ids": [
+        "c46",
+        "c28",
+        "c74"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 3,
+      "unit_id": "b14",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 239,
+        "prompt_eval_count": 252,
+        "total_duration": 182560500
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 14,
+      "candidate_index": 1,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        3
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b14_oracle_depth_deep",
+      "numeric_choice_success": true,
+      "pair_id": "b14_oracle_depth",
+      "period": 3,
+      "pipeline_success": null,
+      "problem_id": "C01_equal_count",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "a4f578df1101a9b395388746ea18ec24f368b882d7e2c404f1c86d644baf0045",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 3,
+      "selected_rule_ids": [
+        "c46",
+        "c28",
+        "c74"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 3,
+      "unit_id": "b14",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 246,
+        "total_duration": 163335100
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 14,
+      "candidate_index": 0,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        3
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b14_oracle_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b14_oracle_depth",
+      "period": 4,
+      "pipeline_success": null,
+      "problem_id": "C01_equal_count",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "8124e7a529c7b7f543cde3e1e76f91ba3118cbbd1fa7f5aeb1dcdaf2671fa6fe",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "c19",
+        "c61",
+        "c83"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b14",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 233,
+        "prompt_eval_count": 246,
+        "total_duration": 168901800
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 15,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        3,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b15_oracle_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b15_oracle_depth",
+      "period": 0,
+      "pipeline_success": null,
+      "problem_id": "C01_equal_count",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "2ef3fce73bcdf300dc37ca7a1c074f2a2bb802324af79ec2930c2ba95c6d8a89",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "c19",
+        "c61",
+        "c83"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b15",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 221,
+        "prompt_eval_count": 246,
+        "total_duration": 162532900
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 15,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction",
+        "wrong_numeric_direction"
+      ],
+      "expected_depths": [
+        3,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b15_oracle_depth_deep",
+      "numeric_choice_success": false,
+      "pair_id": "b15_oracle_depth",
+      "period": 1,
+      "pipeline_success": null,
+      "problem_id": "C01_equal_count",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "90f3777e69114103c2735570e4102574362081915d7ce95645fc71c6655fadf1",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "c19",
+        "c61",
+        "c83"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 3,
+      "unit_id": "b15",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 233,
+        "prompt_eval_count": 246,
+        "total_duration": 158174500
+      }
+    },
+    {
+      "arm": "estimate",
+      "block": 15,
+      "candidate_index": null,
+      "candidate_order_index": 1,
+      "condition": null,
+      "depth_report_success": false,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_candidate_depths"
+      ],
+      "expected_depths": [
+        3,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b15_estimate",
+      "numeric_choice_success": null,
+      "pair_id": null,
+      "period": 2,
+      "pipeline_success": null,
+      "problem_id": "C01_equal_count",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": [
+        3,
+        4
+      ],
+      "response_sha256": "26e27654f5e827b197f6014ee5724c115e87b8c8e38f71ba8573999ec3efdfda",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": null,
+      "selected_rule_ids": null,
+      "selection_success": null,
+      "stage": "estimate",
+      "status": "ok",
+      "target_D": null,
+      "unit_id": "b15",
+      "usage": {
+        "eval_count": 14,
+        "prompt_eval_cached_count": 349,
+        "prompt_eval_count": 378,
+        "total_duration": 283348600
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 15,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction"
+      ],
+      "expected_depths": [
+        3,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b15_estimate"
+      ],
+      "id": "b15_model_depth_deep",
+      "numeric_choice_success": true,
+      "pair_id": "b15_model_depth",
+      "period": 3,
+      "pipeline_success": false,
+      "problem_id": "C01_equal_count",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "87e0a45cb76ba86c252d53f3311a5f6958c3a1ff3c534b3db5a21dce5f6ade7b",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "c19",
+        "c61",
+        "c83"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 3,
+      "unit_id": "b15",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 252,
+        "total_duration": 199111300
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 15,
+      "candidate_index": 0,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction"
+      ],
+      "expected_depths": [
+        3,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b15_estimate"
+      ],
+      "id": "b15_model_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b15_model_depth",
+      "period": 4,
+      "pipeline_success": false,
+      "problem_id": "C01_equal_count",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "54b11d0468b7d000922a82bb2a0ec2dceaf43fecce6bd0d9c04a281529821d2c",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 3,
+      "selected_rule_ids": [
+        "c46",
+        "c28",
+        "c74"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b15",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 239,
+        "prompt_eval_count": 252,
+        "total_duration": 162365500
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 16,
+      "candidate_index": 0,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        3
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b16_oracle_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b16_oracle_depth",
+      "period": 0,
+      "pipeline_success": null,
+      "problem_id": "C02_count_reversal",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "80baf6767a45a1a3ff3650aa8ca5092d10bbbbaaae8688a1eeb8557bf384f15e",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "q17",
+        "q94",
+        "q42",
+        "q69"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b16",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 246,
+        "total_duration": 158746800
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 16,
+      "candidate_index": 1,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        3
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b16_oracle_depth_deep",
+      "numeric_choice_success": true,
+      "pair_id": "b16_oracle_depth",
+      "period": 1,
+      "pipeline_success": null,
+      "problem_id": "C02_count_reversal",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "a94c1ecb0f95fd4aea96078e8aaa7135193ba1cf7216062aab958dcfc0954702",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 3,
+      "selected_rule_ids": [
+        "q25",
+        "q86",
+        "q53"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 3,
+      "unit_id": "b16",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 233,
+        "prompt_eval_count": 246,
+        "total_duration": 158365500
+      }
+    },
+    {
+      "arm": "estimate",
+      "block": 16,
+      "candidate_index": null,
+      "candidate_order_index": 0,
+      "condition": null,
+      "depth_report_success": false,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_candidate_depths"
+      ],
+      "expected_depths": [
+        2,
+        3
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b16_estimate",
+      "numeric_choice_success": null,
+      "pair_id": null,
+      "period": 2,
+      "pipeline_success": null,
+      "problem_id": "C02_count_reversal",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": [
+        0,
+        0
+      ],
+      "response_sha256": "e90a00ac3df96db44fb24b5b9961c6af806f9ece5faa6f353439cd435493e8fb",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": null,
+      "selected_rule_ids": null,
+      "selection_success": null,
+      "stage": "estimate",
+      "status": "ok",
+      "target_D": null,
+      "unit_id": "b16",
+      "usage": {
+        "eval_count": 14,
+        "prompt_eval_cached_count": 221,
+        "prompt_eval_count": 420,
+        "total_duration": 323228900
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 16,
+      "candidate_index": 1,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        3
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b16_estimate"
+      ],
+      "id": "b16_model_depth_deep",
+      "numeric_choice_success": null,
+      "pair_id": "b16_model_depth",
+      "period": 3,
+      "pipeline_success": false,
+      "problem_id": "C02_count_reversal",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "917017ad6343b60ffd2fd0e02761c185ce7c7a6d97f938dff264232bda84a16c",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 3,
+      "selected_rule_ids": [
+        "q25",
+        "q86",
+        "q53"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 3,
+      "unit_id": "b16",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 252,
+        "total_duration": 199222000
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 16,
+      "candidate_index": 0,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        3
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b16_estimate"
+      ],
+      "id": "b16_model_depth_shallow",
+      "numeric_choice_success": null,
+      "pair_id": "b16_model_depth",
+      "period": 4,
+      "pipeline_success": false,
+      "problem_id": "C02_count_reversal",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "62ca88357f1dc86c1df069cca36c281d44e6de2ecc0c5b8c68ea1896f7c003b7",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "q17",
+        "q94",
+        "q42",
+        "q69"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b16",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 239,
+        "prompt_eval_count": 252,
+        "total_duration": 172210400
+      }
+    },
+    {
+      "arm": "estimate",
+      "block": 17,
+      "candidate_index": null,
+      "candidate_order_index": 1,
+      "condition": null,
+      "depth_report_success": false,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_candidate_depths"
+      ],
+      "expected_depths": [
+        3,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b17_estimate",
+      "numeric_choice_success": null,
+      "pair_id": null,
+      "period": 0,
+      "pipeline_success": null,
+      "problem_id": "C02_count_reversal",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": [
+        3,
+        4
+      ],
+      "response_sha256": "ff77455982ce8d240ea30a97b48253aa8babff6acbed24344937493b20500576",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": null,
+      "selected_rule_ids": null,
+      "selection_success": null,
+      "stage": "estimate",
+      "status": "ok",
+      "target_D": null,
+      "unit_id": "b17",
+      "usage": {
+        "eval_count": 14,
+        "prompt_eval_cached_count": 387,
+        "prompt_eval_count": 420,
+        "total_duration": 280733900
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 17,
+      "candidate_index": 0,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction"
+      ],
+      "expected_depths": [
+        3,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b17_estimate"
+      ],
+      "id": "b17_model_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b17_model_depth",
+      "period": 1,
+      "pipeline_success": false,
+      "problem_id": "C02_count_reversal",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "e7e0932c0bcfc07665b0b05cbc36d73afc64be21719575b0c9f754a45cf26589",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 3,
+      "selected_rule_ids": [
+        "q25",
+        "q86",
+        "q53"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b17",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 224,
+        "prompt_eval_count": 252,
+        "total_duration": 191935900
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 17,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction"
+      ],
+      "expected_depths": [
+        3,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b17_estimate"
+      ],
+      "id": "b17_model_depth_deep",
+      "numeric_choice_success": true,
+      "pair_id": "b17_model_depth",
+      "period": 2,
+      "pipeline_success": false,
+      "problem_id": "C02_count_reversal",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "8216fea2794d23a7e8350c3c481b959ac7cd7693cf3790efc24a6e002c445030",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "q17",
+        "q94",
+        "q42",
+        "q69"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 3,
+      "unit_id": "b17",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 239,
+        "prompt_eval_count": 252,
+        "total_duration": 161074500
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 17,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction",
+        "wrong_numeric_direction"
+      ],
+      "expected_depths": [
+        3,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b17_oracle_depth_deep",
+      "numeric_choice_success": false,
+      "pair_id": "b17_oracle_depth",
+      "period": 3,
+      "pipeline_success": null,
+      "problem_id": "C02_count_reversal",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "4238933c88638b8f7577842e553f513aa1f63dafd9f7421473357b0d2d83db61",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "q17",
+        "q94",
+        "q42",
+        "q69"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 3,
+      "unit_id": "b17",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 246,
+        "total_duration": 157679800
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 17,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        3,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b17_oracle_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b17_oracle_depth",
+      "period": 4,
+      "pipeline_success": null,
+      "problem_id": "C02_count_reversal",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "2375018fad47f4fdeeed2f8eec91f65cccbe275d70194e7fd49ef57ed0910351",
+      "seed": 64001001,
+      "seed_index": 0,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "q17",
+        "q94",
+        "q42",
+        "q69"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b17",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 233,
+        "prompt_eval_count": 246,
+        "total_duration": 159968200
+      }
+    },
+    {
+      "arm": "estimate",
+      "block": 18,
+      "candidate_index": null,
+      "candidate_order_index": 0,
+      "condition": null,
+      "depth_report_success": false,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_candidate_depths"
+      ],
+      "expected_depths": [
+        2,
+        3
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b18_estimate",
+      "numeric_choice_success": null,
+      "pair_id": null,
+      "period": 0,
+      "pipeline_success": null,
+      "problem_id": "C02_count_reversal",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": [
+        0,
+        0
+      ],
+      "response_sha256": "a106511b17f71b8a2cbe82dd19ebe7f7432f194354a34589d3be583ce2961c2e",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": null,
+      "selected_rule_ids": null,
+      "selection_success": null,
+      "stage": "estimate",
+      "status": "ok",
+      "target_D": null,
+      "unit_id": "b18",
+      "usage": {
+        "eval_count": 14,
+        "prompt_eval_cached_count": 387,
+        "prompt_eval_count": 420,
+        "total_duration": 274374900
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 18,
+      "candidate_index": 0,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        3
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b18_estimate"
+      ],
+      "id": "b18_model_depth_shallow",
+      "numeric_choice_success": null,
+      "pair_id": "b18_model_depth",
+      "period": 1,
+      "pipeline_success": false,
+      "problem_id": "C02_count_reversal",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "72ab92892196f5589356d42cf20811dda6abbf39ce5dc6dca25255b4d81531c2",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "q17",
+        "q94",
+        "q42",
+        "q69"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b18",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 252,
+        "total_duration": 193327600
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 18,
+      "candidate_index": 1,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        3
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b18_estimate"
+      ],
+      "id": "b18_model_depth_deep",
+      "numeric_choice_success": null,
+      "pair_id": "b18_model_depth",
+      "period": 2,
+      "pipeline_success": false,
+      "problem_id": "C02_count_reversal",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "23d0861a96ed4c99c36b9167ffc4b80864183ef3ca745170561c0e1ffc129919",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 3,
+      "selected_rule_ids": [
+        "q25",
+        "q86",
+        "q53"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 3,
+      "unit_id": "b18",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 239,
+        "prompt_eval_count": 252,
+        "total_duration": 162515100
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 18,
+      "candidate_index": 1,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        3
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b18_oracle_depth_deep",
+      "numeric_choice_success": true,
+      "pair_id": "b18_oracle_depth",
+      "period": 3,
+      "pipeline_success": null,
+      "problem_id": "C02_count_reversal",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "0170ee0637d83796a08307bd0bbcf5263c3e0a0b58893cdfcf43f630241c2b09",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 3,
+      "selected_rule_ids": [
+        "q25",
+        "q86",
+        "q53"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 3,
+      "unit_id": "b18",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 246,
+        "total_duration": 156854800
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 18,
+      "candidate_index": 0,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        2,
+        3
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b18_oracle_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b18_oracle_depth",
+      "period": 4,
+      "pipeline_success": null,
+      "problem_id": "C02_count_reversal",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "51e8da54d4ff3db23042034caa93eab8c5c5dfabd0680731eb2f448940a9a1d0",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "q17",
+        "q94",
+        "q42",
+        "q69"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b18",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 233,
+        "prompt_eval_count": 246,
+        "total_duration": 157122800
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 19,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [],
+      "expected_depths": [
+        3,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b19_oracle_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b19_oracle_depth",
+      "period": 0,
+      "pipeline_success": null,
+      "problem_id": "C02_count_reversal",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "6bd62867316149d6cbaf5681f2ce11f511270749c2de892b8a989f41e6e20e09",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "q17",
+        "q94",
+        "q42",
+        "q69"
+      ],
+      "selection_success": true,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b19",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 221,
+        "prompt_eval_count": 246,
+        "total_duration": 177492500
+      }
+    },
+    {
+      "arm": "oracle_depth",
+      "block": 19,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction",
+        "wrong_numeric_direction"
+      ],
+      "expected_depths": [
+        3,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b19_oracle_depth_deep",
+      "numeric_choice_success": false,
+      "pair_id": "b19_oracle_depth",
+      "period": 1,
+      "pipeline_success": null,
+      "problem_id": "C02_count_reversal",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "974f80be0840e374c25f44d688d51bbba1d5a6525f25ff4d62585b671173a62d",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "q17",
+        "q94",
+        "q42",
+        "q69"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 3,
+      "unit_id": "b19",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 233,
+        "prompt_eval_count": 246,
+        "total_duration": 161094100
+      }
+    },
+    {
+      "arm": "estimate",
+      "block": 19,
+      "candidate_index": null,
+      "candidate_order_index": 1,
+      "condition": null,
+      "depth_report_success": false,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_candidate_depths"
+      ],
+      "expected_depths": [
+        3,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [],
+      "id": "b19_estimate",
+      "numeric_choice_success": null,
+      "pair_id": null,
+      "period": 2,
+      "pipeline_success": null,
+      "problem_id": "C02_count_reversal",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": [
+        3,
+        4
+      ],
+      "response_sha256": "ee2ba4952ae287d9f6664f0d8828dfc286b2ff839757beb0bbf89d99fca3affa",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": null,
+      "selected_rule_ids": null,
+      "selection_success": null,
+      "stage": "estimate",
+      "status": "ok",
+      "target_D": null,
+      "unit_id": "b19",
+      "usage": {
+        "eval_count": 14,
+        "prompt_eval_cached_count": 387,
+        "prompt_eval_count": 420,
+        "total_duration": 288489100
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 19,
+      "candidate_index": 1,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction"
+      ],
+      "expected_depths": [
+        3,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b19_estimate"
+      ],
+      "id": "b19_model_depth_deep",
+      "numeric_choice_success": true,
+      "pair_id": "b19_model_depth",
+      "period": 3,
+      "pipeline_success": false,
+      "problem_id": "C02_count_reversal",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "62a43c26ef76f24d95145ad3eea696c6f3d78f1ef32ffb6a7d60730e8d7ba262",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 2,
+      "selected_rule_ids": [
+        "q17",
+        "q94",
+        "q42",
+        "q69"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 3,
+      "unit_id": "b19",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 216,
+        "prompt_eval_count": 252,
+        "total_duration": 210964000
+      }
+    },
+    {
+      "arm": "model_depth",
+      "block": 19,
+      "candidate_index": 0,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "depth_report_success": null,
+      "done_reason": "stop",
+      "error_codes": [
+        "wrong_actual_depth_direction"
+      ],
+      "expected_depths": [
+        3,
+        2
+      ],
+      "format_valid": true,
+      "history_ids": [
+        "b19_estimate"
+      ],
+      "id": "b19_model_depth_shallow",
+      "numeric_choice_success": true,
+      "pair_id": "b19_model_depth",
+      "period": 4,
+      "pipeline_success": false,
+      "problem_id": "C02_count_reversal",
+      "problem_role": "seen_authored_diagnostic",
+      "reported_depths": null,
+      "response_sha256": "a818c2a982f0c77004b7f03606557a3dd412870d2ff4ce16ee7115d865143746",
+      "seed": 64001002,
+      "seed_index": 1,
+      "selected_D": 3,
+      "selected_rule_ids": [
+        "q25",
+        "q86",
+        "q53"
+      ],
+      "selection_success": false,
+      "stage": "select",
+      "status": "ok",
+      "target_D": 2,
+      "unit_id": "b19",
+      "usage": {
+        "eval_count": 7,
+        "prompt_eval_cached_count": 239,
+        "prompt_eval_count": 252,
+        "total_duration": 175694200
+      }
+    }
+  ],
+  "run_name": "v071_depthcompare_20260913_221758_352826",
+  "state": "complete",
+  "usage": {
+    "eval_count": 840,
+    "prompt_eval_cached_count": 24183,
+    "prompt_eval_count": 27544,
+    "total_duration": 22255934300
+  }
+}

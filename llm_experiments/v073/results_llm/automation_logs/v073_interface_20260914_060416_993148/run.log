@@ -1,0 +1,146 @@
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_logic.py', '-v']
+test_32_compact_requests_match_archived_numeric_control (test_logic.Logic.test_32_compact_requests_match_archived_numeric_control) ... ok
+test_64_calls_96_actions_no_history (test_logic.Logic.test_64_calls_96_actions_no_history) ... ok
+test_both_fail_closes_contract (test_logic.Logic.test_both_fail_closes_contract) ... ok
+test_both_formats_qualified_priority_is_prespecified (test_logic.Logic.test_both_formats_qualified_priority_is_prespecified) ... ok
+test_endpoint_loopback_only (test_logic.Logic.test_endpoint_loopback_only) ... ok
+test_full_factorial_and_no_duplicate_numeric_pairs (test_logic.Logic.test_full_factorial_and_no_duplicate_numeric_pairs) ... ok
+test_input_values_not_model_depth_estimation (test_logic.Logic.test_input_values_not_model_depth_estimation) ... ok
+test_invalid_json_bytes_and_duplicate_keys (test_logic.Logic.test_invalid_json_bytes_and_duplicate_keys) ... ok
+test_malformed_is_unmeasured_not_wrong (test_logic.Logic.test_malformed_is_unmeasured_not_wrong) ... ok
+test_missing_usage_is_null (test_logic.Logic.test_missing_usage_is_null) ... ok
+test_no_production_imports_in_verifier (test_logic.Logic.test_no_production_imports_in_verifier) ... ok
+test_only_one_space_differs_in_32_request_pairs (test_logic.Logic.test_only_one_space_differs_in_32_request_pairs) ... ok
+test_partial_does_not_qualify (test_logic.Logic.test_partial_does_not_qualify) ... ok
+test_period_counterbalance (test_logic.Logic.test_period_counterbalance) ... ok
+test_randomized_256_response_patterns (test_logic.Logic.test_randomized_256_response_patterns) ... ok
+test_schema_and_nonmessage_options_unchanged (test_logic.Logic.test_schema_and_nonmessage_options_unchanged) ... ok
+test_source_snapshot_includes_ledger_and_frozen_results (test_logic.Logic.test_source_snapshot_includes_ledger_and_frozen_results) ... ok
+test_space_only_is_not_global_robustness (test_logic.Logic.test_space_only_is_not_global_robustness) ... ok
+test_synthetic_patterns_independent_50_comparisons (test_logic.Logic.test_synthetic_patterns_independent_50_comparisons) ... ok
+test_unknown_history_refused (test_logic.Logic.test_unknown_history_refused) ... ok
+test_unsafe_paths (test_logic.Logic.test_unsafe_paths) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 6.129s
+
+OK
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'run.py', 'prepare', '--baseline', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v072\\results_llm\\v072_gemma_20260913_225125_604451_evidence.zip', '--run-name', 'v073_interface_20260914_060416_993148', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v073\\experiments\\v073_interface_20260914_060416_993148.plan.json']
+{
+  "prepared": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v073\\experiments\\v073_interface_20260914_060416_993148.plan.json",
+  "new_model_inference": false,
+  "max_inference_calls_when_executed": 64,
+  "plan_sha256": "b97dc2182f7120b93a87b4736e66a2b405de5bcd8a4849caa5c7584890ace8c5"
+}
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'run.py', 'execute', '--plan', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v073\\experiments\\v073_interface_20260914_060416_993148.plan.json', '--baseline', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v072\\results_llm\\v072_gemma_20260913_225125_604451_evidence.zip', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v073\\results_llm\\v073_interface_20260914_060416_993148', '--endpoint', 'http://127.0.0.1:11434']
+1/96: b00_before
+2/96: b00_compact_shallow
+3/96: b00_compact_deep
+4/96: b00_comma_space_shallow
+5/96: b00_comma_space_deep
+6/96: b00_after
+7/96: b01_before
+8/96: b01_compact_deep
+9/96: b01_comma_space_shallow
+10/96: b01_comma_space_deep
+11/96: b01_compact_shallow
+12/96: b01_after
+13/96: b02_before
+14/96: b02_comma_space_deep
+15/96: b02_comma_space_shallow
+16/96: b02_compact_deep
+17/96: b02_compact_shallow
+18/96: b02_after
+19/96: b03_before
+20/96: b03_compact_shallow
+21/96: b03_comma_space_deep
+22/96: b03_comma_space_shallow
+23/96: b03_compact_deep
+24/96: b03_after
+25/96: b04_before
+26/96: b04_compact_deep
+27/96: b04_comma_space_shallow
+28/96: b04_comma_space_deep
+29/96: b04_compact_shallow
+30/96: b04_after
+31/96: b05_before
+32/96: b05_comma_space_shallow
+33/96: b05_comma_space_deep
+34/96: b05_compact_shallow
+35/96: b05_compact_deep
+36/96: b05_after
+37/96: b06_before
+38/96: b06_compact_shallow
+39/96: b06_comma_space_deep
+40/96: b06_comma_space_shallow
+41/96: b06_compact_deep
+42/96: b06_after
+43/96: b07_before
+44/96: b07_compact_deep
+45/96: b07_compact_shallow
+46/96: b07_comma_space_deep
+47/96: b07_comma_space_shallow
+48/96: b07_after
+49/96: b08_before
+50/96: b08_comma_space_shallow
+51/96: b08_comma_space_deep
+52/96: b08_compact_shallow
+53/96: b08_compact_deep
+54/96: b08_after
+55/96: b09_before
+56/96: b09_comma_space_deep
+57/96: b09_compact_shallow
+58/96: b09_compact_deep
+59/96: b09_comma_space_shallow
+60/96: b09_after
+61/96: b10_before
+62/96: b10_compact_deep
+63/96: b10_compact_shallow
+64/96: b10_comma_space_deep
+65/96: b10_comma_space_shallow
+66/96: b10_after
+67/96: b11_before
+68/96: b11_comma_space_shallow
+69/96: b11_compact_deep
+70/96: b11_compact_shallow
+71/96: b11_comma_space_deep
+72/96: b11_after
+73/96: b12_before
+74/96: b12_comma_space_deep
+75/96: b12_compact_shallow
+76/96: b12_compact_deep
+77/96: b12_comma_space_shallow
+78/96: b12_after
+79/96: b13_before
+80/96: b13_compact_shallow
+81/96: b13_compact_deep
+82/96: b13_comma_space_shallow
+83/96: b13_comma_space_deep
+84/96: b13_after
+85/96: b14_before
+86/96: b14_comma_space_shallow
+87/96: b14_compact_deep
+88/96: b14_compact_shallow
+89/96: b14_comma_space_deep
+90/96: b14_after
+91/96: b15_before
+92/96: b15_comma_space_deep
+93/96: b15_comma_space_shallow
+94/96: b15_compact_deep
+95/96: b15_compact_shallow
+96/96: b15_after
+{
+  "state": "complete",
+  "evidence_zip": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v073\\results_llm\\v073_interface_20260914_060416_993148_evidence.zip",
+  "independent_verification": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v073\\results_llm\\v073_interface_20260914_060416_993148_independent.json",
+  "inference_calls": 64
+}
+
+EXIT 0

@@ -1,0 +1,891 @@
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_*.py', '-v']
+test_correct_counting_is_not_D_success (test_behaviors.Policies.test_correct_counting_is_not_D_success) ... ok
+test_counting_cannot_pass_D_inverted_cases (test_behaviors.Policies.test_counting_cannot_pass_D_inverted_cases) ... ok
+test_depth_only_cannot_pass_metric_discrimination (test_behaviors.Policies.test_depth_only_cannot_pass_metric_discrimination) ... ok
+test_first_position_has_zero_D_pairs (test_behaviors.Policies.test_first_position_has_zero_D_pairs) ... ok
+test_fixed_ID_has_zero_D_pairs (test_behaviors.Policies.test_fixed_ID_has_zero_D_pairs) ... ok
+test_position_and_ID_are_distinguished (test_behaviors.Policies.test_position_and_ID_are_distinguished) ... ok
+test_same_direction_flip_alone_is_insufficient (test_behaviors.Policies.test_same_direction_flip_alone_is_insufficient) ... ok
+test_valid_reversed_graphs_preserved (test_behaviors.Policies.test_valid_reversed_graphs_preserved) ... ok
+test_D_not_serial_request_count (test_contract.Calibration.test_D_not_serial_request_count) ... ok
+test_all_measurement_calibrations (test_contract.Calibration.test_all_measurement_calibrations) ... ok
+test_macro_raw_depth_not_invariant (test_contract.Calibration.test_macro_raw_depth_not_invariant) ... ok
+test_same_rule_count_not_same_D (test_contract.Calibration.test_same_rule_count_not_same_D) ... ok
+test_wrong_macro_interface_rejected (test_contract.Calibration.test_wrong_macro_interface_rejected) ... ok
+test_32_v079_D_requests_exact (test_contract.Design.test_32_v079_D_requests_exact) ... ok
+test_candidate_id_not_position (test_contract.Design.test_candidate_id_not_position) ... ok
+test_direction_pair_only_request_diff (test_contract.Design.test_direction_pair_only_request_diff) ... ok
+test_exact_denominators (test_contract.Design.test_exact_denominators) ... ok
+test_independent_does_not_import_production (test_contract.Design.test_independent_does_not_import_production) ... ok
+test_legacy_modules_unchanged (test_contract.Design.test_legacy_modules_unchanged) ... ok
+test_no_candidate_depth_or_work_leak (test_contract.Design.test_no_candidate_depth_or_work_leak) ... ok
+test_no_new_numeric_reporting (test_contract.Design.test_no_new_numeric_reporting) ... ok
+test_no_runtime_scorer_import (test_contract.Design.test_no_runtime_scorer_import) ... ok
+test_no_ties_in_W (test_contract.Design.test_no_ties_in_W) ... ok
+test_raw_content_preserved_even_length (test_contract.Design.test_raw_content_preserved_even_length) ... ok
+test_request_independent (test_contract.Design.test_request_independent) ... ok
+test_same_candidates_D_W (test_contract.Design.test_same_candidates_D_W) ... ok
+test_schedule_independent (test_contract.Design.test_schedule_independent) ... ok
+test_schema_drift_rejected (test_contract.Design.test_schema_drift_rejected) ... ok
+test_schema_enum_order_unchanged (test_contract.Design.test_schema_enum_order_unchanged) ... ok
+test_all_followup_requests_independent (test_contract.Metrics.test_all_followup_requests_independent) ... ok
+test_all_normal_scores (test_contract.Metrics.test_all_normal_scores) ... ok
+test_empty_is_unmeasured_not_zero (test_contract.Metrics.test_empty_is_unmeasured_not_zero) ... ok
+test_full_normal_748 (test_contract.Metrics.test_full_normal_748) ... ok
+test_half_pair_is_not_win (test_contract.Metrics.test_half_pair_is_not_win) ... ok
+test_independent_full (test_contract.Metrics.test_independent_full) ... ok
+test_length_and_schema_and_transport_separate (test_contract.Metrics.test_length_and_schema_and_transport_separate) ... ok
+test_metric_discrimination (test_contract.Metrics.test_metric_discrimination) ... ok
+test_robust_groups (test_contract.Metrics.test_robust_groups) ... ok
+test_usage_missing_not_zero (test_contract.Metrics.test_usage_missing_not_zero) ... ok
+test_wrong_intermediate_not_repaired (test_contract.Metrics.test_wrong_intermediate_not_repaired) ... ok
+test_accept_local_endpoint (test_runtime.Interface.test_accept_local_endpoint) ... ok
+test_nonfinite_and_duplicate_JSON_rejected (test_runtime.Interface.test_nonfinite_and_duplicate_JSON_rejected) ... ok
+test_powershell_syntax (test_runtime.Interface.test_powershell_syntax) ... ok
+test_reject_nonlocal_endpoints (test_runtime.Interface.test_reject_nonlocal_endpoints) ... ok
+test_unsafe_archive_names_rejected (test_runtime.Interface.test_unsafe_archive_names_rejected) ... ok
+test_changed_presentation_mapping_rejected (test_runtime.Runtime.test_changed_presentation_mapping_rejected) ... ok
+test_changed_raw_parent_even_rehashed_rejected (test_runtime.Runtime.test_changed_raw_parent_even_rehashed_rejected) ... ok
+test_changed_request_even_rehashed_rejected (test_runtime.Runtime.test_changed_request_even_rehashed_rejected) ... ok
+test_changed_score_even_rehashed_rejected (test_runtime.Runtime.test_changed_score_even_rehashed_rejected) ... ok
+test_changed_source_rejected (test_runtime.Runtime.test_changed_source_rejected) ... ok
+test_cli_cannot_send_synthetic_plan_to_real_server (test_runtime.Runtime.test_cli_cannot_send_synthetic_plan_to_real_server) ... ok
+test_complete_and_independent (test_runtime.Runtime.test_complete_and_independent) ... ok
+test_crash_preserves_unobserved_dispatch (test_runtime.Runtime.test_crash_preserves_unobserved_dispatch) ... ok
+test_false_complete_status_rejected (test_runtime.Runtime.test_false_complete_status_rejected) ... ok
+test_guard_rejects_second_start (test_runtime.Runtime.test_guard_rejects_second_start) ... ok
+test_http_error_stops_once (test_runtime.Runtime.test_http_error_stops_once) ... ok
+test_identity_error_before_any_inference (test_runtime.Runtime.test_identity_error_before_any_inference) ... ok
+test_new_runname_cannot_bypass_guard (test_runtime.Runtime.test_new_runname_cannot_bypass_guard) ... ok
+test_original_v079_reaudit (test_runtime.Runtime.test_original_v079_reaudit) ... ok
+test_unaccounted_file_rejected (test_runtime.Runtime.test_unaccounted_file_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 60 tests in 35.083s
+
+OK
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'calibrate080.py', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v080\\results_llm\\automation_logs\\v080_metriccross_20260914_194132_147118\\calibration.json']
+{"passed": 87, "failed": 0, "actual_model_inference": 0}
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'run080.py', 'prepare', '--baseline', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v079\\results_llm\\v079_rulepair_20260914_171604_674720_evidence.zip', '--run-name', 'v080_metriccross_20260914_194132_147118', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v080\\experiments\\v080_metriccross_20260914_194132_147118.plan.json']
+{
+  "prepared": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v080\\experiments\\v080_metriccross_20260914_194132_147118.plan.json",
+  "actual_model_inference": false,
+  "max_inference_calls": 780,
+  "plan_sha256": "16ebb511a00503675556a844a61606a31493dfa57767765b99332fddcbc01138"
+}
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'run080.py', 'execute', '--plan', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v080\\experiments\\v080_metriccross_20260914_194132_147118.plan.json', '--baseline', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v079\\results_llm\\v079_rulepair_20260914_171604_674720_evidence.zip', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v080\\results_llm\\v080_metriccross_20260914_194132_147118', '--endpoint', 'http://127.0.0.1:11434']
+1/796 b00_before: metadata / 추론 0
+2/796 t000_explicit_rule_facts: call / 추론 1
+3/796 t000_explicit_rule_rule_00: call / 추론 2
+4/796 t000_explicit_rule_rule_01: call / 추론 3
+5/796 t000_explicit_rule_rule_02: call / 추론 4
+6/796 t000_explicit_rule_final: call / 추론 5
+7/796 t001_explicit_rule_facts: call / 추론 6
+8/796 t001_explicit_rule_rule_00: call / 추론 7
+9/796 t001_explicit_rule_rule_01: call / 추론 8
+10/796 t001_explicit_rule_rule_02: call / 추론 9
+11/796 t001_explicit_rule_final: call / 추론 10
+12/796 t002_select: call / 추론 11
+13/796 t002_explicit_rule_facts: call / 추론 12
+14/796 t002_explicit_rule_rule_00: call / 추론 13
+15/796 t002_explicit_rule_rule_01: call / 추론 14
+16/796 t002_explicit_rule_rule_02: call / 추론 15
+17/796 t002_explicit_rule_final: call / 추론 16
+18/796 t003_select: call / 추론 17
+19/796 t003_explicit_rule_facts: call / 추론 18
+20/796 t003_explicit_rule_rule_00: call / 추론 19
+21/796 t003_explicit_rule_rule_01: call / 추론 20
+22/796 t003_explicit_rule_rule_02: call / 추론 21
+23/796 t003_explicit_rule_final: call / 추론 22
+24/796 t004_select: call / 추론 23
+25/796 t004_explicit_rule_facts: call / 추론 24
+26/796 t004_explicit_rule_rule_00: call / 추론 25
+27/796 t004_explicit_rule_rule_01: call / 추론 26
+28/796 t004_explicit_rule_rule_02: call / 추론 27
+29/796 t004_explicit_rule_final: call / 추론 28
+30/796 t005_select: call / 추론 29
+31/796 t005_explicit_rule_facts: call / 추론 30
+32/796 t005_explicit_rule_rule_00: call / 추론 31
+33/796 t005_explicit_rule_rule_01: call / 추론 32
+34/796 t005_explicit_rule_rule_02: call / 추론 33
+35/796 t005_explicit_rule_final: call / 추론 34
+36/796 t006_select: call / 추론 35
+37/796 t006_explicit_rule_facts: call / 추론 36
+38/796 t006_explicit_rule_rule_00: call / 추론 37
+39/796 t006_explicit_rule_rule_01: call / 추론 38
+40/796 t006_explicit_rule_rule_02: call / 추론 39
+41/796 t006_explicit_rule_final: call / 추론 40
+42/796 t007_select: call / 추론 41
+43/796 t007_explicit_rule_facts: call / 추론 42
+44/796 t007_explicit_rule_rule_00: call / 추론 43
+45/796 t007_explicit_rule_rule_01: call / 추론 44
+46/796 t007_explicit_rule_rule_02: call / 추론 45
+47/796 t007_explicit_rule_final: call / 추론 46
+48/796 t008_select: call / 추론 47
+49/796 t008_explicit_rule_facts: call / 추론 48
+50/796 t008_explicit_rule_rule_00: call / 추론 49
+51/796 t008_explicit_rule_rule_01: call / 추론 50
+52/796 t008_explicit_rule_rule_02: call / 추론 51
+53/796 t008_explicit_rule_final: call / 추론 52
+54/796 t009_select: call / 추론 53
+55/796 t009_explicit_rule_facts: call / 추론 54
+56/796 t009_explicit_rule_rule_00: call / 추론 55
+57/796 t009_explicit_rule_rule_01: call / 추론 56
+58/796 t009_explicit_rule_rule_02: call / 추론 57
+59/796 t009_explicit_rule_final: call / 추론 58
+60/796 b00_after: metadata / 추론 58
+61/796 b01_before: metadata / 추론 58
+62/796 t010_select: call / 추론 59
+63/796 t010_explicit_rule_facts: call / 추론 60
+64/796 t010_explicit_rule_rule_00: call / 추론 61
+65/796 t010_explicit_rule_rule_01: call / 추론 62
+66/796 t010_explicit_rule_rule_02: call / 추론 63
+67/796 t010_explicit_rule_final: call / 추론 64
+68/796 t011_select: call / 추론 65
+69/796 t011_explicit_rule_facts: call / 추론 66
+70/796 t011_explicit_rule_rule_00: call / 추론 67
+71/796 t011_explicit_rule_rule_01: call / 추론 68
+72/796 t011_explicit_rule_rule_02: call / 추론 69
+73/796 t011_explicit_rule_final: call / 추론 70
+74/796 t012_select: call / 추론 71
+75/796 t012_explicit_rule_facts: call / 추론 72
+76/796 t012_explicit_rule_rule_00: call / 추론 73
+77/796 t012_explicit_rule_rule_01: call / 추론 74
+78/796 t012_explicit_rule_rule_02: call / 추론 75
+79/796 t012_explicit_rule_final: call / 추론 76
+80/796 t013_select: call / 추론 77
+81/796 t013_explicit_rule_facts: call / 추론 78
+82/796 t013_explicit_rule_rule_00: call / 추론 79
+83/796 t013_explicit_rule_rule_01: call / 추론 80
+84/796 t013_explicit_rule_rule_02: call / 추론 81
+85/796 t013_explicit_rule_final: call / 추론 82
+86/796 t014_select: call / 추론 83
+87/796 t014_explicit_rule_facts: call / 추론 84
+88/796 t014_explicit_rule_rule_00: call / 추론 85
+89/796 t014_explicit_rule_rule_01: call / 추론 86
+90/796 t014_explicit_rule_rule_02: call / 추론 87
+91/796 t014_explicit_rule_final: call / 추론 88
+92/796 t015_select: call / 추론 89
+93/796 t015_explicit_rule_facts: call / 추론 90
+94/796 t015_explicit_rule_rule_00: call / 추론 91
+95/796 t015_explicit_rule_rule_01: call / 추론 92
+96/796 t015_explicit_rule_rule_02: call / 추론 93
+97/796 t015_explicit_rule_final: call / 추론 94
+98/796 t016_select: call / 추론 95
+99/796 t016_explicit_rule_facts: call / 추론 96
+100/796 t016_explicit_rule_rule_00: call / 추론 97
+101/796 t016_explicit_rule_rule_01: call / 추론 98
+102/796 t016_explicit_rule_rule_02: call / 추론 99
+103/796 t016_explicit_rule_final: call / 추론 100
+104/796 t017_select: call / 추론 101
+105/796 t017_explicit_rule_facts: call / 추론 102
+106/796 t017_explicit_rule_rule_00: call / 추론 103
+107/796 t017_explicit_rule_rule_01: call / 추론 104
+108/796 t017_explicit_rule_rule_02: call / 추론 105
+109/796 t017_explicit_rule_final: call / 추론 106
+110/796 t018_explicit_rule_facts: call / 추론 107
+111/796 t018_explicit_rule_rule_00: call / 추론 108
+112/796 t018_explicit_rule_rule_01: call / 추론 109
+113/796 t018_explicit_rule_rule_02: call / 추론 110
+114/796 t018_explicit_rule_final: call / 추론 111
+115/796 t019_explicit_rule_facts: call / 추론 112
+116/796 t019_explicit_rule_rule_00: call / 추론 113
+117/796 t019_explicit_rule_rule_01: call / 추론 114
+118/796 t019_explicit_rule_rule_02: call / 추론 115
+119/796 t019_explicit_rule_final: call / 추론 116
+120/796 b01_after: metadata / 추론 116
+121/796 b02_before: metadata / 추론 116
+122/796 t020_explicit_rule_facts: call / 추론 117
+123/796 t020_explicit_rule_rule_00: call / 추론 118
+124/796 t020_explicit_rule_rule_01: call / 추론 119
+125/796 t020_explicit_rule_rule_02: call / 추론 120
+126/796 t020_explicit_rule_rule_03: call / 추론 121
+127/796 t020_explicit_rule_final: call / 추론 122
+128/796 t021_explicit_rule_facts: call / 추론 123
+129/796 t021_explicit_rule_rule_00: call / 추론 124
+130/796 t021_explicit_rule_rule_01: call / 추론 125
+131/796 t021_explicit_rule_rule_02: call / 추론 126
+132/796 t021_explicit_rule_rule_03: call / 추론 127
+133/796 t021_explicit_rule_final: call / 추론 128
+134/796 t022_select: call / 추론 129
+135/796 t022_explicit_rule_facts: call / 추론 130
+136/796 t022_explicit_rule_rule_00: call / 추론 131
+137/796 t022_explicit_rule_rule_01: call / 추론 132
+138/796 t022_explicit_rule_rule_02: call / 추론 133
+139/796 t022_explicit_rule_rule_03: call / 추론 134
+140/796 t022_explicit_rule_final: call / 추론 135
+141/796 t023_select: call / 추론 136
+142/796 t023_explicit_rule_facts: call / 추론 137
+143/796 t023_explicit_rule_rule_00: call / 추론 138
+144/796 t023_explicit_rule_rule_01: call / 추론 139
+145/796 t023_explicit_rule_rule_02: call / 추론 140
+146/796 t023_explicit_rule_rule_03: call / 추론 141
+147/796 t023_explicit_rule_final: call / 추론 142
+148/796 t024_select: call / 추론 143
+149/796 t024_explicit_rule_facts: call / 추론 144
+150/796 t024_explicit_rule_rule_00: call / 추론 145
+151/796 t024_explicit_rule_rule_01: call / 추론 146
+152/796 t024_explicit_rule_rule_02: call / 추론 147
+153/796 t024_explicit_rule_rule_03: call / 추론 148
+154/796 t024_explicit_rule_final: call / 추론 149
+155/796 t025_select: call / 추론 150
+156/796 t025_explicit_rule_facts: call / 추론 151
+157/796 t025_explicit_rule_rule_00: call / 추론 152
+158/796 t025_explicit_rule_rule_01: call / 추론 153
+159/796 t025_explicit_rule_rule_02: call / 추론 154
+160/796 t025_explicit_rule_rule_03: call / 추론 155
+161/796 t025_explicit_rule_final: call / 추론 156
+162/796 t026_select: call / 추론 157
+163/796 t026_explicit_rule_facts: call / 추론 158
+164/796 t026_explicit_rule_rule_00: call / 추론 159
+165/796 t026_explicit_rule_rule_01: call / 추론 160
+166/796 t026_explicit_rule_rule_02: call / 추론 161
+167/796 t026_explicit_rule_rule_03: call / 추론 162
+168/796 t026_explicit_rule_final: call / 추론 163
+169/796 t027_select: call / 추론 164
+170/796 t027_explicit_rule_facts: call / 추론 165
+171/796 t027_explicit_rule_rule_00: call / 추론 166
+172/796 t027_explicit_rule_rule_01: call / 추론 167
+173/796 t027_explicit_rule_rule_02: call / 추론 168
+174/796 t027_explicit_rule_rule_03: call / 추론 169
+175/796 t027_explicit_rule_final: call / 추론 170
+176/796 t028_select: call / 추론 171
+177/796 t028_explicit_rule_facts: call / 추론 172
+178/796 t028_explicit_rule_rule_00: call / 추론 173
+179/796 t028_explicit_rule_rule_01: call / 추론 174
+180/796 t028_explicit_rule_rule_02: call / 추론 175
+181/796 t028_explicit_rule_rule_03: call / 추론 176
+182/796 t028_explicit_rule_final: call / 추론 177
+183/796 t029_select: call / 추론 178
+184/796 t029_explicit_rule_facts: call / 추론 179
+185/796 t029_explicit_rule_rule_00: call / 추론 180
+186/796 t029_explicit_rule_rule_01: call / 추론 181
+187/796 t029_explicit_rule_rule_02: call / 추론 182
+188/796 t029_explicit_rule_rule_03: call / 추론 183
+189/796 t029_explicit_rule_final: call / 추론 184
+190/796 b02_after: metadata / 추론 184
+191/796 b03_before: metadata / 추론 184
+192/796 t030_select: call / 추론 185
+193/796 t030_explicit_rule_facts: call / 추론 186
+194/796 t030_explicit_rule_rule_00: call / 추론 187
+195/796 t030_explicit_rule_rule_01: call / 추론 188
+196/796 t030_explicit_rule_rule_02: call / 추론 189
+197/796 t030_explicit_rule_rule_03: call / 추론 190
+198/796 t030_explicit_rule_final: call / 추론 191
+199/796 t031_select: call / 추론 192
+200/796 t031_explicit_rule_facts: call / 추론 193
+201/796 t031_explicit_rule_rule_00: call / 추론 194
+202/796 t031_explicit_rule_rule_01: call / 추론 195
+203/796 t031_explicit_rule_rule_02: call / 추론 196
+204/796 t031_explicit_rule_rule_03: call / 추론 197
+205/796 t031_explicit_rule_final: call / 추론 198
+206/796 t032_select: call / 추론 199
+207/796 t032_explicit_rule_facts: call / 추론 200
+208/796 t032_explicit_rule_rule_00: call / 추론 201
+209/796 t032_explicit_rule_rule_01: call / 추론 202
+210/796 t032_explicit_rule_rule_02: call / 추론 203
+211/796 t032_explicit_rule_rule_03: call / 추론 204
+212/796 t032_explicit_rule_final: call / 추론 205
+213/796 t033_select: call / 추론 206
+214/796 t033_explicit_rule_facts: call / 추론 207
+215/796 t033_explicit_rule_rule_00: call / 추론 208
+216/796 t033_explicit_rule_rule_01: call / 추론 209
+217/796 t033_explicit_rule_rule_02: call / 추론 210
+218/796 t033_explicit_rule_rule_03: call / 추론 211
+219/796 t033_explicit_rule_final: call / 추론 212
+220/796 t034_select: call / 추론 213
+221/796 t034_explicit_rule_facts: call / 추론 214
+222/796 t034_explicit_rule_rule_00: call / 추론 215
+223/796 t034_explicit_rule_rule_01: call / 추론 216
+224/796 t034_explicit_rule_rule_02: call / 추론 217
+225/796 t034_explicit_rule_rule_03: call / 추론 218
+226/796 t034_explicit_rule_final: call / 추론 219
+227/796 t035_select: call / 추론 220
+228/796 t035_explicit_rule_facts: call / 추론 221
+229/796 t035_explicit_rule_rule_00: call / 추론 222
+230/796 t035_explicit_rule_rule_01: call / 추론 223
+231/796 t035_explicit_rule_rule_02: call / 추론 224
+232/796 t035_explicit_rule_rule_03: call / 추론 225
+233/796 t035_explicit_rule_final: call / 추론 226
+234/796 t036_select: call / 추론 227
+235/796 t036_explicit_rule_facts: call / 추론 228
+236/796 t036_explicit_rule_rule_00: call / 추론 229
+237/796 t036_explicit_rule_rule_01: call / 추론 230
+238/796 t036_explicit_rule_rule_02: call / 추론 231
+239/796 t036_explicit_rule_rule_03: call / 추론 232
+240/796 t036_explicit_rule_final: call / 추론 233
+241/796 t037_select: call / 추론 234
+242/796 t037_explicit_rule_facts: call / 추론 235
+243/796 t037_explicit_rule_rule_00: call / 추론 236
+244/796 t037_explicit_rule_rule_01: call / 추론 237
+245/796 t037_explicit_rule_rule_02: call / 추론 238
+246/796 t037_explicit_rule_rule_03: call / 추론 239
+247/796 t037_explicit_rule_final: call / 추론 240
+248/796 t038_explicit_rule_facts: call / 추론 241
+249/796 t038_explicit_rule_rule_00: call / 추론 242
+250/796 t038_explicit_rule_rule_01: call / 추론 243
+251/796 t038_explicit_rule_rule_02: call / 추론 244
+252/796 t038_explicit_rule_rule_03: call / 추론 245
+253/796 t038_explicit_rule_final: call / 추론 246
+254/796 t039_explicit_rule_facts: call / 추론 247
+255/796 t039_explicit_rule_rule_00: call / 추론 248
+256/796 t039_explicit_rule_rule_01: call / 추론 249
+257/796 t039_explicit_rule_rule_02: call / 추론 250
+258/796 t039_explicit_rule_rule_03: call / 추론 251
+259/796 t039_explicit_rule_final: call / 추론 252
+260/796 b03_after: metadata / 추론 252
+261/796 b04_before: metadata / 추론 252
+262/796 t040_explicit_rule_facts: call / 추론 253
+263/796 t040_explicit_rule_rule_00: call / 추론 254
+264/796 t040_explicit_rule_rule_01: call / 추론 255
+265/796 t040_explicit_rule_rule_02: call / 추론 256
+266/796 t040_explicit_rule_rule_03: call / 추론 257
+267/796 t040_explicit_rule_final: call / 추론 258
+268/796 t041_explicit_rule_facts: call / 추론 259
+269/796 t041_explicit_rule_rule_00: call / 추론 260
+270/796 t041_explicit_rule_rule_01: call / 추론 261
+271/796 t041_explicit_rule_rule_02: call / 추론 262
+272/796 t041_explicit_rule_final: call / 추론 263
+273/796 t042_select: call / 추론 264
+274/796 t042_explicit_rule_facts: call / 추론 265
+275/796 t042_explicit_rule_rule_00: call / 추론 266
+276/796 t042_explicit_rule_rule_01: call / 추론 267
+277/796 t042_explicit_rule_rule_02: call / 추론 268
+278/796 t042_explicit_rule_rule_03: skip / 추론 268
+279/796 t042_explicit_rule_final: call / 추론 269
+280/796 t043_select: call / 추론 270
+281/796 t043_explicit_rule_facts: call / 추론 271
+282/796 t043_explicit_rule_rule_00: call / 추론 272
+283/796 t043_explicit_rule_rule_01: call / 추론 273
+284/796 t043_explicit_rule_rule_02: call / 추론 274
+285/796 t043_explicit_rule_rule_03: call / 추론 275
+286/796 t043_explicit_rule_final: call / 추론 276
+287/796 t044_select: call / 추론 277
+288/796 t044_explicit_rule_facts: call / 추론 278
+289/796 t044_explicit_rule_rule_00: call / 추론 279
+290/796 t044_explicit_rule_rule_01: call / 추론 280
+291/796 t044_explicit_rule_rule_02: call / 추론 281
+292/796 t044_explicit_rule_rule_03: skip / 추론 281
+293/796 t044_explicit_rule_final: call / 추론 282
+294/796 t045_select: call / 추론 283
+295/796 t045_explicit_rule_facts: call / 추론 284
+296/796 t045_explicit_rule_rule_00: call / 추론 285
+297/796 t045_explicit_rule_rule_01: call / 추론 286
+298/796 t045_explicit_rule_rule_02: call / 추론 287
+299/796 t045_explicit_rule_rule_03: skip / 추론 287
+300/796 t045_explicit_rule_final: call / 추론 288
+301/796 t046_select: call / 추론 289
+302/796 t046_explicit_rule_facts: call / 추론 290
+303/796 t046_explicit_rule_rule_00: call / 추론 291
+304/796 t046_explicit_rule_rule_01: call / 추론 292
+305/796 t046_explicit_rule_rule_02: call / 추론 293
+306/796 t046_explicit_rule_rule_03: skip / 추론 293
+307/796 t046_explicit_rule_final: call / 추론 294
+308/796 t047_select: call / 추론 295
+309/796 t047_explicit_rule_facts: call / 추론 296
+310/796 t047_explicit_rule_rule_00: call / 추론 297
+311/796 t047_explicit_rule_rule_01: call / 추론 298
+312/796 t047_explicit_rule_rule_02: call / 추론 299
+313/796 t047_explicit_rule_rule_03: call / 추론 300
+314/796 t047_explicit_rule_final: call / 추론 301
+315/796 t048_select: call / 추론 302
+316/796 t048_explicit_rule_facts: call / 추론 303
+317/796 t048_explicit_rule_rule_00: call / 추론 304
+318/796 t048_explicit_rule_rule_01: call / 추론 305
+319/796 t048_explicit_rule_rule_02: call / 추론 306
+320/796 t048_explicit_rule_rule_03: call / 추론 307
+321/796 t048_explicit_rule_final: call / 추론 308
+322/796 t049_select: call / 추론 309
+323/796 t049_explicit_rule_facts: call / 추론 310
+324/796 t049_explicit_rule_rule_00: call / 추론 311
+325/796 t049_explicit_rule_rule_01: call / 추론 312
+326/796 t049_explicit_rule_rule_02: call / 추론 313
+327/796 t049_explicit_rule_rule_03: call / 추론 314
+328/796 t049_explicit_rule_final: call / 추론 315
+329/796 t050_select: call / 추론 316
+330/796 t050_explicit_rule_facts: call / 추론 317
+331/796 t050_explicit_rule_rule_00: call / 추론 318
+332/796 t050_explicit_rule_rule_01: call / 추론 319
+333/796 t050_explicit_rule_rule_02: call / 추론 320
+334/796 t050_explicit_rule_rule_03: skip / 추론 320
+335/796 t050_explicit_rule_final: call / 추론 321
+336/796 t051_select: call / 추론 322
+337/796 t051_explicit_rule_facts: call / 추론 323
+338/796 t051_explicit_rule_rule_00: call / 추론 324
+339/796 t051_explicit_rule_rule_01: call / 추론 325
+340/796 t051_explicit_rule_rule_02: call / 추론 326
+341/796 t051_explicit_rule_rule_03: call / 추론 327
+342/796 t051_explicit_rule_final: call / 추론 328
+343/796 t052_select: call / 추론 329
+344/796 t052_explicit_rule_facts: call / 추론 330
+345/796 t052_explicit_rule_rule_00: call / 추론 331
+346/796 t052_explicit_rule_rule_01: call / 추론 332
+347/796 t052_explicit_rule_rule_02: call / 추론 333
+348/796 t052_explicit_rule_rule_03: skip / 추론 333
+349/796 t052_explicit_rule_final: call / 추론 334
+350/796 t053_select: call / 추론 335
+351/796 t053_explicit_rule_facts: call / 추론 336
+352/796 t053_explicit_rule_rule_00: call / 추론 337
+353/796 t053_explicit_rule_rule_01: call / 추론 338
+354/796 t053_explicit_rule_rule_02: call / 추론 339
+355/796 t053_explicit_rule_rule_03: skip / 추론 339
+356/796 t053_explicit_rule_final: call / 추론 340
+357/796 t054_select: call / 추론 341
+358/796 t054_explicit_rule_facts: call / 추론 342
+359/796 t054_explicit_rule_rule_00: call / 추론 343
+360/796 t054_explicit_rule_rule_01: call / 추론 344
+361/796 t054_explicit_rule_rule_02: call / 추론 345
+362/796 t054_explicit_rule_rule_03: skip / 추론 345
+363/796 t054_explicit_rule_final: call / 추론 346
+364/796 t055_select: call / 추론 347
+365/796 t055_explicit_rule_facts: call / 추론 348
+366/796 t055_explicit_rule_rule_00: call / 추론 349
+367/796 t055_explicit_rule_rule_01: call / 추론 350
+368/796 t055_explicit_rule_rule_02: call / 추론 351
+369/796 t055_explicit_rule_rule_03: skip / 추론 351
+370/796 t055_explicit_rule_final: call / 추론 352
+371/796 t056_select: call / 추론 353
+372/796 t056_explicit_rule_facts: call / 추론 354
+373/796 t056_explicit_rule_rule_00: call / 추론 355
+374/796 t056_explicit_rule_rule_01: call / 추론 356
+375/796 t056_explicit_rule_rule_02: call / 추론 357
+376/796 t056_explicit_rule_rule_03: skip / 추론 357
+377/796 t056_explicit_rule_final: call / 추론 358
+378/796 t057_select: call / 추론 359
+379/796 t057_explicit_rule_facts: call / 추론 360
+380/796 t057_explicit_rule_rule_00: call / 추론 361
+381/796 t057_explicit_rule_rule_01: call / 추론 362
+382/796 t057_explicit_rule_rule_02: call / 추론 363
+383/796 t057_explicit_rule_rule_03: skip / 추론 363
+384/796 t057_explicit_rule_final: call / 추론 364
+385/796 b04_after: metadata / 추론 364
+386/796 b05_before: metadata / 추론 364
+387/796 t058_select: call / 추론 365
+388/796 t058_explicit_rule_facts: call / 추론 366
+389/796 t058_explicit_rule_rule_00: call / 추론 367
+390/796 t058_explicit_rule_rule_01: call / 추론 368
+391/796 t058_explicit_rule_rule_02: call / 추론 369
+392/796 t058_explicit_rule_rule_03: skip / 추론 369
+393/796 t058_explicit_rule_final: call / 추론 370
+394/796 t059_select: call / 추론 371
+395/796 t059_explicit_rule_facts: call / 추론 372
+396/796 t059_explicit_rule_rule_00: call / 추론 373
+397/796 t059_explicit_rule_rule_01: call / 추론 374
+398/796 t059_explicit_rule_rule_02: call / 추론 375
+399/796 t059_explicit_rule_rule_03: skip / 추론 375
+400/796 t059_explicit_rule_final: call / 추론 376
+401/796 t060_select: call / 추론 377
+402/796 t060_explicit_rule_facts: call / 추론 378
+403/796 t060_explicit_rule_rule_00: call / 추론 379
+404/796 t060_explicit_rule_rule_01: call / 추론 380
+405/796 t060_explicit_rule_rule_02: call / 추론 381
+406/796 t060_explicit_rule_rule_03: skip / 추론 381
+407/796 t060_explicit_rule_final: call / 추론 382
+408/796 t061_select: call / 추론 383
+409/796 t061_explicit_rule_facts: call / 추론 384
+410/796 t061_explicit_rule_rule_00: call / 추론 385
+411/796 t061_explicit_rule_rule_01: call / 추론 386
+412/796 t061_explicit_rule_rule_02: call / 추론 387
+413/796 t061_explicit_rule_rule_03: skip / 추론 387
+414/796 t061_explicit_rule_final: call / 추론 388
+415/796 t062_select: call / 추론 389
+416/796 t062_explicit_rule_facts: call / 추론 390
+417/796 t062_explicit_rule_rule_00: call / 추론 391
+418/796 t062_explicit_rule_rule_01: call / 추론 392
+419/796 t062_explicit_rule_rule_02: call / 추론 393
+420/796 t062_explicit_rule_rule_03: skip / 추론 393
+421/796 t062_explicit_rule_final: call / 추론 394
+422/796 t063_select: call / 추론 395
+423/796 t063_explicit_rule_facts: call / 추론 396
+424/796 t063_explicit_rule_rule_00: call / 추론 397
+425/796 t063_explicit_rule_rule_01: call / 추론 398
+426/796 t063_explicit_rule_rule_02: call / 추론 399
+427/796 t063_explicit_rule_rule_03: call / 추론 400
+428/796 t063_explicit_rule_final: call / 추론 401
+429/796 t064_select: call / 추론 402
+430/796 t064_explicit_rule_facts: call / 추론 403
+431/796 t064_explicit_rule_rule_00: call / 추론 404
+432/796 t064_explicit_rule_rule_01: call / 추론 405
+433/796 t064_explicit_rule_rule_02: call / 추론 406
+434/796 t064_explicit_rule_rule_03: skip / 추론 406
+435/796 t064_explicit_rule_final: call / 추론 407
+436/796 t065_select: call / 추론 408
+437/796 t065_explicit_rule_facts: call / 추론 409
+438/796 t065_explicit_rule_rule_00: call / 추론 410
+439/796 t065_explicit_rule_rule_01: call / 추론 411
+440/796 t065_explicit_rule_rule_02: call / 추론 412
+441/796 t065_explicit_rule_rule_03: skip / 추론 412
+442/796 t065_explicit_rule_final: call / 추론 413
+443/796 t066_select: call / 추론 414
+444/796 t066_explicit_rule_facts: call / 추론 415
+445/796 t066_explicit_rule_rule_00: call / 추론 416
+446/796 t066_explicit_rule_rule_01: call / 추론 417
+447/796 t066_explicit_rule_rule_02: call / 추론 418
+448/796 t066_explicit_rule_rule_03: skip / 추론 418
+449/796 t066_explicit_rule_final: call / 추론 419
+450/796 t067_select: call / 추론 420
+451/796 t067_explicit_rule_facts: call / 추론 421
+452/796 t067_explicit_rule_rule_00: call / 추론 422
+453/796 t067_explicit_rule_rule_01: call / 추론 423
+454/796 t067_explicit_rule_rule_02: call / 추론 424
+455/796 t067_explicit_rule_rule_03: call / 추론 425
+456/796 t067_explicit_rule_final: call / 추론 426
+457/796 t068_select: call / 추론 427
+458/796 t068_explicit_rule_facts: call / 추론 428
+459/796 t068_explicit_rule_rule_00: call / 추론 429
+460/796 t068_explicit_rule_rule_01: call / 추론 430
+461/796 t068_explicit_rule_rule_02: call / 추론 431
+462/796 t068_explicit_rule_rule_03: call / 추론 432
+463/796 t068_explicit_rule_final: call / 추론 433
+464/796 t069_select: call / 추론 434
+465/796 t069_explicit_rule_facts: call / 추론 435
+466/796 t069_explicit_rule_rule_00: call / 추론 436
+467/796 t069_explicit_rule_rule_01: call / 추론 437
+468/796 t069_explicit_rule_rule_02: call / 추론 438
+469/796 t069_explicit_rule_rule_03: call / 추론 439
+470/796 t069_explicit_rule_final: call / 추론 440
+471/796 t070_select: call / 추론 441
+472/796 t070_explicit_rule_facts: call / 추론 442
+473/796 t070_explicit_rule_rule_00: call / 추론 443
+474/796 t070_explicit_rule_rule_01: call / 추론 444
+475/796 t070_explicit_rule_rule_02: call / 추론 445
+476/796 t070_explicit_rule_rule_03: skip / 추론 445
+477/796 t070_explicit_rule_final: call / 추론 446
+478/796 t071_select: call / 추론 447
+479/796 t071_explicit_rule_facts: call / 추론 448
+480/796 t071_explicit_rule_rule_00: call / 추론 449
+481/796 t071_explicit_rule_rule_01: call / 추론 450
+482/796 t071_explicit_rule_rule_02: call / 추론 451
+483/796 t071_explicit_rule_rule_03: call / 추론 452
+484/796 t071_explicit_rule_final: call / 추론 453
+485/796 t072_select: call / 추론 454
+486/796 t072_explicit_rule_facts: call / 추론 455
+487/796 t072_explicit_rule_rule_00: call / 추론 456
+488/796 t072_explicit_rule_rule_01: call / 추론 457
+489/796 t072_explicit_rule_rule_02: call / 추론 458
+490/796 t072_explicit_rule_rule_03: skip / 추론 458
+491/796 t072_explicit_rule_final: call / 추론 459
+492/796 t073_select: call / 추론 460
+493/796 t073_explicit_rule_facts: call / 추론 461
+494/796 t073_explicit_rule_rule_00: call / 추론 462
+495/796 t073_explicit_rule_rule_01: call / 추론 463
+496/796 t073_explicit_rule_rule_02: call / 추론 464
+497/796 t073_explicit_rule_rule_03: skip / 추론 464
+498/796 t073_explicit_rule_final: call / 추론 465
+499/796 t074_explicit_rule_facts: call / 추론 466
+500/796 t074_explicit_rule_rule_00: call / 추론 467
+501/796 t074_explicit_rule_rule_01: call / 추론 468
+502/796 t074_explicit_rule_rule_02: call / 추론 469
+503/796 t074_explicit_rule_final: call / 추론 470
+504/796 t075_explicit_rule_facts: call / 추론 471
+505/796 t075_explicit_rule_rule_00: call / 추론 472
+506/796 t075_explicit_rule_rule_01: call / 추론 473
+507/796 t075_explicit_rule_rule_02: call / 추론 474
+508/796 t075_explicit_rule_rule_03: call / 추론 475
+509/796 t075_explicit_rule_final: call / 추론 476
+510/796 b05_after: metadata / 추론 476
+511/796 b06_before: metadata / 추론 476
+512/796 t076_explicit_rule_facts: call / 추론 477
+513/796 t076_explicit_rule_rule_00: call / 추론 478
+514/796 t076_explicit_rule_rule_01: call / 추론 479
+515/796 t076_explicit_rule_rule_02: call / 추론 480
+516/796 t076_explicit_rule_rule_03: call / 추론 481
+517/796 t076_explicit_rule_rule_04: call / 추론 482
+518/796 t076_explicit_rule_final: call / 추론 483
+519/796 t077_explicit_rule_facts: call / 추론 484
+520/796 t077_explicit_rule_rule_00: call / 추론 485
+521/796 t077_explicit_rule_rule_01: call / 추론 486
+522/796 t077_explicit_rule_rule_02: call / 추론 487
+523/796 t077_explicit_rule_rule_03: call / 추론 488
+524/796 t077_explicit_rule_final: call / 추론 489
+525/796 t078_select: call / 추론 490
+526/796 t078_explicit_rule_facts: call / 추론 491
+527/796 t078_explicit_rule_rule_00: call / 추론 492
+528/796 t078_explicit_rule_rule_01: call / 추론 493
+529/796 t078_explicit_rule_rule_02: call / 추론 494
+530/796 t078_explicit_rule_rule_03: call / 추론 495
+531/796 t078_explicit_rule_rule_04: skip / 추론 495
+532/796 t078_explicit_rule_final: call / 추론 496
+533/796 t079_select: call / 추론 497
+534/796 t079_explicit_rule_facts: call / 추론 498
+535/796 t079_explicit_rule_rule_00: call / 추론 499
+536/796 t079_explicit_rule_rule_01: call / 추론 500
+537/796 t079_explicit_rule_rule_02: call / 추론 501
+538/796 t079_explicit_rule_rule_03: call / 추론 502
+539/796 t079_explicit_rule_rule_04: skip / 추론 502
+540/796 t079_explicit_rule_final: call / 추론 503
+541/796 t080_select: call / 추론 504
+542/796 t080_explicit_rule_facts: call / 추론 505
+543/796 t080_explicit_rule_rule_00: call / 추론 506
+544/796 t080_explicit_rule_rule_01: call / 추론 507
+545/796 t080_explicit_rule_rule_02: call / 추론 508
+546/796 t080_explicit_rule_rule_03: call / 추론 509
+547/796 t080_explicit_rule_rule_04: call / 추론 510
+548/796 t080_explicit_rule_final: call / 추론 511
+549/796 t081_select: call / 추론 512
+550/796 t081_explicit_rule_facts: call / 추론 513
+551/796 t081_explicit_rule_rule_00: call / 추론 514
+552/796 t081_explicit_rule_rule_01: call / 추론 515
+553/796 t081_explicit_rule_rule_02: call / 추론 516
+554/796 t081_explicit_rule_rule_03: call / 추론 517
+555/796 t081_explicit_rule_rule_04: call / 추론 518
+556/796 t081_explicit_rule_final: call / 추론 519
+557/796 t082_select: call / 추론 520
+558/796 t082_explicit_rule_facts: call / 추론 521
+559/796 t082_explicit_rule_rule_00: call / 추론 522
+560/796 t082_explicit_rule_rule_01: call / 추론 523
+561/796 t082_explicit_rule_rule_02: call / 추론 524
+562/796 t082_explicit_rule_rule_03: call / 추론 525
+563/796 t082_explicit_rule_rule_04: call / 추론 526
+564/796 t082_explicit_rule_final: call / 추론 527
+565/796 t083_select: call / 추론 528
+566/796 t083_explicit_rule_facts: call / 추론 529
+567/796 t083_explicit_rule_rule_00: call / 추론 530
+568/796 t083_explicit_rule_rule_01: call / 추론 531
+569/796 t083_explicit_rule_rule_02: call / 추론 532
+570/796 t083_explicit_rule_rule_03: call / 추론 533
+571/796 t083_explicit_rule_rule_04: call / 추론 534
+572/796 t083_explicit_rule_final: call / 추론 535
+573/796 t084_select: call / 추론 536
+574/796 t084_explicit_rule_facts: call / 추론 537
+575/796 t084_explicit_rule_rule_00: call / 추론 538
+576/796 t084_explicit_rule_rule_01: call / 추론 539
+577/796 t084_explicit_rule_rule_02: call / 추론 540
+578/796 t084_explicit_rule_rule_03: call / 추론 541
+579/796 t084_explicit_rule_rule_04: call / 추론 542
+580/796 t084_explicit_rule_final: call / 추론 543
+581/796 t085_select: call / 추론 544
+582/796 t085_explicit_rule_facts: call / 추론 545
+583/796 t085_explicit_rule_rule_00: call / 추론 546
+584/796 t085_explicit_rule_rule_01: call / 추론 547
+585/796 t085_explicit_rule_rule_02: call / 추론 548
+586/796 t085_explicit_rule_rule_03: call / 추론 549
+587/796 t085_explicit_rule_rule_04: skip / 추론 549
+588/796 t085_explicit_rule_final: call / 추론 550
+589/796 t086_select: call / 추론 551
+590/796 t086_explicit_rule_facts: call / 추론 552
+591/796 t086_explicit_rule_rule_00: call / 추론 553
+592/796 t086_explicit_rule_rule_01: call / 추론 554
+593/796 t086_explicit_rule_rule_02: call / 추론 555
+594/796 t086_explicit_rule_rule_03: call / 추론 556
+595/796 t086_explicit_rule_rule_04: skip / 추론 556
+596/796 t086_explicit_rule_final: call / 추론 557
+597/796 t087_select: call / 추론 558
+598/796 t087_explicit_rule_facts: call / 추론 559
+599/796 t087_explicit_rule_rule_00: call / 추론 560
+600/796 t087_explicit_rule_rule_01: call / 추론 561
+601/796 t087_explicit_rule_rule_02: call / 추론 562
+602/796 t087_explicit_rule_rule_03: call / 추론 563
+603/796 t087_explicit_rule_rule_04: skip / 추론 563
+604/796 t087_explicit_rule_final: call / 추론 564
+605/796 t088_select: call / 추론 565
+606/796 t088_explicit_rule_facts: call / 추론 566
+607/796 t088_explicit_rule_rule_00: call / 추론 567
+608/796 t088_explicit_rule_rule_01: call / 추론 568
+609/796 t088_explicit_rule_rule_02: call / 추론 569
+610/796 t088_explicit_rule_rule_03: call / 추론 570
+611/796 t088_explicit_rule_rule_04: call / 추론 571
+612/796 t088_explicit_rule_final: call / 추론 572
+613/796 t089_select: call / 추론 573
+614/796 t089_explicit_rule_facts: call / 추론 574
+615/796 t089_explicit_rule_rule_00: call / 추론 575
+616/796 t089_explicit_rule_rule_01: call / 추론 576
+617/796 t089_explicit_rule_rule_02: call / 추론 577
+618/796 t089_explicit_rule_rule_03: call / 추론 578
+619/796 t089_explicit_rule_rule_04: skip / 추론 578
+620/796 t089_explicit_rule_final: call / 추론 579
+621/796 t090_select: call / 추론 580
+622/796 t090_explicit_rule_facts: call / 추론 581
+623/796 t090_explicit_rule_rule_00: call / 추론 582
+624/796 t090_explicit_rule_rule_01: call / 추론 583
+625/796 t090_explicit_rule_rule_02: call / 추론 584
+626/796 t090_explicit_rule_rule_03: call / 추론 585
+627/796 t090_explicit_rule_rule_04: skip / 추론 585
+628/796 t090_explicit_rule_final: call / 추론 586
+629/796 t091_select: call / 추론 587
+630/796 t091_explicit_rule_facts: call / 추론 588
+631/796 t091_explicit_rule_rule_00: call / 추론 589
+632/796 t091_explicit_rule_rule_01: call / 추론 590
+633/796 t091_explicit_rule_rule_02: call / 추론 591
+634/796 t091_explicit_rule_rule_03: call / 추론 592
+635/796 t091_explicit_rule_rule_04: skip / 추론 592
+636/796 t091_explicit_rule_final: call / 추론 593
+637/796 t092_select: call / 추론 594
+638/796 t092_explicit_rule_facts: call / 추론 595
+639/796 t092_explicit_rule_rule_00: call / 추론 596
+640/796 t092_explicit_rule_rule_01: call / 추론 597
+641/796 t092_explicit_rule_rule_02: call / 추론 598
+642/796 t092_explicit_rule_rule_03: call / 추론 599
+643/796 t092_explicit_rule_rule_04: skip / 추론 599
+644/796 t092_explicit_rule_final: call / 추론 600
+645/796 t093_select: call / 추론 601
+646/796 t093_explicit_rule_facts: call / 추론 602
+647/796 t093_explicit_rule_rule_00: call / 추론 603
+648/796 t093_explicit_rule_rule_01: call / 추론 604
+649/796 t093_explicit_rule_rule_02: call / 추론 605
+650/796 t093_explicit_rule_rule_03: call / 추론 606
+651/796 t093_explicit_rule_rule_04: skip / 추론 606
+652/796 t093_explicit_rule_final: call / 추론 607
+653/796 b06_after: metadata / 추론 607
+654/796 b07_before: metadata / 추론 607
+655/796 t094_select: call / 추론 608
+656/796 t094_explicit_rule_facts: call / 추론 609
+657/796 t094_explicit_rule_rule_00: call / 추론 610
+658/796 t094_explicit_rule_rule_01: call / 추론 611
+659/796 t094_explicit_rule_rule_02: call / 추론 612
+660/796 t094_explicit_rule_rule_03: call / 추론 613
+661/796 t094_explicit_rule_rule_04: skip / 추론 613
+662/796 t094_explicit_rule_final: call / 추론 614
+663/796 t095_select: call / 추론 615
+664/796 t095_explicit_rule_facts: call / 추론 616
+665/796 t095_explicit_rule_rule_00: call / 추론 617
+666/796 t095_explicit_rule_rule_01: call / 추론 618
+667/796 t095_explicit_rule_rule_02: call / 추론 619
+668/796 t095_explicit_rule_rule_03: call / 추론 620
+669/796 t095_explicit_rule_rule_04: skip / 추론 620
+670/796 t095_explicit_rule_final: call / 추론 621
+671/796 t096_select: call / 추론 622
+672/796 t096_explicit_rule_facts: call / 추론 623
+673/796 t096_explicit_rule_rule_00: call / 추론 624
+674/796 t096_explicit_rule_rule_01: call / 추론 625
+675/796 t096_explicit_rule_rule_02: call / 추론 626
+676/796 t096_explicit_rule_rule_03: call / 추론 627
+677/796 t096_explicit_rule_rule_04: skip / 추론 627
+678/796 t096_explicit_rule_final: call / 추론 628
+679/796 t097_select: call / 추론 629
+680/796 t097_explicit_rule_facts: call / 추론 630
+681/796 t097_explicit_rule_rule_00: call / 추론 631
+682/796 t097_explicit_rule_rule_01: call / 추론 632
+683/796 t097_explicit_rule_rule_02: call / 추론 633
+684/796 t097_explicit_rule_rule_03: call / 추론 634
+685/796 t097_explicit_rule_rule_04: skip / 추론 634
+686/796 t097_explicit_rule_final: call / 추론 635
+687/796 t098_select: call / 추론 636
+688/796 t098_explicit_rule_facts: call / 추론 637
+689/796 t098_explicit_rule_rule_00: call / 추론 638
+690/796 t098_explicit_rule_rule_01: call / 추론 639
+691/796 t098_explicit_rule_rule_02: call / 추론 640
+692/796 t098_explicit_rule_rule_03: call / 추론 641
+693/796 t098_explicit_rule_rule_04: skip / 추론 641
+694/796 t098_explicit_rule_final: call / 추론 642
+695/796 t099_select: call / 추론 643
+696/796 t099_explicit_rule_facts: call / 추론 644
+697/796 t099_explicit_rule_rule_00: call / 추론 645
+698/796 t099_explicit_rule_rule_01: call / 추론 646
+699/796 t099_explicit_rule_rule_02: call / 추론 647
+700/796 t099_explicit_rule_rule_03: call / 추론 648
+701/796 t099_explicit_rule_rule_04: skip / 추론 648
+702/796 t099_explicit_rule_final: call / 추론 649
+703/796 t100_select: call / 추론 650
+704/796 t100_explicit_rule_facts: call / 추론 651
+705/796 t100_explicit_rule_rule_00: call / 추론 652
+706/796 t100_explicit_rule_rule_01: call / 추론 653
+707/796 t100_explicit_rule_rule_02: call / 추론 654
+708/796 t100_explicit_rule_rule_03: call / 추론 655
+709/796 t100_explicit_rule_rule_04: call / 추론 656
+710/796 t100_explicit_rule_final: call / 추론 657
+711/796 t101_select: call / 추론 658
+712/796 t101_explicit_rule_facts: call / 추론 659
+713/796 t101_explicit_rule_rule_00: call / 추론 660
+714/796 t101_explicit_rule_rule_01: call / 추론 661
+715/796 t101_explicit_rule_rule_02: call / 추론 662
+716/796 t101_explicit_rule_rule_03: call / 추론 663
+717/796 t101_explicit_rule_rule_04: skip / 추론 663
+718/796 t101_explicit_rule_final: call / 추론 664
+719/796 t102_select: call / 추론 665
+720/796 t102_explicit_rule_facts: call / 추론 666
+721/796 t102_explicit_rule_rule_00: call / 추론 667
+722/796 t102_explicit_rule_rule_01: call / 추론 668
+723/796 t102_explicit_rule_rule_02: call / 추론 669
+724/796 t102_explicit_rule_rule_03: call / 추론 670
+725/796 t102_explicit_rule_rule_04: call / 추론 671
+726/796 t102_explicit_rule_final: call / 추론 672
+727/796 t103_select: call / 추론 673
+728/796 t103_explicit_rule_facts: call / 추론 674
+729/796 t103_explicit_rule_rule_00: call / 추론 675
+730/796 t103_explicit_rule_rule_01: call / 추론 676
+731/796 t103_explicit_rule_rule_02: call / 추론 677
+732/796 t103_explicit_rule_rule_03: call / 추론 678
+733/796 t103_explicit_rule_rule_04: call / 추론 679
+734/796 t103_explicit_rule_final: call / 추론 680
+735/796 t104_select: call / 추론 681
+736/796 t104_explicit_rule_facts: call / 추론 682
+737/796 t104_explicit_rule_rule_00: call / 추론 683
+738/796 t104_explicit_rule_rule_01: call / 추론 684
+739/796 t104_explicit_rule_rule_02: call / 추론 685
+740/796 t104_explicit_rule_rule_03: call / 추론 686
+741/796 t104_explicit_rule_rule_04: call / 추론 687
+742/796 t104_explicit_rule_final: call / 추론 688
+743/796 t105_select: call / 추론 689
+744/796 t105_explicit_rule_facts: call / 추론 690
+745/796 t105_explicit_rule_rule_00: call / 추론 691
+746/796 t105_explicit_rule_rule_01: call / 추론 692
+747/796 t105_explicit_rule_rule_02: call / 추론 693
+748/796 t105_explicit_rule_rule_03: call / 추론 694
+749/796 t105_explicit_rule_rule_04: skip / 추론 694
+750/796 t105_explicit_rule_final: call / 추론 695
+751/796 t106_select: call / 추론 696
+752/796 t106_explicit_rule_facts: call / 추론 697
+753/796 t106_explicit_rule_rule_00: call / 추론 698
+754/796 t106_explicit_rule_rule_01: call / 추론 699
+755/796 t106_explicit_rule_rule_02: call / 추론 700
+756/796 t106_explicit_rule_rule_03: call / 추론 701
+757/796 t106_explicit_rule_rule_04: skip / 추론 701
+758/796 t106_explicit_rule_final: call / 추론 702
+759/796 t107_select: call / 추론 703
+760/796 t107_explicit_rule_facts: call / 추론 704
+761/796 t107_explicit_rule_rule_00: call / 추론 705
+762/796 t107_explicit_rule_rule_01: call / 추론 706
+763/796 t107_explicit_rule_rule_02: call / 추론 707
+764/796 t107_explicit_rule_rule_03: call / 추론 708
+765/796 t107_explicit_rule_rule_04: call / 추론 709
+766/796 t107_explicit_rule_final: call / 추론 710
+767/796 t108_select: call / 추론 711
+768/796 t108_explicit_rule_facts: call / 추론 712
+769/796 t108_explicit_rule_rule_00: call / 추론 713
+770/796 t108_explicit_rule_rule_01: call / 추론 714
+771/796 t108_explicit_rule_rule_02: call / 추론 715
+772/796 t108_explicit_rule_rule_03: call / 추론 716
+773/796 t108_explicit_rule_rule_04: call / 추론 717
+774/796 t108_explicit_rule_final: call / 추론 718
+775/796 t109_select: call / 추론 719
+776/796 t109_explicit_rule_facts: call / 추론 720
+777/796 t109_explicit_rule_rule_00: call / 추론 721
+778/796 t109_explicit_rule_rule_01: call / 추론 722
+779/796 t109_explicit_rule_rule_02: call / 추론 723
+780/796 t109_explicit_rule_rule_03: call / 추론 724
+781/796 t109_explicit_rule_rule_04: call / 추론 725
+782/796 t109_explicit_rule_final: call / 추론 726
+783/796 t110_explicit_rule_facts: call / 추론 727
+784/796 t110_explicit_rule_rule_00: call / 추론 728
+785/796 t110_explicit_rule_rule_01: call / 추론 729
+786/796 t110_explicit_rule_rule_02: call / 추론 730
+787/796 t110_explicit_rule_rule_03: call / 추론 731
+788/796 t110_explicit_rule_final: call / 추론 732
+789/796 t111_explicit_rule_facts: call / 추론 733
+790/796 t111_explicit_rule_rule_00: call / 추론 734
+791/796 t111_explicit_rule_rule_01: call / 추론 735
+792/796 t111_explicit_rule_rule_02: call / 추론 736
+793/796 t111_explicit_rule_rule_03: call / 추론 737
+794/796 t111_explicit_rule_rule_04: call / 추론 738
+795/796 t111_explicit_rule_final: call / 추론 739
+796/796 b07_after: metadata / 추론 739
+{
+  "state": "complete",
+  "evidence_zip": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v080\\results_llm\\v080_metriccross_20260914_194132_147118_evidence.zip",
+  "independent_json": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v080\\results_llm\\v080_metriccross_20260914_194132_147118_independent.json",
+  "inference_calls": 739,
+  "observed_calls": 739
+}
+
+EXIT 0

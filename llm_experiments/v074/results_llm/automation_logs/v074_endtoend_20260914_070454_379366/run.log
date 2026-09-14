@@ -1,0 +1,47 @@
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_logic.py', '-v']
+test_absent_usage_not_fabricated (test_logic.Logic.test_absent_usage_not_fabricated) ... ok
+test_all_correct_is_186_not_214 (test_logic.Logic.test_all_correct_is_186_not_214) ... ok
+test_all_request_bytes_independent (test_logic.Logic.test_all_request_bytes_independent) ... ok
+test_bad_parent_not_repaired (test_logic.Logic.test_bad_parent_not_repaired) ... ok
+test_candidates_are_unchanged_rule_records (test_logic.Logic.test_candidates_are_unchanged_rule_records) ... ok
+test_control_balance (test_logic.Logic.test_control_balance) ... ok
+test_control_failure_keeps_actual_model_success (test_logic.Logic.test_control_failure_keeps_actual_model_success) ... ok
+test_correct_graph_cannot_erase_wrong_stage (test_logic.Logic.test_correct_graph_cannot_erase_wrong_stage) ... ok
+test_depth_is_dependency_not_count (test_logic.Logic.test_depth_is_dependency_not_count) ... ok
+test_duplicate_json_keys_and_nonfinite_rejected (test_logic.Logic.test_duplicate_json_keys_and_nonfinite_rejected) ... ok
+test_dynamic_budget_extremes (test_logic.Logic.test_dynamic_budget_extremes) ... ok
+test_factor_crossing (test_logic.Logic.test_factor_crossing) ... ok
+test_generator_blind_to_requested_D (test_logic.Logic.test_generator_blind_to_requested_D) ... ok
+test_graph_differential_180_cases (test_logic.Logic.test_graph_differential_180_cases) ... ok
+test_independent_modules_do_not_import_production (test_logic.Logic.test_independent_modules_do_not_import_production) ... ok
+test_independent_schedule (test_logic.Logic.test_independent_schedule) ... ok
+test_invalid_fact_content_transferred_unchanged (test_logic.Logic.test_invalid_fact_content_transferred_unchanged) ... ok
+test_invalid_selection_blocks_without_zero_depth (test_logic.Logic.test_invalid_selection_blocks_without_zero_depth) ... ok
+test_length_selector_not_promoted_by_successful_graph (test_logic.Logic.test_length_selector_not_promoted_by_successful_graph) ... ok
+test_no_numeric_stage (test_logic.Logic.test_no_numeric_stage) ... ok
+test_only_D_requirement_changes_in_selector_pair (test_logic.Logic.test_only_D_requirement_changes_in_selector_pair) ... ok
+test_original_measure_and_stage_bytes_preserved (test_logic.Logic.test_original_measure_and_stage_bytes_preserved) ... ok
+test_partial_gate_null (test_logic.Logic.test_partial_gate_null) ... ok
+test_reference_not_counted_as_model (test_logic.Logic.test_reference_not_counted_as_model) ... ok
+test_schedule_counts (test_logic.Logic.test_schedule_counts) ... ok
+test_selector_whitespace_preserved (test_logic.Logic.test_selector_whitespace_preserved) ... ok
+test_summary_and_report_differential_patterns (test_logic.Logic.test_summary_and_report_differential_patterns) ... ok
+test_wrong_selection_still_runs_selected_route (test_logic.Logic.test_wrong_selection_still_runs_selected_route) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 2.361s
+
+OK
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'run.py', 'prepare', '--baseline', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v073\\results_llm\\v073_interface_20260914_060416_993148_evidence.zip', '--run-name', 'v074_endtoend_20260914_070454_379366', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v074\\experiments\\v074_endtoend_20260914_070454_379366.plan.json']
+{
+  "prepared": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v074\\experiments\\v074_endtoend_20260914_070454_379366.plan.json",
+  "actual_model_inference": false,
+  "max_inference_calls": 214,
+  "plan_sha256": "b7db380b877349bff6d193b97f8a965716e55e83820b275e01fab5e2ba4fe1e6"
+}
+
+EXIT 0

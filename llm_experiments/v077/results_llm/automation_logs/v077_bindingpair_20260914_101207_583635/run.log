@@ -1,0 +1,81 @@
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_logic.py', '-v']
+test_absent_usage_not_fabricated (test_logic.Logic.test_absent_usage_not_fabricated) ... ok
+test_all_correct_is_348_not_404 (test_logic.Logic.test_all_correct_is_348_not_404) ... ok
+test_all_request_bytes_independent (test_logic.Logic.test_all_request_bytes_independent) ... ok
+test_bad_parent_not_repaired (test_logic.Logic.test_bad_parent_not_repaired) ... ok
+test_candidates_are_unchanged_rule_records (test_logic.Logic.test_candidates_are_unchanged_rule_records) ... ok
+test_control_balance (test_logic.Logic.test_control_balance) ... ok
+test_control_failure_keeps_actual_model_success (test_logic.Logic.test_control_failure_keeps_actual_model_success) ... ok
+test_correct_graph_cannot_erase_wrong_stage (test_logic.Logic.test_correct_graph_cannot_erase_wrong_stage) ... ok
+test_depth_is_dependency_not_count (test_logic.Logic.test_depth_is_dependency_not_count) ... ok
+test_duplicate_json_keys_and_nonfinite_rejected (test_logic.Logic.test_duplicate_json_keys_and_nonfinite_rejected) ... ok
+test_dynamic_budget_extremes (test_logic.Logic.test_dynamic_budget_extremes) ... ok
+test_factor_crossing (test_logic.Logic.test_factor_crossing) ... ok
+test_generator_blind_to_requested_D (test_logic.Logic.test_generator_blind_to_requested_D) ... ok
+test_graph_differential_180_cases (test_logic.Logic.test_graph_differential_180_cases) ... ok
+test_independent_modules_do_not_import_production (test_logic.Logic.test_independent_modules_do_not_import_production) ... ok
+test_independent_schedule (test_logic.Logic.test_independent_schedule) ... ok
+test_invalid_fact_content_transferred_unchanged (test_logic.Logic.test_invalid_fact_content_transferred_unchanged) ... ok
+test_invalid_selection_blocks_without_zero_depth (test_logic.Logic.test_invalid_selection_blocks_without_zero_depth) ... ok
+test_length_selector_not_promoted_by_successful_graph (test_logic.Logic.test_length_selector_not_promoted_by_successful_graph) ... ok
+test_no_numeric_stage (test_logic.Logic.test_no_numeric_stage) ... ok
+test_only_D_requirement_changes_in_selector_pair (test_logic.Logic.test_only_D_requirement_changes_in_selector_pair) ... ok
+test_original_measure_and_stage_bytes_preserved (test_logic.Logic.test_original_measure_and_stage_bytes_preserved) ... ok
+test_partial_gate_null (test_logic.Logic.test_partial_gate_null) ... ok
+test_reference_not_counted_as_model (test_logic.Logic.test_reference_not_counted_as_model) ... ok
+test_schedule_counts (test_logic.Logic.test_schedule_counts) ... ok
+test_selector_whitespace_preserved (test_logic.Logic.test_selector_whitespace_preserved) ... ok
+test_summary_and_report_differential_patterns (test_logic.Logic.test_summary_and_report_differential_patterns) ... ok
+test_wrong_selection_still_runs_selected_route (test_logic.Logic.test_wrong_selection_still_runs_selected_route) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 5.346s
+
+OK
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_paired_contract.py', '-v']
+test_all_new_patterns_independently_recomputed (test_paired_contract.PairedContract.test_all_new_patterns_independently_recomputed) ... ok
+test_bad_binding_is_forwarded_not_replaced (test_paired_contract.PairedContract.test_bad_binding_is_forwarded_not_replaced) ... ok
+test_balanced_arm_order (test_paired_contract.PairedContract.test_balanced_arm_order) ... ok
+test_binding_differential_240_cases (test_paired_contract.PairedContract.test_binding_differential_240_cases) ... ok
+test_binding_schema_failure_not_zero_depth (test_paired_contract.PairedContract.test_binding_schema_failure_not_zero_depth) ... ok
+test_content_preserved_and_hashes_outside_prompt (test_paired_contract.PairedContract.test_content_preserved_and_hashes_outside_prompt) ... ok
+test_content_whitespace_is_not_normalized (test_paired_contract.PairedContract.test_content_whitespace_is_not_normalized) ... ok
+test_correct_table_does_not_repair_wrong_node (test_paired_contract.PairedContract.test_correct_table_does_not_repair_wrong_node) ... ok
+test_envelope_changes_do_not_change_request (test_paired_contract.PairedContract.test_envelope_changes_do_not_change_request) ... ok
+test_frozen_v076_scores_match_source_bundle (test_paired_contract.PairedContract.test_frozen_v076_scores_match_source_bundle) ... ok
+test_gain_and_harm_patterns_both_preserved (test_paired_contract.PairedContract.test_gain_and_harm_patterns_both_preserved) ... ok
+test_graph_valid_but_binding_wrong_is_not_contract_success (test_paired_contract.PairedContract.test_graph_valid_but_binding_wrong_is_not_contract_success) ... ok
+test_independent_binding_module_has_no_production_imports (test_paired_contract.PairedContract.test_independent_binding_module_has_no_production_imports) ... ok
+test_initial_requests_identical (test_paired_contract.PairedContract.test_initial_requests_identical) ... ok
+test_missing_duplicate_or_future_binding_not_success (test_paired_contract.PairedContract.test_missing_duplicate_or_future_binding_not_success) ... ok
+test_node_schema_is_not_parent_count_restriction (test_paired_contract.PairedContract.test_node_schema_is_not_parent_count_restriction) ... ok
+test_partial_not_filled_with_zero (test_paired_contract.PairedContract.test_partial_not_filled_with_zero) ... ok
+test_previous_bad_table_does_not_hide_later_measurable_binding (test_paired_contract.PairedContract.test_previous_bad_table_does_not_hide_later_measurable_binding) ... ok
+test_projection_keeps_node_unchanged (test_paired_contract.PairedContract.test_projection_keeps_node_unchanged) ... ok
+test_selection_ceiling_unchanged (test_paired_contract.PairedContract.test_selection_ceiling_unchanged) ... ok
+test_self_consistent_wrong_parent_is_rejected (test_paired_contract.PairedContract.test_self_consistent_wrong_parent_is_rejected) ... ok
+test_shared_prefix_only_binding_contract_differs (test_paired_contract.PairedContract.test_shared_prefix_only_binding_contract_differs) ... ok
+test_v076_base_request_bytes_identical_for_same_history (test_paired_contract.PairedContract.test_v076_base_request_bytes_identical_for_same_history) ... ok
+test_v076_base_semantics_replayed_without_binding_invention (test_paired_contract.PairedContract.test_v076_base_semantics_replayed_without_binding_invention) ... ok
+test_v076_selector_requests_identical (test_paired_contract.PairedContract.test_v076_selector_requests_identical) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 5.201s
+
+OK
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'run.py', 'prepare', '--baseline', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v076\\results_llm\\v076_parentpair_20260914_091213_572246_evidence.zip', '--run-name', 'v077_bindingpair_20260914_101207_583635', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v077\\experiments\\v077_bindingpair_20260914_101207_583635.plan.json']
+{
+  "prepared": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v077\\experiments\\v077_bindingpair_20260914_101207_583635.plan.json",
+  "actual_model_inference": false,
+  "max_inference_calls": 404,
+  "plan_sha256": "f75e12d1271006ca233228daa7bc225b8bad5eefcc9ddc338b5de29145c9569e"
+}
+
+EXIT 0

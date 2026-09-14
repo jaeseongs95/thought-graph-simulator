@@ -1,0 +1,191 @@
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_logic.py', '-v']
+test_100_calls_140_actions_20_estimates (test_logic.Logic.test_100_calls_140_actions_20_estimates) ... ok
+test_500_route_counterexamples_independent (test_logic.Logic.test_500_route_counterexamples_independent) ... ok
+test_absent_content_forwarded_as_null_not_zero (test_logic.Logic.test_absent_content_forwarded_as_null_not_zero) ... ok
+test_bad_json_and_types_are_not_logical_failures (test_logic.Logic.test_bad_json_and_types_are_not_logical_failures) ... ok
+test_compare_has_no_problem_route_or_host_selected_index (test_logic.Logic.test_compare_has_no_problem_route_or_host_selected_index) ... ok
+test_count_heuristic_fails_depth_controls (test_logic.Logic.test_count_heuristic_fails_depth_controls) ... ok
+test_estimator_has_no_answer_or_D_direction (test_logic.Logic.test_estimator_has_no_answer_or_D_direction) ... ok
+test_extra_or_missing_history_rejected (test_logic.Logic.test_extra_or_missing_history_rejected) ... ok
+test_fixed_position_has_no_selective_pairs (test_logic.Logic.test_fixed_position_has_no_selective_pairs) ... ok
+test_full_factorial_arms_orders_directions (test_logic.Logic.test_full_factorial_arms_orders_directions) ... ok
+test_global_and_reference_depths_agree_for_all_candidates (test_logic.Logic.test_global_and_reference_depths_agree_for_all_candidates) ... ok
+test_independent_summaries_and_renderers_many_patterns (test_logic.Logic.test_independent_summaries_and_renderers_many_patterns) ... ok
+test_model_estimate_precedes_both_shared_choices (test_logic.Logic.test_model_estimate_precedes_both_shared_choices) ... ok
+test_model_raw_string_is_not_normalized_or_repaired (test_logic.Logic.test_model_raw_string_is_not_normalized_or_repaired) ... ok
+test_offset_depth_preserves_order_but_not_numeric_success (test_logic.Logic.test_offset_depth_preserves_order_but_not_numeric_success) ... ok
+test_only_D_instruction_differs_within_choice_pair (test_logic.Logic.test_only_D_instruction_differs_within_choice_pair) ... ok
+test_perfect_not_graph_control_or_100_depth_measurements (test_logic.Logic.test_perfect_not_graph_control_or_100_depth_measurements) ... ok
+test_tie_not_fabricated_numeric_success (test_logic.Logic.test_tie_not_fabricated_numeric_success) ... ok
+test_unchanged_options_and_token_upper_bound (test_logic.Logic.test_unchanged_options_and_token_upper_bound) ... ok
+test_unobserved_null_not_false_or_zero_D (test_logic.Logic.test_unobserved_null_not_false_or_zero_D) ... ok
+test_verifier_does_not_import_production_semantics (test_logic.Logic.test_verifier_does_not_import_production_semantics) ... ok
+test_wrong_intermediate_cannot_be_rescued_by_correct_selection (test_logic.Logic.test_wrong_intermediate_cannot_be_rescued_by_correct_selection) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 4.551s
+
+OK
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'run.py', 'prepare', '--baseline', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v071\\results_llm\\v071_depthcompare_20260913_221758_352826_evidence.zip', '--run-name', 'v072_gemma_20260913_225125_604451', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v072\\experiments\\v072_gemma_20260913_225125_604451.plan.json']
+{
+  "prepared": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v072\\experiments\\v072_gemma_20260913_225125_604451.plan.json",
+  "new_model_inference": false,
+  "max_inference_calls_when_executed": 100,
+  "plan_sha256": "6f2b6ceb6bc9ba6c473edd7ee3ea182990969a56c8c83a0b7c667bfcc10add17"
+}
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'run.py', 'execute', '--plan', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v072\\experiments\\v072_gemma_20260913_225125_604451.plan.json', '--baseline', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v071\\results_llm\\v071_depthcompare_20260913_221758_352826_evidence.zip', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v072\\results_llm\\v072_gemma_20260913_225125_604451', '--endpoint', 'http://127.0.0.1:11434']
+1/140: b00_before
+2/140: b00_oracle_depth_shallow
+3/140: b00_oracle_depth_deep
+4/140: b00_estimate
+5/140: b00_model_depth_deep
+6/140: b00_model_depth_shallow
+7/140: b00_after
+8/140: b01_before
+9/140: b01_estimate
+10/140: b01_model_depth_shallow
+11/140: b01_model_depth_deep
+12/140: b01_oracle_depth_deep
+13/140: b01_oracle_depth_shallow
+14/140: b01_after
+15/140: b02_before
+16/140: b02_estimate
+17/140: b02_model_depth_shallow
+18/140: b02_model_depth_deep
+19/140: b02_oracle_depth_deep
+20/140: b02_oracle_depth_shallow
+21/140: b02_after
+22/140: b03_before
+23/140: b03_oracle_depth_shallow
+24/140: b03_oracle_depth_deep
+25/140: b03_estimate
+26/140: b03_model_depth_deep
+27/140: b03_model_depth_shallow
+28/140: b03_after
+29/140: b04_before
+30/140: b04_oracle_depth_shallow
+31/140: b04_oracle_depth_deep
+32/140: b04_estimate
+33/140: b04_model_depth_deep
+34/140: b04_model_depth_shallow
+35/140: b04_after
+36/140: b05_before
+37/140: b05_estimate
+38/140: b05_model_depth_shallow
+39/140: b05_model_depth_deep
+40/140: b05_oracle_depth_deep
+41/140: b05_oracle_depth_shallow
+42/140: b05_after
+43/140: b06_before
+44/140: b06_estimate
+45/140: b06_model_depth_shallow
+46/140: b06_model_depth_deep
+47/140: b06_oracle_depth_deep
+48/140: b06_oracle_depth_shallow
+49/140: b06_after
+50/140: b07_before
+51/140: b07_oracle_depth_shallow
+52/140: b07_oracle_depth_deep
+53/140: b07_estimate
+54/140: b07_model_depth_deep
+55/140: b07_model_depth_shallow
+56/140: b07_after
+57/140: b08_before
+58/140: b08_oracle_depth_shallow
+59/140: b08_oracle_depth_deep
+60/140: b08_estimate
+61/140: b08_model_depth_deep
+62/140: b08_model_depth_shallow
+63/140: b08_after
+64/140: b09_before
+65/140: b09_estimate
+66/140: b09_model_depth_shallow
+67/140: b09_model_depth_deep
+68/140: b09_oracle_depth_deep
+69/140: b09_oracle_depth_shallow
+70/140: b09_after
+71/140: b10_before
+72/140: b10_estimate
+73/140: b10_model_depth_shallow
+74/140: b10_model_depth_deep
+75/140: b10_oracle_depth_deep
+76/140: b10_oracle_depth_shallow
+77/140: b10_after
+78/140: b11_before
+79/140: b11_oracle_depth_shallow
+80/140: b11_oracle_depth_deep
+81/140: b11_estimate
+82/140: b11_model_depth_deep
+83/140: b11_model_depth_shallow
+84/140: b11_after
+85/140: b12_before
+86/140: b12_oracle_depth_shallow
+87/140: b12_oracle_depth_deep
+88/140: b12_estimate
+89/140: b12_model_depth_deep
+90/140: b12_model_depth_shallow
+91/140: b12_after
+92/140: b13_before
+93/140: b13_estimate
+94/140: b13_model_depth_shallow
+95/140: b13_model_depth_deep
+96/140: b13_oracle_depth_deep
+97/140: b13_oracle_depth_shallow
+98/140: b13_after
+99/140: b14_before
+100/140: b14_estimate
+101/140: b14_model_depth_shallow
+102/140: b14_model_depth_deep
+103/140: b14_oracle_depth_deep
+104/140: b14_oracle_depth_shallow
+105/140: b14_after
+106/140: b15_before
+107/140: b15_oracle_depth_shallow
+108/140: b15_oracle_depth_deep
+109/140: b15_estimate
+110/140: b15_model_depth_deep
+111/140: b15_model_depth_shallow
+112/140: b15_after
+113/140: b16_before
+114/140: b16_oracle_depth_shallow
+115/140: b16_oracle_depth_deep
+116/140: b16_estimate
+117/140: b16_model_depth_deep
+118/140: b16_model_depth_shallow
+119/140: b16_after
+120/140: b17_before
+121/140: b17_estimate
+122/140: b17_model_depth_shallow
+123/140: b17_model_depth_deep
+124/140: b17_oracle_depth_deep
+125/140: b17_oracle_depth_shallow
+126/140: b17_after
+127/140: b18_before
+128/140: b18_estimate
+129/140: b18_model_depth_shallow
+130/140: b18_model_depth_deep
+131/140: b18_oracle_depth_deep
+132/140: b18_oracle_depth_shallow
+133/140: b18_after
+134/140: b19_before
+135/140: b19_oracle_depth_shallow
+136/140: b19_oracle_depth_deep
+137/140: b19_estimate
+138/140: b19_model_depth_deep
+139/140: b19_model_depth_shallow
+140/140: b19_after
+{
+  "state": "complete",
+  "evidence_zip": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v072\\results_llm\\v072_gemma_20260913_225125_604451_evidence.zip",
+  "independent_verification": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v072\\results_llm\\v072_gemma_20260913_225125_604451_independent.json",
+  "inference_calls": 100
+}
+
+EXIT 0

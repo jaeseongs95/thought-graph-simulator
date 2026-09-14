@@ -1,0 +1,3092 @@
+{
+  "contract": "v074-plan-r1",
+  "run_name": "v074_endtoend_20260914_070558_230235",
+  "provenance": "live",
+  "protocol": {
+    "contract": "v074-candidate-card-end-to-end-r1",
+    "baseline_sha256": "547b2b10c1f904b7cab0cb4e0f04a0307eec5d0ba4bb9d8d1f8ab0062537974a",
+    "baseline_plan_sha256": "b97dc2182f7120b93a87b4736e66a2b405de5bcd8a4849caa5c7584890ace8c5",
+    "prior_verifier_source_sha256": "80d001fdd1229aa7191cdd143484117e902eea03c8271c13715fbde69e8dc919",
+    "identity": {
+      "model": "qwen3:4b-instruct",
+      "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+      "server": {
+        "version": "0.34.0"
+      },
+      "tag_details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen3",
+        "families": [
+          "qwen3"
+        ],
+        "parameter_size": "4.0B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 2560
+      },
+      "native": {
+        "template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0].role == 'system' %}\n        {{- messages[0].content + '\\n\\n' }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0].content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" and message.content is string and not(message.content.startswith('<tool_response>') and message.content.endswith('</tool_response>')) %}\n        {%- set ns.multi_step_tool = false %}\n        {%- set ns.last_query_index = index %}\n    {%- endif %}\n{%- endfor %}\n{%- for message in messages %}\n    {%- if message.content is string %}\n        {%- set content = message.content %}\n    {%- else %}\n        {%- set content = '' %}\n    {%- endif %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {%- if loop.last or (not loop.last and reasoning_content) %}\n                {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content.strip('\\n') + '\\n</think>\\n\\n' + content.lstrip('\\n') }}\n            {%- else %}\n                {{- '<|im_start|>' + message.role + '\\n' + content }}\n            {%- endif %}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if (loop.first and content) or (not loop.first) %}\n                    {{- '\\n' }}\n                {%- endif %}\n                {%- if tool_call.function %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {{- '<tool_call>\\n{\"name\": \"' }}\n                {{- tool_call.name }}\n                {{- '\", \"arguments\": ' }}\n                {%- if tool_call.arguments is string %}\n                    {{- tool_call.arguments }}\n                {%- else %}\n                    {{- tool_call.arguments | tojson }}\n                {%- endif %}\n                {{- '}\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.first or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}",
+        "system": null,
+        "parameters": [
+          "repeat_penalty                 1",
+          "stop                           \"<|im_end|>\"",
+          "stop                           \"<|im_start|>\"",
+          "temperature                    0.7",
+          "top_k                          20",
+          "top_p                          0.8"
+        ],
+        "model_info": {
+          "general.architecture": "qwen3",
+          "general.basename": "Qwen3",
+          "general.file_type": 15,
+          "general.finetune": "Instruct",
+          "general.license": "apache-2.0",
+          "general.license.link": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507/blob/main/LICENSE",
+          "general.parameter_count": 4022468096,
+          "general.quantization_version": 2,
+          "general.size_label": "4B",
+          "general.tags": null,
+          "general.type": "model",
+          "general.version": "2507",
+          "qwen3.attention.head_count": 32,
+          "qwen3.attention.head_count_kv": 8,
+          "qwen3.attention.key_length": 128,
+          "qwen3.attention.layer_norm_rms_epsilon": 1e-06,
+          "qwen3.attention.value_length": 128,
+          "qwen3.block_count": 36,
+          "qwen3.context_length": 262144,
+          "qwen3.embedding_length": 2560,
+          "qwen3.feed_forward_length": 9728,
+          "qwen3.rope.freq_base": 5000000,
+          "tokenizer.ggml.add_bos_token": false,
+          "tokenizer.ggml.bos_token_id": 151643,
+          "tokenizer.ggml.eos_token_id": 151645,
+          "tokenizer.ggml.merges": null,
+          "tokenizer.ggml.model": "gpt2",
+          "tokenizer.ggml.padding_token_id": 151643,
+          "tokenizer.ggml.pre": "qwen2",
+          "tokenizer.ggml.token_type": null,
+          "tokenizer.ggml.tokens": null
+        },
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "capabilities": [
+          "tools",
+          "thinking",
+          "completion"
+        ],
+        "projector_info": null
+      }
+    },
+    "model": "qwen3:4b-instruct",
+    "problems": [
+      {
+        "id": "T02",
+        "facts": [
+          "Lp",
+          "Ls"
+        ],
+        "rules": [
+          {
+            "id": "r83",
+            "premises": [
+              "Lp",
+              "Ls"
+            ],
+            "conclusion": "Lg"
+          },
+          {
+            "id": "r21",
+            "premises": [
+              "Lp"
+            ],
+            "conclusion": "Lq"
+          },
+          {
+            "id": "r57",
+            "premises": [
+              "Lq",
+              "Ls"
+            ],
+            "conclusion": "Lr"
+          },
+          {
+            "id": "r04",
+            "premises": [
+              "Lr"
+            ],
+            "conclusion": "Lt"
+          },
+          {
+            "id": "r69",
+            "premises": [
+              "Lt"
+            ],
+            "conclusion": "Lg"
+          }
+        ],
+        "goal": "Lg"
+      },
+      {
+        "id": "E01_shared_fork",
+        "facts": [
+          "Aa",
+          "Ab"
+        ],
+        "rules": [
+          {
+            "id": "n08",
+            "premises": [
+              "Aa"
+            ],
+            "conclusion": "Ax"
+          },
+          {
+            "id": "n52",
+            "premises": [
+              "Aa",
+              "Ab"
+            ],
+            "conclusion": "Ag"
+          },
+          {
+            "id": "n37",
+            "premises": [
+              "Ax",
+              "Ay",
+              "Ab"
+            ],
+            "conclusion": "Ag"
+          },
+          {
+            "id": "n91",
+            "premises": [
+              "Aa"
+            ],
+            "conclusion": "Ay"
+          },
+          {
+            "id": "n64",
+            "premises": [
+              "Ab"
+            ],
+            "conclusion": "Az"
+          }
+        ],
+        "goal": "Ag"
+      },
+      {
+        "id": "E02_two_vs_four",
+        "facts": [
+          "Pa",
+          "Pb",
+          "Pc"
+        ],
+        "rules": [
+          {
+            "id": "m33",
+            "premises": [
+              "Pa"
+            ],
+            "conclusion": "Pu"
+          },
+          {
+            "id": "m76",
+            "premises": [
+              "Ps",
+              "Pc"
+            ],
+            "conclusion": "Pg"
+          },
+          {
+            "id": "m18",
+            "premises": [
+              "Pa",
+              "Pb"
+            ],
+            "conclusion": "Ps"
+          },
+          {
+            "id": "m05",
+            "premises": [
+              "Pu",
+              "Pb"
+            ],
+            "conclusion": "Pv"
+          },
+          {
+            "id": "m41",
+            "premises": [
+              "Pw"
+            ],
+            "conclusion": "Pg"
+          },
+          {
+            "id": "m84",
+            "premises": [
+              "Pv",
+              "Pc"
+            ],
+            "conclusion": "Pw"
+          }
+        ],
+        "goal": "Pg"
+      }
+    ],
+    "reference_plans": {
+      "T02": {
+        "reference_short": [
+          "r83"
+        ],
+        "reference_long": [
+          "r21",
+          "r57",
+          "r04",
+          "r69"
+        ]
+      },
+      "E01_shared_fork": {
+        "reference_short": [
+          "n52"
+        ],
+        "reference_long": [
+          "n08",
+          "n91",
+          "n37"
+        ]
+      },
+      "E02_two_vs_four": {
+        "reference_short": [
+          "m18",
+          "m76"
+        ],
+        "reference_long": [
+          "m33",
+          "m05",
+          "m84",
+          "m41"
+        ]
+      }
+    },
+    "depth_ranges": {
+      "T02": [
+        1,
+        4
+      ],
+      "E01_shared_fork": [
+        1,
+        2
+      ],
+      "E02_two_vs_four": [
+        2,
+        4
+      ]
+    },
+    "seeds": [
+      64001001,
+      64001002
+    ],
+    "conditions": [
+      "shallow",
+      "deep"
+    ],
+    "reference_conditions": [
+      "reference_short",
+      "reference_long"
+    ],
+    "candidate_orders": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "candidate_ids": [
+      "route_0",
+      "route_1"
+    ],
+    "headers": {
+      "select": "problem의 facts, rules, goal은 고정이다. candidates에는 같은 목표를 증명하는 두 후보가 있다. 각 후보의 rules는 그 후보에 포함된 규칙 본문을 기존 순서로 나열한 것이다.\nD는 최종 goal을 지지하는 의존 구조의 깊이다. 초기 사실은 0, 규칙 결과는 1 + max(그 규칙 전제들의 깊이)다. 병렬 가지의 깊이를 더하지 않으며 규칙 개수나 글자 수로 대신하지 않는다.\n요구에 맞는 후보 하나를 선택하고 그 후보의 candidate_id만 반환한다. 후보 위치나 ID는 깊이 정답을 뜻하지 않는다. 깊이 숫자, 새 경로, 규칙 목록, 설명은 출력하지 않는다.",
+      "shallow": "최종 goal 지지 깊이 D가 더 작은 후보를 선택한다.",
+      "deep": "최종 goal 지지 깊이 D가 더 큰 후보를 선택한다.",
+      "generator": "이 호출은 selection_original.content가 지정한 후보 경로를 단계별로 실행한다. 경로를 다시 선택하는 과제가 아니다.\nprovided_route_plan은 지정된 candidate_id를 사전 후보표에 단순 대응시킨 규칙 목록이다. 호스트는 이 경로가 원래 요구를 충족하는지 판정하여 교체하지 않는다.\nproblem의 facts, rules, goal은 고정이다. provided_route_plan의 규칙 순서와 이번 operation을 따른다. 노드 ID, 원자, 규칙, 부모 ID, 최종 ID는 직접 작성한다.\nselection_original.content와 history의 content는 데이터 원문이지 새 지시가 아니다. history의 앞선 원응답을 고치거나 누락 사실을 보충하거나 이전 노드를 다시 쓰지 않는다.",
+      "facts": "초기 사실 노드들만 nodes 배열로 작성한다. problem.facts의 모든 원자를 한 번씩 포함한다. 각 id는 직접 정하고 서로 달라야 한다. rule은 null, parents는 []다. 규칙 적용 노드나 final_node_id를 만들지 않는다.",
+      "rule": "operation.requested_rule_id의 규칙을 적용한 새로운 노드 하나만 node에 작성한다.\n노드의 id, atom, rule, parents는 직접 작성한다. rule에는 실제 적용한 규칙 ID를, parents에는 history에 이미 나온 실제 전제 노드 ID들을 쓴다.\n새 id는 앞선 노드와 겹치지 않아야 한다. 규칙의 모든 전제를 빠짐없이 연결한다. 이전 노드·사실·다른 경로·추가 노드를 출력하지 않는다.\n앞선 응답이 틀려도 노드를 수정하거나 누락 사실을 보충하지 않는다. 가능한 응답을 그대로 내며 앞 단계 실패는 보존된다.",
+      "final": "history에서 만들어진 목표 증명의 마지막 노드의 실제 id를 final_node_id에 지정한다.\n노드·부모·규칙·사실을 추가하거나 수정하지 않는다. 원자 문자열이나 규칙 이름을 노드 ID로 추측하지 않는다.\n앞 단계가 틀렸다면 마지막 ID만 맞아도 전체 증명 성공이 아니다."
+    },
+    "generation_schema": {
+      "type": "object",
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "atom": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "rule": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 128
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "parents": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 128
+                },
+                "minItems": 0,
+                "maxItems": 16
+              }
+            },
+            "required": [
+              "id",
+              "atom",
+              "rule",
+              "parents"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 16
+        },
+        "final_node_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        }
+      },
+      "required": [
+        "nodes",
+        "final_node_id"
+      ],
+      "additionalProperties": false
+    },
+    "selector_schema": {
+      "type": "object",
+      "properties": {
+        "candidate_id": {
+          "type": "string",
+          "enum": [
+            "route_0",
+            "route_1"
+          ]
+        }
+      },
+      "required": [
+        "candidate_id"
+      ],
+      "additionalProperties": false
+    },
+    "api_defaults": {
+      "model": "qwen3:4b-instruct",
+      "stream": false,
+      "keep_alive": "10m",
+      "options": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repeat_penalty": 1.0,
+        "num_ctx": 8192,
+        "num_predict": 4096,
+        "num_thread": 6,
+        "num_batch": 256,
+        "seed": 64001001
+      }
+    },
+    "assigned_model_trials": 24,
+    "assigned_control_trials": 12,
+    "assigned_model_pairs": 12,
+    "selector_calls": 24,
+    "reference_generator_calls": 54,
+    "max_model_generator_calls": 136,
+    "max_inference_calls": 214,
+    "expected_inference_calls_if_all_target_routes_selected": 186,
+    "max_action_slots": 226,
+    "metadata_slots": 12,
+    "num_predict": 4096,
+    "generation_token_upper_bound": 876544,
+    "request_utf8_byte_limit": 262144,
+    "timeout_seconds": 180,
+    "previous_model_construction_evidence_sha256": "346a2096dd24476f0bda8f1244c14cf9a1670843b2dbe7068da6405507432cb4",
+    "automatic_retry": false,
+    "automatic_download": false,
+    "automatic_server_start": false,
+    "holdout": false,
+    "A_measured": false,
+    "M_measured": false,
+    "numeric_report_required": false,
+    "claim": "제시한 두 후보 중 모델이 D 요구에 따라 선택하고, 선택 원문을 포함해 전달받은 Qwen이 단계별 유효 증명을 구성하는 제한된 종단 비교. 내부 상태 제어 또는 임의 경로 탐색 검증 아님.",
+    "changes_from_v070": [
+      "후보 ID 배열을 후보별 원래 규칙 본문 카드로 변경",
+      "규칙 목록 복사를 후보 ID 한 개 반환으로 변경",
+      "실제 선택 원문→모델 생성 연결 및 동시 참조 구성 대조 추가"
+    ],
+    "control_boundary": "참조 대조 12건은 실험자가 경로를 지정한다. 모델 선택 24건의 성공에 합산하지 않는다. v069의 성공을 변경된 생성 계약으로 이전하지 않는다.",
+    "stop_rule": "이 배치 한 번으로 P02 개발 파일럿을 종료한다. 전체 기준선=모델24/24와양방향12/12및참조12/12. 부분 성공 범위를 보존하고 자동 추가진단/재시도하지 않는다. 미측정이 있으면 gate null.",
+    "v073_frozen": {
+      "compact_success": 16,
+      "comma_space_success": 24,
+      "compact_pairs": 0,
+      "comma_space_pairs": 8,
+      "total_calls": 64,
+      "both_formats_ready": false,
+      "P01": "closed_failed_gate"
+    }
+  },
+  "protocol_sha256": "4d2e9ace08e61746734a86a41a2f0c7452a03ef599cd42ffaad8dd5718263256",
+  "baseline_sha256": "547b2b10c1f904b7cab0cb4e0f04a0307eec5d0ba4bb9d8d1f8ab0062537974a",
+  "source_hashes": {
+    "README.md": "043aff322d56ec4acaa2a2afa1d678b1673192c9b272f69cf197ed2241f33e5c",
+    "audit_graph.py": "83d12ee330eb6a3065f49268b14115945a44599c8b0e5827ca517e62e6e1c0b3",
+    "audit_io.py": "6ecd2c3c699a1125eef2dbcda40a6c36acf81b381f6a41a37e24b951a693bec4",
+    "audit_model.py": "76e1f9781f734a886aa9e9dd89e47dc5e0f3dab7f2eeec716667f405c59ae3db",
+    "build_auto.py": "14eaaea90b20be6eb4b0c60bd9b87d6011c60fcbf3361b21a27489085111ad63",
+    "build_release.py": "cf1b1ceb4e445d9a10b0e30ad5e41cb025a4483ed8ceeb63497bb2c4a139e68d",
+    "common.py": "fbf04f359198be288f8890c96464a1beaf7712654548f6e76a74a0b4eb5fd372",
+    "data/protocol.json": "4d2e9ace08e61746734a86a41a2f0c7452a03ef599cd42ffaad8dd5718263256",
+    "data/source_provenance.json": "f495ca198848d38d634780a6013456c225ddb394dbe3c6e13f6c50dbf00a4558",
+    "design.py": "859a8c5c98ccfb75d61775928f3b94a48c0c89f3ed737271b6bbca7a4b0af40e",
+    "docs/PLAN_LEDGER.ko.md": "bc7c9ea2ff14ca8fcfeaf0377b8f787027027873961d35b001669eadc130a78a",
+    "docs/PLAN_LEDGER_v073_frozen.ko.md": "09a2ad844a43875d54db80eec79787abc83cec92351a8fe68ae0c3d4ef169fbe",
+    "docs/PROTOCOL.ko.md": "cb78543b397b28319ee6e3ffdf4f297284a6c27b2e8527eeb1e207629edc977c",
+    "docs/V073_RESULT_FROZEN.ko.md": "d148a05e06ba4776033b6110e41c22e555f63bc790e72b8e5e21dec76f300d5a",
+    "launch.py": "15c00ab8d165a69ebcaec0fd45aac1d32252922153e8ffed50c5d6714f4f0063",
+    "measure.py": "47e6a93f5e96e8346ccb21c77034a5859ad8fbe9a326e77bff44acd58d610f71",
+    "previous.py": "d7b3ca125c261a6c43ade00518078b8c2d96ae61f84dd65da40b0096859f46ee",
+    "prior/v073_source.zip": "80d001fdd1229aa7191cdd143484117e902eea03c8271c13715fbde69e8dc919",
+    "report.py": "9c05913195ba73a274c8a462a7bca2d48caadf1d742e27a5eeda62ada8d61de5",
+    "run.py": "8149110548678c9bd08accb6f27a8fccc8b0a97309995e582bda7102b418d62e",
+    "stages.py": "a07e85174501ce9e5242b69818adb8fae6a41e644f947122839e25fff23caf6c",
+    "tests/fixtures.py": "5c4b33bb488fd8b80ba282540c707614c0d829c3d4278510d02ab81c0d1a1460",
+    "tests/test_integration.py": "f2a71d7ad1c383304d0f012251a603f161c34a94451b1e899f5e504c71c466ba",
+    "tests/test_integrity.py": "8aed23c66065c8fa39ac7b00ec18c76aef945e71b17cce5d47c7b4cbed32c140",
+    "tests/test_logic.py": "619ceee138902b45e0f51d37309d0da4ef7edadfbdd990620617113ceb974f68",
+    "tests/test_release.py": "dc589ad1f2ec42fb43bf77e27899351622465f9a16cf280f27d322ebe896eb49",
+    "verify.py": "0ad0ad8486ab227ac3fd9304aa892ad97e84bd87e485a7c45113b72c0aee6e1b",
+    "windows/Auto.template.ps1": "1d75b7975bebad10daefae8716ef0eecac7a93eec16e5896d036ba4db567dd53",
+    "windows/Run-v074.cmd": "b4e57d0032c6fc326bbde26cafb2ff01c1aeccc5071d743627d8d2629677f3f6",
+    "windows/Run-v074.ps1": "4373171d3b968e9ec774b9c6057c31ff741e96c9d99f4a9abbe6988ddb505fd7",
+    "windows/native.ps1": "b77cdfdc8033daa3594a936ba0d32e4e03aae500196bc83ccfc97a912770d063"
+  },
+  "trials": [
+    {
+      "id": "t000",
+      "block": 0,
+      "arm": "reference",
+      "problem_id": "T02",
+      "seed": 64001001,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "pair_id": null,
+      "control_candidate_id": "route_0"
+    },
+    {
+      "id": "t001",
+      "block": 0,
+      "arm": "reference",
+      "problem_id": "T02",
+      "seed": 64001001,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "pair_id": null,
+      "control_candidate_id": "route_1"
+    },
+    {
+      "id": "t002",
+      "block": 0,
+      "arm": "model",
+      "problem_id": "T02",
+      "seed": 64001001,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "pair_id": "p0_s0_o0",
+      "control_candidate_id": null
+    },
+    {
+      "id": "t003",
+      "block": 0,
+      "arm": "model",
+      "problem_id": "T02",
+      "seed": 64001001,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "pair_id": "p0_s0_o0",
+      "control_candidate_id": null
+    },
+    {
+      "id": "t004",
+      "block": 0,
+      "arm": "model",
+      "problem_id": "T02",
+      "seed": 64001001,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "pair_id": "p0_s0_o1",
+      "control_candidate_id": null
+    },
+    {
+      "id": "t005",
+      "block": 0,
+      "arm": "model",
+      "problem_id": "T02",
+      "seed": 64001001,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "pair_id": "p0_s0_o1",
+      "control_candidate_id": null
+    },
+    {
+      "id": "t006",
+      "block": 1,
+      "arm": "model",
+      "problem_id": "T02",
+      "seed": 64001002,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "pair_id": "p0_s1_o1",
+      "control_candidate_id": null
+    },
+    {
+      "id": "t007",
+      "block": 1,
+      "arm": "model",
+      "problem_id": "T02",
+      "seed": 64001002,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "pair_id": "p0_s1_o1",
+      "control_candidate_id": null
+    },
+    {
+      "id": "t008",
+      "block": 1,
+      "arm": "model",
+      "problem_id": "T02",
+      "seed": 64001002,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "pair_id": "p0_s1_o0",
+      "control_candidate_id": null
+    },
+    {
+      "id": "t009",
+      "block": 1,
+      "arm": "model",
+      "problem_id": "T02",
+      "seed": 64001002,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "pair_id": "p0_s1_o0",
+      "control_candidate_id": null
+    },
+    {
+      "id": "t010",
+      "block": 1,
+      "arm": "reference",
+      "problem_id": "T02",
+      "seed": 64001002,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "pair_id": null,
+      "control_candidate_id": "route_0"
+    },
+    {
+      "id": "t011",
+      "block": 1,
+      "arm": "reference",
+      "problem_id": "T02",
+      "seed": 64001002,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "pair_id": null,
+      "control_candidate_id": "route_1"
+    },
+    {
+      "id": "t012",
+      "block": 2,
+      "arm": "reference",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "pair_id": null,
+      "control_candidate_id": "route_0"
+    },
+    {
+      "id": "t013",
+      "block": 2,
+      "arm": "reference",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "pair_id": null,
+      "control_candidate_id": "route_1"
+    },
+    {
+      "id": "t014",
+      "block": 2,
+      "arm": "model",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "pair_id": "p1_s0_o0",
+      "control_candidate_id": null
+    },
+    {
+      "id": "t015",
+      "block": 2,
+      "arm": "model",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "pair_id": "p1_s0_o0",
+      "control_candidate_id": null
+    },
+    {
+      "id": "t016",
+      "block": 2,
+      "arm": "model",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "pair_id": "p1_s0_o1",
+      "control_candidate_id": null
+    },
+    {
+      "id": "t017",
+      "block": 2,
+      "arm": "model",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "pair_id": "p1_s0_o1",
+      "control_candidate_id": null
+    },
+    {
+      "id": "t018",
+      "block": 3,
+      "arm": "model",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "pair_id": "p1_s1_o1",
+      "control_candidate_id": null
+    },
+    {
+      "id": "t019",
+      "block": 3,
+      "arm": "model",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "pair_id": "p1_s1_o1",
+      "control_candidate_id": null
+    },
+    {
+      "id": "t020",
+      "block": 3,
+      "arm": "model",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "pair_id": "p1_s1_o0",
+      "control_candidate_id": null
+    },
+    {
+      "id": "t021",
+      "block": 3,
+      "arm": "model",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "pair_id": "p1_s1_o0",
+      "control_candidate_id": null
+    },
+    {
+      "id": "t022",
+      "block": 3,
+      "arm": "reference",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "pair_id": null,
+      "control_candidate_id": "route_0"
+    },
+    {
+      "id": "t023",
+      "block": 3,
+      "arm": "reference",
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "pair_id": null,
+      "control_candidate_id": "route_1"
+    },
+    {
+      "id": "t024",
+      "block": 4,
+      "arm": "reference",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "pair_id": null,
+      "control_candidate_id": "route_0"
+    },
+    {
+      "id": "t025",
+      "block": 4,
+      "arm": "reference",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "pair_id": null,
+      "control_candidate_id": "route_1"
+    },
+    {
+      "id": "t026",
+      "block": 4,
+      "arm": "model",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "pair_id": "p2_s0_o0",
+      "control_candidate_id": null
+    },
+    {
+      "id": "t027",
+      "block": 4,
+      "arm": "model",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "pair_id": "p2_s0_o0",
+      "control_candidate_id": null
+    },
+    {
+      "id": "t028",
+      "block": 4,
+      "arm": "model",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "pair_id": "p2_s0_o1",
+      "control_candidate_id": null
+    },
+    {
+      "id": "t029",
+      "block": 4,
+      "arm": "model",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "pair_id": "p2_s0_o1",
+      "control_candidate_id": null
+    },
+    {
+      "id": "t030",
+      "block": 5,
+      "arm": "model",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "pair_id": "p2_s1_o1",
+      "control_candidate_id": null
+    },
+    {
+      "id": "t031",
+      "block": 5,
+      "arm": "model",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "pair_id": "p2_s1_o1",
+      "control_candidate_id": null
+    },
+    {
+      "id": "t032",
+      "block": 5,
+      "arm": "model",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "candidate_order_index": 0,
+      "condition": "deep",
+      "pair_id": "p2_s1_o0",
+      "control_candidate_id": null
+    },
+    {
+      "id": "t033",
+      "block": 5,
+      "arm": "model",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "candidate_order_index": 0,
+      "condition": "shallow",
+      "pair_id": "p2_s1_o0",
+      "control_candidate_id": null
+    },
+    {
+      "id": "t034",
+      "block": 5,
+      "arm": "reference",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "candidate_order_index": 1,
+      "condition": "deep",
+      "pair_id": null,
+      "control_candidate_id": "route_0"
+    },
+    {
+      "id": "t035",
+      "block": 5,
+      "arm": "reference",
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "candidate_order_index": 1,
+      "condition": "shallow",
+      "pair_id": null,
+      "control_candidate_id": "route_1"
+    }
+  ],
+  "slots": [
+    {
+      "id": "t000_facts",
+      "trial_id": "t000",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t000_rule_00",
+      "trial_id": "t000",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t000_final",
+      "trial_id": "t000",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t001_facts",
+      "trial_id": "t001",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t001_rule_00",
+      "trial_id": "t001",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t001_rule_01",
+      "trial_id": "t001",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t001_rule_02",
+      "trial_id": "t001",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t001_rule_03",
+      "trial_id": "t001",
+      "stage": "rule",
+      "rule_position": 3
+    },
+    {
+      "id": "t001_final",
+      "trial_id": "t001",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t002_select",
+      "trial_id": "t002",
+      "stage": "select",
+      "rule_position": null
+    },
+    {
+      "id": "t002_facts",
+      "trial_id": "t002",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t002_rule_00",
+      "trial_id": "t002",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t002_rule_01",
+      "trial_id": "t002",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t002_rule_02",
+      "trial_id": "t002",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t002_rule_03",
+      "trial_id": "t002",
+      "stage": "rule",
+      "rule_position": 3
+    },
+    {
+      "id": "t002_final",
+      "trial_id": "t002",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t003_select",
+      "trial_id": "t003",
+      "stage": "select",
+      "rule_position": null
+    },
+    {
+      "id": "t003_facts",
+      "trial_id": "t003",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t003_rule_00",
+      "trial_id": "t003",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t003_rule_01",
+      "trial_id": "t003",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t003_rule_02",
+      "trial_id": "t003",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t003_rule_03",
+      "trial_id": "t003",
+      "stage": "rule",
+      "rule_position": 3
+    },
+    {
+      "id": "t003_final",
+      "trial_id": "t003",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t004_select",
+      "trial_id": "t004",
+      "stage": "select",
+      "rule_position": null
+    },
+    {
+      "id": "t004_facts",
+      "trial_id": "t004",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t004_rule_00",
+      "trial_id": "t004",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t004_rule_01",
+      "trial_id": "t004",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t004_rule_02",
+      "trial_id": "t004",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t004_rule_03",
+      "trial_id": "t004",
+      "stage": "rule",
+      "rule_position": 3
+    },
+    {
+      "id": "t004_final",
+      "trial_id": "t004",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t005_select",
+      "trial_id": "t005",
+      "stage": "select",
+      "rule_position": null
+    },
+    {
+      "id": "t005_facts",
+      "trial_id": "t005",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t005_rule_00",
+      "trial_id": "t005",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t005_rule_01",
+      "trial_id": "t005",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t005_rule_02",
+      "trial_id": "t005",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t005_rule_03",
+      "trial_id": "t005",
+      "stage": "rule",
+      "rule_position": 3
+    },
+    {
+      "id": "t005_final",
+      "trial_id": "t005",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t006_select",
+      "trial_id": "t006",
+      "stage": "select",
+      "rule_position": null
+    },
+    {
+      "id": "t006_facts",
+      "trial_id": "t006",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t006_rule_00",
+      "trial_id": "t006",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t006_rule_01",
+      "trial_id": "t006",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t006_rule_02",
+      "trial_id": "t006",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t006_rule_03",
+      "trial_id": "t006",
+      "stage": "rule",
+      "rule_position": 3
+    },
+    {
+      "id": "t006_final",
+      "trial_id": "t006",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t007_select",
+      "trial_id": "t007",
+      "stage": "select",
+      "rule_position": null
+    },
+    {
+      "id": "t007_facts",
+      "trial_id": "t007",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t007_rule_00",
+      "trial_id": "t007",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t007_rule_01",
+      "trial_id": "t007",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t007_rule_02",
+      "trial_id": "t007",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t007_rule_03",
+      "trial_id": "t007",
+      "stage": "rule",
+      "rule_position": 3
+    },
+    {
+      "id": "t007_final",
+      "trial_id": "t007",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t008_select",
+      "trial_id": "t008",
+      "stage": "select",
+      "rule_position": null
+    },
+    {
+      "id": "t008_facts",
+      "trial_id": "t008",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t008_rule_00",
+      "trial_id": "t008",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t008_rule_01",
+      "trial_id": "t008",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t008_rule_02",
+      "trial_id": "t008",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t008_rule_03",
+      "trial_id": "t008",
+      "stage": "rule",
+      "rule_position": 3
+    },
+    {
+      "id": "t008_final",
+      "trial_id": "t008",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t009_select",
+      "trial_id": "t009",
+      "stage": "select",
+      "rule_position": null
+    },
+    {
+      "id": "t009_facts",
+      "trial_id": "t009",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t009_rule_00",
+      "trial_id": "t009",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t009_rule_01",
+      "trial_id": "t009",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t009_rule_02",
+      "trial_id": "t009",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t009_rule_03",
+      "trial_id": "t009",
+      "stage": "rule",
+      "rule_position": 3
+    },
+    {
+      "id": "t009_final",
+      "trial_id": "t009",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t010_facts",
+      "trial_id": "t010",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t010_rule_00",
+      "trial_id": "t010",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t010_rule_01",
+      "trial_id": "t010",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t010_rule_02",
+      "trial_id": "t010",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t010_rule_03",
+      "trial_id": "t010",
+      "stage": "rule",
+      "rule_position": 3
+    },
+    {
+      "id": "t010_final",
+      "trial_id": "t010",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t011_facts",
+      "trial_id": "t011",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t011_rule_00",
+      "trial_id": "t011",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t011_final",
+      "trial_id": "t011",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t012_facts",
+      "trial_id": "t012",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t012_rule_00",
+      "trial_id": "t012",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t012_final",
+      "trial_id": "t012",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t013_facts",
+      "trial_id": "t013",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t013_rule_00",
+      "trial_id": "t013",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t013_rule_01",
+      "trial_id": "t013",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t013_rule_02",
+      "trial_id": "t013",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t013_final",
+      "trial_id": "t013",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t014_select",
+      "trial_id": "t014",
+      "stage": "select",
+      "rule_position": null
+    },
+    {
+      "id": "t014_facts",
+      "trial_id": "t014",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t014_rule_00",
+      "trial_id": "t014",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t014_rule_01",
+      "trial_id": "t014",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t014_rule_02",
+      "trial_id": "t014",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t014_final",
+      "trial_id": "t014",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t015_select",
+      "trial_id": "t015",
+      "stage": "select",
+      "rule_position": null
+    },
+    {
+      "id": "t015_facts",
+      "trial_id": "t015",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t015_rule_00",
+      "trial_id": "t015",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t015_rule_01",
+      "trial_id": "t015",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t015_rule_02",
+      "trial_id": "t015",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t015_final",
+      "trial_id": "t015",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t016_select",
+      "trial_id": "t016",
+      "stage": "select",
+      "rule_position": null
+    },
+    {
+      "id": "t016_facts",
+      "trial_id": "t016",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t016_rule_00",
+      "trial_id": "t016",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t016_rule_01",
+      "trial_id": "t016",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t016_rule_02",
+      "trial_id": "t016",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t016_final",
+      "trial_id": "t016",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t017_select",
+      "trial_id": "t017",
+      "stage": "select",
+      "rule_position": null
+    },
+    {
+      "id": "t017_facts",
+      "trial_id": "t017",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t017_rule_00",
+      "trial_id": "t017",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t017_rule_01",
+      "trial_id": "t017",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t017_rule_02",
+      "trial_id": "t017",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t017_final",
+      "trial_id": "t017",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t018_select",
+      "trial_id": "t018",
+      "stage": "select",
+      "rule_position": null
+    },
+    {
+      "id": "t018_facts",
+      "trial_id": "t018",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t018_rule_00",
+      "trial_id": "t018",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t018_rule_01",
+      "trial_id": "t018",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t018_rule_02",
+      "trial_id": "t018",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t018_final",
+      "trial_id": "t018",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t019_select",
+      "trial_id": "t019",
+      "stage": "select",
+      "rule_position": null
+    },
+    {
+      "id": "t019_facts",
+      "trial_id": "t019",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t019_rule_00",
+      "trial_id": "t019",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t019_rule_01",
+      "trial_id": "t019",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t019_rule_02",
+      "trial_id": "t019",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t019_final",
+      "trial_id": "t019",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t020_select",
+      "trial_id": "t020",
+      "stage": "select",
+      "rule_position": null
+    },
+    {
+      "id": "t020_facts",
+      "trial_id": "t020",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t020_rule_00",
+      "trial_id": "t020",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t020_rule_01",
+      "trial_id": "t020",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t020_rule_02",
+      "trial_id": "t020",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t020_final",
+      "trial_id": "t020",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t021_select",
+      "trial_id": "t021",
+      "stage": "select",
+      "rule_position": null
+    },
+    {
+      "id": "t021_facts",
+      "trial_id": "t021",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t021_rule_00",
+      "trial_id": "t021",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t021_rule_01",
+      "trial_id": "t021",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t021_rule_02",
+      "trial_id": "t021",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t021_final",
+      "trial_id": "t021",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t022_facts",
+      "trial_id": "t022",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t022_rule_00",
+      "trial_id": "t022",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t022_rule_01",
+      "trial_id": "t022",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t022_rule_02",
+      "trial_id": "t022",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t022_final",
+      "trial_id": "t022",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t023_facts",
+      "trial_id": "t023",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t023_rule_00",
+      "trial_id": "t023",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t023_final",
+      "trial_id": "t023",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t024_facts",
+      "trial_id": "t024",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t024_rule_00",
+      "trial_id": "t024",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t024_rule_01",
+      "trial_id": "t024",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t024_final",
+      "trial_id": "t024",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t025_facts",
+      "trial_id": "t025",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t025_rule_00",
+      "trial_id": "t025",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t025_rule_01",
+      "trial_id": "t025",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t025_rule_02",
+      "trial_id": "t025",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t025_rule_03",
+      "trial_id": "t025",
+      "stage": "rule",
+      "rule_position": 3
+    },
+    {
+      "id": "t025_final",
+      "trial_id": "t025",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t026_select",
+      "trial_id": "t026",
+      "stage": "select",
+      "rule_position": null
+    },
+    {
+      "id": "t026_facts",
+      "trial_id": "t026",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t026_rule_00",
+      "trial_id": "t026",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t026_rule_01",
+      "trial_id": "t026",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t026_rule_02",
+      "trial_id": "t026",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t026_rule_03",
+      "trial_id": "t026",
+      "stage": "rule",
+      "rule_position": 3
+    },
+    {
+      "id": "t026_final",
+      "trial_id": "t026",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t027_select",
+      "trial_id": "t027",
+      "stage": "select",
+      "rule_position": null
+    },
+    {
+      "id": "t027_facts",
+      "trial_id": "t027",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t027_rule_00",
+      "trial_id": "t027",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t027_rule_01",
+      "trial_id": "t027",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t027_rule_02",
+      "trial_id": "t027",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t027_rule_03",
+      "trial_id": "t027",
+      "stage": "rule",
+      "rule_position": 3
+    },
+    {
+      "id": "t027_final",
+      "trial_id": "t027",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t028_select",
+      "trial_id": "t028",
+      "stage": "select",
+      "rule_position": null
+    },
+    {
+      "id": "t028_facts",
+      "trial_id": "t028",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t028_rule_00",
+      "trial_id": "t028",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t028_rule_01",
+      "trial_id": "t028",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t028_rule_02",
+      "trial_id": "t028",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t028_rule_03",
+      "trial_id": "t028",
+      "stage": "rule",
+      "rule_position": 3
+    },
+    {
+      "id": "t028_final",
+      "trial_id": "t028",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t029_select",
+      "trial_id": "t029",
+      "stage": "select",
+      "rule_position": null
+    },
+    {
+      "id": "t029_facts",
+      "trial_id": "t029",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t029_rule_00",
+      "trial_id": "t029",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t029_rule_01",
+      "trial_id": "t029",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t029_rule_02",
+      "trial_id": "t029",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t029_rule_03",
+      "trial_id": "t029",
+      "stage": "rule",
+      "rule_position": 3
+    },
+    {
+      "id": "t029_final",
+      "trial_id": "t029",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t030_select",
+      "trial_id": "t030",
+      "stage": "select",
+      "rule_position": null
+    },
+    {
+      "id": "t030_facts",
+      "trial_id": "t030",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t030_rule_00",
+      "trial_id": "t030",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t030_rule_01",
+      "trial_id": "t030",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t030_rule_02",
+      "trial_id": "t030",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t030_rule_03",
+      "trial_id": "t030",
+      "stage": "rule",
+      "rule_position": 3
+    },
+    {
+      "id": "t030_final",
+      "trial_id": "t030",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t031_select",
+      "trial_id": "t031",
+      "stage": "select",
+      "rule_position": null
+    },
+    {
+      "id": "t031_facts",
+      "trial_id": "t031",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t031_rule_00",
+      "trial_id": "t031",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t031_rule_01",
+      "trial_id": "t031",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t031_rule_02",
+      "trial_id": "t031",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t031_rule_03",
+      "trial_id": "t031",
+      "stage": "rule",
+      "rule_position": 3
+    },
+    {
+      "id": "t031_final",
+      "trial_id": "t031",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t032_select",
+      "trial_id": "t032",
+      "stage": "select",
+      "rule_position": null
+    },
+    {
+      "id": "t032_facts",
+      "trial_id": "t032",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t032_rule_00",
+      "trial_id": "t032",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t032_rule_01",
+      "trial_id": "t032",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t032_rule_02",
+      "trial_id": "t032",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t032_rule_03",
+      "trial_id": "t032",
+      "stage": "rule",
+      "rule_position": 3
+    },
+    {
+      "id": "t032_final",
+      "trial_id": "t032",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t033_select",
+      "trial_id": "t033",
+      "stage": "select",
+      "rule_position": null
+    },
+    {
+      "id": "t033_facts",
+      "trial_id": "t033",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t033_rule_00",
+      "trial_id": "t033",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t033_rule_01",
+      "trial_id": "t033",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t033_rule_02",
+      "trial_id": "t033",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t033_rule_03",
+      "trial_id": "t033",
+      "stage": "rule",
+      "rule_position": 3
+    },
+    {
+      "id": "t033_final",
+      "trial_id": "t033",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t034_facts",
+      "trial_id": "t034",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t034_rule_00",
+      "trial_id": "t034",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t034_rule_01",
+      "trial_id": "t034",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t034_rule_02",
+      "trial_id": "t034",
+      "stage": "rule",
+      "rule_position": 2
+    },
+    {
+      "id": "t034_rule_03",
+      "trial_id": "t034",
+      "stage": "rule",
+      "rule_position": 3
+    },
+    {
+      "id": "t034_final",
+      "trial_id": "t034",
+      "stage": "final",
+      "rule_position": null
+    },
+    {
+      "id": "t035_facts",
+      "trial_id": "t035",
+      "stage": "facts",
+      "rule_position": null
+    },
+    {
+      "id": "t035_rule_00",
+      "trial_id": "t035",
+      "stage": "rule",
+      "rule_position": 0
+    },
+    {
+      "id": "t035_rule_01",
+      "trial_id": "t035",
+      "stage": "rule",
+      "rule_position": 1
+    },
+    {
+      "id": "t035_final",
+      "trial_id": "t035",
+      "stage": "final",
+      "rule_position": null
+    }
+  ],
+  "actions": [
+    {
+      "kind": "metadata",
+      "id": "b00_before"
+    },
+    {
+      "kind": "slot",
+      "id": "t000_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t000_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t000_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t001_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t001_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t001_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t001_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t001_rule_03"
+    },
+    {
+      "kind": "slot",
+      "id": "t001_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t002_select"
+    },
+    {
+      "kind": "slot",
+      "id": "t002_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t002_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t002_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t002_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t002_rule_03"
+    },
+    {
+      "kind": "slot",
+      "id": "t002_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t003_select"
+    },
+    {
+      "kind": "slot",
+      "id": "t003_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t003_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t003_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t003_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t003_rule_03"
+    },
+    {
+      "kind": "slot",
+      "id": "t003_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t004_select"
+    },
+    {
+      "kind": "slot",
+      "id": "t004_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t004_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t004_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t004_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t004_rule_03"
+    },
+    {
+      "kind": "slot",
+      "id": "t004_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t005_select"
+    },
+    {
+      "kind": "slot",
+      "id": "t005_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t005_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t005_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t005_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t005_rule_03"
+    },
+    {
+      "kind": "slot",
+      "id": "t005_final"
+    },
+    {
+      "kind": "metadata",
+      "id": "b00_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b01_before"
+    },
+    {
+      "kind": "slot",
+      "id": "t006_select"
+    },
+    {
+      "kind": "slot",
+      "id": "t006_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t006_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t006_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t006_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t006_rule_03"
+    },
+    {
+      "kind": "slot",
+      "id": "t006_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t007_select"
+    },
+    {
+      "kind": "slot",
+      "id": "t007_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t007_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t007_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t007_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t007_rule_03"
+    },
+    {
+      "kind": "slot",
+      "id": "t007_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t008_select"
+    },
+    {
+      "kind": "slot",
+      "id": "t008_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t008_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t008_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t008_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t008_rule_03"
+    },
+    {
+      "kind": "slot",
+      "id": "t008_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t009_select"
+    },
+    {
+      "kind": "slot",
+      "id": "t009_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t009_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t009_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t009_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t009_rule_03"
+    },
+    {
+      "kind": "slot",
+      "id": "t009_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t010_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t010_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t010_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t010_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t010_rule_03"
+    },
+    {
+      "kind": "slot",
+      "id": "t010_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t011_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t011_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t011_final"
+    },
+    {
+      "kind": "metadata",
+      "id": "b01_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b02_before"
+    },
+    {
+      "kind": "slot",
+      "id": "t012_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t012_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t012_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t013_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t013_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t013_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t013_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t013_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t014_select"
+    },
+    {
+      "kind": "slot",
+      "id": "t014_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t014_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t014_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t014_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t014_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t015_select"
+    },
+    {
+      "kind": "slot",
+      "id": "t015_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t015_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t015_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t015_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t015_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t016_select"
+    },
+    {
+      "kind": "slot",
+      "id": "t016_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t016_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t016_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t016_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t016_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t017_select"
+    },
+    {
+      "kind": "slot",
+      "id": "t017_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t017_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t017_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t017_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t017_final"
+    },
+    {
+      "kind": "metadata",
+      "id": "b02_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b03_before"
+    },
+    {
+      "kind": "slot",
+      "id": "t018_select"
+    },
+    {
+      "kind": "slot",
+      "id": "t018_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t018_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t018_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t018_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t018_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t019_select"
+    },
+    {
+      "kind": "slot",
+      "id": "t019_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t019_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t019_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t019_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t019_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t020_select"
+    },
+    {
+      "kind": "slot",
+      "id": "t020_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t020_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t020_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t020_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t020_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t021_select"
+    },
+    {
+      "kind": "slot",
+      "id": "t021_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t021_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t021_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t021_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t021_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t022_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t022_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t022_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t022_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t022_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t023_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t023_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t023_final"
+    },
+    {
+      "kind": "metadata",
+      "id": "b03_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b04_before"
+    },
+    {
+      "kind": "slot",
+      "id": "t024_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t024_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t024_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t024_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t025_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t025_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t025_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t025_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t025_rule_03"
+    },
+    {
+      "kind": "slot",
+      "id": "t025_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t026_select"
+    },
+    {
+      "kind": "slot",
+      "id": "t026_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t026_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t026_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t026_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t026_rule_03"
+    },
+    {
+      "kind": "slot",
+      "id": "t026_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t027_select"
+    },
+    {
+      "kind": "slot",
+      "id": "t027_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t027_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t027_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t027_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t027_rule_03"
+    },
+    {
+      "kind": "slot",
+      "id": "t027_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t028_select"
+    },
+    {
+      "kind": "slot",
+      "id": "t028_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t028_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t028_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t028_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t028_rule_03"
+    },
+    {
+      "kind": "slot",
+      "id": "t028_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t029_select"
+    },
+    {
+      "kind": "slot",
+      "id": "t029_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t029_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t029_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t029_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t029_rule_03"
+    },
+    {
+      "kind": "slot",
+      "id": "t029_final"
+    },
+    {
+      "kind": "metadata",
+      "id": "b04_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b05_before"
+    },
+    {
+      "kind": "slot",
+      "id": "t030_select"
+    },
+    {
+      "kind": "slot",
+      "id": "t030_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t030_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t030_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t030_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t030_rule_03"
+    },
+    {
+      "kind": "slot",
+      "id": "t030_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t031_select"
+    },
+    {
+      "kind": "slot",
+      "id": "t031_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t031_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t031_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t031_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t031_rule_03"
+    },
+    {
+      "kind": "slot",
+      "id": "t031_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t032_select"
+    },
+    {
+      "kind": "slot",
+      "id": "t032_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t032_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t032_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t032_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t032_rule_03"
+    },
+    {
+      "kind": "slot",
+      "id": "t032_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t033_select"
+    },
+    {
+      "kind": "slot",
+      "id": "t033_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t033_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t033_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t033_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t033_rule_03"
+    },
+    {
+      "kind": "slot",
+      "id": "t033_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t034_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t034_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t034_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t034_rule_02"
+    },
+    {
+      "kind": "slot",
+      "id": "t034_rule_03"
+    },
+    {
+      "kind": "slot",
+      "id": "t034_final"
+    },
+    {
+      "kind": "slot",
+      "id": "t035_facts"
+    },
+    {
+      "kind": "slot",
+      "id": "t035_rule_00"
+    },
+    {
+      "kind": "slot",
+      "id": "t035_rule_01"
+    },
+    {
+      "kind": "slot",
+      "id": "t035_final"
+    },
+    {
+      "kind": "metadata",
+      "id": "b05_after"
+    }
+  ],
+  "plan_sha256": "23b0ced508439e809abc3692db0422a412bb1d566a18c5dbc2a71ad8cccaf985"
+}

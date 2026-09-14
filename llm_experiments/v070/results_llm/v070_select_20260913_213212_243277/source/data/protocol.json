@@ -1,0 +1,574 @@
+{
+  "model": "qwen3:4b-instruct",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "seeds": [
+    64001001,
+    64001002
+  ],
+  "num_predict": 4096,
+  "timeout_seconds": 300,
+  "request_utf8_byte_limit": 32768,
+  "problems": [
+    {
+      "id": "T02",
+      "facts": [
+        "Lp",
+        "Ls"
+      ],
+      "rules": [
+        {
+          "id": "r83",
+          "premises": [
+            "Lp",
+            "Ls"
+          ],
+          "conclusion": "Lg"
+        },
+        {
+          "id": "r21",
+          "premises": [
+            "Lp"
+          ],
+          "conclusion": "Lq"
+        },
+        {
+          "id": "r57",
+          "premises": [
+            "Lq",
+            "Ls"
+          ],
+          "conclusion": "Lr"
+        },
+        {
+          "id": "r04",
+          "premises": [
+            "Lr"
+          ],
+          "conclusion": "Lt"
+        },
+        {
+          "id": "r69",
+          "premises": [
+            "Lt"
+          ],
+          "conclusion": "Lg"
+        }
+      ],
+      "goal": "Lg"
+    },
+    {
+      "id": "E01_shared_fork",
+      "facts": [
+        "Aa",
+        "Ab"
+      ],
+      "rules": [
+        {
+          "id": "n08",
+          "premises": [
+            "Aa"
+          ],
+          "conclusion": "Ax"
+        },
+        {
+          "id": "n52",
+          "premises": [
+            "Aa",
+            "Ab"
+          ],
+          "conclusion": "Ag"
+        },
+        {
+          "id": "n37",
+          "premises": [
+            "Ax",
+            "Ay",
+            "Ab"
+          ],
+          "conclusion": "Ag"
+        },
+        {
+          "id": "n91",
+          "premises": [
+            "Aa"
+          ],
+          "conclusion": "Ay"
+        },
+        {
+          "id": "n64",
+          "premises": [
+            "Ab"
+          ],
+          "conclusion": "Az"
+        }
+      ],
+      "goal": "Ag"
+    },
+    {
+      "id": "E02_two_vs_four",
+      "facts": [
+        "Pa",
+        "Pb",
+        "Pc"
+      ],
+      "rules": [
+        {
+          "id": "m33",
+          "premises": [
+            "Pa"
+          ],
+          "conclusion": "Pu"
+        },
+        {
+          "id": "m76",
+          "premises": [
+            "Ps",
+            "Pc"
+          ],
+          "conclusion": "Pg"
+        },
+        {
+          "id": "m18",
+          "premises": [
+            "Pa",
+            "Pb"
+          ],
+          "conclusion": "Ps"
+        },
+        {
+          "id": "m05",
+          "premises": [
+            "Pu",
+            "Pb"
+          ],
+          "conclusion": "Pv"
+        },
+        {
+          "id": "m41",
+          "premises": [
+            "Pw"
+          ],
+          "conclusion": "Pg"
+        },
+        {
+          "id": "m84",
+          "premises": [
+            "Pv",
+            "Pc"
+          ],
+          "conclusion": "Pw"
+        }
+      ],
+      "goal": "Pg"
+    },
+    {
+      "id": "C01_equal_count",
+      "facts": [
+        "Ca",
+        "Cb"
+      ],
+      "rules": [
+        {
+          "id": "c74",
+          "premises": [
+            "Cu"
+          ],
+          "conclusion": "Cg"
+        },
+        {
+          "id": "c19",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Cx"
+        },
+        {
+          "id": "c46",
+          "premises": [
+            "Ca"
+          ],
+          "conclusion": "Ct"
+        },
+        {
+          "id": "c83",
+          "premises": [
+            "Cx",
+            "Cy"
+          ],
+          "conclusion": "Cg"
+        },
+        {
+          "id": "c28",
+          "premises": [
+            "Ct",
+            "Cb"
+          ],
+          "conclusion": "Cu"
+        },
+        {
+          "id": "c61",
+          "premises": [
+            "Cb"
+          ],
+          "conclusion": "Cy"
+        }
+      ],
+      "goal": "Cg"
+    },
+    {
+      "id": "C02_count_reversal",
+      "facts": [
+        "Qa",
+        "Qb",
+        "Qc"
+      ],
+      "rules": [
+        {
+          "id": "q53",
+          "premises": [
+            "Qv"
+          ],
+          "conclusion": "Qg"
+        },
+        {
+          "id": "q17",
+          "premises": [
+            "Qa"
+          ],
+          "conclusion": "Qx"
+        },
+        {
+          "id": "q86",
+          "premises": [
+            "Qu",
+            "Qb"
+          ],
+          "conclusion": "Qv"
+        },
+        {
+          "id": "q42",
+          "premises": [
+            "Qc"
+          ],
+          "conclusion": "Qz"
+        },
+        {
+          "id": "q69",
+          "premises": [
+            "Qx",
+            "Qy",
+            "Qz"
+          ],
+          "conclusion": "Qg"
+        },
+        {
+          "id": "q25",
+          "premises": [
+            "Qa",
+            "Qc"
+          ],
+          "conclusion": "Qu"
+        },
+        {
+          "id": "q94",
+          "premises": [
+            "Qb"
+          ],
+          "conclusion": "Qy"
+        }
+      ],
+      "goal": "Qg"
+    }
+  ],
+  "depth_ranges": {
+    "T02": [
+      1,
+      4
+    ],
+    "E01_shared_fork": [
+      1,
+      2
+    ],
+    "E02_two_vs_four": [
+      2,
+      4
+    ],
+    "C01_equal_count": [
+      2,
+      3
+    ],
+    "C02_count_reversal": [
+      2,
+      3
+    ]
+  },
+  "reference_plans": {
+    "T02": {
+      "reference_short": [
+        "r83"
+      ],
+      "reference_long": [
+        "r21",
+        "r57",
+        "r04",
+        "r69"
+      ]
+    },
+    "E01_shared_fork": {
+      "reference_short": [
+        "n52"
+      ],
+      "reference_long": [
+        "n08",
+        "n91",
+        "n37"
+      ]
+    },
+    "E02_two_vs_four": {
+      "reference_short": [
+        "m18",
+        "m76"
+      ],
+      "reference_long": [
+        "m33",
+        "m05",
+        "m84",
+        "m41"
+      ]
+    },
+    "C01_equal_count": {
+      "reference_short": [
+        "c19",
+        "c61",
+        "c83"
+      ],
+      "reference_long": [
+        "c46",
+        "c28",
+        "c74"
+      ]
+    },
+    "C02_count_reversal": {
+      "reference_short": [
+        "q17",
+        "q94",
+        "q42",
+        "q69"
+      ],
+      "reference_long": [
+        "q25",
+        "q86",
+        "q53"
+      ]
+    }
+  },
+  "prior_problems": [
+    {
+      "id": "T02",
+      "facts": [
+        "Lp",
+        "Ls"
+      ],
+      "rules": [
+        {
+          "id": "r83",
+          "premises": [
+            "Lp",
+            "Ls"
+          ],
+          "conclusion": "Lg"
+        },
+        {
+          "id": "r21",
+          "premises": [
+            "Lp"
+          ],
+          "conclusion": "Lq"
+        },
+        {
+          "id": "r57",
+          "premises": [
+            "Lq",
+            "Ls"
+          ],
+          "conclusion": "Lr"
+        },
+        {
+          "id": "r04",
+          "premises": [
+            "Lr"
+          ],
+          "conclusion": "Lt"
+        },
+        {
+          "id": "r69",
+          "premises": [
+            "Lt"
+          ],
+          "conclusion": "Lg"
+        }
+      ],
+      "goal": "Lg"
+    },
+    {
+      "id": "E01_shared_fork",
+      "facts": [
+        "Aa",
+        "Ab"
+      ],
+      "rules": [
+        {
+          "id": "n08",
+          "premises": [
+            "Aa"
+          ],
+          "conclusion": "Ax"
+        },
+        {
+          "id": "n52",
+          "premises": [
+            "Aa",
+            "Ab"
+          ],
+          "conclusion": "Ag"
+        },
+        {
+          "id": "n37",
+          "premises": [
+            "Ax",
+            "Ay",
+            "Ab"
+          ],
+          "conclusion": "Ag"
+        },
+        {
+          "id": "n91",
+          "premises": [
+            "Aa"
+          ],
+          "conclusion": "Ay"
+        },
+        {
+          "id": "n64",
+          "premises": [
+            "Ab"
+          ],
+          "conclusion": "Az"
+        }
+      ],
+      "goal": "Ag"
+    },
+    {
+      "id": "E02_two_vs_four",
+      "facts": [
+        "Pa",
+        "Pb",
+        "Pc"
+      ],
+      "rules": [
+        {
+          "id": "m33",
+          "premises": [
+            "Pa"
+          ],
+          "conclusion": "Pu"
+        },
+        {
+          "id": "m76",
+          "premises": [
+            "Ps",
+            "Pc"
+          ],
+          "conclusion": "Pg"
+        },
+        {
+          "id": "m18",
+          "premises": [
+            "Pa",
+            "Pb"
+          ],
+          "conclusion": "Ps"
+        },
+        {
+          "id": "m05",
+          "premises": [
+            "Pu",
+            "Pb"
+          ],
+          "conclusion": "Pv"
+        },
+        {
+          "id": "m41",
+          "premises": [
+            "Pw"
+          ],
+          "conclusion": "Pg"
+        },
+        {
+          "id": "m84",
+          "premises": [
+            "Pv",
+            "Pc"
+          ],
+          "conclusion": "Pw"
+        }
+      ],
+      "goal": "Pg"
+    }
+  ],
+  "contract": "v070-depth-route-selection-r1",
+  "baseline_sha256": "346a2096dd24476f0bda8f1244c14cf9a1670843b2dbe7068da6405507432cb4",
+  "prior_verifier_source_sha256": "7b44b16a2f2dd82c95a6572cf488e5a1cc704564676199ef677e36b440cc9a65",
+  "original_v069_plan_sha256": "6d247f4a6a6ada3b927a83d9ba2e381458a32a252b855b50d47b924c5db5d35e",
+  "max_inference_calls": 40,
+  "metadata_records": 20,
+  "generation_token_upper_bound": 163840,
+  "conditions": [
+    "shallow",
+    "deep"
+  ],
+  "reference_conditions": [
+    "reference_short",
+    "reference_long"
+  ],
+  "candidate_orders": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "no_warmup": true,
+  "automatic_retry": false,
+  "host_output_repair": false,
+  "A": "not_measured",
+  "M": "not_measured",
+  "end_to_end_graph_D_control": "not_measured",
+  "independent_holdout": false,
+  "assigned_trials": 40,
+  "assigned_pairs": 20,
+  "original_trials": 24,
+  "discriminating_control_trials": 16,
+  "positive_constructor_baseline": {
+    "version": "v069",
+    "successes": 12,
+    "assigned": 12,
+    "preserved": true
+  },
+  "selection_only": true,
+  "constructor_calls": 0,
+  "input_provenance": "Two experimenter-verified unlabeled candidate rule lists are shown; the model must select using only the requested dependency-depth direction.",
+  "research_claim": "Catalog-based dependency-depth route selection, not autonomous plan generation or end-to-end graph control.",
+  "decision_rule": "One frozen 40-call batch. Complete+40 measured: 40/40 and 20/20 paired successes qualifies this selector; otherwise preserve ranges and close this formulation. Any incomplete/unmeasured => null. No automatic follow-up.",
+  "comparison_limit": "Original tasks are already seen. C01/C02 are newly authored diagnostic controls, NOT independently sampled holdout. No free-plan generation, hidden-state, cost superiority, or end-to-end composition claim.",
+  "source_rule_order": "Original three problem rules are byte-equivalent; candidate order is crossed within each problem/seed. Rule order itself is fixed.",
+  "output_contract": "Copy exactly ONE candidate rule_ids list. Do not combine, reorder, rename, repair or synthesize routes. Nonmember but logically valid output is recorded separately and is not selection success.",
+  "headers": {
+    "common": "problem의 facts, rules, goal은 고정이다. candidate_rule_ids에 있는 두 규칙 경로 중 requested_depth 요구를 만족하는 경로 하나를 선택한다.\nD는 전체 규칙 개수나 출력 길이가 아니라 최종 goal을 지지하는 의존 구조의 깊이다. 초기 사실 깊이는 0이고, 규칙 결과의 깊이는 1 + max(그 규칙 전제들의 깊이)다. 갈라진 가지는 길이를 더하지 않는다.\n두 후보에는 깊이 정답 라벨이 없고 배열 위치는 정답을 뜻하지 않는다. problem의 규칙과 의존 관계로 판단한다.\n선택한 후보의 규칙 ID 배열을 순서와 철자 그대로 rule_ids에 복사한다. 두 후보를 섞거나 새 경로를 만들거나 설명을 출력하지 않는다.",
+    "shallow": "최종 goal 지지 깊이 D가 더 작은 후보를 선택한다.",
+    "deep": "최종 goal 지지 깊이 D가 더 큰 후보를 선택한다."
+  }
+}

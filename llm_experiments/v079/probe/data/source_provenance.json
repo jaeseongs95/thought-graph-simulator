@@ -1,0 +1,13 @@
+{
+  "version": "v079",
+  "basis": "supplied completed v078 evidence and analysis",
+  "prior_evidence_sha256": "d5b4ce77af015951f66a33bd1648b2d98494226387ec5e9c40563b7c8b3b0e25",
+  "prior_source_sha256": "6dbd59283c5723fa12bff3bfcb386cec787f76630ee02b2c6cda728096ece36c",
+  "reused_unchanged": {
+    "measure.py": "47e6a93f5e96e8346ccb21c77034a5859ad8fbe9a326e77bff44acd58d610f71",
+    "stages.py": "a07e85174501ce9e5242b69818adb8fae6a41e644f947122839e25fff23caf6c",
+    "audit_graph.py": "83d12ee330eb6a3065f49268b14115945a44599c8b0e5827ca517e62e6e1c0b3"
+  },
+  "score_definition_changed": false,
+  "model_inference_at_authoring": 0
+}

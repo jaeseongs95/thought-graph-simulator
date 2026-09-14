@@ -1,0 +1,107 @@
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_logic.py', '-v']
+test_24_modes_production_independent_summary_and_render (test_logic.Logic.test_24_modes_production_independent_summary_and_render) ... ok
+test_40_calls_60_actions_and20_pairs (test_logic.Logic.test_40_calls_60_actions_and20_pairs) ... ok
+test_500_route_mutations_independent_depth (test_logic.Logic.test_500_route_mutations_independent_depth) ... ok
+test_all_source_imports_compile (test_logic.Logic.test_all_source_imports_compile) ... ok
+test_depth_not_rule_count (test_logic.Logic.test_depth_not_rule_count) ... ok
+test_duplicate_ids_and_unused_nodes_fail (test_logic.Logic.test_duplicate_ids_and_unused_nodes_fail) ... ok
+test_fixed_position_never_passes_pair (test_logic.Logic.test_fixed_position_never_passes_pair) ... ok
+test_full_factorial_and_independent_schedule (test_logic.Logic.test_full_factorial_and_independent_schedule) ... ok
+test_length_heuristic_fails_controls (test_logic.Logic.test_length_heuristic_fails_controls) ... ok
+test_missing_and_boolean_usage_not_zero (test_logic.Logic.test_missing_and_boolean_usage_not_zero) ... ok
+test_no_production_import_in_verifier (test_logic.Logic.test_no_production_import_in_verifier) ... ok
+test_nonmember_valid_route_not_repaired (test_logic.Logic.test_nonmember_valid_route_not_repaired) ... ok
+test_only_D_instruction_differs_in_pair (test_logic.Logic.test_only_D_instruction_differs_in_pair) ... ok
+test_partial_has_null_gate (test_logic.Logic.test_partial_has_null_gate) ... ok
+test_perfect_selector_not_end_to_end (test_logic.Logic.test_perfect_selector_not_end_to_end) ... ok
+test_requests_independently_reconstructed_and_no_answer_labels (test_logic.Logic.test_requests_independently_reconstructed_and_no_answer_labels) ... ok
+test_selector_rejects_history (test_logic.Logic.test_selector_rejects_history) ... ok
+test_unmeasured_not_zero_D (test_logic.Logic.test_unmeasured_not_zero_D) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 2.554s
+
+OK
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'run.py', 'prepare', '--baseline', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v069\\results_llm\\v069_append_20260913_204633_329627_evidence.zip', '--run-name', 'v070_select_20260913_213212_243277', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v070\\experiments\\v070_select_20260913_213212_243277.plan.json']
+{
+  "prepared": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v070\\experiments\\v070_select_20260913_213212_243277.plan.json",
+  "new_model_inference": false,
+  "max_inference_calls_when_executed": 40,
+  "plan_sha256": "6a7ce8c31c36a9da2677299a7b36bbb1f7f8e5ef9dbbc011494b082b247aa060"
+}
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'run.py', 'execute', '--plan', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v070\\experiments\\v070_select_20260913_213212_243277.plan.json', '--baseline', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v069\\results_llm\\v069_append_20260913_204633_329627_evidence.zip', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v070\\results_llm\\v070_select_20260913_213212_243277', '--endpoint', 'http://127.0.0.1:11434']
+1/60: b00_before
+2/60: b00_o0_shallow
+3/60: b00_o0_deep
+4/60: b00_o1_deep
+5/60: b00_o1_shallow
+6/60: b00_after
+7/60: b01_before
+8/60: b01_o1_shallow
+9/60: b01_o1_deep
+10/60: b01_o0_deep
+11/60: b01_o0_shallow
+12/60: b01_after
+13/60: b02_before
+14/60: b02_o0_shallow
+15/60: b02_o0_deep
+16/60: b02_o1_deep
+17/60: b02_o1_shallow
+18/60: b02_after
+19/60: b03_before
+20/60: b03_o1_shallow
+21/60: b03_o1_deep
+22/60: b03_o0_deep
+23/60: b03_o0_shallow
+24/60: b03_after
+25/60: b04_before
+26/60: b04_o0_shallow
+27/60: b04_o0_deep
+28/60: b04_o1_deep
+29/60: b04_o1_shallow
+30/60: b04_after
+31/60: b05_before
+32/60: b05_o1_shallow
+33/60: b05_o1_deep
+34/60: b05_o0_deep
+35/60: b05_o0_shallow
+36/60: b05_after
+37/60: b06_before
+38/60: b06_o0_shallow
+39/60: b06_o0_deep
+40/60: b06_o1_deep
+41/60: b06_o1_shallow
+42/60: b06_after
+43/60: b07_before
+44/60: b07_o1_shallow
+45/60: b07_o1_deep
+46/60: b07_o0_deep
+47/60: b07_o0_shallow
+48/60: b07_after
+49/60: b08_before
+50/60: b08_o0_shallow
+51/60: b08_o0_deep
+52/60: b08_o1_deep
+53/60: b08_o1_shallow
+54/60: b08_after
+55/60: b09_before
+56/60: b09_o1_shallow
+57/60: b09_o1_deep
+58/60: b09_o0_deep
+59/60: b09_o0_shallow
+60/60: b09_after
+{
+  "state": "complete",
+  "evidence_zip": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v070\\results_llm\\v070_select_20260913_213212_243277_evidence.zip",
+  "independent_verification": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v070\\results_llm\\v070_select_20260913_213212_243277_independent.json",
+  "inference_calls": 40
+}
+
+EXIT 0

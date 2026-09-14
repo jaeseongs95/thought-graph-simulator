@@ -1,0 +1,5 @@
+{
+  "measure.py": "47e6a93f5e96e8346ccb21c77034a5859ad8fbe9a326e77bff44acd58d610f71",
+  "stages.py": "a07e85174501ce9e5242b69818adb8fae6a41e644f947122839e25fff23caf6c",
+  "origin": "v069 source, byte-identical; standalone graph audit ported from v069 independent checker with no production imports"
+}

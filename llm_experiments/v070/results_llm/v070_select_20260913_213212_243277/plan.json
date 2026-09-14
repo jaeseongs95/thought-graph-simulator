@@ -1,0 +1,1633 @@
+{
+  "contract": "v070-plan-r1",
+  "run_name": "v070_select_20260913_213212_243277",
+  "provenance": "live",
+  "protocol": {
+    "model": "qwen3:4b-instruct",
+    "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "seeds": [
+      64001001,
+      64001002
+    ],
+    "num_predict": 4096,
+    "timeout_seconds": 300,
+    "request_utf8_byte_limit": 32768,
+    "problems": [
+      {
+        "id": "T02",
+        "facts": [
+          "Lp",
+          "Ls"
+        ],
+        "rules": [
+          {
+            "id": "r83",
+            "premises": [
+              "Lp",
+              "Ls"
+            ],
+            "conclusion": "Lg"
+          },
+          {
+            "id": "r21",
+            "premises": [
+              "Lp"
+            ],
+            "conclusion": "Lq"
+          },
+          {
+            "id": "r57",
+            "premises": [
+              "Lq",
+              "Ls"
+            ],
+            "conclusion": "Lr"
+          },
+          {
+            "id": "r04",
+            "premises": [
+              "Lr"
+            ],
+            "conclusion": "Lt"
+          },
+          {
+            "id": "r69",
+            "premises": [
+              "Lt"
+            ],
+            "conclusion": "Lg"
+          }
+        ],
+        "goal": "Lg"
+      },
+      {
+        "id": "E01_shared_fork",
+        "facts": [
+          "Aa",
+          "Ab"
+        ],
+        "rules": [
+          {
+            "id": "n08",
+            "premises": [
+              "Aa"
+            ],
+            "conclusion": "Ax"
+          },
+          {
+            "id": "n52",
+            "premises": [
+              "Aa",
+              "Ab"
+            ],
+            "conclusion": "Ag"
+          },
+          {
+            "id": "n37",
+            "premises": [
+              "Ax",
+              "Ay",
+              "Ab"
+            ],
+            "conclusion": "Ag"
+          },
+          {
+            "id": "n91",
+            "premises": [
+              "Aa"
+            ],
+            "conclusion": "Ay"
+          },
+          {
+            "id": "n64",
+            "premises": [
+              "Ab"
+            ],
+            "conclusion": "Az"
+          }
+        ],
+        "goal": "Ag"
+      },
+      {
+        "id": "E02_two_vs_four",
+        "facts": [
+          "Pa",
+          "Pb",
+          "Pc"
+        ],
+        "rules": [
+          {
+            "id": "m33",
+            "premises": [
+              "Pa"
+            ],
+            "conclusion": "Pu"
+          },
+          {
+            "id": "m76",
+            "premises": [
+              "Ps",
+              "Pc"
+            ],
+            "conclusion": "Pg"
+          },
+          {
+            "id": "m18",
+            "premises": [
+              "Pa",
+              "Pb"
+            ],
+            "conclusion": "Ps"
+          },
+          {
+            "id": "m05",
+            "premises": [
+              "Pu",
+              "Pb"
+            ],
+            "conclusion": "Pv"
+          },
+          {
+            "id": "m41",
+            "premises": [
+              "Pw"
+            ],
+            "conclusion": "Pg"
+          },
+          {
+            "id": "m84",
+            "premises": [
+              "Pv",
+              "Pc"
+            ],
+            "conclusion": "Pw"
+          }
+        ],
+        "goal": "Pg"
+      },
+      {
+        "id": "C01_equal_count",
+        "facts": [
+          "Ca",
+          "Cb"
+        ],
+        "rules": [
+          {
+            "id": "c74",
+            "premises": [
+              "Cu"
+            ],
+            "conclusion": "Cg"
+          },
+          {
+            "id": "c19",
+            "premises": [
+              "Ca"
+            ],
+            "conclusion": "Cx"
+          },
+          {
+            "id": "c46",
+            "premises": [
+              "Ca"
+            ],
+            "conclusion": "Ct"
+          },
+          {
+            "id": "c83",
+            "premises": [
+              "Cx",
+              "Cy"
+            ],
+            "conclusion": "Cg"
+          },
+          {
+            "id": "c28",
+            "premises": [
+              "Ct",
+              "Cb"
+            ],
+            "conclusion": "Cu"
+          },
+          {
+            "id": "c61",
+            "premises": [
+              "Cb"
+            ],
+            "conclusion": "Cy"
+          }
+        ],
+        "goal": "Cg"
+      },
+      {
+        "id": "C02_count_reversal",
+        "facts": [
+          "Qa",
+          "Qb",
+          "Qc"
+        ],
+        "rules": [
+          {
+            "id": "q53",
+            "premises": [
+              "Qv"
+            ],
+            "conclusion": "Qg"
+          },
+          {
+            "id": "q17",
+            "premises": [
+              "Qa"
+            ],
+            "conclusion": "Qx"
+          },
+          {
+            "id": "q86",
+            "premises": [
+              "Qu",
+              "Qb"
+            ],
+            "conclusion": "Qv"
+          },
+          {
+            "id": "q42",
+            "premises": [
+              "Qc"
+            ],
+            "conclusion": "Qz"
+          },
+          {
+            "id": "q69",
+            "premises": [
+              "Qx",
+              "Qy",
+              "Qz"
+            ],
+            "conclusion": "Qg"
+          },
+          {
+            "id": "q25",
+            "premises": [
+              "Qa",
+              "Qc"
+            ],
+            "conclusion": "Qu"
+          },
+          {
+            "id": "q94",
+            "premises": [
+              "Qb"
+            ],
+            "conclusion": "Qy"
+          }
+        ],
+        "goal": "Qg"
+      }
+    ],
+    "depth_ranges": {
+      "T02": [
+        1,
+        4
+      ],
+      "E01_shared_fork": [
+        1,
+        2
+      ],
+      "E02_two_vs_four": [
+        2,
+        4
+      ],
+      "C01_equal_count": [
+        2,
+        3
+      ],
+      "C02_count_reversal": [
+        2,
+        3
+      ]
+    },
+    "reference_plans": {
+      "T02": {
+        "reference_short": [
+          "r83"
+        ],
+        "reference_long": [
+          "r21",
+          "r57",
+          "r04",
+          "r69"
+        ]
+      },
+      "E01_shared_fork": {
+        "reference_short": [
+          "n52"
+        ],
+        "reference_long": [
+          "n08",
+          "n91",
+          "n37"
+        ]
+      },
+      "E02_two_vs_four": {
+        "reference_short": [
+          "m18",
+          "m76"
+        ],
+        "reference_long": [
+          "m33",
+          "m05",
+          "m84",
+          "m41"
+        ]
+      },
+      "C01_equal_count": {
+        "reference_short": [
+          "c19",
+          "c61",
+          "c83"
+        ],
+        "reference_long": [
+          "c46",
+          "c28",
+          "c74"
+        ]
+      },
+      "C02_count_reversal": {
+        "reference_short": [
+          "q17",
+          "q94",
+          "q42",
+          "q69"
+        ],
+        "reference_long": [
+          "q25",
+          "q86",
+          "q53"
+        ]
+      }
+    },
+    "prior_problems": [
+      {
+        "id": "T02",
+        "facts": [
+          "Lp",
+          "Ls"
+        ],
+        "rules": [
+          {
+            "id": "r83",
+            "premises": [
+              "Lp",
+              "Ls"
+            ],
+            "conclusion": "Lg"
+          },
+          {
+            "id": "r21",
+            "premises": [
+              "Lp"
+            ],
+            "conclusion": "Lq"
+          },
+          {
+            "id": "r57",
+            "premises": [
+              "Lq",
+              "Ls"
+            ],
+            "conclusion": "Lr"
+          },
+          {
+            "id": "r04",
+            "premises": [
+              "Lr"
+            ],
+            "conclusion": "Lt"
+          },
+          {
+            "id": "r69",
+            "premises": [
+              "Lt"
+            ],
+            "conclusion": "Lg"
+          }
+        ],
+        "goal": "Lg"
+      },
+      {
+        "id": "E01_shared_fork",
+        "facts": [
+          "Aa",
+          "Ab"
+        ],
+        "rules": [
+          {
+            "id": "n08",
+            "premises": [
+              "Aa"
+            ],
+            "conclusion": "Ax"
+          },
+          {
+            "id": "n52",
+            "premises": [
+              "Aa",
+              "Ab"
+            ],
+            "conclusion": "Ag"
+          },
+          {
+            "id": "n37",
+            "premises": [
+              "Ax",
+              "Ay",
+              "Ab"
+            ],
+            "conclusion": "Ag"
+          },
+          {
+            "id": "n91",
+            "premises": [
+              "Aa"
+            ],
+            "conclusion": "Ay"
+          },
+          {
+            "id": "n64",
+            "premises": [
+              "Ab"
+            ],
+            "conclusion": "Az"
+          }
+        ],
+        "goal": "Ag"
+      },
+      {
+        "id": "E02_two_vs_four",
+        "facts": [
+          "Pa",
+          "Pb",
+          "Pc"
+        ],
+        "rules": [
+          {
+            "id": "m33",
+            "premises": [
+              "Pa"
+            ],
+            "conclusion": "Pu"
+          },
+          {
+            "id": "m76",
+            "premises": [
+              "Ps",
+              "Pc"
+            ],
+            "conclusion": "Pg"
+          },
+          {
+            "id": "m18",
+            "premises": [
+              "Pa",
+              "Pb"
+            ],
+            "conclusion": "Ps"
+          },
+          {
+            "id": "m05",
+            "premises": [
+              "Pu",
+              "Pb"
+            ],
+            "conclusion": "Pv"
+          },
+          {
+            "id": "m41",
+            "premises": [
+              "Pw"
+            ],
+            "conclusion": "Pg"
+          },
+          {
+            "id": "m84",
+            "premises": [
+              "Pv",
+              "Pc"
+            ],
+            "conclusion": "Pw"
+          }
+        ],
+        "goal": "Pg"
+      }
+    ],
+    "contract": "v070-depth-route-selection-r1",
+    "baseline_sha256": "346a2096dd24476f0bda8f1244c14cf9a1670843b2dbe7068da6405507432cb4",
+    "prior_verifier_source_sha256": "7b44b16a2f2dd82c95a6572cf488e5a1cc704564676199ef677e36b440cc9a65",
+    "original_v069_plan_sha256": "6d247f4a6a6ada3b927a83d9ba2e381458a32a252b855b50d47b924c5db5d35e",
+    "max_inference_calls": 40,
+    "metadata_records": 20,
+    "generation_token_upper_bound": 163840,
+    "conditions": [
+      "shallow",
+      "deep"
+    ],
+    "reference_conditions": [
+      "reference_short",
+      "reference_long"
+    ],
+    "candidate_orders": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "no_warmup": true,
+    "automatic_retry": false,
+    "host_output_repair": false,
+    "A": "not_measured",
+    "M": "not_measured",
+    "end_to_end_graph_D_control": "not_measured",
+    "independent_holdout": false,
+    "assigned_trials": 40,
+    "assigned_pairs": 20,
+    "original_trials": 24,
+    "discriminating_control_trials": 16,
+    "positive_constructor_baseline": {
+      "version": "v069",
+      "successes": 12,
+      "assigned": 12,
+      "preserved": true
+    },
+    "selection_only": true,
+    "constructor_calls": 0,
+    "input_provenance": "Two experimenter-verified unlabeled candidate rule lists are shown; the model must select using only the requested dependency-depth direction.",
+    "research_claim": "Catalog-based dependency-depth route selection, not autonomous plan generation or end-to-end graph control.",
+    "decision_rule": "One frozen 40-call batch. Complete+40 measured: 40/40 and 20/20 paired successes qualifies this selector; otherwise preserve ranges and close this formulation. Any incomplete/unmeasured => null. No automatic follow-up.",
+    "comparison_limit": "Original tasks are already seen. C01/C02 are newly authored diagnostic controls, NOT independently sampled holdout. No free-plan generation, hidden-state, cost superiority, or end-to-end composition claim.",
+    "source_rule_order": "Original three problem rules are byte-equivalent; candidate order is crossed within each problem/seed. Rule order itself is fixed.",
+    "output_contract": "Copy exactly ONE candidate rule_ids list. Do not combine, reorder, rename, repair or synthesize routes. Nonmember but logically valid output is recorded separately and is not selection success.",
+    "headers": {
+      "common": "problem의 facts, rules, goal은 고정이다. candidate_rule_ids에 있는 두 규칙 경로 중 requested_depth 요구를 만족하는 경로 하나를 선택한다.\nD는 전체 규칙 개수나 출력 길이가 아니라 최종 goal을 지지하는 의존 구조의 깊이다. 초기 사실 깊이는 0이고, 규칙 결과의 깊이는 1 + max(그 규칙 전제들의 깊이)다. 갈라진 가지는 길이를 더하지 않는다.\n두 후보에는 깊이 정답 라벨이 없고 배열 위치는 정답을 뜻하지 않는다. problem의 규칙과 의존 관계로 판단한다.\n선택한 후보의 규칙 ID 배열을 순서와 철자 그대로 rule_ids에 복사한다. 두 후보를 섞거나 새 경로를 만들거나 설명을 출력하지 않는다.",
+      "shallow": "최종 goal 지지 깊이 D가 더 작은 후보를 선택한다.",
+      "deep": "최종 goal 지지 깊이 D가 더 큰 후보를 선택한다."
+    }
+  },
+  "protocol_sha256": "130eca430343a904b09b03be45042e175962f47ab54f81ba83fc9d4cc2fa001f",
+  "source_hashes": {
+    "README.md": "11710c8b1d4cecca1b9eae3c2c38a9ffed192576df840aeb6f357f47d0ff8864",
+    "build_release.py": "1698843d421b473463b73c87abef6d00f6000c0128e3b3a726c1c96a0a65c985",
+    "common.py": "8f3ea828bfbe3bde8e62ccfc7018dc22ccd8ffa0b680ba047021d523c1b190ba",
+    "data/protocol.json": "130eca430343a904b09b03be45042e175962f47ab54f81ba83fc9d4cc2fa001f",
+    "design.py": "3ed92410f88df499f3959c0983bfad9171f249669609756a4798efb44c979a24",
+    "docs/PROTOCOL.ko.md": "12278b8d230c00e2f4fefaf8aafba89ab4aba03fb7d7affe42db9b89fdee7066",
+    "docs/REVIEW_AND_CHANGES.ko.md": "859daf6bb0b37959b69adc8291a418b0cb657d0a022b2513014450d6f4f7a51e",
+    "launch.py": "bb8db955aae996fda7f1347dd57d11d533b72609e7460e7d8530314a33e35e6c",
+    "measure.py": "47e6a93f5e96e8346ccb21c77034a5859ad8fbe9a326e77bff44acd58d610f71",
+    "previous.py": "e6a6944de814b5be2e642bd691a5fed3537168e4535b90df76809b37ac37538f",
+    "prior/v069_source.zip": "7b44b16a2f2dd82c95a6572cf488e5a1cc704564676199ef677e36b440cc9a65",
+    "reference.py": "a30fa90e90bb8acef8d96e8cd74c37537e8b16b7dac0631eddde021cb588ff24",
+    "report.py": "45b94c5d97b573686464c427b5eefd9faf4b55ba3c7fd919b8982028d3c3f731",
+    "run.py": "b372ffcf567019fd5d2c648cbd5359e66703dca63850931ad99a139286a255cb",
+    "selection.py": "e62bda5c8ada50ee9999fdc366760820ab8272d0bc862fd6d742134054c6cb54",
+    "tests/fixtures.py": "c960d0f8b2671794cdc735a171decf8fe09fc303b7ba02b28074436684399c7b",
+    "tests/test_integration.py": "5083fb629e11b04fa152239d1330a5cbfc4f0ef1c9a5d42c9bb8bdbb92924f30",
+    "tests/test_integrity.py": "3c6fe948aca706a196000d7b5bca6388f8b1fc0c9c5e94661e11455848685a38",
+    "tests/test_launch.py": "e1ea2f0c746bad1f21476659ab29b11bc3b5f01a5ded2926cab3c74ee891daee",
+    "tests/test_logic.py": "9e2a2dd93f8ca3e67173fba30c0c1160615a0b4ebabe86c7da09c3d8090ab58e",
+    "tests/test_native.py": "2020b48c1a5d3afe93376a0ee493e9c68a995b0aace8e0f7c6c9074fa1d5bcec",
+    "verify.py": "5502aafc07f0f18d2f2405d9845ef1aca2fe160b14c64b48efb52e40361a0d68",
+    "windows/Run-v070.cmd": "c083108fa573c0120ff30347a85e388fc6a62169a9461891010e05f2b4819fe7",
+    "windows/Run-v070.ps1": "4373171d3b968e9ec774b9c6057c31ff741e96c9d99f4a9abbe6988ddb505fd7",
+    "windows/native.ps1": "b77cdfdc8033daa3594a936ba0d32e4e03aae500196bc83ccfc97a912770d063"
+  },
+  "baseline_sha256": "346a2096dd24476f0bda8f1244c14cf9a1670843b2dbe7068da6405507432cb4",
+  "baseline_request": {
+    "model": "qwen3:4b-instruct",
+    "messages": [
+      {
+        "role": "user",
+        "content": "facts와 rules만 사용하여 goal을 지지하는 증명 DAG 하나를 작성한다.\n한 증명만 선택한다. 서로 대안인 두 경로를 모두 나열하면 안 된다. 모든 노드는 선택한 목표 노드의 조상이어야 한다.\nnodes는 위상 순서의 id, atom, rule, parents 배열이다. 초기 사실의 rule은 null이고 parents는 []다.\n규칙 적용의 rule은 실제 규칙 id이며 parents에는 모든 전제 노드 id를 쓴다.\nfinal_node_id는 선택한 목표 노드의 id이다. 원자 이름(goal 문자열)을 쓰는 필드가 아니다.\n최종 노드는 nodes 안에 있어야 한다. 목표 문자열이 같아도 근거 없는 단독 주장은 유효한 증명이 아니다.\n\n경로 지시:\n허용된 유효한 증명 중 최종 지지 깊이가 가장 작은 경로를 선택한다.\nJSON 객체 하나만 출력한다. 출력 형식(JSON Schema):\n{\"type\":\"object\",\"properties\":{\"nodes\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":128},\"atom\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":128},\"rule\":{\"anyOf\":[{\"type\":\"string\",\"minLength\":1,\"maxLength\":128},{\"type\":\"null\"}]},\"parents\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":128},\"minItems\":0,\"maxItems\":16}},\"required\":[\"id\",\"atom\",\"rule\",\"parents\"],\"additionalProperties\":false},\"minItems\":1,\"maxItems\":16},\"final_node_id\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":128}},\"required\":[\"nodes\",\"final_node_id\"],\"additionalProperties\":false}\n\nproblem: {\"id\":\"T02\",\"facts\":[\"Lp\",\"Ls\"],\"rules\":[{\"id\":\"r83\",\"premises\":[\"Lp\",\"Ls\"],\"conclusion\":\"Lg\"},{\"id\":\"r21\",\"premises\":[\"Lp\"],\"conclusion\":\"Lq\"},{\"id\":\"r57\",\"premises\":[\"Lq\",\"Ls\"],\"conclusion\":\"Lr\"},{\"id\":\"r04\",\"premises\":[\"Lr\"],\"conclusion\":\"Lt\"},{\"id\":\"r69\",\"premises\":[\"Lt\"],\"conclusion\":\"Lg\"}],\"goal\":\"Lg\"}"
+      }
+    ],
+    "stream": false,
+    "keep_alive": "10m",
+    "options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repeat_penalty": 1.0,
+      "num_ctx": 8192,
+      "num_predict": 4096,
+      "num_thread": 6,
+      "num_batch": 256,
+      "seed": 64001001
+    },
+    "format": {
+      "type": "object",
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "atom": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "rule": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 128
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "parents": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 128
+                },
+                "minItems": 0,
+                "maxItems": 16
+              }
+            },
+            "required": [
+              "id",
+              "atom",
+              "rule",
+              "parents"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 16
+        },
+        "final_node_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        }
+      },
+      "required": [
+        "nodes",
+        "final_node_id"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "identity": {
+    "model": "qwen3:4b-instruct",
+    "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "show_sha256": "d223770b6393471210267ea75d0870b0770c0ebf3b1f5ae539758f7500816948",
+    "server": {
+      "version": "0.34.0"
+    },
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "4.0B",
+      "quantization_level": "Q4_K_M"
+    },
+    "template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0].role == 'system' %}\n        {{- messages[0].content + '\\n\\n' }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0].content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" and message.content is string and not(message.content.startswith('<tool_response>') and message.content.endswith('</tool_response>')) %}\n        {%- set ns.multi_step_tool = false %}\n        {%- set ns.last_query_index = index %}\n    {%- endif %}\n{%- endfor %}\n{%- for message in messages %}\n    {%- if message.content is string %}\n        {%- set content = message.content %}\n    {%- else %}\n        {%- set content = '' %}\n    {%- endif %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {%- if loop.last or (not loop.last and reasoning_content) %}\n                {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content.strip('\\n') + '\\n</think>\\n\\n' + content.lstrip('\\n') }}\n            {%- else %}\n                {{- '<|im_start|>' + message.role + '\\n' + content }}\n            {%- endif %}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if (loop.first and content) or (not loop.first) %}\n                    {{- '\\n' }}\n                {%- endif %}\n                {%- if tool_call.function %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {{- '<tool_call>\\n{\"name\": \"' }}\n                {{- tool_call.name }}\n                {{- '\", \"arguments\": ' }}\n                {%- if tool_call.arguments is string %}\n                    {{- tool_call.arguments }}\n                {%- else %}\n                    {{- tool_call.arguments | tojson }}\n                {%- endif %}\n                {{- '}\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.first or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}",
+    "parameters": "repeat_penalty                 1\nstop                           \"<|im_start|>\"\nstop                           \"<|im_end|>\"\ntemperature                    0.7\ntop_k                          20\ntop_p                          0.8",
+    "model_info": {
+      "general.architecture": "qwen3",
+      "general.basename": "Qwen3",
+      "general.file_type": 15,
+      "general.finetune": "Instruct",
+      "general.license": "apache-2.0",
+      "general.license.link": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507/blob/main/LICENSE",
+      "general.parameter_count": 4022468096,
+      "general.quantization_version": 2,
+      "general.size_label": "4B",
+      "general.tags": null,
+      "general.type": "model",
+      "general.version": "2507",
+      "qwen3.attention.head_count": 32,
+      "qwen3.attention.head_count_kv": 8,
+      "qwen3.attention.key_length": 128,
+      "qwen3.attention.layer_norm_rms_epsilon": 1e-06,
+      "qwen3.attention.value_length": 128,
+      "qwen3.block_count": 36,
+      "qwen3.context_length": 262144,
+      "qwen3.embedding_length": 2560,
+      "qwen3.feed_forward_length": 9728,
+      "qwen3.rope.freq_base": 5000000,
+      "tokenizer.ggml.add_bos_token": false,
+      "tokenizer.ggml.bos_token_id": 151643,
+      "tokenizer.ggml.eos_token_id": 151645,
+      "tokenizer.ggml.merges": null,
+      "tokenizer.ggml.model": "gpt2",
+      "tokenizer.ggml.padding_token_id": 151643,
+      "tokenizer.ggml.pre": "qwen2",
+      "tokenizer.ggml.token_type": null,
+      "tokenizer.ggml.tokens": null
+    }
+  },
+  "slots": [
+    {
+      "id": "b00_o0_shallow",
+      "pair_id": "b00_o0",
+      "block": 0,
+      "period": 0,
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "shallow",
+      "candidate_order_index": 0,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "seen_constructor_task",
+      "previous_call_id": null,
+      "previous_condition": null
+    },
+    {
+      "id": "b00_o0_deep",
+      "pair_id": "b00_o0",
+      "block": 0,
+      "period": 1,
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "deep",
+      "candidate_order_index": 0,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "seen_constructor_task",
+      "previous_call_id": "b00_o0_shallow",
+      "previous_condition": "shallow"
+    },
+    {
+      "id": "b00_o1_deep",
+      "pair_id": "b00_o1",
+      "block": 0,
+      "period": 2,
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "deep",
+      "candidate_order_index": 1,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "seen_constructor_task",
+      "previous_call_id": "b00_o0_deep",
+      "previous_condition": "deep"
+    },
+    {
+      "id": "b00_o1_shallow",
+      "pair_id": "b00_o1",
+      "block": 0,
+      "period": 3,
+      "problem_id": "T02",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "shallow",
+      "candidate_order_index": 1,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "seen_constructor_task",
+      "previous_call_id": "b00_o1_deep",
+      "previous_condition": "deep"
+    },
+    {
+      "id": "b01_o1_shallow",
+      "pair_id": "b01_o1",
+      "block": 1,
+      "period": 0,
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "shallow",
+      "candidate_order_index": 1,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "seen_constructor_task",
+      "previous_call_id": "b00_o1_shallow",
+      "previous_condition": "shallow"
+    },
+    {
+      "id": "b01_o1_deep",
+      "pair_id": "b01_o1",
+      "block": 1,
+      "period": 1,
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "deep",
+      "candidate_order_index": 1,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "seen_constructor_task",
+      "previous_call_id": "b01_o1_shallow",
+      "previous_condition": "shallow"
+    },
+    {
+      "id": "b01_o0_deep",
+      "pair_id": "b01_o0",
+      "block": 1,
+      "period": 2,
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "deep",
+      "candidate_order_index": 0,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "seen_constructor_task",
+      "previous_call_id": "b01_o1_deep",
+      "previous_condition": "deep"
+    },
+    {
+      "id": "b01_o0_shallow",
+      "pair_id": "b01_o0",
+      "block": 1,
+      "period": 3,
+      "problem_id": "T02",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "shallow",
+      "candidate_order_index": 0,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "seen_constructor_task",
+      "previous_call_id": "b01_o0_deep",
+      "previous_condition": "deep"
+    },
+    {
+      "id": "b02_o0_shallow",
+      "pair_id": "b02_o0",
+      "block": 2,
+      "period": 0,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "shallow",
+      "candidate_order_index": 0,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "seen_constructor_task",
+      "previous_call_id": "b01_o0_shallow",
+      "previous_condition": "shallow"
+    },
+    {
+      "id": "b02_o0_deep",
+      "pair_id": "b02_o0",
+      "block": 2,
+      "period": 1,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "deep",
+      "candidate_order_index": 0,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "seen_constructor_task",
+      "previous_call_id": "b02_o0_shallow",
+      "previous_condition": "shallow"
+    },
+    {
+      "id": "b02_o1_deep",
+      "pair_id": "b02_o1",
+      "block": 2,
+      "period": 2,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "deep",
+      "candidate_order_index": 1,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "seen_constructor_task",
+      "previous_call_id": "b02_o0_deep",
+      "previous_condition": "deep"
+    },
+    {
+      "id": "b02_o1_shallow",
+      "pair_id": "b02_o1",
+      "block": 2,
+      "period": 3,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "shallow",
+      "candidate_order_index": 1,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "seen_constructor_task",
+      "previous_call_id": "b02_o1_deep",
+      "previous_condition": "deep"
+    },
+    {
+      "id": "b03_o1_shallow",
+      "pair_id": "b03_o1",
+      "block": 3,
+      "period": 0,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "shallow",
+      "candidate_order_index": 1,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "seen_constructor_task",
+      "previous_call_id": "b02_o1_shallow",
+      "previous_condition": "shallow"
+    },
+    {
+      "id": "b03_o1_deep",
+      "pair_id": "b03_o1",
+      "block": 3,
+      "period": 1,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "deep",
+      "candidate_order_index": 1,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "seen_constructor_task",
+      "previous_call_id": "b03_o1_shallow",
+      "previous_condition": "shallow"
+    },
+    {
+      "id": "b03_o0_deep",
+      "pair_id": "b03_o0",
+      "block": 3,
+      "period": 2,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "deep",
+      "candidate_order_index": 0,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "seen_constructor_task",
+      "previous_call_id": "b03_o1_deep",
+      "previous_condition": "deep"
+    },
+    {
+      "id": "b03_o0_shallow",
+      "pair_id": "b03_o0",
+      "block": 3,
+      "period": 3,
+      "problem_id": "E01_shared_fork",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "shallow",
+      "candidate_order_index": 0,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "seen_constructor_task",
+      "previous_call_id": "b03_o0_deep",
+      "previous_condition": "deep"
+    },
+    {
+      "id": "b04_o0_shallow",
+      "pair_id": "b04_o0",
+      "block": 4,
+      "period": 0,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "shallow",
+      "candidate_order_index": 0,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "seen_constructor_task",
+      "previous_call_id": "b03_o0_shallow",
+      "previous_condition": "shallow"
+    },
+    {
+      "id": "b04_o0_deep",
+      "pair_id": "b04_o0",
+      "block": 4,
+      "period": 1,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "deep",
+      "candidate_order_index": 0,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "seen_constructor_task",
+      "previous_call_id": "b04_o0_shallow",
+      "previous_condition": "shallow"
+    },
+    {
+      "id": "b04_o1_deep",
+      "pair_id": "b04_o1",
+      "block": 4,
+      "period": 2,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "deep",
+      "candidate_order_index": 1,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "seen_constructor_task",
+      "previous_call_id": "b04_o0_deep",
+      "previous_condition": "deep"
+    },
+    {
+      "id": "b04_o1_shallow",
+      "pair_id": "b04_o1",
+      "block": 4,
+      "period": 3,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "shallow",
+      "candidate_order_index": 1,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "seen_constructor_task",
+      "previous_call_id": "b04_o1_deep",
+      "previous_condition": "deep"
+    },
+    {
+      "id": "b05_o1_shallow",
+      "pair_id": "b05_o1",
+      "block": 5,
+      "period": 0,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "shallow",
+      "candidate_order_index": 1,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "seen_constructor_task",
+      "previous_call_id": "b04_o1_shallow",
+      "previous_condition": "shallow"
+    },
+    {
+      "id": "b05_o1_deep",
+      "pair_id": "b05_o1",
+      "block": 5,
+      "period": 1,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "deep",
+      "candidate_order_index": 1,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "seen_constructor_task",
+      "previous_call_id": "b05_o1_shallow",
+      "previous_condition": "shallow"
+    },
+    {
+      "id": "b05_o0_deep",
+      "pair_id": "b05_o0",
+      "block": 5,
+      "period": 2,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "deep",
+      "candidate_order_index": 0,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "seen_constructor_task",
+      "previous_call_id": "b05_o1_deep",
+      "previous_condition": "deep"
+    },
+    {
+      "id": "b05_o0_shallow",
+      "pair_id": "b05_o0",
+      "block": 5,
+      "period": 3,
+      "problem_id": "E02_two_vs_four",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "shallow",
+      "candidate_order_index": 0,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "seen_constructor_task",
+      "previous_call_id": "b05_o0_deep",
+      "previous_condition": "deep"
+    },
+    {
+      "id": "b06_o0_shallow",
+      "pair_id": "b06_o0",
+      "block": 6,
+      "period": 0,
+      "problem_id": "C01_equal_count",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "shallow",
+      "candidate_order_index": 0,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "authored_discriminating_control",
+      "previous_call_id": "b05_o0_shallow",
+      "previous_condition": "shallow"
+    },
+    {
+      "id": "b06_o0_deep",
+      "pair_id": "b06_o0",
+      "block": 6,
+      "period": 1,
+      "problem_id": "C01_equal_count",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "deep",
+      "candidate_order_index": 0,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "authored_discriminating_control",
+      "previous_call_id": "b06_o0_shallow",
+      "previous_condition": "shallow"
+    },
+    {
+      "id": "b06_o1_deep",
+      "pair_id": "b06_o1",
+      "block": 6,
+      "period": 2,
+      "problem_id": "C01_equal_count",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "deep",
+      "candidate_order_index": 1,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "authored_discriminating_control",
+      "previous_call_id": "b06_o0_deep",
+      "previous_condition": "deep"
+    },
+    {
+      "id": "b06_o1_shallow",
+      "pair_id": "b06_o1",
+      "block": 6,
+      "period": 3,
+      "problem_id": "C01_equal_count",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "shallow",
+      "candidate_order_index": 1,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "authored_discriminating_control",
+      "previous_call_id": "b06_o1_deep",
+      "previous_condition": "deep"
+    },
+    {
+      "id": "b07_o1_shallow",
+      "pair_id": "b07_o1",
+      "block": 7,
+      "period": 0,
+      "problem_id": "C01_equal_count",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "shallow",
+      "candidate_order_index": 1,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "authored_discriminating_control",
+      "previous_call_id": "b06_o1_shallow",
+      "previous_condition": "shallow"
+    },
+    {
+      "id": "b07_o1_deep",
+      "pair_id": "b07_o1",
+      "block": 7,
+      "period": 1,
+      "problem_id": "C01_equal_count",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "deep",
+      "candidate_order_index": 1,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "authored_discriminating_control",
+      "previous_call_id": "b07_o1_shallow",
+      "previous_condition": "shallow"
+    },
+    {
+      "id": "b07_o0_deep",
+      "pair_id": "b07_o0",
+      "block": 7,
+      "period": 2,
+      "problem_id": "C01_equal_count",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "deep",
+      "candidate_order_index": 0,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "authored_discriminating_control",
+      "previous_call_id": "b07_o1_deep",
+      "previous_condition": "deep"
+    },
+    {
+      "id": "b07_o0_shallow",
+      "pair_id": "b07_o0",
+      "block": 7,
+      "period": 3,
+      "problem_id": "C01_equal_count",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "shallow",
+      "candidate_order_index": 0,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "authored_discriminating_control",
+      "previous_call_id": "b07_o0_deep",
+      "previous_condition": "deep"
+    },
+    {
+      "id": "b08_o0_shallow",
+      "pair_id": "b08_o0",
+      "block": 8,
+      "period": 0,
+      "problem_id": "C02_count_reversal",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "shallow",
+      "candidate_order_index": 0,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "authored_discriminating_control",
+      "previous_call_id": "b07_o0_shallow",
+      "previous_condition": "shallow"
+    },
+    {
+      "id": "b08_o0_deep",
+      "pair_id": "b08_o0",
+      "block": 8,
+      "period": 1,
+      "problem_id": "C02_count_reversal",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "deep",
+      "candidate_order_index": 0,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "authored_discriminating_control",
+      "previous_call_id": "b08_o0_shallow",
+      "previous_condition": "shallow"
+    },
+    {
+      "id": "b08_o1_deep",
+      "pair_id": "b08_o1",
+      "block": 8,
+      "period": 2,
+      "problem_id": "C02_count_reversal",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "deep",
+      "candidate_order_index": 1,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "authored_discriminating_control",
+      "previous_call_id": "b08_o0_deep",
+      "previous_condition": "deep"
+    },
+    {
+      "id": "b08_o1_shallow",
+      "pair_id": "b08_o1",
+      "block": 8,
+      "period": 3,
+      "problem_id": "C02_count_reversal",
+      "seed": 64001001,
+      "seed_index": 0,
+      "condition": "shallow",
+      "candidate_order_index": 1,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "authored_discriminating_control",
+      "previous_call_id": "b08_o1_deep",
+      "previous_condition": "deep"
+    },
+    {
+      "id": "b09_o1_shallow",
+      "pair_id": "b09_o1",
+      "block": 9,
+      "period": 0,
+      "problem_id": "C02_count_reversal",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "shallow",
+      "candidate_order_index": 1,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "authored_discriminating_control",
+      "previous_call_id": "b08_o1_shallow",
+      "previous_condition": "shallow"
+    },
+    {
+      "id": "b09_o1_deep",
+      "pair_id": "b09_o1",
+      "block": 9,
+      "period": 1,
+      "problem_id": "C02_count_reversal",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "deep",
+      "candidate_order_index": 1,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "authored_discriminating_control",
+      "previous_call_id": "b09_o1_shallow",
+      "previous_condition": "shallow"
+    },
+    {
+      "id": "b09_o0_deep",
+      "pair_id": "b09_o0",
+      "block": 9,
+      "period": 2,
+      "problem_id": "C02_count_reversal",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "deep",
+      "candidate_order_index": 0,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "authored_discriminating_control",
+      "previous_call_id": "b09_o1_deep",
+      "previous_condition": "deep"
+    },
+    {
+      "id": "b09_o0_shallow",
+      "pair_id": "b09_o0",
+      "block": 9,
+      "period": 3,
+      "problem_id": "C02_count_reversal",
+      "seed": 64001002,
+      "seed_index": 1,
+      "condition": "shallow",
+      "candidate_order_index": 0,
+      "stage": "select",
+      "history_ids": [],
+      "problem_role": "authored_discriminating_control",
+      "previous_call_id": "b09_o0_deep",
+      "previous_condition": "deep"
+    }
+  ],
+  "actions": [
+    {
+      "kind": "metadata",
+      "id": "b00_before"
+    },
+    {
+      "kind": "call",
+      "id": "b00_o0_shallow"
+    },
+    {
+      "kind": "call",
+      "id": "b00_o0_deep"
+    },
+    {
+      "kind": "call",
+      "id": "b00_o1_deep"
+    },
+    {
+      "kind": "call",
+      "id": "b00_o1_shallow"
+    },
+    {
+      "kind": "metadata",
+      "id": "b00_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b01_before"
+    },
+    {
+      "kind": "call",
+      "id": "b01_o1_shallow"
+    },
+    {
+      "kind": "call",
+      "id": "b01_o1_deep"
+    },
+    {
+      "kind": "call",
+      "id": "b01_o0_deep"
+    },
+    {
+      "kind": "call",
+      "id": "b01_o0_shallow"
+    },
+    {
+      "kind": "metadata",
+      "id": "b01_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b02_before"
+    },
+    {
+      "kind": "call",
+      "id": "b02_o0_shallow"
+    },
+    {
+      "kind": "call",
+      "id": "b02_o0_deep"
+    },
+    {
+      "kind": "call",
+      "id": "b02_o1_deep"
+    },
+    {
+      "kind": "call",
+      "id": "b02_o1_shallow"
+    },
+    {
+      "kind": "metadata",
+      "id": "b02_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b03_before"
+    },
+    {
+      "kind": "call",
+      "id": "b03_o1_shallow"
+    },
+    {
+      "kind": "call",
+      "id": "b03_o1_deep"
+    },
+    {
+      "kind": "call",
+      "id": "b03_o0_deep"
+    },
+    {
+      "kind": "call",
+      "id": "b03_o0_shallow"
+    },
+    {
+      "kind": "metadata",
+      "id": "b03_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b04_before"
+    },
+    {
+      "kind": "call",
+      "id": "b04_o0_shallow"
+    },
+    {
+      "kind": "call",
+      "id": "b04_o0_deep"
+    },
+    {
+      "kind": "call",
+      "id": "b04_o1_deep"
+    },
+    {
+      "kind": "call",
+      "id": "b04_o1_shallow"
+    },
+    {
+      "kind": "metadata",
+      "id": "b04_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b05_before"
+    },
+    {
+      "kind": "call",
+      "id": "b05_o1_shallow"
+    },
+    {
+      "kind": "call",
+      "id": "b05_o1_deep"
+    },
+    {
+      "kind": "call",
+      "id": "b05_o0_deep"
+    },
+    {
+      "kind": "call",
+      "id": "b05_o0_shallow"
+    },
+    {
+      "kind": "metadata",
+      "id": "b05_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b06_before"
+    },
+    {
+      "kind": "call",
+      "id": "b06_o0_shallow"
+    },
+    {
+      "kind": "call",
+      "id": "b06_o0_deep"
+    },
+    {
+      "kind": "call",
+      "id": "b06_o1_deep"
+    },
+    {
+      "kind": "call",
+      "id": "b06_o1_shallow"
+    },
+    {
+      "kind": "metadata",
+      "id": "b06_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b07_before"
+    },
+    {
+      "kind": "call",
+      "id": "b07_o1_shallow"
+    },
+    {
+      "kind": "call",
+      "id": "b07_o1_deep"
+    },
+    {
+      "kind": "call",
+      "id": "b07_o0_deep"
+    },
+    {
+      "kind": "call",
+      "id": "b07_o0_shallow"
+    },
+    {
+      "kind": "metadata",
+      "id": "b07_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b08_before"
+    },
+    {
+      "kind": "call",
+      "id": "b08_o0_shallow"
+    },
+    {
+      "kind": "call",
+      "id": "b08_o0_deep"
+    },
+    {
+      "kind": "call",
+      "id": "b08_o1_deep"
+    },
+    {
+      "kind": "call",
+      "id": "b08_o1_shallow"
+    },
+    {
+      "kind": "metadata",
+      "id": "b08_after"
+    },
+    {
+      "kind": "metadata",
+      "id": "b09_before"
+    },
+    {
+      "kind": "call",
+      "id": "b09_o1_shallow"
+    },
+    {
+      "kind": "call",
+      "id": "b09_o1_deep"
+    },
+    {
+      "kind": "call",
+      "id": "b09_o0_deep"
+    },
+    {
+      "kind": "call",
+      "id": "b09_o0_shallow"
+    },
+    {
+      "kind": "metadata",
+      "id": "b09_after"
+    }
+  ],
+  "plan_sha256": "6a7ce8c31c36a9da2677299a7b36bbb1f7f8e5ef9dbbc011494b082b247aa060"
+}

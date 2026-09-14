@@ -1,0 +1,1 @@
+{"model":"qwen3:4b-instruct","created_at":"2026-09-13T13:18:10.0558049Z","message":{"role":"assistant","content":"{\n  \"depths\": [2, 3]\n}"},"done":true,"done_reason":"stop","total_duration":352748100,"load_duration":20338600,"prompt_eval_count":365,"prompt_eval_cached_count":3,"prompt_eval_duration":94517000,"eval_count":14,"eval_duration":164294000}
