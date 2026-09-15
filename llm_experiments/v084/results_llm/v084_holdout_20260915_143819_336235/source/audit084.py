@@ -1,0 +1,531 @@
+"""독립 선택·요청·증명 검산. 생산 design084/report084/measure/stages를 import하지 않는다."""
+from copy import deepcopy
+from collections import Counter
+import bootstrap
+import audit_model as prior
+from audit_graph import _semantic
+from audit_io import load, dump, need
+
+
+def reconstruct_schedule(s):
+    trials, ops, actions = [], [], []
+    number = 0
+    for block in range(len(s['problems'])*len(s['seeds'])):
+        pi,si=divmod(block,len(s['seeds']));p=s['problems'][pi]
+        entries=[('reference',si,0,'D','shallow'),('reference',si,0,'D','deep')]
+        for pos in (0,1):
+            for lab in (0,1):
+                metrics=s['metrics_by_problem'][p['id']][:]
+                if (pi+si+pos+lab)&1:metrics.reverse()
+                for metric in metrics:
+                    ds=['shallow','deep']
+                    if (pi+si+pos+lab+(metric=='W'))&1:ds.reverse()
+                    entries.extend(('model',pos,lab,metric,d) for d in ds)
+        if si:entries.reverse()
+        actions.append({'kind':'metadata','id':'b%02d_before'%block})
+        for arm,pos,lab,metric,direction in entries:
+            unit='t%03d'%number;number+=1
+            variants=['reference']
+            if arm=='model':
+                offset=(pos*2+lab+si+pi+(direction=='deep')+(metric=='W'))%len(s['selector_variants'])
+                variants=[s['selector_variants'][(i+offset)%len(s['selector_variants'])] for i in range(len(s['selector_variants']))]
+            group=[]
+            for variant in variants:
+                suffix='_explicit_rule' if variant in ('candidate_id','reference') else '_'+variant
+                tid=unit+suffix
+                sid=None if arm=='reference' else unit+('_select' if variant=='candidate_id' else '_'+variant+'_select')
+                pair=f'p{pi}_s{si}_o{pos}_l{lab}_{metric}' if arm=='model' else None
+                control=None
+                if arm=='reference':
+                    loc=s['candidate_orders'][pos].index(int(direction=='deep'))
+                    control=s['candidate_ids'][s['id_assignments'][lab][loc]]
+                generate=arm=='reference' or (metric=='D' and variant in ('candidate_id','correct_values'))
+                t=dict(id=tid,unit_id=unit,variant='explicit_rule',selector_variant=variant,selection_slot_id=sid,
+                    block=block,arm=arm,problem_id=p['id'],seed=s['seeds'][si],candidate_order_index=pos,
+                    id_assignment_index=lab,metric=metric,condition=direction,
+                    pair_id=pair+'_'+variant if pair else None,base_pair_id=pair,generate=generate,control_candidate_id=control)
+                trials.append(t);group.append(t)
+                if sid:
+                    ops.append(dict(id=sid,trial_id=tid,logical_id=unit+'_select',stage='select',rule_position=None))
+                    actions.append({'kind':'slot','id':sid})
+            for t in group:
+                if not t['generate']:continue
+                paths=s['reference_plans'][p['id']]
+                n=max(len(v) for v in paths.values()) if arm=='model' else len(paths[s['reference_conditions'][int(direction=='deep')]])
+                for j in range(n+2):
+                    phase='facts' if j==0 else 'final' if j==n+1 else 'rule'
+                    idx=j-1 if phase=='rule' else None
+                    tail='rule_%02d'%idx if phase=='rule' else phase
+                    oid=t['id']+'_'+tail
+                    ops.append(dict(id=oid,trial_id=t['id'],logical_id=unit+'_'+tail,stage=phase,rule_position=idx))
+                    actions.append({'kind':'slot','id':oid})
+        actions.append({'kind':'metadata','id':'b%02d_after'%block})
+    return trials,ops,actions
+
+
+def reference_profile(s,p,kind):
+    """생산의 순차 깊이 계산과 별도인 원자 재귀 방식."""
+    names=s['reference_plans'][p['id']][s['reference_conditions'][kind]]
+    rules=[next(r for r in p['rules'] if r['id']==name) for name in names]
+    by_atom={r['conclusion']:r for r in rules}
+    def depth(atom,visiting=frozenset()):
+        if atom in p['facts']:return 0
+        need(atom not in visiting,'cycle in control')
+        return 1+max(depth(a,visiting|{atom}) for a in by_atom[atom]['premises'])
+    return {'facts':[{'atom':a,'depth':0} for a in p['facts']],
+            'steps':[{'rule_id':r['id'],'conclusion':r['conclusion'],
+                      'premises':[{'atom':a,'depth':depth(a)} for a in r['premises']],
+                      'depth':depth(r['conclusion'])} for r in rules],
+            'goal_depth':depth(p['goal']),'rule_count':len(rules)}
+
+
+def controlled_measurements(plan,t,cs):
+    s=plan['protocol'];kinds=s['candidate_orders'][t['candidate_order_index']]
+    p=next(x for x in s['problems'] if x['id']==t['problem_id'])
+    profiles=[reference_profile(s,p,k) for k in kinds]
+    variant=t['selector_variant']
+    if variant=='candidate_id':return []
+    if variant!='correct_full':profiles=[{k:row[k] for k in ('goal_depth','rule_count')} for row in profiles]
+    if variant=='swapped_values':
+        metric_field='goal_depth' if t['metric']=='D' else 'rule_count'
+        initial=[row[metric_field] for row in profiles]
+        for index,row in enumerate(profiles):row[metric_field]=initial[1-index]
+    return [{'candidate_id':card['candidate_id'],'content':dump(row).decode()} for card,row in zip(cs,profiles)]
+
+
+def context(plan, t, raws):
+    s = plan['protocol']
+    p = next(x for x in s['problems'] if x['id'] == t['problem_id'])
+    cs = []
+    for index, kind in enumerate(s['candidate_orders'][t['candidate_order_index']]):
+        label = s['candidate_ids'][s['id_assignments'][t['id_assignment_index']][index]]
+        ids = s['reference_plans'][p['id']][s['reference_conditions'][kind]]
+        cs.append({'candidate_id': label, 'rules': [deepcopy(next(r for r in p['rules'] if r['id'] == rid)) for rid in ids]})
+    if t['arm'] == 'model':
+        raw = raws.get(t['selection_slot_id'])
+        src = {'source_type': 'model', 'source_id': t['unit_id'] + '_select',
+               'content': None if raw is None else prior.content(raw)}
+    else:
+        src = {'source_type': 'experimenter_reference', 'source_id': t['unit_id'] + '_reference',
+               'content': dump({'candidate_id': t['control_candidate_id']}).decode()}
+    route = None
+    try:
+        value = load(src['content']) if src['content'] is not None else None
+        matches = []
+        if type(value) is dict and set(value) == {'candidate_id'}:
+            matches = [c for c in cs if c['candidate_id'] == value['candidate_id']]
+        if len(matches) == 1:
+            route = {'candidate_id': matches[0]['candidate_id'], 'rule_ids': [r['id'] for r in matches[0]['rules']]}
+    except (ValueError, UnicodeError):
+        pass
+    return p, cs, src, route
+
+
+def decode(record, raw, spec, phase, strategy):
+    return prior.decode(record, raw, spec, phase, 'explicit_rule')
+
+
+def expected_request(plan,slot,raws):
+    t=next(t for t in plan['trials'] if t['id']==slot['trial_id']);s=plan['protocol'];phase=slot['stage']
+    p,cs,src,route=context(plan,t,raws)
+    if phase != 'select':
+        if route is None:return 'unmappable_selection',None
+        if phase=='rule' and slot['rule_position']>=len(route['rule_ids']):return 'outside_selected_route',None
+    body=deepcopy(s['api_defaults']);body['options']['seed']=t['seed']
+    if phase == 'select':
+        schema = deepcopy(s['selector_schema'])
+        if t['metric'] == 'D':
+            field, demand, header = 'requested_depth', s['headers'][t['condition']], s['headers']['select']
+        else:
+            field, demand, header = 'requested_rule_count', s['count_conditions'][t['condition']], s['count_select_header']
+        data = {'problem': {k:p[k] for k in ('facts','rules','goal')}, 'candidates': cs, field: demand}
+        if t['selector_variant'] != 'candidate_id':
+            data['candidate_measurements'] = controlled_measurements(plan,t,cs)
+            header += '\n' + s['control_select_addendum']
+
+    else:
+        if phase=='facts':key='nodes';prop=s['generation_schema']['properties']['nodes']
+        elif phase=='rule':key='node';prop=s['generation_schema']['properties']['nodes']['items']
+        else:key='final_node_id';prop=s['generation_schema']['properties']['final_node_id']
+        schema={'type':'object','properties':{key:deepcopy(prop)},'required':[key],'additionalProperties':False}
+        if phase=='facts':
+            item=schema['properties']['nodes']['items']['properties']
+            item['rule']={'type':'null'}
+            item['parents']['maxItems']=0
+            schema['properties']['nodes'].update(minItems=len(p['facts']),maxItems=len(p['facts']))
+
+        history=[]
+        for pre in plan['slots']:
+            if pre['id']==slot['id']:break
+            if pre['trial_id']==t['id'] and pre['stage'] != 'select' and pre['id'] in raws:
+                history.append({'source_slot_id':pre['logical_id'],'content':prior.content(raws[pre['id']])})
+        index={'facts':0,'final':len(route['rule_ids'])+1}.get(phase)
+        if phase=='rule':index=slot['rule_position']+1
+        data={'problem':p,'selection_original':src,'provided_route_plan':route,
+              'operation':{'stage':phase,'index':index,'requested_rule_id':route['rule_ids'][slot['rule_position']] if phase=='rule' else None},'history':history}
+        if phase == 'rule' and t['variant'] == 'explicit_rule':
+            current = data['operation']['requested_rule_id']
+            matches = [dict(r) for r in p['rules'] if r['id'] == current]
+            need(len(matches) == 1, 'current rule uniquely identified')
+            data['operation']['requested_rule'] = deepcopy(matches[0])
+        header=s['headers']['generator']+'\n\n'+s['headers'][phase]
+    text=header+'\nJSON 객체 하나만 출력한다. 출력 형식(JSON Schema):\n'+dump(schema).decode()+'\n\ninput: '+dump(data).decode()
+    body['messages']=[{'role':'user','content':text}];body['format']=schema
+    return None,dump(body)
+
+
+def isomorphic_pair(left_problem, left_paths, right_problem, right_paths):
+    """규칙/원자 이름을 보지 않는 독립 전단사 검사. 생산 정규형 구현을 import하지 않는다."""
+    from itertools import permutations
+    if len(left_problem['facts']) != len(right_problem['facts']):return False
+    if [len(p) for p in left_paths] != [len(p) for p in right_paths]:return False
+    left_rules={r['id']:r for r in left_problem['rules']}
+    right_rules={r['id']:r for r in right_problem['rules']}
+    for fs in permutations(right_problem['facts']):
+        common=dict(zip(left_problem['facts'],fs))
+        common[left_problem['goal']]=right_problem['goal']
+        all_routes=True
+        for path_a,path_b in zip(left_paths,right_paths):
+            aa=[left_rules[i] for i in path_a];bb=[right_rules[i] for i in path_b]
+            internal_a=[r['conclusion'] for r in aa if r['conclusion']!=left_problem['goal']]
+            internal_b=[r['conclusion'] for r in bb if r['conclusion']!=right_problem['goal']]
+            expected={(r['conclusion'],tuple(sorted(r['premises']))) for r in bb}
+            found=False
+            for remap in permutations(internal_b):
+                mapping=dict(common);mapping.update(zip(internal_a,remap))
+                actual={(mapping[r['conclusion']],tuple(sorted(mapping[a] for a in r['premises']))) for r in aa}
+                if actual==expected:found=True;break
+            if not found:all_routes=False;break
+        if all_routes:return True
+    return False
+
+
+def validate_protocol(s):
+    from pathlib import Path
+    from audit_io import same
+    need(s['contract']=='v084-frozen-structural-holdout-r1','protocol version')
+    previous=load((Path(__file__).resolve().parent/'data/v083_protocol.json').read_bytes())
+    frozen=('model','identity','seeds','conditions','reference_conditions','candidate_orders',
+        'candidate_ids','selector_schema','generation_schema','headers','api_defaults',
+        'num_predict','request_utf8_byte_limit','timeout_seconds','generator_variants',
+        'id_assignments','count_select_header','count_conditions','control_select_addendum',
+        'support_origin','support_only_in_selector')
+    need(s['frozen_request_keys']==list(frozen),'frozen request keys')
+    for key in frozen:need(same(s[key],previous[key]),'v083 request contract drift: '+key)
+    need(s['candidate_ids']==['route_0','route_1'] and s['candidate_orders']==[[0,1],[1,0]],'candidate contract')
+    need(s['id_assignments']==[[0,1],[1,0]],'independent label crossing')
+    need(s['generator_variants']==['explicit_rule'] and s['seeds']==[64001001,64001002],'generator/seed frozen')
+    need(s['selector_variants']==['candidate_id','correct_values'],'two frozen arms')
+    need(s['generation_selector_variants']==s['selector_variants'] and s['generation_metrics']==['D'],'generation scope')
+    need(s['support_origin']=='experimenter_constructed_before_inference_not_model_computation','control origin')
+    need(s['support_only_in_selector'] is True and s['profile_calls']==0,'no model worksheet/no generator support')
+    need(s['holdout'] is True and s['iid_structure_sampling'] is False and s['outcome_based_case_selection'] is False,'holdout scope')
+    need(not any(s[k] for k in ['automatic_retry','automatic_download','automatic_server_start','posthoc_repair']),'safety contract')
+    expected={'T01':[(2,4),(3,4)],'T02':[(3,4),(4,4)],'T03':[(3,5),(4,5)],'T04':[(3,5),(4,5)],
+              'T05':[(2,4),(3,3)],'T06':[(3,5),(4,4)],'T07':[(3,5),(4,4)],'T08':[(3,5),(4,4)]}
+    need([p['id'] for p in s['problems']]==list(expected),'eight prespecified cases')
+    need(s['metrics_by_problem']=={pid:['D'] if i<4 else ['D','W'] for i,pid in enumerate(expected)},'metric assignment')
+    routes={}
+    for p in s['problems']:
+        pid=p['id'];ids=[r['id'] for r in p['rules']]
+        need(len(ids)==len(set(ids)) and len(p['facts'])==len(set(p['facts']))==3,'unique rules/facts')
+        need(all(r['premises'] and len(r['premises'])==len(set(r['premises'])) for r in p['rules']),'nonempty unique premises')
+        routes[pid]=[s['reference_plans'][pid][k] for k in s['reference_conditions']]
+        need(not set(routes[pid][0])&set(routes[pid][1]),'disjoint rules between routes')
+        need(set(ids)==set(routes[pid][0]+routes[pid][1]),'no unscheduled distractor rule')
+        for i,path in enumerate(routes[pid]):
+            need(len(path)==len(set(path)) and set(path)<=set(ids),'unique path rule ids')
+            d=prior.route_depth(p,path)
+            need((d,len(path))==expected[pid][i],'actual candidate D/W')
+            need(type(s['depth_ranges'][pid][i]) is int and s['depth_ranges'][pid][i]==d,'depth range')
+            subset=[r for r in p['rules'] if r['id'] in path]
+            rules={r['conclusion']:r for r in subset}
+            need(len(rules)==len(path) and not set(rules)&set(p['facts']),'unique derived atoms')
+            seen=set();used=set()
+            def visit(atom,stack=frozenset()):
+                need(atom not in stack,'cycle')
+                seen.add(atom)
+                if atom in p['facts']:return
+                need(atom in rules,'missing antecedent')
+                r=rules[atom];used.add(r['id'])
+                for a in r['premises']:visit(a,stack|{atom})
+            visit(p['goal'])
+            need(set(p['facts'])<=seen and used==set(path),'all candidate nodes support goal')
+        x,y=expected[pid];m=s['problem_metadata'][pid]
+        need(m['family']==('equal_rule_count' if x[1]==y[1] else 'inverted_rule_count'),'family')
+        need(m['prior_exposure_batches']==[],'not an exposed case')
+        need((m['shallow_D'],m['deep_D'],m['shallow_rule_count'],m['deep_rule_count'])==(x[0],y[0],x[1],y[1]),'metadata D/W')
+    for i,p in enumerate(s['problems']):
+        for q in s['problems'][:i]:
+            need(not isomorphic_pair(p,routes[p['id']],q,routes[q['id']]),'duplicate new structural pair')
+        for q in previous['problems']:
+            old_paths=[previous['reference_plans'][q['id']][k] for k in previous['reference_conditions']]
+            need(not isomorphic_pair(p,routes[p['id']],q,old_paths),'renamed v083 pair')
+    expected_controls={p['id']:[reference_profile(s,p,i) for i in (0,1)] for p in s['problems']}
+    need(dump(s['frozen_profiles'])==dump(expected_controls),'independent exact controls')
+    ts,ss,aa=reconstruct_schedule(s)
+    need((len(ts),len(ss),len(aa))==(416,2284,2316),'frozen counts')
+    need(sum(t['generate'] for t in ts)==288,'proof count')
+    need(sum(o['stage']=='select' for o in ss)==s['selector_calls']==384,'selector calls')
+    need(s['assigned_control_trials']==32 and s['metadata_slots']==32,'shared reference/metadata counts')
+    need(len(ss)==s['max_inference_calls'] and len(aa)==s['max_action_slots'],'slot budget')
+    expected_calls=minimum=384
+    for t in ts:
+        if not t['generate']:continue
+        lengths=[len(x) for x in s['reference_plans'][t['problem_id']].values()]
+        expected_calls+=2+lengths[int(t['condition']=='deep')]
+        minimum+=2+(lengths[int(t['condition']=='deep')] if t['arm']=='reference' else min(lengths))
+    need(expected_calls==s['expected_inference_calls_if_all_target_routes_selected']==2220,'expected call budget')
+    need(minimum==s['minimum_inference_calls_if_all_selections_mappable']==2156,'minimum mapped budget')
+    need(s['primary_unit']=='structural_case_not_seed_or_presentation' and s['no_automatic_p_value'] is True,'inference unit')
+    need(not any(o['stage']=='profile' for o in ss),'no live profile calls')
+
+
+def independent_summary(plan, records, raws, state):
+    s = plan['protocol']; statuses={}; formats={}; objects={}; usages={}; rows=[]
+    for op in plan['slots']:
+        t=next(x for x in plan['trials'] if x['id']==op['trial_id'])
+        rec=records.get(op['id'])
+        status,obj,u=decode(rec,raws.get(op['id'],b''),s,op['stage'],t['selector_variant'])
+        formats[op['id']]=status
+        if op['stage']=='select' and status=='ok' and context(plan,t,raws)[3] is None:
+            status='unmappable_selection'
+        statuses[op['id']]=status;objects[op['id']]=obj
+        if rec is not None and rec['kind']=='call':usages[op['id']]=u
+    model_failures=('invalid_schema','invalid_json','unmappable_selection')
+    for t in plan['trials']:
+        p,cs,src,route=context(plan,t,raws)
+        cv={c['candidate_id']:{'D':prior.route_depth(p,[r['id'] for r in c['rules']]),'W':len(c['rules'])} for c in cs}
+        extremes=sorted(v[t['metric']] for v in cv.values());target=extremes[int(t['condition']=='deep')]
+        chosen=cv[route['candidate_id']] if route else None
+        sid=t['selection_slot_id'];status=statuses[sid] if sid else 'experimenter_reference_not_inference'
+        formatted=formats[sid] if sid else status
+        mapping=True if status=='ok' else False if status in model_failures else None
+        choice=chosen[t['metric']]==target if status=='ok' else None
+        selected=choice if status=='ok' else False if status in model_failures else None
+        seq=[]
+        if route:
+            for op in plan['slots']:
+                if op['trial_id']==t['id'] and op['stage'] != 'select':
+                    if op['stage']=='rule' and op['rule_position']>=len(route['rule_ids']):continue
+                    seq.append(dict(op,requested_rule_id=route['rule_ids'][op['rule_position']] if op['stage']=='rule' else None))
+        checks=prior.steps(p,seq,objects,statuses) if seq else []
+        ready=bool(seq) and all(statuses[o['id']]=='ok' for o in seq)
+        gr=depth=work=gen=None
+        genstatus='not_dispatched_unmappable_selection' if route is None else 'incomplete_or_nonsemantic'
+        if ready:
+            ns=list(objects[seq[0]['id']]['nodes'])
+            ns.extend(objects[o['id']]['node'] for o in seq[1:-1])
+            graph={'nodes':ns,'final_node_id':objects[seq[-1]['id']]['final_node_id']}
+            gr=_semantic(p,graph);depth=gr['actual_D']
+            if gr['strict_valid'] is True:
+                by={n['id']:n for n in ns};reachable={graph['final_node_id']}
+                while True:
+                    expanded=reachable|{parent for nid in reachable for parent in by[nid]['parents']}
+                    if expanded==reachable:break
+                    reachable=expanded
+                work=sum(by[nid]['rule'] is not None for nid in reachable)
+            gen=bool(gr['strict_valid'] is True and all(c['valid'] is True for c in checks)
+                     and [n['rule'] for n in ns if n['rule'] is not None]==route['rule_ids']
+                     and depth==chosen['D'] and work==chosen['W'])
+            genstatus='valid_graph' if gen else 'semantic_failure'
+        elif seq and any(statuses[o['id']] in ('invalid_schema','invalid_json') for o in seq):
+            gen=False;genstatus='model_output_format_failure'
+        goal=None if gen is None else bool(gen and (depth if t['metric']=='D' else work)==target)
+        end=False if status in model_failures and route is None else (None if selected is None or gen is None else bool(selected and goal))
+        if not t['generate']:
+            gen=end=depth=work=goal=None
+            genstatus='not_scheduled_by_design'
+        rows.append({'generation_scheduled':t['generate'],'trial_id':t['id'],'unit_id':t['unit_id'],'selector_variant':t['selector_variant'],'arm':t['arm'],
+                     'problem_id':t['problem_id'],'seed':t['seed'],'metric':t['metric'],'condition':t['condition'],
+                     'order':t['candidate_order_index'],'labels':t['id_assignment_index'],'pair_id':t['pair_id'],
+                     'selector_format_status':formatted,'selector_status':status,'mapping_success':mapping,
+                     'structural_choice_correct':choice,
+                     'candidate_id':route['candidate_id'] if route else None,'selected_rule_ids':route['rule_ids'] if route else None,
+                     'selected_position':next(i for i,c in enumerate(cs) if c['candidate_id']==route['candidate_id']) if route else None,
+                     'selected_D':chosen['D'] if chosen else None,'selected_W':chosen['W'] if chosen else None,
+                     'target_value':target,'selection_success':selected,'generator_success':gen,'generator_status':genstatus,
+                     'actual_D':depth,'actual_W':work,'metric_end_to_end':end,'reference_success':goal if t['arm']=='reference' else None,
+                     'graph_result':gr,'step_checks':checks})
+    result=paired_aggregate(plan,rows,statuses,usages,state)
+    return result
+
+
+
+def tally(vs):
+    yes=no=missing=0
+    for v in vs:
+        if v is True:yes+=1
+        elif v is False:no+=1
+        else:missing+=1
+    return {'assigned':yes+no+missing,'measured':yes+no,'successes':yes,'failures':no,'unmeasured':missing}
+
+
+def both(vs):
+    if None in vs:return None
+    return False not in vs
+
+
+def sign(vs):
+    if None in vs:return 'unmeasured'
+    if vs[0]==vs[1]:return 'same'
+    return 'forward' if vs[1]>vs[0] else 'reversed'
+
+
+def paired_tally(items, field):
+    totals=[0,0,0,0,0]
+    for left,right in items:
+        a,b=left[field],right[field]
+        index=4 if a is None or b is None else 0 if a and b else 1 if a else 2 if b else 3
+        totals[index]+=1
+    return dict(assigned=len(items),**dict(zip(('both_success','left_only','right_only','both_failure','not_comparable'),totals)))
+
+
+def usage_tally(items):
+    return {k:{'sum_observed':sum(x.get(k) for x in items if x.get(k) is not None),
+               'missing':sum(x.get(k) is None for x in items)} for k in prior.FIELDS}
+
+
+def pair_key(p):
+    return p['metric'],p['problem_id'],p['seed'],p['order'],p['labels']
+
+
+def paired_aggregate(plan, rows, statuses, usages, state):
+    spec=plan['protocol']; by_strategy={}
+    for r in rows:
+        r['support_diagnostic']=None
+        if r['arm']!='model' or r['selector_variant']=='candidate_id':continue
+        t=next(t for t in plan['trials'] if t['id']==r['trial_id']); _,cs,_,_=context(plan,t,{})
+        materials=controlled_measurements(plan,t,cs)
+        field={'D':'goal_depth','W':'rule_count'}[r['metric']]
+        vals=[load(x['content'])[field] for x in materials]
+        extreme=sorted(vals)[int(r['condition']=='deep')]
+        cid=next(x['candidate_id'] for x,v in zip(materials,vals) if v==extreme)
+        r['support_diagnostic']={'origin':'experimenter_frozen_control_not_model_output',
+            'supplied_requested_values':vals,'supplied_extreme_candidate_id':cid,
+            'follows_supplied_extreme':(cid==r['candidate_id']) if r['selector_status']=='ok' else None}
+    for strategy in spec['selector_variants']:
+        selected=[r for r in rows if r['selector_variant']==strategy]
+        pair_groups={}
+        for r in selected:pair_groups.setdefault(r['pair_id'],{})[r['condition']]=r
+        pairs=[]
+        for key in sorted(pair_groups):
+            lo,hi=pair_groups[key]['shallow'],pair_groups[key]['deep'];m=lo['metric']
+            scheduled=lo['generation_scheduled'] and hi['generation_scheduled']
+            pairs.append({'pair_id':key,'problem_id':lo['problem_id'],'seed':lo['seed'],'order':lo['order'],'labels':lo['labels'],
+                'metric':m,'generation_scheduled':scheduled,
+                'selection_success':both([lo['selection_success'],hi['selection_success']]),
+                'end_to_end_success':both([lo['metric_end_to_end'],hi['metric_end_to_end']]) if scheduled else None,
+                'selection_direction':sign([lo['selected_'+m],hi['selected_'+m]]),
+                'valid_graph_direction':sign([lo['actual_'+m],hi['actual_'+m]]) if scheduled else 'not_scheduled'})
+        grouping={}
+        for pair in pairs:grouping.setdefault(pair_key(pair)[:3],[]).append(pair)
+        robust=[]
+        for (m,pid,seed),ps in sorted(grouping.items()):
+            scheduled=all(p['generation_scheduled'] for p in ps)
+            robust.append({'metric':m,'problem_id':pid,'seed':seed,'generation_scheduled':scheduled,
+                           'selection_success':both([p['selection_success'] for p in ps]),
+                           'end_to_end_success':both([p['end_to_end_success'] for p in ps]) if scheduled else None})
+        contrasts=[]
+        for key in sorted(set((r['problem_id'],r['seed'],r['order'],r['labels']) for r in selected if r['metric']=='W')):
+            four=[r for r in selected if (r['problem_id'],r['seed'],r['order'],r['labels'])==key]
+            contrasts.append(dict(zip(('problem_id','seed','order','labels'),key),
+                all_four_selections_correct=both([r['selection_success'] for r in four]),end_to_end_scheduled=False))
+        totals={}
+        for metric in ('D','W'):
+            rs=[r for r in selected if r['metric']==metric];gs=[r for r in rs if r['generation_scheduled']]
+            ps=[r for r in pairs if r['metric']==metric];rb=[r for r in robust if r['metric']==metric]
+            totals[metric]={}
+            for key,items,field in [
+                ('mapping_success',rs,'mapping_success'),('selection_success',rs,'selection_success'),
+                ('conditional_choice',[r for r in rs if r['mapping_success'] is True],'structural_choice_correct'),
+                ('generator_success',gs,'generator_success'),('metric_end_to_end',gs,'metric_end_to_end'),
+                ('selection_pairs',ps,'selection_success'),('end_to_end_pairs',[p for p in ps if p['generation_scheduled']],'end_to_end_success'),
+                ('presentation_robust_selection',rb,'selection_success'),
+                ('presentation_robust_end_to_end',[r for r in rb if r['generation_scheduled']],'end_to_end_success')]:
+                totals[metric][key]=tally([r[field] for r in items])
+            totals[metric]['follows_supplied_extreme']=tally([r['support_diagnostic']['follows_supplied_extreme'] for r in rs if r['support_diagnostic'] is not None])
+        tids={r['trial_id'] for r in selected};ops=[o for o in plan['slots'] if o['trial_id'] in tids]
+        stage_usage={}
+        for stage in ('select','generation'):
+            applicable=('select',) if stage=='select' else ('facts','rule','final')
+            us=[usages[o['id']] for o in ops if o['id'] in usages and o['stage'] in applicable]
+            stage_usage[stage]={'calls':len(us),'fields':usage_tally(us)}
+        bias={}
+        for m in ('D','W'):
+            known=[r for r in selected if r['metric']==m and r['selector_status']=='ok']
+            bias[m]={'observed_choices':len(known),'first_position':sum(r['selected_position']==0 for r in known),
+                     'route_0_id':sum(r['candidate_id']=='route_0' for r in known)}
+        by_strategy[strategy]={'totals':totals,'pairs':pairs,'presentation_robust_groups':robust,'metric_discrimination':contrasts,
+             'position_id_diagnostic':bias,'usage_by_stage':stage_usage,
+             'selection_statuses':dict(sorted(Counter(r['selector_status'] for r in selected).items()))}
+    comparisons={}
+    specs=[('H1_holdout_support','candidate_id','correct_values')]
+    for name,left,right in specs:
+        comparisons[name]={'left':left,'right':right,'by_metric':{}}
+        idx={(r['unit_id'],r['selector_variant']):r for r in rows if r['arm']=='model'}
+        units=sorted(set(u for u,v in idx));matches=[(idx[u,left],idx[u,right]) for u in units]
+        for m in ('D','W'):
+            match=[(a,b) for a,b in matches if a['metric']==m]
+            generated=[(a,b) for a,b in match if a['generation_scheduled'] and b['generation_scheduled']]
+            pair_idx={pair_key(p):p for p in by_strategy[right]['pairs']}
+            pp=[(a,pair_idx[pair_key(a)]) for a in by_strategy[left]['pairs'] if a['metric']==m]
+            comparisons[name]['by_metric'][m]={
+                'selection':paired_tally(match,'selection_success'),
+                'generator':paired_tally(generated,'generator_success'),
+                'end_to_end':paired_tally(generated,'metric_end_to_end'),
+                'selection_pairs':paired_tally(pp,'selection_success'),
+                'end_to_end_pairs':paired_tally([(a,b) for a,b in pp if a['generation_scheduled'] and b['generation_scheduled']],'end_to_end_success'),
+                'changed_path':tally([None if a['selector_status']!='ok' or b['selector_status']!='ok' else a['selected_rule_ids']!=b['selected_rule_ids'] for a,b in match]),
+                'both_follow_supplied_extreme':tally([both([a['support_diagnostic']['follows_supplied_extreme'],b['support_diagnostic']['follows_supplied_extreme']]) for a,b in match if a['support_diagnostic'] is not None and b['support_diagnostic'] is not None])}
+    return {'structural_comparison':structural_diagnostics(plan,by_strategy,rows),'contract':'v084-summary-r1','provenance':plan['provenance'],'state':state,'groups':by_strategy,'hypothesis_comparisons':comparisons,
+            'reference':tally([r['reference_success'] for r in rows if r['arm']=='reference']),
+            'reference_shared_not_duplicated':True,'trials':rows,'call_statuses':dict(sorted(Counter(statuses.values()).items())),
+            'usage':usage_tally(list(usages.values())),'distinct_structural_problems':8,'new_heldout_structural_cases':8,'iid_structure_sampling':False,
+            'frozen_control_origin':'experimenter_not_model_generated','model_profile_calls':0,
+            'diagnostic_only':'W both arms: no graph scheduled; not zero successes or unobserved execution',
+            'decision':'close_frozen_holdout_batch_no_automatic_followup' if state=='complete' else 'preserve_incomplete_no_retry'}
+
+
+def structural_diagnostics(plan, groups, rows):
+    """생산 구조 집계와 별도인 키 기반 짝비교. 미관측 비교를 개선으로 세지 않는다."""
+    output=[]
+    for p in plan['protocol']['problems']:
+        identifier=p['id']; bank={}; arms={}
+        for variant in ('candidate_id','correct_values'):
+            bank[variant]={(r['seed'],r['order'],r['labels']):r for r in groups[variant]['pairs'] if r['metric']=='D' and r['problem_id']==identifier}
+            rr=[r for r in rows if r['metric']=='D' and r['problem_id']==identifier and r['selector_variant']==variant]
+            pp=list(bank[variant].values())
+            arms[variant]={'selection':tally([r['selection_success'] for r in rr]),
+                'end_to_end':tally([r['metric_end_to_end'] for r in rr]),
+                'pairs':tally([r['end_to_end_success'] for r in pp]),
+                'all_seeds_all_presentations':both([r['end_to_end_success'] for r in pp])}
+        need(set(bank['candidate_id'])==set(bank['correct_values']) and len(bank['candidate_id'])==8,'structural pairs')
+        match=[(bank['candidate_id'][k],bank['correct_values'][k]) for k in sorted(bank['candidate_id'])]
+        comparison=paired_tally(match,'end_to_end_success')
+        if comparison['not_comparable']:
+            difference=None
+        else:
+            difference=sum(int(b['end_to_end_success'])-int(a['end_to_end_success']) for a,b in match)/8
+        reference={}
+        for direction in ('shallow','deep'):
+            reference[direction]=tally([r['reference_success'] for r in rows if r['problem_id']==identifier and r['arm']=='reference' and r['condition']==direction])
+        output.append(dict(problem_id=identifier,family=plan['protocol']['problem_metadata'][identifier]['family'],
+            arms=arms,paired_end_to_end=comparison,support_minus_direct_pair_rate=difference,reference_by_direction=reference))
+    outcomes=Counter(); observed=[]
+    for item in output:
+        d=item['support_minus_direct_pair_rate']
+        if d is None:outcomes['unmeasured_structures']+=1
+        else:
+            observed.append(d)
+            outcomes['improved_structures' if d>0 else 'worsened_structures' if d<0 else 'unchanged_structures']+=1
+    subgroups={}
+    for family in ('equal_rule_count','inverted_rule_count'):
+        ds=[r['support_minus_direct_pair_rate'] for r in output if r['family']==family]
+        subgroups[family]={'assigned_structures':len(ds),'complete_structures':sum(x is not None for x in ds),
+            'mean_support_minus_direct_pair_rate':None if None in ds else sum(ds)/len(ds)}
+    return {'unit':'prespecified_structural_case','assigned_structures':len(output),'complete_structures':len(observed),
+        **{k:outcomes[k] for k in ('improved_structures','worsened_structures','unchanged_structures','unmeasured_structures')},
+        'mean_support_minus_direct_pair_rate':sum(observed)/len(output) if len(observed)==len(output) else None,
+        'families':subgroups,'cases':output,'inferential_p_value':None,
+        'interpretation':'기존 응답으로 선별하지 않은 신규 구조쌍 8개에 대한 기술적 비교다. seed/표시 반복은 독립 구조 또는 IID 표본이 아니다.'}

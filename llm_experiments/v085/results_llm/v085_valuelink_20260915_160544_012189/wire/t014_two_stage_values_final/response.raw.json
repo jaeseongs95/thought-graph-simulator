@@ -1,0 +1,1 @@
+{"model":"qwen3:4b-instruct","created_at":"2026-09-15T07:12:41.4635891Z","message":{"role":"assistant","content":"{\"final_node_id\":\"n03\"}"},"done":true,"done_reason":"stop","total_duration":350176600,"load_duration":12133000,"prompt_eval_count":984,"prompt_eval_cached_count":572,"prompt_eval_duration":111676000,"eval_count":10,"eval_duration":114337000}

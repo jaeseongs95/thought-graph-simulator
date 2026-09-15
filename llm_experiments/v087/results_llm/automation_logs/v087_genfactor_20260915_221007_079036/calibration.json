@@ -1,0 +1,2111 @@
+{
+  "contract": "v087-calibration-r1",
+  "provenance": "offline_and_synthetic",
+  "actual_qwen_calls": 0,
+  "rule_comparisons": 420,
+  "graph_comparisons": 80,
+  "passed": 500,
+  "failures": 0,
+  "checks": [
+    {
+      "anchor": "U01_shallow_r00",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U01_shallow_r00",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_shallow_r00",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_shallow_r00",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_shallow_r00",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_shallow_r00",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_shallow_r01",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U01_shallow_r01",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_shallow_r01",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_shallow_r01",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_shallow_r01",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_shallow_r01",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_shallow_r02",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U01_shallow_r02",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_shallow_r02",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_shallow_r02",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_shallow_r02",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_shallow_r02",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_shallow_r03",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U01_shallow_r03",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_shallow_r03",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_shallow_r03",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_shallow_r03",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_shallow_r03",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_deep_r00",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U01_deep_r00",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_deep_r00",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_deep_r00",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_deep_r00",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_deep_r00",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_deep_r01",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U01_deep_r01",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_deep_r01",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_deep_r01",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_deep_r01",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_deep_r01",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_deep_r02",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U01_deep_r02",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_deep_r02",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_deep_r02",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_deep_r02",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_deep_r02",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_deep_r03",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U01_deep_r03",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_deep_r03",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_deep_r03",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_deep_r03",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U01_deep_r03",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_shallow_r00",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U02_shallow_r00",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_shallow_r00",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_shallow_r00",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_shallow_r00",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_shallow_r00",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_shallow_r01",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U02_shallow_r01",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_shallow_r01",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_shallow_r01",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_shallow_r01",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_shallow_r01",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_shallow_r02",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U02_shallow_r02",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_shallow_r02",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_shallow_r02",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_shallow_r02",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_shallow_r02",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_shallow_r03",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U02_shallow_r03",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_shallow_r03",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_shallow_r03",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_shallow_r03",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_shallow_r03",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_deep_r00",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U02_deep_r00",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_deep_r00",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_deep_r00",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_deep_r00",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_deep_r00",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_deep_r01",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U02_deep_r01",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_deep_r01",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_deep_r01",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_deep_r01",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_deep_r01",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_deep_r02",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U02_deep_r02",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_deep_r02",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_deep_r02",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_deep_r02",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_deep_r02",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_deep_r03",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U02_deep_r03",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_deep_r03",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_deep_r03",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_deep_r03",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U02_deep_r03",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r00",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U03_shallow_r00",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r00",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r00",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r00",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r00",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r01",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U03_shallow_r01",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r01",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r01",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r01",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r01",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r02",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U03_shallow_r02",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r02",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r02",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r02",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r02",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r03",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U03_shallow_r03",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r03",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r03",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r03",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r03",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r04",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U03_shallow_r04",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r04",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r04",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r04",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_shallow_r04",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r00",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U03_deep_r00",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r00",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r00",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r00",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r00",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r01",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U03_deep_r01",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r01",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r01",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r01",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r01",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r02",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U03_deep_r02",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r02",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r02",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r02",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r02",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r03",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U03_deep_r03",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r03",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r03",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r03",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r03",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r04",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U03_deep_r04",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r04",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r04",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r04",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U03_deep_r04",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r00",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U04_shallow_r00",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r00",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r00",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r00",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r00",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r01",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U04_shallow_r01",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r01",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r01",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r01",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r01",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r02",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U04_shallow_r02",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r02",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r02",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r02",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r02",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r03",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U04_shallow_r03",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r03",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r03",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r03",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r03",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r04",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U04_shallow_r04",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r04",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r04",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r04",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_shallow_r04",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r00",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U04_deep_r00",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r00",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r00",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r00",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r00",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r01",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U04_deep_r01",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r01",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r01",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r01",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r01",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r02",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U04_deep_r02",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r02",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r02",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r02",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r02",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r03",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U04_deep_r03",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r03",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r03",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r03",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r03",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r04",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U04_deep_r04",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r04",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r04",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r04",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U04_deep_r04",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_shallow_r00",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U05_shallow_r00",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_shallow_r00",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_shallow_r00",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_shallow_r00",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_shallow_r00",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_shallow_r01",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U05_shallow_r01",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_shallow_r01",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_shallow_r01",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_shallow_r01",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_shallow_r01",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_shallow_r02",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U05_shallow_r02",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_shallow_r02",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_shallow_r02",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_shallow_r02",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_shallow_r02",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_shallow_r03",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U05_shallow_r03",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_shallow_r03",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_shallow_r03",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_shallow_r03",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_shallow_r03",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_deep_r00",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U05_deep_r00",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_deep_r00",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_deep_r00",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_deep_r00",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_deep_r00",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_deep_r01",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U05_deep_r01",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_deep_r01",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_deep_r01",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_deep_r01",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_deep_r01",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_deep_r02",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U05_deep_r02",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_deep_r02",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_deep_r02",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_deep_r02",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U05_deep_r02",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r00",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U06_shallow_r00",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r00",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r00",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r00",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r00",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r01",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U06_shallow_r01",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r01",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r01",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r01",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r01",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r02",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U06_shallow_r02",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r02",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r02",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r02",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r02",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r03",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U06_shallow_r03",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r03",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r03",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r03",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r03",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r04",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U06_shallow_r04",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r04",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r04",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r04",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_shallow_r04",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_deep_r00",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U06_deep_r00",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_deep_r00",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_deep_r00",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_deep_r00",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_deep_r00",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_deep_r01",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U06_deep_r01",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_deep_r01",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_deep_r01",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_deep_r01",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_deep_r01",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_deep_r02",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U06_deep_r02",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_deep_r02",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_deep_r02",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_deep_r02",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_deep_r02",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_deep_r03",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U06_deep_r03",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_deep_r03",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_deep_r03",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_deep_r03",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U06_deep_r03",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r00",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U07_shallow_r00",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r00",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r00",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r00",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r00",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r01",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U07_shallow_r01",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r01",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r01",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r01",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r01",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r02",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U07_shallow_r02",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r02",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r02",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r02",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r02",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r03",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U07_shallow_r03",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r03",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r03",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r03",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r03",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r04",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U07_shallow_r04",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r04",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r04",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r04",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_shallow_r04",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_deep_r00",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U07_deep_r00",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_deep_r00",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_deep_r00",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_deep_r00",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_deep_r00",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_deep_r01",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U07_deep_r01",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_deep_r01",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_deep_r01",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_deep_r01",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_deep_r01",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_deep_r02",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U07_deep_r02",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_deep_r02",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_deep_r02",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_deep_r02",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_deep_r02",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_deep_r03",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U07_deep_r03",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_deep_r03",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_deep_r03",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_deep_r03",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U07_deep_r03",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r00",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U08_shallow_r00",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r00",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r00",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r00",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r00",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r01",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U08_shallow_r01",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r01",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r01",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r01",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r01",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r02",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U08_shallow_r02",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r02",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r02",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r02",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r02",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r03",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U08_shallow_r03",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r03",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r03",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r03",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r03",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r04",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U08_shallow_r04",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r04",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r04",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r04",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_shallow_r04",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_deep_r00",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U08_deep_r00",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_deep_r00",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_deep_r00",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_deep_r00",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_deep_r00",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_deep_r01",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U08_deep_r01",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_deep_r01",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_deep_r01",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_deep_r01",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_deep_r01",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_deep_r02",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U08_deep_r02",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_deep_r02",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_deep_r02",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_deep_r02",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_deep_r02",
+      "case": "unknown_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_deep_r03",
+      "case": "valid",
+      "accepted": true
+    },
+    {
+      "anchor": "U08_deep_r03",
+      "case": "missing_parent",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_deep_r03",
+      "case": "wrong_atom",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_deep_r03",
+      "case": "duplicate_id",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_deep_r03",
+      "case": "unregistered_rule",
+      "accepted": false
+    },
+    {
+      "anchor": "U08_deep_r03",
+      "case": "unknown_parent",
+      "accepted": false
+    }
+  ]
+}

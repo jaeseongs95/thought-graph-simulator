@@ -1,0 +1,9 @@
+{
+  "state": "complete",
+  "reason": null,
+  "completed_actions": 3740,
+  "started_actions": 3740,
+  "inference_calls": 3611,
+  "observed_calls": 3611,
+  "plan_sha256": "0fea6ea64ee61f4f150f35ea15315f93d7b44a25a77562a0c5c9f4e3eccde335"
+}
