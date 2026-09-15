@@ -1,0 +1,102 @@
+{
+  "contract": "v088-release-validation-r1",
+  "date_kst": "2026-09-16",
+  "version": "v088",
+  "status": "final_release_installed_tested_synthetic_verified",
+  "basis": {
+    "v087_evidence_sha256": "9286d135fe3f0feb7bfaf35ee371d776f3746e0ea214e4b1816de2130835b702",
+    "actual_v087_requests_regressed": 1888,
+    "retained_v087_source_files": 77
+  },
+  "scope": {
+    "new_live_model_inference_calls": 0,
+    "new_independent_holdout_structures": 0,
+    "known_diagnostic_structures": 8,
+    "A_probe_calls": 560,
+    "B_continuations": 128,
+    "B_calls": 688,
+    "C_new_graphs": 256,
+    "C_shared_selection_calls": 256,
+    "expected_inference_calls": 3136,
+    "maximum_inference_calls": 3200,
+    "action_slots": 3232,
+    "primary": "B: structure-equal paired continuation success rate, long_uniform minus long_mixed"
+  },
+  "tests": {
+    "tests_run": 85,
+    "passed": 84,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1,
+    "elapsed_seconds": 73.98483245599994,
+    "skip_details": [
+      {
+        "test": "test_contract088.Contract.test_powershell_parser_when_available",
+        "reason": "PowerShell native parser unavailable"
+      }
+    ]
+  },
+  "calibration": {
+    "passed": 1504,
+    "failures": 0,
+    "rule_cases": 1120,
+    "graph_cases": 384,
+    "actual_qwen_calls": 0
+  },
+  "independent_checks": {
+    "reconstructed_synthetic_requests": 3136,
+    "trial_semantic_agreements": 944,
+    "shared_aggregation": "tables088 and diagnostics088 are shared; known outcomes, effect direction, missingness and tampering tested separately"
+  },
+  "full_synthetic_execution": {
+    "provenance": "synthetic",
+    "actual_qwen_calls": 0,
+    "state": "complete",
+    "inference_dispatches": 3136,
+    "preserved_responses": 3136,
+    "started_actions": 3232,
+    "completed_actions": 3232,
+    "independent_verified": true,
+    "differences": [],
+    "manifest_files": 16180,
+    "evidence_sha256": "a97c67c8f0e1448832097b448b2b059229a56dbe73523a276deaa8a7ae3b6019",
+    "plan_sha256": "eea81b50f6cdb85ba1927f3e703a17a62297b582ac9dac46e4fa5bc4ae79e887",
+    "full_evidence_in_distribution": false
+  },
+  "artifact_checks": {
+    "contract": "v088-final-artifact-check-r1",
+    "source_zip_sha256": "5bf23d4a24cd66d3898a7907d4ceac22e94f588788c80489f57e69a5234c934f",
+    "powershell_sha256": "fc874b5f17fecee2ccea2dc8d577c863c326c2c47fbd0273e0c28afc2e686837",
+    "source_files": 107,
+    "retained_v087_files": 77,
+    "python312_syntax_files": 84,
+    "installed_equals_zip": true,
+    "selftest_sources_equal_zip": true,
+    "synthetic_source_snapshot_equals_zip": true,
+    "powershell_payload_equals_zip": true,
+    "previous_version_marker_unchanged": true,
+    "check_only_created_live_guard": false,
+    "synthetic_manifest_files": 16180,
+    "actual_qwen_calls": 0,
+    "python": "3.13.5",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "protocol_sha256": "7ecd08b6ad79d52a1fec5add10b972b4906f94c11a029d2ee0ae6df62035a422"
+  },
+  "limitations": [
+    "Linux/Python 3.13.5에서 실제 설치 및 검증. Windows/Python 3.12의 네이티브 실행은 수행하지 않음.",
+    "PowerShell 네이티브 파서가 없어 해당 시험 1개 제외. Python 3.12 문법 검사는 84개 Python 파일 통과.",
+    "합성 실행·calibration·원문 재검산은 새 Qwen 결과나 추가 연구 표본이 아님.",
+    "B는 과거 유효 초기 사실을 지원받은 연속 생성이며 새 선택·새 facts부터 시작한 C의 종단과 별도.",
+    "short/long은 명명 계열 차이이며 길이 단독 원인 실험이 아님. atom_alias는 의미 단서가 있는 조건."
+  ],
+  "files": {
+    "source_zip": {
+      "name": "v088_id_continuity_source.zip",
+      "sha256": "5bf23d4a24cd66d3898a7907d4ceac22e94f588788c80489f57e69a5234c934f"
+    },
+    "powershell": {
+      "name": "Run-v088-Auto.ps1",
+      "sha256": "fc874b5f17fecee2ccea2dc8d577c863c326c2c47fbd0273e0c28afc2e686837"
+    }
+  }
+}

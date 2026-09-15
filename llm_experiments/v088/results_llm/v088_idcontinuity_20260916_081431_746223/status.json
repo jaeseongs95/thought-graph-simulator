@@ -1,0 +1,9 @@
+{
+  "state": "stopped",
+  "reason": "metadata_identity_error",
+  "completed_actions": 1,
+  "started_actions": 1,
+  "inference_calls": 0,
+  "observed_calls": 0,
+  "plan_sha256": "d4b30f61ffff1d1e3a927c5263a8d09835c8656eb5825b29f90a7a939ab2e0ff"
+}

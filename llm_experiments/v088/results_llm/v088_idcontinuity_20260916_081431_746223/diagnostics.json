@@ -1,0 +1,1 @@
+{"contract":"v088-diagnostics-r1","groups":{},"input_states":[],"missing_parent_aliases":[],"continuation_initial_conditions":[],"continuation_scope_pairs":[],"failures":[],"rename_certificates":[],"limitations":["고유 바이트 수는 독립 문제 수가 아니다.","과거 사실·재명명 입력은 진단 지원이며 새 모델 증거로 세지 않는다.","초기 이력과 신규 응답을 구별한다. 원자 이름을 부모 ID로 자동 변환하지 않는다.","usage는 응답별 합이며 벽시계 시간이나 API 청구액이 아니다."]}

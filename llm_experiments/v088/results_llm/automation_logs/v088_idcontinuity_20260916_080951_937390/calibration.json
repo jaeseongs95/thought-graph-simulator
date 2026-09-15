@@ -1,0 +1,7531 @@
+{
+  "contract": "v088-calibration-r1",
+  "provenance": "synthetic_no_inference",
+  "passed": 1504,
+  "failures": 0,
+  "actual_qwen_calls": 0,
+  "rule_cases": 1120,
+  "graph_cases": 384,
+  "checks": [
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r00/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r00/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r00/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r00/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r00/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r00/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r00/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r00/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r00/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r00/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r00/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r00/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r00/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r00/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r00/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r00/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r01/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r01/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r01/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r01/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r01/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r01/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r01/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r01/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r01/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r01/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r01/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r01/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r01/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r01/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r01/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r01/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r02/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r02/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r02/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r02/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r02/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r02/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r02/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r02/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r02/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r02/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r02/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r02/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r02/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r02/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r02/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r02/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r03/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r03/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r03/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r03/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r03/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r03/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r03/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r03/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r03/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r03/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r03/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r03/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r03/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r03/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r03/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_shallow_r03/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r00/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r00/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r00/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r00/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r00/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r00/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r00/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r00/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r00/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r00/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r00/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r00/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r00/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r00/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r00/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r00/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r01/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r01/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r01/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r01/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r01/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r01/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r01/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r01/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r01/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r01/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r01/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r01/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r01/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r01/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r01/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r01/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r02/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r02/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r02/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r02/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r02/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r02/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r02/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r02/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r02/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r02/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r02/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r02/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r02/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r02/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r02/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r02/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r03/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r03/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r03/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r03/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r03/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r03/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r03/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r03/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r03/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r03/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r03/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r03/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r03/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r03/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r03/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U01_deep_r03/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r00/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r00/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r00/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r00/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r00/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r00/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r00/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r00/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r00/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r00/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r00/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r00/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r00/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r00/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r00/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r00/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r01/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r01/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r01/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r01/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r01/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r01/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r01/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r01/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r01/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r01/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r01/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r01/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r01/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r01/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r01/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r01/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r02/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r02/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r02/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r02/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r02/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r02/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r02/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r02/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r02/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r02/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r02/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r02/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r02/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r02/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r02/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r02/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r03/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r03/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r03/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r03/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r03/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r03/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r03/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r03/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r03/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r03/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r03/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r03/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r03/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r03/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r03/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_shallow_r03/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r00/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r00/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r00/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r00/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r00/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r00/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r00/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r00/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r00/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r00/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r00/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r00/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r00/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r00/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r00/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r00/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r01/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r01/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r01/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r01/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r01/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r01/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r01/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r01/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r01/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r01/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r01/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r01/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r01/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r01/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r01/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r01/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r02/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r02/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r02/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r02/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r02/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r02/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r02/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r02/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r02/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r02/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r02/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r02/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r02/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r02/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r02/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r02/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r03/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r03/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r03/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r03/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r03/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r03/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r03/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r03/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r03/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r03/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r03/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r03/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r03/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r03/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r03/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U02_deep_r03/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r00/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r00/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r00/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r00/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r00/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r00/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r00/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r00/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r00/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r00/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r00/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r00/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r00/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r00/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r00/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r00/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r01/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r01/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r01/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r01/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r01/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r01/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r01/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r01/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r01/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r01/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r01/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r01/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r01/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r01/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r01/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r01/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r02/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r02/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r02/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r02/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r02/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r02/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r02/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r02/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r02/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r02/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r02/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r02/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r02/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r02/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r02/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r02/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r03/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r03/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r03/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r03/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r03/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r03/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r03/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r03/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r03/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r03/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r03/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r03/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r03/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r03/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r03/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r03/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r04/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r04/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r04/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r04/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r04/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r04/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r04/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r04/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r04/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r04/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r04/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r04/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r04/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r04/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r04/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_shallow_r04/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r00/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r00/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r00/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r00/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r00/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r00/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r00/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r00/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r00/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r00/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r00/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r00/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r00/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r00/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r00/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r00/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r01/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r01/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r01/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r01/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r01/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r01/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r01/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r01/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r01/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r01/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r01/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r01/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r01/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r01/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r01/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r01/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r02/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r02/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r02/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r02/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r02/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r02/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r02/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r02/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r02/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r02/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r02/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r02/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r02/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r02/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r02/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r02/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r03/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r03/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r03/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r03/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r03/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r03/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r03/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r03/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r03/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r03/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r03/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r03/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r03/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r03/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r03/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r03/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r04/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r04/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r04/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r04/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r04/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r04/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r04/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r04/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r04/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r04/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r04/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r04/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r04/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r04/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r04/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U03_deep_r04/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r00/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r00/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r00/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r00/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r00/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r00/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r00/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r00/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r00/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r00/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r00/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r00/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r00/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r00/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r00/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r00/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r01/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r01/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r01/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r01/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r01/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r01/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r01/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r01/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r01/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r01/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r01/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r01/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r01/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r01/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r01/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r01/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r02/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r02/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r02/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r02/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r02/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r02/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r02/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r02/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r02/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r02/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r02/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r02/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r02/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r02/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r02/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r02/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r03/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r03/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r03/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r03/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r03/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r03/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r03/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r03/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r03/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r03/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r03/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r03/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r03/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r03/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r03/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r03/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r04/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r04/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r04/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r04/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r04/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r04/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r04/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r04/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r04/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r04/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r04/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r04/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r04/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r04/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r04/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_shallow_r04/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r00/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r00/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r00/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r00/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r00/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r00/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r00/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r00/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r00/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r00/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r00/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r00/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r00/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r00/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r00/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r00/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r01/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r01/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r01/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r01/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r01/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r01/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r01/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r01/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r01/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r01/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r01/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r01/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r01/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r01/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r01/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r01/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r02/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r02/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r02/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r02/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r02/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r02/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r02/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r02/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r02/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r02/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r02/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r02/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r02/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r02/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r02/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r02/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r03/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r03/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r03/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r03/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r03/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r03/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r03/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r03/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r03/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r03/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r03/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r03/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r03/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r03/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r03/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r03/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r04/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r04/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r04/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r04/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r04/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r04/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r04/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r04/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r04/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r04/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r04/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r04/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r04/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r04/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r04/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U04_deep_r04/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r00/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r00/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r00/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r00/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r00/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r00/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r00/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r00/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r00/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r00/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r00/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r00/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r00/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r00/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r00/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r00/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r01/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r01/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r01/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r01/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r01/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r01/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r01/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r01/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r01/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r01/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r01/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r01/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r01/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r01/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r01/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r01/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r02/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r02/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r02/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r02/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r02/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r02/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r02/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r02/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r02/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r02/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r02/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r02/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r02/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r02/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r02/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r02/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r03/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r03/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r03/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r03/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r03/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r03/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r03/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r03/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r03/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r03/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r03/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r03/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r03/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r03/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r03/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_shallow_r03/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r00/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r00/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r00/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r00/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r00/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r00/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r00/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r00/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r00/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r00/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r00/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r00/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r00/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r00/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r00/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r00/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r01/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r01/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r01/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r01/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r01/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r01/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r01/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r01/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r01/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r01/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r01/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r01/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r01/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r01/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r01/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r01/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r02/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r02/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r02/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r02/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r02/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r02/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r02/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r02/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r02/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r02/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r02/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r02/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r02/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r02/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r02/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U05_deep_r02/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r00/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r00/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r00/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r00/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r00/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r00/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r00/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r00/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r00/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r00/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r00/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r00/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r00/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r00/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r00/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r00/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r01/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r01/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r01/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r01/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r01/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r01/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r01/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r01/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r01/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r01/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r01/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r01/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r01/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r01/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r01/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r01/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r02/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r02/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r02/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r02/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r02/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r02/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r02/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r02/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r02/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r02/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r02/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r02/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r02/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r02/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r02/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r02/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r03/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r03/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r03/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r03/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r03/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r03/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r03/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r03/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r03/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r03/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r03/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r03/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r03/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r03/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r03/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r03/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r04/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r04/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r04/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r04/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r04/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r04/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r04/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r04/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r04/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r04/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r04/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r04/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r04/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r04/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r04/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_shallow_r04/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r00/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r00/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r00/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r00/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r00/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r00/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r00/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r00/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r00/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r00/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r00/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r00/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r00/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r00/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r00/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r00/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r01/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r01/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r01/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r01/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r01/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r01/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r01/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r01/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r01/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r01/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r01/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r01/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r01/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r01/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r01/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r01/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r02/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r02/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r02/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r02/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r02/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r02/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r02/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r02/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r02/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r02/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r02/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r02/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r02/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r02/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r02/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r02/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r03/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r03/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r03/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r03/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r03/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r03/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r03/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r03/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r03/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r03/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r03/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r03/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r03/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r03/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r03/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U06_deep_r03/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r00/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r00/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r00/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r00/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r00/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r00/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r00/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r00/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r00/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r00/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r00/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r00/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r00/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r00/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r00/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r00/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r01/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r01/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r01/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r01/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r01/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r01/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r01/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r01/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r01/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r01/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r01/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r01/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r01/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r01/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r01/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r01/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r02/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r02/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r02/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r02/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r02/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r02/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r02/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r02/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r02/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r02/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r02/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r02/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r02/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r02/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r02/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r02/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r03/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r03/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r03/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r03/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r03/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r03/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r03/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r03/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r03/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r03/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r03/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r03/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r03/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r03/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r03/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r03/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r04/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r04/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r04/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r04/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r04/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r04/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r04/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r04/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r04/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r04/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r04/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r04/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r04/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r04/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r04/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_shallow_r04/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r00/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r00/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r00/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r00/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r00/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r00/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r00/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r00/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r00/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r00/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r00/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r00/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r00/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r00/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r00/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r00/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r01/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r01/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r01/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r01/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r01/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r01/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r01/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r01/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r01/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r01/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r01/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r01/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r01/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r01/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r01/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r01/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r02/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r02/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r02/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r02/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r02/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r02/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r02/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r02/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r02/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r02/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r02/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r02/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r02/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r02/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r02/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r02/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r03/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r03/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r03/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r03/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r03/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r03/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r03/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r03/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r03/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r03/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r03/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r03/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r03/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r03/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r03/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U07_deep_r03/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r00/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r00/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r00/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r00/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r00/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r00/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r00/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r00/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r00/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r00/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r00/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r00/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r00/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r00/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r00/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r00/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r01/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r01/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r01/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r01/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r01/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r01/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r01/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r01/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r01/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r01/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r01/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r01/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r01/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r01/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r01/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r01/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r02/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r02/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r02/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r02/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r02/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r02/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r02/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r02/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r02/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r02/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r02/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r02/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r02/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r02/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r02/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r02/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r03/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r03/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r03/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r03/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r03/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r03/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r03/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r03/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r03/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r03/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r03/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r03/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r03/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r03/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r03/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r03/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r04/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r04/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r04/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r04/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r04/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r04/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r04/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r04/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r04/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r04/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r04/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r04/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r04/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r04/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r04/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_shallow_r04/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r00/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r00/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r00/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r00/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r00/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r00/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r00/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r00/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r00/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r00/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r00/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r00/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r00/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r00/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r00/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r00/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r01/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r01/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r01/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r01/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r01/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r01/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r01/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r01/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r01/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r01/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r01/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r01/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r01/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r01/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r01/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r01/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r02/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r02/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r02/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r02/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r02/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r02/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r02/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r02/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r02/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r02/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r02/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r02/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r02/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r02/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r02/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r02/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r03/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r03/observed/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r03/observed/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r03/observed/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r03/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r03/atom_alias/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r03/atom_alias/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r03/atom_alias/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r03/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r03/short/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r03/short/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r03/short/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r03/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r03/legacy_long/missing",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r03/legacy_long/duplicate",
+      "expected": false
+    },
+    {
+      "kind": "rule",
+      "case": "U08_deep_r03/legacy_long/wrong_rule",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_short/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_short/observed/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_short/observed/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_short/observed/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_short/observed/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_short/observed/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_short/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_short/atom_alias/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_short/atom_alias/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_short/atom_alias/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_short/atom_alias/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_short/atom_alias/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_short/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_short/short/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_short/short/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_short/short/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_short/short/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_short/short/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_short/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_short/legacy_long/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_short/legacy_long/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_short/legacy_long/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_short/legacy_long/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_short/legacy_long/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_long/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_long/observed/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_long/observed/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_long/observed/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_long/observed/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_long/observed/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_long/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_long/atom_alias/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_long/atom_alias/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_long/atom_alias/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_long/atom_alias/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_long/atom_alias/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_long/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_long/short/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_long/short/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_long/short/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_long/short/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_long/short/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_long/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_long/legacy_long/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_long/legacy_long/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_long/legacy_long/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_long/legacy_long/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U01/reference_long/legacy_long/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_short/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_short/observed/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_short/observed/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_short/observed/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_short/observed/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_short/observed/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_short/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_short/atom_alias/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_short/atom_alias/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_short/atom_alias/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_short/atom_alias/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_short/atom_alias/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_short/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_short/short/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_short/short/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_short/short/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_short/short/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_short/short/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_short/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_short/legacy_long/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_short/legacy_long/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_short/legacy_long/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_short/legacy_long/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_short/legacy_long/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_long/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_long/observed/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_long/observed/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_long/observed/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_long/observed/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_long/observed/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_long/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_long/atom_alias/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_long/atom_alias/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_long/atom_alias/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_long/atom_alias/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_long/atom_alias/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_long/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_long/short/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_long/short/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_long/short/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_long/short/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_long/short/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_long/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_long/legacy_long/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_long/legacy_long/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_long/legacy_long/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_long/legacy_long/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U02/reference_long/legacy_long/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_short/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_short/observed/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_short/observed/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_short/observed/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_short/observed/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_short/observed/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_short/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_short/atom_alias/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_short/atom_alias/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_short/atom_alias/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_short/atom_alias/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_short/atom_alias/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_short/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_short/short/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_short/short/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_short/short/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_short/short/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_short/short/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_short/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_short/legacy_long/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_short/legacy_long/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_short/legacy_long/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_short/legacy_long/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_short/legacy_long/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_long/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_long/observed/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_long/observed/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_long/observed/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_long/observed/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_long/observed/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_long/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_long/atom_alias/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_long/atom_alias/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_long/atom_alias/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_long/atom_alias/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_long/atom_alias/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_long/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_long/short/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_long/short/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_long/short/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_long/short/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_long/short/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_long/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_long/legacy_long/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_long/legacy_long/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_long/legacy_long/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_long/legacy_long/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U03/reference_long/legacy_long/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_short/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_short/observed/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_short/observed/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_short/observed/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_short/observed/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_short/observed/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_short/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_short/atom_alias/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_short/atom_alias/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_short/atom_alias/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_short/atom_alias/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_short/atom_alias/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_short/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_short/short/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_short/short/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_short/short/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_short/short/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_short/short/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_short/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_short/legacy_long/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_short/legacy_long/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_short/legacy_long/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_short/legacy_long/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_short/legacy_long/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_long/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_long/observed/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_long/observed/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_long/observed/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_long/observed/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_long/observed/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_long/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_long/atom_alias/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_long/atom_alias/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_long/atom_alias/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_long/atom_alias/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_long/atom_alias/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_long/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_long/short/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_long/short/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_long/short/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_long/short/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_long/short/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_long/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_long/legacy_long/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_long/legacy_long/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_long/legacy_long/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_long/legacy_long/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U04/reference_long/legacy_long/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_short/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_short/observed/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_short/observed/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_short/observed/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_short/observed/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_short/observed/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_short/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_short/atom_alias/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_short/atom_alias/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_short/atom_alias/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_short/atom_alias/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_short/atom_alias/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_short/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_short/short/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_short/short/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_short/short/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_short/short/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_short/short/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_short/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_short/legacy_long/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_short/legacy_long/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_short/legacy_long/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_short/legacy_long/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_short/legacy_long/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_long/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_long/observed/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_long/observed/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_long/observed/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_long/observed/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_long/observed/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_long/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_long/atom_alias/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_long/atom_alias/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_long/atom_alias/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_long/atom_alias/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_long/atom_alias/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_long/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_long/short/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_long/short/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_long/short/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_long/short/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_long/short/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_long/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_long/legacy_long/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_long/legacy_long/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_long/legacy_long/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_long/legacy_long/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U05/reference_long/legacy_long/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_short/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_short/observed/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_short/observed/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_short/observed/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_short/observed/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_short/observed/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_short/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_short/atom_alias/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_short/atom_alias/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_short/atom_alias/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_short/atom_alias/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_short/atom_alias/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_short/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_short/short/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_short/short/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_short/short/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_short/short/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_short/short/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_short/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_short/legacy_long/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_short/legacy_long/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_short/legacy_long/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_short/legacy_long/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_short/legacy_long/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_long/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_long/observed/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_long/observed/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_long/observed/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_long/observed/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_long/observed/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_long/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_long/atom_alias/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_long/atom_alias/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_long/atom_alias/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_long/atom_alias/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_long/atom_alias/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_long/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_long/short/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_long/short/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_long/short/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_long/short/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_long/short/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_long/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_long/legacy_long/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_long/legacy_long/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_long/legacy_long/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_long/legacy_long/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U06/reference_long/legacy_long/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_short/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_short/observed/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_short/observed/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_short/observed/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_short/observed/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_short/observed/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_short/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_short/atom_alias/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_short/atom_alias/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_short/atom_alias/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_short/atom_alias/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_short/atom_alias/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_short/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_short/short/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_short/short/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_short/short/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_short/short/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_short/short/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_short/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_short/legacy_long/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_short/legacy_long/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_short/legacy_long/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_short/legacy_long/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_short/legacy_long/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_long/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_long/observed/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_long/observed/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_long/observed/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_long/observed/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_long/observed/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_long/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_long/atom_alias/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_long/atom_alias/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_long/atom_alias/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_long/atom_alias/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_long/atom_alias/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_long/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_long/short/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_long/short/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_long/short/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_long/short/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_long/short/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_long/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_long/legacy_long/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_long/legacy_long/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_long/legacy_long/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_long/legacy_long/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U07/reference_long/legacy_long/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_short/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_short/observed/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_short/observed/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_short/observed/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_short/observed/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_short/observed/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_short/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_short/atom_alias/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_short/atom_alias/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_short/atom_alias/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_short/atom_alias/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_short/atom_alias/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_short/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_short/short/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_short/short/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_short/short/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_short/short/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_short/short/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_short/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_short/legacy_long/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_short/legacy_long/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_short/legacy_long/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_short/legacy_long/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_short/legacy_long/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_long/observed/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_long/observed/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_long/observed/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_long/observed/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_long/observed/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_long/observed/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_long/atom_alias/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_long/atom_alias/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_long/atom_alias/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_long/atom_alias/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_long/atom_alias/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_long/atom_alias/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_long/short/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_long/short/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_long/short/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_long/short/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_long/short/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_long/short/wrong_final",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_long/legacy_long/valid",
+      "expected": true
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_long/legacy_long/missing_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_long/legacy_long/nonexistent_parent",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_long/legacy_long/duplicate_id",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_long/legacy_long/wrong_atom",
+      "expected": false
+    },
+    {
+      "kind": "graph",
+      "case": "U08/reference_long/legacy_long/wrong_final",
+      "expected": false
+    }
+  ]
+}
