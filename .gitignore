@@ -23,3 +23,6 @@ Thumbs.db
 *.bak
 *.tmp
 *.backup_*/
+
+# Generated LLM experiment evidence bundles
+llm_experiments/**/results_llm/*_evidence.zip

@@ -1,0 +1,622 @@
+{
+  "contract": "v082-offline-calibration-r1",
+  "provenance": "synthetic_offline_no_model_calls",
+  "checks": [
+    {
+      "name": "H01/reference_short",
+      "passed": true,
+      "actual_D": 2,
+      "strict_valid": true
+    },
+    {
+      "name": "H01/reference_short/rename",
+      "passed": true,
+      "actual_D": 2,
+      "strict_valid": true
+    },
+    {
+      "name": "H01/reference_short/dictionary_order",
+      "passed": true,
+      "actual_D": 2,
+      "strict_valid": true
+    },
+    {
+      "name": "H01/reference_short/legal_linearization_1",
+      "passed": true,
+      "actual_D": 2,
+      "strict_valid": true
+    },
+    {
+      "name": "H01/reference_short/legal_linearization_2",
+      "passed": true,
+      "actual_D": 2,
+      "strict_valid": true
+    },
+    {
+      "name": "H01/reference_short/legal_linearization_3",
+      "passed": true,
+      "actual_D": 2,
+      "strict_valid": true
+    },
+    {
+      "name": "H01/reference_short/legal_linearization_4",
+      "passed": true,
+      "actual_D": 2,
+      "strict_valid": true
+    },
+    {
+      "name": "H01/reference_short/unused_padding_rejected",
+      "passed": true,
+      "actual_D": null,
+      "strict_valid": false
+    },
+    {
+      "name": "H01/reference_short/missing_parent_rejected",
+      "passed": true,
+      "actual_D": null,
+      "strict_valid": false
+    },
+    {
+      "name": "H01/reference_long",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H01/reference_long/rename",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H01/reference_long/dictionary_order",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H01/reference_long/legal_linearization_1",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H01/reference_long/legal_linearization_2",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H01/reference_long/unused_padding_rejected",
+      "passed": true,
+      "actual_D": null,
+      "strict_valid": false
+    },
+    {
+      "name": "H01/reference_long/missing_parent_rejected",
+      "passed": true,
+      "actual_D": null,
+      "strict_valid": false
+    },
+    {
+      "name": "H02/reference_short",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H02/reference_short/rename",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H02/reference_short/dictionary_order",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H02/reference_short/legal_linearization_1",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H02/reference_short/legal_linearization_2",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H02/reference_short/legal_linearization_3",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H02/reference_short/legal_linearization_4",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H02/reference_short/unused_padding_rejected",
+      "passed": true,
+      "actual_D": null,
+      "strict_valid": false
+    },
+    {
+      "name": "H02/reference_short/missing_parent_rejected",
+      "passed": true,
+      "actual_D": null,
+      "strict_valid": false
+    },
+    {
+      "name": "H02/reference_long",
+      "passed": true,
+      "actual_D": 4,
+      "strict_valid": true
+    },
+    {
+      "name": "H02/reference_long/rename",
+      "passed": true,
+      "actual_D": 4,
+      "strict_valid": true
+    },
+    {
+      "name": "H02/reference_long/dictionary_order",
+      "passed": true,
+      "actual_D": 4,
+      "strict_valid": true
+    },
+    {
+      "name": "H02/reference_long/legal_linearization_1",
+      "passed": true,
+      "actual_D": 4,
+      "strict_valid": true
+    },
+    {
+      "name": "H02/reference_long/legal_linearization_2",
+      "passed": true,
+      "actual_D": 4,
+      "strict_valid": true
+    },
+    {
+      "name": "H02/reference_long/unused_padding_rejected",
+      "passed": true,
+      "actual_D": null,
+      "strict_valid": false
+    },
+    {
+      "name": "H02/reference_long/missing_parent_rejected",
+      "passed": true,
+      "actual_D": null,
+      "strict_valid": false
+    },
+    {
+      "name": "H03/reference_short",
+      "passed": true,
+      "actual_D": 2,
+      "strict_valid": true
+    },
+    {
+      "name": "H03/reference_short/rename",
+      "passed": true,
+      "actual_D": 2,
+      "strict_valid": true
+    },
+    {
+      "name": "H03/reference_short/dictionary_order",
+      "passed": true,
+      "actual_D": 2,
+      "strict_valid": true
+    },
+    {
+      "name": "H03/reference_short/legal_linearization_1",
+      "passed": true,
+      "actual_D": 2,
+      "strict_valid": true
+    },
+    {
+      "name": "H03/reference_short/legal_linearization_2",
+      "passed": true,
+      "actual_D": 2,
+      "strict_valid": true
+    },
+    {
+      "name": "H03/reference_short/legal_linearization_3",
+      "passed": true,
+      "actual_D": 2,
+      "strict_valid": true
+    },
+    {
+      "name": "H03/reference_short/legal_linearization_4",
+      "passed": true,
+      "actual_D": 2,
+      "strict_valid": true
+    },
+    {
+      "name": "H03/reference_short/legal_linearization_5",
+      "passed": true,
+      "actual_D": 2,
+      "strict_valid": true
+    },
+    {
+      "name": "H03/reference_short/legal_linearization_6",
+      "passed": true,
+      "actual_D": 2,
+      "strict_valid": true
+    },
+    {
+      "name": "H03/reference_short/legal_linearization_7",
+      "passed": true,
+      "actual_D": 2,
+      "strict_valid": true
+    },
+    {
+      "name": "H03/reference_short/legal_linearization_8",
+      "passed": true,
+      "actual_D": 2,
+      "strict_valid": true
+    },
+    {
+      "name": "H03/reference_short/legal_linearization_9",
+      "passed": true,
+      "actual_D": 2,
+      "strict_valid": true
+    },
+    {
+      "name": "H03/reference_short/legal_linearization_10",
+      "passed": true,
+      "actual_D": 2,
+      "strict_valid": true
+    },
+    {
+      "name": "H03/reference_short/legal_linearization_11",
+      "passed": true,
+      "actual_D": 2,
+      "strict_valid": true
+    },
+    {
+      "name": "H03/reference_short/legal_linearization_12",
+      "passed": true,
+      "actual_D": 2,
+      "strict_valid": true
+    },
+    {
+      "name": "H03/reference_short/unused_padding_rejected",
+      "passed": true,
+      "actual_D": null,
+      "strict_valid": false
+    },
+    {
+      "name": "H03/reference_short/missing_parent_rejected",
+      "passed": true,
+      "actual_D": null,
+      "strict_valid": false
+    },
+    {
+      "name": "H03/reference_long",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H03/reference_long/rename",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H03/reference_long/dictionary_order",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H03/reference_long/legal_linearization_1",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H03/reference_long/legal_linearization_2",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H03/reference_long/unused_padding_rejected",
+      "passed": true,
+      "actual_D": null,
+      "strict_valid": false
+    },
+    {
+      "name": "H03/reference_long/missing_parent_rejected",
+      "passed": true,
+      "actual_D": null,
+      "strict_valid": false
+    },
+    {
+      "name": "H04/reference_short",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H04/reference_short/rename",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H04/reference_short/dictionary_order",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H04/reference_short/legal_linearization_1",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H04/reference_short/legal_linearization_2",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H04/reference_short/legal_linearization_3",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H04/reference_short/legal_linearization_4",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H04/reference_short/legal_linearization_5",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H04/reference_short/legal_linearization_6",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H04/reference_short/legal_linearization_7",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H04/reference_short/legal_linearization_8",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H04/reference_short/legal_linearization_9",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H04/reference_short/legal_linearization_10",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H04/reference_short/legal_linearization_11",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H04/reference_short/legal_linearization_12",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H04/reference_short/legal_linearization_13",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H04/reference_short/legal_linearization_14",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H04/reference_short/legal_linearization_15",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H04/reference_short/legal_linearization_16",
+      "passed": true,
+      "actual_D": 3,
+      "strict_valid": true
+    },
+    {
+      "name": "H04/reference_short/unused_padding_rejected",
+      "passed": true,
+      "actual_D": null,
+      "strict_valid": false
+    },
+    {
+      "name": "H04/reference_short/missing_parent_rejected",
+      "passed": true,
+      "actual_D": null,
+      "strict_valid": false
+    },
+    {
+      "name": "H04/reference_long",
+      "passed": true,
+      "actual_D": 4,
+      "strict_valid": true
+    },
+    {
+      "name": "H04/reference_long/rename",
+      "passed": true,
+      "actual_D": 4,
+      "strict_valid": true
+    },
+    {
+      "name": "H04/reference_long/dictionary_order",
+      "passed": true,
+      "actual_D": 4,
+      "strict_valid": true
+    },
+    {
+      "name": "H04/reference_long/legal_linearization_1",
+      "passed": true,
+      "actual_D": 4,
+      "strict_valid": true
+    },
+    {
+      "name": "H04/reference_long/legal_linearization_2",
+      "passed": true,
+      "actual_D": 4,
+      "strict_valid": true
+    },
+    {
+      "name": "H04/reference_long/unused_padding_rejected",
+      "passed": true,
+      "actual_D": null,
+      "strict_valid": false
+    },
+    {
+      "name": "H04/reference_long/missing_parent_rejected",
+      "passed": true,
+      "actual_D": null,
+      "strict_valid": false
+    },
+    {
+      "name": "primitive_representation",
+      "passed": true,
+      "actual_D": 2,
+      "strict_valid": true
+    },
+    {
+      "name": "macro_representation",
+      "passed": true,
+      "actual_D": 1,
+      "strict_valid": true
+    },
+    {
+      "name": "declared_macro_expansion",
+      "passed": true,
+      "actual_D": 2,
+      "strict_valid": true
+    }
+  ],
+  "passed": 87,
+  "failed": 0,
+  "structures": [
+    {
+      "problem": "H01",
+      "route": "reference_short",
+      "D": 2,
+      "W": 3,
+      "max_derived_layer_width": 2,
+      "max_rule_premises": 2,
+      "serial_generator_calls": 5
+    },
+    {
+      "problem": "H01",
+      "route": "reference_long",
+      "D": 3,
+      "W": 3,
+      "max_derived_layer_width": 1,
+      "max_rule_premises": 2,
+      "serial_generator_calls": 5
+    },
+    {
+      "problem": "H02",
+      "route": "reference_short",
+      "D": 3,
+      "W": 4,
+      "max_derived_layer_width": 2,
+      "max_rule_premises": 2,
+      "serial_generator_calls": 6
+    },
+    {
+      "problem": "H02",
+      "route": "reference_long",
+      "D": 4,
+      "W": 4,
+      "max_derived_layer_width": 1,
+      "max_rule_premises": 2,
+      "serial_generator_calls": 6
+    },
+    {
+      "problem": "H03",
+      "route": "reference_short",
+      "D": 2,
+      "W": 4,
+      "max_derived_layer_width": 3,
+      "max_rule_premises": 3,
+      "serial_generator_calls": 6
+    },
+    {
+      "problem": "H03",
+      "route": "reference_long",
+      "D": 3,
+      "W": 3,
+      "max_derived_layer_width": 1,
+      "max_rule_premises": 2,
+      "serial_generator_calls": 5
+    },
+    {
+      "problem": "H04",
+      "route": "reference_short",
+      "D": 3,
+      "W": 5,
+      "max_derived_layer_width": 2,
+      "max_rule_premises": 3,
+      "serial_generator_calls": 7
+    },
+    {
+      "problem": "H04",
+      "route": "reference_long",
+      "D": 4,
+      "W": 4,
+      "max_derived_layer_width": 1,
+      "max_rule_premises": 2,
+      "serial_generator_calls": 6
+    }
+  ],
+  "macro_example": {
+    "raw_primitive_D": 2,
+    "raw_macro_D": 1,
+    "expanded_in_fixed_primitive_system_D": 2,
+    "certificate": {
+      "macro_rule": "m",
+      "primitive_expansion": [
+        "p",
+        "q"
+      ],
+      "input": [
+        "A"
+      ],
+      "output": "G"
+    },
+    "interpretation": "D는 선택한 추론 단위에 상대적이다. 인증된 전개 없이 추상 규칙의 내적 깊이를 추측하지 않는다."
+  },
+  "scope": "측정기의 기호/나열 불변성과 단위 의존성을 확인했다. 모델의 재명명/나열 강건성 또는 인간 사고 타당도를 검증한 결과가 아니다."
+}
