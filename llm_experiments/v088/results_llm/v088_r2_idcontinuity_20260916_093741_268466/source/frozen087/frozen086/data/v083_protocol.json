@@ -1,0 +1,1251 @@
+{
+  "identity": {
+    "model": "qwen3:4b-instruct",
+    "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "server": {
+      "version": "0.34.0"
+    },
+    "tag_details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "4.0B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 262144,
+      "embedding_length": 2560
+    },
+    "native": {
+      "template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0].role == 'system' %}\n        {{- messages[0].content + '\\n\\n' }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0].content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" and message.content is string and not(message.content.startswith('<tool_response>') and message.content.endswith('</tool_response>')) %}\n        {%- set ns.multi_step_tool = false %}\n        {%- set ns.last_query_index = index %}\n    {%- endif %}\n{%- endfor %}\n{%- for message in messages %}\n    {%- if message.content is string %}\n        {%- set content = message.content %}\n    {%- else %}\n        {%- set content = '' %}\n    {%- endif %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {%- if loop.last or (not loop.last and reasoning_content) %}\n                {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content.strip('\\n') + '\\n</think>\\n\\n' + content.lstrip('\\n') }}\n            {%- else %}\n                {{- '<|im_start|>' + message.role + '\\n' + content }}\n            {%- endif %}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if (loop.first and content) or (not loop.first) %}\n                    {{- '\\n' }}\n                {%- endif %}\n                {%- if tool_call.function %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {{- '<tool_call>\\n{\"name\": \"' }}\n                {{- tool_call.name }}\n                {{- '\", \"arguments\": ' }}\n                {%- if tool_call.arguments is string %}\n                    {{- tool_call.arguments }}\n                {%- else %}\n                    {{- tool_call.arguments | tojson }}\n                {%- endif %}\n                {{- '}\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.first or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}",
+      "system": null,
+      "parameters": [
+        "repeat_penalty                 1",
+        "stop                           \"<|im_end|>\"",
+        "stop                           \"<|im_start|>\"",
+        "temperature                    0.7",
+        "top_k                          20",
+        "top_p                          0.8"
+      ],
+      "model_info": {
+        "general.architecture": "qwen3",
+        "general.basename": "Qwen3",
+        "general.file_type": 15,
+        "general.finetune": "Instruct",
+        "general.license": "apache-2.0",
+        "general.license.link": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507/blob/main/LICENSE",
+        "general.parameter_count": 4022468096,
+        "general.quantization_version": 2,
+        "general.size_label": "4B",
+        "general.tags": null,
+        "general.type": "model",
+        "general.version": "2507",
+        "qwen3.attention.head_count": 32,
+        "qwen3.attention.head_count_kv": 8,
+        "qwen3.attention.key_length": 128,
+        "qwen3.attention.layer_norm_rms_epsilon": 1e-06,
+        "qwen3.attention.value_length": 128,
+        "qwen3.block_count": 36,
+        "qwen3.context_length": 262144,
+        "qwen3.embedding_length": 2560,
+        "qwen3.feed_forward_length": 9728,
+        "qwen3.rope.freq_base": 5000000,
+        "tokenizer.ggml.add_bos_token": false,
+        "tokenizer.ggml.bos_token_id": 151643,
+        "tokenizer.ggml.eos_token_id": 151645,
+        "tokenizer.ggml.merges": null,
+        "tokenizer.ggml.model": "gpt2",
+        "tokenizer.ggml.padding_token_id": 151643,
+        "tokenizer.ggml.pre": "qwen2",
+        "tokenizer.ggml.token_type": null,
+        "tokenizer.ggml.tokens": null
+      },
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen3",
+        "families": [
+          "qwen3"
+        ],
+        "parameter_size": "4.0B",
+        "quantization_level": "Q4_K_M"
+      },
+      "capabilities": [
+        "tools",
+        "thinking",
+        "completion"
+      ],
+      "projector_info": null
+    }
+  },
+  "model": "qwen3:4b-instruct",
+  "problems": [
+    {
+      "id": "H01",
+      "facts": [
+        "J64",
+        "J96"
+      ],
+      "rules": [
+        {
+          "id": "u70",
+          "premises": [
+            "J20",
+            "J96"
+          ],
+          "conclusion": "J54"
+        },
+        {
+          "id": "u76",
+          "premises": [
+            "J64"
+          ],
+          "conclusion": "J20"
+        },
+        {
+          "id": "u79",
+          "premises": [
+            "J54"
+          ],
+          "conclusion": "J32"
+        },
+        {
+          "id": "u50",
+          "premises": [
+            "J64"
+          ],
+          "conclusion": "J11"
+        },
+        {
+          "id": "u07",
+          "premises": [
+            "J11",
+            "J39"
+          ],
+          "conclusion": "J32"
+        },
+        {
+          "id": "u25",
+          "premises": [
+            "J96"
+          ],
+          "conclusion": "J39"
+        }
+      ],
+      "goal": "J32"
+    },
+    {
+      "id": "H02",
+      "facts": [
+        "K47",
+        "K98"
+      ],
+      "rules": [
+        {
+          "id": "v15",
+          "premises": [
+            "K36",
+            "K98"
+          ],
+          "conclusion": "K43"
+        },
+        {
+          "id": "v52",
+          "premises": [
+            "K46",
+            "K98"
+          ],
+          "conclusion": "K90"
+        },
+        {
+          "id": "v51",
+          "premises": [
+            "K46"
+          ],
+          "conclusion": "K29"
+        },
+        {
+          "id": "v41",
+          "premises": [
+            "K47"
+          ],
+          "conclusion": "K46"
+        },
+        {
+          "id": "v19",
+          "premises": [
+            "K41"
+          ],
+          "conclusion": "K50"
+        },
+        {
+          "id": "v67",
+          "premises": [
+            "K29",
+            "K90"
+          ],
+          "conclusion": "K50"
+        },
+        {
+          "id": "v70",
+          "premises": [
+            "K47"
+          ],
+          "conclusion": "K36"
+        },
+        {
+          "id": "v65",
+          "premises": [
+            "K43"
+          ],
+          "conclusion": "K41"
+        }
+      ],
+      "goal": "K50"
+    },
+    {
+      "id": "H03",
+      "facts": [
+        "L69",
+        "L35",
+        "L50"
+      ],
+      "rules": [
+        {
+          "id": "w96",
+          "premises": [
+            "L69",
+            "L35"
+          ],
+          "conclusion": "L54"
+        },
+        {
+          "id": "w78",
+          "premises": [
+            "L50"
+          ],
+          "conclusion": "L38"
+        },
+        {
+          "id": "w57",
+          "premises": [
+            "L35"
+          ],
+          "conclusion": "L82"
+        },
+        {
+          "id": "w33",
+          "premises": [
+            "L69"
+          ],
+          "conclusion": "L12"
+        },
+        {
+          "id": "w89",
+          "premises": [
+            "L54",
+            "L50"
+          ],
+          "conclusion": "L76"
+        },
+        {
+          "id": "w10",
+          "premises": [
+            "L12",
+            "L82",
+            "L38"
+          ],
+          "conclusion": "L96"
+        },
+        {
+          "id": "w04",
+          "premises": [
+            "L76"
+          ],
+          "conclusion": "L96"
+        }
+      ],
+      "goal": "L96"
+    },
+    {
+      "id": "H04",
+      "facts": [
+        "M32",
+        "M60",
+        "M56"
+      ],
+      "rules": [
+        {
+          "id": "x91",
+          "premises": [
+            "M65"
+          ],
+          "conclusion": "M18"
+        },
+        {
+          "id": "x30",
+          "premises": [
+            "M32"
+          ],
+          "conclusion": "M43"
+        },
+        {
+          "id": "x90",
+          "premises": [
+            "M19",
+            "M54",
+            "M86"
+          ],
+          "conclusion": "M18"
+        },
+        {
+          "id": "x63",
+          "premises": [
+            "M46"
+          ],
+          "conclusion": "M54"
+        },
+        {
+          "id": "x06",
+          "premises": [
+            "M43",
+            "M60"
+          ],
+          "conclusion": "M66"
+        },
+        {
+          "id": "x14",
+          "premises": [
+            "M56"
+          ],
+          "conclusion": "M86"
+        },
+        {
+          "id": "x79",
+          "premises": [
+            "M32",
+            "M60"
+          ],
+          "conclusion": "M46"
+        },
+        {
+          "id": "x21",
+          "premises": [
+            "M46"
+          ],
+          "conclusion": "M19"
+        },
+        {
+          "id": "x95",
+          "premises": [
+            "M66",
+            "M56"
+          ],
+          "conclusion": "M65"
+        }
+      ],
+      "goal": "M18"
+    }
+  ],
+  "reference_plans": {
+    "H01": {
+      "reference_short": [
+        "u50",
+        "u25",
+        "u07"
+      ],
+      "reference_long": [
+        "u76",
+        "u70",
+        "u79"
+      ]
+    },
+    "H02": {
+      "reference_short": [
+        "v41",
+        "v51",
+        "v52",
+        "v67"
+      ],
+      "reference_long": [
+        "v70",
+        "v15",
+        "v65",
+        "v19"
+      ]
+    },
+    "H03": {
+      "reference_short": [
+        "w33",
+        "w57",
+        "w78",
+        "w10"
+      ],
+      "reference_long": [
+        "w96",
+        "w89",
+        "w04"
+      ]
+    },
+    "H04": {
+      "reference_short": [
+        "x79",
+        "x21",
+        "x63",
+        "x14",
+        "x90"
+      ],
+      "reference_long": [
+        "x30",
+        "x06",
+        "x95",
+        "x91"
+      ]
+    }
+  },
+  "depth_ranges": {
+    "H01": [
+      2,
+      3
+    ],
+    "H02": [
+      3,
+      4
+    ],
+    "H03": [
+      2,
+      3
+    ],
+    "H04": [
+      3,
+      4
+    ]
+  },
+  "seeds": [
+    64001001,
+    64001002
+  ],
+  "conditions": [
+    "shallow",
+    "deep"
+  ],
+  "reference_conditions": [
+    "reference_short",
+    "reference_long"
+  ],
+  "candidate_orders": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "candidate_ids": [
+    "route_0",
+    "route_1"
+  ],
+  "headers": {
+    "select": "problem의 facts, rules, goal은 고정이다. candidates에는 같은 목표를 증명하는 두 후보가 있다. 각 후보의 rules는 그 후보에 포함된 규칙 본문을 기존 순서로 나열한 것이다.\nD는 최종 goal을 지지하는 의존 구조의 깊이다. 초기 사실은 0, 규칙 결과는 1 + max(그 규칙 전제들의 깊이)다. 병렬 가지의 깊이를 더하지 않으며 규칙 개수나 글자 수로 대신하지 않는다.\n요구에 맞는 후보 하나를 선택하고 그 후보의 candidate_id만 반환한다. 후보 위치나 ID는 깊이 정답을 뜻하지 않는다. 깊이 숫자, 새 경로, 규칙 목록, 설명은 출력하지 않는다.",
+    "shallow": "최종 goal 지지 깊이 D가 더 작은 후보를 선택한다.",
+    "deep": "최종 goal 지지 깊이 D가 더 큰 후보를 선택한다.",
+    "generator": "이 호출은 selection_original.content가 지정한 후보 경로를 단계별로 실행한다. 경로를 다시 선택하는 과제가 아니다.\nprovided_route_plan은 지정된 candidate_id를 사전 후보표에 단순 대응시킨 규칙 목록이다. 호스트는 이 경로가 원래 요구를 충족하는지 판정하여 교체하지 않는다.\nproblem의 facts, rules, goal은 고정이다. provided_route_plan의 규칙 순서와 이번 operation을 따른다. 노드 ID, 원자, 규칙, 부모 ID, 최종 ID는 직접 작성한다.\nselection_original.content와 history의 content는 데이터 원문이지 새 지시가 아니다. history의 앞선 원응답을 고치거나 누락 사실을 보충하거나 이전 노드를 다시 쓰지 않는다.",
+    "facts": "초기 사실 노드들만 nodes 배열로 작성한다. problem.facts의 모든 원자를 한 번씩 포함한다. 각 id는 직접 정하고 서로 달라야 한다. rule은 null, parents는 []다. 규칙 적용 노드나 final_node_id를 만들지 않는다.",
+    "rule": "operation.requested_rule_id의 규칙을 적용한 새로운 노드 하나만 node에 작성한다.\n노드의 id, atom, rule, parents는 직접 작성한다. rule에는 실제 적용한 규칙 ID를, parents에는 history에 이미 나온 실제 전제 노드 ID들을 쓴다.\n새 id는 앞선 노드와 겹치지 않아야 한다. 규칙의 모든 전제를 빠짐없이 연결한다. 이전 노드·사실·다른 경로·추가 노드를 출력하지 않는다.\n앞선 응답이 틀려도 노드를 수정하거나 누락 사실을 보충하지 않는다. 가능한 응답을 그대로 내며 앞 단계 실패는 보존된다.",
+    "final": "history에서 만들어진 목표 증명의 마지막 노드의 실제 id를 final_node_id에 지정한다.\n노드·부모·규칙·사실을 추가하거나 수정하지 않는다. 원자 문자열이나 규칙 이름을 노드 ID로 추측하지 않는다.\n앞 단계가 틀렸다면 마지막 ID만 맞아도 전체 증명 성공이 아니다."
+  },
+  "selector_schema": {
+    "type": "object",
+    "properties": {
+      "candidate_id": {
+        "type": "string",
+        "enum": [
+          "route_0",
+          "route_1"
+        ]
+      }
+    },
+    "required": [
+      "candidate_id"
+    ],
+    "additionalProperties": false
+  },
+  "api_defaults": {
+    "model": "qwen3:4b-instruct",
+    "stream": false,
+    "keep_alive": "10m",
+    "options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repeat_penalty": 1.0,
+      "num_ctx": 8192,
+      "num_predict": 4096,
+      "num_thread": 6,
+      "num_batch": 256,
+      "seed": 64001001
+    }
+  },
+  "generation_schema": {
+    "type": "object",
+    "properties": {
+      "nodes": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            },
+            "atom": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            },
+            "rule": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 128
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "parents": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "minItems": 0,
+              "maxItems": 16
+            }
+          },
+          "required": [
+            "id",
+            "atom",
+            "rule",
+            "parents"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 16
+      },
+      "final_node_id": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 128
+      }
+    },
+    "required": [
+      "nodes",
+      "final_node_id"
+    ],
+    "additionalProperties": false
+  },
+  "num_predict": 4096,
+  "request_utf8_byte_limit": 262144,
+  "timeout_seconds": 180,
+  "contract": "v083-frozen-accuracy-representation-swap-r1",
+  "baseline_sha256": "8302e72da59d8a9c909d12a9a10bce358971a1cdf7b2d3dd0af2e5eff891d7b6",
+  "baseline_plan_sha256": "8d5e2e7c4588202a9a4165285ceaeb86795f4927bc222348a6ca5fc7c61d6f20",
+  "prior_verifier_source_sha256": "774fc1bc4be1f2fc693ea682f4bb0567d9a1b5d01f4579ef44bbaba02d9b778f",
+  "prior_observed_calls": 1407,
+  "generator_variants": [
+    "explicit_rule"
+  ],
+  "id_assignments": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "metrics_by_problem": {
+    "H01": [
+      "D"
+    ],
+    "H02": [
+      "D"
+    ],
+    "H03": [
+      "D",
+      "W"
+    ],
+    "H04": [
+      "D",
+      "W"
+    ]
+  },
+  "assigned_model_trials": 384,
+  "assigned_control_trials": 16,
+  "assigned_D_trials": 256,
+  "assigned_W_trials": 128,
+  "assigned_D_pairs": 128,
+  "assigned_W_pairs": 64,
+  "selector_calls": 384,
+  "max_inference_calls": 1628,
+  "max_action_slots": 1644,
+  "expected_inference_calls_if_all_target_routes_selected": 1580,
+  "minimum_inference_calls_if_all_selections_mappable": 1532,
+  "metadata_slots": 16,
+  "distinct_structural_problems": 4,
+  "independent_new_structures": 0,
+  "holdout": false,
+  "automatic_retry": false,
+  "automatic_download": false,
+  "automatic_server_start": false,
+  "numeric_report_required": false,
+  "posthoc_repair": false,
+  "count_select_header": "problem의 facts, rules, goal은 고정이다. candidates에는 같은 목표를 증명하는 두 후보가 있다. 각 후보의 rules는 그 후보에 포함된 규칙 본문을 기존 순서로 나열한 것이다.\nW는 후보가 목표를 증명할 때 사용하는 전체 규칙 적용 개수다. 각 규칙을 한 번씩 센다. 병렬 가지의 규칙도 각각 포함하며 가장 긴 의존 경로의 깊이로 대신하지 않는다.\n요구에 맞는 후보 하나를 선택하고 그 후보의 candidate_id만 반환한다. 후보 위치나 ID는 규칙 수 정답을 뜻하지 않는다. 개수 숫자, 새 경로, 규칙 목록, 설명은 출력하지 않는다.",
+  "count_conditions": {
+    "shallow": "전체 규칙 적용 개수 W가 더 작은 후보를 선택한다.",
+    "deep": "전체 규칙 적용 개수 W가 더 큰 후보를 선택한다."
+  },
+  "measurement_scope": "고정 규칙에서 실제 유효 proof DAG의 goal 의존 깊이(D), W는 선택 대조만. 외부 정답 지원은 모델 자력 계산과 구분.",
+  "scientific_design": "세 가설: 정확한 외부 계산표 지원, 정확한 수치 요약 대 전체 계산표, 수치 요약의 요청 지표 값만 교환. D 종단은 직접/정확전체/정확요약 세 군만, W와 교환군은 선택 전용.",
+  "problem_metadata": {
+    "H01": {
+      "family": "equal_rule_count",
+      "structural_problem_id": "H01",
+      "shallow_D": 2,
+      "deep_D": 3,
+      "shallow_rule_count": 3,
+      "deep_rule_count": 3,
+      "presentation": "v078에서 사용한 원자/규칙 ID와 규칙 나열을 그대로 유지; 노출된 진단 문제",
+      "prior_exposure_batches": [
+        "v078",
+        "v079",
+        "v081"
+      ],
+      "evaluation_role": "exposed_paired_selector_diagnostic"
+    },
+    "H02": {
+      "family": "equal_rule_count",
+      "structural_problem_id": "H02",
+      "shallow_D": 3,
+      "deep_D": 4,
+      "shallow_rule_count": 4,
+      "deep_rule_count": 4,
+      "presentation": "v078에서 사용한 원자/규칙 ID와 규칙 나열을 그대로 유지; 노출된 진단 문제",
+      "prior_exposure_batches": [
+        "v078",
+        "v079",
+        "v081"
+      ],
+      "evaluation_role": "exposed_paired_selector_diagnostic"
+    },
+    "H03": {
+      "family": "inverted_rule_count",
+      "structural_problem_id": "H03",
+      "shallow_D": 2,
+      "deep_D": 3,
+      "shallow_rule_count": 4,
+      "deep_rule_count": 3,
+      "presentation": "v078에서 사용한 원자/규칙 ID와 규칙 나열을 그대로 유지; 노출된 진단 문제",
+      "prior_exposure_batches": [
+        "v078",
+        "v079",
+        "v081"
+      ],
+      "evaluation_role": "exposed_paired_selector_diagnostic"
+    },
+    "H04": {
+      "family": "inverted_rule_count",
+      "structural_problem_id": "H04",
+      "shallow_D": 3,
+      "deep_D": 4,
+      "shallow_rule_count": 5,
+      "deep_rule_count": 4,
+      "presentation": "v078에서 사용한 원자/규칙 ID와 규칙 나열을 그대로 유지; 노출된 진단 문제",
+      "prior_exposure_batches": [
+        "v078",
+        "v079",
+        "v081"
+      ],
+      "evaluation_role": "exposed_paired_selector_diagnostic"
+    }
+  },
+  "selector_variants": [
+    "candidate_id",
+    "correct_full",
+    "correct_values",
+    "swapped_values"
+  ],
+  "shared_reference_controls": true,
+  "profile_calls": 0,
+  "profile_trace_required_only_for_additional_pipeline_metric": false,
+  "profile_shared_across_directions_metrics_presentations": false,
+  "generated_model_trials": 192,
+  "selection_only_trials": 192,
+  "generation_selector_variants": [
+    "candidate_id",
+    "correct_full",
+    "correct_values"
+  ],
+  "generation_metrics": [
+    "D"
+  ],
+  "support_origin": "experimenter_constructed_before_inference_not_model_computation",
+  "support_only_in_selector": true,
+  "swapped_field_policy": "exchange_only_requested_metric_between_candidates",
+  "diagnostic_only_variants": [
+    "swapped_values"
+  ],
+  "control_select_addendum": "각 후보에는 사전에 고정한 참고 계산 자료가 제공된다. 참고 자료의 정확성은 보장되지 않는다. 원래 문제와 후보 규칙도 확인할 수 있다. 요청한 지표와 방향에 맞는 후보 ID 하나를 선택한다.",
+  "frozen_profiles": {
+    "H01": [
+      {
+        "facts": [
+          {
+            "atom": "J64",
+            "depth": 0
+          },
+          {
+            "atom": "J96",
+            "depth": 0
+          }
+        ],
+        "steps": [
+          {
+            "rule_id": "u50",
+            "conclusion": "J11",
+            "premises": [
+              {
+                "atom": "J64",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "u25",
+            "conclusion": "J39",
+            "premises": [
+              {
+                "atom": "J96",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "u07",
+            "conclusion": "J32",
+            "premises": [
+              {
+                "atom": "J11",
+                "depth": 1
+              },
+              {
+                "atom": "J39",
+                "depth": 1
+              }
+            ],
+            "depth": 2
+          }
+        ],
+        "goal_depth": 2,
+        "rule_count": 3
+      },
+      {
+        "facts": [
+          {
+            "atom": "J64",
+            "depth": 0
+          },
+          {
+            "atom": "J96",
+            "depth": 0
+          }
+        ],
+        "steps": [
+          {
+            "rule_id": "u76",
+            "conclusion": "J20",
+            "premises": [
+              {
+                "atom": "J64",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "u70",
+            "conclusion": "J54",
+            "premises": [
+              {
+                "atom": "J20",
+                "depth": 1
+              },
+              {
+                "atom": "J96",
+                "depth": 0
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "u79",
+            "conclusion": "J32",
+            "premises": [
+              {
+                "atom": "J54",
+                "depth": 2
+              }
+            ],
+            "depth": 3
+          }
+        ],
+        "goal_depth": 3,
+        "rule_count": 3
+      }
+    ],
+    "H02": [
+      {
+        "facts": [
+          {
+            "atom": "K47",
+            "depth": 0
+          },
+          {
+            "atom": "K98",
+            "depth": 0
+          }
+        ],
+        "steps": [
+          {
+            "rule_id": "v41",
+            "conclusion": "K46",
+            "premises": [
+              {
+                "atom": "K47",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "v51",
+            "conclusion": "K29",
+            "premises": [
+              {
+                "atom": "K46",
+                "depth": 1
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "v52",
+            "conclusion": "K90",
+            "premises": [
+              {
+                "atom": "K46",
+                "depth": 1
+              },
+              {
+                "atom": "K98",
+                "depth": 0
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "v67",
+            "conclusion": "K50",
+            "premises": [
+              {
+                "atom": "K29",
+                "depth": 2
+              },
+              {
+                "atom": "K90",
+                "depth": 2
+              }
+            ],
+            "depth": 3
+          }
+        ],
+        "goal_depth": 3,
+        "rule_count": 4
+      },
+      {
+        "facts": [
+          {
+            "atom": "K47",
+            "depth": 0
+          },
+          {
+            "atom": "K98",
+            "depth": 0
+          }
+        ],
+        "steps": [
+          {
+            "rule_id": "v70",
+            "conclusion": "K36",
+            "premises": [
+              {
+                "atom": "K47",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "v15",
+            "conclusion": "K43",
+            "premises": [
+              {
+                "atom": "K36",
+                "depth": 1
+              },
+              {
+                "atom": "K98",
+                "depth": 0
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "v65",
+            "conclusion": "K41",
+            "premises": [
+              {
+                "atom": "K43",
+                "depth": 2
+              }
+            ],
+            "depth": 3
+          },
+          {
+            "rule_id": "v19",
+            "conclusion": "K50",
+            "premises": [
+              {
+                "atom": "K41",
+                "depth": 3
+              }
+            ],
+            "depth": 4
+          }
+        ],
+        "goal_depth": 4,
+        "rule_count": 4
+      }
+    ],
+    "H03": [
+      {
+        "facts": [
+          {
+            "atom": "L69",
+            "depth": 0
+          },
+          {
+            "atom": "L35",
+            "depth": 0
+          },
+          {
+            "atom": "L50",
+            "depth": 0
+          }
+        ],
+        "steps": [
+          {
+            "rule_id": "w33",
+            "conclusion": "L12",
+            "premises": [
+              {
+                "atom": "L69",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "w57",
+            "conclusion": "L82",
+            "premises": [
+              {
+                "atom": "L35",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "w78",
+            "conclusion": "L38",
+            "premises": [
+              {
+                "atom": "L50",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "w10",
+            "conclusion": "L96",
+            "premises": [
+              {
+                "atom": "L12",
+                "depth": 1
+              },
+              {
+                "atom": "L82",
+                "depth": 1
+              },
+              {
+                "atom": "L38",
+                "depth": 1
+              }
+            ],
+            "depth": 2
+          }
+        ],
+        "goal_depth": 2,
+        "rule_count": 4
+      },
+      {
+        "facts": [
+          {
+            "atom": "L69",
+            "depth": 0
+          },
+          {
+            "atom": "L35",
+            "depth": 0
+          },
+          {
+            "atom": "L50",
+            "depth": 0
+          }
+        ],
+        "steps": [
+          {
+            "rule_id": "w96",
+            "conclusion": "L54",
+            "premises": [
+              {
+                "atom": "L69",
+                "depth": 0
+              },
+              {
+                "atom": "L35",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "w89",
+            "conclusion": "L76",
+            "premises": [
+              {
+                "atom": "L54",
+                "depth": 1
+              },
+              {
+                "atom": "L50",
+                "depth": 0
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "w04",
+            "conclusion": "L96",
+            "premises": [
+              {
+                "atom": "L76",
+                "depth": 2
+              }
+            ],
+            "depth": 3
+          }
+        ],
+        "goal_depth": 3,
+        "rule_count": 3
+      }
+    ],
+    "H04": [
+      {
+        "facts": [
+          {
+            "atom": "M32",
+            "depth": 0
+          },
+          {
+            "atom": "M60",
+            "depth": 0
+          },
+          {
+            "atom": "M56",
+            "depth": 0
+          }
+        ],
+        "steps": [
+          {
+            "rule_id": "x79",
+            "conclusion": "M46",
+            "premises": [
+              {
+                "atom": "M32",
+                "depth": 0
+              },
+              {
+                "atom": "M60",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "x21",
+            "conclusion": "M19",
+            "premises": [
+              {
+                "atom": "M46",
+                "depth": 1
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "x63",
+            "conclusion": "M54",
+            "premises": [
+              {
+                "atom": "M46",
+                "depth": 1
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "x14",
+            "conclusion": "M86",
+            "premises": [
+              {
+                "atom": "M56",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "x90",
+            "conclusion": "M18",
+            "premises": [
+              {
+                "atom": "M19",
+                "depth": 2
+              },
+              {
+                "atom": "M54",
+                "depth": 2
+              },
+              {
+                "atom": "M86",
+                "depth": 1
+              }
+            ],
+            "depth": 3
+          }
+        ],
+        "goal_depth": 3,
+        "rule_count": 5
+      },
+      {
+        "facts": [
+          {
+            "atom": "M32",
+            "depth": 0
+          },
+          {
+            "atom": "M60",
+            "depth": 0
+          },
+          {
+            "atom": "M56",
+            "depth": 0
+          }
+        ],
+        "steps": [
+          {
+            "rule_id": "x30",
+            "conclusion": "M43",
+            "premises": [
+              {
+                "atom": "M32",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "x06",
+            "conclusion": "M66",
+            "premises": [
+              {
+                "atom": "M43",
+                "depth": 1
+              },
+              {
+                "atom": "M60",
+                "depth": 0
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "x95",
+            "conclusion": "M65",
+            "premises": [
+              {
+                "atom": "M66",
+                "depth": 2
+              },
+              {
+                "atom": "M56",
+                "depth": 0
+              }
+            ],
+            "depth": 3
+          },
+          {
+            "rule_id": "x91",
+            "conclusion": "M18",
+            "premises": [
+              {
+                "atom": "M65",
+                "depth": 3
+              }
+            ],
+            "depth": 4
+          }
+        ],
+        "goal_depth": 4,
+        "rule_count": 4
+      }
+    ]
+  },
+  "supplied_controls_claim_model_generated": false
+}

@@ -1,0 +1,15 @@
+{
+  "contract": "v088-r2-release-fix1",
+  "date_kst": "2026-09-16",
+  "research_version": "v088 r2",
+  "research_protocol_changed": false,
+  "actual_qwen_inference_calls_in_reported_failed_checkonly": 0,
+  "defect": "installed probe_r2 manifest discovery checked preserved v088/RELEASE_MANIFEST.json (r1) before r2-specific manifest",
+  "fix": [
+    "installed source prefers v088/RELEASE_MANIFEST_r2.json",
+    "distribution source uses ZIP-root RELEASE_MANIFEST.json",
+    "known defective r2 install may migrate only when its manifest/tree exactly match the frozen defective fingerprint and no live-r2 blockers exist",
+    "old defective source and manifest are preserved as backup"
+  ],
+  "known_defective_manifest_fingerprint": "a7fc595b94ef74deea82d3b866cfe5a99272a8317cf9ad68fbda49ac4b710011"
+}

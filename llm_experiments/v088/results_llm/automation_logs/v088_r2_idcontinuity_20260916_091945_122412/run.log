@@ -1,0 +1,172 @@
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'selftest088.py', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v088\\results_llm\\automation_logs\\v088_r2_idcontinuity_20260916_091945_122412\\selftest.json']
+test_all_prefixes_reversible_semantics (test_contract088.Contract.test_all_prefixes_reversible_semantics) ... ok
+test_all_structures_included (test_contract088.Contract.test_all_structures_included) ... ok
+test_anchor_selection_does_not_read_target_or_future (test_contract088.Contract.test_anchor_selection_does_not_read_target_or_future) ... ok
+test_atom_alias_is_semantic_name_not_neutral (test_contract088.Contract.test_atom_alias_is_semantic_name_not_neutral) ... ok
+test_continuation_does_not_call_selector_or_new_facts (test_contract088.Contract.test_continuation_does_not_call_selector_or_new_facts) ... ok
+test_frozen_schedule_counts (test_contract088.Contract.test_frozen_schedule_counts) ... ok
+test_independent_continuation_transform (test_contract088.Contract.test_independent_continuation_transform) ... ok
+test_independent_modules_no_production_imports (test_contract088.Contract.test_independent_modules_no_production_imports) ... ok
+test_independent_schedule (test_contract088.Contract.test_independent_schedule) ... ok
+test_legacy_baseline_source_is_byte_preserved (test_contract088.Contract.test_legacy_baseline_source_is_byte_preserved) ... ok
+test_local_other_fields_header_schema_unchanged (test_contract088.Contract.test_local_other_fields_header_schema_unchanged) ... ok
+test_new_reply_never_renamed (test_contract088.Contract.test_new_reply_never_renamed) ... ok
+test_no_holdout_claim (test_contract088.Contract.test_no_holdout_claim) ... ok
+test_no_inventory_added (test_contract088.Contract.test_no_inventory_added) ... ok
+test_observed_also_uses_canonical_serializer (test_contract088.Contract.test_observed_also_uses_canonical_serializer) ... ok
+test_powershell_parser_when_available (test_contract088.Contract.test_powershell_parser_when_available) ... ok
+test_previous_actual_monitor_request_regression (test_contract088.Contract.test_previous_actual_monitor_request_regression) ... ok
+test_probes_include_already_renamed_parents (test_contract088.Contract.test_probes_include_already_renamed_parents) ... ok
+test_protocol_independent_validation (test_contract088.Contract.test_protocol_independent_validation) ... ok
+test_python312_syntax (test_contract088.Contract.test_python312_syntax) ... ok
+test_runtime_refreeze_is_only_protocol_change_from_r1_research_contract (test_contract088.Contract.test_runtime_refreeze_is_only_protocol_change_from_r1_research_contract) ... ok
+test_same_output_ids_across_scopes (test_contract088.Contract.test_same_output_ids_across_scopes) ... ok
+test_source_anchor_frozen_hash (test_contract088.Contract.test_source_anchor_frozen_hash) ... ok
+test_auto_baseline_over_100mb_is_found (test_launch088.Installation.test_auto_baseline_over_100mb_is_found) ... ok
+test_bare_started_guard_blocks_install (test_launch088.Installation.test_bare_started_guard_blocks_install) ... ok
+test_explicit_baseline_verifies_hash (test_launch088.Installation.test_explicit_baseline_verifies_hash) ... ok
+test_generated_run_not_named_holdout (test_launch088.Installation.test_generated_run_not_named_holdout) ... ok
+test_install_and_hash_check (test_launch088.Installation.test_install_and_hash_check) ... ERROR
+test_lock_blocks_parallel_workflow (test_launch088.Installation.test_lock_blocks_parallel_workflow) ... ok
+test_modified_source_not_overwritten (test_launch088.Installation.test_modified_source_not_overwritten) ... ERROR
+test_prior_v087_untouched (test_launch088.Installation.test_prior_v087_untouched) ... ERROR
+test_r1_guard_is_preserved_and_does_not_block_r2_install (test_launch088.Installation.test_r1_guard_is_preserved_and_does_not_block_r2_install) ... ERROR
+test_second_identical_install_does_not_replace (test_launch088.Installation.test_second_identical_install_does_not_replace) ... ERROR
+test_wrong_baseline_rejected (test_launch088.Installation.test_wrong_baseline_rejected) ... ok
+test_actual_second_step_sees_first_new_allocated_id (test_measure088.Measurement.test_actual_second_step_sees_first_new_allocated_id) ... ok
+test_all_independent_requests (test_measure088.Measurement.test_all_independent_requests) ... ok
+test_ancestor_still_required_as_direct_parent (test_measure088.Measurement.test_ancestor_still_required_as_direct_parent) ... ok
+test_atom_instead_of_existing_node_id_rejected (test_measure088.Measurement.test_atom_instead_of_existing_node_id_rejected) ... ok
+test_bad_json_keys_rejected (test_measure088.Measurement.test_bad_json_keys_rejected) ... ok
+test_calibration_expected_1504 (test_measure088.Measurement.test_calibration_expected_1504) ... ok
+test_diagnostic_error_codes_not_silently_empty (test_measure088.Measurement.test_diagnostic_error_codes_not_silently_empty) ... ok
+test_diagnostics_long_prefixes_present (test_measure088.Measurement.test_diagnostics_long_prefixes_present) ... ok
+test_expected_phase_counts (test_measure088.Measurement.test_expected_phase_counts) ... ok
+test_expected_primary_effect_when_one_condition_fails (test_measure088.Measurement.test_expected_primary_effect_when_one_condition_fails) ... ok
+test_first_rule_success_does_not_imply_rollout_success (test_measure088.Measurement.test_first_rule_success_does_not_imply_rollout_success) ... ok
+test_full_synthetic_count (test_measure088.Measurement.test_full_synthetic_count) ... ok
+test_independent_semantics_all_944 (test_measure088.Measurement.test_independent_semantics_all_944) ... ok
+test_initial_scope_reports_same_output_id_not_offset_confound (test_measure088.Measurement.test_initial_scope_reports_same_output_id_not_offset_confound) ... ok
+test_invalid_id_contract_distinct_from_semantics (test_measure088.Measurement.test_invalid_id_contract_distinct_from_semantics) ... ok
+test_local_no_fixed_output_id (test_measure088.Measurement.test_local_no_fixed_output_id) ... ok
+test_nonfinite_json_rejected (test_measure088.Measurement.test_nonfinite_json_rejected) ... ok
+test_parent_count_is_not_semantics (test_measure088.Measurement.test_parent_count_is_not_semantics) ... ok
+test_partial_batch_suppresses_whole_effect_even_if_known_failures (test_measure088.Measurement.test_partial_batch_suppresses_whole_effect_even_if_known_failures) ... ok
+test_primary_and_interaction_zero_oracle (test_measure088.Measurement.test_primary_and_interaction_zero_oracle) ... ok
+test_reference_and_full_endpoints_not_combined (test_measure088.Measurement.test_reference_and_full_endpoints_not_combined) ... ok
+test_rules_not_parents_forced_in_continuation (test_measure088.Measurement.test_rules_not_parents_forced_in_continuation) ... ok
+test_same_facts_request_in_monitor (test_measure088.Measurement.test_same_facts_request_in_monitor) ... ok
+test_shared_selection_requests_count_once (test_measure088.Measurement.test_shared_selection_requests_count_once) ... ok
+test_short_long_prefix_alpha_invariance (test_measure088.Measurement.test_short_long_prefix_alpha_invariance) ... ok
+test_unobserved_primary_not_zero (test_measure088.Measurement.test_unobserved_primary_not_zero) ... ok
+test_wrong_comparison_does_not_become_end_to_end_success (test_measure088.Measurement.test_wrong_comparison_does_not_become_end_to_end_success) ... ok
+test_HTTP_error_body_retained (test_runtime088.HTTP.test_HTTP_error_body_retained) ... ok
+test_complete_chunked (test_runtime088.HTTP.test_complete_chunked) ... ok
+test_incomplete_chunked_retains_body (test_runtime088.HTTP.test_incomplete_chunked_retains_body) ... ok
+test_normal_content_length (test_runtime088.HTTP.test_normal_content_length) ... ok
+test_redirect_is_not_followed (test_runtime088.HTTP.test_redirect_is_not_followed) ... ok
+test_short_content_length (test_runtime088.HTTP.test_short_content_length) ... ok
+test_archive_paths_rejected (test_runtime088.Runtime.test_archive_paths_rejected) ... ok
+test_complete_dispatch_response_preserved (test_runtime088.Runtime.test_complete_dispatch_response_preserved) ... ok
+test_crash_after_dispatch_is_pending_not_wrong_answer (test_runtime088.Runtime.test_crash_after_dispatch_is_pending_not_wrong_answer) ... ok
+test_finalize_is_idempotent (test_runtime088.Runtime.test_finalize_is_idempotent) ... ok
+test_frozen_guard_blocks_new_name (test_runtime088.Runtime.test_frozen_guard_blocks_new_name) ... ok
+test_frozen_transport_code_regression (test_runtime088.Runtime.test_frozen_transport_code_regression) ... ok
+test_http_failure_no_retry (test_runtime088.Runtime.test_http_failure_no_retry) ... ok
+test_identity_mismatch_before_inference (test_runtime088.Runtime.test_identity_mismatch_before_inference) ... ok
+test_independent_full_evidence (test_runtime088.Runtime.test_independent_full_evidence) ... ok
+test_local_endpoints_accepted (test_runtime088.Runtime.test_local_endpoints_accepted) ... ok
+test_remote_endpoint_rejected (test_runtime088.Runtime.test_remote_endpoint_rejected) ... ok
+test_request_byte_tamper_rejected (test_runtime088.Runtime.test_request_byte_tamper_rejected) ... ok
+test_response_saved_before_record_commit_survives_windows_path_logic (test_runtime088.Runtime.test_response_saved_before_record_commit_survives_windows_path_logic) ... ok
+test_source_snapshot_tamper_rejected (test_runtime088.Runtime.test_source_snapshot_tamper_rejected) ... ok
+test_status_completeness (test_runtime088.Runtime.test_status_completeness) ... ok
+test_summary_tamper_rejected_even_if_manifest_updated (test_runtime088.Runtime.test_summary_tamper_rejected_even_if_manifest_updated) ... ok
+test_support_diagnostic_tamper_rejected (test_runtime088.Runtime.test_support_diagnostic_tamper_rejected) ... ok
+test_transport_partial_body_preserved (test_runtime088.Runtime.test_transport_partial_body_preserved) ... ok
+test_unaccounted_file_rejected (test_runtime088.Runtime.test_unaccounted_file_rejected) ... ok
+test_wire_response_tamper_rejected (test_runtime088.Runtime.test_wire_response_tamper_rejected) ... ok
+
+======================================================================
+ERROR: test_install_and_hash_check (test_launch088.Installation.test_install_and_hash_check)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\codex\AI논문\thought-graph-simulator\llm_experiments\v088\probe_r2\tests\test_launch088.py", line 12, in test_install_and_hash_check
+    p=launch.install(c.ROOT,self.repo);_,hs=launch.manifest_at(c.ROOT);launch.verify_tree(p,hs);self.assertEqual(p,self.repo/'llm_experiments/v088/probe_r2')
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\codex\AI논문\thought-graph-simulator\llm_experiments\v088\probe_r2\launch.py", line 99, in install
+    m,hs=manifest_at(source)
+         ^^^^^^^^^^^^^^^^^^^
+  File "D:\codex\AI논문\thought-graph-simulator\llm_experiments\v088\probe_r2\launch.py", line 35, in manifest_at
+    if m.get('contract')!='v088-source-release-r2':raise LaunchError('잘못된 배포 manifest')
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_launch088.LaunchError: 잘못된 배포 manifest
+
+======================================================================
+ERROR: test_modified_source_not_overwritten (test_launch088.Installation.test_modified_source_not_overwritten)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\codex\AI논문\thought-graph-simulator\llm_experiments\v088\probe_r2\tests\test_launch088.py", line 16, in test_modified_source_not_overwritten
+    p=launch.install(c.ROOT,self.repo);(p/'design088.py').write_text('# user modified')
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\codex\AI논문\thought-graph-simulator\llm_experiments\v088\probe_r2\launch.py", line 99, in install
+    m,hs=manifest_at(source)
+         ^^^^^^^^^^^^^^^^^^^
+  File "D:\codex\AI논문\thought-graph-simulator\llm_experiments\v088\probe_r2\launch.py", line 35, in manifest_at
+    if m.get('contract')!='v088-source-release-r2':raise LaunchError('잘못된 배포 manifest')
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_launch088.LaunchError: 잘못된 배포 manifest
+
+======================================================================
+ERROR: test_prior_v087_untouched (test_launch088.Installation.test_prior_v087_untouched)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\codex\AI논문\thought-graph-simulator\llm_experiments\v088\probe_r2\tests\test_launch088.py", line 20, in test_prior_v087_untouched
+    old=self.repo/'llm_experiments/v087/results_llm';old.mkdir(parents=True);(old/'keep.txt').write_text('original');launch.install(c.ROOT,self.repo);self.assertEqual((old/'keep.txt').read_text(),'original')
+                                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\codex\AI논문\thought-graph-simulator\llm_experiments\v088\probe_r2\launch.py", line 99, in install
+    m,hs=manifest_at(source)
+         ^^^^^^^^^^^^^^^^^^^
+  File "D:\codex\AI논문\thought-graph-simulator\llm_experiments\v088\probe_r2\launch.py", line 35, in manifest_at
+    if m.get('contract')!='v088-source-release-r2':raise LaunchError('잘못된 배포 manifest')
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_launch088.LaunchError: 잘못된 배포 manifest
+
+======================================================================
+ERROR: test_r1_guard_is_preserved_and_does_not_block_r2_install (test_launch088.Installation.test_r1_guard_is_preserved_and_does_not_block_r2_install)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\codex\AI논문\thought-graph-simulator\llm_experiments\v088\probe_r2\tests\test_launch088.py", line 26, in test_r1_guard_is_preserved_and_does_not_block_r2_install
+    p=launch.install(c.ROOT,self.repo);self.assertEqual(p,self.repo/'llm_experiments/v088/probe_r2');self.assertEqual(guard.read_text(),'{"r1":true}')
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\codex\AI논문\thought-graph-simulator\llm_experiments\v088\probe_r2\launch.py", line 99, in install
+    m,hs=manifest_at(source)
+         ^^^^^^^^^^^^^^^^^^^
+  File "D:\codex\AI논문\thought-graph-simulator\llm_experiments\v088\probe_r2\launch.py", line 35, in manifest_at
+    if m.get('contract')!='v088-source-release-r2':raise LaunchError('잘못된 배포 manifest')
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_launch088.LaunchError: 잘못된 배포 manifest
+
+======================================================================
+ERROR: test_second_identical_install_does_not_replace (test_launch088.Installation.test_second_identical_install_does_not_replace)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\codex\AI논문\thought-graph-simulator\llm_experiments\v088\probe_r2\tests\test_launch088.py", line 14, in test_second_identical_install_does_not_replace
+    p=launch.install(c.ROOT,self.repo);stamp=(p/'design088.py').stat().st_mtime_ns;self.assertEqual(launch.install(c.ROOT,self.repo),p);self.assertEqual((p/'design088.py').stat().st_mtime_ns,stamp)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\codex\AI논문\thought-graph-simulator\llm_experiments\v088\probe_r2\launch.py", line 99, in install
+    m,hs=manifest_at(source)
+         ^^^^^^^^^^^^^^^^^^^
+  File "D:\codex\AI논문\thought-graph-simulator\llm_experiments\v088\probe_r2\launch.py", line 35, in manifest_at
+    if m.get('contract')!='v088-source-release-r2':raise LaunchError('잘못된 배포 manifest')
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_launch088.LaunchError: 잘못된 배포 manifest
+
+----------------------------------------------------------------------
+Ran 87 tests in 137.067s
+
+FAILED (errors=5)
+{"tests_run": 87, "passed": 82, "failures": 0, "errors": 5, "skipped": 0, "actual_qwen_inference_calls": 0}
+
+EXIT 2

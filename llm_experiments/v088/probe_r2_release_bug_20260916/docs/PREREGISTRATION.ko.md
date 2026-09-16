@@ -1,0 +1,87 @@
+# v088 사전등록 — ID 표현과 후속 참조 일관성
+
+기준 자료: v087_genfactor_20260915_221007_079036_evidence.zip. SHA-256은 protocol에 고정한다. v087의 지정 ID 준수와 실제 부모 참조 실패를 구분하여 후속 실험을 설계한다. 모든 군, 이력 선정, 원문 전달, 평가와 종료 기준을 새 모델 응답을 보기 전에 고정한다. U01~U08은 이미 관측한 진단 집합 8개다. 새 holdout은 0개다.
+
+## r2 runtime identity 재동결 기록
+
+v088 r1의 연구 질문, U01~U08, seed, A/B/C 배정, 프롬프트, JSON schema, sampling/API 기본값, 채점, v087 baseline, 주평가와 무보정 원칙은 변경하지 않는다. r1 실제 실행 `v088_idcontinuity_20260916_081431_746223`은 Ollama 0.34.0 identity를 기대했으나 실제 서버 0.34.1에서 첫 metadata action에 fail-closed되었고 `inference_calls=0`, `observed_calls=0`으로 연구 표본이 생성되지 않았다.
+
+r2는 동일 `qwen3:4b-instruct` digest `0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0`를 유지하며 Ollama 0.34.1 및 `/api/show`의 현재 metadata 표현만 새로 동결한다. 변경 경로는 `server.version`, `native.model_info.general.tags`, `tokenizer.ggml.merges`, `tokenizer.ggml.tokens`, `tokenizer.ggml.token_type`이다. 세부 전이와 r1 실패 provenance는 `data/runtime_provenance_r2.json`에 고정한다. r1 evidence/guard를 삭제·덮어쓰지 않으며 r2는 별도 `probe_r2`, `frozen_batch_r2.started.json`, `v088_r2_*` RunName을 사용한다.
+
+## 1. 연구 질문과 범위
+
+v087은 새 ID의 출력 자체는 성공했지만 그 ID를 다음 규칙에서 부모로 다시 사용하는 과정이 실패했다. 과거 이름만 포함한 한 단계 진단에서의 성공을 새 이름이 누적되는 연속 생성으로 확대하지 않는다. 현재 생성기를 교체하지 않고 다음 세 평가를 구분한다.
+
+A. 같은 유효 이력에서 노드 ID 표현과 모든 내부 부모 참조만 일관되게 바꿨을 때 다음 규칙의 의미 정확도가 유지되는가?
+B. 현재 출력 ID를 동일하게 고정했을 때, 초기 사실의 이름을 같은 계열로 통일하면 연속된 후속 참조가 달라지는가?
+C. 실제 새 선택과 새 사실 생성부터 시작한 기존 D 파이프라인 및 v087 ID 처치의 성과가 같은 배치에서 어떻게 나타나는가?
+
+B가 사전 주평가다. A와 C는 각각 이름 표현의 국소 대조, 실제 D 종단의 기준선 확인이다. A/B 성적을 C의 종단 성공에 합산하지 않는다.
+
+## 2. 공통 조건
+
+모델 qwen3:4b-instruct 및 정확한 identity, Ollama 옵션, seed 64001001/64001002, 기존 primitive rules, 문제/목표, 두 단계 선택 프롬프트, 기본 생성기·스키마를 v087에서 유지한다. 선택은 외부의 정확한 후보 D/W를 받는다. 자력 D 계산·내부 hidden state 제어·A/M 독립성·비용 우월성의 새로운 증거라고 주장하지 않는다.
+
+초기 사실 depth=0, 유도 노드 depth=1+max(부모 depth)이며, 유효한 최종 goal ancestry에서만 D를 측정한다. 선택 호출 수나 출력 길이를 D로 쓰지 않는다. 부모 원자 multiset, 중복 ID, 등록 규칙, 방출 순서, final, 모든 노드의 goal 관련성을 검사한다.
+
+## 3. 과거 이력 선정
+
+70개 규칙 위치(8구조×2경로의 전체 규칙)를 모두 포함한다. v087의 end_to_end baseline trial 중 해당 위치 직전까지 유효한 이력을 가진 최초 사전식 trial의 원요청을 고른다. 대상 응답·이후 응답·전체 graph의 성공은 보지 않는다. request body, 원래 slot/trial, 해시와 후보 수를 anchors 및 provenance에 고정한다.
+
+B에서는 각 경로의 r00 anchor에 들어 있는 과거 사실 이력만 사용한다. 새 facts 응답을 생성한 것으로 세지 않으며, 제공된 경로를 선택한 모델 관측으로도 세지 않는다. 원문 속 selection_original은 과거 anchor의 출처이지 B의 새 선택 응답이 아니다.
+
+## 4. A: 단일 규칙의 명명 대조
+
+70위치×2seed×4군 = 560회다.
+
+| 군 | 과거 prefix의 ID | 현재 출력 ID 제약 |
+|---|---|---|
+| observed | 원래 ID 보존 | 기존의 자유 ID |
+| atom_alias | ID를 그 노드의 atom과 같게 변경 | 동일 |
+| short | n0001, n0002, ... | 동일 |
+| legacy_long | v087_node_0001, ... | 동일 |
+
+원래 ID에서 새 ID로 가는 전단사 표를 만들고 node.id 및 node.parents의 ID 참조를 함께 치환한다. atom, rule, 규칙 전제, source_slot_id, 후보 ID, 요구·header·schema·seed·API는 바꾸지 않는다. **모든 군에서 history JSON 문자열을 같은 serializer로 다시 쓴다.** observed도 예외가 아니므로 공백 정규화와 이름 변경을 혼동하지 않는다. 원본 bytes는 별도로 보존한다.
+
+atom_alias는 원자와 ID를 연결하는 언어적 단서가 있는 진단 조건이다. 중립적 이름 길이 대조로 해석하지 않는다. short와 legacy_long도 접두사/길이/문자 구성 전체가 다르므로 길이 단독 효과를 식별했다고 주장하지 않는다.
+
+국소 주대비는 legacy_long−short의 규칙 의미 성공이며 구조별 비율도 보고한다. node ID 충돌 등은 그대로 실패다. 정답 부모를 enum으로 제한하지 않는다.
+
+## 5. B: 동일 사실 의미에서의 연속 참조 2×2
+
+16경로×2seed×4군 = 128개 continuation이다. 각 경로의 모든 규칙과 final을 새로 호출한다. 총 688호출이다.
+
+| 군 | 고정 사실의 ID | 새 규칙 노드의 ID |
+|---|---|---|
+| short_mixed | 과거 관측 ID | n 계열 |
+| short_uniform | n 계열로 일관 재명명 | n 계열 |
+| long_mixed | 과거 관측 ID | v087_node_ 계열 |
+| long_uniform | v087_node_ 계열로 일관 재명명 | v087_node_ 계열 |
+
+같은 이름 계열의 mixed/uniform에는 **완전히 같은 새 ID 순서**를 배정한다. 초기 원래 ID와 재명명한 사실 ID의 합집합을 피하고 사실 개수 다음 번호부터 예약한다. 번호 차이가 초기 명명 scope 차이에 섞이지 않는다. 이 예약은 현재의 rule.node.id만 제약하며, atom/rule/parents의 정답은 주지 않는다. 추가 노드 대응표는 제공하지 않는다.
+
+초기 사실의 재명명은 사전 지정된 새 진단 입력이다. 이후 생성된 응답은 공백·잘못된 ID·잘못된 부모를 포함해 **원문 그대로 다음 단계에 전달**한다. 동적 재명명, 오류 수정, 원자를 ID로 바꾸는 처리, 재시도는 없다. 기존 ID가 이미 n 계열이면 short_mixed와 short_uniform의 차이가 작거나 없을 수 있으므로 실제 변환표와 변경 수를 함께 기록한다.
+
+**주평가:** 같은 구조·seed의 두 경로 continuation이 모두 의미/지원 계약을 만족한 양방향 성공률에서 long_uniform−long_mixed를 구하고, 8개 구조를 동일 가중치로 평균한다. 구조별 분모는 2쌍, 전체는 군당 16쌍이다. 이는 과거 사실에서 시작한 경로 생성의 양방향이며, 신규 선택 제어의 양방향 종단이 아니다.
+
+보조 대비: short_uniform−short_mixed, long_uniform−short_uniform, long_mixed−short_mixed. 상호작용은 (long_uniform−long_mixed)−(short_uniform−short_mixed). graph 의미 성공·할당 ID 계약·둘을 충족하는 continuation 성공은 분리한다. 필요한 실제 D/W·규칙 경로까지 검사한다.
+
+첫 규칙, 두 번째 이후 규칙, 누적 이력에 할당 ID가 실제 포함됐는지, 존재하지 않는 부모가 atom과 같은지, 단계별 최초 실패를 보고한다. 성공만 남기지 않고 실패한 신규 이력도 이후 요청에 그대로 포함한다. transport/identity 오류는 전체 배치를 중단한다.
+
+## 6. C: 원래 D 종단 대조
+
+새 공통 비교·조회 256회(128조건). baseline과 기존 allocated_id 처치가 같은 선택 원응답을 공유하고 각각 facts부터 새 graph를 생성한다. 구조8×seed2×위치2×후보ID2×방향2 = 군당128graph, 양방향64쌍, 네 표시 전체16묶음이다. 선택 표본/비용을 두 군에 중복 합산하지 않는다.
+
+baseline은 기존 생성기, allocated_id는 v087의 기존 규칙 생성 ID 계약을 그대로 유지한 동시 대조다. 실패한 처치를 기본 생성기에 채택한 것이 아니다. 두 군의 첫 facts 요청은 같아도 실제 응답은 달라질 수 있다. C의 비교 결과를 B의 순수한 초기 사실 대조로 대신하지 않는다.
+
+v087의 실제 C 대응 요청 1,888건을 같은 과거 응답 이력에서 바이트 재구성하는 회귀시험을 포함한다. 두 단계 비교·조회가 틀린 경우 우연히 graph만 맞아도 전체 종단은 실패다.
+
+## 7. 원문·실행·해석 원칙
+
+사전 최대 추론 3,200회, 목표 경로가 모두 선택되면 3,136회, 모든 선택이 유효한 최소 길이 경로이면 3,072회다. metadata 32개를 포함한 action은 3,232개다. 여분 규칙 슬롯 skip은 미실행 실패와 구분한다.
+
+응답 관측·논리 실패·invalid JSON/schema·길이 종료·HTTP·identity·미배정·미관측을 분리한다. 부분 배치에서는 전체 주평가 평균을 산출하지 않는다. 원문 해시·event chain·dispatch/response·실행 소스를 evidence에 보존한다. 이미 시작한 frozen batch를 가드 삭제/새 RunName으로 우회하지 않는다. 모델 설치·갱신·서버 자동 시작·자동 재시도 금지.
+
+독립 경로는 배정·입력 재명명·요청 재구성·의미 판정을 따로 구현한다. 집계/보조 바이트 진단은 공유하므로 알려진 정오·효과·미관측·변조 반례를 별도로 검사한다. verified는 번들 내부 일관성이지 외부 실행 인증이 아니다.
+
+8개 구조를 넘어 일반화하거나 seed/규칙/동일 요청 반복을 독립 구조로 확대하지 않는다. 자동 IID p값을 산출하지 않는다. 본 진단 한 배치를 확정한 뒤 다음 생성을 결정하며, 성공할 때까지 이름을 반복 탐색하지 않는다. B에서 좋은 조건이 나와도 C 기준 생성기를 즉시 교체하지 않고 별도의 새 facts부터 시작하는 종단 비교가 필요하다.
