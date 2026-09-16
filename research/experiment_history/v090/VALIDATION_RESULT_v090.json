@@ -1,0 +1,184 @@
+{
+  "contract": "v090-release-validation-r1",
+  "date_kst": "2026-09-16",
+  "version": "v090",
+  "status": "final_zip_installed_full_selftest_checkonly_synthetic_verified",
+  "research_hypothesis_tested": false,
+  "new_actual_qwen_inference_calls": 0,
+  "basis": {
+    "actual_v089_evidence_sha256": "8ba60eda9670e1c7298b6f10cf6801875bd5f7c67f4f39cb23ee473b4600838b",
+    "retained_actual_v089_source_files": 146,
+    "actual_v089_baseline_requests_regressed": 1072,
+    "past_facts_used_as_live_generation_history": false
+  },
+  "design": {
+    "existing_structures": 8,
+    "new_holdout_structures": 0,
+    "seeds": [
+      64001001,
+      64001002
+    ],
+    "candidate_displays": 4,
+    "generator_arms": [
+      "baseline",
+      "short_uniform",
+      "atom_alias",
+      "atom_tagged"
+    ],
+    "new_graphs": 512,
+    "graphs_per_arm": 128,
+    "pairs_per_arm": 64,
+    "four_display_bundles_per_arm": 16,
+    "shared_compare_calls": 128,
+    "shared_lookup_calls": 128,
+    "expected_calls_if_target_routes_selected": 3520,
+    "mappable_route_call_range": [
+      3392,
+      3648
+    ],
+    "max_inference_calls": 3648,
+    "metadata_actions": 32,
+    "max_action_slots": 3680,
+    "primary": "atom_alias minus baseline, strict fresh end-to-end bidirectional D success, equal structure weighting",
+    "new_facts_generated_separately_per_arm": true,
+    "no_post_response_repair": true,
+    "supported_neutral_control": "short_uniform",
+    "runtime_and_sampling_unchanged_from_v089": true
+  },
+  "selftest": {
+    "tests_run": 91,
+    "passed": 90,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1,
+    "elapsed_seconds": 89.44377692800003,
+    "skip_details": [
+      {
+        "test": "test_contract090.Contract.test_powershell_native_parser_when_available",
+        "reason": "PowerShell native parser unavailable"
+      }
+    ]
+  },
+  "calibration": {
+    "contract": "v090-calibration-r1",
+    "provenance": "synthetic_no_inference",
+    "passed": 20800,
+    "failures": 0,
+    "actual_qwen_calls": 0,
+    "facts_cases": 3072,
+    "rule_cases": 15680,
+    "graph_cases": 2048,
+    "case_counts": {
+      "facts/duplicate_id": 512,
+      "facts/fact_parent": 512,
+      "facts/id_contract_only": 512,
+      "facts/missing_fact": 512,
+      "facts/valid": 512,
+      "facts/wrong_atom": 512,
+      "graph/cycle": 512,
+      "graph/missing_final": 512,
+      "graph/omitted_premise": 512,
+      "graph/valid": 512,
+      "rule/duplicate_node": 2240,
+      "rule/duplicate_parent": 2240,
+      "rule/missing_parent": 2240,
+      "rule/omitted_premise": 2240,
+      "rule/valid": 2240,
+      "rule/wrong_atom": 2240,
+      "rule/wrong_rule": 2240
+    }
+  },
+  "independent_checks": {
+    "reconstructed_synthetic_requests_byte_identical": 3520,
+    "trial_semantic_agreements": 512,
+    "fresh_facts_semantics_and_support_separated": true,
+    "facts_and_rule_raw_responses_passed_unchanged": true,
+    "critical_aggregate_recalculation": "audit_metrics090",
+    "shared_components": [
+      "tables090 report, checked separately by audit_metrics090",
+      "diagnostics090"
+    ]
+  },
+  "checkonly": {
+    "install_verified": true,
+    "selftest_completed": true,
+    "calibration_completed": true,
+    "prepare_completed": true,
+    "plan_sha256": "f7804db362dfdca70582882eaf6d6208dde0879d19ef936b6be4396a3f295000",
+    "live_guard_created": false,
+    "ollama_requests": 0,
+    "network_guard": "sitecustomize blocked port 11434 and external hosts; local ephemeral HTTP unit tests allowed"
+  },
+  "synthetic": {
+    "provenance": "synthetic",
+    "state": "complete",
+    "inference_dispatches": 3520,
+    "preserved_responses": 3520,
+    "completed_actions": 3680,
+    "normal_conditional_skips": 128,
+    "metadata_actions": 32,
+    "independent_verified": true,
+    "differences": [],
+    "manifest_files_verified": 18299,
+    "plan_sha256": "b21e740246399eb83a00e850ccbe9fc3f0f50f14eb098b0c16ca98aea26cf50f",
+    "evidence_sha256": "e4c83a669581568db7dadc891d2727464180bf321a0db1cd9155ef32152a66ca",
+    "full_synthetic_evidence_in_distribution": false,
+    "actual_qwen_calls": 0,
+    "oracle_results_are_not_research_results": true
+  },
+  "artifacts": {
+    "contract": "v090-final-artifact-static-check-r1",
+    "powershell_payload_byte_identical": true,
+    "installed_equals_zip": true,
+    "manifest_verified": true,
+    "source_files": 178,
+    "python312_syntax_files": 133,
+    "retained_actual_v089_source_files": 146,
+    "prior_version_files_untouched": {
+      "v088/RELEASE_MANIFEST.json": true,
+      "v088/results_llm/frozen_batch.started.json": true,
+      "v088/results_llm/automation_logs/preserved/run.log": true,
+      "v088/probe/preserved.py": true,
+      "v089/RELEASE_MANIFEST.json": true,
+      "v089/results_llm/frozen_batch.started.json": true,
+      "v089/results_llm/automation_logs/preserved/run.log": true,
+      "v089/probe/preserved.py": true
+    },
+    "protocol_sha256": "0d84d19bb8f6f7758cf376e86c740e3de46b4b3aa72c072ffc471877d6fdd521",
+    "runtime_identity_unchanged": true,
+    "actual_model_calls": 0,
+    "checkonly_created_live_guard": false,
+    "selftest_source_equals_release": true,
+    "synthetic_source_equals_release": true,
+    "synthetic_manifest_files_verified": 18299,
+    "independent_manifest_differences": [],
+    "final_release_sha256": "903e6130c9defe557e22c8cb5115722e9788fefeb609760175ba9560aec807df",
+    "final_powershell_sha256": "a3b2f7aba9b29359cb36e85276e87ee5d2689a6839e6b4278b643986d78263c3"
+  },
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "native_windows_execution": false,
+    "native_powershell_parser": false,
+    "python312_grammar_files": 133
+  },
+  "files": {
+    "source_zip": {
+      "name": "v090_fresh_semantic_id_source.zip",
+      "sha256": "903e6130c9defe557e22c8cb5115722e9788fefeb609760175ba9560aec807df"
+    },
+    "powershell": {
+      "name": "Run-v090-Auto.ps1",
+      "sha256": "a3b2f7aba9b29359cb36e85276e87ee5d2689a6839e6b4278b643986d78263c3"
+    },
+    "protocol_sha256": "0d84d19bb8f6f7758cf376e86c740e3de46b4b3aa72c072ffc471877d6fdd521"
+  },
+  "limitations": [
+    "실제 Windows/Python 3.12/PowerShell 실행은 하지 않았다. Linux/Python 3.13.5 설치 검증이며 PowerShell 파서 시험 1개는 환경상 제외했다.",
+    "합성 교환기가 만든 출력으로 검증했다. 합성 성공률·주평가 0은 프로그램의 기대 결과이지 실제 Qwen 성능이 아니다.",
+    "기존 U01~U08에서 새 facts 종단으로 확장한 진단이며 신규 구조 holdout을 포함하지 않는다.",
+    "baseline 대비는 ID 표와 지정 지원을 포함한 전체 절차 효과다. 의미 ID 효과는 동일 지원의 short_uniform 보조 대조로 분리해 해석한다.",
+    "집계·한국어 보고·diagnostics 일부를 공유한다. 핵심 집계·의미 판정·요청 재구성은 별도 경로로 확인했다.",
+    "최대 context metadata와 실제 num_ctx를 구분한다. 실행 시 사용자의 Ollama identity는 실제 배치에서 재검사한다."
+  ]
+}

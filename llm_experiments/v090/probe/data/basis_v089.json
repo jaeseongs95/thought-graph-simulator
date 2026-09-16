@@ -1,0 +1,20 @@
+{
+  "contract": "v090-basis-v089-r1",
+  "prior_run": "v089_idcross_20260916_122755_207556",
+  "baseline_sha256": "8ba60eda9670e1c7298b6f10cf6801875bd5f7c67f4f39cb23ee473b4600838b",
+  "prior_plan_sha256": "3f81d7e8f8d0c7aad4389db01b416994022b1fa183b46f75a00c565174b63bb5",
+  "prior_state": {
+    "state": "complete",
+    "reason": null,
+    "completed_actions": 3888,
+    "started_actions": 3888,
+    "inference_calls": 3824,
+    "observed_calls": 3824,
+    "plan_sha256": "3f81d7e8f8d0c7aad4389db01b416994022b1fa183b46f75a00c565174b63bb5"
+  },
+  "facts_anchor_reuse": false,
+  "prior_source_snapshot_files": 146,
+  "design_rationale": "v089 지원 연속 생성에서 의미 ID 유지가 높았으나 새 선택·새 facts 종단 대조가 없었다. v090은 이 공백을 시험한다.",
+  "current_version_new_actual_model_calls_at_authoring": 0,
+  "user_data_source": "첨부 v089 원본 evidence; public web not used"
+}

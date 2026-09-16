@@ -1,0 +1,118 @@
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'selftest090.py', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v090\\results_llm\\automation_logs\\v090_freshid_20260916_145144_079916\\selftest.json']
+test_actual_v089_baseline_requests_1072_byte_identical (test_contract090.Contract.test_actual_v089_baseline_requests_1072_byte_identical) ... ok
+test_allocation_not_repaired_for_bad_history_collision (test_contract090.Contract.test_allocation_not_repaired_for_bad_history_collision) ... ok
+test_arm_order_balanced_within_each_block (test_contract090.Contract.test_arm_order_balanced_within_each_block) ... ok
+test_audit_modules_do_not_import_production (test_contract090.Contract.test_audit_modules_do_not_import_production) ... ok
+test_changed_primary_rejected (test_contract090.Contract.test_changed_primary_rejected) ... ok
+test_facts_wrong_id_is_passed_without_repair (test_contract090.Contract.test_facts_wrong_id_is_passed_without_repair) ... ok
+test_four_arms_every_unit (test_contract090.Contract.test_four_arms_every_unit) ... ok
+test_fresh_facts_for_each_arm (test_contract090.Contract.test_fresh_facts_for_each_arm) ... ok
+test_frozen_counts (test_contract090.Contract.test_frozen_counts) ... ok
+test_independent_all_requests (test_contract090.Contract.test_independent_all_requests) ... ok
+test_independent_schedule (test_contract090.Contract.test_independent_schedule) ... ok
+test_naming_allocation_independent (test_contract090.Contract.test_naming_allocation_independent) ... ok
+test_no_holdout_claim (test_contract090.Contract.test_no_holdout_claim) ... ok
+test_no_old_fact_anchor_loader (test_contract090.Contract.test_no_old_fact_anchor_loader) ... ok
+test_only_id_support_is_added (test_contract090.Contract.test_only_id_support_is_added) ... ok
+test_powershell_native_parser_when_available (test_contract090.Contract.test_powershell_native_parser_when_available) ... ok
+test_previous_evidence_validation (test_contract090.Contract.test_previous_evidence_validation) ... ok
+test_prior_source_146_files_byte_identical (test_contract090.Contract.test_prior_source_146_files_byte_identical) ... ok
+test_protocol_validation (test_contract090.Contract.test_protocol_validation) ... ok
+test_python312_syntax (test_contract090.Contract.test_python312_syntax) ... ok
+test_safety_mutations_rejected (test_contract090.Contract.test_safety_mutations_rejected) ... ok
+test_sampling_and_runtime_unchanged (test_contract090.Contract.test_sampling_and_runtime_unchanged) ... ok
+test_shared_selector_128_compare_128_lookup (test_contract090.Contract.test_shared_selector_128_compare_128_lookup) ... ok
+test_three_supported_arms_share_prompt_header (test_contract090.Contract.test_three_supported_arms_share_prompt_header) ... ok
+test_wrong_rule_parent_is_passed_without_repair (test_contract090.Contract.test_wrong_rule_parent_is_passed_without_repair) ... ok
+test_all_v089_state_untouched (test_launch090.Installation.test_all_v089_state_untouched) ... ok
+test_auto_large_baseline_is_found (test_launch090.Installation.test_auto_large_baseline_is_found) ... ok
+test_bad_installed_manifest_cannot_fallback (test_launch090.Installation.test_bad_installed_manifest_cannot_fallback) ... ok
+test_explicit_baseline_hash (test_launch090.Installation.test_explicit_baseline_hash) ... ok
+test_install_and_recheck_installed_manifest (test_launch090.Installation.test_install_and_recheck_installed_manifest) ... ok
+test_installed_manifest_not_unrelated_parent_manifest (test_launch090.Installation.test_installed_manifest_not_unrelated_parent_manifest) ... ok
+test_lock_prevents_parallel_workflow (test_launch090.Installation.test_lock_prevents_parallel_workflow) ... ok
+test_missing_installed_manifest_not_silently_rebuilt (test_launch090.Installation.test_missing_installed_manifest_not_silently_rebuilt) ... ok
+test_modified_source_not_overwritten (test_launch090.Installation.test_modified_source_not_overwritten) ... ok
+test_receipt_records_actual_installed_sources (test_launch090.Installation.test_receipt_records_actual_installed_sources) ... 실제 설치 contract: v090-source-release-r1 / protocol: 0d84d19bb8f6f7758cf376e86c740e3de46b4b3aa72c072ffc471877d6fdd521
+실제 설치 launch.py SHA-256: 07786c98942547b1000127ce4ad28bac5dfcbf9cc0bca46a426cf334127fcbf6
+ok
+test_run_name_is_new_version (test_launch090.Installation.test_run_name_is_new_version) ... ok
+test_second_identical_install_no_replacement (test_launch090.Installation.test_second_identical_install_no_replacement) ... ok
+test_v090_guard_blocks_install (test_launch090.Installation.test_v090_guard_blocks_install) ... ok
+test_wrong_baseline_rejected (test_launch090.Installation.test_wrong_baseline_rejected) ... ok
+test_calibration_expected_20800 (test_measure090.Measurement.test_calibration_expected_20800) ... ok
+test_diagnostic_usage_shared_once (test_measure090.Measurement.test_diagnostic_usage_shared_once) ... ok
+test_facts_id_contract_can_fail_with_valid_graph (test_measure090.Measurement.test_facts_id_contract_can_fail_with_valid_graph) ... ok
+test_facts_semantic_failure_is_not_hidden (test_measure090.Measurement.test_facts_semantic_failure_is_not_hidden) ... ok
+test_first_error_and_risk_set_include_facts_id_gate (test_measure090.Measurement.test_first_error_and_risk_set_include_facts_id_gate) ... ok
+test_goal_only_cannot_pass_broken_proof (test_measure090.Measurement.test_goal_only_cannot_pass_broken_proof) ... ok
+test_independent_all_trial_semantics (test_measure090.Measurement.test_independent_all_trial_semantics) ... ok
+test_independent_tallies_reject_changed_group (test_measure090.Measurement.test_independent_tallies_reject_changed_group) ... ok
+test_independent_tallies_reject_changed_primary (test_measure090.Measurement.test_independent_tallies_reject_changed_primary) ... ok
+test_last_rule_id_contract_not_semantic_validity (test_measure090.Measurement.test_last_rule_id_contract_not_semantic_validity) ... ok
+test_length_termination_not_logical_error (test_measure090.Measurement.test_length_termination_not_logical_error) ... ok
+test_minimum_maximum_mappable_call_bounds (test_measure090.Measurement.test_minimum_maximum_mappable_call_bounds) ... ok
+test_nonexistent_parent_is_not_corrected (test_measure090.Measurement.test_nonexistent_parent_is_not_corrected) ... ok
+test_nonfinite_and_duplicate_json_rejected (test_measure090.Measurement.test_nonfinite_and_duplicate_json_rejected) ... ok
+test_null_lookup_skips_graph_not_filled_with_fake_failures (test_measure090.Measurement.test_null_lookup_skips_graph_not_filled_with_fake_failures) ... ok
+test_only_one_direction_not_a_successful_pair (test_measure090.Measurement.test_only_one_direction_not_a_successful_pair) ... ok
+test_oracle_all_512_graphs_pass (test_measure090.Measurement.test_oracle_all_512_graphs_pass) ... ok
+test_partial_batch_suppresses_overall_effect (test_measure090.Measurement.test_partial_batch_suppresses_overall_effect) ... ok
+test_premise_omission_is_separate_from_reference_existence (test_measure090.Measurement.test_premise_omission_is_separate_from_reference_existence) ... ok
+test_primary_direction_alias_failure_minus_one (test_measure090.Measurement.test_primary_direction_alias_failure_minus_one) ... ok
+test_primary_direction_baseline_failure_plus_one (test_measure090.Measurement.test_primary_direction_baseline_failure_plus_one) ... ok
+test_primary_zero_when_oracle_all_success (test_measure090.Measurement.test_primary_zero_when_oracle_all_success) ... ok
+test_schema_failure_is_observed_model_failure (test_measure090.Measurement.test_schema_failure_is_observed_model_failure) ... ok
+test_shared_selection_not_quadrupled (test_measure090.Measurement.test_shared_selection_not_quadrupled) ... ok
+test_unobserved_not_zero_depth (test_measure090.Measurement.test_unobserved_not_zero_depth) ... ok
+test_wrong_comparison_and_followed_lookup_is_not_success (test_measure090.Measurement.test_wrong_comparison_and_followed_lookup_is_not_success) ... ok
+test_HTTP_error_body_retained (test_runtime090.HTTP.test_HTTP_error_body_retained) ... ok
+test_complete_chunked (test_runtime090.HTTP.test_complete_chunked) ... ok
+test_incomplete_chunked_retains_body (test_runtime090.HTTP.test_incomplete_chunked_retains_body) ... ok
+test_normal_content_length (test_runtime090.HTTP.test_normal_content_length) ... ok
+test_redirect_is_not_followed (test_runtime090.HTTP.test_redirect_is_not_followed) ... ok
+test_short_content_length (test_runtime090.HTTP.test_short_content_length) ... ok
+test_archive_paths_rejected (test_runtime090.Runtime.test_archive_paths_rejected) ... ok
+test_complete_dispatch_response_preserved (test_runtime090.Runtime.test_complete_dispatch_response_preserved) ... ok
+test_crash_after_dispatch_is_pending_not_wrong_answer (test_runtime090.Runtime.test_crash_after_dispatch_is_pending_not_wrong_answer) ... ok
+test_finalize_is_idempotent (test_runtime090.Runtime.test_finalize_is_idempotent) ... ok
+test_frozen_guard_blocks_new_name (test_runtime090.Runtime.test_frozen_guard_blocks_new_name) ... ok
+test_frozen_transport_code_regression (test_runtime090.Runtime.test_frozen_transport_code_regression) ... ok
+test_http_failure_no_retry (test_runtime090.Runtime.test_http_failure_no_retry) ... ok
+test_identity_mismatch_before_inference (test_runtime090.Runtime.test_identity_mismatch_before_inference) ... ok
+test_independent_full_evidence (test_runtime090.Runtime.test_independent_full_evidence) ... ok
+test_local_endpoints_accepted (test_runtime090.Runtime.test_local_endpoints_accepted) ... ok
+test_remote_endpoint_rejected (test_runtime090.Runtime.test_remote_endpoint_rejected) ... ok
+test_request_byte_tamper_rejected (test_runtime090.Runtime.test_request_byte_tamper_rejected) ... ok
+test_response_saved_before_record_commit_survives_windows_path_logic (test_runtime090.Runtime.test_response_saved_before_record_commit_survives_windows_path_logic) ... ok
+test_source_snapshot_tamper_rejected (test_runtime090.Runtime.test_source_snapshot_tamper_rejected) ... ok
+test_status_completeness (test_runtime090.Runtime.test_status_completeness) ... ok
+test_summary_tamper_rejected_even_if_manifest_updated (test_runtime090.Runtime.test_summary_tamper_rejected_even_if_manifest_updated) ... ok
+test_support_diagnostic_tamper_rejected (test_runtime090.Runtime.test_support_diagnostic_tamper_rejected) ... ok
+test_transport_partial_body_preserved (test_runtime090.Runtime.test_transport_partial_body_preserved) ... ok
+test_unaccounted_file_rejected (test_runtime090.Runtime.test_unaccounted_file_rejected) ... ok
+test_wire_response_tamper_rejected (test_runtime090.Runtime.test_wire_response_tamper_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 91 tests in 171.408s
+
+OK
+{"tests_run": 91, "passed": 91, "failures": 0, "errors": 0, "skipped": 0, "actual_qwen_inference_calls": 0}
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'calibrate090.py', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v090\\results_llm\\automation_logs\\v090_freshid_20260916_145144_079916\\calibration.json']
+{"contract": "v090-calibration-r1", "provenance": "synthetic_no_inference", "passed": 20800, "failures": 0, "actual_qwen_calls": 0, "facts_cases": 3072, "rule_cases": 15680, "graph_cases": 2048, "case_counts": {"facts/duplicate_id": 512, "facts/fact_parent": 512, "facts/id_contract_only": 512, "facts/missing_fact": 512, "facts/valid": 512, "facts/wrong_atom": 512, "graph/cycle": 512, "graph/missing_final": 512, "graph/omitted_premise": 512, "graph/valid": 512, "rule/duplicate_node": 2240, "rule/duplicate_parent": 2240, "rule/missing_parent": 2240, "rule/omitted_premise": 2240, "rule/valid": 2240, "rule/wrong_atom": 2240, "rule/wrong_rule": 2240}}
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'run090.py', 'prepare', '--baseline', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v089\\results_llm\\v089_idcross_20260916_122755_207556_evidence.zip', '--run-name', 'v090_freshid_20260916_145144_079916', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v090\\experiments\\v090_freshid_20260916_145144_079916.plan.json']
+{
+  "prepared": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v090\\experiments\\v090_freshid_20260916_145144_079916.plan.json",
+  "actual_model_inference": false,
+  "max_inference_calls": 3648,
+  "plan_sha256": "71ba9b3ffb18f7952753eba006895f59f58974ec9fc2dd0bc191a70db62675a4"
+}
+
+EXIT 0
