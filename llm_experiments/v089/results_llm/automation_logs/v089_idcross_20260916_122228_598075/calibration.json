@@ -1,0 +1,22 @@
+{
+  "contract": "v089-calibration-r1",
+  "provenance": "synthetic_no_inference",
+  "passed": 22160,
+  "failures": 0,
+  "actual_qwen_calls": 0,
+  "rule_cases": 19600,
+  "graph_cases": 2560,
+  "case_counts": {
+    "graph/cycle": 640,
+    "graph/missing_final": 640,
+    "graph/omitted_premise": 640,
+    "graph/valid": 640,
+    "rule/duplicate_node": 2800,
+    "rule/duplicate_parent": 2800,
+    "rule/missing_parent": 2800,
+    "rule/omitted_premise": 2800,
+    "rule/valid": 2800,
+    "rule/wrong_atom": 2800,
+    "rule/wrong_rule": 2800
+  }
+}

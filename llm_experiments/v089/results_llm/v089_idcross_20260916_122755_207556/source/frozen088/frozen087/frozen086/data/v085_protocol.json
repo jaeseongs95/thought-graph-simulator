@@ -1,0 +1,2599 @@
+{
+  "identity": {
+    "model": "qwen3:4b-instruct",
+    "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "server": {
+      "version": "0.34.0"
+    },
+    "tag_details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "4.0B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 262144,
+      "embedding_length": 2560
+    },
+    "native": {
+      "template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0].role == 'system' %}\n        {{- messages[0].content + '\\n\\n' }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0].content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" and message.content is string and not(message.content.startswith('<tool_response>') and message.content.endswith('</tool_response>')) %}\n        {%- set ns.multi_step_tool = false %}\n        {%- set ns.last_query_index = index %}\n    {%- endif %}\n{%- endfor %}\n{%- for message in messages %}\n    {%- if message.content is string %}\n        {%- set content = message.content %}\n    {%- else %}\n        {%- set content = '' %}\n    {%- endif %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {%- if loop.last or (not loop.last and reasoning_content) %}\n                {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content.strip('\\n') + '\\n</think>\\n\\n' + content.lstrip('\\n') }}\n            {%- else %}\n                {{- '<|im_start|>' + message.role + '\\n' + content }}\n            {%- endif %}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if (loop.first and content) or (not loop.first) %}\n                    {{- '\\n' }}\n                {%- endif %}\n                {%- if tool_call.function %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {{- '<tool_call>\\n{\"name\": \"' }}\n                {{- tool_call.name }}\n                {{- '\", \"arguments\": ' }}\n                {%- if tool_call.arguments is string %}\n                    {{- tool_call.arguments }}\n                {%- else %}\n                    {{- tool_call.arguments | tojson }}\n                {%- endif %}\n                {{- '}\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.first or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}",
+      "system": null,
+      "parameters": [
+        "repeat_penalty                 1",
+        "stop                           \"<|im_end|>\"",
+        "stop                           \"<|im_start|>\"",
+        "temperature                    0.7",
+        "top_k                          20",
+        "top_p                          0.8"
+      ],
+      "model_info": {
+        "general.architecture": "qwen3",
+        "general.basename": "Qwen3",
+        "general.file_type": 15,
+        "general.finetune": "Instruct",
+        "general.license": "apache-2.0",
+        "general.license.link": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507/blob/main/LICENSE",
+        "general.parameter_count": 4022468096,
+        "general.quantization_version": 2,
+        "general.size_label": "4B",
+        "general.tags": null,
+        "general.type": "model",
+        "general.version": "2507",
+        "qwen3.attention.head_count": 32,
+        "qwen3.attention.head_count_kv": 8,
+        "qwen3.attention.key_length": 128,
+        "qwen3.attention.layer_norm_rms_epsilon": 1e-06,
+        "qwen3.attention.value_length": 128,
+        "qwen3.block_count": 36,
+        "qwen3.context_length": 262144,
+        "qwen3.embedding_length": 2560,
+        "qwen3.feed_forward_length": 9728,
+        "qwen3.rope.freq_base": 5000000,
+        "tokenizer.ggml.add_bos_token": false,
+        "tokenizer.ggml.bos_token_id": 151643,
+        "tokenizer.ggml.eos_token_id": 151645,
+        "tokenizer.ggml.merges": null,
+        "tokenizer.ggml.model": "gpt2",
+        "tokenizer.ggml.padding_token_id": 151643,
+        "tokenizer.ggml.pre": "qwen2",
+        "tokenizer.ggml.token_type": null,
+        "tokenizer.ggml.tokens": null
+      },
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen3",
+        "families": [
+          "qwen3"
+        ],
+        "parameter_size": "4.0B",
+        "quantization_level": "Q4_K_M"
+      },
+      "capabilities": [
+        "tools",
+        "thinking",
+        "completion"
+      ],
+      "projector_info": null
+    }
+  },
+  "model": "qwen3:4b-instruct",
+  "problems": [
+    {
+      "id": "T01",
+      "facts": [
+        "N33",
+        "N98",
+        "N09"
+      ],
+      "rules": [
+        {
+          "id": "a57",
+          "premises": [
+            "N33",
+            "N98"
+          ],
+          "conclusion": "N63"
+        },
+        {
+          "id": "a20",
+          "premises": [
+            "N63",
+            "N00",
+            "N10"
+          ],
+          "conclusion": "N03"
+        },
+        {
+          "id": "a77",
+          "premises": [
+            "N33",
+            "N09"
+          ],
+          "conclusion": "N10"
+        },
+        {
+          "id": "a06",
+          "premises": [
+            "N33",
+            "N98"
+          ],
+          "conclusion": "N77"
+        },
+        {
+          "id": "a72",
+          "premises": [
+            "N72"
+          ],
+          "conclusion": "N03"
+        },
+        {
+          "id": "a49",
+          "premises": [
+            "N09"
+          ],
+          "conclusion": "N16"
+        },
+        {
+          "id": "a54",
+          "premises": [
+            "N98",
+            "N09"
+          ],
+          "conclusion": "N00"
+        },
+        {
+          "id": "a25",
+          "premises": [
+            "N77",
+            "N16"
+          ],
+          "conclusion": "N72"
+        }
+      ],
+      "goal": "N03"
+    },
+    {
+      "id": "T02",
+      "facts": [
+        "O92",
+        "O87",
+        "O58"
+      ],
+      "rules": [
+        {
+          "id": "b54",
+          "premises": [
+            "O16"
+          ],
+          "conclusion": "O74"
+        },
+        {
+          "id": "b37",
+          "premises": [
+            "O27",
+            "O58"
+          ],
+          "conclusion": "O99"
+        },
+        {
+          "id": "b12",
+          "premises": [
+            "O99"
+          ],
+          "conclusion": "O34"
+        },
+        {
+          "id": "b73",
+          "premises": [
+            "O92",
+            "O87"
+          ],
+          "conclusion": "O16"
+        },
+        {
+          "id": "b52",
+          "premises": [
+            "O84"
+          ],
+          "conclusion": "O27"
+        },
+        {
+          "id": "b38",
+          "premises": [
+            "O92",
+            "O87"
+          ],
+          "conclusion": "O84"
+        },
+        {
+          "id": "b79",
+          "premises": [
+            "O81",
+            "O74"
+          ],
+          "conclusion": "O34"
+        },
+        {
+          "id": "b30",
+          "premises": [
+            "O16",
+            "O58"
+          ],
+          "conclusion": "O81"
+        }
+      ],
+      "goal": "O34"
+    },
+    {
+      "id": "T03",
+      "facts": [
+        "P15",
+        "P85",
+        "P38"
+      ],
+      "rules": [
+        {
+          "id": "c82",
+          "premises": [
+            "P38"
+          ],
+          "conclusion": "P20"
+        },
+        {
+          "id": "c06",
+          "premises": [
+            "P85"
+          ],
+          "conclusion": "P02"
+        },
+        {
+          "id": "c63",
+          "premises": [
+            "P93"
+          ],
+          "conclusion": "P30"
+        },
+        {
+          "id": "c91",
+          "premises": [
+            "P49"
+          ],
+          "conclusion": "P93"
+        },
+        {
+          "id": "c03",
+          "premises": [
+            "P15"
+          ],
+          "conclusion": "P84"
+        },
+        {
+          "id": "c26",
+          "premises": [
+            "P10",
+            "P20"
+          ],
+          "conclusion": "P30"
+        },
+        {
+          "id": "c08",
+          "premises": [
+            "P15"
+          ],
+          "conclusion": "P18"
+        },
+        {
+          "id": "c24",
+          "premises": [
+            "P84",
+            "P02"
+          ],
+          "conclusion": "P10"
+        },
+        {
+          "id": "c69",
+          "premises": [
+            "P18",
+            "P41"
+          ],
+          "conclusion": "P49"
+        },
+        {
+          "id": "c09",
+          "premises": [
+            "P85",
+            "P38"
+          ],
+          "conclusion": "P41"
+        }
+      ],
+      "goal": "P30"
+    },
+    {
+      "id": "T04",
+      "facts": [
+        "Q38",
+        "Q66",
+        "Q45"
+      ],
+      "rules": [
+        {
+          "id": "d13",
+          "premises": [
+            "Q84"
+          ],
+          "conclusion": "Q61"
+        },
+        {
+          "id": "d99",
+          "premises": [
+            "Q38",
+            "Q66"
+          ],
+          "conclusion": "Q02"
+        },
+        {
+          "id": "d73",
+          "premises": [
+            "Q38"
+          ],
+          "conclusion": "Q92"
+        },
+        {
+          "id": "d62",
+          "premises": [
+            "Q92",
+            "Q78"
+          ],
+          "conclusion": "Q67"
+        },
+        {
+          "id": "d20",
+          "premises": [
+            "Q25",
+            "Q61"
+          ],
+          "conclusion": "Q77"
+        },
+        {
+          "id": "d01",
+          "premises": [
+            "Q45"
+          ],
+          "conclusion": "Q84"
+        },
+        {
+          "id": "d98",
+          "premises": [
+            "Q66"
+          ],
+          "conclusion": "Q78"
+        },
+        {
+          "id": "d54",
+          "premises": [
+            "Q02"
+          ],
+          "conclusion": "Q25"
+        },
+        {
+          "id": "d23",
+          "premises": [
+            "Q67",
+            "Q45"
+          ],
+          "conclusion": "Q68"
+        },
+        {
+          "id": "d29",
+          "premises": [
+            "Q68"
+          ],
+          "conclusion": "Q77"
+        }
+      ],
+      "goal": "Q77"
+    },
+    {
+      "id": "T05",
+      "facts": [
+        "R81",
+        "R37",
+        "R11"
+      ],
+      "rules": [
+        {
+          "id": "e13",
+          "premises": [
+            "R37",
+            "R11"
+          ],
+          "conclusion": "R68"
+        },
+        {
+          "id": "e23",
+          "premises": [
+            "R13",
+            "R11"
+          ],
+          "conclusion": "R88"
+        },
+        {
+          "id": "e53",
+          "premises": [
+            "R86",
+            "R37"
+          ],
+          "conclusion": "R13"
+        },
+        {
+          "id": "e14",
+          "premises": [
+            "R97",
+            "R68",
+            "R93"
+          ],
+          "conclusion": "R88"
+        },
+        {
+          "id": "e94",
+          "premises": [
+            "R81",
+            "R37"
+          ],
+          "conclusion": "R97"
+        },
+        {
+          "id": "e80",
+          "premises": [
+            "R81",
+            "R11"
+          ],
+          "conclusion": "R93"
+        },
+        {
+          "id": "e98",
+          "premises": [
+            "R81"
+          ],
+          "conclusion": "R86"
+        }
+      ],
+      "goal": "R88"
+    },
+    {
+      "id": "T06",
+      "facts": [
+        "S53",
+        "S75",
+        "S12"
+      ],
+      "rules": [
+        {
+          "id": "f24",
+          "premises": [
+            "S53",
+            "S75"
+          ],
+          "conclusion": "S52"
+        },
+        {
+          "id": "f00",
+          "premises": [
+            "S11"
+          ],
+          "conclusion": "S02"
+        },
+        {
+          "id": "f40",
+          "premises": [
+            "S52"
+          ],
+          "conclusion": "S28"
+        },
+        {
+          "id": "f31",
+          "premises": [
+            "S09"
+          ],
+          "conclusion": "S66"
+        },
+        {
+          "id": "f78",
+          "premises": [
+            "S66"
+          ],
+          "conclusion": "S11"
+        },
+        {
+          "id": "f45",
+          "premises": [
+            "S53",
+            "S75",
+            "S12"
+          ],
+          "conclusion": "S09"
+        },
+        {
+          "id": "f70",
+          "premises": [
+            "S75",
+            "S12"
+          ],
+          "conclusion": "S77"
+        },
+        {
+          "id": "f12",
+          "premises": [
+            "S77"
+          ],
+          "conclusion": "S57"
+        },
+        {
+          "id": "f93",
+          "premises": [
+            "S28",
+            "S57"
+          ],
+          "conclusion": "S02"
+        }
+      ],
+      "goal": "S02"
+    },
+    {
+      "id": "T07",
+      "facts": [
+        "T35",
+        "T19",
+        "T03"
+      ],
+      "rules": [
+        {
+          "id": "g98",
+          "premises": [
+            "T68",
+            "T03"
+          ],
+          "conclusion": "T65"
+        },
+        {
+          "id": "g67",
+          "premises": [
+            "T11",
+            "T03"
+          ],
+          "conclusion": "T57"
+        },
+        {
+          "id": "g76",
+          "premises": [
+            "T70"
+          ],
+          "conclusion": "T02"
+        },
+        {
+          "id": "g50",
+          "premises": [
+            "T35"
+          ],
+          "conclusion": "T68"
+        },
+        {
+          "id": "g93",
+          "premises": [
+            "T66",
+            "T19",
+            "T03"
+          ],
+          "conclusion": "T34"
+        },
+        {
+          "id": "g57",
+          "premises": [
+            "T34"
+          ],
+          "conclusion": "T70"
+        },
+        {
+          "id": "g89",
+          "premises": [
+            "T19"
+          ],
+          "conclusion": "T11"
+        },
+        {
+          "id": "g21",
+          "premises": [
+            "T35"
+          ],
+          "conclusion": "T66"
+        },
+        {
+          "id": "g73",
+          "premises": [
+            "T65",
+            "T57"
+          ],
+          "conclusion": "T02"
+        }
+      ],
+      "goal": "T02"
+    },
+    {
+      "id": "T08",
+      "facts": [
+        "U98",
+        "U48",
+        "U86"
+      ],
+      "rules": [
+        {
+          "id": "h22",
+          "premises": [
+            "U98",
+            "U48"
+          ],
+          "conclusion": "U94"
+        },
+        {
+          "id": "h32",
+          "premises": [
+            "U86"
+          ],
+          "conclusion": "U28"
+        },
+        {
+          "id": "h95",
+          "premises": [
+            "U06",
+            "U91",
+            "U28"
+          ],
+          "conclusion": "U09"
+        },
+        {
+          "id": "h60",
+          "premises": [
+            "U21",
+            "U86"
+          ],
+          "conclusion": "U06"
+        },
+        {
+          "id": "h24",
+          "premises": [
+            "U53"
+          ],
+          "conclusion": "U09"
+        },
+        {
+          "id": "h76",
+          "premises": [
+            "U21"
+          ],
+          "conclusion": "U91"
+        },
+        {
+          "id": "h53",
+          "premises": [
+            "U98",
+            "U48"
+          ],
+          "conclusion": "U21"
+        },
+        {
+          "id": "h42",
+          "premises": [
+            "U75",
+            "U48"
+          ],
+          "conclusion": "U53"
+        },
+        {
+          "id": "h58",
+          "premises": [
+            "U94",
+            "U86"
+          ],
+          "conclusion": "U75"
+        }
+      ],
+      "goal": "U09"
+    }
+  ],
+  "reference_plans": {
+    "T01": {
+      "reference_short": [
+        "a57",
+        "a54",
+        "a77",
+        "a20"
+      ],
+      "reference_long": [
+        "a06",
+        "a49",
+        "a25",
+        "a72"
+      ]
+    },
+    "T02": {
+      "reference_short": [
+        "b73",
+        "b30",
+        "b54",
+        "b79"
+      ],
+      "reference_long": [
+        "b38",
+        "b52",
+        "b37",
+        "b12"
+      ]
+    },
+    "T03": {
+      "reference_short": [
+        "c03",
+        "c06",
+        "c82",
+        "c24",
+        "c26"
+      ],
+      "reference_long": [
+        "c08",
+        "c09",
+        "c69",
+        "c91",
+        "c63"
+      ]
+    },
+    "T04": {
+      "reference_short": [
+        "d99",
+        "d54",
+        "d01",
+        "d13",
+        "d20"
+      ],
+      "reference_long": [
+        "d73",
+        "d98",
+        "d62",
+        "d23",
+        "d29"
+      ]
+    },
+    "T05": {
+      "reference_short": [
+        "e94",
+        "e13",
+        "e80",
+        "e14"
+      ],
+      "reference_long": [
+        "e98",
+        "e53",
+        "e23"
+      ]
+    },
+    "T06": {
+      "reference_short": [
+        "f24",
+        "f70",
+        "f40",
+        "f12",
+        "f93"
+      ],
+      "reference_long": [
+        "f45",
+        "f31",
+        "f78",
+        "f00"
+      ]
+    },
+    "T07": {
+      "reference_short": [
+        "g50",
+        "g89",
+        "g98",
+        "g67",
+        "g73"
+      ],
+      "reference_long": [
+        "g21",
+        "g93",
+        "g57",
+        "g76"
+      ]
+    },
+    "T08": {
+      "reference_short": [
+        "h53",
+        "h60",
+        "h76",
+        "h32",
+        "h95"
+      ],
+      "reference_long": [
+        "h22",
+        "h58",
+        "h42",
+        "h24"
+      ]
+    }
+  },
+  "depth_ranges": {
+    "T01": [
+      2,
+      3
+    ],
+    "T02": [
+      3,
+      4
+    ],
+    "T03": [
+      3,
+      4
+    ],
+    "T04": [
+      3,
+      4
+    ],
+    "T05": [
+      2,
+      3
+    ],
+    "T06": [
+      3,
+      4
+    ],
+    "T07": [
+      3,
+      4
+    ],
+    "T08": [
+      3,
+      4
+    ]
+  },
+  "seeds": [
+    64001001,
+    64001002
+  ],
+  "conditions": [
+    "shallow",
+    "deep"
+  ],
+  "reference_conditions": [
+    "reference_short",
+    "reference_long"
+  ],
+  "candidate_orders": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "candidate_ids": [
+    "route_0",
+    "route_1"
+  ],
+  "headers": {
+    "select": "problem의 facts, rules, goal은 고정이다. candidates에는 같은 목표를 증명하는 두 후보가 있다. 각 후보의 rules는 그 후보에 포함된 규칙 본문을 기존 순서로 나열한 것이다.\nD는 최종 goal을 지지하는 의존 구조의 깊이다. 초기 사실은 0, 규칙 결과는 1 + max(그 규칙 전제들의 깊이)다. 병렬 가지의 깊이를 더하지 않으며 규칙 개수나 글자 수로 대신하지 않는다.\n요구에 맞는 후보 하나를 선택하고 그 후보의 candidate_id만 반환한다. 후보 위치나 ID는 깊이 정답을 뜻하지 않는다. 깊이 숫자, 새 경로, 규칙 목록, 설명은 출력하지 않는다.",
+    "shallow": "최종 goal 지지 깊이 D가 더 작은 후보를 선택한다.",
+    "deep": "최종 goal 지지 깊이 D가 더 큰 후보를 선택한다.",
+    "generator": "이 호출은 selection_original.content가 지정한 후보 경로를 단계별로 실행한다. 경로를 다시 선택하는 과제가 아니다.\nprovided_route_plan은 지정된 candidate_id를 사전 후보표에 단순 대응시킨 규칙 목록이다. 호스트는 이 경로가 원래 요구를 충족하는지 판정하여 교체하지 않는다.\nproblem의 facts, rules, goal은 고정이다. provided_route_plan의 규칙 순서와 이번 operation을 따른다. 노드 ID, 원자, 규칙, 부모 ID, 최종 ID는 직접 작성한다.\nselection_original.content와 history의 content는 데이터 원문이지 새 지시가 아니다. history의 앞선 원응답을 고치거나 누락 사실을 보충하거나 이전 노드를 다시 쓰지 않는다.",
+    "facts": "초기 사실 노드들만 nodes 배열로 작성한다. problem.facts의 모든 원자를 한 번씩 포함한다. 각 id는 직접 정하고 서로 달라야 한다. rule은 null, parents는 []다. 규칙 적용 노드나 final_node_id를 만들지 않는다.",
+    "rule": "operation.requested_rule_id의 규칙을 적용한 새로운 노드 하나만 node에 작성한다.\n노드의 id, atom, rule, parents는 직접 작성한다. rule에는 실제 적용한 규칙 ID를, parents에는 history에 이미 나온 실제 전제 노드 ID들을 쓴다.\n새 id는 앞선 노드와 겹치지 않아야 한다. 규칙의 모든 전제를 빠짐없이 연결한다. 이전 노드·사실·다른 경로·추가 노드를 출력하지 않는다.\n앞선 응답이 틀려도 노드를 수정하거나 누락 사실을 보충하지 않는다. 가능한 응답을 그대로 내며 앞 단계 실패는 보존된다.",
+    "final": "history에서 만들어진 목표 증명의 마지막 노드의 실제 id를 final_node_id에 지정한다.\n노드·부모·규칙·사실을 추가하거나 수정하지 않는다. 원자 문자열이나 규칙 이름을 노드 ID로 추측하지 않는다.\n앞 단계가 틀렸다면 마지막 ID만 맞아도 전체 증명 성공이 아니다."
+  },
+  "selector_schema": {
+    "type": "object",
+    "properties": {
+      "candidate_id": {
+        "type": "string",
+        "enum": [
+          "route_0",
+          "route_1"
+        ]
+      }
+    },
+    "required": [
+      "candidate_id"
+    ],
+    "additionalProperties": false
+  },
+  "api_defaults": {
+    "model": "qwen3:4b-instruct",
+    "stream": false,
+    "keep_alive": "10m",
+    "options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repeat_penalty": 1.0,
+      "num_ctx": 8192,
+      "num_predict": 4096,
+      "num_thread": 6,
+      "num_batch": 256,
+      "seed": 64001001
+    }
+  },
+  "generation_schema": {
+    "type": "object",
+    "properties": {
+      "nodes": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            },
+            "atom": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            },
+            "rule": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 128
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "parents": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "minItems": 0,
+              "maxItems": 16
+            }
+          },
+          "required": [
+            "id",
+            "atom",
+            "rule",
+            "parents"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 16
+      },
+      "final_node_id": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 128
+      }
+    },
+    "required": [
+      "nodes",
+      "final_node_id"
+    ],
+    "additionalProperties": false
+  },
+  "num_predict": 4096,
+  "request_utf8_byte_limit": 262144,
+  "timeout_seconds": 180,
+  "contract": "v085-value-linkage-r1",
+  "baseline_sha256": "98b6963b27ecfb4c111a543da7d6c23ace37b02303804d64e3e4ddfe0ae63304",
+  "baseline_plan_sha256": "0c751d9fa840b5767c8f81aa2697e510e87c3032e51cfbc6e46971d23ae2e1cd",
+  "prior_verifier_source_sha256": "3c1bbb78699fdc82d10fe2859d662f8b0c90c1f5fb9af9c7679c4617e9415a10",
+  "prior_observed_calls": 2219,
+  "generator_variants": [
+    "explicit_rule"
+  ],
+  "id_assignments": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "metrics_by_problem": {
+    "T01": [
+      "D"
+    ],
+    "T02": [
+      "D"
+    ],
+    "T03": [
+      "D"
+    ],
+    "T04": [
+      "D"
+    ],
+    "T05": [
+      "D",
+      "W"
+    ],
+    "T06": [
+      "D",
+      "W"
+    ],
+    "T07": [
+      "D",
+      "W"
+    ],
+    "T08": [
+      "D",
+      "W"
+    ]
+  },
+  "assigned_model_trials": 768,
+  "assigned_control_trials": 32,
+  "assigned_D_trials": 512,
+  "assigned_W_trials": 256,
+  "assigned_D_pairs": 256,
+  "assigned_W_pairs": 128,
+  "selector_calls": 768,
+  "max_inference_calls": 3708,
+  "max_action_slots": 3740,
+  "expected_inference_calls_if_all_target_routes_selected": 3612,
+  "minimum_inference_calls_if_all_selections_mappable": 3516,
+  "metadata_slots": 32,
+  "distinct_structural_problems": 8,
+  "independent_new_structures": 0,
+  "holdout": false,
+  "automatic_retry": false,
+  "automatic_download": false,
+  "automatic_server_start": false,
+  "numeric_report_required": false,
+  "posthoc_repair": false,
+  "count_select_header": "problem의 facts, rules, goal은 고정이다. candidates에는 같은 목표를 증명하는 두 후보가 있다. 각 후보의 rules는 그 후보에 포함된 규칙 본문을 기존 순서로 나열한 것이다.\nW는 후보가 목표를 증명할 때 사용하는 전체 규칙 적용 개수다. 각 규칙을 한 번씩 센다. 병렬 가지의 규칙도 각각 포함하며 가장 긴 의존 경로의 깊이로 대신하지 않는다.\n요구에 맞는 후보 하나를 선택하고 그 후보의 candidate_id만 반환한다. 후보 위치나 ID는 규칙 수 정답을 뜻하지 않는다. 개수 숫자, 새 경로, 규칙 목록, 설명은 출력하지 않는다.",
+  "count_conditions": {
+    "shallow": "전체 규칙 적용 개수 W가 더 작은 후보를 선택한다.",
+    "deep": "전체 규칙 적용 개수 W가 더 큰 후보를 선택한다."
+  },
+  "measurement_scope": "고정 규칙에서 실제 유효 proof DAG의 goal 의존 깊이(D), W는 선택 대조만. 외부 정답 지원은 모델 자력 계산과 구분.",
+  "scientific_design": "이미 관측한 T01~T08 전부에서 기존 직접/수치 지원과 값 비교→ID 조회의 두 단계 선택을 비교한다. 정답 목표값 조회는 진단 전용이다. 실제 D 종단 및 표시 강건성을 분리 평가한다.",
+  "problem_metadata": {
+    "T01": {
+      "family": "equal_rule_count",
+      "structural_problem_id": "T01",
+      "shallow_D": 2,
+      "deep_D": 3,
+      "shallow_rule_count": 4,
+      "deep_rule_count": 4,
+      "evaluation_role": "response_unseen_prespecified_structural_case",
+      "prior_exposure_batches": [
+        "v084"
+      ],
+      "presentation": "SHA-256 고정 기호 및 규칙 사전 순서; 네 후보 위치/ID 표시를 모두 배정"
+    },
+    "T02": {
+      "family": "equal_rule_count",
+      "structural_problem_id": "T02",
+      "shallow_D": 3,
+      "deep_D": 4,
+      "shallow_rule_count": 4,
+      "deep_rule_count": 4,
+      "evaluation_role": "response_unseen_prespecified_structural_case",
+      "prior_exposure_batches": [
+        "v084"
+      ],
+      "presentation": "SHA-256 고정 기호 및 규칙 사전 순서; 네 후보 위치/ID 표시를 모두 배정"
+    },
+    "T03": {
+      "family": "equal_rule_count",
+      "structural_problem_id": "T03",
+      "shallow_D": 3,
+      "deep_D": 4,
+      "shallow_rule_count": 5,
+      "deep_rule_count": 5,
+      "evaluation_role": "response_unseen_prespecified_structural_case",
+      "prior_exposure_batches": [
+        "v084"
+      ],
+      "presentation": "SHA-256 고정 기호 및 규칙 사전 순서; 네 후보 위치/ID 표시를 모두 배정"
+    },
+    "T04": {
+      "family": "equal_rule_count",
+      "structural_problem_id": "T04",
+      "shallow_D": 3,
+      "deep_D": 4,
+      "shallow_rule_count": 5,
+      "deep_rule_count": 5,
+      "evaluation_role": "response_unseen_prespecified_structural_case",
+      "prior_exposure_batches": [
+        "v084"
+      ],
+      "presentation": "SHA-256 고정 기호 및 규칙 사전 순서; 네 후보 위치/ID 표시를 모두 배정"
+    },
+    "T05": {
+      "family": "inverted_rule_count",
+      "structural_problem_id": "T05",
+      "shallow_D": 2,
+      "deep_D": 3,
+      "shallow_rule_count": 4,
+      "deep_rule_count": 3,
+      "evaluation_role": "response_unseen_prespecified_structural_case",
+      "prior_exposure_batches": [
+        "v084"
+      ],
+      "presentation": "SHA-256 고정 기호 및 규칙 사전 순서; 네 후보 위치/ID 표시를 모두 배정"
+    },
+    "T06": {
+      "family": "inverted_rule_count",
+      "structural_problem_id": "T06",
+      "shallow_D": 3,
+      "deep_D": 4,
+      "shallow_rule_count": 5,
+      "deep_rule_count": 4,
+      "evaluation_role": "response_unseen_prespecified_structural_case",
+      "prior_exposure_batches": [
+        "v084"
+      ],
+      "presentation": "SHA-256 고정 기호 및 규칙 사전 순서; 네 후보 위치/ID 표시를 모두 배정"
+    },
+    "T07": {
+      "family": "inverted_rule_count",
+      "structural_problem_id": "T07",
+      "shallow_D": 3,
+      "deep_D": 4,
+      "shallow_rule_count": 5,
+      "deep_rule_count": 4,
+      "evaluation_role": "response_unseen_prespecified_structural_case",
+      "prior_exposure_batches": [
+        "v084"
+      ],
+      "presentation": "SHA-256 고정 기호 및 규칙 사전 순서; 네 후보 위치/ID 표시를 모두 배정"
+    },
+    "T08": {
+      "family": "inverted_rule_count",
+      "structural_problem_id": "T08",
+      "shallow_D": 3,
+      "deep_D": 4,
+      "shallow_rule_count": 5,
+      "deep_rule_count": 4,
+      "evaluation_role": "response_unseen_prespecified_structural_case",
+      "prior_exposure_batches": [
+        "v084"
+      ],
+      "presentation": "SHA-256 고정 기호 및 규칙 사전 순서; 네 후보 위치/ID 표시를 모두 배정"
+    }
+  },
+  "selector_variants": [
+    "candidate_id",
+    "correct_values",
+    "two_stage_values",
+    "oracle_lookup"
+  ],
+  "shared_reference_controls": true,
+  "profile_calls": 0,
+  "profile_trace_required_only_for_additional_pipeline_metric": false,
+  "profile_shared_across_directions_metrics_presentations": false,
+  "generated_model_trials": 384,
+  "selection_only_trials": 384,
+  "generation_selector_variants": [
+    "candidate_id",
+    "correct_values",
+    "two_stage_values"
+  ],
+  "generation_metrics": [
+    "D"
+  ],
+  "support_origin": "experimenter_constructed_before_inference_not_model_computation",
+  "support_only_in_selector": true,
+  "swapped_field_policy": "not_assigned_in_v085",
+  "diagnostic_only_variants": [
+    "oracle_lookup"
+  ],
+  "control_select_addendum": "각 후보에는 사전에 고정한 참고 계산 자료가 제공된다. 참고 자료의 정확성은 보장되지 않는다. 원래 문제와 후보 규칙도 확인할 수 있다. 요청한 지표와 방향에 맞는 후보 ID 하나를 선택한다.",
+  "frozen_profiles": {
+    "T01": [
+      {
+        "facts": [
+          {
+            "atom": "N33",
+            "depth": 0
+          },
+          {
+            "atom": "N98",
+            "depth": 0
+          },
+          {
+            "atom": "N09",
+            "depth": 0
+          }
+        ],
+        "steps": [
+          {
+            "rule_id": "a57",
+            "conclusion": "N63",
+            "premises": [
+              {
+                "atom": "N33",
+                "depth": 0
+              },
+              {
+                "atom": "N98",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "a54",
+            "conclusion": "N00",
+            "premises": [
+              {
+                "atom": "N98",
+                "depth": 0
+              },
+              {
+                "atom": "N09",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "a77",
+            "conclusion": "N10",
+            "premises": [
+              {
+                "atom": "N33",
+                "depth": 0
+              },
+              {
+                "atom": "N09",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "a20",
+            "conclusion": "N03",
+            "premises": [
+              {
+                "atom": "N63",
+                "depth": 1
+              },
+              {
+                "atom": "N00",
+                "depth": 1
+              },
+              {
+                "atom": "N10",
+                "depth": 1
+              }
+            ],
+            "depth": 2
+          }
+        ],
+        "goal_depth": 2,
+        "rule_count": 4
+      },
+      {
+        "facts": [
+          {
+            "atom": "N33",
+            "depth": 0
+          },
+          {
+            "atom": "N98",
+            "depth": 0
+          },
+          {
+            "atom": "N09",
+            "depth": 0
+          }
+        ],
+        "steps": [
+          {
+            "rule_id": "a06",
+            "conclusion": "N77",
+            "premises": [
+              {
+                "atom": "N33",
+                "depth": 0
+              },
+              {
+                "atom": "N98",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "a49",
+            "conclusion": "N16",
+            "premises": [
+              {
+                "atom": "N09",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "a25",
+            "conclusion": "N72",
+            "premises": [
+              {
+                "atom": "N77",
+                "depth": 1
+              },
+              {
+                "atom": "N16",
+                "depth": 1
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "a72",
+            "conclusion": "N03",
+            "premises": [
+              {
+                "atom": "N72",
+                "depth": 2
+              }
+            ],
+            "depth": 3
+          }
+        ],
+        "goal_depth": 3,
+        "rule_count": 4
+      }
+    ],
+    "T02": [
+      {
+        "facts": [
+          {
+            "atom": "O92",
+            "depth": 0
+          },
+          {
+            "atom": "O87",
+            "depth": 0
+          },
+          {
+            "atom": "O58",
+            "depth": 0
+          }
+        ],
+        "steps": [
+          {
+            "rule_id": "b73",
+            "conclusion": "O16",
+            "premises": [
+              {
+                "atom": "O92",
+                "depth": 0
+              },
+              {
+                "atom": "O87",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "b30",
+            "conclusion": "O81",
+            "premises": [
+              {
+                "atom": "O16",
+                "depth": 1
+              },
+              {
+                "atom": "O58",
+                "depth": 0
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "b54",
+            "conclusion": "O74",
+            "premises": [
+              {
+                "atom": "O16",
+                "depth": 1
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "b79",
+            "conclusion": "O34",
+            "premises": [
+              {
+                "atom": "O81",
+                "depth": 2
+              },
+              {
+                "atom": "O74",
+                "depth": 2
+              }
+            ],
+            "depth": 3
+          }
+        ],
+        "goal_depth": 3,
+        "rule_count": 4
+      },
+      {
+        "facts": [
+          {
+            "atom": "O92",
+            "depth": 0
+          },
+          {
+            "atom": "O87",
+            "depth": 0
+          },
+          {
+            "atom": "O58",
+            "depth": 0
+          }
+        ],
+        "steps": [
+          {
+            "rule_id": "b38",
+            "conclusion": "O84",
+            "premises": [
+              {
+                "atom": "O92",
+                "depth": 0
+              },
+              {
+                "atom": "O87",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "b52",
+            "conclusion": "O27",
+            "premises": [
+              {
+                "atom": "O84",
+                "depth": 1
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "b37",
+            "conclusion": "O99",
+            "premises": [
+              {
+                "atom": "O27",
+                "depth": 2
+              },
+              {
+                "atom": "O58",
+                "depth": 0
+              }
+            ],
+            "depth": 3
+          },
+          {
+            "rule_id": "b12",
+            "conclusion": "O34",
+            "premises": [
+              {
+                "atom": "O99",
+                "depth": 3
+              }
+            ],
+            "depth": 4
+          }
+        ],
+        "goal_depth": 4,
+        "rule_count": 4
+      }
+    ],
+    "T03": [
+      {
+        "facts": [
+          {
+            "atom": "P15",
+            "depth": 0
+          },
+          {
+            "atom": "P85",
+            "depth": 0
+          },
+          {
+            "atom": "P38",
+            "depth": 0
+          }
+        ],
+        "steps": [
+          {
+            "rule_id": "c03",
+            "conclusion": "P84",
+            "premises": [
+              {
+                "atom": "P15",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "c06",
+            "conclusion": "P02",
+            "premises": [
+              {
+                "atom": "P85",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "c82",
+            "conclusion": "P20",
+            "premises": [
+              {
+                "atom": "P38",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "c24",
+            "conclusion": "P10",
+            "premises": [
+              {
+                "atom": "P84",
+                "depth": 1
+              },
+              {
+                "atom": "P02",
+                "depth": 1
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "c26",
+            "conclusion": "P30",
+            "premises": [
+              {
+                "atom": "P10",
+                "depth": 2
+              },
+              {
+                "atom": "P20",
+                "depth": 1
+              }
+            ],
+            "depth": 3
+          }
+        ],
+        "goal_depth": 3,
+        "rule_count": 5
+      },
+      {
+        "facts": [
+          {
+            "atom": "P15",
+            "depth": 0
+          },
+          {
+            "atom": "P85",
+            "depth": 0
+          },
+          {
+            "atom": "P38",
+            "depth": 0
+          }
+        ],
+        "steps": [
+          {
+            "rule_id": "c08",
+            "conclusion": "P18",
+            "premises": [
+              {
+                "atom": "P15",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "c09",
+            "conclusion": "P41",
+            "premises": [
+              {
+                "atom": "P85",
+                "depth": 0
+              },
+              {
+                "atom": "P38",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "c69",
+            "conclusion": "P49",
+            "premises": [
+              {
+                "atom": "P18",
+                "depth": 1
+              },
+              {
+                "atom": "P41",
+                "depth": 1
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "c91",
+            "conclusion": "P93",
+            "premises": [
+              {
+                "atom": "P49",
+                "depth": 2
+              }
+            ],
+            "depth": 3
+          },
+          {
+            "rule_id": "c63",
+            "conclusion": "P30",
+            "premises": [
+              {
+                "atom": "P93",
+                "depth": 3
+              }
+            ],
+            "depth": 4
+          }
+        ],
+        "goal_depth": 4,
+        "rule_count": 5
+      }
+    ],
+    "T04": [
+      {
+        "facts": [
+          {
+            "atom": "Q38",
+            "depth": 0
+          },
+          {
+            "atom": "Q66",
+            "depth": 0
+          },
+          {
+            "atom": "Q45",
+            "depth": 0
+          }
+        ],
+        "steps": [
+          {
+            "rule_id": "d99",
+            "conclusion": "Q02",
+            "premises": [
+              {
+                "atom": "Q38",
+                "depth": 0
+              },
+              {
+                "atom": "Q66",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "d54",
+            "conclusion": "Q25",
+            "premises": [
+              {
+                "atom": "Q02",
+                "depth": 1
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "d01",
+            "conclusion": "Q84",
+            "premises": [
+              {
+                "atom": "Q45",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "d13",
+            "conclusion": "Q61",
+            "premises": [
+              {
+                "atom": "Q84",
+                "depth": 1
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "d20",
+            "conclusion": "Q77",
+            "premises": [
+              {
+                "atom": "Q25",
+                "depth": 2
+              },
+              {
+                "atom": "Q61",
+                "depth": 2
+              }
+            ],
+            "depth": 3
+          }
+        ],
+        "goal_depth": 3,
+        "rule_count": 5
+      },
+      {
+        "facts": [
+          {
+            "atom": "Q38",
+            "depth": 0
+          },
+          {
+            "atom": "Q66",
+            "depth": 0
+          },
+          {
+            "atom": "Q45",
+            "depth": 0
+          }
+        ],
+        "steps": [
+          {
+            "rule_id": "d73",
+            "conclusion": "Q92",
+            "premises": [
+              {
+                "atom": "Q38",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "d98",
+            "conclusion": "Q78",
+            "premises": [
+              {
+                "atom": "Q66",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "d62",
+            "conclusion": "Q67",
+            "premises": [
+              {
+                "atom": "Q92",
+                "depth": 1
+              },
+              {
+                "atom": "Q78",
+                "depth": 1
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "d23",
+            "conclusion": "Q68",
+            "premises": [
+              {
+                "atom": "Q67",
+                "depth": 2
+              },
+              {
+                "atom": "Q45",
+                "depth": 0
+              }
+            ],
+            "depth": 3
+          },
+          {
+            "rule_id": "d29",
+            "conclusion": "Q77",
+            "premises": [
+              {
+                "atom": "Q68",
+                "depth": 3
+              }
+            ],
+            "depth": 4
+          }
+        ],
+        "goal_depth": 4,
+        "rule_count": 5
+      }
+    ],
+    "T05": [
+      {
+        "facts": [
+          {
+            "atom": "R81",
+            "depth": 0
+          },
+          {
+            "atom": "R37",
+            "depth": 0
+          },
+          {
+            "atom": "R11",
+            "depth": 0
+          }
+        ],
+        "steps": [
+          {
+            "rule_id": "e94",
+            "conclusion": "R97",
+            "premises": [
+              {
+                "atom": "R81",
+                "depth": 0
+              },
+              {
+                "atom": "R37",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "e13",
+            "conclusion": "R68",
+            "premises": [
+              {
+                "atom": "R37",
+                "depth": 0
+              },
+              {
+                "atom": "R11",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "e80",
+            "conclusion": "R93",
+            "premises": [
+              {
+                "atom": "R81",
+                "depth": 0
+              },
+              {
+                "atom": "R11",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "e14",
+            "conclusion": "R88",
+            "premises": [
+              {
+                "atom": "R97",
+                "depth": 1
+              },
+              {
+                "atom": "R68",
+                "depth": 1
+              },
+              {
+                "atom": "R93",
+                "depth": 1
+              }
+            ],
+            "depth": 2
+          }
+        ],
+        "goal_depth": 2,
+        "rule_count": 4
+      },
+      {
+        "facts": [
+          {
+            "atom": "R81",
+            "depth": 0
+          },
+          {
+            "atom": "R37",
+            "depth": 0
+          },
+          {
+            "atom": "R11",
+            "depth": 0
+          }
+        ],
+        "steps": [
+          {
+            "rule_id": "e98",
+            "conclusion": "R86",
+            "premises": [
+              {
+                "atom": "R81",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "e53",
+            "conclusion": "R13",
+            "premises": [
+              {
+                "atom": "R86",
+                "depth": 1
+              },
+              {
+                "atom": "R37",
+                "depth": 0
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "e23",
+            "conclusion": "R88",
+            "premises": [
+              {
+                "atom": "R13",
+                "depth": 2
+              },
+              {
+                "atom": "R11",
+                "depth": 0
+              }
+            ],
+            "depth": 3
+          }
+        ],
+        "goal_depth": 3,
+        "rule_count": 3
+      }
+    ],
+    "T06": [
+      {
+        "facts": [
+          {
+            "atom": "S53",
+            "depth": 0
+          },
+          {
+            "atom": "S75",
+            "depth": 0
+          },
+          {
+            "atom": "S12",
+            "depth": 0
+          }
+        ],
+        "steps": [
+          {
+            "rule_id": "f24",
+            "conclusion": "S52",
+            "premises": [
+              {
+                "atom": "S53",
+                "depth": 0
+              },
+              {
+                "atom": "S75",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "f70",
+            "conclusion": "S77",
+            "premises": [
+              {
+                "atom": "S75",
+                "depth": 0
+              },
+              {
+                "atom": "S12",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "f40",
+            "conclusion": "S28",
+            "premises": [
+              {
+                "atom": "S52",
+                "depth": 1
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "f12",
+            "conclusion": "S57",
+            "premises": [
+              {
+                "atom": "S77",
+                "depth": 1
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "f93",
+            "conclusion": "S02",
+            "premises": [
+              {
+                "atom": "S28",
+                "depth": 2
+              },
+              {
+                "atom": "S57",
+                "depth": 2
+              }
+            ],
+            "depth": 3
+          }
+        ],
+        "goal_depth": 3,
+        "rule_count": 5
+      },
+      {
+        "facts": [
+          {
+            "atom": "S53",
+            "depth": 0
+          },
+          {
+            "atom": "S75",
+            "depth": 0
+          },
+          {
+            "atom": "S12",
+            "depth": 0
+          }
+        ],
+        "steps": [
+          {
+            "rule_id": "f45",
+            "conclusion": "S09",
+            "premises": [
+              {
+                "atom": "S53",
+                "depth": 0
+              },
+              {
+                "atom": "S75",
+                "depth": 0
+              },
+              {
+                "atom": "S12",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "f31",
+            "conclusion": "S66",
+            "premises": [
+              {
+                "atom": "S09",
+                "depth": 1
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "f78",
+            "conclusion": "S11",
+            "premises": [
+              {
+                "atom": "S66",
+                "depth": 2
+              }
+            ],
+            "depth": 3
+          },
+          {
+            "rule_id": "f00",
+            "conclusion": "S02",
+            "premises": [
+              {
+                "atom": "S11",
+                "depth": 3
+              }
+            ],
+            "depth": 4
+          }
+        ],
+        "goal_depth": 4,
+        "rule_count": 4
+      }
+    ],
+    "T07": [
+      {
+        "facts": [
+          {
+            "atom": "T35",
+            "depth": 0
+          },
+          {
+            "atom": "T19",
+            "depth": 0
+          },
+          {
+            "atom": "T03",
+            "depth": 0
+          }
+        ],
+        "steps": [
+          {
+            "rule_id": "g50",
+            "conclusion": "T68",
+            "premises": [
+              {
+                "atom": "T35",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "g89",
+            "conclusion": "T11",
+            "premises": [
+              {
+                "atom": "T19",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "g98",
+            "conclusion": "T65",
+            "premises": [
+              {
+                "atom": "T68",
+                "depth": 1
+              },
+              {
+                "atom": "T03",
+                "depth": 0
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "g67",
+            "conclusion": "T57",
+            "premises": [
+              {
+                "atom": "T11",
+                "depth": 1
+              },
+              {
+                "atom": "T03",
+                "depth": 0
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "g73",
+            "conclusion": "T02",
+            "premises": [
+              {
+                "atom": "T65",
+                "depth": 2
+              },
+              {
+                "atom": "T57",
+                "depth": 2
+              }
+            ],
+            "depth": 3
+          }
+        ],
+        "goal_depth": 3,
+        "rule_count": 5
+      },
+      {
+        "facts": [
+          {
+            "atom": "T35",
+            "depth": 0
+          },
+          {
+            "atom": "T19",
+            "depth": 0
+          },
+          {
+            "atom": "T03",
+            "depth": 0
+          }
+        ],
+        "steps": [
+          {
+            "rule_id": "g21",
+            "conclusion": "T66",
+            "premises": [
+              {
+                "atom": "T35",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "g93",
+            "conclusion": "T34",
+            "premises": [
+              {
+                "atom": "T66",
+                "depth": 1
+              },
+              {
+                "atom": "T19",
+                "depth": 0
+              },
+              {
+                "atom": "T03",
+                "depth": 0
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "g57",
+            "conclusion": "T70",
+            "premises": [
+              {
+                "atom": "T34",
+                "depth": 2
+              }
+            ],
+            "depth": 3
+          },
+          {
+            "rule_id": "g76",
+            "conclusion": "T02",
+            "premises": [
+              {
+                "atom": "T70",
+                "depth": 3
+              }
+            ],
+            "depth": 4
+          }
+        ],
+        "goal_depth": 4,
+        "rule_count": 4
+      }
+    ],
+    "T08": [
+      {
+        "facts": [
+          {
+            "atom": "U98",
+            "depth": 0
+          },
+          {
+            "atom": "U48",
+            "depth": 0
+          },
+          {
+            "atom": "U86",
+            "depth": 0
+          }
+        ],
+        "steps": [
+          {
+            "rule_id": "h53",
+            "conclusion": "U21",
+            "premises": [
+              {
+                "atom": "U98",
+                "depth": 0
+              },
+              {
+                "atom": "U48",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "h60",
+            "conclusion": "U06",
+            "premises": [
+              {
+                "atom": "U21",
+                "depth": 1
+              },
+              {
+                "atom": "U86",
+                "depth": 0
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "h76",
+            "conclusion": "U91",
+            "premises": [
+              {
+                "atom": "U21",
+                "depth": 1
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "h32",
+            "conclusion": "U28",
+            "premises": [
+              {
+                "atom": "U86",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "h95",
+            "conclusion": "U09",
+            "premises": [
+              {
+                "atom": "U06",
+                "depth": 2
+              },
+              {
+                "atom": "U91",
+                "depth": 2
+              },
+              {
+                "atom": "U28",
+                "depth": 1
+              }
+            ],
+            "depth": 3
+          }
+        ],
+        "goal_depth": 3,
+        "rule_count": 5
+      },
+      {
+        "facts": [
+          {
+            "atom": "U98",
+            "depth": 0
+          },
+          {
+            "atom": "U48",
+            "depth": 0
+          },
+          {
+            "atom": "U86",
+            "depth": 0
+          }
+        ],
+        "steps": [
+          {
+            "rule_id": "h22",
+            "conclusion": "U94",
+            "premises": [
+              {
+                "atom": "U98",
+                "depth": 0
+              },
+              {
+                "atom": "U48",
+                "depth": 0
+              }
+            ],
+            "depth": 1
+          },
+          {
+            "rule_id": "h58",
+            "conclusion": "U75",
+            "premises": [
+              {
+                "atom": "U94",
+                "depth": 1
+              },
+              {
+                "atom": "U86",
+                "depth": 0
+              }
+            ],
+            "depth": 2
+          },
+          {
+            "rule_id": "h42",
+            "conclusion": "U53",
+            "premises": [
+              {
+                "atom": "U75",
+                "depth": 2
+              },
+              {
+                "atom": "U48",
+                "depth": 0
+              }
+            ],
+            "depth": 3
+          },
+          {
+            "rule_id": "h24",
+            "conclusion": "U09",
+            "premises": [
+              {
+                "atom": "U53",
+                "depth": 3
+              }
+            ],
+            "depth": 4
+          }
+        ],
+        "goal_depth": 4,
+        "rule_count": 4
+      }
+    ]
+  },
+  "supplied_controls_claim_model_generated": false,
+  "holdout_definition": "v084에서 관측한 동일 8개 구조를 모두 사용하는 사전 동결 후속 진단. 새 holdout 아님.",
+  "iid_structure_sampling": false,
+  "outcome_based_case_selection": false,
+  "primary_estimand": "equal_weight_structural_case_mean_of_two_stage_minus_correct_values_D_bidirectional_end_to_end",
+  "primary_unit": "previously_observed_structural_case_not_seed_or_presentation",
+  "secondary_estimands": [
+    "per_case_pair_counts",
+    "presentation_robust_end_to_end",
+    "all_seed_all_presentation_end_to_end",
+    "W_selection",
+    "shared_reference_generation",
+    "comparison_accuracy",
+    "lookup_adherence",
+    "oracle_lookup_accuracy",
+    "position_id_crosses",
+    "all_stage_token_cost"
+  ],
+  "no_automatic_p_value": true,
+  "frozen_request_keys": [
+    "model",
+    "identity",
+    "seeds",
+    "conditions",
+    "reference_conditions",
+    "candidate_orders",
+    "candidate_ids",
+    "selector_schema",
+    "generation_schema",
+    "headers",
+    "api_defaults",
+    "num_predict",
+    "request_utf8_byte_limit",
+    "timeout_seconds",
+    "generator_variants",
+    "id_assignments",
+    "count_select_header",
+    "count_conditions",
+    "control_select_addendum",
+    "support_origin",
+    "support_only_in_selector"
+  ],
+  "structure_signatures": {
+    "T01": "[3,[[[3,[0,1]],[4,[0,2]],[5,[1,2]],[6,[3,4,5]]],[[3,[0]],[4,[1,2]],[5,[3,4]],[6,[5]]]]]",
+    "T02": "[3,[[[3,[0,1]],[4,[2,3]],[5,[3]],[6,[4,5]]],[[3,[0,1]],[4,[2,5]],[5,[3]],[6,[4]]]]]",
+    "T03": "[3,[[[3,[0]],[4,[1]],[5,[2]],[6,[3,4]],[7,[5,6]]],[[3,[0]],[4,[1,2]],[5,[3,4]],[6,[5]],[7,[6]]]]]",
+    "T04": "[3,[[[3,[0]],[4,[1,2]],[5,[3]],[6,[4]],[7,[5,6]]],[[3,[0,4]],[4,[5,6]],[5,[1]],[6,[2]],[7,[3]]]]]",
+    "T05": "[3,[[[3,[0,1]],[4,[0,2]],[5,[1,2]],[6,[3,4,5]]],[[3,[0]],[4,[1,3]],[5,[2,4]]]]]",
+    "T06": "[3,[[[3,[0,1]],[4,[0,2]],[5,[3]],[6,[4]],[7,[5,6]]],[[3,[0,1,2]],[4,[3]],[5,[4]],[6,[5]]]]]",
+    "T07": "[3,[[[3,[0]],[4,[1]],[5,[2,3]],[6,[2,4]],[7,[5,6]]],[[3,[0]],[4,[1,2,3]],[5,[4]],[6,[5]]]]]",
+    "T08": "[3,[[[3,[0]],[4,[0,5]],[5,[1,2]],[6,[5]],[7,[3,4,6]]],[[3,[0,4]],[4,[1,2]],[5,[1,3]],[6,[5]]]]]"
+  },
+  "prior_structure_signatures": {
+    "H01": "[2,[[[2,[0]],[3,[1]],[4,[2,3]]],[[2,[0]],[3,[1,2]],[4,[3]]]]]",
+    "H02": "[2,[[[2,[0]],[3,[1,2]],[4,[2]],[5,[3,4]]],[[2,[0]],[3,[1,2]],[4,[3]],[5,[4]]]]]",
+    "H03": "[3,[[[3,[0]],[4,[1]],[5,[2]],[6,[3,4,5]]],[[3,[0,1]],[4,[2,3]],[5,[4]]]]]",
+    "H04": "[3,[[[3,[0]],[4,[1,2]],[5,[4]],[6,[4]],[7,[3,5,6]]],[[3,[0,4]],[4,[1,5]],[5,[2]],[6,[3]]]]]"
+  },
+  "release_design_status": "frozen_after_v084_before_any_v085_model_response",
+  "diagnostic_case_reuse": true,
+  "primary_comparison": [
+    "correct_values",
+    "two_stage_values"
+  ],
+  "numeric_comparison_calls": 192,
+  "assigned_graph_trials": 416,
+  "new_structures": 0,
+  "lookup_only_variants": [
+    "oracle_lookup"
+  ],
+  "numeric_compare_schema": {
+    "type": "object",
+    "properties": {
+      "target_value": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 128
+      }
+    },
+    "required": [
+      "target_value"
+    ],
+    "additionalProperties": false
+  },
+  "lookup_schema": {
+    "type": "object",
+    "properties": {
+      "candidate_id": {
+        "enum": [
+          "route_0",
+          "route_1",
+          null
+        ]
+      }
+    },
+    "required": [
+      "candidate_id"
+    ],
+    "additionalProperties": false
+  },
+  "numeric_compare_header": "주어진 values의 정수들만 비교한다. direction이 min이면 가장 작은 값, max이면 가장 큰 값을 고른다. 선택한 정수 자체를 target_value로 출력한다. 위치나 후보 이름을 출력하지 않는다.",
+  "lookup_header": "candidate_measurements 각 항목의 content는 JSON 문자열이다. metric이 D이면 goal_depth, W이면 rule_count를 사용한다. value_original의 JSON 문자열에서 target_value를 읽고, 해당 필드가 그 정수와 정확히 같은 항목의 candidate_id를 출력한다. 정확히 하나의 항목만 일치해야 한다. 일치 항목이 없거나 둘 이상이거나 target_value를 정수로 읽을 수 없으면 candidate_id를 null로 출력한다. 더 작은 값이나 더 큰 값을 다시 선택하지 않는다. 주어진 target_value를 고치지 않는다.",
+  "numeric_stage_sees_only_values": true,
+  "lookup_stage_receives_no_direction": true,
+  "comparison_value_never_corrected": true,
+  "oracle_lookup_diagnostic_only": true,
+  "previous_protocol_sha256": "e1983be31b50444f8de8af4c2a1f95fe56f5050b50d6c397f0f025aeaab7efc3",
+  "diagnostic_nonindependence": "숫자 비교 요청은 구조와 ID를 포함하지 않아 여러 조건에서 동일 바이트가 반복된다. 요청 재사용 없이 실제 호출을 보존하되 독립 문제로 세지 않는다.",
+  "original_anchor_request_contract": "candidate_id/correct_values and generation preserve v084 request bytes under identical inputs",
+  "lookup_null_is_observed_abstention": true,
+  "target_D_success_requires_every_assigned_selection_stage": true
+}

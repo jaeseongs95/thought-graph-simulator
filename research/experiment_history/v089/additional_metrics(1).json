@@ -1,0 +1,1663 @@
+{
+  "contract": "v089-additional-raw-analysis-20260916",
+  "matrices": {
+    "continuation/atom_alias__atom_alias": {
+      "n": 32,
+      "success": 29,
+      "pairs": 16,
+      "pair_success": 13,
+      "pair_distribution": {
+        "0": 0,
+        "1": 3,
+        "2": 13
+      },
+      "first_error_classes": {
+        "success": 29,
+        "premise_counter_mismatch": 3
+      },
+      "per_structure": {
+        "U01": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U02": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U03": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U04": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U05": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U06": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U07": {
+          "n": 4,
+          "success": 3,
+          "pairs": 2,
+          "pair_success": 1
+        },
+        "U08": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        }
+      }
+    },
+    "continuation/atom_alias__short": {
+      "n": 32,
+      "success": 5,
+      "pairs": 16,
+      "pair_success": 0,
+      "pair_distribution": {
+        "0": 11,
+        "1": 5,
+        "2": 0
+      },
+      "first_error_classes": {
+        "success": 5,
+        "missing_parent": 27
+      },
+      "per_structure": {
+        "U01": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U02": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U03": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U04": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U05": {
+          "n": 4,
+          "success": 1,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U06": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U07": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U08": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        }
+      }
+    },
+    "continuation/atom_alias__long": {
+      "n": 32,
+      "success": 0,
+      "pairs": 16,
+      "pair_success": 0,
+      "pair_distribution": {
+        "0": 16,
+        "1": 0,
+        "2": 0
+      },
+      "first_error_classes": {
+        "missing_parent": 32
+      },
+      "per_structure": {
+        "U01": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U02": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U03": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U04": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U05": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U06": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U07": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U08": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        }
+      }
+    },
+    "continuation/atom_alias__atom_tagged": {
+      "n": 32,
+      "success": 5,
+      "pairs": 16,
+      "pair_success": 0,
+      "pair_distribution": {
+        "0": 11,
+        "1": 5,
+        "2": 0
+      },
+      "first_error_classes": {
+        "success": 5,
+        "missing_parent": 25,
+        "premise_counter_mismatch": 2
+      },
+      "per_structure": {
+        "U01": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U02": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U03": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U04": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U05": {
+          "n": 4,
+          "success": 1,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U06": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U07": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U08": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        }
+      }
+    },
+    "continuation/short__atom_alias": {
+      "n": 32,
+      "success": 7,
+      "pairs": 16,
+      "pair_success": 1,
+      "pair_distribution": {
+        "0": 10,
+        "1": 5,
+        "2": 1
+      },
+      "first_error_classes": {
+        "success": 7,
+        "premise_counter_mismatch": 22,
+        "missing_parent": 3
+      },
+      "per_structure": {
+        "U01": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U02": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U03": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U04": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U05": {
+          "n": 4,
+          "success": 3,
+          "pairs": 2,
+          "pair_success": 1
+        },
+        "U06": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U07": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U08": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        }
+      }
+    },
+    "continuation/short__short": {
+      "n": 32,
+      "success": 18,
+      "pairs": 16,
+      "pair_success": 5,
+      "pair_distribution": {
+        "0": 3,
+        "1": 8,
+        "2": 5
+      },
+      "first_error_classes": {
+        "success": 18,
+        "premise_counter_mismatch": 14
+      },
+      "per_structure": {
+        "U01": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U02": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U03": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U04": {
+          "n": 4,
+          "success": 3,
+          "pairs": 2,
+          "pair_success": 1
+        },
+        "U05": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U06": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U07": {
+          "n": 4,
+          "success": 1,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U08": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        }
+      }
+    },
+    "continuation/short__long": {
+      "n": 32,
+      "success": 13,
+      "pairs": 16,
+      "pair_success": 3,
+      "pair_distribution": {
+        "0": 6,
+        "1": 7,
+        "2": 3
+      },
+      "first_error_classes": {
+        "success": 13,
+        "missing_parent": 5,
+        "premise_counter_mismatch": 14
+      },
+      "per_structure": {
+        "U01": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U02": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U03": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U04": {
+          "n": 4,
+          "success": 3,
+          "pairs": 2,
+          "pair_success": 1
+        },
+        "U05": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U06": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U07": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U08": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        }
+      }
+    },
+    "continuation/short__atom_tagged": {
+      "n": 32,
+      "success": 12,
+      "pairs": 16,
+      "pair_success": 4,
+      "pair_distribution": {
+        "0": 8,
+        "1": 4,
+        "2": 4
+      },
+      "first_error_classes": {
+        "success": 12,
+        "premise_counter_mismatch": 17,
+        "missing_parent": 3
+      },
+      "per_structure": {
+        "U01": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U02": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U03": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U04": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U05": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U06": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U07": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U08": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        }
+      }
+    },
+    "continuation/long__atom_alias": {
+      "n": 32,
+      "success": 8,
+      "pairs": 16,
+      "pair_success": 1,
+      "pair_distribution": {
+        "0": 9,
+        "1": 6,
+        "2": 1
+      },
+      "first_error_classes": {
+        "success": 8,
+        "premise_counter_mismatch": 19,
+        "missing_parent": 5
+      },
+      "per_structure": {
+        "U01": {
+          "n": 4,
+          "success": 3,
+          "pairs": 2,
+          "pair_success": 1
+        },
+        "U02": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U03": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U04": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U05": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U06": {
+          "n": 4,
+          "success": 1,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U07": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U08": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        }
+      }
+    },
+    "continuation/long__short": {
+      "n": 32,
+      "success": 12,
+      "pairs": 16,
+      "pair_success": 5,
+      "pair_distribution": {
+        "0": 9,
+        "1": 2,
+        "2": 5
+      },
+      "first_error_classes": {
+        "success": 12,
+        "missing_parent": 3,
+        "premise_counter_mismatch": 17
+      },
+      "per_structure": {
+        "U01": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U02": {
+          "n": 4,
+          "success": 3,
+          "pairs": 2,
+          "pair_success": 1
+        },
+        "U03": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U04": {
+          "n": 4,
+          "success": 1,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U05": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U06": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U07": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U08": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        }
+      }
+    },
+    "continuation/long__long": {
+      "n": 32,
+      "success": 19,
+      "pairs": 16,
+      "pair_success": 6,
+      "pair_distribution": {
+        "0": 3,
+        "1": 7,
+        "2": 6
+      },
+      "first_error_classes": {
+        "success": 19,
+        "premise_counter_mismatch": 13
+      },
+      "per_structure": {
+        "U01": {
+          "n": 4,
+          "success": 3,
+          "pairs": 2,
+          "pair_success": 1
+        },
+        "U02": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U03": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U04": {
+          "n": 4,
+          "success": 3,
+          "pairs": 2,
+          "pair_success": 1
+        },
+        "U05": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U06": {
+          "n": 4,
+          "success": 1,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U07": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U08": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        }
+      }
+    },
+    "continuation/long__atom_tagged": {
+      "n": 32,
+      "success": 17,
+      "pairs": 16,
+      "pair_success": 5,
+      "pair_distribution": {
+        "0": 4,
+        "1": 7,
+        "2": 5
+      },
+      "first_error_classes": {
+        "success": 17,
+        "premise_counter_mismatch": 13,
+        "missing_parent": 2
+      },
+      "per_structure": {
+        "U01": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U02": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U03": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U04": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U05": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U06": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U07": {
+          "n": 4,
+          "success": 3,
+          "pairs": 2,
+          "pair_success": 1
+        },
+        "U08": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        }
+      }
+    },
+    "continuation/atom_tagged__atom_alias": {
+      "n": 32,
+      "success": 3,
+      "pairs": 16,
+      "pair_success": 0,
+      "pair_distribution": {
+        "0": 13,
+        "1": 3,
+        "2": 0
+      },
+      "first_error_classes": {
+        "missing_parent": 25,
+        "success": 3,
+        "premise_counter_mismatch": 4
+      },
+      "per_structure": {
+        "U01": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U02": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U03": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U04": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U05": {
+          "n": 4,
+          "success": 1,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U06": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U07": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U08": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        }
+      }
+    },
+    "continuation/atom_tagged__short": {
+      "n": 32,
+      "success": 13,
+      "pairs": 16,
+      "pair_success": 4,
+      "pair_distribution": {
+        "0": 7,
+        "1": 5,
+        "2": 4
+      },
+      "first_error_classes": {
+        "missing_parent": 19,
+        "success": 13
+      },
+      "per_structure": {
+        "U01": {
+          "n": 4,
+          "success": 1,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U02": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U03": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U04": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U05": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U06": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U07": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U08": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        }
+      }
+    },
+    "continuation/atom_tagged__long": {
+      "n": 32,
+      "success": 20,
+      "pairs": 16,
+      "pair_success": 6,
+      "pair_distribution": {
+        "0": 2,
+        "1": 8,
+        "2": 6
+      },
+      "first_error_classes": {
+        "success": 20,
+        "missing_parent": 12
+      },
+      "per_structure": {
+        "U01": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U02": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U03": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U04": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U05": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U06": {
+          "n": 4,
+          "success": 0,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U07": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U08": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        }
+      }
+    },
+    "continuation/atom_tagged__atom_tagged": {
+      "n": 32,
+      "success": 28,
+      "pairs": 16,
+      "pair_success": 12,
+      "pair_distribution": {
+        "0": 0,
+        "1": 4,
+        "2": 12
+      },
+      "first_error_classes": {
+        "success": 28,
+        "premise_counter_mismatch": 2,
+        "missing_parent": 2
+      },
+      "per_structure": {
+        "U01": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U02": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U03": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U04": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U05": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U06": {
+          "n": 4,
+          "success": 2,
+          "pairs": 2,
+          "pair_success": 0
+        },
+        "U07": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        },
+        "U08": {
+          "n": 4,
+          "success": 4,
+          "pairs": 2,
+          "pair_success": 2
+        }
+      }
+    },
+    "end_to_end/baseline": {
+      "n": 128,
+      "success": 111,
+      "pairs": 64,
+      "pair_success": 48,
+      "pair_distribution": {
+        "0": 1,
+        "1": 15,
+        "2": 48
+      },
+      "first_error_classes": {
+        "success": 111,
+        "premise_counter_mismatch": 17
+      },
+      "per_structure": {
+        "U01": {
+          "n": 16,
+          "success": 14,
+          "pairs": 8,
+          "pair_success": 6
+        },
+        "U02": {
+          "n": 16,
+          "success": 16,
+          "pairs": 8,
+          "pair_success": 8
+        },
+        "U03": {
+          "n": 16,
+          "success": 10,
+          "pairs": 8,
+          "pair_success": 3
+        },
+        "U04": {
+          "n": 16,
+          "success": 16,
+          "pairs": 8,
+          "pair_success": 8
+        },
+        "U05": {
+          "n": 16,
+          "success": 16,
+          "pairs": 8,
+          "pair_success": 8
+        },
+        "U06": {
+          "n": 16,
+          "success": 10,
+          "pairs": 8,
+          "pair_success": 2
+        },
+        "U07": {
+          "n": 16,
+          "success": 16,
+          "pairs": 8,
+          "pair_success": 8
+        },
+        "U08": {
+          "n": 16,
+          "success": 13,
+          "pairs": 8,
+          "pair_success": 5
+        }
+      }
+    }
+  },
+  "primary": 0.34375,
+  "primary_by_structure": {
+    "U01": 0.25,
+    "U02": 0.5,
+    "U03": 0.0,
+    "U04": 0.5,
+    "U05": 1.0,
+    "U06": 0.0,
+    "U07": 0.5,
+    "U08": 0.0
+  },
+  "leave_one_structure_out": {
+    "U01": 0.35714285714285715,
+    "U02": 0.32142857142857145,
+    "U03": 0.39285714285714285,
+    "U04": 0.32142857142857145,
+    "U05": 0.25,
+    "U06": 0.39285714285714285,
+    "U07": 0.32142857142857145,
+    "U08": 0.39285714285714285
+  },
+  "contrasts": {
+    "atom_alias__short -> short__short": {
+      "left": "atom_alias__short",
+      "right": "short__short",
+      "matched_outcomes": {
+        "both_success": 5,
+        "both_failure": 14,
+        "gain": 13
+      },
+      "first_error_transitions": {
+        "success -> success": 5,
+        "missing_parent -> premise_counter_mismatch": 14,
+        "missing_parent -> success": 13
+      },
+      "per_structure": {
+        "U01": 0.0,
+        "U02": 1.0,
+        "U03": 0.0,
+        "U04": 0.5,
+        "U05": 1.0,
+        "U06": 0.0,
+        "U07": 0.0,
+        "U08": 0.0
+      },
+      "mean_delta": 0.3125
+    },
+    "atom_alias__long -> long__long": {
+      "left": "atom_alias__long",
+      "right": "long__long",
+      "matched_outcomes": {
+        "gain": 19,
+        "both_failure": 13
+      },
+      "first_error_transitions": {
+        "missing_parent -> success": 19,
+        "missing_parent -> premise_counter_mismatch": 13
+      },
+      "per_structure": {
+        "U01": 0.5,
+        "U02": 0.0,
+        "U03": 0.0,
+        "U04": 0.5,
+        "U05": 1.0,
+        "U06": 0.0,
+        "U07": 1.0,
+        "U08": 0.0
+      },
+      "mean_delta": 0.375
+    },
+    "atom_alias__short -> long__short": {
+      "left": "atom_alias__short",
+      "right": "long__short",
+      "matched_outcomes": {
+        "both_success": 5,
+        "gain": 7,
+        "both_failure": 20
+      },
+      "first_error_transitions": {
+        "success -> success": 5,
+        "missing_parent -> success": 7,
+        "missing_parent -> missing_parent": 3,
+        "missing_parent -> premise_counter_mismatch": 17
+      },
+      "per_structure": {
+        "U01": 1.0,
+        "U02": 0.5,
+        "U03": 0.0,
+        "U04": 0.0,
+        "U05": 1.0,
+        "U06": 0.0,
+        "U07": 0.0,
+        "U08": 0.0
+      },
+      "mean_delta": 0.3125
+    },
+    "atom_alias__long -> short__long": {
+      "left": "atom_alias__long",
+      "right": "short__long",
+      "matched_outcomes": {
+        "gain": 13,
+        "both_failure": 19
+      },
+      "first_error_transitions": {
+        "missing_parent -> success": 13,
+        "missing_parent -> missing_parent": 5,
+        "missing_parent -> premise_counter_mismatch": 14
+      },
+      "per_structure": {
+        "U01": 0.0,
+        "U02": 1.0,
+        "U03": 0.0,
+        "U04": 0.5,
+        "U05": 0.0,
+        "U06": 0.0,
+        "U07": 0.0,
+        "U08": 0.0
+      },
+      "mean_delta": 0.1875
+    },
+    "short__short -> long__short": {
+      "left": "short__short",
+      "right": "long__short",
+      "matched_outcomes": {
+        "both_success": 10,
+        "gain": 2,
+        "loss": 8,
+        "both_failure": 12
+      },
+      "first_error_transitions": {
+        "success -> success": 10,
+        "premise_counter_mismatch -> success": 2,
+        "success -> missing_parent": 2,
+        "premise_counter_mismatch -> premise_counter_mismatch": 11,
+        "success -> premise_counter_mismatch": 6,
+        "premise_counter_mismatch -> missing_parent": 1
+      },
+      "per_structure": {
+        "U01": 1.0,
+        "U02": -0.5,
+        "U03": 0.0,
+        "U04": -0.5,
+        "U05": 0.0,
+        "U06": 0.0,
+        "U07": 0.0,
+        "U08": 0.0
+      },
+      "mean_delta": 0.0
+    },
+    "long__long -> short__long": {
+      "left": "long__long",
+      "right": "short__long",
+      "matched_outcomes": {
+        "both_success": 10,
+        "both_failure": 10,
+        "loss": 9,
+        "gain": 3
+      },
+      "first_error_transitions": {
+        "success -> success": 10,
+        "premise_counter_mismatch -> missing_parent": 3,
+        "success -> premise_counter_mismatch": 7,
+        "premise_counter_mismatch -> success": 3,
+        "premise_counter_mismatch -> premise_counter_mismatch": 7,
+        "success -> missing_parent": 2
+      },
+      "per_structure": {
+        "U01": -0.5,
+        "U02": 1.0,
+        "U03": 0.0,
+        "U04": 0.0,
+        "U05": -1.0,
+        "U06": 0.0,
+        "U07": -1.0,
+        "U08": 0.0
+      },
+      "mean_delta": -0.1875
+    },
+    "short__atom_alias -> atom_alias__atom_alias": {
+      "left": "short__atom_alias",
+      "right": "atom_alias__atom_alias",
+      "matched_outcomes": {
+        "both_success": 7,
+        "gain": 22,
+        "both_failure": 3
+      },
+      "first_error_transitions": {
+        "success -> success": 7,
+        "premise_counter_mismatch -> success": 19,
+        "missing_parent -> success": 3,
+        "premise_counter_mismatch -> premise_counter_mismatch": 3
+      },
+      "per_structure": {
+        "U01": 1.0,
+        "U02": 1.0,
+        "U03": 1.0,
+        "U04": 1.0,
+        "U05": 0.5,
+        "U06": 1.0,
+        "U07": 0.5,
+        "U08": 0.0
+      },
+      "mean_delta": 0.75
+    },
+    "long__atom_alias -> atom_alias__atom_alias": {
+      "left": "long__atom_alias",
+      "right": "atom_alias__atom_alias",
+      "matched_outcomes": {
+        "both_success": 8,
+        "gain": 21,
+        "both_failure": 3
+      },
+      "first_error_transitions": {
+        "success -> success": 8,
+        "premise_counter_mismatch -> success": 16,
+        "missing_parent -> success": 5,
+        "premise_counter_mismatch -> premise_counter_mismatch": 3
+      },
+      "per_structure": {
+        "U01": 0.5,
+        "U02": 1.0,
+        "U03": 1.0,
+        "U04": 1.0,
+        "U05": 1.0,
+        "U06": 1.0,
+        "U07": 0.5,
+        "U08": 0.0
+      },
+      "mean_delta": 0.75
+    },
+    "atom_alias__short -> atom_alias__atom_alias": {
+      "left": "atom_alias__short",
+      "right": "atom_alias__atom_alias",
+      "matched_outcomes": {
+        "both_success": 5,
+        "gain": 24,
+        "both_failure": 3
+      },
+      "first_error_transitions": {
+        "success -> success": 5,
+        "missing_parent -> success": 24,
+        "missing_parent -> premise_counter_mismatch": 3
+      },
+      "per_structure": {
+        "U01": 1.0,
+        "U02": 1.0,
+        "U03": 1.0,
+        "U04": 1.0,
+        "U05": 1.0,
+        "U06": 1.0,
+        "U07": 0.5,
+        "U08": 0.0
+      },
+      "mean_delta": 0.8125
+    },
+    "atom_alias__long -> atom_alias__atom_alias": {
+      "left": "atom_alias__long",
+      "right": "atom_alias__atom_alias",
+      "matched_outcomes": {
+        "gain": 29,
+        "both_failure": 3
+      },
+      "first_error_transitions": {
+        "missing_parent -> success": 29,
+        "missing_parent -> premise_counter_mismatch": 3
+      },
+      "per_structure": {
+        "U01": 1.0,
+        "U02": 1.0,
+        "U03": 1.0,
+        "U04": 1.0,
+        "U05": 1.0,
+        "U06": 1.0,
+        "U07": 0.5,
+        "U08": 0.0
+      },
+      "mean_delta": 0.8125
+    },
+    "atom_tagged__short -> atom_alias__short": {
+      "left": "atom_tagged__short",
+      "right": "atom_alias__short",
+      "matched_outcomes": {
+        "gain": 1,
+        "both_failure": 18,
+        "both_success": 4,
+        "loss": 9
+      },
+      "first_error_transitions": {
+        "missing_parent -> success": 1,
+        "missing_parent -> missing_parent": 18,
+        "success -> success": 4,
+        "success -> missing_parent": 9
+      },
+      "per_structure": {
+        "U01": 0.0,
+        "U02": -1.0,
+        "U03": 0.0,
+        "U04": 0.0,
+        "U05": -1.0,
+        "U06": 0.0,
+        "U07": 0.0,
+        "U08": 0.0
+      },
+      "mean_delta": -0.25
+    },
+    "atom_tagged__long -> atom_alias__long": {
+      "left": "atom_tagged__long",
+      "right": "atom_alias__long",
+      "matched_outcomes": {
+        "loss": 20,
+        "both_failure": 12
+      },
+      "first_error_transitions": {
+        "success -> missing_parent": 20,
+        "missing_parent -> missing_parent": 12
+      },
+      "per_structure": {
+        "U01": 0.0,
+        "U02": -1.0,
+        "U03": -1.0,
+        "U04": 0.0,
+        "U05": -1.0,
+        "U06": 0.0,
+        "U07": 0.0,
+        "U08": 0.0
+      },
+      "mean_delta": -0.375
+    }
+  },
+  "baseline_robust": {
+    "n": 16,
+    "success": 9
+  },
+  "reference_errors": {
+    "atom_alias__atom_alias": {
+      "rule_count": 140,
+      "missing_parent_rules": 0,
+      "missing_parent_all_are_atoms": 0,
+      "first_missing_parent": 0,
+      "first_premise_error": 3,
+      "first_rule_valid": 32
+    },
+    "atom_alias__short": {
+      "rule_count": 140,
+      "missing_parent_rules": 79,
+      "missing_parent_all_are_atoms": 79,
+      "first_missing_parent": 27,
+      "first_premise_error": 0,
+      "first_rule_valid": 32
+    },
+    "atom_alias__long": {
+      "rule_count": 140,
+      "missing_parent_rules": 84,
+      "missing_parent_all_are_atoms": 84,
+      "first_missing_parent": 32,
+      "first_premise_error": 0,
+      "first_rule_valid": 32
+    },
+    "atom_alias__atom_tagged": {
+      "rule_count": 140,
+      "missing_parent_rules": 78,
+      "missing_parent_all_are_atoms": 78,
+      "first_missing_parent": 25,
+      "first_premise_error": 2,
+      "first_rule_valid": 31
+    },
+    "short__atom_alias": {
+      "rule_count": 140,
+      "missing_parent_rules": 14,
+      "missing_parent_all_are_atoms": 9,
+      "first_missing_parent": 3,
+      "first_premise_error": 22,
+      "first_rule_valid": 30
+    },
+    "short__short": {
+      "rule_count": 140,
+      "missing_parent_rules": 0,
+      "missing_parent_all_are_atoms": 0,
+      "first_missing_parent": 0,
+      "first_premise_error": 14,
+      "first_rule_valid": 32
+    },
+    "short__long": {
+      "rule_count": 140,
+      "missing_parent_rules": 6,
+      "missing_parent_all_are_atoms": 0,
+      "first_missing_parent": 5,
+      "first_premise_error": 14,
+      "first_rule_valid": 32
+    },
+    "short__atom_tagged": {
+      "rule_count": 140,
+      "missing_parent_rules": 8,
+      "missing_parent_all_are_atoms": 1,
+      "first_missing_parent": 3,
+      "first_premise_error": 17,
+      "first_rule_valid": 30
+    },
+    "long__atom_alias": {
+      "rule_count": 140,
+      "missing_parent_rules": 31,
+      "missing_parent_all_are_atoms": 31,
+      "first_missing_parent": 5,
+      "first_premise_error": 19,
+      "first_rule_valid": 29
+    },
+    "long__short": {
+      "rule_count": 140,
+      "missing_parent_rules": 8,
+      "missing_parent_all_are_atoms": 6,
+      "first_missing_parent": 3,
+      "first_premise_error": 17,
+      "first_rule_valid": 32
+    },
+    "long__long": {
+      "rule_count": 140,
+      "missing_parent_rules": 0,
+      "missing_parent_all_are_atoms": 0,
+      "first_missing_parent": 0,
+      "first_premise_error": 13,
+      "first_rule_valid": 32
+    },
+    "long__atom_tagged": {
+      "rule_count": 140,
+      "missing_parent_rules": 3,
+      "missing_parent_all_are_atoms": 0,
+      "first_missing_parent": 2,
+      "first_premise_error": 13,
+      "first_rule_valid": 32
+    },
+    "atom_tagged__atom_alias": {
+      "rule_count": 140,
+      "missing_parent_rules": 82,
+      "missing_parent_all_are_atoms": 51,
+      "first_missing_parent": 25,
+      "first_premise_error": 4,
+      "first_rule_valid": 19
+    },
+    "atom_tagged__short": {
+      "rule_count": 140,
+      "missing_parent_rules": 34,
+      "missing_parent_all_are_atoms": 2,
+      "first_missing_parent": 19,
+      "first_premise_error": 0,
+      "first_rule_valid": 29
+    },
+    "atom_tagged__long": {
+      "rule_count": 140,
+      "missing_parent_rules": 19,
+      "missing_parent_all_are_atoms": 4,
+      "first_missing_parent": 12,
+      "first_premise_error": 0,
+      "first_rule_valid": 32
+    },
+    "atom_tagged__atom_tagged": {
+      "rule_count": 140,
+      "missing_parent_rules": 2,
+      "missing_parent_all_are_atoms": 0,
+      "first_missing_parent": 2,
+      "first_premise_error": 2,
+      "first_rule_valid": 30
+    }
+  },
+  "semantic_diagonal_overlap": {
+    "left": "atom_alias__atom_alias",
+    "right": "atom_tagged__atom_tagged",
+    "matched_outcomes": {
+      "both_success": 25,
+      "loss": 4,
+      "gain": 3
+    },
+    "first_error_transitions": {
+      "success -> success": 25,
+      "success -> premise_counter_mismatch": 2,
+      "success -> missing_parent": 2,
+      "premise_counter_mismatch -> success": 3
+    },
+    "per_structure": {
+      "U01": 0.0,
+      "U02": 0.0,
+      "U03": -1.0,
+      "U04": 0.0,
+      "U05": 0.0,
+      "U06": -1.0,
+      "U07": 0.5,
+      "U08": 1.0
+    },
+    "mean_delta": -0.0625
+  },
+  "baseline_vs_v088": {
+    "matched": {
+      "both_success": 106,
+      "both_failed": 11,
+      "new_only": 5,
+      "old_only": 6
+    },
+    "request_stages": {
+      "compare": {
+        "observed": 128,
+        "identical_request": 128,
+        "same_reply_content": 128
+      },
+      "select": {
+        "observed": 128,
+        "identical_request": 128,
+        "same_reply_content": 128
+      },
+      "facts": {
+        "observed": 128,
+        "identical_request": 128,
+        "same_reply_content": 110
+      },
+      "rule": {
+        "observed": 560,
+        "identical_request": 333,
+        "same_reply_content": 255
+      },
+      "final": {
+        "observed": 128,
+        "identical_request": 32,
+        "same_reply_content": 32
+      }
+    },
+    "changed_content_under_identical_request_examples": [
+      "t002_baseline_rule_00",
+      "t004_baseline_rule_01",
+      "t005_baseline_rule_01",
+      "t006_baseline_rule_00",
+      "t007_baseline_rule_00",
+      "t009_baseline_rule_00"
+    ]
+  },
+  "field_invariance": {
+    "initial_fact_renamings_checked": 512,
+    "allocated_ids_checked": 2240,
+    "new_id_sequences_equal_across_initials": 128,
+    "first_request_equivalent_after_initial_ID_normalization": 128,
+    "unchanged_raw_histories_checked": 3568
+  },
+  "independent_aggregation": {
+    "group_agreements": 17,
+    "pairs_recomputed": 320,
+    "whole_structure_bundles": 16
+  },
+  "new_inference_calls": 0
+}

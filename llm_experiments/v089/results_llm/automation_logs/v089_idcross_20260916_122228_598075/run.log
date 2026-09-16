@@ -1,0 +1,115 @@
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'selftest089.py', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v089\\results_llm\\automation_logs\\v089_idcross_20260916_122228_598075\\selftest.json']
+test_actual_v088_baseline_requests_byte_identical (test_contract089.Contract.test_actual_v088_baseline_requests_byte_identical) ... ok
+test_alias_and_tagged_are_semantic_support (test_contract089.Contract.test_alias_and_tagged_are_semantic_support) ... ok
+test_allocation_support_shape_is_equal (test_contract089.Contract.test_allocation_support_shape_is_equal) ... ok
+test_anchor_selection_reads_no_outcomes (test_contract089.Contract.test_anchor_selection_reads_no_outcomes) ... ok
+test_audit_does_not_import_production_design_or_semantics (test_contract089.Contract.test_audit_does_not_import_production_design_or_semantics) ... ok
+test_complete_crossing_every_structure_route_seed (test_contract089.Contract.test_complete_crossing_every_structure_route_seed) ... ok
+test_first_requests_only_initial_names_vary (test_contract089.Contract.test_first_requests_only_initial_names_vary) ... ok
+test_fixed_new_ids_across_initial_styles (test_contract089.Contract.test_fixed_new_ids_across_initial_styles) ... ok
+test_frozen_counts (test_contract089.Contract.test_frozen_counts) ... ok
+test_independent_schedule (test_contract089.Contract.test_independent_schedule) ... ok
+test_independent_seed_transform (test_contract089.Contract.test_independent_seed_transform) ... ok
+test_initial_id_transform_is_reversible (test_contract089.Contract.test_initial_id_transform_is_reversible) ... ok
+test_no_holdout_or_hidden_state_claim (test_contract089.Contract.test_no_holdout_or_hidden_state_claim) ... ok
+test_no_select_or_new_facts_in_crossing (test_contract089.Contract.test_no_select_or_new_facts_in_crossing) ... ok
+test_only_initial_facts_can_be_renamed (test_contract089.Contract.test_only_initial_facts_can_be_renamed) ... ok
+test_order_balanced_over_blocks (test_contract089.Contract.test_order_balanced_over_blocks) ... ok
+test_powershell_native_parser_when_available (test_contract089.Contract.test_powershell_native_parser_when_available) ... ok
+test_previous_evidence_validation (test_contract089.Contract.test_previous_evidence_validation) ... ok
+test_prior_source_115_files_byte_identical (test_contract089.Contract.test_prior_source_115_files_byte_identical) ... ok
+test_protocol_safety_mutation_rejected (test_contract089.Contract.test_protocol_safety_mutation_rejected) ... ok
+test_protocol_validation (test_contract089.Contract.test_protocol_validation) ... ok
+test_python312_syntax (test_contract089.Contract.test_python312_syntax) ... ok
+test_raw_new_output_is_not_repaired (test_contract089.Contract.test_raw_new_output_is_not_repaired) ... ok
+test_sampling_and_runtime_identical (test_contract089.Contract.test_sampling_and_runtime_identical) ... ok
+test_all_v088_state_untouched (test_launch089.Installation.test_all_v088_state_untouched) ... ok
+test_auto_large_baseline_is_found (test_launch089.Installation.test_auto_large_baseline_is_found) ... ok
+test_bad_installed_manifest_cannot_fallback (test_launch089.Installation.test_bad_installed_manifest_cannot_fallback) ... ok
+test_explicit_baseline_hash (test_launch089.Installation.test_explicit_baseline_hash) ... ok
+test_install_and_recheck_installed_manifest (test_launch089.Installation.test_install_and_recheck_installed_manifest) ... ok
+test_installed_manifest_not_unrelated_parent_manifest (test_launch089.Installation.test_installed_manifest_not_unrelated_parent_manifest) ... ok
+test_lock_prevents_parallel_workflow (test_launch089.Installation.test_lock_prevents_parallel_workflow) ... ok
+test_missing_installed_manifest_not_silently_rebuilt (test_launch089.Installation.test_missing_installed_manifest_not_silently_rebuilt) ... ok
+test_modified_source_not_overwritten (test_launch089.Installation.test_modified_source_not_overwritten) ... ok
+test_receipt_records_actual_installed_sources (test_launch089.Installation.test_receipt_records_actual_installed_sources) ... 실제 설치 contract: v089-source-release-r1 / protocol: 2c1d758acd377da650e5757fcb944d4dab8afa4f63fa011d3c60d46cbbdea535
+실제 설치 launch.py SHA-256: 556e0803d9ada454635b546a5e68aadc00f07c3207167bbc71dda8bb1503039e
+ok
+test_run_name_is_new_version (test_launch089.Installation.test_run_name_is_new_version) ... ok
+test_second_identical_install_no_replacement (test_launch089.Installation.test_second_identical_install_no_replacement) ... ok
+test_v089_guard_blocks_install (test_launch089.Installation.test_v089_guard_blocks_install) ... ok
+test_wrong_baseline_rejected (test_launch089.Installation.test_wrong_baseline_rejected) ... ok
+test_alias_substituted_for_numeric_parent_is_rejected (test_measure089.Measurement.test_alias_substituted_for_numeric_parent_is_rejected) ... ok
+test_all_640_trial_semantics_agree (test_measure089.Measurement.test_all_640_trial_semantics_agree) ... ok
+test_allocation_invariance_128_matched_sets (test_measure089.Measurement.test_allocation_invariance_128_matched_sets) ... ok
+test_ancestor_is_still_a_direct_premise (test_measure089.Measurement.test_ancestor_is_still_a_direct_premise) ... ok
+test_calibration_expected_cases (test_measure089.Measurement.test_calibration_expected_cases) ... ok
+test_current_id_contract_is_distinct_from_graph_semantics (test_measure089.Measurement.test_current_id_contract_is_distinct_from_graph_semantics) ... ok
+test_duplicate_json_keys_rejected (test_measure089.Measurement.test_duplicate_json_keys_rejected) ... ok
+test_every_independent_request_byte_identical (test_measure089.Measurement.test_every_independent_request_byte_identical) ... ok
+test_first_step_success_not_rollout_success (test_measure089.Measurement.test_first_step_success_not_rollout_success) ... ok
+test_full_synthetic_count (test_measure089.Measurement.test_full_synthetic_count) ... ok
+test_nonfinite_numbers_rejected (test_measure089.Measurement.test_nonfinite_numbers_rejected) ... ok
+test_partial_always_suppresses_effect (test_measure089.Measurement.test_partial_always_suppresses_effect) ... ok
+test_phase_denominators (test_measure089.Measurement.test_phase_denominators) ... ok
+test_primary_direction_not_reversed (test_measure089.Measurement.test_primary_direction_not_reversed) ... ok
+test_primary_one_failed_trajectory_is_one_half_family_pair (test_measure089.Measurement.test_primary_one_failed_trajectory_is_one_half_family_pair) ... ok
+test_primary_zero_oracle (test_measure089.Measurement.test_primary_zero_oracle) ... ok
+test_reference_and_fresh_endpoints_are_separate (test_measure089.Measurement.test_reference_and_fresh_endpoints_are_separate) ... ok
+test_risk_sets_exclude_broken_prefixes (test_measure089.Measurement.test_risk_sets_exclude_broken_prefixes) ... ok
+test_same_parent_count_can_be_semantically_wrong (test_measure089.Measurement.test_same_parent_count_can_be_semantically_wrong) ... ok
+test_second_request_sees_actual_first_reply (test_measure089.Measurement.test_second_request_sees_actual_first_reply) ... ok
+test_shared_selection_256_calls (test_measure089.Measurement.test_shared_selection_256_calls) ... ok
+test_structure_equal_leave_one_out (test_measure089.Measurement.test_structure_equal_leave_one_out) ... ok
+test_unobserved_is_not_failure (test_measure089.Measurement.test_unobserved_is_not_failure) ... ok
+test_wrong_comparison_not_laundered_by_correct_graph (test_measure089.Measurement.test_wrong_comparison_not_laundered_by_correct_graph) ... ok
+test_HTTP_error_body_retained (test_runtime089.HTTP.test_HTTP_error_body_retained) ... ok
+test_complete_chunked (test_runtime089.HTTP.test_complete_chunked) ... ok
+test_incomplete_chunked_retains_body (test_runtime089.HTTP.test_incomplete_chunked_retains_body) ... ok
+test_normal_content_length (test_runtime089.HTTP.test_normal_content_length) ... ok
+test_redirect_is_not_followed (test_runtime089.HTTP.test_redirect_is_not_followed) ... ok
+test_short_content_length (test_runtime089.HTTP.test_short_content_length) ... ok
+test_archive_paths_rejected (test_runtime089.Runtime.test_archive_paths_rejected) ... ok
+test_complete_dispatch_response_preserved (test_runtime089.Runtime.test_complete_dispatch_response_preserved) ... ok
+test_crash_after_dispatch_is_pending_not_wrong_answer (test_runtime089.Runtime.test_crash_after_dispatch_is_pending_not_wrong_answer) ... ok
+test_finalize_is_idempotent (test_runtime089.Runtime.test_finalize_is_idempotent) ... ok
+test_frozen_guard_blocks_new_name (test_runtime089.Runtime.test_frozen_guard_blocks_new_name) ... ok
+test_frozen_transport_code_regression (test_runtime089.Runtime.test_frozen_transport_code_regression) ... ok
+test_http_failure_no_retry (test_runtime089.Runtime.test_http_failure_no_retry) ... ok
+test_identity_mismatch_before_inference (test_runtime089.Runtime.test_identity_mismatch_before_inference) ... ok
+test_independent_full_evidence (test_runtime089.Runtime.test_independent_full_evidence) ... ok
+test_local_endpoints_accepted (test_runtime089.Runtime.test_local_endpoints_accepted) ... ok
+test_remote_endpoint_rejected (test_runtime089.Runtime.test_remote_endpoint_rejected) ... ok
+test_request_byte_tamper_rejected (test_runtime089.Runtime.test_request_byte_tamper_rejected) ... ok
+test_response_saved_before_record_commit_survives_windows_path_logic (test_runtime089.Runtime.test_response_saved_before_record_commit_survives_windows_path_logic) ... ok
+test_source_snapshot_tamper_rejected (test_runtime089.Runtime.test_source_snapshot_tamper_rejected) ... ok
+test_status_completeness (test_runtime089.Runtime.test_status_completeness) ... ok
+test_summary_tamper_rejected_even_if_manifest_updated (test_runtime089.Runtime.test_summary_tamper_rejected_even_if_manifest_updated) ... ok
+test_support_diagnostic_tamper_rejected (test_runtime089.Runtime.test_support_diagnostic_tamper_rejected) ... ok
+test_transport_partial_body_preserved (test_runtime089.Runtime.test_transport_partial_body_preserved) ... ok
+test_unaccounted_file_rejected (test_runtime089.Runtime.test_unaccounted_file_rejected) ... ok
+test_wire_response_tamper_rejected (test_runtime089.Runtime.test_wire_response_tamper_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 88 tests in 180.091s
+
+OK
+{"tests_run": 88, "passed": 88, "failures": 0, "errors": 0, "skipped": 0, "actual_qwen_inference_calls": 0}
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'calibrate089.py', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v089\\results_llm\\automation_logs\\v089_idcross_20260916_122228_598075\\calibration.json']
+{"contract": "v089-calibration-r1", "provenance": "synthetic_no_inference", "passed": 22160, "failures": 0, "actual_qwen_calls": 0, "rule_cases": 19600, "graph_cases": 2560, "case_counts": {"graph/cycle": 640, "graph/missing_final": 640, "graph/omitted_premise": 640, "graph/valid": 640, "rule/duplicate_node": 2800, "rule/duplicate_parent": 2800, "rule/missing_parent": 2800, "rule/omitted_premise": 2800, "rule/valid": 2800, "rule/wrong_atom": 2800, "rule/wrong_rule": 2800}}
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'run089.py', 'prepare', '--baseline', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v088\\results_llm\\v088_r2_idcontinuity_20260916_093741_268466_evidence.zip', '--run-name', 'v089_idcross_20260916_122228_598075', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v089\\experiments\\v089_idcross_20260916_122228_598075.plan.json']
+{
+  "prepared": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v089\\experiments\\v089_idcross_20260916_122228_598075.plan.json",
+  "actual_model_inference": false,
+  "max_inference_calls": 3856,
+  "plan_sha256": "929e28a6f33f8e9bb5cc27c67d79ad99f2b3647808a3b247f1c27847d282e4d2"
+}
+
+EXIT 0

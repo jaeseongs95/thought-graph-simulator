@@ -1,0 +1,125 @@
+{
+  "contract": "v089-release-validation-r1",
+  "date_kst": "2026-09-16",
+  "status": "installed_checkonly_and_full_synthetic_verified",
+  "basis": {
+    "v088_evidence_sha256": "2d9c2324aa9a9a64d97beb74cc158b24f1e7cf4f59df599a4a154ff110fcfbff",
+    "v088_plan_sha256": "f2b6959359274f2cc98bd78a60bbc2d8f856dc428300172d077d805793267314",
+    "retained_v088_source_files": 115,
+    "actual_v088_baseline_requests_byte_regressed": 1072
+  },
+  "study": {
+    "initial_id_styles": [
+      "atom_alias",
+      "short",
+      "long",
+      "atom_tagged"
+    ],
+    "output_id_styles": [
+      "atom_alias",
+      "short",
+      "long",
+      "atom_tagged"
+    ],
+    "factorial_cells": 16,
+    "structures": 8,
+    "seeds": 2,
+    "supported_continuation_graphs": 512,
+    "fresh_baseline_graphs": 128,
+    "total_trials": 640,
+    "expected_inference_calls": 3824,
+    "maximum_inference_calls": 3856,
+    "action_slots": 3888,
+    "new_independent_holdout_structures": 0,
+    "new_live_model_inference_calls": 0
+  },
+  "tests": {
+    "unique_tests": 88,
+    "passed": 87,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1,
+    "skip_details": [
+      {
+        "test": "test_contract089.Contract.test_powershell_native_parser_when_available",
+        "reason": "PowerShell native parser unavailable"
+      }
+    ],
+    "executions": 2,
+    "repeated_tests_not_counted_as_new_cases": true
+  },
+  "calibration": {
+    "contract": "v089-calibration-r1",
+    "provenance": "synthetic_no_inference",
+    "passed": 22160,
+    "failures": 0,
+    "actual_qwen_calls": 0,
+    "rule_cases": 19600,
+    "graph_cases": 2560,
+    "case_counts": {
+      "graph/cycle": 640,
+      "graph/missing_final": 640,
+      "graph/omitted_premise": 640,
+      "graph/valid": 640,
+      "rule/duplicate_node": 2800,
+      "rule/duplicate_parent": 2800,
+      "rule/missing_parent": 2800,
+      "rule/omitted_premise": 2800,
+      "rule/valid": 2800,
+      "rule/wrong_atom": 2800,
+      "rule/wrong_rule": 2800
+    }
+  },
+  "independent_checks": {
+    "reconstructed_synthetic_requests": 3824,
+    "trial_semantic_agreements": 640,
+    "graph_mutation_cases": 2560,
+    "rule_mutation_cases": 19600,
+    "initial_condition_invariance_units": 128,
+    "shared_components": [
+      "aggregation and Korean rendering",
+      "diagnostics"
+    ]
+  },
+  "full_synthetic_execution": {
+    "provenance": "synthetic",
+    "actual_qwen_calls": 0,
+    "state": "complete",
+    "inference_dispatches": 3824,
+    "preserved_responses": 3824,
+    "completed_actions": 3888,
+    "conditional_skips": 32,
+    "metadata_actions": 32,
+    "independent_verified": true,
+    "evidence_sha256": "6fb0893172c2129d3c0d0db476a240d94307a4a358a7098a285957b8e954410d",
+    "plan_sha256": "abb7a6502cab15dff89c9de8a98bedbd735ab51d5a3b25248da4402a3fb1db44",
+    "full_evidence_in_distribution": false,
+    "reproduction": "python -X utf8 -B reproduce_synthetic.py --baseline <v088_evidence.zip> --out <new directory>"
+  },
+  "artifact_checks": {
+    "source_files": 146,
+    "python312_syntax_files": 108,
+    "installed_equals_zip": true,
+    "selftest_sources_equal_zip": true,
+    "powershell_payload_equals_zip": true,
+    "powershell_native_parser_available": false,
+    "source_zip_sha256": "707d3046ae05e990c61e6fd4084af1d2463f15c9864e223eca83e696112a5925",
+    "powershell_sha256": "076cc5ab1244c8785efaeaaf198ac3e4993002e75ec10d0a9380f84e24eb3ef1",
+    "protocol_sha256": "2c1d758acd377da650e5757fcb944d4dab8afa4f63fa011d3c60d46cbbdea535",
+    "retained_v088_files": 115,
+    "checkonly_created_live_guard": false,
+    "checkonly_created_plan_started_marker": false,
+    "preserved_v088_manifest_guard_and_failed_log": true,
+    "synthetic_source_snapshot_equals_zip": true
+  },
+  "runtime": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41"
+  },
+  "limitations": [
+    "Linux/Python 3.13.5에서 설치·전체 자체시험·CheckOnly·합성 전체 실행을 수행했다. Windows/Python 3.12 네이티브 실행은 수행하지 않았다.",
+    "PowerShell 실행 파일이 없어 네이티브 파서 시험 1개를 제외했다. Python 3.12 구문 108파일 및 내장 ZIP 일치는 확인했다.",
+    "검증 중 실제 Ollama/Qwen 추론은 0회다. 합성 성공률을 새 연구 결과로 해석하지 않는다.",
+    "이번 설계는 기존 U01~U08의 원인 구별용 진단이다. 지원 연속 생성과 새 facts 종단은 별도 집계한다."
+  ]
+}
