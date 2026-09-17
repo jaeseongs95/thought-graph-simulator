@@ -1,0 +1,159 @@
+{
+  "contract": "v091-release-validation-r1",
+  "date_kst": "2026-09-16",
+  "status": "final_zip_installed_checkonly_and_full_synthetic_verified",
+  "actual_new_model_inference_calls": 0,
+  "baseline_evidence_sha256": "8618917543a25bf72ec09827a2e29f1b23687bc6342a8e3fa4346869899b3d37",
+  "protocol_sha256": "79ff680eb765a65dde12542ef140316dfb429af3ba37776ad3f5af8195ce8700",
+  "corpus_sha256": "afd9bb32611456e430063fd622a6bc5dcf97866b0fe50d47f74d96060397ae55",
+  "scope": {
+    "cohorts": 3,
+    "known_structures": 8,
+    "new_structures": 8,
+    "renamed_existing_structures": 8,
+    "distinct_structures": 16,
+    "represented_problems": 24,
+    "renamings_per_old_structure": 1,
+    "seeds": 2,
+    "displays": 4,
+    "arms": 4,
+    "fresh_graphs": 1536,
+    "primary_cohort": "new_topology",
+    "expected_inference_calls": 10560,
+    "max_inference_calls": 10944,
+    "action_slots": 10976
+  },
+  "tests": {
+    "tests_run": 115,
+    "passed": 114,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1,
+    "elapsed_seconds": 523.1934005539999,
+    "skip_details": [
+      {
+        "test": "test_contract091.Contract.test_powershell_native_parser_when_available",
+        "reason": "PowerShell native parser unavailable"
+      }
+    ]
+  },
+  "calibration": {
+    "contract": "v091-calibration-r1",
+    "provenance": "synthetic_no_inference",
+    "passed": 62400,
+    "failures": 0,
+    "actual_qwen_calls": 0,
+    "facts_cases": 9216,
+    "rule_cases": 47040,
+    "graph_cases": 6144,
+    "case_counts": {
+      "facts/duplicate_id": 1536,
+      "facts/fact_parent": 1536,
+      "facts/id_contract_only": 1536,
+      "facts/missing_fact": 1536,
+      "facts/valid": 1536,
+      "facts/wrong_atom": 1536,
+      "graph/cycle": 1536,
+      "graph/missing_final": 1536,
+      "graph/omitted_premise": 1536,
+      "graph/valid": 1536,
+      "rule/duplicate_node": 6720,
+      "rule/duplicate_parent": 6720,
+      "rule/missing_parent": 6720,
+      "rule/omitted_premise": 6720,
+      "rule/valid": 6720,
+      "rule/wrong_atom": 6720,
+      "rule/wrong_rule": 6720
+    }
+  },
+  "independent_corpus": {
+    "checked": true,
+    "independent_isomorphism_comparisons": 744,
+    "new_problems": 8,
+    "new_routes": 16,
+    "renamed_problems": 8,
+    "renamed_routes": 16,
+    "old_unique_routes": 39
+  },
+  "regressions": {
+    "actual_v090_requests_byte_identical": 3520,
+    "synthetic_requests_independently_reconstructed": 10560,
+    "trial_semantic_agreements": 1536,
+    "prior_source_files_preserved": 178,
+    "current_source_files_equal_zip_install_selftest_synthetic": 214,
+    "python312_syntax_files": 162
+  },
+  "checkonly": {
+    "completed": true,
+    "full_selftest": true,
+    "calibration": true,
+    "prepare": true,
+    "live_inference_guard_created": false,
+    "old_sentinels_byte_preserved": 12,
+    "plan_sha256": "d5008c2fc864909bfb0499dd94834dd10f00d797cc7aaeb01e36b53714a7b3e6"
+  },
+  "synthetic_full_run": {
+    "state": "complete",
+    "inference_dispatches": 10560,
+    "responses": 10560,
+    "started_actions": 10976,
+    "completed_actions": 10976,
+    "verified": true,
+    "differences": [],
+    "actual_qwen_calls": 0,
+    "plan_sha256": "a2b98bb8b0589eed5b7a8cef213fcd0cb5a6a1fc7e6539d76dd0e5c2a3273cda",
+    "bundle_sha256": "25f7a52951dab029d5eaa8df4b05d661adaf6ceb4613017fd0918d3e45f841b9",
+    "manifest_files_verified": 54047,
+    "manifest_differences": 0,
+    "raw_evidence_in_distribution": false
+  },
+  "artifact_check": {
+    "contract": "v091-static-artifact-check-r1",
+    "source_files": 214,
+    "installed_file_differences": [],
+    "powershell_payload_equals_zip": true,
+    "retained_v090_files": 178,
+    "retained_v090_byte_identical": true,
+    "python312_syntax_files": 162,
+    "protocol_sha256": "79ff680eb765a65dde12542ef140316dfb429af3ba37776ad3f5af8195ce8700",
+    "corpus_sha256": "afd9bb32611456e430063fd622a6bc5dcf97866b0fe50d47f74d96060397ae55",
+    "prior_topology_bank_unique_paths": 39,
+    "old_reference_protocol_sources": 19,
+    "new_topologies": 8,
+    "cohorts": [
+      "known_original",
+      "known_renamed",
+      "new_topology"
+    ],
+    "trial_count": 1536,
+    "max_inference_calls": 10944,
+    "action_slots": 10976,
+    "actual_qwen_calls": 0
+  },
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "validation_network_fence": "local temporary HTTP allowed; port11434 and external socket connect blocked",
+    "windows_native_run_performed": false,
+    "powershell_native_parser_performed": false
+  },
+  "limitations": [
+    "실제 Qwen inference는 수행하지 않았다. 합성 oracle 성공은 연구 성과가 아니다.",
+    "Linux/Python3.13.5에서 검증했고 Windows/Python3.12 네이티브 실행은 수행하지 않았다.",
+    "PowerShell 네이티브 파서 실행 파일 부재로 1개 시험 제외. 내장 ZIP byte와 해시 일치는 확인했다.",
+    "새16경로의 비동형성은 보존자료의 최대5규칙39고유경로 은행 범위이며 사전학습미노출을 뜻하지 않는다.",
+    "동일구조R1은 각구조당하나이며 전체명명분포 또는 순수tokenization 효과를 검증하지 않는다.",
+    "history순서 개입 및 metadata 제거 ablation은 이번 배정에 없고 관측진단만 추가했다.",
+    "진단·한국어 보고 일부는 공유한다. 의미·요청·핵심 집계·구조 검사는 별도로 대조한다."
+  ],
+  "files": {
+    "source": {
+      "name": "v091_topology_renaming_source.zip",
+      "sha256": "50cf32cc6a9f926a187a3ff7b854477391ed723f2f642618124c675c5456a381"
+    },
+    "powershell": {
+      "name": "Run-v091-Auto.ps1",
+      "sha256": "4d4df7a6d9c2aabb707bad2d1e75c9ae2bfdcdd7c033d093dfd56844d17b58f5"
+    }
+  }
+}

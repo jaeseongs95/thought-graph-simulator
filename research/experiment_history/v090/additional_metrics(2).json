@@ -1,0 +1,670 @@
+{
+  "preserved_v089_source_files": 146,
+  "source_hash_equality": true,
+  "shared_protocol_fields_unchanged": [
+    "identity",
+    "model",
+    "problems",
+    "reference_plans",
+    "depth_ranges",
+    "seeds",
+    "conditions",
+    "reference_conditions",
+    "candidate_orders",
+    "candidate_ids",
+    "headers",
+    "selector_schema",
+    "api_defaults",
+    "generation_schema",
+    "num_predict",
+    "request_utf8_byte_limit",
+    "timeout_seconds",
+    "id_assignments",
+    "frozen_profiles",
+    "numeric_compare_schema",
+    "lookup_schema",
+    "numeric_compare_header",
+    "lookup_header",
+    "units"
+  ],
+  "assigned_arm_fact_request_invariance_units": 128,
+  "assigned_arm_rule_request_nonhistory_invariance_units": 560,
+  "baseline_cross_run": {
+    "paired_graph_outcomes": {
+      "both_success": 100,
+      "v089_only": 11,
+      "both_failure": 11,
+      "v090_only": 6
+    },
+    "request_and_content_comparison": {
+      "compare": {
+        "calls": 128,
+        "identical_request": 128,
+        "identical_content_given_identical_request": 128
+      },
+      "select": {
+        "calls": 128,
+        "identical_request": 128,
+        "identical_content_given_identical_request": 111
+      },
+      "facts": {
+        "calls": 128,
+        "identical_request": 111,
+        "identical_content_given_identical_request": 51,
+        "different_request": 17
+      },
+      "rule": {
+        "calls": 560,
+        "different_request": 427,
+        "identical_request": 133,
+        "identical_content_given_identical_request": 94
+      },
+      "final": {
+        "calls": 128,
+        "different_request": 116,
+        "identical_request": 12,
+        "identical_content_given_identical_request": 12
+      }
+    },
+    "v089": {
+      "graph": 111,
+      "pairs": 48,
+      "robust": 9
+    },
+    "v090": {
+      "graph": 106,
+      "pairs": 43,
+      "robust": 9
+    }
+  },
+  "first_failure_patterns": {
+    "short_uniform": [
+      {
+        "problem_id": "U01",
+        "condition": "deep",
+        "position": 2,
+        "rule_id": "j43",
+        "emitted_parents": [
+          "n0002",
+          "n0004",
+          "n0005"
+        ],
+        "expected_premises": [
+          "C43",
+          "C05",
+          "C87"
+        ],
+        "count": 3
+      },
+      {
+        "problem_id": "U01",
+        "condition": "deep",
+        "position": 2,
+        "rule_id": "j43",
+        "emitted_parents": [
+          "n0002",
+          "n0003",
+          "n0004"
+        ],
+        "expected_premises": [
+          "C43",
+          "C05",
+          "C87"
+        ],
+        "count": 2
+      },
+      {
+        "problem_id": "U01",
+        "condition": "deep",
+        "position": 2,
+        "rule_id": "j43",
+        "emitted_parents": [
+          "n0002",
+          "n0004"
+        ],
+        "expected_premises": [
+          "C43",
+          "C05",
+          "C87"
+        ],
+        "count": 3
+      },
+      {
+        "problem_id": "U02",
+        "condition": "deep",
+        "position": 0,
+        "rule_id": "k20",
+        "emitted_parents": [
+          "n0001",
+          "n0502"
+        ],
+        "expected_premises": [
+          "D09",
+          "D15",
+          "D22"
+        ],
+        "count": 1
+      },
+      {
+        "problem_id": "U02",
+        "condition": "deep",
+        "position": 0,
+        "rule_id": "k20",
+        "emitted_parents": [
+          "n0001",
+          "n0502",
+          "n0003"
+        ],
+        "expected_premises": [
+          "D09",
+          "D15",
+          "D22"
+        ],
+        "count": 3
+      },
+      {
+        "problem_id": "U02",
+        "condition": "deep",
+        "position": 0,
+        "rule_id": "k20",
+        "emitted_parents": [
+          "n0001",
+          "n0501",
+          "n0002"
+        ],
+        "expected_premises": [
+          "D09",
+          "D15",
+          "D22"
+        ],
+        "count": 2
+      },
+      {
+        "problem_id": "U03",
+        "condition": "shallow",
+        "position": 2,
+        "rule_id": "l61",
+        "emitted_parents": [
+          "n0001",
+          "n0003",
+          "n0005"
+        ],
+        "expected_premises": [
+          "E95",
+          "E24",
+          "E88"
+        ],
+        "count": 5
+      },
+      {
+        "problem_id": "U03",
+        "condition": "shallow",
+        "position": 4,
+        "rule_id": "l64",
+        "emitted_parents": [
+          "n0001",
+          "n0003",
+          "n0007"
+        ],
+        "expected_premises": [
+          "E95",
+          "E80",
+          "E58"
+        ],
+        "count": 1
+      },
+      {
+        "problem_id": "U03",
+        "condition": "shallow",
+        "position": 4,
+        "rule_id": "l64",
+        "emitted_parents": [
+          "n0001",
+          "n0004",
+          "n0007"
+        ],
+        "expected_premises": [
+          "E95",
+          "E80",
+          "E58"
+        ],
+        "count": 2
+      },
+      {
+        "problem_id": "U04",
+        "condition": "deep",
+        "position": 1,
+        "rule_id": "m72",
+        "emitted_parents": [
+          "n0003"
+        ],
+        "expected_premises": [
+          "F78",
+          "F17"
+        ],
+        "count": 2
+      },
+      {
+        "problem_id": "U04",
+        "condition": "shallow",
+        "position": 2,
+        "rule_id": "m20",
+        "emitted_parents": [
+          "n0001",
+          "n0005"
+        ],
+        "expected_premises": [
+          "F55",
+          "F85",
+          "F58"
+        ],
+        "count": 2
+      },
+      {
+        "problem_id": "U04",
+        "condition": "deep",
+        "position": 4,
+        "rule_id": "m81",
+        "emitted_parents": [
+          "n0001",
+          "n0002",
+          "n0005",
+          "n0006",
+          "n0007"
+        ],
+        "expected_premises": [
+          "F03",
+          "F99"
+        ],
+        "count": 1
+      },
+      {
+        "problem_id": "U04",
+        "condition": "deep",
+        "position": 4,
+        "rule_id": "m81",
+        "emitted_parents": [
+          "n0001",
+          "n0002",
+          "n0007"
+        ],
+        "expected_premises": [
+          "F03",
+          "F99"
+        ],
+        "count": 2
+      },
+      {
+        "problem_id": "U04",
+        "condition": "deep",
+        "position": 4,
+        "rule_id": "m81",
+        "emitted_parents": [
+          "n0001",
+          "n0002",
+          "n0006",
+          "n0007"
+        ],
+        "expected_premises": [
+          "F03",
+          "F99"
+        ],
+        "count": 1
+      },
+      {
+        "problem_id": "U06",
+        "condition": "shallow",
+        "position": 2,
+        "rule_id": "o94",
+        "emitted_parents": [
+          "n0001",
+          "n0002",
+          "n0003"
+        ],
+        "expected_premises": [
+          "H07",
+          "H77",
+          "H15"
+        ],
+        "count": 7
+      },
+      {
+        "problem_id": "U06",
+        "condition": "deep",
+        "position": 2,
+        "rule_id": "o48",
+        "emitted_parents": [
+          "n0002",
+          "n0003",
+          "n0004"
+        ],
+        "expected_premises": [
+          "H77",
+          "H06",
+          "H28"
+        ],
+        "count": 3
+      },
+      {
+        "problem_id": "U06",
+        "condition": "shallow",
+        "position": 2,
+        "rule_id": "o94",
+        "emitted_parents": [
+          "n0001",
+          "n0002"
+        ],
+        "expected_premises": [
+          "H07",
+          "H77",
+          "H15"
+        ],
+        "count": 1
+      },
+      {
+        "problem_id": "U07",
+        "condition": "shallow",
+        "position": 4,
+        "rule_id": "p55",
+        "emitted_parents": [
+          "n0006",
+          "n0007"
+        ],
+        "expected_premises": [
+          "I79",
+          "I01",
+          "I61"
+        ],
+        "count": 2
+      },
+      {
+        "problem_id": "U08",
+        "condition": "deep",
+        "position": 1,
+        "rule_id": "q58",
+        "emitted_parents": [
+          "n0001",
+          "n0002",
+          "n0003"
+        ],
+        "expected_premises": [
+          "J07",
+          "J31",
+          "J03"
+        ],
+        "count": 1
+      },
+      {
+        "problem_id": "U08",
+        "condition": "shallow",
+        "position": 4,
+        "rule_id": "q39",
+        "emitted_parents": [
+          "n0001",
+          "n0003",
+          "n0007"
+        ],
+        "expected_premises": [
+          "J01",
+          "J63",
+          "J39"
+        ],
+        "count": 8
+      },
+      {
+        "problem_id": "U08",
+        "condition": "deep",
+        "position": 3,
+        "rule_id": "q43",
+        "emitted_parents": [
+          "n0003",
+          "n0005",
+          "n0006"
+        ],
+        "expected_premises": [
+          "J65",
+          "J03",
+          "J47"
+        ],
+        "count": 1
+      }
+    ],
+    "baseline": [
+      {
+        "problem_id": "U01",
+        "condition": "deep",
+        "position": 3,
+        "rule_id": "j64",
+        "emitted_parents": [
+          "n004",
+          "n006"
+        ],
+        "expected_premises": [
+          "C54",
+          "C77"
+        ],
+        "count": 4
+      },
+      {
+        "problem_id": "U01",
+        "condition": "deep",
+        "position": 3,
+        "rule_id": "j64",
+        "emitted_parents": [
+          "N004",
+          "N006"
+        ],
+        "expected_premises": [
+          "C54",
+          "C77"
+        ],
+        "count": 1
+      },
+      {
+        "problem_id": "U03",
+        "condition": "shallow",
+        "position": 2,
+        "rule_id": "l61",
+        "emitted_parents": [
+          "n001",
+          "n003",
+          "n005"
+        ],
+        "expected_premises": [
+          "E95",
+          "E24",
+          "E88"
+        ],
+        "count": 3
+      },
+      {
+        "problem_id": "U03",
+        "condition": "deep",
+        "position": 4,
+        "rule_id": "l21",
+        "emitted_parents": [
+          "n002",
+          "n003",
+          "n006"
+        ],
+        "expected_premises": [
+          "E24",
+          "E17",
+          "E15"
+        ],
+        "count": 1
+      },
+      {
+        "problem_id": "U03",
+        "condition": "shallow",
+        "position": 3,
+        "rule_id": "l52",
+        "emitted_parents": [
+          "n002",
+          "n005"
+        ],
+        "expected_premises": [
+          "E98",
+          "E88",
+          "E83"
+        ],
+        "count": 3
+      },
+      {
+        "problem_id": "U03",
+        "condition": "shallow",
+        "position": 2,
+        "rule_id": "l61",
+        "emitted_parents": [
+          "node_001",
+          "node_003",
+          "node_005"
+        ],
+        "expected_premises": [
+          "E95",
+          "E24",
+          "E88"
+        ],
+        "count": 1
+      },
+      {
+        "problem_id": "U04",
+        "condition": "deep",
+        "position": 4,
+        "rule_id": "m81",
+        "emitted_parents": [
+          "n001",
+          "n002",
+          "n006"
+        ],
+        "expected_premises": [
+          "F03",
+          "F99"
+        ],
+        "count": 1
+      },
+      {
+        "problem_id": "U06",
+        "condition": "shallow",
+        "position": 4,
+        "rule_id": "o51",
+        "emitted_parents": [
+          "n006",
+          "n007"
+        ],
+        "expected_premises": [
+          "H15",
+          "H02",
+          "H44"
+        ],
+        "count": 6
+      },
+      {
+        "problem_id": "U06",
+        "condition": "shallow",
+        "position": 4,
+        "rule_id": "o51",
+        "emitted_parents": [
+          "n6",
+          "n7"
+        ],
+        "expected_premises": [
+          "H15",
+          "H02",
+          "H44"
+        ],
+        "count": 2
+      }
+    ],
+    "atom_tagged": [
+      {
+        "problem_id": "U03",
+        "condition": "shallow",
+        "position": 2,
+        "rule_id": "l61",
+        "emitted_parents": [
+          "node_E95",
+          "node_24",
+          "node_E88"
+        ],
+        "expected_premises": [
+          "E95",
+          "E24",
+          "E88"
+        ],
+        "count": 6
+      },
+      {
+        "problem_id": "U03",
+        "condition": "deep",
+        "position": 0,
+        "rule_id": "l03",
+        "emitted_parents": [],
+        "expected_premises": [
+          "E95"
+        ],
+        "count": 5
+      },
+      {
+        "problem_id": "U03",
+        "condition": "shallow",
+        "position": 0,
+        "rule_id": "l60",
+        "emitted_parents": [],
+        "expected_premises": [
+          "E95"
+        ],
+        "count": 1
+      }
+    ],
+    "atom_alias": [
+      {
+        "problem_id": "U03",
+        "condition": "shallow",
+        "position": 0,
+        "rule_id": "l60",
+        "emitted_parents": [],
+        "expected_premises": [
+          "E95"
+        ],
+        "count": 3
+      },
+      {
+        "problem_id": "U07",
+        "condition": "deep",
+        "position": 1,
+        "rule_id": "p22",
+        "emitted_parents": [
+          "I77",
+          "I11"
+        ],
+        "expected_premises": [
+          "I91",
+          "I43"
+        ],
+        "count": 4
+      }
+    ]
+  },
+  "final_goal_reference_success": {
+    "baseline": 128,
+    "short_uniform": 128,
+    "atom_alias": 128,
+    "atom_tagged": 128
+  },
+  "semantic_union_exploratory": {
+    "at_least_one_success": 125,
+    "total": 128,
+    "both_fail": 3,
+    "not_a_single_strategy_result": true,
+    "triple_fail_units": [
+      "t047",
+      "t050",
+      "t053"
+    ]
+  },
+  "response_timestamp_span_seconds": 3052.711454,
+  "response_duration_sum_seconds": 2929.5422632,
+  "total_prompt_tokens": 3740039,
+  "total_output_tokens": 165889
+}

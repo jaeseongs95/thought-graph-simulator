@@ -1,0 +1,76 @@
+{
+  "contract": "v088-runtime-refreeze-r2",
+  "date_kst": "2026-09-16",
+  "research_design_changed": false,
+  "reason": "Ollama runtime/API metadata identity refreeze after r1 stopped before any model inference.",
+  "r1_failure": {
+    "run_name": "v088_idcontinuity_20260916_081431_746223",
+    "expected_ollama_server": "0.34.0",
+    "observed_ollama_server": "0.34.1",
+    "state": "stopped",
+    "reason": "metadata_identity_error",
+    "inference_calls": 0,
+    "observed_calls": 0,
+    "research_samples_generated": 0,
+    "preserve_existing_evidence_and_guards": true
+  },
+  "r2_refreeze": {
+    "ollama_server": "0.34.1",
+    "model": "qwen3:4b-instruct",
+    "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "parameter_size": "4.0B",
+    "quantization_level": "Q4_K_M",
+    "context_length": 262144,
+    "runtime_identity_only": true,
+    "model_weight_identity_changed": false,
+    "runtime_metadata_identity_changed": true,
+    "template_unchanged": true,
+    "parameters_unchanged": true
+  },
+  "allowed_identity_differences_from_r1": [
+    {
+      "path": "server.version",
+      "r1": "0.34.0",
+      "r2": "0.34.1"
+    },
+    {
+      "path": "native.model_info.general.tags",
+      "r1": null,
+      "r2": [
+        "text-generation"
+      ]
+    },
+    {
+      "path": "native.model_info.tokenizer.ggml.merges",
+      "r1": null,
+      "r2": []
+    },
+    {
+      "path": "native.model_info.tokenizer.ggml.tokens",
+      "r1": null,
+      "r2": []
+    },
+    {
+      "path": "native.model_info.tokenizer.ggml.token_type",
+      "r1": null,
+      "r2": []
+    }
+  ],
+  "r1_identity_canonical_sha256": "1706caccedc357bd5e62ba2d999ef7027c6c66712b924c0327b2a6429aaadc48",
+  "r2_identity_canonical_sha256": "2fb68c4be506d5874ce459046f7852a62a4be0c4031faab27f48ae4414f49dd6",
+  "unchanged_research_conditions": [
+    "U01-U08",
+    "seeds",
+    "A/B/C evaluation design",
+    "prompts",
+    "JSON schemas",
+    "sampling/api defaults",
+    "scoring",
+    "v087 baseline",
+    "assignment",
+    "primary comparison",
+    "no-repair rule"
+  ],
+  "r1_protocol_sha256": "7ecd08b6ad79d52a1fec5add10b972b4906f94c11a029d2ee0ae6df62035a422",
+  "r2_protocol_sha256": "ab6be8138b470abcad871faa9ef882203cdd3fe513a1c0bae38dce32743883b4"
+}

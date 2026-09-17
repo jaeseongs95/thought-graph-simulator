@@ -1,0 +1,142 @@
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'selftest091.py', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v091\\results_llm\\automation_logs\\v091_structural_20260916_171751_727282\\selftest.json']
+test_actual_v090_all_3520_requests_byte_identical (test_contract091.Contract.test_actual_v090_all_3520_requests_byte_identical) ... ok
+test_allocation_not_repaired_for_bad_history_collision (test_contract091.Contract.test_allocation_not_repaired_for_bad_history_collision) ... ok
+test_arm_order_balanced_within_each_block (test_contract091.Contract.test_arm_order_balanced_within_each_block) ... ok
+test_audit_modules_do_not_import_production (test_contract091.Contract.test_audit_modules_do_not_import_production) ... ok
+test_changed_primary_rejected (test_contract091.Contract.test_changed_primary_rejected) ... ok
+test_facts_wrong_id_is_passed_without_repair (test_contract091.Contract.test_facts_wrong_id_is_passed_without_repair) ... ok
+test_four_arms_every_unit (test_contract091.Contract.test_four_arms_every_unit) ... ok
+test_fresh_facts_for_each_arm (test_contract091.Contract.test_fresh_facts_for_each_arm) ... ok
+test_frozen_counts (test_contract091.Contract.test_frozen_counts) ... ok
+test_independent_all_requests (test_contract091.Contract.test_independent_all_requests) ... ok
+test_independent_schedule (test_contract091.Contract.test_independent_schedule) ... ok
+test_naming_allocation_independent (test_contract091.Contract.test_naming_allocation_independent) ... ok
+test_no_old_fact_anchor_loader (test_contract091.Contract.test_no_old_fact_anchor_loader) ... ok
+test_only_eight_new_structures (test_contract091.Contract.test_only_eight_new_structures) ... ok
+test_only_id_support_is_added (test_contract091.Contract.test_only_id_support_is_added) ... ok
+test_powershell_native_parser_when_available (test_contract091.Contract.test_powershell_native_parser_when_available) ... ok
+test_previous_evidence_validation (test_contract091.Contract.test_previous_evidence_validation) ... ok
+test_prior_source_178_files_byte_identical (test_contract091.Contract.test_prior_source_178_files_byte_identical) ... ok
+test_protocol_validation (test_contract091.Contract.test_protocol_validation) ... ok
+test_python312_syntax (test_contract091.Contract.test_python312_syntax) ... ok
+test_safety_mutations_rejected (test_contract091.Contract.test_safety_mutations_rejected) ... ok
+test_sampling_and_runtime_unchanged (test_contract091.Contract.test_sampling_and_runtime_unchanged) ... ok
+test_shared_selector_128_compare_128_lookup (test_contract091.Contract.test_shared_selector_128_compare_128_lookup) ... ok
+test_three_supported_arms_share_prompt_header (test_contract091.Contract.test_three_supported_arms_share_prompt_header) ... ok
+test_wrong_rule_parent_is_passed_without_repair (test_contract091.Contract.test_wrong_rule_parent_is_passed_without_repair) ... ok
+test_all_v090_state_untouched (test_launch091.Installation.test_all_v090_state_untouched) ... ok
+test_auto_large_baseline_is_found (test_launch091.Installation.test_auto_large_baseline_is_found) ... ok
+test_bad_installed_manifest_cannot_fallback (test_launch091.Installation.test_bad_installed_manifest_cannot_fallback) ... ok
+test_explicit_baseline_hash (test_launch091.Installation.test_explicit_baseline_hash) ... ok
+test_install_and_recheck_installed_manifest (test_launch091.Installation.test_install_and_recheck_installed_manifest) ... ok
+test_installed_manifest_not_unrelated_parent_manifest (test_launch091.Installation.test_installed_manifest_not_unrelated_parent_manifest) ... ok
+test_lock_prevents_parallel_workflow (test_launch091.Installation.test_lock_prevents_parallel_workflow) ... ok
+test_missing_installed_manifest_not_silently_rebuilt (test_launch091.Installation.test_missing_installed_manifest_not_silently_rebuilt) ... ok
+test_modified_source_not_overwritten (test_launch091.Installation.test_modified_source_not_overwritten) ... ok
+test_receipt_records_actual_installed_sources (test_launch091.Installation.test_receipt_records_actual_installed_sources) ... 실제 설치 contract: v091-source-release-r1 / protocol: 79ff680eb765a65dde12542ef140316dfb429af3ba37776ad3f5af8195ce8700
+실제 설치 launch.py SHA-256: 6e1863482ef7b07a90eac7e1383f2b5874c1960eeb505d6d3af0060d76cba74e
+ok
+test_run_name_is_new_version (test_launch091.Installation.test_run_name_is_new_version) ... ok
+test_second_identical_install_no_replacement (test_launch091.Installation.test_second_identical_install_no_replacement) ... ok
+test_v091_guard_blocks_install (test_launch091.Installation.test_v091_guard_blocks_install) ... ok
+test_wrong_baseline_rejected (test_launch091.Installation.test_wrong_baseline_rejected) ... ok
+test_calibration_expected_62400 (test_measure091.Measurement.test_calibration_expected_62400) ... ok
+test_diagnostic_usage_shared_once (test_measure091.Measurement.test_diagnostic_usage_shared_once) ... ok
+test_facts_id_contract_can_fail_with_valid_graph (test_measure091.Measurement.test_facts_id_contract_can_fail_with_valid_graph) ... ok
+test_facts_semantic_failure_is_not_hidden (test_measure091.Measurement.test_facts_semantic_failure_is_not_hidden) ... ok
+test_first_error_and_risk_set_include_facts_id_gate (test_measure091.Measurement.test_first_error_and_risk_set_include_facts_id_gate) ... ok
+test_goal_only_cannot_pass_broken_proof (test_measure091.Measurement.test_goal_only_cannot_pass_broken_proof) ... ok
+test_independent_all_trial_semantics (test_measure091.Measurement.test_independent_all_trial_semantics) ... ok
+test_independent_tallies_reject_changed_group (test_measure091.Measurement.test_independent_tallies_reject_changed_group) ... ok
+test_independent_tallies_reject_changed_primary (test_measure091.Measurement.test_independent_tallies_reject_changed_primary) ... ok
+test_last_rule_id_contract_not_semantic_validity (test_measure091.Measurement.test_last_rule_id_contract_not_semantic_validity) ... ok
+test_length_termination_not_logical_error (test_measure091.Measurement.test_length_termination_not_logical_error) ... ok
+test_minimum_maximum_mappable_call_bounds (test_measure091.Measurement.test_minimum_maximum_mappable_call_bounds) ... ok
+test_nonexistent_parent_is_not_corrected (test_measure091.Measurement.test_nonexistent_parent_is_not_corrected) ... ok
+test_nonfinite_and_duplicate_json_rejected (test_measure091.Measurement.test_nonfinite_and_duplicate_json_rejected) ... ok
+test_null_lookup_skips_graph_not_filled_with_fake_failures (test_measure091.Measurement.test_null_lookup_skips_graph_not_filled_with_fake_failures) ... ok
+test_only_one_direction_not_a_successful_pair (test_measure091.Measurement.test_only_one_direction_not_a_successful_pair) ... ok
+test_oracle_all_1536_graphs_pass (test_measure091.Measurement.test_oracle_all_1536_graphs_pass) ... ok
+test_partial_batch_suppresses_overall_effect (test_measure091.Measurement.test_partial_batch_suppresses_overall_effect) ... ok
+test_premise_omission_is_separate_from_reference_existence (test_measure091.Measurement.test_premise_omission_is_separate_from_reference_existence) ... ok
+test_primary_direction_alias_failure_minus_one (test_measure091.Measurement.test_primary_direction_alias_failure_minus_one) ... ok
+test_primary_direction_baseline_failure_plus_one (test_measure091.Measurement.test_primary_direction_baseline_failure_plus_one) ... ok
+test_primary_zero_when_oracle_all_success (test_measure091.Measurement.test_primary_zero_when_oracle_all_success) ... ok
+test_schema_failure_is_observed_model_failure (test_measure091.Measurement.test_schema_failure_is_observed_model_failure) ... ok
+test_shared_selection_not_quadrupled (test_measure091.Measurement.test_shared_selection_not_quadrupled) ... ok
+test_unobserved_not_zero_depth (test_measure091.Measurement.test_unobserved_not_zero_depth) ... ok
+test_wrong_comparison_and_followed_lookup_is_not_success (test_measure091.Measurement.test_wrong_comparison_and_followed_lookup_is_not_success) ... ok
+test_HTTP_error_body_retained (test_runtime091.HTTP.test_HTTP_error_body_retained) ... ok
+test_complete_chunked (test_runtime091.HTTP.test_complete_chunked) ... ok
+test_incomplete_chunked_retains_body (test_runtime091.HTTP.test_incomplete_chunked_retains_body) ... ok
+test_normal_content_length (test_runtime091.HTTP.test_normal_content_length) ... ok
+test_redirect_is_not_followed (test_runtime091.HTTP.test_redirect_is_not_followed) ... ok
+test_short_content_length (test_runtime091.HTTP.test_short_content_length) ... ok
+test_archive_paths_rejected (test_runtime091.Runtime.test_archive_paths_rejected) ... ok
+test_complete_dispatch_response_preserved (test_runtime091.Runtime.test_complete_dispatch_response_preserved) ... ok
+test_crash_after_dispatch_is_pending_not_wrong_answer (test_runtime091.Runtime.test_crash_after_dispatch_is_pending_not_wrong_answer) ... ok
+test_finalize_is_idempotent (test_runtime091.Runtime.test_finalize_is_idempotent) ... ok
+test_frozen_guard_blocks_new_name (test_runtime091.Runtime.test_frozen_guard_blocks_new_name) ... ok
+test_frozen_transport_code_regression (test_runtime091.Runtime.test_frozen_transport_code_regression) ... ok
+test_http_failure_no_retry (test_runtime091.Runtime.test_http_failure_no_retry) ... ok
+test_identity_mismatch_before_inference (test_runtime091.Runtime.test_identity_mismatch_before_inference) ... ok
+test_independent_full_evidence (test_runtime091.Runtime.test_independent_full_evidence) ... ok
+test_local_endpoints_accepted (test_runtime091.Runtime.test_local_endpoints_accepted) ... ok
+test_remote_endpoint_rejected (test_runtime091.Runtime.test_remote_endpoint_rejected) ... ok
+test_request_byte_tamper_rejected (test_runtime091.Runtime.test_request_byte_tamper_rejected) ... ok
+test_response_saved_before_record_commit_survives_windows_path_logic (test_runtime091.Runtime.test_response_saved_before_record_commit_survives_windows_path_logic) ... ok
+test_source_snapshot_tamper_rejected (test_runtime091.Runtime.test_source_snapshot_tamper_rejected) ... ok
+test_status_completeness (test_runtime091.Runtime.test_status_completeness) ... ok
+test_summary_tamper_rejected_even_if_manifest_updated (test_runtime091.Runtime.test_summary_tamper_rejected_even_if_manifest_updated) ... ok
+test_support_diagnostic_tamper_rejected (test_runtime091.Runtime.test_support_diagnostic_tamper_rejected) ... ok
+test_transport_partial_body_preserved (test_runtime091.Runtime.test_transport_partial_body_preserved) ... ok
+test_unaccounted_file_rejected (test_runtime091.Runtime.test_unaccounted_file_rejected) ... ok
+test_wire_response_tamper_rejected (test_runtime091.Runtime.test_wire_response_tamper_rejected) ... ok
+test_all_relabels_are_invertible_and_same_D_W (test_topology_trace091.TopologyAndTrace.test_all_relabels_are_invertible_and_same_D_W) ... ok
+test_cohort_metadata_not_visible_to_model (test_topology_trace091.TopologyAndTrace.test_cohort_metadata_not_visible_to_model) ... ok
+test_cohort_rows_pairs_not_pooled (test_topology_trace091.TopologyAndTrace.test_cohort_rows_pairs_not_pooled) ... ok
+test_corpus_reproducible_without_model (test_topology_trace091.TopologyAndTrace.test_corpus_reproducible_without_model) ... ok
+test_duplicate_atom_extension_rejected (test_topology_trace091.TopologyAndTrace.test_duplicate_atom_extension_rejected) ... ok
+test_empty_first_rule_after_facts (test_topology_trace091.TopologyAndTrace.test_empty_first_rule_after_facts) ... ok
+test_full_valid_oracle_does_not_create_stale_errors (test_topology_trace091.TopologyAndTrace.test_full_valid_oracle_does_not_create_stale_errors) ... ok
+test_independent_corpus_topology_check (test_topology_trace091.TopologyAndTrace.test_independent_corpus_topology_check) ... ok
+test_known_failures_do_not_change_holdout_primary (test_topology_trace091.TopologyAndTrace.test_known_failures_do_not_change_holdout_primary) ... ok
+test_legitimate_same_parents_not_stale_error (test_topology_trace091.TopologyAndTrace.test_legitimate_same_parents_not_stale_error) ... ok
+test_malformed_prior_history_does_not_crash_observational_diagnostic (test_topology_trace091.TopologyAndTrace.test_malformed_prior_history_does_not_crash_observational_diagnostic) ... ok
+test_missing_validity_is_not_declared_stale_failure (test_topology_trace091.TopologyAndTrace.test_missing_validity_is_not_declared_stale_failure) ... ok
+test_new_routes_not_old_signatures_or_each_other (test_topology_trace091.TopologyAndTrace.test_new_routes_not_old_signatures_or_each_other) ... ok
+test_no_diagnostic_posthoc_mutation (test_topology_trace091.TopologyAndTrace.test_no_diagnostic_posthoc_mutation) ... ok
+test_non_parent_error_with_correct_reused_parents_not_stale (test_topology_trace091.TopologyAndTrace.test_non_parent_error_with_correct_reused_parents_not_stale) ... ok
+test_original_and_relabel_have_same_trace_ids (test_topology_trace091.TopologyAndTrace.test_original_and_relabel_have_same_trace_ids) ... ok
+test_partial_primary_unavailable_not_zero (test_topology_trace091.TopologyAndTrace.test_partial_primary_unavailable_not_zero) ... ok
+test_physical_and_logical_id_confusion_rejected (test_topology_trace091.TopologyAndTrace.test_physical_and_logical_id_confusion_rejected) ... ok
+test_primary_cannot_switch_to_known_population (test_topology_trace091.TopologyAndTrace.test_primary_cannot_switch_to_known_population) ... ok
+test_relabel_semantic_change_rejected (test_topology_trace091.TopologyAndTrace.test_relabel_semantic_change_rejected) ... ok
+test_renaming_primary_negative_when_only_renamed_alias_fails (test_topology_trace091.TopologyAndTrace.test_renaming_primary_negative_when_only_renamed_alias_fails) ... ok
+test_source_hash_normalization_keeps_all_response_content (test_topology_trace091.TopologyAndTrace.test_source_hash_normalization_keeps_all_response_content) ... ok
+test_u07_stale_parent_pattern_and_ancestor_diagnostic (test_topology_trace091.TopologyAndTrace.test_u07_stale_parent_pattern_and_ancestor_diagnostic) ... ok
+test_wrong_rule_not_called_current_rule_stale (test_topology_trace091.TopologyAndTrace.test_wrong_rule_not_called_current_rule_stale) ... ok
+
+----------------------------------------------------------------------
+Ran 115 tests in 514.612s
+
+OK
+{"tests_run": 115, "passed": 115, "failures": 0, "errors": 0, "skipped": 0, "actual_qwen_inference_calls": 0}
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'calibrate091.py', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v091\\results_llm\\automation_logs\\v091_structural_20260916_171751_727282\\calibration.json']
+{"contract": "v091-calibration-r1", "provenance": "synthetic_no_inference", "passed": 62400, "failures": 0, "actual_qwen_calls": 0, "facts_cases": 9216, "rule_cases": 47040, "graph_cases": 6144, "case_counts": {"facts/duplicate_id": 1536, "facts/fact_parent": 1536, "facts/id_contract_only": 1536, "facts/missing_fact": 1536, "facts/valid": 1536, "facts/wrong_atom": 1536, "graph/cycle": 1536, "graph/missing_final": 1536, "graph/omitted_premise": 1536, "graph/valid": 1536, "rule/duplicate_node": 6720, "rule/duplicate_parent": 6720, "rule/missing_parent": 6720, "rule/omitted_premise": 6720, "rule/valid": 6720, "rule/wrong_atom": 6720, "rule/wrong_rule": 6720}}
+
+EXIT 0
+
+COMMAND ['C:\\Users\\sjs95\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-X', 'utf8', '-B', 'run091.py', 'prepare', '--baseline', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v090\\results_llm\\v090_freshid_20260916_145527_520790_evidence.zip', '--run-name', 'v091_structural_20260916_171751_727282', '--out', 'D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v091\\experiments\\v091_structural_20260916_171751_727282.plan.json']
+{
+  "prepared": "D:\\codex\\AI논문\\thought-graph-simulator\\llm_experiments\\v091\\experiments\\v091_structural_20260916_171751_727282.plan.json",
+  "actual_model_inference": false,
+  "max_inference_calls": 10944,
+  "plan_sha256": "3b0c209c31ab7567a7ae7304d79fb3c5975f56c854ad84d9164f594242591d68"
+}
+
+EXIT 0

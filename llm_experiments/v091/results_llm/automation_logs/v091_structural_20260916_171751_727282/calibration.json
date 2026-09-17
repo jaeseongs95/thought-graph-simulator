@@ -1,0 +1,29 @@
+{
+  "contract": "v091-calibration-r1",
+  "provenance": "synthetic_no_inference",
+  "passed": 62400,
+  "failures": 0,
+  "actual_qwen_calls": 0,
+  "facts_cases": 9216,
+  "rule_cases": 47040,
+  "graph_cases": 6144,
+  "case_counts": {
+    "facts/duplicate_id": 1536,
+    "facts/fact_parent": 1536,
+    "facts/id_contract_only": 1536,
+    "facts/missing_fact": 1536,
+    "facts/valid": 1536,
+    "facts/wrong_atom": 1536,
+    "graph/cycle": 1536,
+    "graph/missing_final": 1536,
+    "graph/omitted_premise": 1536,
+    "graph/valid": 1536,
+    "rule/duplicate_node": 6720,
+    "rule/duplicate_parent": 6720,
+    "rule/missing_parent": 6720,
+    "rule/omitted_premise": 6720,
+    "rule/valid": 6720,
+    "rule/wrong_atom": 6720,
+    "rule/wrong_rule": 6720
+  }
+}
